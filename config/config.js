@@ -4,8 +4,6 @@ require("dotenv").config({
   path: path.join(__dirname, "/.env")
 });
 
-console.log(process.env.USER_NAME);
-
 module.exports = {
   "development": {
     "username": process.env.USER_NAME,
@@ -19,12 +17,13 @@ module.exports = {
     "password": process.env.PASSWORD,
     "database": "project_djello_test",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "POSTGRES_URL",
-    "dialect": "postgres"
+    "username": "root",
+    "password": null,
+    "database": "project_djello_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
   }
 }
-
-
