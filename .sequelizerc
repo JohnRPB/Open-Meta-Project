@@ -1,0 +1,18 @@
+var path = require('path');
+
+console.log("hello there");
+// Set options
+var config = {
+  "config": "./config/config.js",
+  // "migrations-path": "./migrations/sequelize",
+  //"seeders-path": "./seeds/",
+  //"models-path": "./models/"
+};
+
+// Resolve paths to absolute paths
+Object.keys(config).forEach((key) => {
+  config[key] = path.resolve(config[key]);
+});
+
+// Export like any normal module
+module.exports = config;
