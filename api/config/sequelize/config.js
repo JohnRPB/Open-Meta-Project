@@ -20,10 +20,11 @@ module.exports = {
     "dialect": "postgres"
   },
   "production": {
+    "use_env_variable": "DATABASE_URL",
     "username": "root",
     "password": null,
     "database": "open_meta_production",
-    "host": "127.0.0.1",
+    "host": "https://radiant-taiga-58264.herokuapp.com",
     "dialect": "postgres"
   }
 }

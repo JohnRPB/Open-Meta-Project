@@ -29,7 +29,8 @@
     "yargs": "^10.1.1"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"nodemon server\"",
+    "app": "react-scripts start",
+    "api": "nodemon api/server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
