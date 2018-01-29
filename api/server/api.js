@@ -4,6 +4,10 @@ const api = module.exports = require('express').Router()
 // import products from './products';
 const users = require('./users.js');
 
+api.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', '*');
+  next();
+})
 api
   .get('/express-test', (req, res) => res.send({express: 'working!'})) //demo route to prove api is working
   .use('/users', users)
