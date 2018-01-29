@@ -2,12 +2,21 @@
 module.exports = (sequelize, DataTypes) => {
   var Tag = sequelize.define('Tag', {
     name: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+
+  Tag.associate = function(models) {
+
+    Tag.hasMany(models.JoinStudyTag, {
+      foreignKey:"tagId"
+    });
+
+    Tag.belongsToMany(models.Tag, {
+      through: models.JoinStudyTag,
+      as: "TaggedArea",
+      foreignKey:"tagId"
+    });
+
+  };
+
   return Tag;
 };

@@ -3,12 +3,17 @@ module.exports = (sequelize, DataTypes) => {
   var JoinStudyTag = sequelize.define('JoinStudyTag', {
     studyId: DataTypes.INTEGER,
     tagId: DataTypes.INTEGER
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
-  });
+  });  
+
+  JoinStudyTag.associate = function(models) {
+    JoinStudyTag.belongsTo(models.Study, {
+      foreignKey:"studyId"
+    });
+
+    JoinStudyTag.belongsTo(models.Tag, {
+      foreignKey:"tagId"
+    });
+  }
+
   return JoinStudyTag;
 };

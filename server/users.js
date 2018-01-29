@@ -4,6 +4,7 @@ let models = require("./../models/sequelize");
 let User = models.User;
 let Study = models.Study;
 let Journal = models.Journal;
+let Tag = models.Tag;
 console.log("Journal: ", Journal);
 console.log("User: ", User);
 
@@ -14,9 +15,7 @@ console.log("User: ", User);
 router.get("/", function(req, res, next) {
   Study.findAll({
     include: [
-      {
-        model: Journal
-      }
+      { model: Journal }
     ]
   })
     .then(users => {

@@ -15,6 +15,16 @@ module.exports = (sequelize, DataTypes) => {
     Study.belongsTo(models.Journal, {
       foreignKey:"journalId"
     });
+
+    Study.hasMany(models.JoinStudyTag, {
+      foreignKey:"studyId"
+    });
+
+    Study.belongsToMany(models.Tag, {
+      through: models.JoinStudyTag,
+      as: "TaggedArea",
+      foreignKey:"studyId"
+    });
   };
   
   return Study;
