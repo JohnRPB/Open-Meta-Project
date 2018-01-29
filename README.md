@@ -1,3 +1,15 @@
+Note from Gene:
+
+Push to heroku with the following:
+
+    git subtree push --prefix api heroku master
+
+That way it will only send the back end and not the whole thing.
+
+Current URLs:
+Front: http://lazy-quicksand.surge.sh/
+Back: https://radiant-taiga-58264.herokuapp.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
