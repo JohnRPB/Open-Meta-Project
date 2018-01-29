@@ -19,7 +19,7 @@ export const EXPRESS_TEST = "EXPRESS_TEST";
 export const expressTest = () => {
     return dispatch => {
         dispatch(expressTestStart());
-      axios.get(`/api/express-test`)
+      axios.get(`https://radiant-taiga-58264.herokuapp.com/api/express-test`,{crossdomain:true})
         .then(res => {
           console.log(res);
           dispatch(expressTestResults(JSON.stringify(res.data)))})
@@ -45,7 +45,7 @@ export const DB_TEST = "DB_TEST"
 export const dbTest = () => {
     return dispatch => {
         dispatch(dbTestStart());
-      axios.get(`/api/users`)
+      axios.get(`https://radiant-taiga-58264.herokuapp.com/api/users`)
         .then(res => {
           console.log(res);
           dispatch(dbTestResults(JSON.stringify(res.data)))})

@@ -49,5 +49,5 @@
     "path": "^0.12.7",
     "react-dev-utils": "^4.2.1"
   },
-  "proxy": "http://localhost:8000"
+  "proxy": "https://radiant-taiga-58264.herokuapp.com/"
 }
