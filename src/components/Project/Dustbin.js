@@ -45,9 +45,9 @@ class Dustbin extends Component {
           ? "Release to drop"
           : `Insert graphic here. This dustbin accepts: ${accepts.join(", ")}`}
 
-        {lastDroppedItem && (
+        {/* {lastDroppedItem && (
           <p>Last dropped: {JSON.stringify(lastDroppedItem)}</p>
-        )}
+        )} */}
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { addText } from "../actions/project";
+import { addText, handleDropping } from "../actions/project";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { withRouter } from "react-router";
@@ -8,7 +8,10 @@ import MasterDocument from "../components/Project/MasterDocument";
 
 function mapStateToProps(state) {
   return {
-    analyses: state.project.analyses
+    analyses: state.project.analyses,
+    dustbins: state.project.dustbins,
+    boxes: state.project.boxes,
+    droppedBoxNames: state.project.droppedBoxNames
   };
 }
 
@@ -22,6 +25,11 @@ function mapDispatchToProps(dispatch) {
       console.log("data from addText => ", data);
       dispatch(addText(data));
       form.reset();
+    },
+    handleDrop: (index, item) => {
+      //const { name } = item;
+      let args = { index, item };
+      dispatch(handleDropping(args));
     }
   };
 }

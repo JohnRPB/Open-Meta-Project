@@ -22,35 +22,16 @@ import {
 class MasterDocument extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      dustbins: [
-        { accepts: [ItemTypes.SUMMARY], lastDroppedItem: null },
-        { accepts: [ItemTypes.METHOD], lastDroppedItem: null },
-        {
-          accepts: [ItemTypes.GRAPH, ItemTypes.SUMMARY, NativeTypes.URL],
-          lastDroppedItem: null
-        },
-        { accepts: [ItemTypes.GRAPH, NativeTypes.FILE], lastDroppedItem: null }
-      ],
-      boxes: [
-        { name: "Mean", type: ItemTypes.SUMMARY },
-        { name: "Regression", type: ItemTypes.METHOD },
-        { name: "Funnel Plot", type: ItemTypes.GRAPH }
-      ],
-      droppedBoxNames: []
-    };
   }
 
   isDropped(boxName) {
-    return this.state.droppedBoxNames.indexOf(boxName) > -1;
+    return this.props.droppedBoxNames.indexOf(boxName) > -1;
   }
-
-  // render portion
 
   render() {
     console.log("this props => ", this.props);
-    const { boxes, dustbins } = this.state;
-    const { analyses } = this.props;
+    // const { boxes, dustbins } = this.state;
+    const { analyses, boxes, dustbins, handleDrop, handleSubmit } = this.props;
 
     return (
       <div>
@@ -79,53 +60,31 @@ class MasterDocument extends Component {
                   return (
                     <div key={index}>
                       <p>{analysis.textContent}</p>
-                      //dustbin graphic image
+                      <p>{analysis.name}</p>
                     </div>
                   );
                 })}
               </div>
-              <form onSubmit={this.props.handleSubmit}>
+              <form onSubmit={handleSubmit}>
                 <textarea name="textContent" placeholder="Input text here" />
-                <br />
-                <div>
-                  {dustbins.map(({ accepts, lastDroppedItem }, index) => (
-                    <Dustbin
-                      accepts={accepts}
-                      lastDroppedItem={lastDroppedItem}
-                      onDrop={item => this.handleDrop(index, item)}
-                      key={index}
-                    />
-                  ))}
-                </div>
                 <button className="ui primary button" type="submit">
                   +
                 </button>
               </form>
+              <div>
+                {dustbins.map(({ accepts, lastDroppedItem }, index) => (
+                  <Dustbin
+                    accepts={accepts}
+                    lastDroppedItem={lastDroppedItem}
+                    onDrop={item => handleDrop(index, item)}
+                    key={index}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-
-  handleDrop(index, item) {
-    const { name } = item;
-
-    this.setState(
-      update(this.state, {
-        dustbins: {
-          [index]: {
-            lastDroppedItem: {
-              $set: item //immutability helper. replace the target entirely
-            }
-          }
-        },
-        droppedBoxNames: name
-          ? {
-              $push: [name] //immutability helper. push all the items in array on the target
-            }
-          : {}
-      })
     );
   }
 }
