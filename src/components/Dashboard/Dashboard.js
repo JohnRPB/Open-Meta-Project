@@ -1,78 +1,52 @@
 import React from "react";
-import { Grid, Image, Segment, Header } from "semantic-ui-react";
+import {
+  Grid,
+  Image,
+  Segment,
+  Header,
+  Container,
+  Card,
+  Statistic
+} from "semantic-ui-react";
 import Feed from "./Feed";
+import Nav from "../Nav";
+import Related from "./Related";
 
 const Dashboard = () => (
-  <div>
-    <Grid columns="equal">
-      <Grid.Column width={10}>
-        <Feed fluid={true} />
-      </Grid.Column>
-      <Grid.Column>
-        <Header as="h2">Your Activity</Header>
-        <Segment>3</Segment>
-      </Grid.Column>
-    </Grid>
-    <Grid>
-      <Header as="h2">Papers you might be interested in</Header>
-      <Grid.Row columns={3}>
-        <Grid.Column>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-            suscipit praesentium repudiandae ad neque, repellendus eaque
-            voluptates possimus consequuntur error modi nesciunt nihil quas sed
-            harum consequatur repellat. Earum, repudiandae.{" "}
-          </p>
+  <div class="ui  vertical masthead center aligned segment">
+    <div class="following bar">
+      <div class="ui container">
+        <Nav />
+      </div>
+    </div>
+    <br />
+    <br />
+    <Container>
+      <Grid columns="equal">
+        <Grid.Column width={10}>
+          <Feed fluid={true} />
         </Grid.Column>
         <Grid.Column>
-          <p>
-            {" "}
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-            suscipit praesentium repudiandae ad neque, repellendus eaque
-            voluptates possimus consequuntur error modi nesciunt nihil quas sed
-            harum consequatur repellat. Earum, repudiandae.
-          </p>
+          <Card>
+            <Card.Content>
+              <Card.Header>Your Activity</Card.Header>
+            </Card.Content>
+            <Card.Content>
+              <Statistic horizontal label="Reviews" value="41" />
+              <Statistic horizontal label="Papers" value="101" />
+              <Statistic horizontal label="Followers" value="204" />
+            </Card.Content>
+          </Card>
         </Grid.Column>
-        <Grid.Column>
-          <p>
-            {" "}
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-            suscipit praesentium repudiandae ad neque, repellendus eaque
-            voluptates possimus consequuntur error modi nesciunt nihil quas sed
-            harum consequatur repellat. Earum, repudiandae.
-          </p>
-        </Grid.Column>
-      </Grid.Row>
-
-      <Grid.Row columns={3}>
-        <Grid.Column>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-            suscipit praesentium repudiandae ad neque, repellendus eaque
-            voluptates possimus consequuntur error modi nesciunt nihil quas sed
-            harum consequatur repellat. Earum, repudiandae.{" "}
-          </p>
-        </Grid.Column>
-        <Grid.Column>
-          <p>
-            {" "}
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-            suscipit praesentium repudiandae ad neque, repellendus eaque
-            voluptates possimus consequuntur error modi nesciunt nihil quas sed
-            harum consequatur repellat. Earum, repudiandae.
-          </p>
-        </Grid.Column>
-        <Grid.Column>
-          <p>
-            {" "}
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-            suscipit praesentium repudiandae ad neque, repellendus eaque
-            voluptates possimus consequuntur error modi nesciunt nihil quas sed
-            harum consequatur repellat. Earum, repudiandae.
-          </p>
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
+      </Grid>
+      <br />
+      <br />
+      <br />
+      <Grid>
+        <Header as="h2">Papers you might be interested in</Header>
+        <Related />
+      </Grid>
+    </Container>
   </div>
 );
 
