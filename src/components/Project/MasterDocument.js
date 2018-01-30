@@ -6,7 +6,7 @@ import Dustbin from "./Dustbin";
 import Box from "./Box";
 import ItemTypes from "./ItemTypes";
 
-class Document extends Component {
+class MasterDocument extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,10 @@ class Document extends Component {
     return this.state.droppedBoxNames.indexOf(boxName) > -1;
   }
 
+  // render portion
+
   render() {
+    console.log("this props => ", this.props);
     const { boxes, dustbins, analyses } = this.state;
 
     return (
@@ -57,7 +60,7 @@ class Document extends Component {
               </div>
             </div>
             <div class="twelve wide column">
-              <form onSubmit={this.handleSubmit}>
+              <form onSubmit={this.props.handleSubmit}>
                 <textarea name="content" placeholder="Input text here" />
                 <br />
                 <div>
@@ -101,4 +104,4 @@ class Document extends Component {
   }
 }
 
-export default DragDropContext(HTML5Backend)(Document);
+export default DragDropContext(HTML5Backend)(MasterDocument);

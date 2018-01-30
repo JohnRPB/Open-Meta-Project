@@ -1,4 +1,4 @@
-import * as Actions from "../actions";
+import { ADD_TEXT } from "../actions/project";
 
 const initialState = {
   analyses: []
@@ -6,7 +6,7 @@ const initialState = {
 
 const project = (state = initialState, action) => {
   switch (action.type) {
-    case Actions.ADD_TEXT:
+    case ADD_TEXT:
       return {
         ...state,
         analyses: [...state.analyses, action.data]
