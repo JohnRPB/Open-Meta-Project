@@ -5,8 +5,9 @@ import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
 import Dustbin from "./Dustbin";
 import Box from "./Box";
 import ItemTypes from "./ItemTypes";
+import UserInput from "./UserInput";
 
-class Container extends Component {
+class Document extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,7 +40,7 @@ class Container extends Component {
       <div>
         <h1>Welcome to your project</h1>
         <h2>Drag and drop analyses onto your document</h2>
-        <div class="ui fluid container">
+        <div class="ui fluid Document">
           <div class="ui grid">
             <div class="three column row">
               <div class="column"> Top-Level Details</div>
@@ -59,22 +60,7 @@ class Container extends Component {
               </div>
             </div>
             <div class="twelve wide column">
-              <div class="ui text container">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa strong. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-                justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-                justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
-                dictum felis eu pede link mollis pretium. Integer tincidunt.
-                Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-                vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
-                metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-                ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-              </div>
+              <UserInput />
               <div style={{ overflow: "hidden" }}>
                 {dustbins.map(({ accepts, lastDroppedItem }, index) => (
                   <Dustbin
@@ -85,7 +71,7 @@ class Container extends Component {
                   />
                 ))}
               </div>
-              <div class="ui text container">
+              <div class="ui text Document">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
                 commodo ligula eget dolor. Aenean massa strong. Cum sociis
                 natoque penatibus et magnis dis parturient montes, nascetur
@@ -130,4 +116,4 @@ class Container extends Component {
   }
 }
 
-export default DragDropContext(HTML5Backend)(Container);
+export default DragDropContext(HTML5Backend)(Document);
