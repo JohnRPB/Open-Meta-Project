@@ -5,7 +5,6 @@ import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
 import Dustbin from "./Dustbin";
 import Box from "./Box";
 import ItemTypes from "./ItemTypes";
-import UserInput from "./UserInput";
 
 class Document extends Component {
   constructor(props) {
@@ -34,7 +33,7 @@ class Document extends Component {
   }
 
   render() {
-    const { boxes, dustbins } = this.state;
+    const { boxes, dustbins, analyses } = this.state;
 
     return (
       <div>
@@ -43,9 +42,7 @@ class Document extends Component {
         <div class="ui fluid Document">
           <div class="ui grid">
             <div class="three column row">
-              <div class="column"> Top-Level Details</div>
-              <div class="column"> Results</div>
-              <div class="column"> Discussion</div>
+              <div class="column"> Inclusion</div>
             </div>
             <div class="four wide column">
               <div>
@@ -60,33 +57,21 @@ class Document extends Component {
               </div>
             </div>
             <div class="twelve wide column">
-              <UserInput />
-              <div style={{ overflow: "hidden" }}>
-                {dustbins.map(({ accepts, lastDroppedItem }, index) => (
-                  <Dustbin
-                    accepts={accepts}
-                    lastDroppedItem={lastDroppedItem}
-                    onDrop={item => this.handleDrop(index, item)}
-                    key={index}
-                  />
-                ))}
-              </div>
-              <div class="ui text Document">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa strong. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-                justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-                justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
-                dictum felis eu pede link mollis pretium. Integer tincidunt.
-                Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-                vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
-                metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-                ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-              </div>
+              <form onSubmit={this.handleSubmit}>
+                <textarea name="content" placeholder="Input text here" />
+                <br />
+                <div>
+                  {dustbins.map(({ accepts, lastDroppedItem }, index) => (
+                    <Dustbin
+                      accepts={accepts}
+                      lastDroppedItem={lastDroppedItem}
+                      onDrop={item => this.handleDrop(index, item)}
+                      key={index}
+                    />
+                  ))}
+                </div>
+                <input type="submit" value="Add Element" />
+              </form>
             </div>
           </div>
         </div>
