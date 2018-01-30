@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey:"tagId"
     });
 
-    Tag.belongsToMany(models.Tag, {
+    Tag.belongsToMany(models.Study, {
       through: models.JoinStudyTag,
       as: "TaggedArea",
       foreignKey:"tagId"
