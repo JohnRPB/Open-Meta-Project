@@ -1,0 +1,12 @@
+# Auto-Generated Rmarkdown Document 
+
+```{r block1}
+
+plusOne <- function (number) 
+{
+    number + 1
+}
+
+
+plusOne(1)
+```
