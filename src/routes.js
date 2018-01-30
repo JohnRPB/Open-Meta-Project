@@ -19,8 +19,12 @@ const Routes = () => {
         <Route exact path="/login" component={UserForm} />
         <Route exact path="/test" component={TestCompContainer} />
         <Route exact path="/about" component={About} />
+<<<<<<< HEAD
+        {/* <Route exact path="/rmarkdown" component={Rmarkdown} /> */}
+=======
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/landing" component={Landing} />
+>>>>>>> 7d2006518ca57248bc958996c90eb6889804c4eb
       </div>
     </Router>
   );

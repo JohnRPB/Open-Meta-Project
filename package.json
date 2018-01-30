@@ -12,6 +12,7 @@
     "express": "^4.16.2",
     "faker": "^4.1.0",
     "form-serialize": "^0.7.2",
+    "fs": "0.0.1-security",
     "immutability-helper": "^2.6.4",
     "morgan": "^1.9.0",
     "nodemon": "^1.14.10",
