@@ -12,11 +12,17 @@
     "express": "^4.16.2",
     "faker": "^4.1.0",
     "form-serialize": "^0.7.2",
+<<<<<<< HEAD
     "fs": "0.0.1-security",
+=======
+    "immutability-helper": "^2.6.4",
+>>>>>>> 7d2006518ca57248bc958996c90eb6889804c4eb
     "morgan": "^1.9.0",
     "nodemon": "^1.14.10",
     "pg": "^7.4.1",
     "react": "^16.2.0",
+    "react-dnd": "^2.5.4",
+    "react-dnd-html5-backend": "^2.5.4",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
@@ -25,6 +31,7 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
+    "semantic-ui-react": "^0.77.2",
     "sequelize": "^4.32.2",
     "sequelize-cli": "^3.2.0",
     "util": "^0.10.3",
