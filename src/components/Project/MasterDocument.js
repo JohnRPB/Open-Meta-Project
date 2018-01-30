@@ -5,6 +5,19 @@ import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
 import Dustbin from "./Dustbin";
 import Box from "./Box";
 import ItemTypes from "./ItemTypes";
+import {
+  Dropdown,
+  Menu,
+  Segment,
+  Header,
+  Grid,
+  Divider,
+  Button,
+  Image,
+  Card,
+  Container,
+  Popup
+} from "semantic-ui-react";
 
 class MasterDocument extends Component {
   constructor(props) {
@@ -36,18 +49,19 @@ class MasterDocument extends Component {
 
   render() {
     console.log("this props => ", this.props);
-    const { boxes, dustbins, analyses } = this.state;
+    const { boxes, dustbins } = this.state;
+    const { analyses } = this.props;
 
     return (
       <div>
         <h1>Welcome to your project</h1>
         <h2>Drag and drop analyses onto your document</h2>
-        <div class="ui fluid Document">
-          <div class="ui grid">
-            <div class="three column row">
-              <div class="column"> Inclusion</div>
+        <div className="ui fluid Document">
+          <div className="ui grid">
+            <div className="three column row">
+              <div className="column"> Inclusion</div>
             </div>
-            <div class="four wide column">
+            <div className="four wide column">
               <div>
                 {boxes.map(({ name, type }, index) => (
                   <Box
@@ -59,9 +73,19 @@ class MasterDocument extends Component {
                 ))}
               </div>
             </div>
-            <div class="twelve wide column">
+            <div className="twelve wide column">
+              <div>
+                {analyses.map((analysis, index) => {
+                  return (
+                    <div key={index}>
+                      <p>{analysis.textContent}</p>
+                      //dustbin graphic image
+                    </div>
+                  );
+                })}
+              </div>
               <form onSubmit={this.props.handleSubmit}>
-                <textarea name="content" placeholder="Input text here" />
+                <textarea name="textContent" placeholder="Input text here" />
                 <br />
                 <div>
                   {dustbins.map(({ accepts, lastDroppedItem }, index) => (
@@ -73,7 +97,9 @@ class MasterDocument extends Component {
                     />
                   ))}
                 </div>
-                <input type="submit" value="Add Element" />
+                <button className="ui primary button" type="submit">
+                  +
+                </button>
               </form>
             </div>
           </div>
@@ -104,4 +130,6 @@ class MasterDocument extends Component {
   }
 }
 
-export default DragDropContext(HTML5Backend)(MasterDocument);
+MasterDocument = DragDropContext(HTML5Backend)(MasterDocument);
+
+export default MasterDocument;

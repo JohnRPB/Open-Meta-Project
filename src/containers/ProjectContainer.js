@@ -1,12 +1,10 @@
-import * as Actions from "../actions";
-import {addText} from "../action"
+import { addText } from "../actions/project";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import {withRouter} from "react-router"
-import serialize from "form-serialize"
+import { withRouter } from "react-router";
+import serialize from "form-serialize";
 
 import MasterDocument from "../components/Project/MasterDocument";
-
 
 function mapStateToProps(state) {
   return {
@@ -16,8 +14,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    handleSubmit: (e) => {
-      console.log('testing from handleSubmit')
+    handleSubmit: e => {
+      console.log("testing from handleSubmit");
       e.preventDefault();
       const form = e.target;
       const data = serialize(form, { hash: true });
@@ -25,6 +23,10 @@ function mapDispatchToProps(dispatch) {
       dispatch(addText(data));
       form.reset();
     }
+  };
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MasterDocument));
+const ProjectContainer = withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(MasterDocument)
+);
+export default ProjectContainer;
