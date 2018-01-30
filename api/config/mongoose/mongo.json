@@ -1,0 +1,14 @@
+{
+  "development": {
+    "database": "open_meta_development",
+    "host": "localhost"
+  },
+  "test": {
+    "database": "open_meta_test",
+    "host": "localhost"
+  },
+  "production": {
+    "use_env_variable": "MONGO_URL"
+  }
+}
+
