@@ -8,20 +8,26 @@ let Tag = models.Tag;
 console.log("Journal: ", Journal);
 console.log("User: ", User);
 
-
 // let sequelize = models.sequelize;
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
+  console.log("are we getting here?");
   Study.findAll({
     include: [
-      { model: Journal }
+      { model: Tag, as: "TaggedStudy" }
     ]
   })
     .then(users => {
       res.status(200).send(users);
     })
     .catch(e => res.status(500).send(e.stack));
+});
+
+/* Login or register user */
+router.post("/", function(req, res, next) {
+  console.log("req.body => ", req.body);
+  res.send("response back from api!");
 });
 
 module.exports = router;
