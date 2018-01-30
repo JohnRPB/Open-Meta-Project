@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Study.belongsToMany(models.Tag, {
       through: models.JoinStudyTag,
-      as: "TaggedArea",
+      as: "TaggedStudy",
       foreignKey:"studyId"
     });
   };

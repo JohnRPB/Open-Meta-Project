@@ -12,8 +12,11 @@ console.log("User: ", User);
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
+  console.log("are we getting here?");
   Study.findAll({
-    include: [{model: Journal}]
+    include: [
+      { model: Tag, as: "TaggedStudy" }
+    ]
   })
     .then(users => {
       res.status(200).send(users);
