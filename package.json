@@ -12,11 +12,8 @@
     "express": "^4.16.2",
     "faker": "^4.1.0",
     "form-serialize": "^0.7.2",
-<<<<<<< HEAD
     "fs": "0.0.1-security",
-=======
     "immutability-helper": "^2.6.4",
->>>>>>> 7d2006518ca57248bc958996c90eb6889804c4eb
     "morgan": "^1.9.0",
     "nodemon": "^1.14.10",
     "pg": "^7.4.1",
