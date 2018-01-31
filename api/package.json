@@ -9,7 +9,6 @@
     "body-parser": "^1.18.2",
     "child_process": "^1.0.2",
     "classnames": "^2.2.5",
-    "concurrently": "^3.5.1",
     "debug": "^3.1.0",
     "express": "^4.16.2",
     "faker": "^4.1.0",
@@ -18,26 +17,13 @@
     "morgan": "^1.9.0",
     "nodemon": "^1.14.10",
     "pg": "^7.4.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "react-router-redux": "^4.0.8",
-    "react-scripts": "^1.0.17",
-    "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0",
     "sequelize": "^4.32.2",
     "sequelize-cli": "^3.2.0",
     "util": "^0.10.3",
     "yargs": "^10.1.1"
   },
   "scripts": {
-    "app": "react-scripts start",
-    "api": "nodemon api/server/index.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "nodemon server/inxex.js",
     "sql:migrate:undo": "npm run sql db:migrate:undo:all",
     "sql:migrate": "npm run sql db:migrate",
     "sql:seed:undo": "npm run sql db:seed:undo:all",
@@ -50,8 +36,6 @@
   },
   "devDependencies": {
     "chalk": "^2.3.0",
-    "path": "^0.12.7",
-    "react-dev-utils": "^4.2.1"
-  },
-  "proxy": "http://localhost:8000"
+    "path": "^0.12.7"
+  }
 }
