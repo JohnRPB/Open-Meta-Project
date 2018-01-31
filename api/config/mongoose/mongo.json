@@ -8,7 +8,7 @@
     "host": "localhost"
   },
   "production": {
-    "use_env_variable": "MONGO_URL"
+    "use_env_variable": "MONGO_URI"
   }
 }
 
