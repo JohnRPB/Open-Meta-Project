@@ -4,7 +4,7 @@ import React from "react";
 import TestCompContainer from "./containers/TestCompContainer";
 import About from "./components/About/About";
 import UserForm from "./components/Login/UserForm";
-import MasterContainer from "./components/Project/MasterContainer";
+import ProjectContainer from "./containers/ProjectContainer";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 
@@ -15,7 +15,7 @@ const Routes = () => {
     <Router>
       <div>
         <Route exact path="/" component={TestCompContainer} />
-        <Route exact path="/project" component={MasterContainer} />
+        <Route exact path="/project" component={ProjectContainer} />
         <Route exact path="/login" component={UserForm} />
         <Route exact path="/test" component={TestCompContainer} />
         <Route exact path="/about" component={About} />
