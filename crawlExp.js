@@ -1,11 +1,11 @@
 const webCrawler = async url => {
   const fs = require('fs');
-  // const axios = require('axios');
-  // let rawResponse = await axios.get(url)
-  // let responseData = rawResponse.data;
+  const axios = require('axios');
+  let rawResponse = await axios.get(url)
+  let responseData = rawResponse.data;
   // console.log(typeof rawResponse);
-  // fs.writeFileSync('./rawCrawlerResponse.txt', rawResponse.data);
-  let responseData = fs.readFileSync('./rawCrawlerResponse.txt', 'utf-8');
+  fs.writeFileSync('./rawCrawlerResponse.txt', rawResponse.data);
+  // let responseData = fs.readFileSync('./rawCrawlerResponse.txt', 'utf-8');
   
   //----------------------------------------
   //Filter weird characters
