@@ -1,0 +1,1981 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><title>
+	Efficacy and Safety of Fluconazole Prophylaxis for Fungal Infections after Marrow Transplantation—A Prospective, Randomized, Double-Blind Study | The Journal of Infectious Diseases | Oxford Academic
+</title>   
+    <!-- Responsive View Port -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- Meta -->
+    <meta charset="utf-8" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"8d76ca6f26","applicationID":"29565620","transactionName":"ZQBRMkVUCEtRVkINXlxKcjVnGgdKRFxVCFQcBEAWTw==","queueTime":0,"applicationTime":2497,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAYBV15WGwEJUVdXAQMH"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
+    <!-- Bookmark Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/UI/app/img/apple-touch-icon.png" /><link rel="icon" type="image/png" href="/UI/app/img/favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="/UI/app/img/favicon-16x16.png" sizes="16x16" /><link rel="manifest" href="/UI/app/img/manifest.json" /><link rel="mask-icon" href="/UI/app/img/safari-pinned-tab.svg" color="#5bbad5" /><link rel="shortcut icon" href="/UI/app/img/favicon.ico" /><meta name="msapplication-config" content="/UI/app/img/browserconfig.xml" /><meta name="theme-color" content="#002f65" />
+
+    <!-- Stylesheets -->
+    
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400italic,700,700italic|Source+Sans+Pro:400,400italic,700,700italic" type="text/css" rel="stylesheet"/>
+<link href="//oup.silverchair-cdn.com/cassette.axd/stylesheet/3b3a98f3ee81a5e7b5e013bc997307997d32a5d0/globalCSS" type="text/css" rel="stylesheet"/>
+<link href="//oup.silverchair-cdn.com/cassette.axd/stylesheet/7f205a0b34174418576911868d654b544c0687d4/cookiePolicyCSS" type="text/css" rel="stylesheet"/>
+<link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" type="text/css" rel="stylesheet"/>
+
+        <link href=//oup.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/CSS/journals/global.css rel="stylesheet" type="text/css" />
+    
+        <link href=//oup.silverchair-cdn.com/data/SiteBuilderAssets/Live/CSS/jid/Site-1859130106.css rel="stylesheet" type="text/css" />
+    
+
+    <!-- Scripts -->
+    
+<script src="//oup.silverchair-cdn.com/cassette.axd/script/8b6babff47b8a9793f37036fd1b1a3ad41d38423/UI/app/vendor/jquery-1.8.3.min.js" type="text/javascript"></script>
+
+<!--     
+
+ -->
+
+    <script type="text/javascript">
+        var App = App || {};
+        App.LoginUserInfo = { 
+            isInstLoggedIn: [0] 
+        };
+
+        App.CurrentSubdomain = 'jid';
+    </script>
+
+    <!-- Extra Head Content -->
+    
+    
+        <script type="application/ld+json">
+        {"@context":"http://schema.org","@id":"https://academic.oup.com/jid/article/171/6/1545/803921","@type":"ScholarlyArticle","name":"Efficacy and Safety of Fluconazole Prophylaxis for Fungal Infections after Marrow Transplantation—A Prospective, Randomized, Double-Blind Study","about":["amphotericin b","bone marrow transplantation","candidiasis","mycoses","systemic mycosis","candida albicans","dermatomycoses","fluconazole","safety","infection","transplantation","toxic effect","prevention","fungal colonization"],"datePublished":"1995-06-01","isPartOf":{"@id":"https://academic.oup.com/jid/issue/171/6","@type":"PublicationIssue","issueNumber":"6","datePublished":"1995-06-01","isPartOf":{"@id":"https://academic.oup.com/jid","@type":"Periodical","name":"The Journal of Infectious Diseases","issn":["1537-6613"]}},"url":"http://dx.doi.org/10.1093/infdis/171.6.1545","keywords":["amphotericin b","bone marrow transplantation","candidiasis","mycoses","systemic mycosis","candida albicans","dermatomycoses","fluconazole","safety","infection","transplantation","toxic effect","prevention","fungal colonization"],"inLanguage":"en","copyrightHolder":"Infectious Diseases Society of America","copyrightYear":"2018","publisher":"Oxford University Press","sameAs":"https://academic.oup.com/jid/article/171/6/1545/803921","author":[{"name":"Slavin, Monica A.","@type":"Person"},{"name":"Osborne, Barbara","@type":"Person"},{"name":"Adams, Robyn","@type":"Person"},{"name":"Levenstein, Marcia J.","@type":"Person"},{"name":"Schoch, H. Gary","@type":"Person"},{"name":"Feldman, Allen R.","@type":"Person"},{"name":"Meyers, Joel D.","@type":"Person"},{"name":"Bowden, Raleigh A.","@type":"Person"}],"description":"A randomized, double-blind, placebo-controlled trial assessed the efficacy and toxicity of 400 mg/day fluconazole in preventing fungal infections during the first 75 days after marrow transplantation. During prophylaxis, systemic fungal infections occurred in 10 (7%) of 152 fluconazole-treated patients compared with 26 (18%) of 148 placebo-treated patients (P = .004). There were no Candida albicans infections in fluconazole recipients compared with 18 in placebo recipients (P &lt; .001) and no significant increase in Candida infections other than C. albicans. Fluconazole also significantly reduced the incidence of superficial fungal infections (P &lt; .001), fungal colonization (P = .037), and empiric amphotericin B use (P = .005). The probability of survival was improved in fluconazole recipients, in whom 31 deaths occurred up to day 110 after transplantation compared with 52 deaths in placebo recipients (P = .004). No clinically significant toxicity was detected with fluconazole use. Prophylactic fluconazole was safe and significantly reduced systemic fungal infections with other benefits, including improved survival at day 110 after marrow transplantation.","pageStart":"1545","pageEnd":"1552","thumbnailURL":"https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/jid/Issue/171/6/0/m_jid171_6.cover.gif?Expires=1580484578&Signature=AKiXmUj2zTAKfkVCG03KwDXoaqF8f9bHEqALK5duU8SbW-WED8u6xK2OwLFsHdObjU1DtgC2oYnN7Z1lrub103v2Zh6Jjp54HLla3L~ngi86kEvpSX1sV0d88yJHFvgvDJERjHX45A3oYUJhpuY9VOLExWPr4OMhhfZhSmGJ2BndjI3zYMqlnujBKdVK3rpxImNcoUlxrhOxy5U8GrOpsD5sbsOfUmUEZ7frB5BlgTEs-LN6BMJbrG583tv3CaBXN5vh5xZBZxcOFV7UQvwJsWfD8wvwMEI876PgEAQrZ-BHxmZwbyMv3KWycOtQebkz2KBiWQfMLSWNmr6KeCI0Iw__&Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q","headline":"Efficacy and Safety of Fluconazole Prophylaxis for Fungal Infections after Marrow Transplantation—A Prospective, Randomized, Double-Blind Study","image":"https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/jid/Issue/171/6/0/m_jid171_6.cover.gif?Expires=1580484578&Signature=AKiXmUj2zTAKfkVCG03KwDXoaqF8f9bHEqALK5duU8SbW-WED8u6xK2OwLFsHdObjU1DtgC2oYnN7Z1lrub103v2Zh6Jjp54HLla3L~ngi86kEvpSX1sV0d88yJHFvgvDJERjHX45A3oYUJhpuY9VOLExWPr4OMhhfZhSmGJ2BndjI3zYMqlnujBKdVK3rpxImNcoUlxrhOxy5U8GrOpsD5sbsOfUmUEZ7frB5BlgTEs-LN6BMJbrG583tv3CaBXN5vh5xZBZxcOFV7UQvwJsWfD8wvwMEI876PgEAQrZ-BHxmZwbyMv3KWycOtQebkz2KBiWQfMLSWNmr6KeCI0Iw__&Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q"}
+    </script>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Efficacy and Safety of Fluconazole Prophylaxis for Fungal Infections after Marrow Transplantation—A Prospective, Randomized, Double-Blind Study | The Journal of Infectious Diseases | Oxford Academic" />
+    <meta property="og:description" content="A randomized, double-blind, placebo-controlled trial assessed the efficacy and toxicity of 400 mg/day fluconazole in preventing fungal infections during the first 75 days after marrow transplantation. During prophylaxis, systemic fungal infections occurred in 10 (7%) of 152 fluconazole-treated patients compared with 26 (18%) of 148 placebo-treated patients (P = .004). There were no Candida albicans infections in fluconazole recipients compared with 18 in placebo recipients (P &amp;lt; .001) and no significant increase in Candida infections other than C. albicans. Fluconazole also significantly reduced the incidence of superficial fungal infections (P &amp;lt; .001), fungal colonization (P = .037), and empiric amphotericin B use (P = .005). The probability of survival was improved in fluconazole recipients, in whom 31 deaths occurred up to day 110 after transplantation compared with 52 deaths in placebo recipients (P = .004). No clinically significant toxicity was detected with fluconazole use. Prophylactic fluconazole was safe and significantly reduced systemic fungal infections with other benefits, including improved survival at day 110 after marrow transplantation." />
+    <meta property="og:url" content="https://academic.oup.com/jid/article/171/6/1545/803921" />
+    <meta property="og:image" content="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/jid/Issue/217/4/1/m_cover.png?Expires=1580484578&amp;Signature=VupsdGk~ImyzUs4QzR-IYymE4APVv47huhmi6sJ1BeHCjptZ36V054vrh4nHPe8gJtoCxsF1fKyfDcCchEBz67RL7L6BZtfKMb1EV8wdturRHiw1F7C5r12SJkaBZ86mOB~cihv-6kReg5Ix2E7PS1rdmmpxaV-Hl2rXmtDNgI~R~XD-zyr7uF-DGMNd8fivFPhHIoN~i4exvMibKL51Tfn3kKMnr7FeVSWwG9lcAPFl399LAySAnBkt9te1HxmAqOsk4be4X0dCJW9-d8HuyG4H86Kw9Wdri2jGJq39lU-IFElzC0k5AqSQmwslZLAYfC16hlvVZtv5qneu7pn4ug__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q" />
+    <meta property="og:updated_time" content="1995-06-01" />
+    <meta property="og:site_name" content="OUP Academic" />
+<meta name="citation_author" content="Slavin, Monica A." /><meta name="citation_author" content="Osborne, Barbara" /><meta name="citation_author" content="Adams, Robyn" /><meta name="citation_author" content="Levenstein, Marcia J." /><meta name="citation_author" content="Schoch, H. Gary" /><meta name="citation_author" content="Feldman, Allen R." /><meta name="citation_author" content="Meyers, Joel D." /><meta name="citation_author" content="Bowden, Raleigh A." /><meta name="citation_title" content="Efficacy and Safety of Fluconazole Prophylaxis for Fungal Infections after Marrow Transplantation—A Prospective, Randomized, Double-Blind Study" /><meta name="citation_firstpage" content="1545" /><meta name="citation_lastpage" content="1552" /><meta name="citation_doi" content="10.1093/infdis/171.6.1545" /><meta name="citation_keyword" content="mycoses" /><meta name="citation_keyword" content="fluconazole" /><meta name="citation_keyword" content="safety" /><meta name="citation_keyword" content="bone marrow transplantation" /><meta name="citation_keyword" content="prevention" /><meta name="citation_keyword" content="toxic effect" /><meta name="citation_keyword" content="systemic mycosis" /><meta name="citation_keyword" content="candida albicans" /><meta name="citation_keyword" content="dermatomycoses" /><meta name="citation_keyword" content="infection" /><meta name="citation_keyword" content="transplantation" /><meta name="citation_keyword" content="amphotericin b" /><meta name="citation_keyword" content="candidiasis" /><meta name="citation_keyword" content="fungal colonization" /><meta name="citation_journal_title" content="The Journal of Infectious Diseases" /><meta name="citation_journal_abbrev" content="J Infect Dis" /><meta name="citation_volume" content="171" /><meta name="citation_issue" content="6" /><meta name="citation_publication_date" content="1995/06/01" /><meta name="citation_issn" content="0022-1899" /><meta name="citation_publisher" content="Oxford University Press" /><meta name="citation_pdf_url" content="https://academic.oup.com/jid/article-pdf/171/6/1545/2406082/171-6-1545.pdf" /><meta name="description" content="Abstract.  A randomized, double-blind, placebo-controlled trial assessed the efficacy and toxicity of 400 mg/day fluconazole in preventing fungal infections dur" />
+        <meta name="citation_xml_url" content="https://academic.oup.com/jid/article-xml/171/6/1545/803921" />
+
+
+
+    <link rel="canonical" href="https://academic.oup.com/jid/article-abstract/171/6/1545/803921" />
+
+
+        <!-- Start: GPT Async -->
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+
+
+<script type='text/javascript'>
+  var gptAdSlots = [];
+  googletag.cmd.push(function() {
+    var pathChar = '/';
+    
+    var mapping_ad1 = googletag.sizeMapping().
+    addSize([1024, 0], [[970, 90], [728, 90]]).
+    addSize([768, 0], [728, 90]).
+    addSize([0, 0], [320, 50]).build();
+    gptAdSlots["ad1"] = googletag.defineSlot(pathChar+'116097782'+pathChar+'jid_InFront_Ad1', [[970, 90], [728, 90], [320, 50]], 'adBlockHeader').
+    defineSizeMapping(mapping_ad1).
+    addService(googletag.pubads());
+    
+    var mapping_ad2 = googletag.sizeMapping().
+	addSize([0, 0], []).
+    addSize([768, 0], [[300, 250], [300, 600], [160, 600]]).build();
+    gptAdSlots["ad2"] = googletag.defineSlot(pathChar+'116097782'+pathChar+'jid_InFront_Ad2', [[300, 250], [160, 600], [300, 600]], 'adBlockMainBodyTop').
+    defineSizeMapping(mapping_ad2).
+    addService(googletag.pubads());
+    
+    var mapping_ad3 = googletag.sizeMapping().
+	addSize([0, 0], []).
+    addSize([768, 0], [[300, 250], [300, 600], [160, 600]]).build();
+    gptAdSlots["ad3"] = googletag.defineSlot(pathChar+'116097782'+pathChar+'jid_InFront_Ad3', [[300, 250], [160, 600], [300, 600]], 'adBlockMainBodyBottom').
+    defineSizeMapping(mapping_ad3).
+    addService(googletag.pubads());
+    
+    var mapping_ad4 = googletag.sizeMapping().
+	addSize([0, 0], []).
+    addSize([768, 0], [728, 90]).build();
+    gptAdSlots["ad4"] = googletag.defineSlot(pathChar+'116097782'+pathChar+'jid_InFront_Ad4', [728, 90], 'adBlockFooter').
+    defineSizeMapping(mapping_ad4).
+    addService(googletag.pubads());
+    
+
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+
+
+    <script>
+        var oupcookiepolicy_siteid = "journals";;	  	// the website id	
+        var oupcookiepolicy_messagetype = 'implied';			            // type of alert message e.g, implied / explicit
+        var oupcookiepolicy_preferredlanguage = "en";		// preferred language of the website
+        var oupcookiepolicy_impliedmessageclass = 'cookiepolicyimplied';	// the css class for implied alert message
+        var oupcookiepolicy_documentroot = '/';	  			                // the document root the cookie is set to
+    </script>
+    <noscript>We use cookies to enhance your experience on our website. By continuing to use our website, you are agreeing to our use of cookies. You can change your cookie settings at any time. <a href="https://global.oup.com/cookiepolicy/" target="_blank">Find out more</a></noscript>
+
+    <script type="text/javascript">
+        var NTPT_PGEXTRA='event_type=abstract&supplier_tag=SC_Journals&siteid=jid&authzrequired=false&doi=10.1093/infdis/171.6.1545';
+    </script>
+</head>
+
+<body data-sitename="thejournalofinfectiousdiseases" class="off-canvas pg_article" theme-jid>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-78288099-3', {'sampleRate': 10});ga('send', 'pageview');</script>
+    <a href="#main" class="skipnav">Skip to Main Content</a>
+    <form method="post" action="./803921" id="webform">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE5MDQ5NDk5MjIPZBYCZg9kFgJmD2QWBGYPZBYCAg8PZBYCAgEPZBYCZg8WAh4EVGV4dAWZEjxtZXRhIG5hbWU9ImNpdGF0aW9uX2F1dGhvciIgY29udGVudD0iU2xhdmluLCBNb25pY2EgQS4iIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fYXV0aG9yIiBjb250ZW50PSJPc2Jvcm5lLCBCYXJiYXJhIiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2F1dGhvciIgY29udGVudD0iQWRhbXMsIFJvYnluIiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2F1dGhvciIgY29udGVudD0iTGV2ZW5zdGVpbiwgTWFyY2lhIEouIiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2F1dGhvciIgY29udGVudD0iU2Nob2NoLCBILiBHYXJ5IiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2F1dGhvciIgY29udGVudD0iRmVsZG1hbiwgQWxsZW4gUi4iIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fYXV0aG9yIiBjb250ZW50PSJNZXllcnMsIEpvZWwgRC4iIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fYXV0aG9yIiBjb250ZW50PSJCb3dkZW4sIFJhbGVpZ2ggQS4iIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fdGl0bGUiIGNvbnRlbnQ9IkVmZmljYWN5IGFuZCBTYWZldHkgb2YgRmx1Y29uYXpvbGUgUHJvcGh5bGF4aXMgZm9yIEZ1bmdhbCBJbmZlY3Rpb25zIGFmdGVyIE1hcnJvdyBUcmFuc3BsYW50YXRpb27igJRBIFByb3NwZWN0aXZlLCBSYW5kb21pemVkLCBEb3VibGUtQmxpbmQgU3R1ZHkiIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fZmlyc3RwYWdlIiBjb250ZW50PSIxNTQ1IiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2xhc3RwYWdlIiBjb250ZW50PSIxNTUyIiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2RvaSIgY29udGVudD0iMTAuMTA5My9pbmZkaXMvMTcxLjYuMTU0NSIgLz48bWV0YSBuYW1lPSJjaXRhdGlvbl9rZXl3b3JkIiBjb250ZW50PSJteWNvc2VzIiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2tleXdvcmQiIGNvbnRlbnQ9ImZsdWNvbmF6b2xlIiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2tleXdvcmQiIGNvbnRlbnQ9InNhZmV0eSIgLz48bWV0YSBuYW1lPSJjaXRhdGlvbl9rZXl3b3JkIiBjb250ZW50PSJib25lIG1hcnJvdyB0cmFuc3BsYW50YXRpb24iIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fa2V5d29yZCIgY29udGVudD0icHJldmVudGlvbiIgLz48bWV0YSBuYW1lPSJjaXRhdGlvbl9rZXl3b3JkIiBjb250ZW50PSJ0b3hpYyBlZmZlY3QiIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fa2V5d29yZCIgY29udGVudD0ic3lzdGVtaWMgbXljb3NpcyIgLz48bWV0YSBuYW1lPSJjaXRhdGlvbl9rZXl3b3JkIiBjb250ZW50PSJjYW5kaWRhIGFsYmljYW5zIiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2tleXdvcmQiIGNvbnRlbnQ9ImRlcm1hdG9teWNvc2VzIiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2tleXdvcmQiIGNvbnRlbnQ9ImluZmVjdGlvbiIgLz48bWV0YSBuYW1lPSJjaXRhdGlvbl9rZXl3b3JkIiBjb250ZW50PSJ0cmFuc3BsYW50YXRpb24iIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fa2V5d29yZCIgY29udGVudD0iYW1waG90ZXJpY2luIGIiIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fa2V5d29yZCIgY29udGVudD0iY2FuZGlkaWFzaXMiIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fa2V5d29yZCIgY29udGVudD0iZnVuZ2FsIGNvbG9uaXphdGlvbiIgLz48bWV0YSBuYW1lPSJjaXRhdGlvbl9qb3VybmFsX3RpdGxlIiBjb250ZW50PSJUaGUgSm91cm5hbCBvZiBJbmZlY3Rpb3VzIERpc2Vhc2VzIiAvPjxtZXRhIG5hbWU9ImNpdGF0aW9uX2pvdXJuYWxfYWJicmV2IiBjb250ZW50PSJKIEluZmVjdCBEaXMiIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fdm9sdW1lIiBjb250ZW50PSIxNzEiIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25faXNzdWUiIGNvbnRlbnQ9IjYiIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fcHVibGljYXRpb25fZGF0ZSIgY29udGVudD0iMTk5NS8wNi8wMSIgLz48bWV0YSBuYW1lPSJjaXRhdGlvbl9pc3NuIiBjb250ZW50PSIwMDIyLTE4OTkiIC8+PG1ldGEgbmFtZT0iY2l0YXRpb25fcHVibGlzaGVyIiBjb250ZW50PSJPeGZvcmQgVW5pdmVyc2l0eSBQcmVzcyIgLz48bWV0YSBuYW1lPSJjaXRhdGlvbl9wZGZfdXJsIiBjb250ZW50PSJodHRwczovL2FjYWRlbWljLm91cC5jb20vamlkL2FydGljbGUtcGRmLzE3MS82LzE1NDUvMjQwNjA4Mi8xNzEtNi0xNTQ1LnBkZiIgLz48bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iQWJzdHJhY3QuICBBIHJhbmRvbWl6ZWQsIGRvdWJsZS1ibGluZCwgcGxhY2Viby1jb250cm9sbGVkIHRyaWFsIGFzc2Vzc2VkIHRoZSBlZmZpY2FjeSBhbmQgdG94aWNpdHkgb2YgNDAwIG1nL2RheSBmbHVjb25hem9sZSBpbiBwcmV2ZW50aW5nIGZ1bmdhbCBpbmZlY3Rpb25zIGR1ciIgLz5kAgQPZBYCZg9kFgJmDxYEHgRocmVmBXIvL291cC5zaWx2ZXJjaGFpci1jZG4uY29tL0Rvd25sb2FkRmlsZS9Eb3dubG9hZEltYWdlLmFzcHg/aW1hZ2U9JlBQVHR5cGU9U2xpZGVTZXQmYXI9ODAzOTIxJnhzbHRQYXRoPX4vVUkvYXBwL1hTTFQeCWlubmVyaHRtbAUURG93bmxvYWQgYWxsIGZpZ3VyZXNkZBd6AMOj7zA+PtC+jG80AFFxHQHo" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2173C2F0" />
+        </form>
+        
+        <input id="hdnSiteID" type="hidden" value="5309" />
+        <input id="hdnAdDelaySeconds" type="hidden" value="5000" />
+        <input id="hdnAdConfigurationTop" type="hidden" value="default" />
+        <input id="hdnAdConfigurationRightRail" type="hidden" value="sticky" />
+
+        
+
+        
+    <div class="master-container">
+        <section class="master-header row">
+                <div class="widget widget-SitePageHeader widget-instance-SitePageHeader">
+        
+    <div class="ad-banner js-ad-banner-header">
+    <div class="widget widget-AdBlock widget-instance-HeaderAd">
+        <div id="adBlockHeader" style=' '>
+    <script>
+        googletag.cmd.push(function () { googletag.display('adBlockHeader'); });
+    </script>
+</div>
+
+    </div>
+
+    </div>
+
+    <div class="oup-header">
+        <div class="center-inner-row">
+
+            <div class="oup-header-logo">
+                <a href="/"><img src="//oup.silverchair-cdn.com/UI/app/svg/umbrella/oxford-academic-logo.svg" alt="Oxford University Press" class="oup-header-image"></a>
+            </div><!-- /.oup-header-logo -->
+
+            <ul class="oup-header-menu account-menu">
+
+                <!-- MOBILE SEARCH  -->
+                <li class="oup-header-menu-item mobile">
+                    <button href="" class="btn btn-as-icon mobile-dropdown-toggle mobile-search-toggle">
+                        <i class="icon-menu_search"><span class="screenreader-text">Search</span></i>
+                    </button>
+                </li>
+
+                <!-- MOBILE MENU -->
+                <li class="oup-header-menu-item mobile">
+                    <button href="" class="btn btn-as-icon mobile-dropdown-toggle mobile-account-toggle">
+                        <i class="icon-menu_account"><span class="screenreader-text">Account Menu</span></i>
+                    </button>
+                </li>
+
+                <!-- MOBILE NAV -->
+                <li class="oup-header-menu-item mobile">
+                    <button href="" class="btn btn-as-icon mobile-dropdown-toggle mobile-nav-toggle">
+                        <i class="icon-menu_hamburger"><span class="screenreader-text">Menu</span></i>
+                    </button>
+                </li>
+
+                <!-- DESKTOP INSTITUTIONS -->
+
+                <!-- DESKTOP SIGN IN -->
+                <li class="oup-header-menu-item desktop">
+                    <a href="" class="dropdown-toggle signin" id="header-account-info-user-fullname">
+                        
+Sign In                        <i class="icon-general-arrow-filled-down arrow-icon"></i>
+                    </a>
+                    <div class="dropdown-panel dropdown-panel-signin dropdown-panel-form">
+                        <div class="spinner"></div>
+                    </div><!-- /.dropdown-panel -->
+                </li>
+
+                <!-- DESKTOP REGISTRATION -->
+                    <li class="oup-header-menu-item desktop"><a href="/my-account/register?siteId=5309&amp;returnUrl=%2fjid%2farticle-abstract%2f171%2f6%2f1545%2f803921" class="register">Register</a></li>
+
+                <!-- LANGUAGE -->
+                    <!-- <li class="oup-header-menu-item desktop">
+                        <a href="" class="dropdown-toggle language">Language</a>
+                        <div class="dropdown-panel">
+                            <div class="dropdown-menu">
+                                <ul>
+                                    foreach (var lang in Model.LanguageOptions)
+                                    {
+                                        string selectedClass = (lang.SiteId == Model.SiteId ? " selected" : "");
+                                        Html.Raw(String.Format("<li class=\"header-language-item{0}\"><a href=\"//{1}\">{2}</a></li>", selectedClass, lang.SiteUrl, lang.LanguageText))
+                                        ;
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </li> -->
+
+            </ul><!-- /.oup-header-menu .account-menu -->
+        </div><!-- /.center-inner-row -->
+    </div><!-- /.oup-header -->
+
+<div class="dropdown-panel-wrap">
+
+    
+    <div class="dropdown-panel mobile-search-dropdown">
+        <div class="mobile-search-inner-wrap">
+            <div class="navbar-search">
+                <div id="MobileMicrositeSearch" class="mobile-microsite-search">
+                    <label for="mobile-navbar-search-filter" class="screenreader-text">Navbar Search Filter</label>
+                    <select class="navbar-search-filter" id="mobile-navbar-search-filter">
+                                                    <optgroup label="Search within this journal">
+<option class="header-search-bar-filters-item" value="">All  The Journal of Infectious Diseases</option>
+                            </optgroup>
+                            <optgroup label="Search beyond this journal">
+<option class="header-search-bar-filters-item" value="Parent">All  IDSA Journals</option><option class="header-search-bar-filters-item" value="Journals">All  Journals</option>                            </optgroup>
+                    </select>
+
+
+
+
+
+                    <label for="MobileMicrositeSearchTerm" class="screenreader-text">Mobile Microsite Search Term</label>
+                    <input class="mobile-search-input mobile-microsite-search-term" type="text" maxlength="255" placeholder="Search" id="MobileMicrositeSearchTerm">
+
+                    <span id="MobileMicrositeSearchIcon" class="mobile-microsite-search-icon mobile-search-submit icon-menu_search"></span>
+
+                </div><!-- /#MobileMicrositeSearch -->
+            </div><!-- /.navbar-search -->
+        </div><!-- /.mobile-search-inner-wrap -->
+    </div><!-- /.dropdown-panel .dropdown-panel-search -->
+    
+    <div class="dropdown-panel mobile-account-dropdown">
+        <ul class="site-menu site-menu-lvl-0">
+            <li class="site-menu-item site-menu-lvl-0">
+                <a href="" class="nav-link mobile-account-signin dummy-link" id="header-account-info-user-fullname">
+                    
+Sign In                    <i class="mobile-nav-arrow icon-general_arrow-down"></i>
+                </a>
+                <ul class="site-menu site-menu-lvl-1 individual-menu">
+                    <li class="dropdown-signin-form">
+                        <div class="spinner"></div>
+                    </li>
+                </ul>
+            </li>
+                            <li class="site-menu-item">
+                    <a href="/my-account/register?siteId=5309&amp;returnUrl=%2fjid%2farticle-abstract%2f171%2f6%2f1545%2f803921" class="register nav-link">Register</a>
+                </li>
+        </ul>
+    </div><!-- /.dropdown-panel .dropdown-panel-account -->
+    
+    <div class="dropdown-panel mobile-nav-dropdown">
+
+
+    <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-0">
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034777">
+            <a href="/jid/issue" class="nav-link ">Issues</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034773">
+            <a href="/jid/#" class="nav-link dummy-link">More Content</a>
+                <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-1">
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034778">
+            <a href="/jid/advance-articles" class="nav-link ">Advance articles</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034779">
+            <a href="/jid/search-results?page=1&amp;f_OUPSeries=Editor%27s+Choice" class="nav-link ">Editor's Choice</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034780">
+            <a href="/jid/pages/supplemental" class="nav-link ">Supplement Archive</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034781">
+            <a href="https://academic.oup.com/jid/issue-covers/" class="nav-link ">Cover Archive</a>
+            
+        </li>
+    </ul>
+
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034774">
+            <a href="/jid/#" class="nav-link dummy-link">Publish</a>
+                <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-1">
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034782">
+            <a href="/jid/pages/General_Instructions" class="nav-link ">Author Guidelines</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034783">
+            <a href="http://www.editorialmanager.com/jid" class="nav-link ">Submit</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034784">
+            <a href="http://www.oxfordjournals.org/en/authors/offprints.html" class="nav-link ">Order Offprints</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034785">
+            <a href="http://www.oxfordjournals.org/en/oxford-open/index.html" class="nav-link ">Open Access Options</a>
+            
+        </li>
+    </ul>
+
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034786">
+            <a href="/jid/subscribe" class="nav-link ">Purchase</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034775">
+            <a href="/jid/#" class="nav-link dummy-link">Advertise</a>
+                <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-1">
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034787">
+            <a href="http://www.oupmediainfo.com" class="nav-link ">Advertising and Corporate Services</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034788">
+            <a href="http://www.oupmediainfo.com/#!/advertising" class="nav-link ">Advertising</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034789">
+            <a href="http://oupmediainfo.com/#!/mediakit/journal-infectious-diseases" class="nav-link ">Mediakit</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034790">
+            <a href="http://www.oupmediainfo.com/#!/reprints-eprints" class="nav-link ">Reprints and ePrints</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034791">
+            <a href="http://www.oupmediainfo.com/#!/sponsored-supplements" class="nav-link ">Sponsored Supplements</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034792">
+            <a href="http://www.oupmediainfo.com/#!/branded-books" class="nav-link ">Branded Books</a>
+            
+        </li>
+    </ul>
+
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034776">
+            <a href="/jid/#" class="nav-link dummy-link">About</a>
+                <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-1">
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034793">
+            <a href="/jid/pages/About" class="nav-link ">About The Journal of Infectious Diseases</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034794">
+            <a href="https://www.idsociety.org/Index.aspx" class="nav-link ">About the Infectious Diseases Society of America</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034795">
+            <a href="http://www.hivma.org/Home.aspx" class="nav-link ">About the HIV Medicine Association</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034796">
+            <a href="http://www.oxfordjournals.org/resource/pdfs/idsa%20coi%20policies%20november%202013.pdf" class="nav-link ">IDSA COI Policy</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034797">
+            <a href="/jid/pages/Editorial_Board" class="nav-link ">Editorial Board</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034798">
+            <a href="http://academic.oup.com/my-account/email-alerts" class="nav-link ">Alerts</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034799">
+            <a href="https://academic.oup.com/journals/pages/access_purchase/rights_and_permissions/self_archiving_policy_b" class="nav-link ">Self-Archiving Policy</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034800">
+            <a href="/jid/pages/For_Reviewers" class="nav-link ">For Reviewers</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034801">
+            <a href="/jid/pages/for_press_offices_" class="nav-link ">For Press Offices</a>
+            
+        </li>
+    </ul>
+
+        </li>
+    </ul>
+    </div><!-- /.dropdown-panel .dropdown-panel-nav -->
+
+</div><!-- /.dropdown-panel-wrap -->
+
+
+    <div class="journal-header journal-bg">
+        <div class="center-inner-row">
+                <a href="/jid" class=" journal-logo-container">
+            
+                <img id="logo-TheJournalofInfectiousDiseases" class="journal-logo" src="//oup.silverchair-cdn.com/data/SiteBuilderAssets/Live/Images/jid/jid_title-1510596176.svg" alt="The Journal of Infectious Diseases"/>
+            
+                </a>
+            <div class="society-logo-block">
+                    <div class="society-block-inner-wrap">
+                            <a href="http://www.idsociety.org/Index.aspx" target="" class="society-logo-container">
+                                <img id="logo-InfectiousDiseasesSocietyofAmerica" class="society-logo" src="//oup.silverchair-cdn.com/data/SiteBuilderAssets/Live/Images/jid/jid_h1-428695167.svg" alt="Infectious Diseases Society of America"/>
+                            </a>
+                                                    <a href="http://www.hivma.org/Home.aspx" target="" class="society-logo-container">
+                                <img id="logo-HIVMedicineAssociation" class="society-logo" src="//oup.silverchair-cdn.com/data/SiteBuilderAssets/Live/Images/jid/jid_h2789191112.svg" alt="HIV Medicine Association"/>
+                            </a>
+                    </div><!-- /.society-block-inner-wrap - NOTE: used to vertically center one or more society logos -->
+            </div> <!-- /.society-logo-block - NOTE: We want this element on the page, even if there are no society logos -->
+        </div><!-- /.center-inner-row -->
+    </div><!-- /.journal-header -->
+
+<div class="navbar">
+    <div class="center-inner-row">
+        <nav class="navbar-menu">
+
+
+    <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-0">
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034777">
+            <a href="/jid/issue" class="nav-link ">Issues</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034773">
+            <a href="/jid/#" class="nav-link dummy-link">More Content</a>
+                <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-1">
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034778">
+            <a href="/jid/advance-articles" class="nav-link ">Advance articles</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034779">
+            <a href="/jid/search-results?page=1&amp;f_OUPSeries=Editor%27s+Choice" class="nav-link ">Editor's Choice</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034780">
+            <a href="/jid/pages/supplemental" class="nav-link ">Supplement Archive</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034781">
+            <a href="https://academic.oup.com/jid/issue-covers/" class="nav-link ">Cover Archive</a>
+            
+        </li>
+    </ul>
+
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034774">
+            <a href="/jid/#" class="nav-link dummy-link">Publish</a>
+                <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-1">
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034782">
+            <a href="/jid/pages/General_Instructions" class="nav-link ">Author Guidelines</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034783">
+            <a href="http://www.editorialmanager.com/jid" class="nav-link ">Submit</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034784">
+            <a href="http://www.oxfordjournals.org/en/authors/offprints.html" class="nav-link ">Order Offprints</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034785">
+            <a href="http://www.oxfordjournals.org/en/oxford-open/index.html" class="nav-link ">Open Access Options</a>
+            
+        </li>
+    </ul>
+
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034786">
+            <a href="/jid/subscribe" class="nav-link ">Purchase</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034775">
+            <a href="/jid/#" class="nav-link dummy-link">Advertise</a>
+                <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-1">
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034787">
+            <a href="http://www.oupmediainfo.com" class="nav-link ">Advertising and Corporate Services</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034788">
+            <a href="http://www.oupmediainfo.com/#!/advertising" class="nav-link ">Advertising</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034789">
+            <a href="http://oupmediainfo.com/#!/mediakit/journal-infectious-diseases" class="nav-link ">Mediakit</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034790">
+            <a href="http://www.oupmediainfo.com/#!/reprints-eprints" class="nav-link ">Reprints and ePrints</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034791">
+            <a href="http://www.oupmediainfo.com/#!/sponsored-supplements" class="nav-link ">Sponsored Supplements</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034792">
+            <a href="http://www.oupmediainfo.com/#!/branded-books" class="nav-link ">Branded Books</a>
+            
+        </li>
+    </ul>
+
+        </li>
+        <li class="site-menu-item site-menu-lvl-0" id="site-menu-item-1034776">
+            <a href="/jid/#" class="nav-link dummy-link">About</a>
+                <i class="desktop-nav-arrow icon-general-arrow-filled-down arrow-icon"></i><i class="mobile-nav-arrow icon-general_arrow-down"></i>
+    <ul class="site-menu site-menu-lvl-1">
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034793">
+            <a href="/jid/pages/About" class="nav-link ">About The Journal of Infectious Diseases</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034794">
+            <a href="https://www.idsociety.org/Index.aspx" class="nav-link ">About the Infectious Diseases Society of America</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034795">
+            <a href="http://www.hivma.org/Home.aspx" class="nav-link ">About the HIV Medicine Association</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034796">
+            <a href="http://www.oxfordjournals.org/resource/pdfs/idsa%20coi%20policies%20november%202013.pdf" class="nav-link ">IDSA COI Policy</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034797">
+            <a href="/jid/pages/Editorial_Board" class="nav-link ">Editorial Board</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034798">
+            <a href="http://academic.oup.com/my-account/email-alerts" class="nav-link ">Alerts</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034799">
+            <a href="https://academic.oup.com/journals/pages/access_purchase/rights_and_permissions/self_archiving_policy_b" class="nav-link ">Self-Archiving Policy</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034800">
+            <a href="/jid/pages/For_Reviewers" class="nav-link ">For Reviewers</a>
+            
+        </li>
+        <li class="site-menu-item site-menu-lvl-1" id="site-menu-item-1034801">
+            <a href="/jid/pages/for_press_offices_" class="nav-link ">For Press Offices</a>
+            
+        </li>
+    </ul>
+
+        </li>
+    </ul>
+        </nav>
+            <div class="navbar-search-container">
+                <div class="navbar-search-close js_close-navsearch">Close</div>
+                <div class="navbar-search">
+                    <div id="MicrositeSearch" class="microsite-search">
+                        <label for="navbar-search-filter" class="screenreader-text">search filter</label>
+                        <select class="navbar-search-filter" id="navbar-search-filter">
+                                                            <optgroup label="Search within this journal">
+<option class="header-search-bar-filters-item" value="">All  The Journal of Infectious Diseases</option>
+                                </optgroup>
+                                <optgroup label="Search beyond this journal">
+<option class="header-search-bar-filters-item" value="Parent">All  IDSA Journals</option><option class="header-search-bar-filters-item" value="Journals">All  Journals</option>                                </optgroup>
+                        </select>
+
+                        <label for="MicrositeSearchTerm" class="screenreader-text">search input</label>
+                        <input class="navbar-search-input microsite-search-term" type="text" maxlength="255" id="MicrositeSearchTerm" title="search input">
+
+                        <span id="MicrositeSearchIcon" class="microsite-search-icon navbar-search-submit icon-menu_search"></span>
+
+                    </div><!-- /#MicrositeSearch -->
+                </div><!-- /.navbar-search -->
+                <div class="navbar-search-advanced"><a href="/jid/advanced-search" class="advanced-search">Advanced Search</a></div>
+            </div><!-- /.navbar-search-container -->
+            <div class="navbar-search-collapsed"><i class="icon-menu_search js_expand-navsearch"></i></div>
+    </div><!-- /.center-inner-row -->
+</div><!-- /.navbar -->
+
+    <input type="hidden" name="searchScope" id="hfSolrJournalID" value="" />
+    <input type="hidden" name="parentSiteName" id="hfParentSiteName" value="IDSA Journals" />
+    <input type="hidden" name="parentSiteUrl" id="hfparentSiteUrl" value="academic.oup.com/idsa" />
+    <input type="hidden" name="siteID" id="hfsiteID" value="5309" />
+    <input type="hidden" name="parentSiteID" id="hfparentSiteID" value="5532" />
+    <input type="hidden" id="hfSolrJournalName" value="" />
+    <input type="hidden" id="hfSolrMaxAllowSearchChar" value="100" />
+    <input type="hidden" id="hfJournalShortName" value="" />
+    <input type="hidden" id="hfSearchPlaceholder" value="" />
+    <input type="hidden" name="hfGlobalSearchSiteURL" id="hfGlobalSearchSiteURL" value="" />
+    <input type="hidden" name="journalSiteScope" id="hfjournalSiteScope" value="Journals" />
+    <input type="hidden" name="parentSiteScope" id="hfparentSiteScope" value="Parent" />
+    <input type="hidden" name="defaultSearchURL" id="hfdefaultSearchURL" value="search-results?page=1&amp;q=" />
+    <input type="hidden" name="hfSearchSiteURL" id="hfSiteURL" value="academic.oup.com/jid" />
+    <script type="text/javascript">
+        (function () {
+            var hfSiteUrl = document.getElementById('hfSiteURL');
+            var siteUrl = hfSiteUrl.value;
+            var subdomainIndex = siteUrl.indexOf('/');
+
+            hfSiteUrl.value = location.host + (subdomainIndex >= 0 ? siteUrl.substring(subdomainIndex) : '');
+        })();
+    </script>
+<input id="routename" name="RouteName" type="hidden" value="jid" />
+    </div>
+
+        </section>
+        <main id="main" tabindex="-1">
+            <section class="master-main row">
+                <div class="center-inner-row no-overflow">
+                    
+
+    <div class="page-column-wrap">
+        <div id="InfoColumn" class="page-column page-column--left">
+            <div class="mobile-content-topbar hide">
+                <button class="toggle-left-col toggle-left-col__article">Article Navigation</button>
+            </div>
+            <div class="info-inner-wrap">
+                
+                <button class="toggle-left-col__close btn-as-icon icon-general-close">
+                    <span class="screenreader-text">Close mobile search navigation</span>
+                </button>
+                <div class="responsive-nav-title">Article navigation</div>
+
+                    <div class="info-widget-wrap">
+                        <div class="widget widget-IssueInfo widget-instance-OUP_IssueInfo_Article">
+        
+
+<div id="issueInfo-OUP_IssueInfo_Article" class="article-info-wrap clearfix">
+    <i class="icon-general-close mobile-nav-btn nav-open"></i>
+    <div class="article-issue-img">
+            <a href="/jid/issue/171/6"><img id="issueImage" class="fb-featured-image" src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/jid/Issue/171/6/0/m_jid171_6.cover.gif?Expires=1517506178&amp;Signature=QxeORV3hTP7awWJ8jTphUzGhflIIiuII8XRERLsLLY~wklmElQSSMI1Y7q3~J-EfldqJYsuYtmxcqR6-9wSOvI8liFQ2cMwBwO1fFUFjxB3zJYbnG-1n7UXyBSeqL7xyjaNZwQQJ7m7uefcQUymXtoS7vAGBtU1uGG1Dp28R3HVQqP5SPKKd3FBNVd2p49-BlFMiKEOu2Mnzng7C16ZFYrcoHdMwsDbqaDwLpMgJg5becDQarmKZgig-8~Hp7y~xUFm-EUT-smNM2jyjDPQHfC1-rOD3UxB6ZLyS~BvYUO2r~R7-PniebGltm55PC0BX6U-UquSn5YnMvycFLpCjNQ__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q" alt="Issue Cover" /></a>
+    </div>
+    <div class="article-issue-info">
+        <div class="volume-issue__wrap">
+
+            <a href="/jid/issue/171/6">
+                        <div class="volume trailing-comma">Volume 171</div>
+                        <div class="issue">Issue 6</div>
+
+            </a>
+
+        </div>
+        <div class="ii-pub-date">
+June 1995        </div>
+        
+    </div>
+
+</div>
+    </div>
+
+
+                    <div class="content-nav">
+                        
+	                </div>
+            
+                        <div class="widget widget-ArticleNavLinks widget-instance-OUP_ArticleNavLinks_Article">
+        <ul class="inline-list">
+        <li class="prev arrow">
+            <a href="/jid/article/171/6/1539/803910">&lt; Previous</a>
+        </li>        
+            <li class="next arrow">
+            <a href="/jid/article/171/6/1553/803935">Next &gt;</a>
+        </li>
+</ul>
+    </div>
+
+                </div>
+            </div>
+        </div> 
+    
+        <div id="ContentColumn" class="page-column page-column--center">
+            
+             <div class="article-browse-top article-browse-mobile-nav">
+                <div class="article-browse-mobile-nav-inner">
+                    <button class="toggle-left-col toggle-left-col__article btn-as-link">
+                        Article Navigation
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-inner-wrap">
+                    <div class="widget widget-ArticleTopInfo widget-instance-OUP_Abstract_ArticleTop_Info_Widget">
+        <div class="module-widget article-top-widget">
+
+    
+
+    
+        <div class="access-state-logos all-viewports">
+    
+            </div>
+
+
+    <div class="widget-items">
+                <h1 class="wi-article-title article-title-main">Efficacy and Safety of Fluconazole Prophylaxis for Fungal Infections after Marrow Transplantation—A Prospective, Randomized, Double-Blind Study
+<i class='' title='' ></i>                </h1>
+                <div class="wi-authors">
+                    <div class="al-authors-list">
+                                <span class="al-author-name">
+
+                                    <span class="al-author-info-wrap arrow-up">
+
+
+<div id="authorInfo_OUP_Abstract_ArticleTop_Info_Widget" class="info-card-author">
+    <div class="name-role-wrap">
+        <div class="info-card-name">Monica A. Slavin</div>
+    </div>
+
+
+
+
+
+
+        <div class="info-card-search-label">
+            Search for other works by this author on:
+        </div>
+            <div class="info-card-search info-card-search-oxford">
+                <a href="/jid/search-results?f_Authors=Monica+A.+Slavin">Oxford Academic</a>
+            </div>
+            <div class="info-card-search info-card-search-pubmed">
+                <a href="http://www.ncbi.nlm.nih.gov/pubmed?cmd=search&amp;term=Slavin M">PubMed</a>
+            </div>
+            <div class="info-card-search info-card-search-google">
+                <a href="http://scholar.google.com/scholar?q=&quot;author:Slavin author:M.&quot;">Google Scholar</a>
+            </div>
+
+</div>
+                                    </span>
+                                    <a class="linked-name" href="javascript:;">Monica A. Slavin</a>
+                                </span>
+                                <span class="al-author-name">
+
+                                    <span class="al-author-info-wrap arrow-up">
+
+
+<div id="authorInfo_OUP_Abstract_ArticleTop_Info_Widget" class="info-card-author">
+    <div class="name-role-wrap">
+        <div class="info-card-name">Barbara Osborne</div>
+    </div>
+
+
+
+
+
+
+        <div class="info-card-search-label">
+            Search for other works by this author on:
+        </div>
+            <div class="info-card-search info-card-search-oxford">
+                <a href="/jid/search-results?f_Authors=Barbara+Osborne">Oxford Academic</a>
+            </div>
+            <div class="info-card-search info-card-search-pubmed">
+                <a href="http://www.ncbi.nlm.nih.gov/pubmed?cmd=search&amp;term=Osborne B">PubMed</a>
+            </div>
+            <div class="info-card-search info-card-search-google">
+                <a href="http://scholar.google.com/scholar?q=&quot;author:Osborne author:B.&quot;">Google Scholar</a>
+            </div>
+
+</div>
+                                    </span>
+                                    <a class="linked-name" href="javascript:;">Barbara Osborne</a>
+                                </span>
+                                <span class="al-author-name">
+
+                                    <span class="al-author-info-wrap arrow-up">
+
+
+<div id="authorInfo_OUP_Abstract_ArticleTop_Info_Widget" class="info-card-author">
+    <div class="name-role-wrap">
+        <div class="info-card-name">Robyn Adams</div>
+    </div>
+
+
+
+
+
+
+        <div class="info-card-search-label">
+            Search for other works by this author on:
+        </div>
+            <div class="info-card-search info-card-search-oxford">
+                <a href="/jid/search-results?f_Authors=Robyn+Adams">Oxford Academic</a>
+            </div>
+            <div class="info-card-search info-card-search-pubmed">
+                <a href="http://www.ncbi.nlm.nih.gov/pubmed?cmd=search&amp;term=Adams R">PubMed</a>
+            </div>
+            <div class="info-card-search info-card-search-google">
+                <a href="http://scholar.google.com/scholar?q=&quot;author:Adams author:R.&quot;">Google Scholar</a>
+            </div>
+
+</div>
+                                    </span>
+                                    <a class="linked-name" href="javascript:;">Robyn Adams</a>
+                                </span>
+                                <span class="al-author-name">
+
+                                    <span class="al-author-info-wrap arrow-up">
+
+
+<div id="authorInfo_OUP_Abstract_ArticleTop_Info_Widget" class="info-card-author">
+    <div class="name-role-wrap">
+        <div class="info-card-name">Marcia J. Levenstein</div>
+    </div>
+
+
+
+
+
+
+        <div class="info-card-search-label">
+            Search for other works by this author on:
+        </div>
+            <div class="info-card-search info-card-search-oxford">
+                <a href="/jid/search-results?f_Authors=Marcia+J.+Levenstein">Oxford Academic</a>
+            </div>
+            <div class="info-card-search info-card-search-pubmed">
+                <a href="http://www.ncbi.nlm.nih.gov/pubmed?cmd=search&amp;term=Levenstein M">PubMed</a>
+            </div>
+            <div class="info-card-search info-card-search-google">
+                <a href="http://scholar.google.com/scholar?q=&quot;author:Levenstein author:M.&quot;">Google Scholar</a>
+            </div>
+
+</div>
+                                    </span>
+                                    <a class="linked-name" href="javascript:;">Marcia J. Levenstein</a>
+                                </span>
+                                <span class="al-author-name">
+
+                                    <span class="al-author-info-wrap arrow-up">
+
+
+<div id="authorInfo_OUP_Abstract_ArticleTop_Info_Widget" class="info-card-author">
+    <div class="name-role-wrap">
+        <div class="info-card-name">H. Gary Schoch</div>
+    </div>
+
+
+
+
+
+
+        <div class="info-card-search-label">
+            Search for other works by this author on:
+        </div>
+            <div class="info-card-search info-card-search-oxford">
+                <a href="/jid/search-results?f_Authors=H.+Gary+Schoch">Oxford Academic</a>
+            </div>
+            <div class="info-card-search info-card-search-pubmed">
+                <a href="http://www.ncbi.nlm.nih.gov/pubmed?cmd=search&amp;term=Schoch H">PubMed</a>
+            </div>
+            <div class="info-card-search info-card-search-google">
+                <a href="http://scholar.google.com/scholar?q=&quot;author:Schoch author:H.&quot;">Google Scholar</a>
+            </div>
+
+</div>
+                                    </span>
+                                    <a class="linked-name" href="javascript:;">H. Gary Schoch</a>
+                                </span>
+                                <span class="al-author-name">
+
+                                    <span class="al-author-info-wrap arrow-up">
+
+
+<div id="authorInfo_OUP_Abstract_ArticleTop_Info_Widget" class="info-card-author">
+    <div class="name-role-wrap">
+        <div class="info-card-name">Allen R. Feldman</div>
+    </div>
+
+
+
+
+
+
+        <div class="info-card-search-label">
+            Search for other works by this author on:
+        </div>
+            <div class="info-card-search info-card-search-oxford">
+                <a href="/jid/search-results?f_Authors=Allen+R.+Feldman">Oxford Academic</a>
+            </div>
+            <div class="info-card-search info-card-search-pubmed">
+                <a href="http://www.ncbi.nlm.nih.gov/pubmed?cmd=search&amp;term=Feldman A">PubMed</a>
+            </div>
+            <div class="info-card-search info-card-search-google">
+                <a href="http://scholar.google.com/scholar?q=&quot;author:Feldman author:A.&quot;">Google Scholar</a>
+            </div>
+
+</div>
+                                    </span>
+                                    <a class="linked-name" href="javascript:;">Allen R. Feldman</a>
+                                </span>
+                                <span class="al-author-name">
+
+                                    <span class="al-author-info-wrap arrow-up">
+
+
+<div id="authorInfo_OUP_Abstract_ArticleTop_Info_Widget" class="info-card-author">
+    <div class="name-role-wrap">
+        <div class="info-card-name">Joel D. Meyers</div>
+    </div>
+
+
+
+
+
+
+        <div class="info-card-search-label">
+            Search for other works by this author on:
+        </div>
+            <div class="info-card-search info-card-search-oxford">
+                <a href="/jid/search-results?f_Authors=Joel+D.+Meyers">Oxford Academic</a>
+            </div>
+            <div class="info-card-search info-card-search-pubmed">
+                <a href="http://www.ncbi.nlm.nih.gov/pubmed?cmd=search&amp;term=Meyers J">PubMed</a>
+            </div>
+            <div class="info-card-search info-card-search-google">
+                <a href="http://scholar.google.com/scholar?q=&quot;author:Meyers author:J.&quot;">Google Scholar</a>
+            </div>
+
+</div>
+                                    </span>
+                                    <a class="linked-name" href="javascript:;">Joel D. Meyers</a>
+                                </span>
+                                <span class="al-author-name">
+
+                                    <span class="al-author-info-wrap arrow-up">
+
+
+<div id="authorInfo_OUP_Abstract_ArticleTop_Info_Widget" class="info-card-author">
+    <div class="name-role-wrap">
+        <div class="info-card-name">Raleigh A. Bowden</div>
+    </div>
+
+
+                <div class="info-card-note">
+                    <a reveal-id="cor1" data-open="cor1" class="link link-ref link-reveal xref-default"><!----></a>
+                </div>
+
+        <div class="info-author-correspondence">
+            Reprints or correspondence: Dr. Raleigh Bowden, Fred Hutchinson Cancer Research Center, 1124 Columbia St. #M783, Seattle, WA 98104.
+        </div>
+
+
+
+        <div class="info-card-search-label">
+            Search for other works by this author on:
+        </div>
+            <div class="info-card-search info-card-search-oxford">
+                <a href="/jid/search-results?f_Authors=Raleigh+A.+Bowden">Oxford Academic</a>
+            </div>
+            <div class="info-card-search info-card-search-pubmed">
+                <a href="http://www.ncbi.nlm.nih.gov/pubmed?cmd=search&amp;term=Bowden R">PubMed</a>
+            </div>
+            <div class="info-card-search info-card-search-google">
+                <a href="http://scholar.google.com/scholar?q=&quot;author:Bowden author:R.&quot;">Google Scholar</a>
+            </div>
+
+</div>
+                                    </span>
+                                    <a class="linked-name" href="javascript:;">Raleigh A. Bowden</a>
+                                </span>
+
+                    </div>
+                </div>
+            <div class="pub-history-wrap clearfix">
+
+                    <div class="pub-history-row clearfix">
+                        <div class="ww-citation-primary"><em>The Journal of Infectious Diseases</em>, Volume 171, Issue 6, 1 June 1995, Pages 1545–1552, <a href='https://doi.org/10.1093/infdis/171.6.1545'>https://doi.org/10.1093/infdis/171.6.1545</a></div>
+                    </div>
+                    <div class="pub-history-row clearfix">
+                        <div class="ww-citation-date-wrap">
+                            <div class="citation-label">Published:</div>
+                            <div class="citation-date">01 June 1995</div>
+                        </div>
+                            <div class="ww-citation-history-wrap">
+                                <div class="citation-label">
+                                    Article history<i class="icon-general-arrow-filled-down arrow-icon"></i>
+                                </div>
+                            </div>
+                    </div>
+                                    <div class="ww-history">
+                            <div class="history-entry">
+                                <div class="wi-state">Received:</div>
+                                <div class="wi-date">04 May 1994</div>
+                            </div>
+                            <div class="history-entry">
+                                <div class="wi-state">Revision Received:</div>
+                                <div class="wi-date">20 January 1995</div>
+                            </div>
+
+                        <div class="ww-history-close"><a>Close</a></div>
+                    </div><!-- /.ww-history -->
+            </div><!-- /.pub-history-wrap -->
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.article-top-widget').on('click', '.ati-toggle-trigger', function () {
+            $(this).find('.icon-general-add, .icon-minus').toggleClass('icon-minus icon-general-add');
+            $(this).siblings('.ati-toggle-content').toggleClass('hide');
+        });
+
+        // In Chrome, an anchor tag with target="_blank" and a "mailto:" href opens a new tab/window as well as the email client
+        // I suspect this behavior will be corrected in the future
+        // Remove the target="_blank"
+        $('ul.wi-affiliationList').find('a[href^="mailto:"]').each(function () {
+            $(this).removeAttr('target');
+        });
+    });
+</script>
+
+
+    </div>
+    <div class="widget widget-ArticleLinks widget-instance-OUP_Article_Links_Widget">
+        
+
+
+    </div>
+
+        
+ 
+                <div class="toolbar-wrap">
+                    <div class="toolbar-inner-wrap"><!-- for mobile -->
+                        <ul id="Toolbar" role="navigation">
+                            
+                            <li class="toolbar-item item-with-dropdown item-views">
+                                <a class="drop-trigger" href="javascript:;" data-dropdown="FilterDrop" aria-haspopup="true">
+                                    <i class="icon-menu_views"></i>
+                                    <div class="toolbar-label">
+                                        <div class="toolbar-text">Views</div>
+                                        <i class="icon-general-arrow-filled-down arrow-icon"></i>
+                                    </div>
+                                </a>
+                                <ul id="ViewsDrop" class="f-dropdown" data-dropdown-content aria-label="submenu">
+                                    <div class="arrow-up"></div>
+                                    <li class="article-content-filter" data-content-filter="article-content"><a href="javascript:;"><span>Article contents</span></a></li>
+                                    <li class="article-content-filter" data-content-filter="figures-tables"><a href="javascript:;"><span>Figures &amp; tables</span></a></li>
+                                    <li class="article-content-filter" data-content-filter="video"><a href="javascript:;"><span>Video</span></a></li>
+                                    <li class="article-content-filter" data-content-filter="audio"><a href="javascript:;"><span>Audio</span></a></li>
+                                    <li class="article-content-filter" data-content-filter="supplementary-data"><a href="javascript:;"><span>Supplementary Data</span></a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="toolbar-item">
+                                    <div class="widget widget-ToolboxGetCitation widget-instance-OUP_Get_Citation">
+        
+<a href="#" data-reveal-id="getCitation" data-reveal><i class="icon-read-more"></i><span>Cite</span></a>
+
+<div id="getCitation" class="reveal-modal" data-reveal>
+    <div class="modal-title">Citation</div>
+    <p>Monica A. Slavin, Barbara Osborne, Robyn Adams, Marcia J. Levenstein, H. Gary Schoch, Allen R. Feldman, Joel D. Meyers, Raleigh A. Bowden;  Efficacy and Safety of Fluconazole Prophylaxis for Fungal Infections after Marrow Transplantation—A Prospective, Randomized, Double-Blind Study, <em>The Journal of Infectious Diseases</em>, Volume 171, Issue 6, 1 June 1995, Pages 1545–1552, <a href='https://doi.org/10.1093/infdis/171.6.1545'>https://doi.org/10.1093/infdis/171.6.1545</a></p>
+    <p class="citation-label">Download citation file:</p>  
+    <ul>
+        <li><a href="/jid/downloadcitation/803921?format=ris">RIS (Zotero)</a></li>
+        <li><a href="/jid/downloadcitation/803921?format=ris">EndNote</a></li>
+        <li><a href="/jid/downloadcitation/803921?format=bibtex">BibTex</a></li>
+        <li><a href="/jid/downloadcitation/803921?format=txt">Medlars</a></li>
+        <li><a href="/jid/downloadcitation/803921?format=ris">ProCite</a></li>
+        <li><a href="/jid/downloadcitation/803921?format=txt">RefWorks</a></li>
+        <li><a href="/jid/downloadcitation/803921?format=ris">Reference Manager</a></li>
+    </ul>
+    <hr/>
+    
+    <p>&#169; 2018 Oxford University Press</p>
+    <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close"></i><span class="screenreader-text">Close</span></a>
+</div>
+    </div>
+ 
+                            </li>
+                            <li class="toolbar-item item-tools">
+                                <i class="icon-menu_permissions"></i>
+                                    <div class="widget widget-ToolboxPermissions widget-instance-">
+            <div class="module-widget">
+            <a href="https://s100.copyright.com/AppDispatchServlet?publisherName=OUP&amp;publication=1537-6613&amp;title=Efficacy%20and%20Safety%20of%20Fluconazole%20Prophylaxis%20for%20Fungal%20Infections%20after%20Marrow%20Transplantation%E2%80%94A%20Prospective%2C%20Randomized%2C%20Double-Blind%20Study&amp;publicationDate=1995-06-01&amp;volumeNum=171&amp;issueNum=6&amp;author=Slavin%2C%20Monica%20A.%3B%20Osborne%2C%20Barbara&amp;startPage=1545&amp;endPage=1552&amp;contentId=10.1093%2Finfdis%2F171.6.1545&amp;oa=&amp;copyright=Oxford%20University%20Press&amp;orderBeanReset=True" id="PermissionsLink" class="" target="_blank">Permissions</a>
+    </div>
+
+    </div>
+
+                            </li>
+                            <li class="toolbar-item item-with-dropdown item-share last">
+                                <a class="drop-trigger" href="javascript:;" data-dropdown="ShareDrop" aria-haspopup="true">
+                                    <i class="icon-menu_share"></i>
+                                    <div class="toolbar-label">
+                                        <div class="toolbar-text">Share</div>
+                                        <i class="icon-general-arrow-filled-down arrow-icon"></i>
+                                    </div>
+                                </a>
+                                <ul id="ShareDrop" class="addthis_toolbox addthis_default_style addthis_20x20_style f-dropdown" data-dropdown-content aria-label="submenu">
+                                    <div class="arrow-up"></div>
+                                    <li><a class="addthis_button_email"><span>Email</span></a></li>
+                                    <li><a class="addthis_button_twitter"><span>Twitter</span></a></li>
+                                    <li><a class="addthis_button_facebook"><span>Facebook</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+                        <div class="toolbar-search">
+                                <div class="widget widget-SitePageHeader widget-instance-OUP_ArticleToolbarSearchBox">
+        
+
+
+<div class="dropdown-panel-wrap">
+
+    
+    <div class="dropdown-panel mobile-search-dropdown">
+        <div class="mobile-search-inner-wrap">
+            <div class="navbar-search">
+                <div id="MobileMicrositeSearch" class="mobile-microsite-search">
+                    <label for="mobile-navbar-search-filter" class="screenreader-text">Navbar Search Filter</label>
+                    <select class="navbar-search-filter" id="mobile-navbar-search-filter">
+                                                    <optgroup label="Search within this journal">
+<option class="header-search-bar-filters-item" value="">All  </option>
+                            </optgroup>
+                            <optgroup label="Search beyond this journal">
+<option class="header-search-bar-filters-item" value="Journals">All  Journals</option>                            </optgroup>
+                    </select>
+
+
+
+
+
+                    <label for="MobileMicrositeSearchTerm" class="screenreader-text">Mobile Microsite Search Term</label>
+                    <input class="mobile-search-input mobile-microsite-search-term" type="text" maxlength="255" placeholder="Search" id="MobileMicrositeSearchTerm">
+
+                    <span id="MobileMicrositeSearchIcon" class="mobile-microsite-search-icon mobile-search-submit icon-menu_search"></span>
+
+                </div><!-- /#MobileMicrositeSearch -->
+            </div><!-- /.navbar-search -->
+        </div><!-- /.mobile-search-inner-wrap -->
+    </div><!-- /.dropdown-panel .dropdown-panel-search -->
+    
+    <div class="dropdown-panel mobile-account-dropdown">
+        <ul class="site-menu site-menu-lvl-0">
+            <li class="site-menu-item site-menu-lvl-0">
+                <a href="" class="nav-link mobile-account-signin dummy-link" id="header-account-info-user-fullname">
+                    
+Sign In                    <i class="mobile-nav-arrow icon-general_arrow-down"></i>
+                </a>
+                <ul class="site-menu site-menu-lvl-1 individual-menu">
+                    <li class="dropdown-signin-form">
+                        <div class="spinner"></div>
+                    </li>
+                </ul>
+            </li>
+                            <li class="site-menu-item">
+                    <a href="/my-account/register?siteId=0&amp;returnUrl=%2fjid%2farticle-abstract%2f171%2f6%2f1545%2f803921" class="register nav-link">Register</a>
+                </li>
+        </ul>
+    </div><!-- /.dropdown-panel .dropdown-panel-account -->
+    
+    <div class="dropdown-panel mobile-nav-dropdown">
+
+    </div><!-- /.dropdown-panel .dropdown-panel-nav -->
+
+</div><!-- /.dropdown-panel-wrap -->
+
+
+
+<div class="navbar">
+    <div class="center-inner-row">
+        <nav class="navbar-menu">
+
+        </nav>
+            <div class="navbar-search-container">
+                <div class="navbar-search-close js_close-navsearch">Close</div>
+                <div class="navbar-search">
+                    <div id="MicrositeSearch" class="microsite-search">
+                        <label for="navbar-search-filter" class="screenreader-text">search filter</label>
+                        <select class="navbar-search-filter" id="navbar-search-filter">
+                                                            <optgroup label="Search within this journal">
+<option class="header-search-bar-filters-item" value="">All  </option>
+                                </optgroup>
+                                <optgroup label="Search beyond this journal">
+<option class="header-search-bar-filters-item" value="Journals">All  Journals</option>                                </optgroup>
+                        </select>
+
+                        <label for="MicrositeSearchTerm" class="screenreader-text">search input</label>
+                        <input class="navbar-search-input microsite-search-term" type="text" maxlength="255" id="MicrositeSearchTerm" title="search input">
+
+                        <span id="MicrositeSearchIcon" class="microsite-search-icon navbar-search-submit icon-menu_search"></span>
+
+                    </div><!-- /#MicrositeSearch -->
+                </div><!-- /.navbar-search -->
+                <div class="navbar-search-advanced"><a class="advanced-search">Advanced Search</a></div>
+            </div><!-- /.navbar-search-container -->
+            <div class="navbar-search-collapsed"><i class="icon-menu_search js_expand-navsearch"></i></div>
+    </div><!-- /.center-inner-row -->
+</div><!-- /.navbar -->
+
+<input id="routename" name="RouteName" type="hidden" value="" />
+    </div>
+
+                        </div>
+                    </div><!-- /.toolbar-inner-wrap -->                    
+                </div>
+
+                <div class="article-body">
+                    <div id="ContentTab" class="content active">
+                            <div class="widget widget-ArticleFulltext widget-instance-OUP_Abstract_Article_FullText_Widget">
+        <div class="module-widget">
+    <div class="widget-items" data-widgetname="ArticleFulltext">
+
+
+
+
+
+                            <h2 scrollto-destination=13971163 id="13971163" class="abstract-title" >Abstract</h2>
+<section class="abstract"><p>A randomized, double-blind, placebo-controlled trial assessed the efficacy and toxicity of 400 mg/day fluconazole in preventing fungal infections during the first 75 days after marrow transplantation. During prophylaxis, systemic fungal infections occurred in 10 (7%) of 152 fluconazole-treated patients compared with 26 (18%) of 148 placebo-treated patients (<em>P</em> = .004). There were no <em>Candida albicans</em> infections in fluconazole recipients compared with 18 in placebo recipients (<em>P</em> &lt; .001) and no significant increase in <em>Candida</em> infections other than <em>C. albicans</em>. Fluconazole also significantly reduced the incidence of superficial fungal infections (<em>P</em> &lt; .001), fungal colonization (<em>P</em> = .037), and empiric amphotericin B use (<em>P</em> = .005). The probability of survival was improved in fluconazole recipients, in whom 31 deaths occurred up to day 110 after transplantation compared with 52 deaths in placebo recipients (<em>P</em> = .004). No clinically significant toxicity was detected with fluconazole use. Prophylactic fluconazole was safe and significantly reduced systemic fungal infections with other benefits, including improved survival at day 110 after marrow transplantation.</p></section>                        <div class="article-metadata-panel clearfix"></div>
+        <!-- /foreach -->
+
+
+
+
+        <div class="article-metadata-standalone-panel clearfix"></div>
+
+        
+<div class="copyright copyright-statement">© 1995 by The University of Chicago</div><!-- /foreach -->
+
+        <span id="UserHasAccess" data-userHasAccess="False"></span>
+
+    </div><!-- /.widget-items -->
+</div><!-- /.module-widget -->
+    </div>
+    <div class="widget widget-RelatedTags widget-instance-OUP_Article_RelatedTags_Widget">
+            <div class="related-topic-tags">
+        <div class="related-topic-tag-label">Topic:</div>
+        <ul class="related-topic-tag-list">
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=amphotericin b"><span>amphotericin b</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=bone marrow transplantation"><span>bone marrow transplantation</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=candidiasis"><span>candidiasis</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=mycoses"><span>mycoses</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=systemic mycosis"><span>systemic mycosis</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=candida albicans"><span>candida albicans</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=dermatomycoses"><span>dermatomycoses</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=fluconazole"><span>fluconazole</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=safety"><span>safety</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=infection"><span>infection</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=transplantation"><span>transplantation</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=toxic effect"><span>toxic effect</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=prevention"><span>prevention</span></a>
+                </li>
+<li>
+                    <a href="https://academic.oup.com/jid/search-results?f_SemanticFilterTopics=fungal colonization"><span>fungal colonization</span></a>
+                </li>
+        </ul>
+    </div>
+
+    </div>
+    <div class="widget widget-SolrResourceMetadata widget-instance-OUP_Article_ResourceMetadata_Widget">
+        
+        <div class="article-metadata-tocSections">
+            <div class="article-metadata-tocSections-title">Issue Section:</div>
+                <a href="/jid/search-results?f_TocHeadingTitle=Major Articles">Major Articles</a>
+        </div>
+
+
+    </div>
+
+                            <div class="article-top-info-user-restricted-options">
+                                You do not currently have access to this article. 
+                            </div>
+                        
+
+                        <div id="ContentTabFilteredView"></div>
+                        <div class="downloadImagesppt">
+                            <a href="//oup.silverchair-cdn.com/DownloadFile/DownloadImage.aspx?image=&PPTtype=SlideSet&ar=803921&xsltPath=~/UI/app/XSLT" id="BodyContent_PageContent_lnkDownloadAllImages">Download all figures</a>
+                        </div>
+                        <div></div>
+                            <div class="widget widget-ArticleDataRepositories widget-instance-Article_DryadLink">
+        
+    </div>
+
+                         <div class="comments">
+                                <div class="widget widget-UserCommentBody widget-instance-UserCommentBody_Article">
+        
+
+
+    </div>
+    <div class="widget widget-UserComment widget-instance-OUP_UserComment_Article">
+        
+    </div>
+
+                        </div>
+                    </div>
+                   
+                </div> 
+
+                  
+                        <div id="unauth" class="unauth-wrap">
+                            
+                                <div class="unauth-row clearfix">
+                                    <h2 class="unauth-signin-title">Sign in</h2>
+                                    
+                                    <div class="register-ribbon-wrap">
+                                        <div class="register-ribbon-text"></div>Don't already have an Oxford Academic account? <a class="register-ribbon-link" href="/my-account/register?siteId=5309&returnUrl=%2fjid%2farticle-abstract%2f171%2f6%2f1545%2f803921">Register</a>
+                                    </div>
+                                    <!-- /.register-ribbon-wrap -->
+                                    <div class="unauth-column-wrap">
+                                        
+                                        <div class="unauth-column">
+                                                <div class="widget widget-LoginForm widget-instance-OUP_ArticlePage_LoginForm">
+        
+
+    <div class="signin-form">
+
+        <div class="preloader-wrap hide">
+            <div class="preloader">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <!-- Errors -->
+        <div class="error">
+            You could not be signed in. Please check your email address / username and password and try again.
+        </div>
+        <div class="login-form__section">
+            <h3 class="login-form__heading">Oxford Academic account</h3>
+            <div class="login-form__row">
+                <label for="user_OUP_ArticlePage_LoginForm" class="login-form__label">
+                    <div class="login-form__label-text">Email address / Username</div>
+                    <a class="question-icon" href="#" data-reveal-id="modalSignInEmail"><span>?</span></a>
+                </label>
+                <input id="user_OUP_ArticlePage_LoginForm" type="text" class="username" autocomplete="off" />
+            </div>
+
+            <div class="login-form__row">
+                <label for="pass_OUP_ArticlePage_LoginForm" class="login-form__label-text">Password</label>
+                <input id="pass_OUP_ArticlePage_LoginForm" type="password" class="password" />
+            </div>
+
+            <div class="login-form__row">
+                <button class="signin-button button">Sign In</button>
+                <div class="login-form__link-wrap">
+                    <a class="logged-out-link" href="/my-account/forgot-password">Forgot password?</a>
+                </div>
+                <div class="login-form__link-wrap">
+                    <a class="logged-out-link" href="/my-account/register?siteId=5309&amp;returnUrl=%2fjid%2farticle-abstract%2f171%2f6%2f1545%2f803921" data-target="register">Don't have an account?</a>
+                </div>
+            </div>
+        </div><!-- /.login-form-section -->
+
+        <div class="bearpan-wrap">
+            <label for="hpcName"><span class="screenreader-text">HPC</span><input type="text" id="hpcName" name="hpcName" /></label>
+        </div>
+    </div>
+    <div id="modalSignInEmail" class="reveal-modal medium" data-reveal>
+        <h4>Email address / username</h4><p>Most users should sign in with their email address. If you originally registered with a username please use that to sign in.</p>
+        <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close"></i><span class="screenreader-text">Close</span></a>
+    </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                SCM.SiteJS.initLoginFormDropdown();
+            });
+        </script>
+
+    </div>
+
+                                        </div><!-- /.unauth-column -->
+                                        
+                                        <div class="unauth-column entities">
+                                            
+                                            <div class="unauth-society-row">
+                                                    <div class="widget widget-SocietyLinks widget-instance-SocietyLinks">
+            <div class="login-form__section login-form__row--lower">
+        <ul class="society-links">
+
+                <li class="society-links-listing">
+                        <h3 class="login-form__heading">Infectious Diseases Society of America members</h3>
+                        <a href="https://mymembership.force.com/CPBase__custom_login?site=a0Uj0000006SrqPEAS&amp;retUrl=%2fidp%2flogin%3fapp%3D0spj0000000Gnp2%26RelayState=%node:current_encoded_url" class="society-links-logo">
+                            <img src="//oup.silverchair-cdn.com/data/SiteBuilderAssetsOriginals/Live/Images/jid/jid_soc_auth1.svg" alt="Infectious Diseases Society of America" />
+                        </a>
+                        <a class="society-links-url" href="https://mymembership.force.com/CPBase__custom_login?site=a0Uj0000006SrqPEAS&amp;retUrl=%2fidp%2flogin%3fapp%3D0spj0000000Gnp2%26RelayState=%node:current_encoded_url">Sign in via society site</a>
+                </li>
+        </ul>
+    </div>
+    <script>
+        var placeholderReturnUrlValue = '%node:current_encoded_url';
+    </script>
+
+    </div>
+
+                                            </div>
+                                            
+                                            <div class="unauth-society-row">
+                                                <h3 class="login-form__heading">Sign in via your Institution</h3>
+                                                <div><a class="shibboleth-signin" data-target="https://shibboleth2sp.sams2.oup.com/shib?dest={0}">Sign in</a></div>
+                                            </div>
+                                            
+                                        </div><!-- /.unauth-column -->
+                                        
+                                    </div><!-- /.unauth-signin-col-wrap -->
+                                </div>
+                            
+
+                            <div id="article-purchase" class="unauth-row clearfix">
+                                    <div class="widget widget-PurchaseOptions widget-instance-OUP_ArticlePage_PurchaseOptions">
+            <div class="purchase-wrap">
+        <h2 class="purchase-title">Purchase</h2>
+        <a class="purchase-subscription-link" href="/jid/Subscribe/CurrentYear">Subscription prices and ordering</a>
+
+            <div class="purchase-ppv-wrap-article clearfix">
+                <h3>Short-term Access</h3>
+
+                    <div class="register-ribbon-wrap">
+                        <p>
+                            To purchase short term access, please sign in to your Oxford Academic account above.
+                        </p>
+                        <p>
+                            Don&#39;t already have an Oxford Academic account? <a href="/my-account/register?siteId=5309&amp;returnUrl=%2fjid%2farticle-abstract%2f171%2f6%2f1545%2f803921">Register</a>
+                        </p>
+                    </div>
+
+                Efficacy and Safety of Fluconazole Prophylaxis for Fungal Infections after Marrow Transplantation—A Prospective, Randomized, Double-Blind Study - 24 Hours access
+                <div class="purchase-currency-wrap">
+                        <div class="purchase-currency">
+                            EUR €35.00
+                        </div>
+                        <div class="purchase-currency">
+                            GBP &#163;27.00
+                        </div>
+                        <div class="purchase-currency">
+                            USD $44.00
+                        </div>
+                </div>
+                
+            </div><!-- /.purchase-ppv-wrap-article -->
+
+    </div><!-- /.purchase-wrap -->
+
+    <div id="divDeepDive" class="deep-dive-wrap js-deepdyve-link" data-issn="00221899" data-doi="10.1093/infdis/171.6.1545" data-fieldname="journal_doi" data-affiliate="OUP">
+        <h3 class="deep-dive-title">Rental</h3>
+        <div class="deep-dive-box">
+            <div class="deep-dive-img">
+                <a class="deepDiveLink" href="https://www.deepdyve.com/doc-view?docId=10.1093/infdis/171.6.1545&amp;fieldName=journal_doi&amp;affiliateId=OUP" target="_blank"><img src="https://www.deepdyve.com/assets/images/deepdyve-link-button.svg" style="border:none" alt="Read this now at DeepDyve" /></a>
+            </div>
+            <div class="deep-dive-text">
+                This article is also available for rental through DeepDyve.
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+                            </div>
+                        </div><!-- /.unauth-wrap -->
+                       
+
+
+            </div><!-- /.content-inner-wrap -->
+        </div> 
+
+        <div id="Sidebar" class="page-column page-column--right">
+                <div class="widget widget-AdBlock widget-instance-ArticlePageTopSidebar">
+        <div id="adBlockMainBodyTop" style=' '>
+    <script>
+        googletag.cmd.push(function () { googletag.display('adBlockMainBodyTop'); });
+    </script>
+</div>
+
+    </div>
+<div class="widget widget-dynamic " data-count="1"> 
+
+    <div class="widget-dynamic-inner-wrap">
+
+<div class="widget widget-dynamic " data-count="10"> 
+
+    <div class="widget-dynamic-inner-wrap">
+
+    <div class="widget widget-ArticleLevelMetrics widget-instance-Article_RightRailB0Article_RightRail_ArticleLevelMetrics">
+        
+
+
+
+
+
+    <div class="artmet-condensed-wrap clearfix">
+        <div class="artmet-condensed-stats clearfix">
+            <div class="artmet-item artmet-views">
+                <span class="artmet-number">108</span>
+                <span class="artmet-text">Views</span>
+            </div>
+
+            <div class="artmet-item artmet-citations">
+                <span class="artmet-number">
+                     <a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;SrcApp=PARTNER_APP&amp;SrcAuth=LinksAMR&amp;KeyUT=WOS:A1995RB29800021&amp;DestLinkType=CitingArticles&amp;DestApp=ALL_WOS&amp;UsrCustomerID=61f30d8ae69c46f86624c5f98a3bc13a" target="_blank">548</a>
+                </span>
+                <span class="artmet-text">Citations</span>
+            </div>
+    
+            <div class="artmet-item artmet-altmetric">
+    <div class="widget widget-AltmetricLink widget-instance-ArticleLevelMetrics_AltmetricLinkSummary">
+            <!-- Altmetrics -->
+    <div id="altmetricEmbedId" runat="server" class='altmetric-embed' data-link-target="_blank" data-badge-type="donut" data-hide-no-mentions="false" data-doi="10.1093/infdis/171.6.1545"
+     
+        
+        ></div>
+         <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+    </div>
+
+            </div>
+        </div>
+
+            <div class="artmet-modal-trigger-wrap clearfix">
+                <a class="artmet-modal-trigger" data-article-id="803921"><i class="icon-metrics"></i><span>View Metrics</span></a>
+            </div>
+    </div>
+        <div class="artmet-modal" id="MetricsModal">
+            <div class="artmet-modal-contents">
+                <a class="artmet-close-modal">&#215;</a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="widget widget-Alerts widget-instance-Article_RightRailB0Article_RightRail_Alerts">
+        
+    <div class="alertsWidget">
+        <h3>Email alerts</h3>
+                <div class="userAlert alertType-5">
+                    <a data-userLoggedIn="False" data-alertType="5">New issue alert</a>
+                </div>
+                <div class="userAlert alertType-3">
+                    <a data-userLoggedIn="False" data-alertType="3">Advance article alerts</a>
+                </div>
+                <div class="userAlert alertType-1">
+                    <a data-userLoggedIn="False" data-alertType="1">Article activity alert</a>
+                </div>
+                    <div class="userAlert alertType-MarketingLink">
+                <a data-userLoggedIn="False" data-additionalUrl="/my-account/communication-preferences">Receive exclusive offers and updates from Oxford Academic</a>
+            </div>
+        <div class="userAlertSignUpModal reveal-modal small" data-reveal>
+            <div class="userAlertSignUp"></div>
+            <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close"></i><span class="screenreader-text">Close</span></a>
+        </div>
+    </div>
+
+    </div>
+    <div class="widget widget-ArticleLinks widget-instance-Article_RightRailB0Article_RightRail_ArticleLinks">
+        
+
+
+    </div>
+    <div class="widget widget-RelatedContent widget-instance-Article_RightRailB0Article_RightRail_RelatedContent">
+                <h3 class="article-widget-head">More on this topic</h3>
+    <div class="widget-related-content">
+            <div class="article-title"><a href="/jid/article/164/6/1232/825802">Fluconazole Failure in the Treatment of Invasive Mycoses</a></div>
+            <div class="article-title"><a href="/jid/article/198/11/1714/961996">A Gene-Dosage Effect for Interleukin-4 Receptor α-Chain Expression Has an Impact on Th2-Mediated Allergic Inflammation during Bronchopulmonary Mycosis</a></div>
+            <div class="article-title"><a href="/jid/article/181/2/686/824786">Host Immune Reactivity Determines the Efficacy of Combination Immunotherapy and Antifungal Chemotherapy in Candidiasis</a></div>
+            <div class="article-title"><a href="/jid/article/169/5/1062/789464">Genotypic Characterization of Sequential <em>Candida albicans</em> Isolates from Fluconazole-Treated Neutropenic Patients</a></div>
+    </div>
+
+    </div>
+    <div class="widget widget-RelatedArticleIn widget-instance-Article_RightRailB0Article_RightRail_RelatedArticleIn">
+            <h3 class="relatedArticleIn-title">Related articles in</h3>
+    <div class="relatedArticleIn-content">
+        <ul>
+                <li>
+                    <a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&amp;SrcApp=PARTNER_APP&amp;SrcAuth=LinksAMR&amp;KeyUT=WOS:A1995RB29800021&amp;DestLinkType=RelatedRecords&amp;DestApp=ALL_WOS&amp;UsrCustomerID=61f30d8ae69c46f86624c5f98a3bc13a">Web of Science</a>
+                </li>
+                <li>
+                    <a href="https://scholar.google.com/scholar?q=related:https%3a%2f%2facademic.oup.com%2fjid%2farticle%2f171%2f6%2f1545%2f803921">Google Scholar</a>
+                </li>
+        </ul>
+    </div>
+
+    </div>
+    <div class="widget widget-RelatedPubMed widget-instance-Article_RightRailB0Article_RightRail_RelatedPubMed">
+        <h3 class="article-widget-head">Related articles in PubMed</h3>
+<div class="widget-related-pubmed">
+        <div class="inner-content-wrap">
+            <div class="inner-content">
+                <div class="article-title">    <a href="http://www.ncbi.nlm.nih.gov/pubmed/29316578" id="article_ArticleTitle" target="_blank">Acute hepatitis as a prequel to very severe aplastic anemia.</a></div>
+                <!-- <div class="citation"><span>Z Gastroenterol</span> 2018;56(1):51-54.</div> -->
+            </div>
+        </div>
+        <div class="inner-content-wrap">
+            <div class="inner-content">
+                <div class="article-title">    <a href="http://www.ncbi.nlm.nih.gov/pubmed/29316560" id="article_ArticleTitle" target="_blank">Transbronchial Cryobiopsies for the Diagnosis of Diffuse Parenchymal Lung Diseases: Expert Statement from the Cryobiopsy Working Group on Safety and Utility and a Call for Standardization of the Procedure.</a></div>
+                <!-- <div class="citation"><span>Respiration</span> 2018.</div> -->
+            </div>
+        </div>
+        <div class="inner-content-wrap">
+            <div class="inner-content">
+                <div class="article-title">    <a href="http://www.ncbi.nlm.nih.gov/pubmed/29316501" id="article_ArticleTitle" target="_blank">Optimization of F/M ratio for stability of aerobic granular process via quantitative sludge discharge.</a></div>
+                <!-- <div class="citation"><span>Bioresour Technol</span> 2017;</div> -->
+            </div>
+        </div>
+        <div class="inner-content-wrap">
+            <div class="inner-content">
+                <div class="article-title">    <a href="http://www.ncbi.nlm.nih.gov/pubmed/29316488" id="article_ArticleTitle" target="_blank">Evaluating the impact of Mobike on automobile-involved bicycle crashes at the road network level.</a></div>
+                <!-- <div class="citation"><span>Accid Anal Prev</span> 2018;</div> -->
+            </div>
+        </div>
+</div>
+<!-- <div class="article-widget-foot">
+    <div class="view-more">
+            <a href="http://www.ncbi.nlm.nih.gov/pubmed?term=((mycoses)+OR+(fluconazole)+OR+(safety)+OR+(bone+AND+marrow+AND+transplantation))" id="Config_ViewMoreLink" class="view-more-link" target="_blank">View More</a>
+    </div>
+</div> -->
+    </div>
+    <div class="widget widget-ArticleCitedBy widget-instance-Article_RightRailB0Article_RightRail_ArticleCitedBy">
+        <h3 class="article-cited-title">Citing articles via</h3>
+    <div class="article-cited-link-wrap web-of-science">
+        <a href="http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=PARTNER_APP&SrcAuth=LinksAMR&KeyUT=WOS:A1995RB29800021&DestLinkType=CitingArticles&DestApp=ALL_WOS&UsrCustomerID=61f30d8ae69c46f86624c5f98a3bc13a" target="_blank">Web of Science (548)</a>
+    </div>    
+    <div class="article-cited-link-wrap google-scholar-url">
+        <a href="http://scholar.google.com/scholar?q=link:https%3A%2F%2Facademic.oup.com%2Fjid%2Farticle%2F171%2F6%2F1545%2F803921" target="_blank">Google Scholar</a>
+    </div>    
+    <div class="article-cited-link-wrap crossref-citedby">
+        <a href='https://academic.oup.com/jid/CrossRef-CitedBy/803921'>CrossRef</a>
+    </div>
+
+    </div>
+    <div class="widget widget-ArticleListNewAndPopular widget-instance-Article_RightRailB0Article_RightRail_ArticleNewPopularCombined">
+            <ul class="articleListNewAndPopularCombinedView">
+            <li>
+                <a href="javascript:;" class="articleListNewAndPopular-mode active" data-mode="MostRecent">Latest</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="articleListNewAndPopular-mode " data-mode="MostRead">Most Read</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="articleListNewAndPopular-mode " data-mode="MostCited">Most Cited</a>
+            </li>
+    </ul>
+        <section class="articleListNewPopContent articleListNewAndPopular-ContentView-MostRecent hasContent">
+
+
+
+
+<div id="newPopularList-Article_RightRailB0Article_RightRail_ArticleNewPopularCombined" class="fb">
+
+    
+
+    <div class="widget-dynamic-entry-wrap">
+            <div class="widget-dynamic-entry">
+                <div class="fb-item-title">
+                    <a href="/jid/advance-article/doi/10.1093/infdis/jiy060/4831066">Contribution to malaria transmission of symptomatic and asymptomatic parasite carriers in Cambodia</a>
+                </div> 
+            </div>
+            <div class="widget-dynamic-entry">
+                <div class="fb-item-title">
+                    <a href="/jid/advance-article/doi/10.1093/infdis/jiy059/4830905">Prevalence and risk factors for anal human papillomavirus infection in HIV-positive men having sex with men</a>
+                </div> 
+            </div>
+            <div class="widget-dynamic-entry">
+                <div class="fb-item-title">
+                    <a href="/jid/advance-article/doi/10.1093/infdis/jiy058/4830491">Virulence of an Encapsulated <em>Streptococcus pneumoniae</em> is Increased Upon Expression of Pneumococcal Surface Protein K</a>
+                </div> 
+            </div>
+            <div class="widget-dynamic-entry">
+                <div class="fb-item-title">
+                    <a href="/jid/advance-article/doi/10.1093/infdis/jiy056/4829950">Respiratory Syncytial Virus Seasonality: A Global Overview</a>
+                </div> 
+            </div>
+            <div class="widget-dynamic-entry">
+                <div class="fb-item-title">
+                    <a href="/jid/advance-article/doi/10.1093/infdis/jiy055/4829896">Cell-associated SIV Accelerates Initial Virus Spread and CD4<sup>+</sup> T cell Depletion in the Intestinal Mucosa</a>
+                </div> 
+            </div>
+    </div>
+    
+    
+
+</div>
+        </section>
+        <section class="articleListNewPopContent articleListNewAndPopular-ContentView-MostRead hide">
+        </section>
+        <section class="articleListNewPopContent articleListNewAndPopular-ContentView-MostCited hide">
+        </section>
+
+    </div>
+
+    </div>
+
+</div>
+    </div>
+
+</div>    <div class="widget widget-AdBlock widget-instance-ArticlePageTopMainBodyBottom">
+        <div id="adBlockMainBodyBottom" style=' '>
+    <script>
+        googletag.cmd.push(function () { googletag.display('adBlockMainBodyBottom'); });
+    </script>
+</div>
+
+    </div>
+
+        </div> 
+    </div><!-- /.page-column-wrap -->
+    <input name="ctl00$ctl00$BodyContent$PageContent$hfArticleTitle" type="hidden" id="hfArticleTitle" value="Efficacy and Safety of Fluconazole Prophylaxis for Fungal Infections after Marrow Transplantation—A Prospective, Randomized, Double-Blind Study" />
+
+                </div><!-- /.center-inner-row -->
+            </section>
+        </main>
+    </div>
+    
+
+        
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            SCM.ScholarlyiQ.trackArticlePageEvents();
+        });
+    </script>
+
+        <div class="widget widget-SitePageFooter widget-instance-SitePageFooter">
+        <div class="ad-banner ad-banner-footer">
+    <div class="widget widget-AdBlock widget-instance-FooterAd">
+        <div id="adBlockFooter" style=' '>
+    <script>
+        googletag.cmd.push(function () { googletag.display('adBlockFooter'); });
+    </script>
+</div>
+
+    </div>
+
+</div>
+
+    <div class="journal-footer journal-bg">
+        <div class="center-inner-row">
+
+                <div class="journal-footer-menu">
+
+                    <ul>
+                            <li class="link-1">
+                                <a href="/jid/pages/About">About The Journal of Infectious Diseases</a>
+                            </li>
+                            <li class="link-2">
+                                <a href="/jid/pages/Editorial_Board">Editorial Board</a>
+                            </li>
+                            <li class="link-3">
+                                <a href="/jid/pages/General_Instructions">Author Guidelines</a>
+                            </li>
+                            <li class="link-4">
+                                <a href="https://www.facebook.com/#!/IDSociety/">Facebook</a>
+                            </li>
+                            <li class="link-5">
+                                <a href="https://twitter.com/IDSAInfo">Twitter</a>
+                            </li>
+</ul><ul>                            <li class="link-1">
+                                <a href="/jid/subscribe">Purchase</a>
+                            </li>
+                            <li class="link-2">
+                                <a href="http://www.oxfordjournals.org/en/library-recommendation-form.html">Recommend to your Library</a>
+                            </li>
+                            <li class="link-3">
+                                <a href="http://www.oupmediainfo.com/">Advertising and Corporate Services</a>
+                            </li>
+                            <li class="link-4">
+                                <a href="http://medicine-and-health-careernetwork.oxfordjournals.org">Journals Career Network</a>
+                            </li>
+
+                    </ul>
+
+
+                </div><!-- /.journal-footer-menu -->
+
+            <div class="journal-footer-affiliations">
+                <!-- <h3>Affiliations</h3> -->
+            <a href="https://academic.oup.com/jid" target="">
+                <img id="footer-logo-TheJournalofInfectiousDiseases" class="journal-footer-affiliations-logo" src="//oup.silverchair-cdn.com/data/SiteBuilderAssets/Live/Images/jid/jid_f1-1510596176.svg" alt="The Journal of Infectious Diseases" />
+            </a>
+            </div><!-- /.journal-footer-affiliations -->
+
+            <div class="journal-footer-colophon">
+                <ul>
+                        <li>Online ISSN 1537-6613</li>
+                                            <li>Print ISSN 0022-1899</li>
+                    <li>Copyright &#169; 2018 Infectious Diseases Society of America</li>
+                </ul>
+            </div><!-- /.journal-footer-colophon -->
+
+
+        </div><!-- /.center-inner-row -->
+    </div><!-- /.journal-footer -->
+
+    </div>
+
+    <div class="oup-footer">
+        <div class="center-inner-row">
+                <div class="widget widget-SelfServeContent widget-instance-OupUmbrellaFooterSelfServe">
+        
+<div class="oup-footer-row journal-links">
+<div class="global-footer selfservelinks">
+<ul>
+    <li>
+    <a href="/journals/pages/about_us">About Us</a>
+    </li>
+    <li>
+    <a href="/journals/pages/contact_us">Contact Us</a>
+    </li>
+    <li>
+    <a href="http://global.oup.com/jobs">Careers</a>
+    </li>
+    <li>
+    <a href="/journals/pages/help">Help</a>
+    </li>
+    <li>
+    <a href="/journals/pages/access_purchase">Access &amp; Purchase</a></li>
+    <li>
+    <a href="/journals/pages/access_purchase/rights_and_permissions">Rights &amp; Permissions</a>
+    </li>
+    <li>
+    <a href="/journals/pages/open_access">Open Access</a>
+    </li>
+</ul>
+</div>
+<div class="global-footer selfservelinks">
+<h4 id="global-footer-customer services" class="title footerheader">Connect</h4>
+<ul>
+    <li>
+    <a href="/my-account/communication-preferences">Join Our Mailing List</a>
+    </li>
+    <li>
+    <a href="http://blog.oup.com/">OUPblog</a>
+    </li>
+    <li>
+    <a href="http://twitter.com/oupacademic">Twitter</a>
+    </li>
+    <li>
+    <a href="https://www.facebook.com/OUPAcademic">Facebook</a>
+    </li>
+    <li>
+    <a href="http://www.youtube.com/playlist?list=PL3MAPgqN8JWioLLTkU4mlFM4-SNt-f1Xs">YouTube</a>
+    </li>
+    <li>
+    <a href="http://oupacademic.tumblr.com/">Tumblr</a>
+    </li>
+</ul>
+</div>
+<div class="global-footer selfservelinks">
+<h4>Resources</h4>
+<ul>
+    <li><a href="/journals/pages/authors">Authors</a></li>
+    <li><a href="/journals/pages/librarians">Librarians</a></li>
+    <li><a href="/journals/pages/societies">Societies</a></li>
+    <li><a href="https://academic.oup.com/journals/pages/sponsorship_and_advertising">Sponsors &amp; Advertisers</a></li>
+    <li><a href="/journals/pages/press">Press &amp; Media</a></li>
+    <li><a href="/journals/pages/agents">Agents</a></li>
+</ul>
+</div>
+<div class="global-footer selfservelinks">
+<h4>Explore</h4>
+<ul>
+    <li><a href="http://global.oup.com/academic">Shop OUP Academic</a></li>
+    <li><a href="http://www.oxforddictionaries.com/">Oxford Dictionaries</a></li>
+    <li><a href="http://oxfordindex.oup.com/">Oxford Index</a></li>
+    <li><a href="https://www.epigeum.com/">Epigeum</a></li>
+    <li><a href="http://global.oup.com/">OUP Worldwide</a></li>
+    <li><a href="http://www.ox.ac.uk/">University of Oxford</a></li>
+</ul>
+</div>
+<div class="OUP-mission">
+<p>Oxford University Press is a department of the University of Oxford. It furthers the University's objective of excellence in research, scholarship, and education by publishing worldwide</p>
+<img class="journal-footer-logo" src="//oup.silverchair-cdn.com/UI/app/svg/umbrella/oup-logo.svg" alt="Oxford University Press" width="150" height="42" />
+</div>
+</div>
+<div class="oup-footer-row">
+<div class="oup-footer-row-links">
+<ul>
+    <li>Copyright &copy; 2018 Oxford University Press</li>
+    <li><a href="/journals/pages/about_us/legal/privacy_policy">Privacy Policy</a></li>
+    <li><a href="http://global.oup.com/cookiepolicy/">Cookie Policy</a></li>
+    <li><a href="/journals/pages/about_us/legal/notices">Legal Notices</a></li>
+    <li><a href="/journals/pages/sitemap">Site Map</a></li>
+    <li><a href="/journals/pages/about_us/legal/accessibility">Accessibility</a></li>
+    <li><a href="https://get.adobe.com/reader/">Get Adobe Reader</a></li>
+</ul>
+</div>
+</div>
+    
+    
+    
+    </div>
+
+        </div><!-- /.center-inner-row -->
+    </div><!-- /.oup-footer -->
+    <div class="ss-ui-only">
+        
+    </div>
+
+
+        
+        <div id="revealModal" class="reveal-modal" data-reveal>
+            <div id="revealContent"></div>
+            <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close"></i><span class="screenreader-text">Close</span></a>
+        </div>
+        <div id="NeedSubscription" class="reveal-modal small" data-reveal>
+            <div class="subscription-needed">
+                <h5>This Feature Is Available To Subscribers Only</h5>
+                <p><a href="/sign-in">Sign In</a> or <a href="/my-account/register?siteId=5309&returnUrl=%2fjid%2farticle-abstract%2f171%2f6%2f1545%2f803921">Create an Account</a></p>
+            </div>
+            <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close"></i><span class="screenreader-text">Close</span></a>
+        </div>
+        
+
+        <div id="noAccessReveal" class="reveal-modal tiny" data-reveal>
+            <p>This PDF is available to Subscribers Only</p>
+            <a class="hide-for-article-page" id="articleLinkToPurchase" data-reveal><span>View Article Abstract & Purchase Options</span></a>
+            <div class="issue-purchase-modal">
+                <p>For full access to this pdf, sign in to an existing account, or purchase an annual subscription.</p>
+            </div>
+            <a class="close-reveal-modal" href="javascript:;"><i class="icon-general-close"></i><span class="screenreader-text">Close</span></a>
+        </div>
+        
+        
+ 
+    
+<script src="//oup.silverchair-cdn.com/cassette.axd/script/05fbec42471caf4e6b11e7bf309ebd491b59bc05/footerJS" type="text/javascript"></script>
+<script src="//oup.silverchair-cdn.com/cassette.axd/script/92f525bab295d0ffa6f942402d5f7034757b1440/OupCookiePolicyJS" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js" type="text/javascript"></script>
+<script src="//oup.silverchair-cdn.com/cassette.axd/script/c847e338b5a9aa3e333cffb5d518f1fff4a42520/ArticlePageJS" type="text/javascript"></script>
+<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5265518246c10183&domready=1" type="text/javascript"></script>
+
+    
+    <!-- Enter Google Analytics or Tag Manager here -->
+    
+     
+ 
+
+    <!-- BEGIN: Scholarly iQ Page Tag -->
+    <!-- Copyright 2001-2010, IBM Corporation All rights reserved. -->
+    <script language="JavaScript" src="//ouptag.scholarlyiq.com/ntpagetag.js"></script>
+    <noscript>
+       <img src="//ouptag.scholarlyiq.com/ntpagetag.gif?js=0" height="1" width="1" border="0" hspace="0" vspace="0" alt="Scholarly IQ">
+    </noscript>
+    <!-- END: Scholarly iQ Page Tag -->
+</body>
+</html>
+
