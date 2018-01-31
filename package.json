@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "child_process": "^1.0.2",
     "classnames": "^2.2.5",
@@ -49,10 +50,10 @@
     "sql:seed:undo": "cd api && npm run sql db:seed:undo:all && cd ..",
     "sql:seed": "cd api && node ./seeds/sequelize/config.js && cd ..",
     "sql:s": "cd api && npm run sql:migrate:undo && npm run sql:migrate && npm run sql:seed && cd ..",
-    "mg:seed": "node seeds/mongoose",
-    "console": "node api/repl.js",
-    "c": "node repl.js",
-    "sql": "./node_modules/sequelize-cli/lib/sequelize"
+    "mg:seed": "node api/seeds/mongoose",
+    "console": "cd api && node repl.js",
+    "c": "cd api && node repl.js",
+    "sql": "cd api && ./node_modules/sequelize-cli/lib/sequelize"
   },
   "devDependencies": {
     "chalk": "^2.3.0",
