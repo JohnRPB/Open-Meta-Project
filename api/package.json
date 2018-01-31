@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "child_process": "^1.0.2",
     "classnames": "^2.2.5",
@@ -12,6 +14,7 @@
     "express": "^4.16.2",
     "faker": "^4.1.0",
     "fs": "0.0.1-security",
+    "mongoose": "^5.0.2",
     "morgan": "^1.9.0",
     "nodemon": "^1.14.10",
     "pg": "^7.4.1",
@@ -40,7 +43,7 @@
     "sql:seed:undo": "npm run sql db:seed:undo:all",
     "sql:seed": "node ./seeds/sequelize/config.js",
     "sql:s": "npm run sql:migrate:undo && npm run sql:migrate && npm run sql:seed",
-    "mg:seed": "node seeds/mongoose",
+    "mg:seed": "node seeds/mongoose &",
     "console": "node repl.js",
     "c": "node repl.js",
     "sql": "./node_modules/sequelize-cli/lib/sequelize"

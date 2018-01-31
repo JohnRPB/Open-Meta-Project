@@ -5,7 +5,9 @@ mongoose.Promise = bluebird;
 
 var models = {};
 
-// models.Cart = require('./cart');
+models.Analysis = require('./analysis.js');
+models.StudyOverflow = require('./study.js');
+models.User = require('./user.js');
 
 module.exports = models;
 

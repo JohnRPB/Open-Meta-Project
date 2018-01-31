@@ -1,7 +1,8 @@
 module.exports = {
-  study:5,
-  journal:3,
-  tag:10
+  study:100,
+  journal:20,
+  tag:10,
+  author:30
 }
 
 

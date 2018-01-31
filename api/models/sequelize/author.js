@@ -4,13 +4,19 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     userId: DataTypes.INTEGER,
     institution: DataTypes.STRING,
-    birthYear: DataTypes.INTEGER
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
+    birthYear: DataTypes.INTEGER,
   });
+
+  Author.associate = function(models) {
+    Author.hasMany(models.JoinStudyAuthor, {
+      foreignKey: 'authorId',
+    });
+
+    Author.belongsToMany(models.Study, {
+      through: models.JoinStudyAuthor,
+      as: 'Author',
+      foreignKey: 'authorId',
+    });
+  };
   return Author;
 };
