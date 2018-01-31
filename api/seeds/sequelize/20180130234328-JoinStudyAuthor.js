@@ -1,24 +1,21 @@
 'use strict';
-
-const faker = require('faker');
 const defaults = require('./defaults.js');
-let tagNum = defaults.tag;
 let studyNum = defaults.study;
+let authorNum = defaults.author;
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    let joinStudyTagArray = [];
-    let loopLength = studyNum > tagNum ? studyNum : tagNum;
-    for (var i = 0, len = loopLength * 2; i < len; i++) {
-      joinStudyTagArray.push({
+    let loopLength = studyNum > authorNum ? studyNum : authorNum;
+    let joinStudyAuthorArray = [];
+    for (let i = 0, len = loopLength * 2; i < len; i++) {
+      joinStudyAuthorArray.push({
         studyId: Math.floor(Math.random() * (studyNum + 1)),
-        tagId: Math.floor(Math.random() * (tagNum + 1)),
+        authorId: Math.floor(Math.random() * (authorNum + 1)),
       });
     }
-    // console.log("joinStudyTagArray: ", joinStudyTagArray);
-    
+    // console.log("joinStudyAuthorArray: \n", joinStudyAuthorArray);
 
-    return queryInterface.bulkInsert("JoinStudyTags", joinStudyTagArray);
+    return queryInterface.bulkInsert('JoinStudyAuthors', joinStudyAuthorArray);
   },
 
   down: (queryInterface, Sequelize) => {

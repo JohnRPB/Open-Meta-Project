@@ -8,25 +8,34 @@ module.exports = (sequelize, DataTypes) => {
     sampleSize: DataTypes.INTEGER,
     testStatType: DataTypes.STRING,
     testStatVal: DataTypes.FLOAT,
-    stdErr: DataTypes.FLOAT
+    stdErr: DataTypes.FLOAT,
   });
 
   Study.associate = function(models) {
     Study.belongsTo(models.Journal, {
-      foreignKey:"journalId"
+      foreignKey: 'journalId',
     });
 
     Study.hasMany(models.JoinStudyTag, {
-      foreignKey:"studyId"
+      foreignKey: 'studyId',
     });
 
     Study.belongsToMany(models.Tag, {
       through: models.JoinStudyTag,
-      as: "TaggedStudy",
-      foreignKey:"studyId"
+      as: 'TaggedStudy',
+      foreignKey: 'studyId',
+    });
+
+    Study.hasMany(models.JoinStudyAuthor, {
+      foreignKey: 'studyId',
+    });
+
+    Study.belongsToMany(models.Author, {
+      through: models.JoinStudyAuthor,
+      as: 'Studies',
+      foreignKey: 'studyId',
     });
   };
-  
-  return Study;
 
+  return Study;
 };

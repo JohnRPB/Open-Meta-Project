@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "child_process": "^1.0.2",
     "classnames": "^2.2.5",
@@ -14,6 +15,7 @@
     "form-serialize": "^0.7.2",
     "fs": "0.0.1-security",
     "immutability-helper": "^2.6.4",
+    "mongoose": "^5.0.2",
     "morgan": "^1.9.0",
     "nodemon": "^1.14.10",
     "pg": "^7.4.1",
@@ -36,12 +38,13 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"nodemon api/server/index.js\"",
+    "update": "npm i && cd api && npm i && cd ..",
     "app": "react-scripts start",
     "api": "nodemon api/server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy-front": "npm run build && cd build && mv index.html 200.html && echo lazy-quicksand.surge.sh > CNAME && surge .",
+    "deploy-front": "npm run build && cd build && mv index.html 200.html && echo openmeta.surge.sh > CNAME && surge .",
     "deploy-back": "git subtree push --prefix api heroku master",
     "deploy-all": "npm run deploy-back && npm run deploy-front",
     "sql:migrate:undo": "cd api && npm run sql db:migrate:undo:all && cd ..",
@@ -49,10 +52,10 @@
     "sql:seed:undo": "cd api && npm run sql db:seed:undo:all && cd ..",
     "sql:seed": "cd api && node ./seeds/sequelize/config.js && cd ..",
     "sql:s": "cd api && npm run sql:migrate:undo && npm run sql:migrate && npm run sql:seed && cd ..",
-    "mg:seed": "node seeds/mongoose",
-    "console": "node api/repl.js",
-    "c": "node repl.js",
-    "sql": "./node_modules/sequelize-cli/lib/sequelize"
+    "mg:seed": "node api/seeds/mongoose",
+    "console": "cd api && node repl.js",
+    "c": "cd api && node repl.js",
+    "sql": "cd api && ./node_modules/sequelize-cli/lib/sequelize"
   },
   "devDependencies": {
     "chalk": "^2.3.0",
