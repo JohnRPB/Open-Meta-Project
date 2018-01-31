@@ -15,13 +15,13 @@ const style = {
   float: "left"
 };
 
-const dustbinTarget = {
+const elementbinTarget = {
   drop(props, monitor) {
     props.onDrop(monitor.getItem());
   }
 };
 
-class Dustbin extends Component {
+class ElementBin extends Component {
   render() {
     const {
       accepts,
@@ -53,7 +53,7 @@ class Dustbin extends Component {
   }
 }
 
-Dustbin.propTypes = {
+ElementBin.propTypes = {
   connectDropTarget: PropTypes.func.isRequired,
   isOver: PropTypes.bool.isRequired,
   canDrop: PropTypes.bool.isRequired,
@@ -64,10 +64,10 @@ Dustbin.propTypes = {
 
 export default DropTarget(
   props => props.accepts,
-  dustbinTarget,
+  elementbinTarget,
   (connect, monitor) => ({
     connectDropTarget: connect.dropTarget(),
     isOver: monitor.isOver(),
     canDrop: monitor.canDrop()
   })
-)(Dustbin);
+)(ElementBin);
