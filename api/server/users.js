@@ -1,5 +1,7 @@
 var express = require("express");
 var router = express.Router();
+
+//access to database
 let models = require("./../models/sequelize");
 let User = models.User;
 let Study = models.Study;
@@ -7,8 +9,6 @@ let Journal = models.Journal;
 let Tag = models.Tag;
 console.log("Journal: ", Journal);
 console.log("User: ", User);
-
-// let sequelize = models.sequelize;
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
