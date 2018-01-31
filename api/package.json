@@ -31,7 +31,7 @@
     "sql:seed:undo": "npm run sql db:seed:undo:all",
     "sql:seed": "node ./seeds/sequelize/config.js",
     "sql:s": "npm run sql:migrate:undo && npm run sql:migrate && npm run sql:seed",
-    "mg:seed": "node seeds/mongoose &",
+    "mg:seed": "node seeds/mongoose",
     "console": "node repl.js",
     "c": "node repl.js",
     "sql": "./node_modules/sequelize-cli/lib/sequelize"
