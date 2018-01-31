@@ -4,5 +4,8 @@ var config = require('./config/mongoose/mongo')[env];
 
 
 module.exports = () => {
-  return mongoose.connect(`mongodb://${ config.host }/${ config.database }`);
+  let envUrl = process.env[config.use_env_variable];
+  let localUrl = `mongodb://${config.host}/${config.database}`;
+  let mongoUrl = envUrl ? envUrl : localUrl;
+  return mongoose.connect(mongoUrl);
 };
