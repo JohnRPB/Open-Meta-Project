@@ -1,4 +1,4 @@
-import * as Actions from "../actions/MyAnalyses";
+import * as Actions from "../actions/Dashboard";
 
 const initialState = {
   analyses: [],
@@ -6,7 +6,7 @@ const initialState = {
   error: null
 };
 
-export function MyAnalysesPage(state = initialState, action) {
+export function DashboardPage(state = initialState, action) {
   switch (action.type) {
     case Actions.GET_ANALYSES:
       console.log("reducer => ", action);
@@ -20,4 +20,4 @@ export function MyAnalysesPage(state = initialState, action) {
   }
 }
 
-export default MyAnalysesPage;
+export default DashboardPage;
