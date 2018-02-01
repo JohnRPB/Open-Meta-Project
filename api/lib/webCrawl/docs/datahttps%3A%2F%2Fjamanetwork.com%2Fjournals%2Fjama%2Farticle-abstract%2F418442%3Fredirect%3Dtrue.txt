@@ -1,0 +1,1514 @@
+-----------------------------------
+
+url: https://jamanetwork.com/journals/jama/article-abstract/418442?redirect=true
+
+--------Initial-Response-----------
+
+
+
+<!DOCTYPE html>
+
+<html id="doc" lang="en" class="page-abstract">
+<head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="format-detection" content="telephone=no" />
+
+
+    
+    
+    <link rel="shortcut icon" href="//amaprod.silverchaircdn.com/UI/app/img/favicons/jama/favicon.ico">
+    <link rel="icon" type="image/png" href="//amaprod.silverchaircdn.com/UI/app/img/favicons/jama/favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="//amaprod.silverchaircdn.com/UI/app/img/favicons/jama/apple-touch-icon-180x180.png">
+
+    
+    <meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+
+    
+    <link rel="stylesheet" href="//amaprod.silverchaircdn.com/UI/app/dist/app.min.css?v=636523996272335990">
+
+    
+    
+    
+    
+    <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" type="text/css" rel="stylesheet"/>
+
+        <div class="widget-OpenGraphandTwitterMeta widget-instance-AMA_OpenGraphandTwitterMeta_Article">
+        
+
+    <meta property="og:title" content="A Placebo-Controlled, Double-blind, Randomized Trial of an Extract of Ginkgo Biloba for Dementia"/>
+    <meta property="og:type" content="Article"/>
+    <meta property="og:url" content="https://jamanetwork.com/journals/jama/fullarticle/418442" />
+    <meta property="og:image" content="https://amaprod.silverchaircdn.com/images/logos/JAMA.png" />
+    <meta property="og:description" content="Context.&#160;
+    —EGb 761 is a particular extract of Ginkgo biloba used in Europe to alleviate symptoms associated with numerous cognitive disorders. Its use in dementias is based on positive results from only a few controlled clinical trials, most of which did not include standard assessments of..."/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@JAMA_current"/>
+
+
+
+
+
+ 
+    </div>
+<meta name="citation_author" content="Pierre L. Le Bars" /><meta name="citation_author" content="Martin M. Katz" /><meta name="citation_author" content="Nancy Berman" /><meta name="citation_author" content="Turan M. Itil" /><meta name="citation_author" content="Alfred M. Freedman" /><meta name="citation_author" content="Alan F. Schatzberg" /><meta name="citation_title" content="A Placebo-Controlled, Double-blind, Randomized Trial of an Extract of Ginkgo Biloba for Dementia" /><meta name="citation_firstpage" content="1327" /><meta name="citation_lastpage" content="1332" /><meta name="citation_doi" content="10.1001/jama.1997.03550160047037" /><meta name="citation_abstract" content="&lt;h3&gt;Context.&lt;/h3&gt;&lt;p&gt;—EGb 761 is a particular extract of Ginkgo biloba used in Europe to alleviate symptoms associated with numerous cognitive disorders. Its use in dementias is based on positive results from only a few controlled clinical trials, most of which did not include standard assessments of cognition and behavior.&lt;/p&gt;&lt;h3&gt;Objective.&lt;/h3&gt;&lt;p&gt;—To assess the efficacy and safety of EGb in Alzheimer disease and multi-infarct dementia.&lt;/p&gt;&lt;h3&gt;Design.&lt;/h3&gt;&lt;p&gt;—A 52-week, randomized double-blind, placebo-controlled, parallelgroup, multicenter study.&lt;/p&gt;&lt;h3&gt;Patients.&lt;/h3&gt;&lt;p&gt;—Mildly to severely demented outpatients with Alzheimer disease or multi-infarct dementia, without other significant medical conditions.&lt;/p&gt;&lt;h3&gt;Intervention.&lt;/h3&gt;&lt;p&gt;—Patients assigned randomly to treatment with EGb (120 mg/d) or placebo. Safety, compliance, and drug dispensation were monitored every 3 months with complete outcome evaluation at 12, 26, and 52 weeks.&lt;/p&gt;&lt;h3&gt;Primary Outcome Measures.&lt;/h3&gt;&lt;p&gt;—Alzheimer&#39;s Disease Assessment Scale—Cognitive subscale (ADAS-Cog), Geriatric Evaluation by Relative&#39;s Rating Instrument (GERRI), and Clinical Global Impression of Change (CGIC).&lt;/p&gt;&lt;h3&gt;Results.&lt;/h3&gt;&lt;p&gt;—From 309 patients included in an intent-to-treat analysis, 202 provided evaluable data for the 52-week end point analysis. In the intent-to-treat analysis, the EGb group had an ADAS-Cog score 1.4 points betterthan the placebo group (&lt;i&gt;P&lt;/i&gt;=.04) and a GERRI score 0.14 points better than the placebo group (&lt;i&gt;P&lt;/i&gt;=.004). The same patterns were observed with the evaluable data set in which 27% of patients treated with EGb achieved at least a 4-point improvement on the ADAS-Cog, compared with 14% taking placebo (&lt;i&gt;P&lt;/i&gt;=.005); on the GERRI, 37% were considered improved with EGb, compared with 23% taking placebo (&lt;i&gt;P&lt;/i&gt;=.003). No difference was seen in the CGIC. Regarding the safety profile of EGb, no significant differences compared with placebo were observed in the number of patients reporting adverse events or in the incidence and severity of these events.&lt;/p&gt;&lt;h3&gt;Conclusions.&lt;/h3&gt;&lt;p&gt;—EGb was safe and appears capable of stabilizing and, in a substantial number of cases, improving the cognitive performance and the social functioning of demented patients for 6 months to 1 year. Although modest, the changes induced by EGb were objectively measured by the ADAS-Cog and were of sufficient magnitude to be recognized by the caregivers in the GERRI.&lt;/p&gt;" /><meta name="citation_journal_title" content="JAMA" /><meta name="citation_journal_abbrev" content="JAMA" /><meta name="citation_volume" content="278" /><meta name="citation_issue" content="16" /><meta name="citation_publication_date" content="1997/10/22" /><meta name="citation_issn" content="0098-7484" /><meta name="citation_publisher" content="American Medical Association" /><meta name="citation_reference" content="citation_title=Natural product formulations available in Europe for psychotropic indication; citation_author=Cott  J;Psychopharmacol Bull;  citation_year=1995;  citation_volume=31;  citation_pages=745-751; " /><meta name="citation_reference" content="citation_author=DeFeudis  FG. In: DeFeudis FV, ed; citation_book=Ginkgo Biloba Extract (EGb 761): Pharmacological Activities and Clinical Applications. Paris, France: Editions Scientifiques Elsevier; citation_year=1991;  citation_pages=7-146; " /><meta name="citation_reference" content="citation_title=Ginkgo biloba extract (EGb 761); citation_author=Packer  L, Haramaki N, Kawabata T, et al; citation_book=Effect of Ginkgo Biloba Extract (EGb 761) on Aging and Age-Related Disorders. Paris, France: Editions Scientifiques Elsevier Paris; citation_year=1995;  citation_pages=23-47; " /><meta name="citation_reference" content="citation_title=Myricetin and quercetin, the flavonoid constituents of Ginkgo biloba extract, greatly reduce oxidative metabolism in both resting and Ca2+-loaded brain neurons; citation_author=Oyama  Y, Fuchs PA, Katayama N, Noda K;Brain Res;  citation_year=1994;  citation_volume=635;  citation_pages=125-129; " /><meta name="citation_reference" content="citation_title=Free radicals in the genesis of Alzheimer's disease; citation_author=Richardson  JS;Alzheimer's Disease: Amyloid Precursor Proteins, Signal Transduction, and Neuronal Transplantation. Ann N Y Acad Sci;  citation_year=1993;  citation_volume=695;  citation_pages=73-76; " /><meta name="citation_reference" content="citation_title=Mechanisms and role of oxygen free radicals in CNS pathology; citation_author=Anderson  DK, Thomas CE;Recent Advances in the Treatment of Neurodegenerative Disorders and Cognitive Dysfunction. Int Acad Biomed Drug Res;  citation_year=1994;  citation_volume=7;  citation_pages=119-124; " /><meta name="citation_reference" content="citation_title=Hydrogen peroxide mediates amyloid β protein toxicity; citation_author=Behl  C, Davis JB, Lesley R, Schubert D;Cell;  citation_year=1994;  citation_volume=77;  citation_pages=817-827; " /><meta name="citation_reference" content="citation_title=Are reactive oxygen species involved in Alzheimer's disease?; citation_author=Benzi  G, Moretti A;Neurobiol Aging;  citation_year=1995;  citation_volume=16;  citation_pages=661-674; " /><meta name="citation_reference" content="citation_title=Psycho-pharmacologie clinique de l'extrait de Ginkgo biloba; citation_author=Warburton  DM;Presse Med;  citation_year=1986;  citation_volume=15;  citation_pages=1595-1604; " /><meta name="citation_reference" content="citation_title=Ginkgo biloba for cerebral insufficiency; citation_author=Kleijnen  J, Knipschild P;Br J Clin Pharmacol;  citation_year=1992;  citation_volume=34;  citation_pages=352-358; " /><meta name="citation_reference" content="citation_title=Nootropics; citation_author=Letzel  H, Haan J, Feil WB;J Drug Dev Clin Pract;  citation_year=1996;  citation_volume=8;  citation_pages=77-94; " /><meta name="citation_reference" content="citation_title=The efficacy of EGb 761 in patients with senile dementia of the Alzheimer type, a double-blind, placebo-controlled study on different levels of investigation; citation_author=Hofferberth  B;Hum Psychopharmacol;  citation_year=1994;  citation_volume=9;  citation_pages=215-222; " /><meta name="citation_reference" content="citation_title=Proof of efficacy of the Ginkgo biloba special extract EGb 761 in outpatients suffering from mild to moderate primary degenerative dementia of the Alzheimer type or multi-infarct dementia; citation_author=Kanowski  S, Herrmann WM, Stephan K, Wierich W, Hörr R;Pharmacopsychiatry;  citation_year=1996;  citation_volume=29;  citation_pages=47-56; " /><meta name="citation_reference" content="citation_title=Mini-Mental State; citation_author=Folstein  MF, Folstein SE, McHugh PR;J Psychiatr Res;  citation_year=1975;  citation_volume=12;  citation_pages=189-198; " /><meta name="citation_reference" content="citation_title=The Global Deterioration Scale for assessment of primary degenerative dementia; citation_author=Reisberg  B, Ferris SH, de Leon MJ, et al;Am J Psychiatry;  citation_year=1982;  citation_volume=39;  citation_pages=1136-1139; " /><meta name="citation_reference" content="citation_title=A new rating scale for Alzheimer's disease; citation_author=Rosen  WG, Mohs RC, Davis KL;Am J Psychiatry;  citation_year=1984;  citation_volume=141;  citation_pages=1356-1364; " /><meta name="citation_reference" content="citation_title=A longitudinal study of Alzheimer's disease; citation_author=Stern  RG, Mohs RC, Davidson M, et al;Am J Psychiatry;  citation_year=1994;  citation_volume=151;  citation_pages=390-396; " /><meta name="citation_reference" content="citation_title=Development and validation of the Geriatric Evaluation by Relative's Rating Instrument (GERRI); citation_author=Schwartz  GE;Psychol Rep;  citation_year=1983;  citation_volume=53;  citation_pages=479-488; " /><meta name="citation_reference" content="citation_title=Nimodipine in the treatment of probable Alzheimer's disease; citation_author=Morich  FJ, Bieber F, Lewis JM, et al;Clin Drug Invest;  citation_year=1996;  citation_volume=11;  citation_pages=185-195; " /><meta name="citation_reference" content="citation_title=The application of the principle of intention-to-treat to the analysis of clinical trials; citation_author=Gillings  D, Koch G;Drug Inform J;  citation_year=1991;  citation_volume=25;  citation_pages=411-424; " /><meta name="citation_reference" content="citation_title=The prevalence of dementia; citation_author=Jorm  AF, Korten AE, Henderson AS;Acta Psychiatr Scand;  citation_year=1987;  citation_volume=76;  citation_pages=465-479; " /><meta name="citation_reference" content="citation_title=Advances in the diagnosis of dementia; citation_author=Katzman  R, Lasker B, Bernstein N; citation_book=Aging and the Brain. New York, NY: Raven Press; citation_year=1988;  citation_pages=17-62; " /><meta name="citation_reference" content="citation_title=Limits of the 'Mini-Mental State' as a screening test for dementia and delirium among hospital patients; citation_author=Anthony  JC, LeResche L, Niaz U, Von Korff MR, Folstein MF;Psychol Med;  citation_year=1982;  citation_volume=12;  citation_pages=397-408; " /><meta name="citation_reference" content="citation_title=Population-based norms for the Mini-Mental State Examination by age and education level; citation_author=Crum  RM, Anthony JC, Bassett SS, Folstein MF;JAMA;  citation_year=1993;  citation_volume=269;  citation_pages=2386-2421; " /><meta name="citation_reference" content="citation_title=Detection of abnormal memory decline in mild cases of Alzheimer's disease using CERAD neuropsychological measures; citation_author=Welsh  K, Butters N, Hughes J, Mohs R, Heyman A;Arch Neurol;  citation_year=1991;  citation_volume=48;  citation_pages=278-281; " /><meta name="citation_reference" content="citation_title=Tutorial on modeling ordered categorical response data; citation_author=Agresti  A;Psychol Bull;  citation_year=1989;  citation_volume=105;  citation_pages=290-301; " /><meta name="citation_reference" content="citation_title=Clinical predictors of course for Alzheimer patients in a longitudinal study: a preliminary report; citation_author=Kramer-Ginsberg  E, Mohs RC, Aryan M, et al;Psychopharmacol Bull;  citation_year=1988;  citation_volume=24;  citation_pages=458-462; " /><meta name="citation_reference" content="citation_title=A double-blind, placebo-controlled multicenter study of tacrine for Alzheimer's disease; citation_author=Davis  LK, Thal LJ, Gamzu ER, et al;N Engl J Med;  citation_year=1992;  citation_volume=327;  citation_pages=1253-1259; " /><meta name="citation_reference" content="citation_title=A controlled trial of tacrine in Alzheimer's disease; citation_author=Farlow  M, Gracon SI, Hershey LA, et al;JAMA;  citation_year=1992;  citation_volume=268;  citation_pages=2523-2529; " /><meta name="citation_reference" content="citation_title=A 30-week randomized controlled trial of high-dose tacrine in patients with Alzheimer's disease; citation_author=Knapp  MJ, Knopman DS, Solomon PR, et al;JAMA;  citation_year=1994;  citation_volume=271;  citation_pages=985-991; " /><meta name="citation_reference" content="citation_title=Validation of clinical diagnosis criteria for Alzheimer's disease; citation_author=Morris  JC, McKeel DW, Fulling K, Torack RM, Berg L;Ann Neurol;  citation_year=1988;  citation_volume=24;  citation_pages=17-22; " /><meta name="citation_reference" content="citation_title=Crossnational interrater agreement on the clinical diagnostic criteria for dementia; citation_author=Baldereschi  M, Amato MP, Nencini P, et al;Neurology;  citation_year=1994;  citation_volume=44;  citation_pages=239-242; " /><meta name="citation_reference" content="citation_title=Multicenter clinicopathological correlation in dementia; citation_author=Victoroff  J, Mack WJ, Lyness SA, Chui HC;Am J Psychiatry;  citation_year=1995;  citation_volume=152;  citation_pages=1476-1484; " /><meta name="citation_reference" content="citation_title=Reliability and clinical concepts underlying global judgments in dementia; citation_author=Dahlke  F, Lohaus A, Gutzmann H;Psychopharmacol Bull;  citation_year=1992;  citation_volume=28;  citation_pages=425-432; " /><meta name="citation_reference" content="citation_title=The Clinician Interview-Based Impression (CIBI): a clinician's global change rating scale in Alzheimer's disease; citation_author=Knopman  DS, Knapp MJ, Gracon SI, Davis CS;Neurology;  citation_year=1994;  citation_volume=44;  citation_pages=2315-2321; " /><meta name="citation_reference" content="citation_title=Central nervous system effects of Ginkgo biloba, a plant extract; citation_author=Itil  TM, Eralp E, Tsambis E, Itil KZ, Stein U;Am J Ther;  citation_year=1996;  citation_volume=3;  citation_pages=63-73; " /><meta name="citation_reference" content="citation_title=Observations and suggestions on antidementia drug development; citation_author=Leber  P;Alzheimer Dis Assoc Disord;  citation_year=1996;  citation_volume=10;  citation_issue=suppl 1;  citation_pages=31-35; " /><meta name="citation_reference" content="citation_title=Criteria for the diagnosis of ischemic vascular dementia proposed by the State of California Alzheimer Disease Diagnostic and Treatment Centers (ADDTC); citation_author=Chui  H, Victoroff JI, Margolin D, Jagust W, Shankle R, Katzman R;Neurology;  citation_year=1992;  citation_volume=42;  citation_pages=473-480; " /><meta name="citation_reference" content="citation_title=Reliability of NINDS-AIREN clinical criteria for the diagnosis of vascular dementia; citation_author=Lopez  OL, Larumbe MR, Becker JT, et al;Neurology;  citation_year=1994;  citation_volume=44;  citation_pages=1240-1245; " /><meta name="citation_reference" content="citation_title=α2-Adrenoceptor change during cerebral ageing: the effect of Ginkgo biloba extract; citation_author=Huguet  F, Tarrade T;J Pharm Pharmacol;  citation_year=1992;  citation_volume=44;  citation_pages=24-27; " /><meta name="citation_reference" content="citation_title=In vitro effect of Ginkgo biloba extract (EGb 761) on the activity of presynaptic cholinergic nerve terminals in rat hippocampus; citation_author=Krištofiková  Z, Klaschka J;Dement Geriatr Cogn Disord;  citation_year=1997;  citation_volume=8;  citation_pages=43-48; " /><meta name="citation_pdf_url" content="https://jamanetwork.com/journals/jama/articlepdf/418442/jama_278_16_037.pdf" />
+
+    
+                <title>A Placebo-Controlled, Double-blind, Randomized Trial of an Extract of Ginkgo Biloba for Dementia | JAMA | The JAMA Network</title>
+
+    <meta name="description" content="Context.—EGb 761 is a particular extract of Ginkgo biloba used in Europe to alleviate symptoms associated with numerous cognitive disorders. Its use in dementia">
+
+
+    <link rel="canonical" href="https://jamanetwork.com/journals/jama/fullarticle/418442" />
+
+
+
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/UI/app/vendor/jquery-1.8.3.min.js">\x3C/script>')</script>
+    <script src="//amaprod.silverchaircdn.com/UI/app/dist/head.min.js?v=636523996272492255"></script>
+     <script src="//hermes-src.redlink.com/agent/hermes.js?userRHKey=6xWgQwOczf" type="text/javascript" async></script>  <!-- Optimizely script --> <script src="https://cdn.optimizely.com/js/2785501806.js"></script> <!-- End Optimizely script -->    <div class="widget-WidgetLoader widget-instance-AMA_AdTag_HeaderScript">
+        
+    <meta class="SCM-SharedWidgets-AsyncHeaderAdLoader" data-url="/AMA/AdTag/AMA_AdTag_HeaderScript" data-params="{&quot;parameters&quot;:{&quot;siteName&quot;:&quot;jama&quot;,&quot;siteId&quot;:3,&quot;journalId&quot;:67,&quot;adDisplay&quot;:0,&quot;adSection&quot;:&quot;abstract&quot;,&quot;adPosition&quot;:&quot;&quot;,&quot;fromGoogle&quot;:false},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}">
+ 
+    </div>
+</head>
+
+<body data-sitename="jama" class="pg_abstract" data-thm="jama">
+    
+    <a class="accessible" href="#skip-to-content">[Skip to Content]</a>
+
+    <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WNKSNP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WNKSNP');</script><!-- End Google Tag Manager -->
+
+    
+    
+    <span class="hide tagmanagervalue" data-attribute="journalName" data-value="JAMA" data-type="string"></span>
+    <form method="post" action="./418442?redirect=true" id="webform" class="m0">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0NDM4NzA0NTdkGAEFMGN0bDAwJGN0bDAwJEJvZHlDb250ZW50JFBhZ2VDb250ZW50JG12WU1BTExlYWRlcg8PZAIBZKcb9HMmM0MRSUng9wlx93FQTRgT" />
+
+
+<script src="/WebResource.axd?d=rUrVk3y4W--u-NvW9ko7yKS83OK9kKrf5HFrFmLEyJs8j7JctvNQTguGr5f2zMzXMHHMQoW1xoOfFbDUC4-ufY7Rswc9vv5eN98KVLTfAk6dngu8PEYexnX465jes5zeQ5Iq58WBVZOXuLjDxXKU4T7HVVs1&amp;t=636524009742707032" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2FAFABAE" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACAFwC6Xy76A+PqbL9EtJBvgNS2zm+OxjCYYjvQ36mGgUkTBGkQQ1gEOuoEWbQhhTxdziuZNSHsD6vBL6Rd2v9PAii5nSjjEdpbh75Mf1Zbotxo1aCadrWnldcWJdnH7jpvqUjRABcdJpNqnb+6Wjbj2epwK6sK+gfOHf+fMzD3UHEDPXlv01hCy7yMkQxs8EdOz9Zc1UvOpkfrAQeKirNRMAL/SA2yFNeAnjiC/zoV/3l72S+qaM8myJj0LViHmbZN5GCJtHmyFy2qC/d+0Pd8YkZWlKMsie4eC0pmLqoXrevnE41qpf7nMYD42EhDXPzRY5upcjEtohPE8ZuIRuFn6fRvwu3A3WXmrY/AhMma/YMnyVeC6FaLWo8FkzfeLAfaF44m9kHI7AZ410Ii0UXPlgtWXjxQIC5dGWVfk0u8vMN1D+i7qqXXyPTC2SYNNytMLwCKOM1K07yplUBEYBOVKeYbPfygON8FDUFCnTNhuu7NOMxy9RnLi0ygCb22QdqQcpuBqMBpxJ7X90pdkOggO/VY6PIc6GEkhQ51CakoYDSEa6oIEAO2fV5surzmWIHtH7PlLxDmNTtfkVewGgRAie4DxkK1ZiDwetlvpp6AXA8Z83s2Q5Kr6GhWxgpWH3CU7ykhOnlkN4wS66II6PReuZjZqmb1Z/9boY0q+MxurikVe2M0CO6uBqg8L940sa5EYrvGg" />
+        
+        <input id="hdnSiteID" type="hidden" value="3" />
+
+
+        
+        
+
+
+        
+        
+    
+    <script>
+        
+        var App = App || {};
+        App.suppressAds = !!document.getElementsByClassName('suppress-ads').length;
+    </script>
+
+
+    <section class="master-header">
+        
+<nav id="nav" class="nav">
+    <div class="nav-journal-level">
+        <a href="https://jamanetwork.com/journals/jama" id="BodyContent_Header_rptMicrositeHeaders_aItemResourceList_0" class="home">Home</a><a href="https://jamanetwork.com/journals/jama/newonline" id="BodyContent_Header_rptMicrositeHeaders_aItemResourceList_1" class="new-online">New Online</a><a href="https://jamanetwork.com/journals/jama/currentissue" id="BodyContent_Header_rptMicrositeHeaders_aItemResourceList_2" class="current-issue">Current Issue</a><a href="https://jamanetwork.com/journals/jama/pages/for-authors" id="BodyContent_Header_rptMicrositeHeaders_aItemResourceList_3" class="for-authors">For Authors</a>
+    </div>
+    <div class="nav-journals">
+        <h2 id="BodyContent_Header_JournalHeader" class="nav-heading">Journals</h2>
+       <a href="https://jamanetwork.com/journals/jama" id="BodyContent_Header_rptJournals_aItemResourceList_0" class="theme-jama">JAMA</a><a href="https://sites.jamanetwork.com/jamanetworkopen" id="BodyContent_Header_rptJournals_aItemResourceList_1" class="theme-jama-network-open" target="_blank">JAMA Network Open</a><a href="https://jamanetwork.com/journals/jamacardiology" id="BodyContent_Header_rptJournals_aItemResourceList_2" class="theme-jama-cardiology">JAMA Cardiology</a><a href="https://jamanetwork.com/journals/jamadermatology" id="BodyContent_Header_rptJournals_aItemResourceList_3" class="theme-jama-dermatology">JAMA Dermatology</a><a href="https://jamanetwork.com/journals/jamafacialplasticsurgery" id="BodyContent_Header_rptJournals_aItemResourceList_4" class="theme-jama-facial-plastic-surgery">JAMA Facial Plastic Surgery</a><a href="https://jamanetwork.com/journals/jamainternalmedicine" id="BodyContent_Header_rptJournals_aItemResourceList_5" class="theme-jama-internal-medicine">JAMA Internal Medicine</a><a href="https://jamanetwork.com/journals/jamaneurology" id="BodyContent_Header_rptJournals_aItemResourceList_6" class="theme-jama-neurology">JAMA Neurology</a><a href="https://jamanetwork.com/journals/jamaoncology" id="BodyContent_Header_rptJournals_aItemResourceList_7" class="theme-jama-oncology">JAMA Oncology</a><a href="https://jamanetwork.com/journals/jamaophthalmology" id="BodyContent_Header_rptJournals_aItemResourceList_8" class="theme-jama-ophthalmology">JAMA Ophthalmology</a><a href="https://jamanetwork.com/journals/jamaotolaryngology" id="BodyContent_Header_rptJournals_aItemResourceList_9" class="theme-jama-otolaryngology-head-neck-surgery">JAMA Otolaryngology–Head &amp; Neck Surgery</a><a href="https://jamanetwork.com/journals/jamapediatrics" id="BodyContent_Header_rptJournals_aItemResourceList_10" class="theme-jama-pediatrics">JAMA Pediatrics</a><a href="https://jamanetwork.com/journals/jamapsychiatry" id="BodyContent_Header_rptJournals_aItemResourceList_11" class="theme-jama-psychiatry">JAMA Psychiatry</a><a href="https://jamanetwork.com/journals/jamasurgery" id="BodyContent_Header_rptJournals_aItemResourceList_12" class="theme-jama-surgery">JAMA Surgery</a><a href="https://jamanetwork.com/journals/archneurpsyc" id="BodyContent_Header_rptJournals_aItemResourceList_13" class="theme-archives-of-neurology-psychiatry-1919-1959-">Archives of Neurology &amp; Psychiatry (1919-1959)</a>
+    </div>
+    <div class="nav-network-other">
+        <a href="https://jamanetwork.com/learning" id="BodyContent_Header_rptOtherResources_aItemResourceList_0" class="is-b link-learning">Learning</a><a href="https://store.jamanetwork.com" id="BodyContent_Header_rptOtherResources_aItemResourceList_1" class="is-b link-store" target="_blank">Store</a><a href="https://jamanetwork.com/pages/apps/" id="BodyContent_Header_rptOtherResources_aItemResourceList_2" class="is-b link-apps">Apps</a><a href="http://www.jamacareercenter.com/" id="BodyContent_Header_rptOtherResources_aItemResourceList_3" class="is-b link-jobs" target="_blank">Jobs</a><a href="https://jamanetwork.com/pages/institutions-and-librarians" id="BodyContent_Header_rptOtherResources_aItemResourceList_4" class="is-b link-institutions-librarians">Institutions / Librarians</a><a href="https://jamanetwork.com/pages/reprints-and-permissions" id="BodyContent_Header_rptOtherResources_aItemResourceList_5" class="is-b link-reprints-permissions">Reprints &amp; Permissions</a>
+    </div>
+    <div class="white text-xxs">
+        <div class="p05 ml4 mr3 mb1 mt10 flex hamburger-menu-legal">
+            <a href="/pages/conditions-of-use" class="p0">Terms of Use</a>
+            <span class="pl1 pr1"> | </span>
+            <a href="/pages/privacy-policy" class="p0">Privacy Policy</a>
+            <span class="pl1 pr1"> | </span>
+            <a href="/pages/accessibility-statement" class="p0">Accessibility Statement</a>
+        </div>
+        <div class="ta-c">
+            <span class="pb1">2018 American Medical Association. All Rights Reserved</span>
+        </div>
+    </div>
+</nav>
+
+<script type='text/javascript'>
+    var App = App || {};
+    App.LoginUserInfo = {
+        isInstLoggedIn: [0],
+        currentSessionId: 'mdn4n5a32m32stpyii1sqp2h'
+    };
+</script>
+
+
+
+<input name="ctl00$ctl00$BodyContent$Header$hfGlobalSearchSiteURL" type="hidden" id="hfGlobalSearchSiteURL" value="https://jamanetwork.com/" />
+
+<input name="ctl00$ctl00$BodyContent$Header$hfAppIsPaidUser" type="hidden" id="hfAppIsPaidUser" value="false" />
+<input name="ctl00$ctl00$BodyContent$Header$hfAppIsMember" type="hidden" id="hfAppIsMember" value="false" />
+<input name="ctl00$ctl00$BodyContent$Header$hfAppSubscribedTo" type="hidden" id="hfAppSubscribedTo" />
+<input name="ctl00$ctl00$BodyContent$Header$hfAppIsIndividual" type="hidden" id="hfAppIsIndividual" value="false" />
+<input name="ctl00$ctl00$BodyContent$Header$hfAppHasAccess" type="hidden" id="hfAppHasAccess" value="false" />
+<input name="ctl00$ctl00$BodyContent$Header$hfAppIsReferredFromGoogle" type="hidden" id="hfAppIsReferredFromGoogle" value="False" />
+<input name="ctl00$ctl00$BodyContent$Header$hfSolrAutoSuggestMinimumCharactersLength" type="hidden" id="hfSolrAutoSuggestMinimumCharactersLength" value="2" />
+<input name="ctl00$ctl00$BodyContent$Header$hfSolrJournalName" type="hidden" id="hfSolrJournalName" value="JAMA" />
+<input name="ctl00$ctl00$BodyContent$Header$hfSolrJournalID" type="hidden" id="hfSolrJournalID" value="J67" />
+<input name="ctl00$ctl00$BodyContent$Header$hfAppIsLucy" type="hidden" id="hfAppIsLucy" value="false" />
+
+
+<div class="header-wrap">
+    <header class="header">
+        <div class="network-bar">
+            <a class="jama-network" href="/" title="JAMA Network Home"><img alt="JAMA Network Home" class="title-image" src="//amaprod.silverchaircdn.com/UI/app/svg/Jama_Network_Logo.svg"> </a>
+            
+        </div>
+
+        <a class="nav-toggler" href="#nav">
+            <div class="nav-toggler-indicator">
+              <span class="indicator-stroke"></span>
+              <span class="indicator-stroke"></span>
+              <span class="indicator-stroke"></span>
+              <span class="indicator-stroke"></span>
+            </div>
+            <div class="nav-toggler-site" >
+                <span id="BodyContent_Header_siteFullNamenav" class="nav-toggler-microsite"><span class='network'>JAMA</span></span>
+            </div>
+        </a>
+
+
+        
+        <div id="BodyContent_Header_GlobalSignIn_auth" class="auth">
+            <a class="auth--trigger is-b is-a">
+                <span id="BodyContent_Header_GlobalSignIn_spnUserFullName" class="user-full-name">Sign In</span>
+            </a>
+
+            <div class="auth--dropdown">
+                
+                <div class="auth--option auth--ind">
+                    
+                    <div id="BodyContent_Header_GlobalSignIn_divUserFullName" class="auth--ind-user"></div>                    
+                    
+                    <div id="BodyContent_Header_GlobalSignIn_divIndSignIn" class="auth--ind-auth">
+                        <div class="auth--title">Individual Sign In</div>
+                        <a href="https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="BodyContent_Header_GlobalSignIn_oauthSignInLink" rel="nofollow" class="auth--ind-sign-in">Sign in</a><a href="https://fsso.ama-assn.org/login/account/signup?appId=scweb&returnurl=https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="BodyContent_Header_GlobalSignIn_oauthSignUpLink" rel="nofollow" class="auth--ind-create">Create an Account</a>
+                    </div>
+                </div>
+
+                
+                <div id="BodyContent_Header_GlobalSignIn_divInstSignIn" class="auth--option auth--inst">
+
+                    
+                    <div class="auth--inst-auth">
+                        <div class="auth--title">Institutional Sign In</div>
+                        <a id="BodyContent_Header_GlobalSignIn_openAthensSignIn_btnAthensLogin" class="auth--athens" rel="nofollow" href="javascript:__doPostBack(&#39;ctl00$ctl00$BodyContent$Header$GlobalSignIn$openAthensSignIn$btnAthensLogin&#39;,&#39;&#39;)">OpenAthens</a>
+                        <a rel="nofollow" class="auth--shib" href="/signinshibboleth">Shibboleth</a>
+                    </div>
+                </div>
+ 
+                                               
+                
+
+                
+                <div id="BodyContent_Header_GlobalSignIn_divPurchaseOptions" class="auth--option auth--purchase thm-bg">
+                    <div class="auth--title">Purchase Options:</div>
+                    <a id="BodyContent_Header_GlobalSignIn_btnBuyArticle" class="auth--buy" href="javascript:__doPostBack(&#39;ctl00$ctl00$BodyContent$Header$GlobalSignIn$btnBuyArticle&#39;,&#39;&#39;)">Buy this article</a>
+                        <div class="widget-ToolboxPermissions widget-instance-">
+            <a href="http://s100.copyright.com/AppDispatchServlet?publisherName=AMA&amp;publication=0098-7484&amp;title=A+Placebo-Controlled%2c+Double-blind%2c+Randomized+Trial+of+an+Extract+of+Ginkgo+Biloba+for+Dementia&amp;publicationDate=1997-10-22&amp;volumeNum=278&amp;issueNum=16&amp;author=Le+Bars%2c+Pierre+L.%3b+Katz%2c+Martin+M.&amp;startPage=1327&amp;endPage=1332&amp;contentId=10.1001%2fjama.1997.03550160047037&amp;oa=&amp;orderBeanReset=True&amp;rentalOnly=yes" rel="nofollow" id="GlobalSignIn_btnRentArticle" class="auth--shib" target="_blank">Rent this article</a>
+ 
+    </div>
+<a id="BodyContent_Header_GlobalSignIn_btnSubscribeJournal" class="auth--subscribe" href="javascript:__doPostBack(&#39;ctl00$ctl00$BodyContent$Header$GlobalSignIn$btnSubscribeJournal&#39;,&#39;&#39;)">Subscribe to the JAMA journal</a>
+                </div>
+
+                
+                
+
+                
+                
+                
+            </div>
+        </div>
+
+
+
+
+
+        
+        <a class="toolbar-search-trigger is-b" data-mobile-tog-target=".site-search"></a>
+
+        
+        <div id="site-search" class="site-search">
+            <div class="site-search-bar">
+                
+                <select name="ctl00$ctl00$BodyContent$Header$ddlForSearch" id="BodyContent_Header_ddlForSearch" class="cs-select cs-skin-border" title="Search Site Selector">
+	<option value="J*">Journals</option>
+	<option value="L*">Learning</option>
+	<option value="J67">JAMA</option>
+	<option value="J184">JAMA Cardiology</option>
+	<option value="J68">JAMA Dermatology</option>
+	<option value="J69">JAMA Facial Plastic Surgery</option>
+	<option value="J71">JAMA Internal Medicine</option>
+	<option value="J72">JAMA Neurology</option>
+	<option value="J174">JAMA Oncology</option>
+	<option value="J73">JAMA Ophthalmology</option>
+	<option value="J74">JAMA Otolaryngology–Head &amp; Neck Surgery</option>
+	<option value="J75">JAMA Pediatrics</option>
+	<option value="J70">JAMA Psychiatry</option>
+	<option value="J76">JAMA Surgery</option>
+	<option value="J91">Archives of Neurology &amp; Psychiatry</option>
+
+</select>
+
+                
+                <div class="search-input-container">
+                    
+                    <input id="search-term" class="search-term" type="text" placeholder="Enter Search Term" maxlength="255" title="Enter Search Term">
+                    
+                    
+                    <input class="searchTerm" type="text" id="umbrellaSiteSearchInputHint" autocomplete="off" class="search-input">
+                    
+                    <ul id ="umbrellaSiteAutoCompleteResults" class="term-list hidden"></ul>
+                 
+
+                </div><!-- /.search-input-container -->
+                
+                <a class="search-button is-b"></a>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+
+
+
+<div class="editors-choice-header">
+</div>
+
+
+
+
+
+<div class="leader-ad desktop-only">
+    
+        <div class="widget-WidgetLoader widget-instance-AMA_AdTag_LeaderboardAd">
+        
+    <div class="SCM-SharedWidgets-AsyncAdLoader" data-url="/AMA/AdTag/AMA_AdTag_LeaderboardAd" data-params="{&quot;parameters&quot;:{&quot;siteName&quot;:&quot;jama&quot;,&quot;siteId&quot;:3,&quot;journalId&quot;:67,&quot;adDisplay&quot;:1,&quot;adSection&quot;:&quot;abstract&quot;,&quot;adPosition&quot;:&quot;atf&quot;,&quot;fromGoogle&quot;:false},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}"></div>
+ 
+    </div>
+
+</div>
+
+
+    </section>
+
+
+    <section class="master-main">
+        <a id="skip-to-content" class="hide">[Skip to Content Landing]</a>
+        
+    <span class="hide tagmanagervalue" data-attribute="articleTemplate" data-value="abstract" data-type="string"></span>
+    <div itemscope itemtype='http://schema.org/Article'>
+    <meta itemprop='inLanguage' content='en-US' />
+    <meta itemprop='name headline' content='A Placebo-Controlled, Double-blind, Randomized Trial of an Extract of Ginkgo Biloba for Dementia' />
+    <meta itemprop='description' content='Context. —EGb 761 is a particular extract of Ginkgo biloba used in Europe to alleviate symptoms associated with numerous cognitive disorders. Its use in dementias is based on positive results from only a few controlled clinical trials, most of which did not include standard assessments of cognition and behavior. Objective....' />
+    <meta itemprop='author' content='Pierre L. Le Bars, MD, PhD' />
+    <meta itemprop='url' content='https://jamanetwork.com/journals/jama/fullarticle/418442' />
+    <meta itemprop='datePublished' datetime='1997-10-22' content='1997-10-22' />
+        <meta itemprop='keywords' content='' />
+</div>    <div class="widget-WidgetLoader widget-instance-AMA_AdTag_Interstitial">
+        
+    <div class="SCM-SharedWidgets-AsyncAdLoader" data-url="/AMA/AdTag/AMA_AdTag_Interstitial" data-params="{&quot;parameters&quot;:{&quot;siteName&quot;:&quot;jama&quot;,&quot;siteId&quot;:3,&quot;journalId&quot;:67,&quot;adDisplay&quot;:13,&quot;adSection&quot;:&quot;abstract&quot;,&quot;adPosition&quot;:&quot;interstitial&quot;,&quot;fromGoogle&quot;:false},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}"></div>
+ 
+    </div>
+    <div class="widget-UserContentAccessWrite widget-instance-AMA_UserContentAccessWrite_AbstractView">
+        <div class="SCM-SharedWidgets-LocalStorage-UserContentAccessWrite" data-values='{"id":"418442","type":"Article","date":"1/31/2018 10:09:18 PM"}'></div>
+ 
+    </div>
+
+    <div class="ymal--leader hide-small">
+        
+                <div id="BodyContent_PageContent_ssCuratedYMAL">
+	<div class="selfServe">
+		<div class="widget-PersonalizedContent">
+<div class="row ymal">
+<h4 class="ymal--hed thm-col-sec">
+Trending
+</h4>
+<ul class="ymal--content featured-list--contents">
+    <li class="article ymal--item thm-bd-top">
+    <a class="article--title d-b mb05" href="/journals/jama/fullarticle/2669724">
+    Interest in the Ketogenic Diet Grows
+    </a>
+    <div class="article--type meta-item">Medical News &amp; Perspectives</div>
+    <div class="article--date meta-item no-wrap">January 16, 2018</div>
+    </li>
+    <li class="article ymal--item thm-bd-top">
+    <a class="article--title d-b mb05" href="/journals/jama/fullarticle/2492881">
+    Consensus Definitions for Sepsis and Septic Shock
+    </a>
+    <div class="article--type meta-item">Special Communication</div>
+    <div class="article--date meta-item no-wrap">February 23, 2016</div>
+    </li>
+</ul>
+</div>
+</div>
+	</div>
+</div>
+               
+    </div>
+    
+    <div class="content pb0">
+        <a id="top"></a>
+        
+        <div class="article-content">
+            <div class="social-share" data-share-title="A Placebo-Controlled, Double-blind, Randomized Trial of an Extract of Ginkgo Biloba for Dementia">
+                <a class="addthis_button_twitter toolbar-twitter toolbar-share is-b" rel="nofollow" data-utm-source="twitter"><span class="share-text">Twitter</span></a>
+                <a class="addthis_button_facebook toolbar-facebook toolbar-share is-b" rel="nofollow" data-utm-source="facebook"><span class="share-text">Facebook</span></a>
+                <a class="addthis_button_email toolbar-email toolbar-share is-b" rel="nofollow"><span class="share-text">Email</span></a>
+                <div class="toolbar-share-more">
+                    <a class="toolbar-google toolbar-share is-b" rel="nofollow" href="https://plus.google.com/share?url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442" data-utm-source="googleplus"><span class="share-text"> </span></a>
+                    <a class="addthis_button_linkedin toolbar-linkedin toolbar-share is-b" rel="nofollow" data-utm-source="linkedin"><span class="share-text"> </span></a>
+                </div>
+                <a class="toolbar-share-more-link is-a" rel="nofollow" data-tog-target=".social-share .toolbar-share-more">More</a>
+            </div>
+            
+            
+                <div class="widget-ArticleLinks widget-instance-AMA_ErrataArticleLinks_Abstract">
+         
+    </div>
+    <div class="widget-ArticleLinks widget-instance-AMA_ArticleLinks_ToErrata_Abstract">
+        
+ 
+    </div>
+    <div class="widget-ArticleNavLinks widget-instance-AMA_ArticleNavLinks_Abstract">
+                <a class="toc-link btn" href="https://jamanetwork.com/journals/jama/issue/278/16">This Issue</a>
+ 
+    </div>
+
+            
+
+            
+            <ul class="toolbar-trigger">
+              <li class="toolbar-pdf-wrap toolbar-tool-wrap">
+                  <a class="toolbar-tool toolbar-pdf is-b" data-trigger=".abstract-toolbar .toolbar-pdf"><span class="toolbar-pdf-text"><span class="toolbar-link-text-extra">Download </span><span class="toolbar-link-text">PDF</span></span></a>
+              </li>
+                <li class="toolbar-full-text-wrap toolbar-tool-wrap">
+                  <a class="toolbar-tool toolbar-full-text is-b" data-url="" data-article-id="418442" data-trigger=".abstract-toolbar .toolbar-full-text">Full Text</a>
+              </li>
+                
+              <li class="toolbar-share-wrap toolbar-tool-wrap">
+                <div class="toolbar-tool toolbar-share is-b">
+                  <a class="toolbar-share-more-link">Share</a>
+                  <div class="toolbar-share-more">
+                    <a class="toolbar-share toolbar-twitter is-b" rel="nofollow" data-trigger=".social-share .toolbar-twitter"><span class="share-text">Twitter</span></a>
+                    <a class="toolbar-share toolbar-facebook is-b" rel="nofollow" data-trigger=".social-share .toolbar-facebook"><span class="share-text">Facebook</span></a>
+                    <a class="toolbar-share toolbar-email is-b" rel="nofollow" data-trigger=".social-share .toolbar-email"><span class="share-text">Email</span></a>
+                    <a class="toolbar-share toolbar-google is-b" rel="nofollow" data-trigger=".social-share .toolbar-google"><span class="share-text">Google</span></a>
+                    <a class="toolbar-share toolbar-linkedin is-b" rel="nofollow" data-trigger=".social-share .toolbar-linkedin"><span class="share-text">LinkedIn</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="toolbar-citation-wrap toolbar-tool-wrap">
+                <a class="toolbar-tool toolbar-citation is-b" rel="nofollow" data-trigger=".abstract-toolbar .toolbar-citation"><span class="toolbar-link-text">Cite</span> <span class="toolbar-link-text-extra">This</span></a>
+              </li>
+              <li class="toolbar-permissions-wrap toolbar-tool-wrap">
+                <a class="toolbar-tool toolbar-permissions is-b" rel="nofollow" data-trigger=".abstract-toolbar .toolbar-permissions"><span class="toolbar-link-text">Permissions</span></a> 
+              </li>
+              <li class="toolbar-comments-wrap toolbar-tool-wrap">
+                  <a class="toolbar-tool toolbar-comments is-b" rel="nofollow" data-trigger=".abstract-toolbar .toolbar-comments"><span class="toolbar-link-text">Comment</span></a>
+              </li>
+            </ul>
+            
+
+            
+                <div class="widget-ArticleTopInfo widget-instance-AMA_ArticleTop_Info_Widget">
+        
+
+
+
+            <span class="hide tagmanagervalue" data-attribute="articleId" data-value="418442" data-type="string"></span>
+            <span class="hide tagmanagervalue" data-attribute="arrArticleAuthor" data-value="Pierre%20L.%20Le%20Bars%2C%20MD%2C%20PhD,Martin%20M.%20Katz%2C%20PhD,Nancy%20Berman%2C%20PhD,Turan%20M.%20Itil%2C%20MD,Alfred%20M.%20Freedman%2C%20MD,Alan%20F.%20Schatzberg%2C%20MD" data-type="array"></span>
+            <span class="hide tagmanagervalue" data-attribute="articleDOI" data-value="10.1001/jama.1997.03550160047037" data-type="string"></span>
+            <span class="hide tagmanagervalue" data-attribute="articleTitle" data-value="A Placebo-Controlled, Double-blind, Randomized Trial of an Extract of Ginkgo Biloba for Dementia" data-type="string"></span>
+            <span class="hide tagmanagervalue" data-attribute="articleType" data-value="Article" data-type="string"></span>
+            <span class="hide tagmanagervalue" data-attribute="issueVolume" data-value="278" data-type="string"></span>
+            <span class="hide tagmanagervalue" data-attribute="issueNo" data-value="16" data-type="string"></span>
+            <span class="hide tagmanagervalue" data-attribute="publishDate" data-value="October%2022%2C%201997" data-type="string"></span>
+            <span class="hide tagmanagervalue" data-attribute="journalClub" data-value="No" data-type="string"></span>
+            <span class="hide tagmanagervalue" data-attribute="articleStatus" data-value="Locked" data-type="string"></span>
+            <span class="hide tagmanagervalue" data-attribute="articlePubState" data-value="Final" data-type="string"></span>
+
+
+        <div class="meta-article-type-wrap">
+            <div class="meta-article-type thm-col">Article </div>
+        </div>
+        <div class="meta-date"><span class="ppub"><span class="month">October </span><span class="day">22, </span><span class="year">1997</span></span></div>
+        <div class="meta-article-title-wrap">
+            
+            <h1 class="meta-article-title ">A Placebo-Controlled, Double-blind, Randomized Trial of an Extract of Ginkgo Biloba for Dementia</h1>
+
+            
+        </div>
+            <div class="meta-authors">
+                <span class="meta-authors--limited"><span class="wi-fullname brand-fg"><a href="/searchresults?author=Pierre+L.+Le+Bars&q=Pierre+L.+Le+Bars" target="_blank">Pierre L. Le Bars, MD, PhD<sup></sup></a></span>; <span class="wi-fullname brand-fg"><a href="/searchresults?author=Martin+M.+Katz&q=Martin+M.+Katz" target="_blank">Martin M. Katz, PhD<sup></sup></a></span>; <span class="wi-fullname brand-fg"><a href="/searchresults?author=Nancy+Berman&q=Nancy+Berman" target="_blank">Nancy Berman, PhD<sup></sup></a></span>; <a class="meta-authors--etal td-u">et al</a></span>
+                <span class="meta-authors--remaining"><span class="wi-fullname brand-fg"><a href="/searchresults?author=Turan+M.+Itil&q=Turan+M.+Itil" target="_blank">Turan M. Itil, MD<sup></sup></a></span>; <span class="wi-fullname brand-fg"><a href="/searchresults?author=Alfred+M.+Freedman&q=Alfred+M.+Freedman" target="_blank">Alfred M. Freedman, MD<sup></sup></a></span>; <span class="wi-fullname brand-fg"><a href="/searchresults?author=Alan+F.+Schatzberg&q=Alan+F.+Schatzberg" target="_blank">Alan F. Schatzberg, MD<sup></sup></a></span></span>
+            </div>
+        <div class="meta-citation-wrap">
+            <span class="meta-citation-journal-name">JAMA. </span><span class="meta-citation"> 1997;278(16):1327-1332. doi:10.1001/jama.1997.03550160047037</span>
+        </div>
+
+ 
+    </div>
+    <div class="widget-EditorsChoice widget-instance-AMA_EditorsChoice_Links">
+         
+    </div>
+    <div class="widget-LinkedContentToolbar widget-instance-AMA_LinkedContentToolbar">
+        
+<div class="linked-content-toolbar">
+    
+    <div class="linked-content-controls">
+        <a class="linked-content-trigger td-n" href="#editorial-comment-tab">
+            <i class="icon-document"><span class="sr-t">editorial comment icon</span></i>
+            <div class="trigger-text d-ib va-m ta-l fw-5">Editorial <div>Comment</div></div>
+        </a>
+        <a class="linked-content-trigger td-n" href="#related-articles-tab">
+            <i class="icon-related"><span class="sr-t">related articles icon</span></i>
+            <div class="trigger-text d-ib va-m ta-l fw-5">Related <div>Articles</div></div>
+        </a>
+        <a class="linked-content-trigger td-n" href="#author-interviews-tab">
+            <i class="icon-author_interview"><span class="sr-t">author interview icon</span></i>
+            <div class="trigger-text d-ib va-m ta-l fw-5">Interviews</div>
+        </a>
+        <a class="linked-content-trigger td-n" href="#more-multimedia-tab">
+            <i class="icon-multimedia"><span class="sr-t">multimedia icon</span></i>
+            <div class="trigger-text d-ib va-m ta-l fw-5">Multimedia</div>
+        </a>
+    </div>
+
+    
+    <div class="linked-content-tabs">
+        
+        <div id="editorial-comment-tab"  class="linked-content-tab editorial-comment-tab">
+    <div class="widget-ArticleLinks widget-instance-AMA_LinkedContentToolbar_EditorialComments">
+        
+ 
+    </div>
+
+        </div>
+
+        
+        <div id="related-articles-tab" class="linked-content-tab related-article-tab">
+    <div class="widget-ArticleLinks widget-instance-AMA_LinkedContentToolbar_RelatedArticle">
+        
+ 
+    </div>
+    <div class="widget-ArticleLinks widget-instance-AMA_LinkedContentToolbar_RelatedEditorsChoices">
+        
+ 
+    </div>
+
+        </div>
+
+        
+        <div id="author-interviews-tab" class="linked-content-tab linked-author-interviews-tab">
+
+        </div>
+
+        
+        <div id="more-multimedia-tab" class="linked-content-tab more-multimedia-tab">
+
+        </div>
+    </div>
+</div> 
+    </div>
+
+            
+            
+
+            
+            <a class="full-text-link is-b" data-url="" data-article-id="418442">
+                <div class="full-text-link--text"><span class="full-text-link--text-top">Full </span>Text</div>
+            </a>
+            
+            
+            <div class="abstract-content">
+                
+                    <div class="widget-ArticleFulltext widget-instance-AMA_Article_Abstract_Widget">
+        <div class="article-full-text" data-userHasAccess="False">
+    
+
+
+            <a class="article-section-id-anchor" id="4471667"></a>
+                        <div class="h3 cb section-type-abstract decorated-hed ">
+
+                            <div class="heading-text thm-col">
+                                Abstract
+                            </div>
+                        </div>
+<p><strong>Context.</strong> 
+    <span>—EGb 761 is a particular extract of Ginkgo biloba used in Europe to alleviate symptoms associated with numerous cognitive disorders. Its use in dementias is based on positive results from only a few controlled clinical trials, most of which did not include standard assessments of cognition and behavior.</span></p><p><strong>Objective.</strong> 
+    <span>—To assess the efficacy and safety of EGb in Alzheimer disease and multi-infarct dementia.</span></p><p><strong>Design.</strong> 
+    <span>—A 52-week, randomized double-blind, placebo-controlled, parallelgroup, multicenter study.</span></p><p><strong>Patients.</strong> 
+    <span>—Mildly to severely demented outpatients with Alzheimer disease or multi-infarct dementia, without other significant medical conditions.</span></p><p><strong>Intervention.</strong> 
+    <span>—Patients assigned randomly to treatment with EGb (120 mg/d) or placebo. Safety, compliance, and drug dispensation were monitored every 3 months with complete outcome evaluation at 12, 26, and 52 weeks.</span></p><p><strong>Primary Outcome Measures.</strong> 
+    <span>—Alzheimer's Disease Assessment Scale—Cognitive subscale (ADAS-Cog), Geriatric Evaluation by Relative's Rating Instrument (GERRI), and Clinical Global Impression of Change (CGIC).</span></p><p><strong>Results.</strong> 
+    <span>—From 309 patients included in an intent-to-treat analysis, 202 provided evaluable data for the 52-week end point analysis. In the intent-to-treat analysis, the EGb group had an ADAS-Cog score 1.4 points betterthan the placebo group (<i>P</i>=.04) and a GERRI score 0.14 points better than the placebo group (<i>P</i>=.004). The same patterns were observed with the evaluable data set in which 27% of patients treated with EGb achieved at least a 4-point improvement on the ADAS-Cog, compared with 14% taking placebo (<i>P</i>=.005); on the GERRI, 37% were considered improved with EGb, compared with 23% taking placebo (<i>P</i>=.003). No difference was seen in the CGIC. Regarding the safety profile of EGb, no significant differences compared with placebo were observed in the number of patients reporting adverse events or in the incidence and severity of these events.</span></p><p><strong>Conclusions.</strong> 
+    <span>—EGb was safe and appears capable of stabilizing and, in a substantial number of cases, improving the cognitive performance and the social functioning of demented patients for 6 months to 1 year. Although modest, the changes induced by EGb were objectively measured by the ADAS-Cog and were of sufficient magnitude to be recognized by the caregivers in the GERRI.</span></p>            <div class="movable-ad-target bta"> </div>
+
+    
+
+
+</div> 
+    </div>
+    <div class="widget-ArticleLinks widget-instance-AMA_Abstract_EditorialComments">
+        
+ 
+    </div>
+
+
+                
+                <a class="full-text-link is-b d-b bd-none ta-c fl-n radius mt1 mb1 m-auto" data-url="" data-article-id="418442">
+                    <div class="full-text-link--text fw-b"><span class="full-text-link--text-top">Full </span>Text</div>
+                </a>
+
+                
+                
+                
+                    <div class="widget-WidgetLoader widget-instance-AMA_AdTag_abstract_bta_dual">
+        
+    <div class="SCM-SharedWidgets-AsyncAdLoader" data-url="/AMA/AdTag/AMA_AdTag_abstract_bta_dual" data-params="{&quot;parameters&quot;:{&quot;siteName&quot;:&quot;jama&quot;,&quot;siteId&quot;:3,&quot;journalId&quot;:67,&quot;adDisplay&quot;:8,&quot;adSection&quot;:&quot;abstract&quot;,&quot;adPosition&quot;:&quot;bta&quot;,&quot;fromGoogle&quot;:false},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}"></div>
+ 
+    </div>
+
+                
+            </div>
+            
+            
+                <div class="widget-RelatedTopics widget-instance-AMA_Related_Topics_Abstract">
+        
+ 
+    </div>
+
+        </div>
+
+        
+        <div class="sidebar">
+            <div class="branded-bar"></div>
+
+            <div class="abstract-toolbar">
+                            <a id="pdf-link" class="toolbar-tool toolbar-pdf al-link pdfaccess" data-article-id="418442" data-article-url="/journals/jama/articlepdf/418442/jama_278_16_037.pdf" data-ajax-url="/Content/CheckPdfAccess"><span class="toolbar-pdf-text"><span class="toolbar-link-text-extra">Download </span><span class="toolbar-link-text">PDF</span></span>
+            </a>
+
+                <a class="toolbar-tool toolbar-full-text is-b" data-url="" data-article-id="418442"><span class="toolbar-link-text-extra">Full</span> Text</a>
+                    <div class="widget-ToolboxGetCitation widget-instance-AMA_Get_Citation_Abstract">
+        <a class="toolbar-tool toolbar-citation is-b" rel="nofollow" data-reveal-id="get-citation" data-reveal><span class="toolbar-link-text">Cite</span> <span class="toolbar-link-text-extra">This</span></a>
+
+<div id="get-citation" class="reveal-modal get-citation" data-reveal>
+    <h3 class="get-citation-title">Citation</h3>
+    <p class="get-citation-citation">Le Bars PL, Katz MM, Berman N, Itil TM, Freedman AM, Schatzberg AF. A Placebo-Controlled, Double-blind, Randomized Trial of an Extract of Ginkgo Biloba for Dementia. <em>JAMA.</em> 1997;278(16):1327–1332. doi:10.1001/jama.1997.03550160047037</p>
+    <h4 class="get-citation-download-heading">Download citation file:</h4>
+    <div class="get-citation-types">
+        <a class="get-citation-format" rel="nofollow" href="https://jamanetwork.com/journals/jama/downloadcitation/418442?format=ris">RIS (Zotero)</a>
+        <a class="get-citation-format" rel="nofollow" href="https://jamanetwork.com/journals/jama/downloadcitation/418442?format=ris">EndNote</a>
+        <a class="get-citation-format" rel="nofollow" href="https://jamanetwork.com/journals/jama/downloadcitation/418442?format=bibtex">BibTex</a>
+        <a class="get-citation-format" rel="nofollow" href="https://jamanetwork.com/journals/jama/downloadcitation/418442?format=txt">Medlars</a>
+        <a class="get-citation-format" rel="nofollow" href="https://jamanetwork.com/journals/jama/downloadcitation/418442?format=ris">ProCite</a>
+        <a class="get-citation-format" rel="nofollow" href="https://jamanetwork.com/journals/jama/downloadcitation/418442?format=txt">RefWorks</a>
+        <a class="get-citation-format" rel="nofollow" href="https://jamanetwork.com/journals/jama/downloadcitation/418442?format=ris">Reference Manager</a>
+        <a class="get-citation-format" rel="nofollow" href="https://jamanetwork.com/journals/jama/downloadcitation/418442?format=mendeley">Mendeley</a>
+    </div>
+
+    <p class="get-citation-copyright">&#169; 2018 </p>
+    <a class="close-reveal-modal icon-close" rel="nofollow"></a>
+</div> 
+    </div>
+    <div class="widget-ToolboxPermissions widget-instance-">
+            <a href="http://s100.copyright.com/AppDispatchServlet?publisherName=AMA&amp;publication=0098-7484&amp;title=A+Placebo-Controlled%2c+Double-blind%2c+Randomized+Trial+of+an+Extract+of+Ginkgo+Biloba+for+Dementia&amp;publicationDate=1997-10-22&amp;volumeNum=278&amp;issueNum=16&amp;author=Le+Bars%2c+Pierre+L.%3b+Katz%2c+Martin+M.&amp;startPage=1327&amp;endPage=1332&amp;contentId=10.1001%2fjama.1997.03550160047037&amp;oa=&amp;orderBeanReset=True" rel="nofollow" id="PermissionsLink" class="toolbar-tool toolbar-permissions is-b" target="_blank"><span class="toolbar-link-text">Permissions</span></a>
+ 
+    </div>
+
+            </div>
+
+            
+                <div class="widget-SignUpAffinityAlert widget-instance-AMAv2_AffinityAlertSignUp">
+         
+    </div>
+
+
+            
+            <div class="cme-promo ta-c">
+                <div id="BodyContent_PageContent_ssPromoteCmeToInstSubUsers">
+	<div class="selfServe">
+		<!--
+<div style="border: 1px solid #dddddd; padding: 10px; background-color: #ffffcc; margin: 0px !important;">
+<p style="font-weight: 700; margin-bottom: 10px; text-transform: uppercase; padding: 0px !important; text-align: center;">* * Maintenance Notice * *</p>
+<p style="margin: 0px !important; padding: 0px !important;">Maintenance will be performed from 7:00<span style="font-variant: small-caps; margin-left: 1px;">pm</span> CT January 6, 2018 to 10:00<span style="font-variant: small-caps; margin-left: 1px;">am</span> CT January 7. Please be advised that your site/services may be periodically unavailable during this maintenance window.</p>
+</div>
+-->
+<div style="background-color: #d71635; height: 4px;">
+</div>
+<div style="border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: #dddddd; border-bottom-color: #dddddd; border-left-color: #dddddd; border-image: initial; border-top-style: initial; border-top-color: initial;" data-content-section="right-rail-self-serve" data-content-name="reader-promo">
+<a href="http://app.jamanetwork.com/">
+<img alt="" src="/ImageLibrary/Reader/170915-reader-jama-338x122.png" />
+</a>
+</div>
+<style>
+    .requireSsoRegistrationForFreePdfs {
+    display: none;
+    }
+</style>
+	</div>
+</div>
+            </div>
+
+            
+                <div class="widget-WidgetLoader widget-instance-AMA_PersonalizedContent_AbstractView_RightRail">
+        <div class="SCM-SharedWidgets-AsyncWidgetLoader" data-url="/AMA/PersonalizedContent_RightRail/AMA_PersonalizedContent_AbstractView_RightRail" data-params="{&quot;parameters&quot;:{&quot;resourceIdToExclude&quot;:418442,&quot;resourceTypeToExclude&quot;:3},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}"></div>
+ 
+    </div>
+    <div class="widget-WidgetLoader widget-instance-AMA_AdTag_abstract_mid_dual">
+        
+    <div class="SCM-SharedWidgets-AsyncAdLoader" data-url="/AMA/AdTag/AMA_AdTag_abstract_mid_dual" data-params="{&quot;parameters&quot;:{&quot;siteName&quot;:&quot;jama&quot;,&quot;siteId&quot;:3,&quot;journalId&quot;:67,&quot;adDisplay&quot;:6,&quot;adSection&quot;:&quot;abstract&quot;,&quot;adPosition&quot;:&quot;mid&quot;,&quot;fromGoogle&quot;:false},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}"></div>
+ 
+    </div>
+    <div class="widget-WidgetLoader widget-instance-AMA_JobsAd">
+        
+<div class="SCM-SharedWidgets-AsyncJobsAdLoader" data-url="/AMA/JobsAd/AMA_JobsAd" data-params="{&quot;parameters&quot;:{&quot;siteId&quot;:3},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}"></div>
+ 
+    </div>
+
+        </div>
+    </div>
+
+    
+    <div class="ymal--footer">
+            <div class="widget-WidgetLoader widget-instance-AMA_PersonalizedContent_AbstractView_Footer">
+        <div class="SCM-SharedWidgets-AsyncWidgetLoader" data-url="/Personalization/PersonalizedContent/AMA_PersonalizedContent_AbstractView_Footer" data-params="{&quot;parameters&quot;:{&quot;resourceIdToExclude&quot;:418442,&quot;resourceTypeToExclude&quot;:3},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}"></div>
+ 
+    </div>
+
+    </div>
+    <div class="manage-interest">
+            <div class="widget-ManageCollectionInterests widget-instance-ManageCollectionInterests_Magazine">
+        <div class="manage-interests-modal reveal-modal small modal" data-reveal>
+<div class="manage-interests--header">
+    <div class="widget-SelfServeContent widget-instance-AMA_ManageInterests_Header">
+        <div class="self-serve"><style>
+    h4 {
+    font-size: 20px !important;
+    }
+</style>
+<h4>Select Your Interests</h4>
+<p>Customize your JAMA Network experience by selecting one or more topics from the list below.</p></div> 
+    </div>
+
+</div><div class="manage-interests--categories">
+    <ul class="category-list">
+            <li><span class="category-list-item " data-categoryid="5489">Acid Base, Electrolytes, Fluids</span></li>
+            <li><span class="category-list-item " data-categoryid="44018">Allergy</span></li>
+            <li><span class="category-list-item " data-categoryid="5504">Allergy and Clinical Immunology</span></li>
+            <li><span class="category-list-item " data-categoryid="5510">Anesthesiology</span></li>
+            <li><span class="category-list-item " data-categoryid="42143">Anticoagulation</span></li>
+            <li><span class="category-list-item " data-categoryid="44015">Art of the JAMA Network</span></li>
+            <li><span class="category-list-item " data-categoryid="42099">Bleeding and Transfusion</span></li>
+            <li><span class="category-list-item " data-categoryid="5548">Cardiology</span></li>
+            <li><span class="category-list-item " data-categoryid="44036">Caring for the Critically Ill Patient</span></li>
+            <li><span class="category-list-item " data-categoryid="6255">Challenges in Clinical Electrocardiography</span></li>
+            <li><span class="category-list-item " data-categoryid="44038">Clinical Challenge</span></li>
+            <li><span class="category-list-item " data-categoryid="5589">Clinical Decision Support</span></li>
+            <li><span class="category-list-item " data-categoryid="44039">Clinical Implications of Basic Neuroscience</span></li>
+            <li><span class="category-list-item " data-categoryid="5614">Clinical Pharmacy and Pharmacology</span></li>
+            <li><span class="category-list-item " data-categoryid="5575">Complementary and Alternative Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="44040">Consensus Statements</span></li>
+            <li><span class="category-list-item " data-categoryid="5584">Critical Care Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="44019">Dental Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="5598">Dermatology</span></li>
+            <li><span class="category-list-item " data-categoryid="44011">Diabetes and Endocrinology</span></li>
+            <li><span class="category-list-item " data-categoryid="42054">Drug Development</span></li>
+            <li><span class="category-list-item " data-categoryid="5620">Electronic Health Records</span></li>
+            <li><span class="category-list-item " data-categoryid="5621">Emergency Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="5819">End of Life</span></li>
+            <li><span class="category-list-item " data-categoryid="42107">Environmental Health</span></li>
+            <li><span class="category-list-item " data-categoryid="42108">Ethics</span></li>
+            <li><span class="category-list-item " data-categoryid="5644">Facial Plastic Surgery</span></li>
+            <li><span class="category-list-item " data-categoryid="44012">Gastroenterology and Hepatology</span></li>
+            <li><span class="category-list-item " data-categoryid="5664">Genetics and Genomics</span></li>
+            <li><span class="category-list-item " data-categoryid="44041">Genomics and Precision Health</span></li>
+            <li><span class="category-list-item " data-categoryid="5668">Geriatrics</span></li>
+            <li><span class="category-list-item " data-categoryid="5670">Global Health</span></li>
+            <li><span class="category-list-item " data-categoryid="44042">Guide to Statistics and Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="5672">Guidelines</span></li>
+            <li><span class="category-list-item " data-categoryid="5674">Hair Disorders</span></li>
+            <li><span class="category-list-item " data-categoryid="42113">Health Care Delivery Models</span></li>
+            <li><span class="category-list-item " data-categoryid="42114">Health Care Economics, Insurance, Payment</span></li>
+            <li><span class="category-list-item " data-categoryid="42115">Health Care Policy</span></li>
+            <li><span class="category-list-item " data-categoryid="42116">Health Care Quality</span></li>
+            <li><span class="category-list-item " data-categoryid="5680">Health Care Reform</span></li>
+            <li><span class="category-list-item " data-categoryid="5830">Health Care Safety</span></li>
+            <li><span class="category-list-item " data-categoryid="5682">Health Care Workforce</span></li>
+            <li><span class="category-list-item " data-categoryid="5679">Health Disparities</span></li>
+            <li><span class="category-list-item " data-categoryid="44024">Health Informatics</span></li>
+            <li><span class="category-list-item " data-categoryid="44020">Health Policy</span></li>
+            <li><span class="category-list-item " data-categoryid="5688">Hematology</span></li>
+            <li><span class="category-list-item " data-categoryid="5692">History of Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="5514">Humanities</span></li>
+            <li><span class="category-list-item " data-categoryid="5697">Hypertension</span></li>
+            <li><span class="category-list-item " data-categoryid="44043">Images in Neurology</span></li>
+            <li><span class="category-list-item " data-categoryid="44021">Imaging</span></li>
+            <li><span class="category-list-item " data-categoryid="44022">Immunology</span></li>
+            <li><span class="category-list-item " data-categoryid="5702">Infectious Diseases</span></li>
+            <li><span class="category-list-item " data-categoryid="44044">Innovations in Health Care Delivery</span></li>
+            <li><span class="category-list-item " data-categoryid="44070">JAMA Infographic</span></li>
+            <li><span class="category-list-item " data-categoryid="5716">Law and Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="44045">Less is More</span></li>
+            <li><span class="category-list-item " data-categoryid="5720">Lifestyle Behaviors</span></li>
+            <li><span class="category-list-item " data-categoryid="5738">Medical Devices and Equipment</span></li>
+            <li><span class="category-list-item " data-categoryid="44023">Medical Education</span></li>
+            <li><span class="category-list-item " data-categoryid="5739">Medical Education and Training</span></li>
+            <li><span class="category-list-item " data-categoryid="5713">Medical Journals and Publishing</span></li>
+            <li><span class="category-list-item " data-categoryid="5746">Melanoma</span></li>
+            <li><span class="category-list-item " data-categoryid="44025">Mobile Health and Telemedicine</span></li>
+            <li><span class="category-list-item " data-categoryid="5766">Narrative Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="5769">Nephrology</span></li>
+            <li><span class="category-list-item " data-categoryid="5777">Neurology</span></li>
+            <li><span class="category-list-item " data-categoryid="44052">Neuroscience and Psychiatry</span></li>
+            <li><span class="category-list-item " data-categoryid="44053">Notable Notes</span></li>
+            <li><span class="category-list-item " data-categoryid="5787">Nursing</span></li>
+            <li><span class="category-list-item " data-categoryid="5788">Nutrition</span></li>
+            <li><span class="category-list-item " data-categoryid="44027">Nutrition, Obesity, Exercise</span></li>
+            <li><span class="category-list-item " data-categoryid="5791">Obesity</span></li>
+            <li><span class="category-list-item " data-categoryid="44013">Obstetrics and Gynecology</span></li>
+            <li><span class="category-list-item " data-categoryid="5796">Occupational Health</span></li>
+            <li><span class="category-list-item " data-categoryid="5801">Oncology</span></li>
+            <li><span class="category-list-item " data-categoryid="44054">Ophthalmic Images</span></li>
+            <li><span class="category-list-item " data-categoryid="5804">Ophthalmology</span></li>
+            <li><span class="category-list-item " data-categoryid="5808">Orthopedics</span></li>
+            <li><span class="category-list-item " data-categoryid="5811">Otolaryngology</span></li>
+            <li><span class="category-list-item " data-categoryid="44028">Pain Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="44029">Pathology and Laboratory Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="6258">Patient Information</span></li>
+            <li><span class="category-list-item " data-categoryid="5843">Pediatrics</span></li>
+            <li><span class="category-list-item " data-categoryid="44060">Performance Improvement</span></li>
+            <li><span class="category-list-item " data-categoryid="42050">Perioperative Care and Consultation</span></li>
+            <li><span class="category-list-item " data-categoryid="42125">Pharmacoeconomics</span></li>
+            <li><span class="category-list-item " data-categoryid="42126">Pharmacoepidemiology</span></li>
+            <li><span class="category-list-item " data-categoryid="5851">Pharmacogenetics</span></li>
+            <li><span class="category-list-item " data-categoryid="44030">Pharmacy and Clinical Pharmacology</span></li>
+            <li><span class="category-list-item " data-categoryid="5856">Physical Medicine and Rehabilitation</span></li>
+            <li><span class="category-list-item " data-categoryid="42059">Physical Therapy</span></li>
+            <li><span class="category-list-item " data-categoryid="44061">Poetry</span></li>
+            <li><span class="category-list-item " data-categoryid="44064">Professionalism</span></li>
+            <li><span class="category-list-item " data-categoryid="5871">Psychiatry</span></li>
+            <li><span class="category-list-item " data-categoryid="42128">Public Health</span></li>
+            <li><span class="category-list-item " data-categoryid="5877">Pulmonary Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="42129">Radiology</span></li>
+            <li><span class="category-list-item " data-categoryid="42058">Regulatory Agencies</span></li>
+            <li><span class="category-list-item " data-categoryid="5916">Research, Methods, Statistics</span></li>
+            <li><span class="category-list-item " data-categoryid="42142">Resuscitation</span></li>
+            <li><span class="category-list-item " data-categoryid="5896">Rheumatology</span></li>
+            <li><span class="category-list-item " data-categoryid="38802">Scientific Discovery and the Future of Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="5833">Shared Decision Making and Communication</span></li>
+            <li><span class="category-list-item " data-categoryid="5912">Sleep Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="5915">Sports Medicine</span></li>
+            <li><span class="category-list-item " data-categoryid="44032">Statistics and Research Methods</span></li>
+            <li><span class="category-list-item " data-categoryid="5533">Stem Cell Transplantation</span></li>
+            <li><span class="category-list-item " data-categoryid="5921">Substance Use and Addiction</span></li>
+            <li><span class="category-list-item " data-categoryid="5923">Surgery</span></li>
+            <li><span class="category-list-item " data-categoryid="44065">Surgical Innovation</span></li>
+            <li><span class="category-list-item " data-categoryid="44066">Surgical Pearls</span></li>
+            <li><span class="category-list-item " data-categoryid="44067">Teachable Moment</span></li>
+            <li><span class="category-list-item " data-categoryid="6257">The Rational Clinical Examination</span></li>
+            <li><span class="category-list-item " data-categoryid="5936">Tobacco and e-Cigarettes</span></li>
+            <li><span class="category-list-item " data-categoryid="5938">Toxicology</span></li>
+            <li><span class="category-list-item " data-categoryid="42136">Trauma and Injury</span></li>
+            <li><span class="category-list-item " data-categoryid="5942">Treatment Adherence</span></li>
+            <li><span class="category-list-item " data-categoryid="44068">United States Preventive Services Task Force</span></li>
+            <li><span class="category-list-item " data-categoryid="5947">Urology</span></li>
+            <li><span class="category-list-item " data-categoryid="44069">Users&#39; Guide to the Medical Literature</span></li>
+            <li><span class="category-list-item " data-categoryid="5950">Vaccination</span></li>
+            <li><span class="category-list-item " data-categoryid="5955">Venous Thromboembolism</span></li>
+            <li><span class="category-list-item " data-categoryid="5957">Violence</span></li>
+            <li><span class="category-list-item " data-categoryid="42139">Women&#39;s Health</span></li>
+            <li><span class="category-list-item " data-categoryid="42140">Wound Care, Infection, Healing</span></li>
+    </ul>
+</div>
+
+    
+<div class="manage-interests--save-preferences">
+    <div class="save-preferences-btn thm-bg ">
+        <span class="save-preferences-btn-text fw-b">Save Preferences</span>
+    </div>
+</div>
+
+    
+    <a class="close-reveal-modal icon-close"></a>
+</div> 
+    </div>
+
+    </div>
+    
+
+    </section>
+
+
+    <section id="secFooterControl" class="master-footer">
+        
+
+        <script>
+            // --------------------
+            // Globals in the Global Namespace
+            var App = App || {};
+
+            // alias for getElementsByClassName
+            function scmByClass(className) {
+                return document.getElementsByClassName(className);
+            }
+
+            // alias for getElementById
+            function scmById(id) {
+                return document.getElementById(id);
+            }
+
+            // alias for querySelector
+            function scmquery(selector) {
+                return document.querySelector(selector);
+            }
+
+            // alias for querySelectorAll
+            function queryAll(selector) {
+                return document.querySelectorAll(selector);
+            }
+            
+            // is true string
+            function isTrueString(string) {
+                if (typeof string === 'string') {
+                    return string.toLowerCase() === 'true';
+                }
+
+                return undefined;
+            }
+
+            // Get viewport dimensions w/o the need for Modernizr or some other dependency
+            function updateViewportDimensions() {
+                var w = window, d = document, e = d.documentElement, g = d.getElementsByTagName('body')[0], x = w.innerWidth || e.clientWidth || g.clientWidth, y = w.innerHeight || e.clientHeight || g.clientHeight;
+                return { width: x, height: y };
+            }
+
+            // setting the viewport width
+            var viewport = updateViewportDimensions();
+
+            // Debounce function. Use this on resize to avoid taxing the browser.
+            var debounce = function (func, wait, immediate) {
+                var timeout;
+                return function () {
+                    var context = this, args = arguments;
+                    var later = function () {
+                        timeout = null;
+                        if (!immediate) func.apply(context, args);
+                    };
+                    var callNow = immediate && !timeout;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                    if (callNow) func.apply(context, args);
+                };
+            };
+
+            // --------------------
+            // variables we can use throughout the application. e.g. if (App.isMobile), etc.
+            (function (App) {
+                // breakpoint variables
+                App.mobileUpperBreakpoint = 767;
+                App.mobileAltBreakpoint = 640;
+                App.tabletUpperBreakpoint = 1023;
+
+                function setVariables() {
+                    // variables that are dependent on viewport
+                    viewport = updateViewportDimensions();
+                    App.isMobile = (viewport.width <= App.mobileUpperBreakpoint);
+                    App.isMobileAlt = (viewport.width <= App.mobileAltBreakpoint);
+                    App.isTablet = (viewport.width > App.mobileUpperBreakpoint && viewport.width <= App.tabletUpperBreakpoint);
+                    App.isTabletDown = (viewport.width <= App.tabletUpperBreakpoint);
+                    App.isDesktop = (viewport.width > App.tabletUpperBreakpoint);
+                    App.activeViewport = App.isMobile ? 'small' : App.isTablet ? 'med' : 'large';
+                }
+
+                setVariables();
+
+                // other variables that are useful throughout the app
+                // The "pg_" value corresponds to the class name found in the aspx.cs file
+                // (i.e., "pg_learningsearchresults" corresponds to "public partial class LearningSearchResults...").
+                App.cachedViewport = App.isMobile ? 'small' : App.isTablet ? 'med' : 'large';
+                App.isAnyArticle = !!(scmByClass('widget-ArticleFullView').length || scmByClass('pg_abstract').length || scmByClass('widget-MagazineView').length);
+                App.isSplitScreen = !!scmByClass('widget-ArticleFullView').length;
+                App.isAbstract = !!scmByClass('pg_abstract').length;
+                App.isMag = !!scmByClass('widget-MagazineView').length;
+                App.isFreeArticle = !!(scmquery('.widget-ArticleTopInfo .free-access') ||
+                                        scmquery('.widget-ArticleTopInfo .open-access') ||
+                                        scmquery('.widget-ArticleTopInfo .icon-free'));
+                App.isIssue = !!scmByClass('pg_issue').length || !!scmByClass('pg_newonline').length || !!scmByClass('pg_currentissue').length || !!scmByClass('pg_pastissues').length;
+                App.isNewOnline = !!scmByClass('pg_newonline').length;
+                App.isCurrentIssue = !!scmByClass('pg_currentissue').length;
+                App.isPastIssues = !!scmByClass('pg_pastissues').length;
+                App.isJournal = !!scmByClass('pg_journal').length;
+                App.isNetworkHome = !!scmByClass('pg_index').length;
+                App.isSearch = !!scmByClass('pg_searchresults').length;
+                App.isAdvancedSearch = !!scmByClass('pg_advancedsearch').length;
+                App.isPlayer= !!scmByClass('pg_multimediaplayer').length;
+                App.isSelfServe = !!scmByClass('pg_sspage').length;
+                App.isMyAccount = !!scmByClass('pg_myaccount').length;
+                App.isLearning = !!scmByClass('pg_learning').length;
+                App.isLearningContent = !!scmByClass('pg_learning').length || !!scmByClass('pg_learningsearchresults').length || !!scmByClass('pg_quiz').length || !!scmByClass('pg_multimediaplayer').length || !!scmByClass('pg_journalarticlecme').length;
+
+                // Because we use one aspx page to display all self serve content, we really don't have a good way of
+                // determining whether we showing learning SS or not so we need to check the pathname.
+                App.isLearningSelfServe = window.location.pathname.indexOf("/learning/pages/") >= 0;
+
+                App.isLearningSearchResults = !!scmByClass('pg_learningsearchresults').length;
+                App.isQuiz = !!scmByClass('pg_quiz').length;
+                App.supportsFlexbox = !!scmByClass('flexbox').length;
+                App.isCollection = !!scmByClass('pg_collection').length;
+                App.isJournalArticleCme = !!scmByClass('pg_journalarticlecme').length;
+                App.isPaidUser = isTrueString(scmById('hfAppIsPaidUser').getAttribute('value'));
+                App.isMember = isTrueString(scmById('hfAppIsMember').getAttribute('value'));
+                App.isIndividual = isTrueString(scmById('hfAppIsIndividual').getAttribute('value'));
+                App.hasAccess = isTrueString(scmById('hfAppHasAccess').getAttribute('value'));
+                App.isReferredFromGoogle = isTrueString(scmById('hfAppIsReferredFromGoogle').getAttribute('value'));
+                var subscribedTo = scmById('hfAppSubscribedTo').getAttribute('value');
+                App.userSubscribedTo = subscribedTo ? subscribedTo.split(',') : undefined;
+                App.isLucy = isTrueString(scmById('hfAppIsLucy').getAttribute('value'));
+                App.currentJournalCount = 13;
+
+                App.updateAppVariables = debounce(function () {
+                    setVariables();
+                }, 50, false);
+            })(App);
+        </script>
+        
+
+        
+<div class="footer-ad desktop-only">
+    
+        <div class="widget-WidgetLoader widget-instance-AMA_AdTag_AnchorboardAd_btf">
+        
+    <div class="SCM-SharedWidgets-AsyncAdLoader" data-url="/AMA/AdTag/AMA_AdTag_AnchorboardAd_btf" data-params="{&quot;parameters&quot;:{&quot;siteName&quot;:&quot;jama&quot;,&quot;siteId&quot;:3,&quot;journalId&quot;:67,&quot;adDisplay&quot;:11,&quot;adSection&quot;:&quot;abstract&quot;,&quot;adPosition&quot;:&quot;btf&quot;,&quot;fromGoogle&quot;:false},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}"></div>
+ 
+    </div>
+
+</div>
+
+
+<div class="ad-riser-wrap desktop-only">
+    <div class="ad-riser--dismiss t-c">X</div>
+        <div class="widget-WidgetLoader widget-instance-AMA_AdTag_Riser">
+        
+    <div class="SCM-SharedWidgets-AsyncAdLoader" data-url="/AMA/AdTag/AMA_AdTag_Riser" data-params="{&quot;parameters&quot;:{&quot;siteName&quot;:&quot;jama&quot;,&quot;siteId&quot;:3,&quot;journalId&quot;:67,&quot;adDisplay&quot;:12,&quot;adSection&quot;:&quot;abstract&quot;,&quot;adPosition&quot;:&quot;Riser&quot;,&quot;fromGoogle&quot;:false},&quot;dynamicParameters&quot;:{&quot;localParams&quot;:&quot;[REPLACE_WITH_LOCAL]&quot;}}"></div>
+ 
+    </div>
+
+</div>
+
+<div class="footer-wrap">
+    <footer class="footer">
+        
+        <div id="footer-microsite" class="footer-microsite">
+            <style type="text/css">
+    @media (min-width: 1024px) {.split-screen .footer-microsite-contents {border-bottom:0 !important;}}
+    .footer-microsite-contents {margin-bottom:1em;width:100%;}
+    .footer-network-other .link-apps:before {width: 23px;}
+    .footer-network-other .link-institutions-librarians:before {width: 23px;}
+    .jn-ss-footer-border-top {border-top:1px solid #555;padding-top:15px;}
+    .jn-ss-footer-border-bottom {border-bottom:1px solid #555;padding-bottom:10px;}
+</style>
+<div class="footer-heading-wrap">
+<h3 id="BodyContent_Footer_h3SiteName" class="footer-heading is-b footer-microsite-heading" data-mobile-tog-target=".footer-microsite-links-wrap">JAMA</h3>
+</div>
+<div class="footer-microsite-links-wrap">
+<div class="footer-microsite-contents  jn-ss-footer-border-bottom">
+<h4 id="BodyContent_Footer_ContentHeader" class="footer-subheading">Content</h4>
+<a href="/journals/jama">Home</a>
+<a href="/journals/jama/newonline">New Online</a>
+<a href="/journals/jama/currentissue">Current Issue</a>
+</div>
+<div class="footer-microsite-services cf">
+<h4 id="BodyContent_Footer_ServiceHeader" class="footer-subheading">Journal Information</h4>
+<a href="/journals/jama/pages/for-authors">For Authors</a>
+<a href="/journals/jama/editors-and-publishers">Editors &amp; Publishers</a>
+<a href="/pages/rss">RSS</a>
+<a href="/journals/jama/pages/contact-us">Contact Us</a>
+</div>
+<div class="footer-network-other  jn-ss-footer-border-bottom">
+<a href="/learning" class="link-network-other is-b link-learning">Learning</a>
+<a href="https://store.jamanetwork.com" class="link-network-other is-b link-store" target="_blank">Store</a>
+<a href="/pages/apps" class="link-network-other is-b link-mobile" target="_blank">Apps</a>
+<a href="http://www.jamacareercenter.com/" class="link-network-other is-b link-jobs" target="_blank">Jobs</a>
+<a href="/pages/institutions-and-librarians" class="link-network-other is-b link-institutions-librarians" target="_blank">Institutions</a>
+<a href="/pages/reprints-and-permissions" class="link-network-other is-b link-reprints-permissions">Reprints &amp; Permissions</a>
+</div>
+<div id="BodyContent_Footer_divSubscribe" class="footer-microsite-subscribe">
+<img src="//amaprod.silverchaircdn.com/UI/app/img/covers/jama.jpg" class="subscribe-image" alt="Journal Cover" />
+<div class="subscribe-meta">
+<h4 class="subscribe-heading footer-subheading">Subscribe</h4>
+<a href="https://store.jamanetwork.com/productDetails.aspx?productcodeID=64" class="subscribe-submit btn">Go</a>
+</div>
+</div>
+</div>
+        </div>
+
+        
+        <div id="footer-network" class="footer-network">
+            <style type="text/css">
+    .footer-network-sites {width: 62.85542%;}
+    .footer-network-info {width: 35.93976%}
+    .jn-ss-subheading-mt {margin-top: 1.5em;}
+    .jn-registered:after {content: "\00AE";font-size: 50%;vertical-align: top;}
+    .jn-trademark:after {content: "\2122";font-size: 50%;vertical-align: top;}
+</style>
+<div class="footer-heading-wrap">
+<h3 class="footer-heading is-b footer-network-heading" data-mobile-tog-target=".footer-network-links-wrap">The <strong>JAMA</strong> Network</h3>
+</div>
+<div class="footer-network-links-wrap">
+<div class="footer-network-sites">
+<div class="internal">
+<h4 id="BodyContent_Footer_JournalHeader" class="footer-subheading">Journals</h4>
+<a href="/journals/jama">JAMA</a>
+<a href="https://sites.jamanetwork.com/jamanetworkopen/" target="_blank">JAMA Network Open</a>
+<a href="/journals/jamacardiology">JAMA Cardiology</a>
+<a href="/journals/jamadermatology">JAMA Dermatology</a>
+<a href="/journals/jamafacialplasticsurgery">JAMA Facial Plastic Surgery</a>
+<a href="/journals/jamainternalmedicine">JAMA Internal Medicine</a>
+<a href="/journals/jamaneurology">JAMA Neurology</a>
+<a href="/journals/jamaoncology">JAMA Oncology</a>
+<a href="/journals/jamaophthalmology">JAMA Ophthalmology</a>
+<a href="/journals/jamaotolaryngology">JAMA Otolaryngology&ndash;Head &amp; Neck Surgery</a>
+<a href="/journals/jamapediatrics">JAMA Pediatrics</a>
+<a href="/journals/jamapsychiatry">JAMA Psychiatry</a>
+<a href="/journals/jamasurgery">JAMA Surgery</a>
+<a href="/journals/archneurpsyc">Archives of Neurology &amp; Psychiatry (1919-1959)</a>
+</div>
+<div class="external">
+<h4 class="footer-subheading">Sites</h4>
+<div id="BodyContent_Footer_ssFooterSiteMenu">
+<div class="selfServe">
+<a target="_blank" href="http://www.amamanualofstyle.com/">AMA Manual of Style</a>
+<a target="_blank" href="https://sites.jamanetwork.com/art-and-images-in-psychiatry/">Art and Images in Psychiatry</a>
+<a target="_blank" href="https://sites.jamanetwork.com/breastcancerscreening/index.html">Breast Cancer Screening Guidelines</a>
+<a target="_blank" href="https://sites.jamanetwork.com/colon-cancer-screening/">Colorectal Screening Guidelines</a>
+<a target="_blank" href="https://sites.jamanetwork.com/declaration-of-helsinki/index.html">Declaration of Helsinki</a>
+<a target="_blank" href="https://sites.jamanetwork.com/depression-screening/">Depression Screening Guidelines</a>
+<a target="_blank" href="https://ebm.jamanetwork.com/index.html">Evidence-Based Medicine: An Oral History</a>
+<a target="_blank" href="https://sites.jamanetwork.com/fishbein/">Fishbein Fellowship</a>
+<a target="_blank" href="https://sites.jamanetwork.com/genetics/">Genomics and Precision Health</a>
+<a target="_blank" href="https://sites.jamanetwork.com/health-disparities/">Health Disparities</a>
+<a target="_blank" href="https://sites.jamanetwork.com/jnc8/">Hypertension Guidelines</a>
+<a target="_blank" href="https://sites.jamanetwork.com/audio">JAMA Network Audio</a>
+<a target="_blank" href="/pages/conferences">JAMA Network Conferences </a>
+<a target="_blank" href="https://sites.jamanetwork.com/medmen">Med Men</a>
+<a target="_blank" href="https://sites.jamanetwork.com/jama-medical-education/">Medical Education</a>
+<a target="_blank" href="https://sites.jamanetwork.com/opioids/">Opioid Management Guidelines</a>
+<a target="_blank" href="http://peerreviewcongress.org/index.html">Peer Review Congress</a>
+<a target="_blank" href="https://sites.jamanetwork.com/research-ethics/">Research Ethics</a>
+<a target="_blank" href="https://sites.jamanetwork.com/sepsis/">Sepsis and Septic Shock</a>
+<a target="_blank" href="https://sites.jamanetwork.com/statins/">Statins and Dyslipidemia</a>
+<a target="_blank" href="/pages/collections">Topics and Collections</a>
+<h4 class="footer-subheading jn-ss-subheading-mt">Featured Articles</h4>
+<a href="/journals/jama/fullarticle/2463262">ACS Breast Cancer Screening Guideline</a>
+<a href="/journals/jama/fullarticle/2503508">CDC Guideline for Prescribing Opioids</a>
+<a href="/journals/jama/fullarticle/2492881">Consensus Definitions for Sepsis and Septic Shock</a>
+<a href="/journals/jama/fullarticle/2513561">Income and Life Expectancy in the US</a>
+<a href="/journals/jama/fullarticle/1791497">JNC 8 Guideline for Management of High Blood Pressure</a>
+<a href="/journals/jama/fullarticle/2533698">President Obama on US Health Care Reform</a>
+<a href="/journals/jama/fullarticle/2529486">Screening for Colorectal Cancer</a>
+<a href="/journals/jama/fullarticle/2484345">Screening for Depression in Adults</a>
+<a href="/journals/jama/fullarticle/2584058">Statins for Primary Prevention of Cardiovascular Disease</a>
+<a href="/journals/jama/fullarticle/1760318">WMA Declaration of Helsinki, 7th Revision</a>
+<h4 class="footer-subheading jn-ss-subheading-mt">Blogs</h4>
+<a target="_blank" href="https://newsatjama.jama.com/">The JAMA Forum</a>
+<a target="_blank" href="https://blogs.jamanetwork.com/topics-in-ophthalmology/">Topics in Ophthalmology </a>
+<a target="_blank" href="http://amastyleinsider.com/">AMA Style Insider</a>
+</div>
+</div>
+</div>
+</div>
+<div id="footer-network-info" class="footer-network-info">
+<div class="information-for-links">
+<h4 id="BodyContent_Footer_InfoHeader" class="footer-subheading">Information For</h4>
+<a href="/pages/for-authors">Authors</a>
+<a href="/pages/institutions-and-librarians">Institutions &amp; Librarians</a>
+<a href="/pages/advertisers">Advertisers</a>
+<a href="/pages/subscription-agents">Subscription Agents</a>
+<a href="//www.jamacareercenter.com/" target="_blank">Employers &amp; Job Seekers</a>
+<a href="https://media.jamanetwork.com" rel="nofollow" target="_blank">Media</a>
+</div>
+<div class="services-links">
+<h4 id="BodyContent_Footer_JAMANetworkProductsHeader" class="footer-subheading">JAMA Network Products</h4>
+<a href="http://www.amamanualofstyle.com/" class="footer-service-link" target="_blank">AMA Manual of Style</a>
+<a href="https://jamaevidence.mhmedical.com/" class="footer-service-link" target="_blank"><span class="jn-registered">JAMAevidence</span></a>
+<a href="/pages/clinical-challenge" class="footer-service-link" target="_blank"><span class="jn-trademark">JN Challenge</span></a>
+<a href="/pages/listen" class="footer-service-link" target="_blank"><span class="jn-trademark">JN Listen</span></a>
+<a href="/pages/reader" class="footer-service-link" target="_blank"><span class="jn-trademark">JN Reader</span></a>
+<a href="http://www.peerreviewcongress.org/" class="footer-service-link" target="_blank">Peer Review Congress</a>
+</div>
+<div class="learning-links">
+<h4 id="BodyContent_Footer_LearningHeader" class="footer-subheading">Learning</h4>
+<a href="/learning">CME Quizzes</a>
+<a href="/learning/pages/about-cme">About CME &amp; MOC</a>
+<a target="_blank" href="https://moc-reporting.jamanetwork.com/">MOC Reporting Preferences</a>
+</div>
+</div>
+</div>
+        </div>
+
+        
+        <div id="footer-resources-wrap" class="footer-resources-wrap">
+            <style type="text/css">
+    .footer-resources-wrap .footer-subheading {color: grey;display:block !important;font-size: 1.17647em;font-weight: 400;text-transform: uppercase;}
+</style>
+<div class="footer-heading-wrap">
+<h3 class="footer-heading is-b footer-resources-heading" data-mobile-tog-target=".footer-resources">Help</h3>
+</div>
+<div class="footer-resources">
+<a href="https://store.jamanetwork.com" class="footer-service-link" target="_blank">Subscriptions &amp; Renewals</a>
+<a href="https://jamanetwork.com/oauthsignin?return_url=http%3A%2F%2Fjamanetwork.com%2Fmyaccount%23my-alerts" class="footer-service-link" rel="nofollow">Email Subscriptions</a>
+<a href="https://jamanetwork.com/oauthsignin?return_url=http%3A%2F%2Fjamanetwork.com%2Fmyaccount%23my-profile" class="footer-service-link" rel="nofollow">Update Your Address</a>
+<a href="https://sites.jamanetwork.com/help/" class="footer-service-link">Contact Us</a>
+<a href="https://sites.jamanetwork.com/help/" class="footer-service-link">Frequently Asked Questions</a>
+<h4 class="footer-subheading jn-ss-subheading-mt">JAMA Career Center</h4>
+<a href="http://www.jamacareercenter.com" class="footer-service-link" target="_blank">Physician Job Listings</a>
+</div><div id="BodyContent_Footer_divSocial" class="social-links footer-social-links">
+<a target="_blank" rel="nofollow" data-emailid="6d35777a-fc12-4d2d-9b49-81d031835d91" href="https://www.facebook.com/pages/JAMA-Journal-of-the-American-Medical-Association/87087958340" class="social-link is-b facebook"></a>
+<a target="_blank" rel="nofollow" data-emailid="6d35777a-fc12-4d2d-9b49-81d031835d91" href="https://twitter.com/JAMA_current" class="social-link is-b twitter"></a>
+<a target="_blank" rel="nofollow" data-emailid="6d35777a-fc12-4d2d-9b49-81d031835d91" href="https://www.linkedin.com/company/jama-network" class="social-link is-b linked-in"></a>
+<a target="_blank" rel="nofollow" data-emailid="6d35777a-fc12-4d2d-9b49-81d031835d91" href="https://plus.google.com/u/0/104285613971644324251" class="social-link is-b google-plus"></a>
+<a target="_blank" rel="nofollow" data-emailid="6d35777a-fc12-4d2d-9b49-81d031835d91" href="https://www.pinterest.com/thejamanetwork/" class="social-link is-b pinterest"></a>
+<a target="_blank" rel="nofollow" data-emailid="6d35777a-fc12-4d2d-9b49-81d031835d91" href="https://www.youtube.com/user/JAMAJournalVideo" class="social-link is-b you-tube"></a>
+<a target="_blank" rel="nofollow" data-emailid="6d35777a-fc12-4d2d-9b49-81d031835d91" href="/rss/site_3/67.xml" class="social-link is-b rss"></a>
+<a target="_blank" rel="nofollow" data-emailid="6d35777a-fc12-4d2d-9b49-81d031835d91" href="https://jamaeditorsaudiosummary.libsyn.com/rss" class="social-link is-b podcast"></a>
+</div><div id="BodyContent_Footer_divEmailUpdate" class="footer-email-updates">
+                
+                    <div class="widget-EmailListSignUp widget-instance-AMAv2_EmailListSignUp_Footer">
+        <div class="email-signup">
+
+    <div class="email-signup--text">Get the latest from JAMA</div>
+    <div class="email-signup--input-wrap is-b">
+        <input type="text" name="email" class="email-signup--input" placeholder="Email address" title="Email address" />
+    </div>
+
+    <a rel="nofollow" class="email-signup--submit btn">Sign Up</a>
+
+    <div class="email-signup--user-message"></div>
+</div> 
+    </div>
+</div>
+        </div>
+
+        
+        <div class="footer-bar" itemscope itemtype="https://schema.org/Organization">
+            <style type="text/css">
+    .jn-bottom-bar {color: #fff; float: left;font-size: 10px;padding: 13px 20px;width: 33.33%;}
+    .jn-bottom-bar p {line-height: 2;}
+    @media (max-width: 900px) {.jn-bottom-bar {float: none;width: 100%;}}
+    .jn-footer-copyright {font-size:12px;}
+    .jn-footer-pipe {margin:0 10px;}
+</style>
+<a class="footer-bar-jn-logo d-b no-mw mb1" href="/" title="JAMA Network Home"><img class="mw-100" src="//amaprod.silverchaircdn.com/UI/app/img/jn_sig_white.png" alt="Jama Network Logo" /></a>
+<div class="jn-bottom-bar">
+<p>
+<span class="jn-footer-copyright">&copy; 2018 American Medical Association. All Rights Reserved.</span><br />
+<a href="/pages/conditions-of-use" class="p0">Terms of Use</a><span class="jn-footer-pipe">|</span>
+<a href="/pages/privacy-policy" class="p0">Privacy Policy</a><span class="jn-footer-pipe">|</span>
+<a href="/pages/accessibility-statement" class="p0">Accessibility Statement</a>
+</p>
+</div>
+            <a class="footer-bar-sis no-mw relative nudge-down" href="https://www.silverchair.com" target="_blank"><img class="footer-bar-sis-img mt05 mw-100" src="//amaprod.silverchaircdn.com/UI/app/img/powered.png" alt="Silverchair Logo" /></a>
+        </div>
+    </footer>
+
+</div>
+
+
+    </section>
+
+
+
+        
+        
+        <div id="revealModal" class="reveal-modal" data-reveal>
+            <div id="revealContent"></div>
+            <a class="close-reveal-modal icon-close"></a>
+        </div>
+
+
+        
+        <div class="artmet-modal" id="MetricsModal">
+            <div class="artmet-modal-contents">
+                <a class="artmet-close-modal">&#215;</a>
+            </div>
+        </div>
+
+
+
+        
+        <div id="no-access-reveal" class="no-access reveal-modal login-modal medium modal" data-reveal>
+            
+            <div id="accessSignIn_SignInOptionsModal" class="modal--options">
+    <h4 class="signin-hed"><span id="accessSignIn_spnSignInHeader">Sign in to access your subscriptions</span></h4>
+
+	<div class="modal--option">
+	    
+	    <div id="accessSignIn_divIndSignIn" class="sign-in--personal">
+		<a href="https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="accessSignIn_oauthSignInLink" rel="nofollow" class="sign-in--personal-link">Sign in</a> to your personal account    
+	    </div>
+	    
+	    <div id="accessSignIn_divInstSignIn" class="sign-in--inst">
+		Institutional sign in: <a id="accessSignIn_openAthensSignIn_btnAthensLogin" class="auth--athens" rel="nofollow" href="javascript:__doPostBack(&#39;ctl00$ctl00$accessSignIn$openAthensSignIn$btnAthensLogin&#39;,&#39;&#39;)">OpenAthens</a> | <a rel="nofollow" class="sign-in--shib" href="/signinshibboleth">Shibboleth</a>
+	    </div>
+	</div>
+	<div id="accessSignIn_divIndSignUp" class="modal--option">
+	    <div class="sign-in--create">
+		<a href="https://fsso.ama-assn.org/login/account/signup?appId=scweb&returnurl=https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="accessSignIn_oauthSignUpLink" rel="nofollow" class="sign-in--create-link">Create a free personal account</a> <span id="accessSignIn_spnDownloadMessage">to download free article PDFs,
+		sign up for alerts, and more</span>
+	    </div>
+	</div>
+</div>
+
+            <div class="modal--box purchase-access">
+                <h4>Purchase access</h4>
+                <div class="modal--option"><a id="journalLinkToSubscribe" href="#">Subscribe</a> to the journal</div>
+                <div class="modal--option"><a id="articleLinkToPurchase" href="#" data-storeurl="https://store.jamanetwork.com">Buy</a> this article</div>
+                <div id="modal_rent_this_article" class="modal--option"><a id="rentThisArticleLink" href="#">Rent</a> this article</div>
+            </div>
+            <a class="close-reveal-modal icon-close"></a>
+        </div>
+        
+
+
+        
+        <div id="no-access-reveal-learning" class="no-access reveal-modal login-modal medium modal" data-reveal>
+            
+            <div id="SignInOptions_Learning_SignInOptionsModal" class="modal--options">
+    <h4 class="signin-hed"><span id="SignInOptions_Learning_spnSignInHeader">Sign in to access your subscriptions</span></h4>
+
+	<div class="modal--option">
+	    
+	    <div id="SignInOptions_Learning_divIndSignIn" class="sign-in--personal">
+		<a href="https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="SignInOptions_Learning_oauthSignInLink" rel="nofollow" class="sign-in--personal-link">Sign in</a> to your personal account    
+	    </div>
+	    
+	    
+	</div>
+	<div id="SignInOptions_Learning_divIndSignUp" class="modal--option">
+	    <div class="sign-in--create">
+		<a href="https://fsso.ama-assn.org/login/account/signup?appId=scweb&returnurl=https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="SignInOptions_Learning_oauthSignUpLink" rel="nofollow" class="sign-in--create-link">Create a free personal account</a> <span id="SignInOptions_Learning_spnDownloadMessage">to access your subscriptions, sign up for alerts, and more</span>
+	    </div>
+	</div>
+</div>
+
+            <div class="modal--box purchase-access">
+                    <h4>Purchase access</h4>
+                    <div class="modal--option"><a id="linkSubscribeLearning" href="https://store.jamanetwork.com/productDetails.aspx?productcodeId=194" target="_blank">Subscribe</a> to Learning for one year</div>
+                    <div id="divPuchaseActivity" class="modal--option"><a id="linkPurchaseActivity" target="_blank">Buy</a> this activity</div>
+            </div>
+            <a class="close-reveal-modal icon-close"></a>
+        </div>
+        
+
+
+        
+        <div id="register-free-pdf-reveal" class="reveal-modal modal register-free-pdf medium" data-reveal>
+            <h4 class="modal--title">Sign in to download free article PDFs</h4>
+            <div id="freePdfSignIn_SignInOptionsModal" class="modal--options">
+    <h4 class="signin-hed"><span id="freePdfSignIn_spnSignInHeader">Sign in to access your subscriptions</span></h4>
+
+	<div class="modal--option">
+	    
+	    <div id="freePdfSignIn_divIndSignIn" class="sign-in--personal">
+		<a href="https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="freePdfSignIn_oauthSignInLink" rel="nofollow" class="sign-in--personal-link">Sign in</a> to your personal account    
+	    </div>
+	    
+	    <div id="freePdfSignIn_divInstSignIn" class="sign-in--inst">
+		Institutional sign in: <a id="freePdfSignIn_openAthensSignIn_btnAthensLogin" class="auth--athens" rel="nofollow" href="javascript:__doPostBack(&#39;ctl00$ctl00$freePdfSignIn$openAthensSignIn$btnAthensLogin&#39;,&#39;&#39;)">OpenAthens</a> | <a rel="nofollow" class="sign-in--shib" href="/signinshibboleth">Shibboleth</a>
+	    </div>
+	</div>
+	<div id="freePdfSignIn_divIndSignUp" class="modal--option">
+	    <div class="sign-in--create">
+		<a href="https://fsso.ama-assn.org/login/account/signup?appId=scweb&returnurl=https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="freePdfSignIn_oauthSignUpLink" rel="nofollow" class="sign-in--create-link">Create a free personal account</a> <span id="freePdfSignIn_spnDownloadMessage">to download free article PDFs,
+		sign up for alerts, and more</span>
+	    </div>
+	</div>
+</div>
+
+            <div class="modal--box">
+                <h5 class="modal--subtitle">A free personal account provides</h5>
+                <ul>
+                    <li>Free current issues on <a href="http://app.jamanetwork.com" target="_blank">The JAMA Network Reader</a></li>
+                    <li>Free quizzes on <a href="http://mobile.jamanetwork.com/challenge.html" target="_blank">The JAMA Network Challenge</a></li>
+                    <li>Personalized alerts</li>
+                </ul>
+
+                <div class="no-access--alerts">
+                    <input id="no-access--alerts-input" class="no-access--alerts-input" type="checkbox" name="no-access-alerts-checkbox" checked="checked">
+                    <div class="no-access--alerts-content">
+                        <label for="no-access--alerts-input">Yes! Alert me when new content is published.</label>
+                        <div class="privacy-policy"><a href="/pages/privacy-policy">Privacy Policy</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="close-reveal-modal icon-close"></a>
+        </div>
+        
+        
+    
+
+        
+        
+        
+        <div id="no-access-reveal-saved-searches" class="no-access reveal-modal login-modal medium modal" data-reveal>
+            <div id="SignInOptions_SavedSearches_SignInOptionsModal" class="modal--options">
+    <h4 class="signin-hed"><span id="SignInOptions_SavedSearches_spnSignInHeader">Sign in to save your search</span></h4>
+
+	<div class="modal--option">
+	    
+	    <div id="SignInOptions_SavedSearches_divIndSignIn" class="sign-in--personal">
+		<a href="https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="SignInOptions_SavedSearches_oauthSignInLink" rel="nofollow" class="sign-in--personal-link">Sign in</a> to your personal account    
+	    </div>
+	    
+	    
+	</div>
+	<div id="SignInOptions_SavedSearches_divIndSignUp" class="modal--option">
+	    <div class="sign-in--create">
+		<a href="https://fsso.ama-assn.org/login/account/signup?appId=scweb&returnurl=https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="SignInOptions_SavedSearches_oauthSignUpLink" rel="nofollow" class="sign-in--create-link">Create a free personal account</a> <span id="SignInOptions_SavedSearches_spnDownloadMessage">to access your subscriptions, sign up for alerts, and more</span>
+	    </div>
+	</div>
+</div>
+            
+            <div class="modal--box purchase-access">
+                <h4>Purchase access</h4>
+                <div class="modal--option"><a id="linkToStore" href="https://store.jamanetwork.com">Subscribe</a> now</div>
+            </div>
+            <a class="close-reveal-modal icon-close"></a>
+        </div>
+        <div id="no-access-reveal-saved-searches-learning" class="no-access reveal-modal login-modal medium modal" data-reveal>
+            <div id="SignInOptions_LearningSavedSearches_SignInOptionsModal" class="modal--options">
+    <h4 class="signin-hed"><span id="SignInOptions_LearningSavedSearches_spnSignInHeader">Sign in to save your search</span></h4>
+
+	<div class="modal--option">
+	    
+	    <div id="SignInOptions_LearningSavedSearches_divIndSignIn" class="sign-in--personal">
+		<a href="https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="SignInOptions_LearningSavedSearches_oauthSignInLink" rel="nofollow" class="sign-in--personal-link">Sign in</a> to your personal account    
+	    </div>
+	    
+	    
+	</div>
+	<div id="SignInOptions_LearningSavedSearches_divIndSignUp" class="modal--option">
+	    <div class="sign-in--create">
+		<a href="https://fsso.ama-assn.org/login/account/signup?appId=scweb&returnurl=https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="SignInOptions_LearningSavedSearches_oauthSignUpLink" rel="nofollow" class="sign-in--create-link">Create a free personal account</a> <span id="SignInOptions_LearningSavedSearches_spnDownloadMessage">to access your subscriptions, sign up for alerts, and more</span>
+	    </div>
+	</div>
+</div>
+            
+            <div class="modal--box purchase-access">
+                <h4>Purchase access</h4>
+                <div class="modal--option"><a id="linkToStore" href="https://store.jamanetwork.com/productDetails.aspx?productcodeId=194">Subscribe</a> to Learning for one year</div>
+            </div>
+            <a class="close-reveal-modal icon-close"></a>
+        </div>
+        <div id="no-access-follow-collection" class="no-access reveal-modal login-modal medium modal" data-reveal>
+            <div id="FollowCollectionSignIn_SignInOptionsModal" class="modal--options">
+    <h4 class="signin-hed"><span id="FollowCollectionSignIn_spnSignInHeader">Sign in to customize your interests</span></h4>
+
+	<div class="modal--option">
+	    
+	    <div id="FollowCollectionSignIn_divIndSignIn" class="sign-in--personal">
+		<a href="https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="FollowCollectionSignIn_oauthSignInLink" rel="nofollow" class="sign-in--personal-link">Sign in</a> to your personal account    
+	    </div>
+	    
+	    
+	</div>
+	<div id="FollowCollectionSignIn_divIndSignUp" class="modal--option">
+	    <div class="sign-in--create">
+		<a href="https://fsso.ama-assn.org/login/account/signup?appId=scweb&returnurl=https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="FollowCollectionSignIn_oauthSignUpLink" rel="nofollow" class="sign-in--create-link">Create a free personal account</a> <span id="FollowCollectionSignIn_spnDownloadMessage">to download free article PDFs, sign up for alerts, customize your interests, and more</span>
+	    </div>
+	</div>
+</div>
+            <div class="modal--box purchase access">
+                
+                <div class="no-access-follow-collection--alerts">
+                    <input id="no-access-follow-collection--alerts-input" class="no-access--alerts-input" type="checkbox" name="no-access-alerts-checkbox" checked="checked"/>
+                    <div class="no-access-follow-collection--alerts-content">
+                        <label for="no-access-follow-collection--alerts-input">Yes! Alert me when new content is published.</label>
+                        <div class="privacy-policy"><a href="/pages/privacy-policy">Privacy Policy</a></div>
+                    </div>
+                </div>
+            </div>
+            <a class="close-reveal-modal icon-close"></a>
+        </div>
+        <div id="no-access-user-comments" class="no-access reveal-modal login-modal medium modal" data-reveal>
+            
+            <div id="UserCommentsSignIn_SignInOptionsModal" class="modal--options">
+    <h4 class="signin-hed"><span id="UserCommentsSignIn_spnSignInHeader">Sign in to make a comment</span></h4>
+
+	<div class="modal--option">
+	    
+	    <div id="UserCommentsSignIn_divIndSignIn" class="sign-in--personal">
+		<a href="https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="UserCommentsSignIn_oauthSignInLink" rel="nofollow" class="sign-in--personal-link">Sign in</a> to your personal account    
+	    </div>
+	    
+	    
+	</div>
+	<div id="UserCommentsSignIn_divIndSignUp" class="modal--option">
+	    <div class="sign-in--create">
+		<a href="https://fsso.ama-assn.org/login/account/signup?appId=scweb&returnurl=https://jamanetwork.com/oauthsignin?return_url=https%3a%2f%2fjamanetwork.com%2fjournals%2fjama%2ffullarticle%2f418442%3fredirect%3dtrue" id="UserCommentsSignIn_oauthSignUpLink" rel="nofollow" class="sign-in--create-link">Create a free personal account</a> <span id="UserCommentsSignIn_spnDownloadMessage">to make a comment, download free article PDFs, sign up for alerts and more</span>
+	    </div>
+	</div>
+</div>
+
+            <div class="modal--box purchase-access">
+                
+                <div class="no-access--alerts">
+                    <input id="no-access-user-comments--alerts-input" class="no-access--alerts-input" type="checkbox" name="no-access-alerts-checkbox" checked="checked">
+                    <div class="no-access-user-comments--alerts-content">
+                        <label for="no-access-user-comments--alerts-input">Yes! Alert me when new content is published.</label>
+                        <div class="privacy-policy"><a href="/pages/privacy-policy">Privacy Policy</a></div>
+                    </div>
+                </div>
+            </div>
+            <a class="close-reveal-modal icon-close"></a>
+        </div>
+        
+
+
+
+        
+        
+    
+    
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js" type="text/javascript"></script>
+
+    
+    <script src="//d1bxh8uas1mnw7.cloudfront.net/assets/embed.js" type="text/javascript"></script>
+
+    
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53346900644c40ac"></script>
+
+
+    </form>
+    <script src="//amaprod.silverchaircdn.com/UI/app/dist/app.min.js?v=636523996272335990"></script>
+    
+</body>
+</html>
+
+
+
+----------Final-Data---------------
+
+property og EGb particular Ginkgo biloba Europe alleviate numerous cognitive dementias clinical assessments Placebo Double blind Ginkgo Biloba Dementia JAMA JAMA Skip suppressAds suppress Home JAMA JAMA JAMA Cardiology JAMA Dermatology JAMA Facial Plastic Surgery JAMA JAMA Neurology JAMA Oncology JAMA Ophthalmology JAMA Otolaryngology Neck Surgery JAMA Pediatrics JAMA Psychiatry JAMA Surgery Neurology Psychiatry Store Jobs Terms Accessibility Statement American Medical Rights Reserved LoginUserInfo isInstLoggedIn currentSessionId mdn n m stpyii sqp h JAMA Individual OpenAthens Rent JAMA JAMA JAMA Cardiology JAMA Dermatology JAMA Facial Plastic Surgery JAMA JAMA Neurology JAMA Oncology JAMA Ophthalmology JAMA Otolaryngology Neck Surgery JAMA Pediatrics JAMA Psychiatry JAMA Surgery Neurology Psychiatry Skip Trending Ketogenic Diet Grows Medical Perspectives January Definitions Sepsis Septic Shock Special Communication February LinkedIn Cite October Placebo Double blind Ginkgo Biloba Dementia Pierre L Le Bars MD Martin M Katz Nancy Berman et al Turan M Itil MD Alfred M Freedman MD Alan F Schatzberg MD JAMA doi jama related Related interview Interviews multimedia Multimedia EGb particular Ginkgo biloba Europe alleviate numerous cognitive dementias clinical assessments cognition EGb Alzheimer disease multi infarct dementia double blind placebo parallelgroup multicenter severely demented outpatients Alzheimer disease multi infarct dementia without medical conditions assigned randomly EGb mg d placebo dispensation monitored every months outcome evaluation Primary Outcome Alzheimer s Disease Assessment Scale Cognitive subscale ADAS Geriatric Evaluation Relative s Rating Instrument GERRI Clinical Impression CGIC intent evaluable point intent EGb ADAS points betterthan placebo GERRI points better placebo same observed evaluable set EGb least point ADAS taking placebo GERRI EGb taking placebo seen CGIC EGb placebo observed number reporting adverse incidence severity EGb appears capable stabilizing substantial number cases improving cognitive performance social functioning demented months Although modest EGb objectively ADAS sufficient magnitude recognized caregivers GERRI Cite Le Bars PL Katz MM Berman N Itil TM Freedman AM Schatzberg AF Placebo Double blind Ginkgo Biloba Dementia JAMA doi jama RIS Zotero EndNote BibTex Medlars ProCite RefWorks Mendeley Notice pm CT January am CT January advised services may periodically unavailable requireSsoRegistrationForFreePdfs size px JAMA experience selecting below Acid Electrolytes Fluids Allergy Allergy Clinical Immunology Anesthesiology Anticoagulation Art JAMA Bleeding Transfusion Cardiology Caring Critically Ill Clinical Electrocardiography Clinical Clinical Decision Clinical Implications Neuroscience Clinical Pharmacy Pharmacology Complementary Alternative Statements Critical Dental Dermatology Diabetes Endocrinology Development Electronic Records Emergency Life Environmental Ethics Facial Plastic Surgery Gastroenterology Hepatology Genetics Genomics Genomics Precision Geriatrics Guide Hair Delivery Economics Insurance Payment Quality Reform Workforce Disparities Informatics Hematology Humanities Hypertension Neurology Imaging Immunology Infectious Diseases Innovations Delivery JAMA Infographic Law Lifestyle Medical Devices Equipment Medical Medical Medical Publishing Melanoma Telemedicine Narrative Nephrology Neurology Neuroscience Psychiatry Notes Nursing Nutrition Nutrition Obesity Exercise Obesity Obstetrics Gynecology Occupational Oncology Ophthalmic Ophthalmology Orthopedics Otolaryngology Pain Pathology Laboratory Pediatrics Performance Perioperative Consultation Pharmacoeconomics Pharmacoepidemiology Pharmacogenetics Pharmacy Clinical Pharmacology Physical Rehabilitation Physical Therapy Poetry Professionalism Psychiatry Public Pulmonary Radiology Regulatory Agencies Resuscitation Rheumatology Discovery Future Shared Decision Making Communication Sleep Sports Stem Cell Transplantation Substance Addiction Surgery Surgical Innovation Surgical Pearls Teachable Moment Rational Clinical Examination Tobacco e Cigarettes Toxicology Trauma Injury Adherence United States Preventive Services Task Force Urology Guide Medical Vaccination Venous Thromboembolism Violence Women s Wound Infection Healing Preferences Globals Namespace scmByClass className className getElementById scmById getElementById querySelector scmquery querySelector querySelectorAll queryAll querySelectorAll typeof toLowerCase undefined dimensions w o Modernizr dependency updateViewportDimensions w d e d documentElement g d getElementsByTagName x w innerWidth e clientWidth g clientWidth y w innerHeight e clientHeight g clientHeight x y updateViewportDimensions Debounce resize avoid taxing browser debounce wait later callNow clearTimeout setTimeout later wait callNow throughout application e g isMobile etc breakpoint mobileUpperBreakpoint mobileAltBreakpoint tabletUpperBreakpoint dependent updateViewportDimensions isMobile mobileUpperBreakpoint isMobileAlt mobileAltBreakpoint mobileUpperBreakpoint tabletUpperBreakpoint isTabletDown tabletUpperBreakpoint isDesktop tabletUpperBreakpoint activeViewport isMobile useful throughout pg corresponds found aspx cs e pg learningsearchresults corresponds public partial LearningSearchResults cachedViewport isMobile isAnyArticle scmByClass ArticleFullView scmByClass pg scmByClass MagazineView isSplitScreen scmByClass ArticleFullView isAbstract scmByClass pg isMag scmByClass MagazineView isFreeArticle scmquery ArticleTopInfo scmquery ArticleTopInfo scmquery ArticleTopInfo isIssue scmByClass pg scmByClass pg newonline scmByClass pg currentissue scmByClass pg pastissues isNewOnline scmByClass pg newonline isCurrentIssue scmByClass pg currentissue isPastIssues scmByClass pg pastissues isJournal scmByClass pg isNetworkHome scmByClass pg isSearch scmByClass pg searchresults isAdvancedSearch scmByClass pg advancedsearch isPlayer scmByClass pg multimediaplayer isSelfServe scmByClass pg sspage isMyAccount scmByClass pg myaccount isLearning scmByClass pg isLearningContent scmByClass pg scmByClass pg learningsearchresults scmByClass pg quiz scmByClass pg multimediaplayer scmByClass pg journalarticlecme aspx self serve really don t determining whether showing SS check pathname isLearningSelfServe location pathname indexOf isLearningSearchResults scmByClass pg learningsearchresults isQuiz scmByClass pg quiz supportsFlexbox scmByClass flexbox isCollection scmByClass pg isJournalArticleCme scmByClass pg journalarticlecme isPaidUser scmById hfAppIsPaidUser isMember scmById hfAppIsMember isIndividual scmById hfAppIsIndividual hasAccess scmById hfAppHasAccess isReferredFromGoogle scmById hfAppIsReferredFromGoogle scmById hfAppSubscribedTo userSubscribedTo undefined isLucy scmById hfAppIsLucy currentJournalCount updateAppVariables debounce X px microsite contents microsite contents em before px before px jn ss px solid px jn ss px solid px JAMA Home Editors Publishers Contact Store Jobs jn ss subheading mt em jn registered AE size vertical align jn trademark size vertical align JAMA JAMA JAMA JAMA Cardiology JAMA Dermatology JAMA Facial Plastic Surgery JAMA JAMA Neurology JAMA Oncology JAMA Ophthalmology JAMA Otolaryngology ndash Neck Surgery JAMA Pediatrics JAMA Psychiatry JAMA Surgery Neurology Psychiatry AMA Manual Art Psychiatry Breast Cancer Colorectal Declaration Helsinki Depression Oral Fishbein Fellowship Genomics Precision Disparities Hypertension JAMA Audio JAMA Conferences Men Medical Opioid Management Peer Congress Ethics Sepsis Septic Shock Statins Dyslipidemia ACS Breast Cancer CDC Prescribing Opioids Definitions Sepsis Septic Shock Income Life Expectancy JNC Management Blood Pressure President Obama Reform Colorectal Cancer Depression Adults Statins Primary Cardiovascular Disease WMA Declaration Helsinki th Revision JAMA Forum Ophthalmology AMA Insider Advertisers Agents Employers Job Seekers JAMA Products AMA Manual JAMAevidence JN JN Listen JN Reader Peer Congress CME Quizzes CME MOC MOC Reporting Preferences subheading grey block size em transform uppercase Renewals Contact Frequently Asked Questions JAMA Career Physician Job Listings latest JAMA jn fff float size px px px jn line px jn float jn size px jn pipe px American Medical Rights Reserved Terms Accessibility Statement OpenAthens Rent activity OpenAthens issues JAMA Reader quizzes JAMA Personalized
+
+-------------Tags------------------
+
+[["jama",59],["scmbyclass",32],["clinical",11],["surgery",11],["egb",10],["placebo",10],["medical",10],["psychiatry",9],["neurology",8],["scmbyid",8],["size",6],["ophthalmology",5],["biloba",5],["ginkgo",5],["dementia",5],["adas",4],["oncology",4],["otolaryngology",4],["pediatrics",4],["facial",4],["dermatology",4],["cardiology",4],["disease",4],["plastic",4],["gerri",4],["blind",4],["double",4],["cognitive",4],["scmquery",4],["ismobile",4],["tabletupperbreakpoint",4],["learningsearchresults",4],["sepsis",3],["genomics",3],["septic",3],["shock",3],["alzheimer",3],["updateviewportdimensions",3],["debounce",3],["cancer",3],["mobileupperbreakpoint",3],["neck",3],["january",3],["articletopinfo",3],["ama",3],["openathens",3]]
+
+-----------------------------------
+
+Number of tags found: 46

@@ -1,15 +1,18 @@
 // server/app.js
-const express = require("express");
-const morgan = require("morgan");
-const path = require("path");
-const bodyParser = require("body-parser");
-var jwt = require("jsonwebtoken");
+const express = require('express');
+const morgan = require('morgan');
+const morganToolkit = require('morgan-toolkit')(morgan);
+const path = require('path');
+const bodyParser = require('body-parser');
+var jwt = require('jsonwebtoken');
 const app = express();
 
 // Setup logger
 
-app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
+// app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
+app.use(morganToolkit());
 //mongo-middleware
+// app.use((req, res, next) =>
 const mongoose = require('mongoose');
 
 app.use((req, res, next) => {
@@ -19,36 +22,33 @@ app.use((req, res, next) => {
     require('../mongo')().then(() => next());
   }
 });
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}));
 //json parser
 app.use(bodyParser.json());
 
-//serves a page on accidental access to api route
-app.get("/", (req, res) => {
-  res.send("You've reached OpenMeta's Servers");
-});
+app.use('/api', require('./api'));
+
 
 //logs in users
-let models = require("./../models/sequelize");
+let models = require('./../models/sequelize');
 let users = models.User;
-app.post("/login", (req, res) => {
+app.post('/login', (req, res) => {
   var message;
   for (var user of users) {
     if (user.username != req.body.username) {
-      message = "Wrong Name";
+      message = 'Wrong Name';
     } else {
       if (user.passwordHash != req.body.passwordHash) {
-        message = "Wrong Password";
+        message = 'Wrong Password';
         break;
       } else {
         //create the token.
         var token = jwt.sign(
           user,
-          "thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj"
+          'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
         );
-        message = "Login Successful";
+        message = 'Login Successful';
         break;
       }
     }
@@ -57,11 +57,11 @@ app.post("/login", (req, res) => {
   if (token) {
     res.status(200).json({
       message,
-      token
+      token,
     });
   } else {
     res.status(403).json({
-      message
+      message,
     });
   }
 });
@@ -72,40 +72,39 @@ app.post("/login", (req, res) => {
 app.use((req, res, next) => {
   // check header or url parameters or post parameters for token
   var token =
-    req.body.token || req.query.token || req.headers["x-access-token"];
+    req.body.token || req.query.token || req.headers['x-access-token'];
   if (token) {
     //Decode the token
     jwt.verify(
       token,
-      "thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj",
+      'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
       (err, decod) => {
         if (err) {
           res.status(403).json({
-            message: "Wrong Token"
+            message: 'Wrong Token',
           });
         } else {
           //If decoded then call next() so that respective route is called.
           req.decoded = decod;
           next();
         }
-      }
+      },
     );
   } else {
     res.status(403).json({
-      message: "No Token"
+      message: 'No Token',
     });
   }
 });
 
 // Serve static assets
 app
-  .use(express.static(path.resolve(__dirname, "..", "build")))
+  .use(express.static(path.resolve(__dirname, '..', 'build')))
   // Serve our api
-  .use("/api", require("./api"));
 
 // Always return the main index.html, so react-router render the route in the client
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 
 module.exports = app;
