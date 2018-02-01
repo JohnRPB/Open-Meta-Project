@@ -38,7 +38,8 @@ class MasterDocument extends Component {
       handleDrop,
       handleSubmit,
       handleClick,
-      showForm
+      showForm,
+      handleDelete
     } = this.props;
 
     return (
@@ -66,16 +67,20 @@ class MasterDocument extends Component {
               <div>
                 {analyses.map((analysis, index) => {
                   return (
-                    <div key={index}>
-                      <p onClick={e => handleClick(e, index)}>
-                        {analysis.textContent}
-                      </p>
-                      <p onClick={e => handleClick(e, index)}>
-                        {analysis.name}
-                      </p>
+                    <div key={index} className="fluid">
+                      <ul>
+                        <li onClick={e => handleClick(e, index)}>
+                          {analysis.textContent
+                            ? analysis.textContent
+                            : analysis.name}
+                        </li>
+                        <br />
+                        <br />
+                        <br />
+                      </ul>
                       {index == showForm ? (
                         <div>
-                          <form onSubmit={handleSubmit}>
+                          <form onSubmit={e => handleSubmit(e, index)}>
                             <textarea
                               name="textContent"
                               placeholder="Input text here"
@@ -89,15 +94,25 @@ class MasterDocument extends Component {
                           </form>
                           <div>
                             {dustbins.map(
-                              ({ accepts, lastDroppedItem }, index) => (
+                              ({ accepts, lastDroppedItem }, index2) => (
                                 <Dustbin
                                   accepts={accepts}
                                   lastDroppedItem={lastDroppedItem}
-                                  onDrop={item => handleDrop(index, item)}
-                                  key={index}
+                                  onDrop={item =>
+                                    handleDrop(index2, item, index)
+                                  }
+                                  key={index2}
                                 />
                               )
                             )}
+                          </div>
+                          <div>
+                            <button
+                              className="negative ui button"
+                              onClick={e => handleDelete(e, index)}
+                            >
+                              Delete
+                            </button>
                           </div>
                         </div>
                       ) : null}
@@ -105,7 +120,7 @@ class MasterDocument extends Component {
                   );
                 })}
               </div>
-              {showForm === null ? (
+              {analyses.length < 1 ? (
                 <div className="Initial Submission">
                   <form onSubmit={handleSubmit}>
                     <textarea

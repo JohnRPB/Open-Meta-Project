@@ -12,3 +12,8 @@ export const SHOW_FORM = "SHOW_FORM";
 export const showForm = data => {
   return { type: SHOW_FORM, data };
 };
+
+export const DELETE_ELEMENT = "DELETE_ELEMENT";
+export const deleteElement = data => {
+  return { type: DELETE_ELEMENT, data };
+};
