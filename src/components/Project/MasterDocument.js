@@ -31,7 +31,16 @@ class MasterDocument extends Component {
   render() {
     console.log("this props => ", this.props);
     // const { boxes, dustbins } = this.state;
-    const { analyses, boxes, dustbins, handleDrop, handleSubmit } = this.props;
+    const {
+      analyses,
+      boxes,
+      dustbins,
+      handleDrop,
+      handleSubmit,
+      handleClick,
+      showForm,
+      handleDelete
+    } = this.props;
 
     return (
       <div>
@@ -58,29 +67,82 @@ class MasterDocument extends Component {
               <div>
                 {analyses.map((analysis, index) => {
                   return (
-                    <div key={index}>
-                      <p>{analysis.textContent}</p>
-                      <p>{analysis.name}</p>
+                    <div key={index} className="fluid">
+                      <ul>
+                        <li onClick={e => handleClick(e, index)}>
+                          {analysis.textContent
+                            ? analysis.textContent
+                            : analysis.name}
+                        </li>
+                        <br />
+                        <br />
+                        <br />
+                      </ul>
+                      {index == showForm ? (
+                        <div>
+                          <form onSubmit={e => handleSubmit(e, index)}>
+                            <textarea
+                              name="textContent"
+                              placeholder="Input text here"
+                            />
+                            <button
+                              className="submitText ui primary button"
+                              type="submit"
+                            >
+                              +
+                            </button>
+                          </form>
+                          <div>
+                            {dustbins.map(
+                              ({ accepts, lastDroppedItem }, index2) => (
+                                <Dustbin
+                                  accepts={accepts}
+                                  lastDroppedItem={lastDroppedItem}
+                                  onDrop={item =>
+                                    handleDrop(index2, item, index)
+                                  }
+                                  key={index2}
+                                />
+                              )
+                            )}
+                          </div>
+                          <div>
+                            <button
+                              className="negative ui button"
+                              onClick={e => handleDelete(e, index)}
+                            >
+                              Delete
+                            </button>
+                          </div>
+                        </div>
+                      ) : null}
                     </div>
                   );
                 })}
               </div>
-              <form onSubmit={handleSubmit}>
-                <textarea name="textContent" placeholder="Input text here" />
-                <button className="ui primary button" type="submit">
-                  +
-                </button>
-              </form>
-              <div>
-                {dustbins.map(({ accepts, lastDroppedItem }, index) => (
-                  <Dustbin
-                    accepts={accepts}
-                    lastDroppedItem={lastDroppedItem}
-                    onDrop={item => handleDrop(index, item)}
-                    key={index}
-                  />
-                ))}
-              </div>
+              {analyses.length < 1 ? (
+                <div className="Initial Submission">
+                  <form onSubmit={handleSubmit}>
+                    <textarea
+                      name="textContent"
+                      placeholder="Input text here"
+                    />
+                    <button className="ui primary button" type="submit">
+                      +
+                    </button>
+                  </form>
+                  <div>
+                    {dustbins.map(({ accepts, lastDroppedItem }, index) => (
+                      <Dustbin
+                        accepts={accepts}
+                        lastDroppedItem={lastDroppedItem}
+                        onDrop={item => handleDrop(index, item)}
+                        key={index}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
           </div>
         </div>

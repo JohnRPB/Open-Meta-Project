@@ -30,7 +30,11 @@ export const expressTest = () => {
   return dispatch => {
     dispatch(expressTestStart());
     axios
-      .get(`${root}/api/express-test`)
+      .get(`${root}/api/express-test`,{
+        headers: {
+          'content-type': 'application/json'
+        }
+      })
       .then(res => {
         console.log(res);
         dispatch(expressTestResults(JSON.stringify(res.data)));

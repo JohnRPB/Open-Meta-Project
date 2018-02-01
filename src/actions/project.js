@@ -7,3 +7,13 @@ export const HANDLE_DROPPING = "HANDLE_DROPPING";
 export const handleDropping = data => {
   return { type: HANDLE_DROPPING, data };
 };
+
+export const SHOW_FORM = "SHOW_FORM";
+export const showForm = data => {
+  return { type: SHOW_FORM, data };
+};
+
+export const DELETE_ELEMENT = "DELETE_ELEMENT";
+export const deleteElement = data => {
+  return { type: DELETE_ELEMENT, data };
+};
