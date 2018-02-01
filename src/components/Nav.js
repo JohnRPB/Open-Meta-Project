@@ -1,12 +1,19 @@
 import React from "react";
 import { Dropdown, Menu, Search } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
     <div className="ui secondary menu">
-      <a className="active item">Open Meta</a>
-      <a className="item">My Dashboard</a>
-      <a className="item">My Reviews</a>
+      <NavLink to="/landing" className="item">
+        Open Meta
+      </NavLink>
+      <NavLink to="/dashboard" className="item">
+        My Dashboard
+      </NavLink>
+      <NavLink to="/myanalyses" className="item">
+        My Reviews
+      </NavLink>
 
       <div className="right menu">
         <Search size="small" />
@@ -14,7 +21,9 @@ const Nav = () => {
         <Dropdown item text={<i className="user circle outline icon" />}>
           <Dropdown.Menu>
             <Dropdown.Item>My Account</Dropdown.Item>
-            <Dropdown.Item>Profile</Dropdown.Item>
+            <Dropdown.Item>
+              <NavLink to="/profile">Profile</NavLink>
+            </Dropdown.Item>
             <Dropdown.Item>Other</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

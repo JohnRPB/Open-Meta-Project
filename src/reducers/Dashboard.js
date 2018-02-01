@@ -1,6 +1,12 @@
 import * as Actions from "../actions/Dashboard";
 
-export function DashboardPage(state = [], action) {
+const initialState = {
+  analyses: [],
+  isFetching: true,
+  error: null
+};
+
+export function DashboardPage(state = initialState, action) {
   switch (action.type) {
     case Actions.GET_ANALYSES:
       console.log("reducer => ", action);

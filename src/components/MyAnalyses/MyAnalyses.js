@@ -13,17 +13,23 @@ import {
   Container,
   Label,
   Statistic,
-  Icon
+  Icon,
+  Dimmer,
+  Loader
 } from "semantic-ui-react";
 import johann from "../../assets/images/johann.jpeg";
 import Related from "./Related";
 import ModalForm from "./ModalForm";
+import AnalysisModal from "./AnalysisModal";
+import ReviewModal from "./ReviewModal";
 import Table from "../Profile/Table";
 const mongoose = require("mongoose");
+const faker = require("faker");
 
 class MyAnalyses extends Component {
   constructor(props) {
     super(props);
+    this.isFetching = true;
   }
 
   componentWillMount() {
@@ -31,10 +37,18 @@ class MyAnalyses extends Component {
   }
 
   render() {
-    // let analysisCards = this.props.MyAnalyses.slice(0, 3);
-    // console.log("cards", analysisCards);
-    // console.log("props =>", this.props.MyAnalyses);
-    console.log("props =>", this.props);
+    let analysisCards;
+    if (!this.props.isFetching) {
+      analysisCards = this.props.MyAnalyses.slice(0, 3).map(analysis => {
+        return (
+          <Card
+            fluid
+            header={analysis.data.header.title}
+            description={faker.lorem.paragraph()}
+          />
+        );
+      });
+    }
 
     return (
       <div className="ui  vertical masthead center aligned segment">
@@ -55,7 +69,15 @@ class MyAnalyses extends Component {
               </Grid.Column>
               <Grid.Column width={4}>
                 <br />
-                <h1>Johann</h1>
+                <Header as="h1" floated="left">
+                  Johann
+                </Header>
+                <br />
+                <Button.Group basic>
+                  <Button>Collections</Button>
+                  <Button>Analyses</Button>
+                  <Button>Reviews</Button>
+                </Button.Group>
               </Grid.Column>
             </Grid.Row>
 
@@ -83,22 +105,26 @@ class MyAnalyses extends Component {
             <Grid.Row>
               <Grid.Column width={3}>
                 <br />
-                <Button>New Analysis</Button>
+                <AnalysisModal />
               </Grid.Column>
 
               <Grid.Column width={13}>
                 <Segment>
-                  <Header as="h1" textalign="left">
-                    Recent Analyses
-                  </Header>
-                  <Divider />
-                  <Card.Group>
-                    <Card fluid color="red" header="Option 1" />
-                    <Card fluid color="orange" header="Option 2" />
-                    <Card fluid color="yellow" header="Option 3" />
-                  </Card.Group>
-                  <br />
-                  <p>See all analyses</p>
+                  {this.props.isFetching ? (
+                    <Dimmer active>
+                      <Loader />
+                    </Dimmer>
+                  ) : (
+                    <div>
+                      <Header as="h1" textalign="left">
+                        Recent Analyses
+                      </Header>
+                      <Divider />
+                      <Card.Group>{analysisCards}</Card.Group>
+                      <br />
+                      <p>See all analyses</p>
+                    </div>
+                  )}
                 </Segment>
               </Grid.Column>
             </Grid.Row>
@@ -107,7 +133,7 @@ class MyAnalyses extends Component {
             <Grid.Row>
               <Grid.Column width={3}>
                 <br />
-                <Button>New Review</Button>
+                <ReviewModal />
               </Grid.Column>
 
               <Grid.Column width={13}>

@@ -9,7 +9,8 @@ export const GET_ANALYSES = "GET_ANALYSES";
 export function getAnalysesSuccess(data) {
   return {
     type: GET_ANALYSES,
-    data: data
+    data: data,
+    isFetching: false
   };
 }
 

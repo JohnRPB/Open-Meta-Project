@@ -6,7 +6,8 @@ import { withRouter } from "react-router";
 
 function mapStateToProps(state) {
   return {
-    DashboardRelated: state.Dashboard.analyses
+    DashboardRelated: state.Dashboard.analyses,
+    isFetching: state.Dashboard.isFetching
   };
 }
 
