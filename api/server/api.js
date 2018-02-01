@@ -6,7 +6,7 @@ const users = require('./users.js');
 const rmarkdown = require('./rmarkdown');
 
 api.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', '*');
   next();
 })
 api
