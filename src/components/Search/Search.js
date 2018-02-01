@@ -8,9 +8,9 @@ import {
   Card,
   Statistic
 } from "semantic-ui-react";
-import Feed from "./Feed";
+//import Feed from "./Feed";
 import Nav from "../Nav";
-import Related from "./Related";
+//import Related from "./Related";
 
 const Search = () => (
   <div class="ui  vertical masthead center aligned segment">

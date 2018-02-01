@@ -9,6 +9,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 import Profile from "./components/Profile/Profile";
 import MyAnalyses from "./containers/MyAnalyses";
+import SearchContainer from "./containers/SearchContainer";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ const Routes = () => {
     <Router>
       <div>
         <Route exact path="/" component={TestCompContainer} />
+        <Route exact path="/search" component={SearchContainer} />
         <Route exact path="/project" component={ProjectContainer} />
         <Route exact path="/login" component={UserForm} />
         <Route exact path="/test" component={TestCompContainer} />
