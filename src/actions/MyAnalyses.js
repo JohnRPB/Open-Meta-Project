@@ -6,14 +6,20 @@ const root =
 
 export const GET_ANALYSES = "GET_ANALYSES";
 
+export function getAnalysesSuccess(data) {
+  return {
+    type: GET_ANALYSES,
+    data: data
+  };
+}
+
 export function getAnalyses(id) {
-  console.log("hi from actions #1");
   return dispatch => {
     axios
-      .get(`${root}/api/analyses`, { crossDomain: true })
+      .get(`${root}/api/myanalyses`)
       .then(response => {
-        console.log("hi from actions");
-        console.log("headers =>", response);
+        console.log("response =>", response);
+        dispatch(getAnalysesSuccess(response.data));
       })
       .catch(e => {
         console.log(e);

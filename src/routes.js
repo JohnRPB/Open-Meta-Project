@@ -8,7 +8,7 @@ import ProjectContainer from "./containers/ProjectContainer";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 import Profile from "./components/Profile/Profile";
-import MyAnalyses from "./components/MyAnalyses/MyAnalyses";
+import MyAnalyses from "./containers/MyAnalyses";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 

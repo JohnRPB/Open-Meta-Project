@@ -21,26 +21,23 @@ import ModalForm from "./ModalForm";
 import Table from "../Profile/Table";
 const mongoose = require("mongoose");
 
-const analysisStyle = {
-  width: "700px",
-  height: "150px",
-  overflowX: "scroll"
-};
-
 class MyAnalyses extends Component {
   constructor(props) {
     super(props);
   }
 
-  // componentDidMount() {
-  //   this.props.getAnalyses("*");
-  // }
+  componentDidMount() {
+    this.props.getAnalyses("*");
+  }
+
+  // let analysisCards = [{header:state.analyses[0].header.title}, {header:state.analyses[1].header.title}, {header:state.analyses[2].header.title}]
 
   render() {
+    console.log("props =>", this.props);
     return (
-      <div class="ui  vertical masthead center aligned segment">
-        <div class="following bar">
-          <div class="ui container">
+      <div className="ui  vertical masthead center aligned segment">
+        <div className="following bar">
+          <div className="ui container">
             <Nav />
           </div>
         </div>
@@ -52,13 +49,14 @@ class MyAnalyses extends Component {
               {" "}
               <Grid.Column width={3} />
               <Grid.Column width={3}>
-                <Image src={johann} circular="true" size="small" />
+                <Image src={johann} circular size="small" />
               </Grid.Column>
               <Grid.Column width={4}>
                 <br />
                 <h1>Johann</h1>
               </Grid.Column>
             </Grid.Row>
+
             {/* COLLECTIONS */}
             <Grid.Row>
               <Grid.Column width={3}>

@@ -1,19 +1,16 @@
-import { combineReducers } from "redux";
 import * as Actions from "../actions/MyAnalyses";
 
-export function analyses(state = [], action) {
+export function MyAnalysesPage(state = [], action) {
   switch (action.type) {
-    case Actions.GET_ANALYSES_SUCCESS:
+    case Actions.GET_ANALYSES:
+      console.log("reducer => ", action);
       return {
         ...state,
-        analyses: action.data,
-        isFetching: false
+        analyses: action.data
       };
     default:
       return state;
   }
 }
 
-export const openMeta = combineReducers({
-  analyses
-});
+export default MyAnalysesPage;
