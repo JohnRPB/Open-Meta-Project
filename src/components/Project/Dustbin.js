@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import { DropTarget } from "react-dnd";
 
 const style = {
-  height: "12rem",
-  width: "12rem",
+  height: "10rem",
+  width: "150rem",
   marginRight: "1.5rem",
   marginBottom: "1.5rem",
-  color: "white",
+  color: "black",
   padding: "1rem",
-  textAlign: "center",
+  textAlign: "left",
   fontSize: "1rem",
   lineHeight: "normal",
   float: "left"
@@ -32,7 +32,7 @@ class Dustbin extends Component {
     } = this.props;
     const isActive = isOver && canDrop;
 
-    let backgroundColor = "#222";
+    let backgroundColor = "#ffffff"; //
     if (isActive) {
       backgroundColor = "darkgreen";
     } else if (canDrop) {
@@ -45,9 +45,9 @@ class Dustbin extends Component {
           ? "Release to drop"
           : `Insert graphic here. This field accepts: ${accepts.join(", ")}`}
 
-        {/* {lastDroppedItem && (
+        {lastDroppedItem && (
           <p>Last dropped: {JSON.stringify(lastDroppedItem)}</p>
-        )} */}
+        )}
       </div>
     );
   }

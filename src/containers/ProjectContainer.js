@@ -1,4 +1,9 @@
-import { addText, handleDropping } from "../actions/project";
+import {
+  addText,
+  handleDropping,
+  showForm,
+  deleteElement
+} from "../actions/project";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { withRouter } from "react-router";
@@ -11,25 +16,40 @@ function mapStateToProps(state) {
     analyses: state.project.analyses,
     dustbins: state.project.dustbins,
     boxes: state.project.boxes,
-    droppedBoxNames: state.project.droppedBoxNames
+    droppedBoxNames: state.project.droppedBoxNames,
+    showForm: state.project.showForm
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    handleSubmit: e => {
-      console.log("testing from handleSubmit");
+    handleSubmit: (e, index) => {
       e.preventDefault();
+      e.stopPropagation();
       const form = e.target;
       const data = serialize(form, { hash: true });
-      console.log("data from addText => ", data);
+      console.log("DATA", data);
+      data.index = index;
       dispatch(addText(data));
       form.reset();
     },
-    handleDrop: (index, item) => {
-      //const { name } = item;
-      let args = { index, item };
+    handleDrop: (index2, item, index) => {
+      let args = { index2, item, index };
       dispatch(handleDropping(args));
+    },
+    handleClick: (e, index) => {
+      // Don't reload the page
+      e.preventDefault();
+      e.stopPropagation();
+      if (e.target.classList.contains("submitText")) {
+        return;
+      }
+      dispatch(showForm(index));
+    },
+    handleDelete: (e, index) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dispatch(deleteElement(index));
     }
   };
 }
