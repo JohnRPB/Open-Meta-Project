@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import MyAnalyses from "../components/MyAnalyses/MyAnalyses";
-import { getAnalyses } from "../actions/MyAnalyses";
+import Dashboard from "../components/Dashboard/Dashboard";
+import { getAnalyses } from "../actions/Dashboard";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state) {
   return {
-    MyAnalyses: state.MyAnalysesPage.analyses,
-    isFetching: true
+    DashboardRelated: state.Dashboard.analyses
   };
 }
 
@@ -19,8 +18,8 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
   };
 };
 
-const MyAnalysesContainer = withRouter(
-  connect(mapStateToProps, mapDispatchtoProps)(MyAnalyses)
+const DashboardContainer = withRouter(
+  connect(mapStateToProps, mapDispatchtoProps)(Dashboard)
 );
 
-export default MyAnalysesContainer;
+export default DashboardContainer;

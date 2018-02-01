@@ -26,14 +26,16 @@ class MyAnalyses extends Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.getAnalyses("*");
   }
 
-  // let analysisCards = [{header:state.analyses[0].header.title}, {header:state.analyses[1].header.title}, {header:state.analyses[2].header.title}]
-
   render() {
+    // let analysisCards = this.props.MyAnalyses.slice(0, 3);
+    // console.log("cards", analysisCards);
+    // console.log("props =>", this.props.MyAnalyses);
     console.log("props =>", this.props);
+
     return (
       <div className="ui  vertical masthead center aligned segment">
         <div className="following bar">

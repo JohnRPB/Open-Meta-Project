@@ -1,6 +1,6 @@
-import * as Actions from "../actions/MyAnalyses";
+import * as Actions from "../actions/Dashboard";
 
-export function MyAnalysesPage(state = [], action) {
+export function DashboardPage(state = [], action) {
   switch (action.type) {
     case Actions.GET_ANALYSES:
       console.log("reducer => ", action);
@@ -14,4 +14,4 @@ export function MyAnalysesPage(state = [], action) {
   }
 }
 
-export default MyAnalysesPage;
+export default DashboardPage;
