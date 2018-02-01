@@ -1,20 +1,6 @@
 import React from "react";
 import Nav from "../Nav";
-import {
-  Dropdown,
-  Menu,
-  Segment,
-  Header,
-  Grid,
-  Divider,
-  Button,
-  Image,
-  Card,
-  Container,
-  Label,
-  Statistic,
-  Icon
-} from "semantic-ui-react";
+import { Segment, Grid, Image, Container, Statistic } from "semantic-ui-react";
 import johann from "../../assets/images/johann.jpeg";
 import AnalysesTable from "./Table";
 

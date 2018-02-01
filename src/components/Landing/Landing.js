@@ -1,15 +1,10 @@
 import React from "react";
 import Nav from "../Nav";
 import {
-  Dropdown,
-  Menu,
   Segment,
-  Header,
   Grid,
-  Divider,
   Button,
   Image,
-  Card,
   Container,
   Popup
 } from "semantic-ui-react";
