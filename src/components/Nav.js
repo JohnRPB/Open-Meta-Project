@@ -3,15 +3,15 @@ import { Dropdown, Menu, Search } from "semantic-ui-react";
 
 const Nav = () => {
   return (
-    <div class="ui secondary menu">
-      <a class="active item">Open Meta</a>
-      <a class="item">My Dashboard</a>
-      <a class="item">My Reviews</a>
+    <div className="ui secondary menu">
+      <a className="active item">Open Meta</a>
+      <a className="item">My Dashboard</a>
+      <a className="item">My Reviews</a>
 
-      <div class="right menu">
+      <div className="right menu">
         <Search size="small" />
 
-        <Dropdown item text={<i class="user circle outline icon" />}>
+        <Dropdown item text={<i className="user circle outline icon" />}>
           <Dropdown.Menu>
             <Dropdown.Item>My Account</Dropdown.Item>
             <Dropdown.Item>Profile</Dropdown.Item>
