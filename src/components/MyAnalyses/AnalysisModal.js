@@ -9,11 +9,11 @@ import {
   TextArea
 } from "semantic-ui-react";
 
-const ModalForm = () => (
-  <Modal trigger={<Button>New Collection</Button>}>
+const AnalysisModal = () => (
+  <Modal trigger={<Button>New Analysis</Button>}>
     <Modal.Content>
       <Modal.Description>
-        <Header>Create a New Collection</Header>
+        <Header>Create a New Analysis</Header>
         <Form>
           <Form.Field>
             <label>Enter a title</label>
@@ -31,4 +31,4 @@ const ModalForm = () => (
   </Modal>
 );
 
-export default ModalForm;
+export default AnalysisModal;

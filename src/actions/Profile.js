@@ -4,23 +4,23 @@ const root =
     ? "https://radiant-taiga-58264.herokuapp.com"
     : "http://localhost:8000";
 
-export const GET_ANALYSES = "GET_ANALYSES";
+export const GET_USER = "GET_USER";
 
-export function getAnalysesSuccess(data) {
+export function getUserSuccess(data) {
   return {
-    type: GET_ANALYSES,
-    data: data,
-    isFetching: false
+    type: GET_USER,
+    data: data
   };
 }
 
-export function getAnalyses(id) {
+export function getUser(id) {
   return dispatch => {
     axios
-      .get(`${root}/api/myanalyses`)
+      // dave is already using this route to grab studies?
+      .get(`${root}/api/user`)
       .then(response => {
         console.log("response =>", response);
-        dispatch(getAnalysesSuccess(response.data));
+        dispatch(getUserSuccess(response.data));
       })
       .catch(e => {
         console.log(e);
