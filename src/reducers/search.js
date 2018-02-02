@@ -9,11 +9,7 @@ const initialState = {
 const search = (state = initialState, action) => {
   switch(action.type) {
     case NEW_TABLES:
-      let checkedStudies = action.tables.map(study => {
-        if(!state.persistObj[study.id]){
-          return study;
-        }
-      });
+      let checkedStudies = action.tables.filter(study => !state.persistObj[study.id]);
       return {
         ...state,
         newTables: checkedStudies
