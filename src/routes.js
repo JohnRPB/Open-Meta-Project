@@ -5,6 +5,7 @@ import TestCompContainer from "./containers/TestCompContainer";
 import About from "./components/About/About";
 import UserForm from "./components/Login/UserForm";
 import ProjectContainer from "./containers/ProjectContainer";
+import SearchContainer from "./containers/SearchContainer";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 import Profile from "./components/Profile/Profile";
@@ -23,6 +24,7 @@ const Routes = () => {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/landing" component={Landing} />
         <Route exact path="/profile" component={Profile} />
+        <Route exact path="/search" component={SearchContainer} />
       </div>
     </Router>
   );
