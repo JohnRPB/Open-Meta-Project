@@ -40,40 +40,30 @@ class Sitesearch extends Component {
               >
                 <input
                   className="prompt"
+                  name="query"
                   type="text"
                   placeholder="Search..."
                   //onChange={e => onChange(e)}
                 />
-                <i type="submit" className="search icon" />
+                {/* <i type="submit" className="search icon" /> */}
+                <button class="ui primary basic button" type="submitAnalyses">
+                  Analyses
+                  <input name="analyses" value="analyses" type="hidden" />
+                </button>
+
+                <button
+                  class="ui secondary basic button"
+                  type="submitCollection"
+                >
+                  Collections
+                  <input name="collections" value="analyses" type="hidden" />
+                </button>
+
+                <button class="ui positive basic button" type="submitUser">
+                  People
+                  <input name="users" value="analyses" type="hidden" />
+                </button>
               </form>
-            </div>
-            <div className="Filters">
-              <a
-                href="#"
-                active={active}
-                onClick={onClick}
-                filter="SHOW_ANALYSES"
-              >
-                Analyses
-              </a>
-              {"  |  "}
-              <a
-                href="#"
-                active={active}
-                onClick={onClick}
-                filter="SHOW_COLLECTIONS"
-              >
-                Collections
-              </a>
-              {"  |  "}
-              <a
-                href="#"
-                active={active}
-                onClick={onClick}
-                filter="SHOW_PEOPLE"
-              >
-                People
-              </a>
             </div>
             <div className="results">
               <Results results={results} />

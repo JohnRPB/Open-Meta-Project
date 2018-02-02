@@ -1,44 +1,30 @@
-import React, { Component } from "react";
+import Search from "../components/Search/Search";
 import { connect } from "react-redux";
-import Sitesearch from "../components/Sitesearch/Sitesearch";
-import { getUsers, getAnalyses } from "../actions/sitesearch";
-import { withRouter } from "react-router";
 import serialize from "form-serialize";
+import axios from "axios";
+// import { withRouter } from "react-router";
 
-function mapStateToProps(state, ownProps) {
+function mapDispatchToProps(dispatch) {
   return {
-    //query: state.search.query,
-    //results: state.search.results
+    onSubmit: e => {
+      e.preventDefault();
+      const form = e.target;
+      const data = serialize(form, { hash: true });
+      console.log(data);
+      //dispatch things
+      let getString = "http://localhost:8000/api/studies/search?";
+      Object.keys(data).forEach(key => {
+        getString += `&${key}=` + data[key].split(" ").join("_");
+      });
+      axios
+        .get(getString)
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+      form.reset();
+    }
   };
 }
 
-const mapDispatchtoProps = (dispatch, ownProps) => {
-  return {
-    handleSubmit: e => {
-      e.preventDefault();
-      e.stopPropagation();
-      const form = e.target;
-      const data = serialize(form, { hash: true });
-      console.log("DATA FROM ACTION", data);
-      dispatch(getAnalyses(data));
-      form.reset();
-    },
-    onChange: e => {
-      e.preventDefault();
-      console.log(e.target.value);
-      dispatch(getAnalyses(e.target.value));
-    },
-    onClick: e => {
-      // Don't reload the page
-      e.preventDefault();
-      // Pass in the filter for that link to set it in the store
-      //dispatch(setAvailabilityFilter(ownProps.filter));
-    }
-  };
-};
-
-const SearchContainer = withRouter(
-  connect(mapStateToProps, mapDispatchtoProps)(Sitesearch)
-);
+const SearchContainer = connect(null, mapDispatchToProps)(Search);
 
 export default SearchContainer;

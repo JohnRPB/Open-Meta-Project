@@ -6,6 +6,8 @@ import About from "./components/About/About";
 import UserForm from "./components/Login/UserForm";
 import ProjectContainer from "./containers/ProjectContainer";
 import DashboardContainer from "./containers/DashboardContainer";
+import SitesearchContainer from "./containers/SitesearchContainer";
+import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 import Profile from "./components/Profile/Profile";
 import MyAnalyses from "./containers/MyAnalyses";
@@ -18,7 +20,7 @@ const Routes = () => {
     <Router>
       <div>
         <Route exact path="/" component={TestCompContainer} />
-        <Route exact path="/search" component={SearchContainer} />
+        <Route exact path="/sitesearch" component={SitesearchContainer} />
         <Route exact path="/project" component={ProjectContainer} />
         <Route exact path="/login" component={UserForm} />
         <Route exact path="/test" component={TestCompContainer} />
@@ -27,6 +29,7 @@ const Routes = () => {
         <Route exact path="/landing" component={Landing} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/myanalyses" component={MyAnalyses} />
+        <Route exact path="/search" component={SearchContainer} />
       </div>
     </Router>
   );

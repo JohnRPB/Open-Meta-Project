@@ -45,16 +45,18 @@ export const getAnalysesError = data => {
   return { type: GET_ANALYSES_ERROR, data };
 };
 
-export function getAnalyses(id) {
+export function getAnalyses(data) {
   return dispatch => {
+    dispatch(getAnalysesStart());
     axios
       .get(`${root}/api/myanalyses`)
       .then(response => {
         console.log("response =>", response);
-        dispatch(getAnalysesStart(response.data));
+        console.log("query =>", data.query);
+        dispatch(getAnalysesResults(response.data));
       })
       .catch(e => {
-        console.log(e);
+        dispatch(getAnalysesError(e));
       });
   };
 }

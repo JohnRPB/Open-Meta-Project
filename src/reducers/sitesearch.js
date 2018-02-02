@@ -46,6 +46,7 @@ const sitesearch = (state = initialState, action) => {
       return {
         ...state,
         isFetching: false,
+        query: action.data,
         results: action.data,
         query: "Test Succeeded!  " + action.data
       };
