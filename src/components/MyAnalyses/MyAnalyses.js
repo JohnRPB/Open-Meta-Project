@@ -34,6 +34,7 @@ class MyAnalyses extends Component {
 
   componentWillMount() {
     this.props.getAnalyses("*");
+    // this.props.getCollections("*")
   }
 
   render() {
