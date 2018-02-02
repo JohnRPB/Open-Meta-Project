@@ -1,10 +1,24 @@
-import React, {Component} from 'react';
-import {Header, Form, Button} from 'semantic-ui-react';
+import React, {
+  Component
+} from 'react';
+import {
+  Grid,
+  Header,
+  Form,
+  Button
+} from 'semantic-ui-react';
 
-const Search = ({onSubmit}) => {
+const Search = ({
+  onSubmit
+}) => {
   return (
     <div>
       <Header as="h1">Search (Work in progress)</Header>
+      <Grid divided = 'vertically' padded>
+        <Grid.Row>
+          <Grid.Column width={1}>
+          </Grid.Column>
+          <Grid.Column width={7}>
       <Form onSubmit={onSubmit}>
         <Form.Field>
           <label>Keywords</label>
@@ -24,6 +38,13 @@ const Search = ({onSubmit}) => {
         </Form.Field>
         <Button type="submit">Submit</Button>
       </Form>
+      </Grid.Column>
+          <Grid.Column width={7}>
+            <Table celled>
+            </Table>
+          </Grid.Column>
+    </Grid.Row>
+  </Grid>
     </div>
   );
 };
