@@ -30,13 +30,12 @@ app.use('/api', require('./api'));
 
 // Serve static assets
 // app.use(require('./tokenVerify'));
-app
-  .use(express.static(path.resolve(__dirname, '..', 'build')))
-  // Serve our api
+app.use(express.static(path.resolve(__dirname, '..', 'build')));
+// Serve our api
 
 // Always return the main index.html, so react-router render the route in the client
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
-// });
+app.get('*', (req, res) => {
+  res.send(404);
+});
 
 module.exports = app;
