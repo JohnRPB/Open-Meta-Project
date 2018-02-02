@@ -8,6 +8,7 @@ var models = {};
 models.Analysis = require('./analysis.js');
 models.StudyOverflow = require('./study.js');
 models.User = require('./user.js');
+models.Collection = require('./collection.js');
 
 module.exports = models;
 
