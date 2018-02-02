@@ -9,10 +9,15 @@ const initialState = {
 export function MyAnalysesPage(state = initialState, action) {
   switch (action.type) {
     case Actions.GET_ANALYSES:
-      console.log("reducer => ", action);
       return {
         ...state,
         analyses: action.data,
+        isFetching: false
+      };
+    case Actions.GET_COLLECTIONS:
+      return {
+        ...state,
+        collections: action.data,
         isFetching: false
       };
     default:
