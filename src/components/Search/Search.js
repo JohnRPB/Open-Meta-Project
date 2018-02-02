@@ -5,7 +5,7 @@ import {
   Grid,
   Header,
   Form,
-  Button
+  Button, Table
 } from 'semantic-ui-react';
 
 const Search = ({

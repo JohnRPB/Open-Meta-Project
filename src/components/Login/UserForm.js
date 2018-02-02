@@ -33,8 +33,7 @@ class UserForm extends Component {
     var str = serialize(form);
     var obj = serialize(form, {hash: true});
 
-    console.log(obj);
-    fetch("http://localhost:8000/api/users", {
+    fetch("http://localhost:8000/api/login", {
       method: "post",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -42,10 +41,13 @@ class UserForm extends Component {
       },
       body: JSON.stringify(obj)
     }).then(res => {
-      console.log(res);
-      return false;
-    });
-    return false;
+      console.log('res =>', res);
+      return res.body
+    }).then(data => {
+      data = data.json()
+      console.log("data returned => ", data);
+    }).catch(error => console.error('Error:', error))
+
   }
 
   render() {
@@ -70,11 +72,11 @@ class UserForm extends Component {
                 <div>
                   <input
                     type="password"
-                    name="password"
+                    name="passHash"
                     placeholder="password"
                   />
                   <div>
-                    <input type="password" placeholder="repeat password" />
+                    <input type="passHash" placeholder="repeat password" />
                     <input type="submit" value="reset password" />
                     <div>
                       <input type="submit" value="register" />

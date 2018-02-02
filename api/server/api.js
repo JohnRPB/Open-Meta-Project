@@ -38,9 +38,10 @@ api.post('/login', async (req, res) => {
           //create the token.
           console.log("============================> tokenification starting! ============================>")
           var token = jwt.sign(
-            user,
+            {email: user.email, passHash: user.passHash},
             'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
           );
+          console.log("============================> tokenification complete! ============================>")
           message = 'Login Successful';
           break;
         }
