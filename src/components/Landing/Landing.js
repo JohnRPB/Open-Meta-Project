@@ -6,7 +6,8 @@ import {
   Button,
   Image,
   Container,
-  Popup
+  Popup,
+  Header
 } from "semantic-ui-react";
 import hai from "../../assets/images/hai.jpg";
 import gene from "../../assets/images/gene.jpeg";
@@ -111,24 +112,86 @@ const Landing = () => {
                 <Grid.Column>
                   <Popup
                     trigger={
+                      <Image
+                        src={johann}
+                        centered
+                        circular="true"
+                        size="tiny"
+                      />
+                    }
+                    content="Disrupt by day. Dance at night."
+                  />
+
+                  <br />
+                  <div>
+                    <Header as="h3" sub>
+                      Johann Baptista
+                    </Header>
+                    <span>CEO</span>
+                  </div>
+                </Grid.Column>
+                <Grid.Column>
+                  <Popup
+                    trigger={
                       <Image src={gene} centered circular="true" size="tiny" />
                     }
-                    header="Gene Tinderholm"
                     content="The man behind the
                     machine."
                   />
+                  <br />
+                  <div>
+                    <Header as="h3" sub>
+                      Gene Tinderholm
+                    </Header>
+                    <span>Systems Architect</span>
+                  </div>
                 </Grid.Column>
                 <Grid.Column>
-                  <Image src={dave} centered circular="true" size="tiny" />
+                  <Popup
+                    trigger={
+                      <Image src={dave} centered circular="true" size="tiny" />
+                    }
+                    content={`"Dazzle me."`}
+                  />
+                  <br />
+                  <div>
+                    <Header as="h3" sub>
+                      Dave Lee
+                    </Header>
+                    <span>Security Consultant</span>
+                  </div>
                 </Grid.Column>
                 <Grid.Column>
-                  <Image src={edwin} centered circular="true" size="tiny" />
+                  <Popup
+                    trigger={
+                      <Image src={edwin} centered circular="true" size="tiny" />
+                    }
+                    content="Ready to go #beastmode at a moment's notice."
+                  />
+
+                  <br />
+                  <div>
+                    <Header as="h3" sub>
+                      Edwin Yung
+                    </Header>
+                    <span>Senior Programmer</span>
+                  </div>
                 </Grid.Column>
                 <Grid.Column>
-                  <Image src={johann} centered circular="true" size="tiny" />
-                </Grid.Column>
-                <Grid.Column>
-                  <Image src={hai} centered circular="true" size="tiny" />
+                  <Popup
+                    trigger={
+                      <Image src={hai} centered circular="true" size="tiny" />
+                    }
+                    content="It's pronounced /hi/."
+                  />
+
+                  <br />
+                  <div>
+                    <Header as="h3" sub>
+                      Hai Nguyen
+                    </Header>
+                    <span>UX</span>
+                  </div>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
