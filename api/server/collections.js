@@ -8,7 +8,7 @@ let models = require("./../models/mongoose");
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-  Analysis.find({})
+  Collection.find({})
     .then(result => {
       console.log("result => ", result);
       res.json(result);
