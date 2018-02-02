@@ -1,23 +1,15 @@
-import React, {
-  Component
-} from 'react';
-import {
-  Grid,
-  Header,
-  Form,
-  Button,
-  Table
-} from 'semantic-ui-react';
-import SearchTableContainer from '../../containers/SearchTableContainer'
 
+<<<<<<< HEAD
 const Search = ({
-  onSubmit,
+  onSubmit, persistedStudies
 }) => {
 
+=======
 import React, { Component } from "react";
 import { Grid, Header, Form, Button, Table } from "semantic-ui-react";
 
 const Search = ({ onSubmit }) => {
+>>>>>>> 3c82c34345c28b4bf576d45672009e30e4e0b8fc
   return (
     <div>
       <Header as="h1">Search (Work in progress)</Header>
@@ -25,7 +17,15 @@ const Search = ({ onSubmit }) => {
         <Grid.Row>
           <Grid.Column width={1} />
           <Grid.Column width={7}>
-            <SearchTableContainer />
+<<<<<<< HEAD
+            <Table celled>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>Name<T
+                </Table.Row>
+              </Table.Header>
+            </Table>
+=======
             <Form onSubmit={onSubmit}>
               <Form.Field>
                 <label>Keywords</label>
@@ -45,6 +45,7 @@ const Search = ({ onSubmit }) => {
               </Form.Field>
               <Button type="submit">Submit</Button>
             </Form>
+>>>>>>> 3c82c34345c28b4bf576d45672009e30e4e0b8fc
           </Grid.Column>
           <Grid.Column width={7}>{/* <Table celled /> */}</Grid.Column>
         </Grid.Row>
