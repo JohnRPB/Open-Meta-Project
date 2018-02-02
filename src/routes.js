@@ -25,7 +25,7 @@ const Routes = () => {
         <Route exact path="/about" component={About} />
         <Route exact path="/dashboard" component={DashboardContainer} />
         <Route exact path="/landing" component={Landing} />
-        <Route exact path="/profile/:user_id" component={ProfileContainer} />
+        <Route exact path="/profile/:user_id?" component={ProfileContainer} />
         <Route exact path="/myanalyses" component={MyAnalyses} />
         <Route exact path="/search" component={SearchContainer} />
       </div>

@@ -21,30 +21,24 @@ class Profile extends Component {
 
   componentWillMount() {
     this.props.getUser(this.props.match.params.user_id);
+    this.props.getAnalyses("*");
   }
 
   render() {
-    if (!this.props.isFetching) {
-      let { User } = this.props;
-      let { Profile } = this.props.User;
-    }
-
-    console.log("props => ", this.props);
     // setting analyses content after fetching
-    // if (!this.props.isFetching) {
-    //   console.log("profile props inside FETCHING => ", this.props);
-    //   console.log("profile/user => ", User);
-    //   var analysisRows = this.props.Analyses.slice(0, 10).map(analysis => {
-    //     return (
-    //       <Table.Row>
-    //         <Table.Cell>{analysis.data.header.title}</Table.Cell>
-    //         <Table.Cell collapsing textAlign="right">
-    //           10 hours ago
-    //         </Table.Cell>
-    //       </Table.Row>
-    //     );
-    //   });
-    // }
+    if (!this.props.isFetching) {
+      console.log("profile props => ", this.props);
+      var analysisRows = this.props.Analyses.slice(0, 10).map(analysis => {
+        return (
+          <Table.Row>
+            <Table.Cell>{analysis.data.header.title}</Table.Cell>
+            <Table.Cell collapsing textAlign="right">
+              10 hours ago
+            </Table.Cell>
+          </Table.Row>
+        );
+      });
+    }
 
     return (
       <div class="ui  vertical masthead center aligned segment">
@@ -62,11 +56,7 @@ class Profile extends Component {
             <Grid.Column width={14}>
               <Segment>
                 <Image src={johann} centered circular="true" size="small" />
-                <h2>
-                  {!this.props.isFetching
-                    ? `${this.props.User.profile.f_name} `
-                    : null}
-                </h2>
+                <h2>Johann Baptista</h2>
                 <h3>Web Developer, Data Scientist, Swing Dancer</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
@@ -114,7 +104,7 @@ class Profile extends Component {
                   </Table.Row>
                 </Table.Header>
 
-                <Table.Body />
+                <Table.Body>{analysisRows}</Table.Body>
               </Table>
             </Grid.Column>
             <Grid.Column width={1} />
