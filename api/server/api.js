@@ -23,6 +23,9 @@ api.post('/login', async (req, res) => {
     for (var user of users) {
       console.log("this is the req.body.email => ", req.body.email);
       console.log("this is the user.email => ", user.email);
+      console.log("this is the user.passHash => ", user.passHash);
+      console.log("this is the req.body.passHash => ", req.body.passHash);
+
       if (user.email !== req.body.email) {
         // console.log("this is the wrong req.body.email => ", req.body.email);
         // console.log("this is the wrong user.email => ", user.email);
@@ -33,6 +36,7 @@ api.post('/login', async (req, res) => {
           break;
         } else {
           //create the token.
+          console.log("============================> tokenification starting! ============================>")
           var token = jwt.sign(
             user,
             'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
@@ -44,6 +48,7 @@ api.post('/login', async (req, res) => {
     }
     //If token is present pass the token to client else send respective message
     if (token) {
+      console.log("============================> tokenified! ============================>")
       res.status(200).json({
         message,
         token,
