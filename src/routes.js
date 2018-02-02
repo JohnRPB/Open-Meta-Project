@@ -6,11 +6,12 @@ import About from "./components/About/About";
 import UserForm from "./components/Login/UserForm";
 import ProjectContainer from "./containers/ProjectContainer";
 import DashboardContainer from "./containers/DashboardContainer";
-import SearchContainer from "./containers/SearchContainer";
+import SitesearchContainer from "./containers/SitesearchContainer";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 import Profile from "./components/Profile/Profile";
 import MyAnalyses from "./containers/MyAnalyses";
+import SearchContainer from "./containers/SearchContainer";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -19,6 +20,7 @@ const Routes = () => {
     <Router>
       <div>
         <Route exact path="/" component={TestCompContainer} />
+        <Route exact path="/sitesearch" component={SitesearchContainer} />
         <Route exact path="/project" component={ProjectContainer} />
         <Route exact path="/login" component={UserForm} />
         <Route exact path="/test" component={TestCompContainer} />
