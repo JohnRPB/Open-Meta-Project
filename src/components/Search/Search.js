@@ -8,9 +8,13 @@ import {
   Button,
   Table
 } from 'semantic-ui-react';
+import SearchTableContainer from '../../containers/SearchTableContainer'
 
 const Search = ({
+<<<<<<< HEAD
   onSubmit, persistedStudies
+=======
+  onSubmit,
 }) => {
 
   return (
@@ -42,13 +46,7 @@ const Search = ({
       </Form>
       </Grid.Column>
           <Grid.Column width={7}>
-            <Table celled>
-              <Table.Header>
-                <Table.Row>
-                  <Table.HeaderCell>Name<T
-                </Table.Row>
-              </Table.Header>
-            </Table>
+            <SearchTableContainer />
           </Grid.Column>
     </Grid.Row>
   </Grid>

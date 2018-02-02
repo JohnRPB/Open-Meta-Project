@@ -2,6 +2,7 @@ import Search from '../components/Search/Search';
 import {connect} from 'react-redux';
 import serialize from 'form-serialize';
 import axios from 'axios';
+import {newTables} from '../actions/search';
 // import { withRouter } from "react-router";
 
 function mapDispatchToProps(dispatch) {
@@ -10,7 +11,6 @@ function mapDispatchToProps(dispatch) {
       e.preventDefault();
       const form = e.target;
       const data = serialize(form, {hash: true});
-      console.log(data);
       //dispatch things
       let getString = 'http://localhost:8000/api/studies/search?';
       Object.keys(data).forEach(key => {
@@ -18,7 +18,7 @@ function mapDispatchToProps(dispatch) {
       });
       axios
         .get(getString)
-        .then(response => console.log(response))
+        .then(response => dispatch(newTables(response.data)))
         .catch(err => console.error(err));
       form.reset();
     },
