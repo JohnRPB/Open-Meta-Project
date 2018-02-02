@@ -32,20 +32,25 @@ class UserForm extends Component {
     var form = document.querySelector("#example-form");
     var str = serialize(form);
     var obj = serialize(form, {hash: true});
+    console.log("obj =>", obj.passHash);
 
     fetch("http://localhost:8000/api/login", {
       method: "post",
       headers: {
-        Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json"
       },
       body: JSON.stringify(obj)
-    }).then(res => {
-      console.log('res =>', res);
-      return res.body
+    }).then(response => {
+      // if(response.ok) {
+      //   return response.blob();
+      // }
+      // throw new Error('Network response was not ok.');
+      return response.json()
     }).then(data => {
-      data = data.json()
       console.log("data returned => ", data);
+      return data
+      // data = data.json()
+      // console.log("data returned => ", data);
     }).catch(error => console.error('Error:', error))
 
   }

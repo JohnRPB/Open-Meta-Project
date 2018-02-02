@@ -63,6 +63,5 @@
     "chalk": "^2.3.0",
     "path": "^0.12.7",
     "react-dev-utils": "^4.2.1"
-  },
-  "proxy": "https://localhost:8000/"
+  }
 }

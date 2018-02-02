@@ -1,68 +1,20 @@
 const api = (module.exports = require("express").Router());
-var jwt = require('jsonwebtoken');
 
 const users = require("./users.js");
 const rmarkdown = require("./rmarkdown");
 const myanalyses = require("./MyAnalyses");
 const studies = require('./study');
+const login = require("./login")
 
 api.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
   next();
 });
 
 api.get("/express-test", (req, res) => res.send({ express: "working!" })) //demo route to prove api is working
 
-//logs in users
-let mongooseModels = require("./../models/mongoose");
-let User = mongooseModels.User;
-api.post('/login', async (req, res) => {
-  try {
-    let users = await User.find()
-    var message;
-    for (var user of users) {
-      console.log("this is the req.body.email => ", req.body.email);
-      console.log("this is the user.email => ", user.email);
-      console.log("this is the user.passHash => ", user.passHash);
-      console.log("this is the req.body.passHash => ", req.body.passHash);
-
-      if (user.email !== req.body.email) {
-        // console.log("this is the wrong req.body.email => ", req.body.email);
-        // console.log("this is the wrong user.email => ", user.email);
-        message = 'Wrong email';
-      } else {
-        if (user.passHash !== req.body.passHash) {
-          message = 'Wrong passHash';
-          break;
-        } else {
-          //create the token.
-          console.log("============================> tokenification starting! ============================>")
-          var token = jwt.sign(
-            {email: user.email, passHash: user.passHash},
-            'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
-          );
-          console.log("============================> tokenification complete! ============================>")
-          message = 'Login Successful';
-          break;
-        }
-      }
-    }
-    //If token is present pass the token to client else send respective message
-    if (token) {
-      console.log("============================> tokenified! ============================>")
-      res.status(200).json({
-        message,
-        token,
-      });
-    } else {
-      res.status(403).json({
-        message,
-      });
-    }
-  } catch (e) {
-    console.log("error on api post /login", e);
-  }
-});
+api.use("/login", login)
 
 //for each request append to the body the username and the token
 //use the username to find the user
