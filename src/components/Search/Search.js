@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import {
-  Grid,
-  Image,
-  Segment,
-  Header,
-  Container,
-  Card,
-  Statistic
-} from "semantic-ui-react";
-import Feed from "./Feed";
-import Nav from "../Nav";
-import Related from "./Related";
-
-const Search = () => (
-  <div class="ui  vertical masthead center aligned segment">
-    <div class="following bar">
-      <div class="ui container">
-        <Nav />
-      </div>
-    </div>
-    <br />
-    <br />
-    <Container />
-  </div>
-);
-=======
 import React, {
   Component
 } from 'react';
@@ -37,8 +9,9 @@ import {
 } from 'semantic-ui-react';
 
 const Search = ({
-  onSubmit
+  onSubmit, persistedStudies
 }) => {
+
   return (
     <div>
       <Header as="h1">Search (Work in progress)</Header>
@@ -69,6 +42,11 @@ const Search = ({
       </Grid.Column>
           <Grid.Column width={7}>
             <Table celled>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>Name<T
+                </Table.Row>
+              </Table.Header>
             </Table>
           </Grid.Column>
     </Grid.Row>
@@ -76,6 +54,5 @@ const Search = ({
     </div>
   );
 };
->>>>>>> feature-search
 
 export default Search;
