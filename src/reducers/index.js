@@ -15,7 +15,7 @@ const Reducers = combineReducers({
   MyAnalysesPage,
   Dashboard,
   routing: routerReducer,
-  search
+  search,
   Profile,
   sitesearch,
 });

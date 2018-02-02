@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-var express = require("express");
-var router = express.Router();
-
-//access to database
-
-let models = require("./../models/mongoose");
-// let Collection = models.Collection;
-
-/* GET home page. */
-router.get("/", function(req, res, next) {
-  Collection.find({})
-    .then(result => {
-      console.log("result => ", result);
-      res.json(result);
-    })
-    .catch(e => res.status(500).send(e.stack));
-});
-
-module.exports = router;
-=======
 const express = require('express');
 const sModels = require('./../models/sequelize');
 const mModels = require('./../models/mongoose');
@@ -27,6 +6,14 @@ const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
 let router = express.Router();
 
+router.get("/id/:id", function(req, res, next) {
+  Collection.findById(req.params.id)
+    .then(result => {
+      console.log("result => ", result);
+      res.json(result);
+    })
+    .catch(e => res.status(500).send(e.stack));
+});
 
 router.get('/ids', async (req, res, next) => {
   let results = [];
@@ -60,4 +47,4 @@ router.get('/ids', async (req, res, next) => {
   res.send(JSON.stringify(results));
 
 });
->>>>>>> feature-search
+module.exports = router;
