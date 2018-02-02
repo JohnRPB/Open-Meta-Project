@@ -15,7 +15,7 @@ api.use((req, res, next) => {
 
 api.get("/express-test", (req, res) => res.send({ express: "working!" })) //demo route to prove api is working
 
-api.use("/login", login)
+// api.use("/login", login)
 
 //for each request append to the body the username and the token
 //use the username to find the user

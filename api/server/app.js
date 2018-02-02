@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use('/api', require('./api'));
 
 // Serve static assets
-app.use(require('./tokenVerify'));
+// app.use(require('./tokenVerify'));
 app
   .use(express.static(path.resolve(__dirname, '..', 'build')))
   // Serve our api

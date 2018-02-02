@@ -1,5 +1,5 @@
-var jwt = require('jsonwebtoken');
 const router = require('express').Router()
+var jwt = require('jsonwebtoken');
 
 //logs in users
 let mongooseModels = require("./../models/mongoose");
