@@ -32,20 +32,27 @@ class UserForm extends Component {
     var form = document.querySelector("#example-form");
     var str = serialize(form);
     var obj = serialize(form, {hash: true});
+    console.log("obj =>", obj.passHash);
 
-    console.log(obj);
-    fetch("http://localhost:8000/api/users", {
+    fetch("http://localhost:8000/api/login", {
       method: "post",
       headers: {
-        Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json"
       },
       body: JSON.stringify(obj)
-    }).then(res => {
-      console.log(res);
-      return false;
-    });
-    return false;
+    }).then(response => {
+      // if(response.ok) {
+      //   return response.blob();
+      // }
+      // throw new Error('Network response was not ok.');
+      return response.json()
+    }).then(data => {
+      console.log("data returned => ", data);
+      return data
+      // data = data.json()
+      // console.log("data returned => ", data);
+    }).catch(error => console.error('Error:', error))
+
   }
 
   render() {
@@ -70,11 +77,11 @@ class UserForm extends Component {
                 <div>
                   <input
                     type="password"
-                    name="password"
+                    name="passHash"
                     placeholder="password"
                   />
                   <div>
-                    <input type="password" placeholder="repeat password" />
+                    <input type="passHash" placeholder="repeat password" />
                     <input type="submit" value="reset password" />
                     <div>
                       <input type="submit" value="register" />

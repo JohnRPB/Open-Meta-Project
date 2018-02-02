@@ -1,14 +1,15 @@
 var express = require("express");
 var router = express.Router();
 
-// ------------------------
-// access to sequelize
-// ------------------------
-let models = require("./../models/sequelize");
-let User = models.User;
-let Study = models.Study;
-let Journal = models.Journal;
-let Tag = models.Tag;
+
+//access to database
+let sequelizeModels = require("./../models/sequelize");
+let mongooseModels = require("./../models/mongoose");
+let User = mongooseModels.User;
+let Study = sequelizeModels.Study;
+let Journal = sequelizeModels.Journal;
+let Tag = sequelizeModels.Tag;
+
 console.log("Journal: ", Journal);
 console.log("User: ", User);
 

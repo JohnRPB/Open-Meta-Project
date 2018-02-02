@@ -10,6 +10,7 @@ const Analysis = models.Analysis;
 const defaults = require("./defaults.js");
 const Collection = models.Collection;
 
+
 const seed = async () => {
   require("../../mongo")()
     .then(async () => {
