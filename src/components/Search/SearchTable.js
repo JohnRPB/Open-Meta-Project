@@ -14,7 +14,7 @@ const SearchTable = ({checkedStudy, uncheckedStudy, onClick}) => {
     </Table.Header>
         <Table.Body>
         {checkedStudy.map(study => {
-          return (<Table.Row>
+          return (<Table.Row key={study.id}>
             <Table.Cell><Checkbox defaultChecked /></Table.Cell>
             <Table.Cell>{ study.DOI }</Table.Cell>
             <Table.Cell>{ study.name }</Table.Cell>

@@ -4,6 +4,10 @@ import serialize from 'form-serialize';
 import axios from 'axios';
 import {newTables} from '../actions/search';
 // import { withRouter } from "react-router";
+const root =
+  process.env.NODE_ENV === "production"
+    ? "https://radiant-taiga-58264.herokuapp.com"
+    : "http://localhost:8000";
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -12,7 +16,7 @@ function mapDispatchToProps(dispatch) {
       const form = e.target;
       const data = serialize(form, {hash: true});
       //dispatch things
-      let getString = 'http://localhost:8000/api/studies/search?';
+      let getString = `${root}/api/studies/search?`;
       Object.keys(data).forEach(key => {
         getString += `&${key}=` + data[key].split(' ').join('_');
       });
