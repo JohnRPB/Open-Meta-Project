@@ -3,6 +3,9 @@ import classnames from "classnames";
 import {Link} from "react-router-dom";
 import logo from "./../logo.svg";
 import "./App/style.css";
+import Module from './Modules/Module';
+
+import collection from "../databaseStudies";
 
 class App extends Component {
   render() {
@@ -13,6 +16,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React - Fullstack!</h2>
         </div>
+       <Module endpoint = {"simplePlot"} collection={collection.slice(0,99)}/>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
