@@ -4,7 +4,7 @@ var router = express.Router();
 //access to database
 
 let models = require("./../models/mongoose");
-let Collection = models.Collection;
+// let Collection = models.Collection;
 
 /* GET home page. */
 router.get("/", function(req, res, next) {

@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const analysisSeed = require("./analysisSeed");
 const studyOverflowSeed = require("./studyOverflowSeed.js");
 const userSeed = require("./userSeed.js");
+const profileSeed = require("./profileSeed.js");
 const collectionSeed = require("./collectionSeed");
 const models = require("../../models/mongoose");
 const Analysis = models.Analysis;
@@ -13,7 +14,7 @@ const seed = async () => {
   require("../../mongo")()
     .then(async () => {
       try {
-        //      cleans the collections
+        //cleans the collections
         await Object.keys(models).forEach(model =>
           models[model].collection.drop()
         );
@@ -25,6 +26,7 @@ const seed = async () => {
           await Analysis.findByIdAndUpdate(analyses[i].id, analyses[i]);
         }
         await collectionSeed();
+        await profileSeed(defaults.user);
         await userSeed(defaults.user);
       } catch (e) {
         console.error(e);
