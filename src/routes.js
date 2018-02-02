@@ -7,7 +7,7 @@ import UserForm from "./components/Login/UserForm";
 import ProjectContainer from "./containers/ProjectContainer";
 import DashboardContainer from "./containers/DashboardContainer";
 import Landing from "./components/Landing/Landing.js";
-import Profile from "./components/Profile/Profile";
+import ProfileContainer from "./containers/ProfileContainer";
 import MyAnalyses from "./containers/MyAnalyses";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -23,7 +23,7 @@ const Routes = () => {
         <Route exact path="/about" component={About} />
         <Route exact path="/dashboard" component={DashboardContainer} />
         <Route exact path="/landing" component={Landing} />
-        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/profile" component={ProfileContainer} />
         <Route exact path="/myanalyses" component={MyAnalyses} />
       </div>
     </Router>
