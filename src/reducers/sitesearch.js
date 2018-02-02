@@ -4,7 +4,10 @@ import {
   GET_USERS_ERROR,
   GET_ANALYSES_RESULTS,
   GET_ANALYSES_START,
-  GET_ANALYSES_ERROR
+  GET_ANALYSES_ERROR,
+  GET_COLLECTIONS_RESULTS,
+  GET_COLLECTIONS_START,
+  GET_COLLECTIONS_ERROR
 } from "../actions/sitesearch";
 
 const initialState = {
@@ -43,6 +46,7 @@ const sitesearch = (state = initialState, action) => {
         error: null
       };
     case GET_ANALYSES_RESULTS:
+      console.log(action.data);
       return {
         ...state,
         isFetching: false,
@@ -51,6 +55,27 @@ const sitesearch = (state = initialState, action) => {
         query: "Test Succeeded!  " + action.data
       };
     case GET_ANALYSES_ERROR:
+      return {
+        ...state,
+        isFetching: false,
+        results: action.data,
+        query: "Test Failed  " + action.data
+      };
+    case GET_COLLECTIONS_START:
+      return {
+        ...state,
+        isFetching: true,
+        error: null
+      };
+    case GET_COLLECTIONS_RESULTS:
+      return {
+        ...state,
+        isFetching: false,
+        query: action.data,
+        results: action.data,
+        query: "Test Succeeded!  " + action.data
+      };
+    case GET_COLLECTIONS_ERROR:
       return {
         ...state,
         isFetching: false,

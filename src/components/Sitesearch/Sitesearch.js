@@ -20,7 +20,14 @@ class Sitesearch extends Component {
   }
 
   render() {
-    const { results, handleSubmit, onChange, active, onClick } = this.props;
+    const {
+      results,
+      handleSubmit,
+      onChange,
+      active,
+      onClickCollection,
+      onClickUser
+    } = this.props;
 
     return (
       <div className="ui vertical masthead center aligned segment">
@@ -48,20 +55,20 @@ class Sitesearch extends Component {
                 {/* <i type="submit" className="search icon" /> */}
                 <button class="ui primary basic button" type="submitAnalyses">
                   Analyses
-                  <input name="analyses" value="analyses" type="hidden" />
                 </button>
 
                 <button
                   class="ui secondary basic button"
-                  type="submitCollection"
+                  onClick={e => handleSubmit(e, "Collection")}
                 >
                   Collections
-                  <input name="collections" value="analyses" type="hidden" />
                 </button>
 
-                <button class="ui positive basic button" type="submitUser">
+                <button
+                  onClick={e => handleSubmit(e, "User")}
+                  class="ui positive basic button"
+                >
                   People
-                  <input name="users" value="analyses" type="hidden" />
                 </button>
               </form>
             </div>

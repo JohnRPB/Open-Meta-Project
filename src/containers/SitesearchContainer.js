@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Sitesearch from "../components/Sitesearch/Sitesearch";
-import { getUsers, getAnalyses } from "../actions/sitesearch";
+import { getUsers, getAnalyses, getCollections } from "../actions/sitesearch";
 import { withRouter } from "react-router";
 import serialize from "form-serialize";
 
@@ -14,26 +14,22 @@ function mapStateToProps(state, ownProps) {
 
 const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
-    handleSubmit: e => {
+    handleSubmit: (e, value) => {
       e.preventDefault();
       e.stopPropagation();
       const form = e.target;
+      console.log("VALUE", value);
       const data = serialize(form, { hash: true });
       console.log("DATA FROM ACTION", data);
-      dispatch(getAnalyses(data));
-      form.reset();
+      if (value === "Collection") {
+        dispatch(getCollections(data));
+      } else if (value === "User") {
+        dispatch(getUsers(data));
+      } else {
+        dispatch(getAnalyses(data));
+      }
+      //form.reset();
     }
-    // onChange: e => {
-    //   e.preventDefault();
-    //   console.log(e.target.value);
-    //   dispatch(getAnalyses(e.target.value));
-    // },
-    // onClick: e => {
-    //   // Don't reload the page
-    //   e.preventDefault();
-    //   // Pass in the filter for that link to set it in the store
-    //   //dispatch(setAvailabilityFilter(ownProps.filter));
-    // }
   };
 };
 

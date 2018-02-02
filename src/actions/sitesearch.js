@@ -60,3 +60,32 @@ export function getAnalyses(data) {
       });
   };
 }
+
+export const GET_COLLECTIONS_START = "GET_COLLECTIONS_START";
+export const getCollectionsStart = () => {
+  return { type: GET_COLLECTIONS_START };
+};
+export const GET_COLLECTIONS_RESULTS = "GET_COLLECTIONS_RESULTS";
+export const getCollectionsResults = data => {
+  return { type: GET_COLLECTIONS_RESULTS, data };
+};
+export const GET_COLLECTIONS_ERROR = "GET_COLLECTIONS_ERROR";
+export const getCollectionsError = data => {
+  return { type: GET_ANALYSES_ERROR, data };
+};
+
+export function getCollections(data) {
+  return dispatch => {
+    dispatch(getCollectionsStart());
+    axios
+      .get(`${root}/api/collections`)
+      .then(response => {
+        console.log("response =>", response);
+        console.log("query =>", data.query);
+        dispatch(getCollectionsResults(response.data));
+      })
+      .catch(e => {
+        dispatch(getCollectionsError(e));
+      });
+  };
+}

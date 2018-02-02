@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid, Header, Form, Button } from "semantic-ui-react";
+import { Grid, Header, Form, Button, Table } from "semantic-ui-react";
 
 const Search = ({ onSubmit }) => {
   return (
