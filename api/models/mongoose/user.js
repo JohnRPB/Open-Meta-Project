@@ -5,7 +5,7 @@ let UserSchema = new Schema({
   email: String,
   passHash: String,
   analyses: [Schema.Types.ObjectId],
-  profile: Schema.Types.ObjectId
+  profile: { type: Schema.Types.ObjectId, ref: "Profile" }
 });
 
 let User = mongoose.model("User", UserSchema);
