@@ -7,7 +7,7 @@ const root =
 export const ADD_TOKEN = "ADD_TOKEN";
 
 export function addToken(token) {
-  return return {
+  return {
     type: ADD_TOKEN,
     data: token
   };

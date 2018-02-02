@@ -12,7 +12,7 @@ const Reducers = combineReducers({
   project,
   MyAnalysesPage,
   Dashboard,
-  Token
+  Token,
   routing: routerReducer
 });
 
