@@ -17,7 +17,6 @@
     "fs": "0.0.1-security",
     "immutability-helper": "^2.6.4",
     "jsonwebtoken": "^8.1.1",
-    "mongoose": "^5.0.2",
     "morgan": "^1.9.0",
     "morgan-toolkit": "^1.2.2",
     "nodemon": "^1.14.10",
