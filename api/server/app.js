@@ -4,7 +4,6 @@ const morgan = require('morgan');
 const morganToolkit = require('morgan-toolkit')(morgan);
 const path = require('path');
 const bodyParser = require('body-parser');
-var jwt = require('jsonwebtoken');
 const app = express();
 
 // Setup logger

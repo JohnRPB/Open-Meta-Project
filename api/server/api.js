@@ -1,7 +1,6 @@
 const api = (module.exports = require("express").Router());
-// const products = require('./products');
-// const reviews = require('./reviews');
-// import products from './products';
+var jwt = require('jsonwebtoken');
+
 const users = require("./users.js");
 const rmarkdown = require("./rmarkdown");
 const myanalyses = require("./MyAnalyses");
@@ -22,11 +21,15 @@ api.post('/login', async (req, res) => {
     let users = await User.find()
     var message;
     for (var user of users) {
+      console.log("this is the req.body.email => ", req.body.email);
+      console.log("this is the user.email => ", user.email);
       if (user.email !== req.body.email) {
-        message = 'Wrong Name';
+        // console.log("this is the wrong req.body.email => ", req.body.email);
+        // console.log("this is the wrong user.email => ", user.email);
+        message = 'Wrong email';
       } else {
         if (user.passHash !== req.body.passHash) {
-          message = 'Wrong Password';
+          message = 'Wrong passHash';
           break;
         } else {
           //create the token.
