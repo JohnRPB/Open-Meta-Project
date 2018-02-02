@@ -3,6 +3,7 @@
 const mongoose = require("mongoose");
 const mongoModels = require("../../models/mongoose");
 const Profile = mongoModels.Profile;
+const Analysis = mongoModels.Analysis;
 const faker = require("faker");
 
 const profileSeed = async n => {
