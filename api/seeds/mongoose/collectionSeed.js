@@ -1,3 +1,5 @@
+const faker = require('faker');
+
 const models = require('../../models/sequelize');
 const Studies = models.Study;
 
@@ -35,6 +37,7 @@ const collectionSeed = async () => {
         Math.random() * 10 + 1 + MIN_STUDIES_IN_COLLECTION,
       );
       currentCollection.studies = getRandom(studyIds, numberOfStudies);
+      currentCollection.name = faker.company.bsAdjective() + " collection";
       currentCollection.save();
     }
   } catch (e) {
