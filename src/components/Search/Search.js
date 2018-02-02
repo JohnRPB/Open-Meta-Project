@@ -9,11 +9,9 @@ import {
   Table
 } from 'semantic-ui-react';
 import SearchTableContainer from '../../containers/SearchTableContainer'
+import SearchAnalysesContainer from '../../containers/SearchAnalysesContainer'
 
 const Search = ({
-<<<<<<< HEAD
-  onSubmit, persistedStudies
-=======
   onSubmit,
 }) => {
 
@@ -21,6 +19,9 @@ const Search = ({
     <div>
       <Header as="h1">Search (Work in progress)</Header>
       <Grid divided = 'vertically' padded>
+        <Grid.Row>
+          <SearchAnalysesContainer />
+        </Grid.Row>
         <Grid.Row>
           <Grid.Column width={1}>
           </Grid.Column>
