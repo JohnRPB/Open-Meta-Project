@@ -26,6 +26,7 @@ router.post('/submit', async (req, res, next) => {
         },
       },
     });
+    
     if (!currentStudy) {
       let studyJournal = await Journal.find({
         where: {
@@ -34,6 +35,7 @@ router.post('/submit', async (req, res, next) => {
           },
         },
       });
+      
       if (!studyJournal) {
         let journalBuild = {};
         Object.keys(bodyInfo.journal).forEach(key => {
@@ -59,6 +61,7 @@ router.post('/submit', async (req, res, next) => {
         },
       });
     }
+    
     for (let i = 0; i < bodyInfo.authors.length; i++) {
       let currentAuthor = await Author.find({
         where: {
@@ -94,6 +97,7 @@ router.post('/submit', async (req, res, next) => {
         await currentSAJoin.save();
       }
     }
+
     let mongoStudy = await StudyOverflow.findOne({sqlId: currentStudy.id});
     if (!mongoStudy) {
       mongoStudy = new StudyOverflow();
@@ -101,6 +105,7 @@ router.post('/submit', async (req, res, next) => {
       await mongoStudy.save();
       mongoStudy = await StudyOverflow.findOne({sqlId: currentStudy.id});
     }
+    
     mongoStudy.payload = mongoStudy.payload || {};
     mongoStudy.payload.url = mongoStudy.payload.url || [];
     if (!mongoStudy.payload.url.includes(bodyInfo.url)) {
@@ -148,10 +153,12 @@ router.post('/submit', async (req, res, next) => {
     res.status(500).send(e.stack);
   }
 });
+
 router.get('/search', async (req, res, next) => {
   let query = req.query;
   let results = [];
   let hashObj = {};
+
   if (query.tags) {
     let tagParams = {
       where: {
@@ -181,6 +188,7 @@ router.get('/search', async (req, res, next) => {
       });
     }
   }
+
   if (query.study) {
     let studyParams = {
       where: {
@@ -210,6 +218,7 @@ router.get('/search', async (req, res, next) => {
       });
     }
   }
+
   if (query.author) {
     let authorParams = {
       where: {
@@ -238,6 +247,7 @@ router.get('/search', async (req, res, next) => {
       });
     }
   }
+
   if (query.journal) {
     let journalParams = {
       where: {
@@ -270,6 +280,7 @@ router.get('/search', async (req, res, next) => {
       });
     }
   }
+
   res.send(JSON.stringify(results));
 });
 module.exports = router;
