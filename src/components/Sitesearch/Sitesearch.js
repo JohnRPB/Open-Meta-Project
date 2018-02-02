@@ -12,14 +12,16 @@ import Results from "./Results";
 //import Feed from "./Feed";
 import Nav from "../Nav";
 //import Related from "./Related";
+import GoogleSearch from "./GoogleSearch";
 
-class Search extends Component {
+class Sitesearch extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    const { results, onChange, active, onClick } = this.props;
+    const { results, handleSubmit, onChange, active, onClick } = this.props;
+
     return (
       <div className="ui vertical masthead center aligned segment">
         <div className="following bar">
@@ -32,26 +34,20 @@ class Search extends Component {
         <Container>
           <form>
             <div className="ui fluid category search">
-              <div className="ui fluid icon input">
+              <form
+                onSubmit={e => handleSubmit(e)}
+                className="ui fluid icon input"
+              >
                 <input
                   className="prompt"
                   type="text"
                   placeholder="Search..."
-                  onChange={e => onChange(e)}
+                  //onChange={e => onChange(e)}
                 />
-                <i className="search icon" />
-              </div>
+                <i type="submit" className="search icon" />
+              </form>
             </div>
             <div className="Filters">
-              <a
-                href="#"
-                active={active}
-                onClick={onClick}
-                filter="SHOW_COLLECTIONS"
-              >
-                Collections
-              </a>
-              {"  |  "}
               <a
                 href="#"
                 active={active}
@@ -65,23 +61,29 @@ class Search extends Component {
                 href="#"
                 active={active}
                 onClick={onClick}
+                filter="SHOW_COLLECTIONS"
+              >
+                Collections
+              </a>
+              {"  |  "}
+              <a
+                href="#"
+                active={active}
+                onClick={onClick}
                 filter="SHOW_PEOPLE"
               >
                 People
-              </a>
-              {"  |  "}
-              <a href="#" active={active} onClick={onClick} filter="SHOW_PAGES">
-                Pages
               </a>
             </div>
             <div className="results">
               <Results results={results} />
             </div>
           </form>
+          <GoogleSearch />
         </Container>
       </div>
     );
   }
 }
 
-export default Search;
+export default Sitesearch;

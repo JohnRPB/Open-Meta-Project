@@ -7,7 +7,7 @@ const Results = ({ results }) => {
   return (
     <div>
       <br />
-      <span>No results!</span>
+      <h1>No results!</h1>
     </div>
   );
 };

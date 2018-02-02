@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Search from "../components/Search/Search";
-import { getUsers } from "../actions/search";
+import Sitesearch from "../components/Sitesearch/Sitesearch";
+import { getUsers, getAnalyses } from "../actions/sitesearch";
 import { withRouter } from "react-router";
+import serialize from "form-serialize";
 
 function mapStateToProps(state, ownProps) {
   return {
-    active: []
     //query: state.search.query,
     //results: state.search.results
   };
@@ -14,10 +14,19 @@ function mapStateToProps(state, ownProps) {
 
 const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
+    handleSubmit: e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const form = e.target;
+      const data = serialize(form, { hash: true });
+      console.log("DATA FROM ACTION", data);
+      dispatch(getAnalyses(data));
+      form.reset();
+    },
     onChange: e => {
       e.preventDefault();
       console.log(e.target.value);
-      dispatch(getUsers(e.target.value));
+      dispatch(getAnalyses(e.target.value));
     },
     onClick: e => {
       // Don't reload the page
@@ -29,7 +38,7 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
 };
 
 const SearchContainer = withRouter(
-  connect(mapStateToProps, mapDispatchtoProps)(Search)
+  connect(mapStateToProps, mapDispatchtoProps)(Sitesearch)
 );
 
 export default SearchContainer;
