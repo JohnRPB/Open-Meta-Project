@@ -5,12 +5,15 @@ import {
   Grid,
   Header,
   Form,
-  Button
+  Button,
+  Table
 } from 'semantic-ui-react';
+import SearchTableContainer from '../../containers/SearchTableContainer'
 
 const Search = ({
-  onSubmit
+  onSubmit,
 }) => {
+
   return (
     <div>
       <Header as="h1">Search (Work in progress)</Header>
@@ -40,8 +43,7 @@ const Search = ({
       </Form>
       </Grid.Column>
           <Grid.Column width={7}>
-            <Table celled>
-            </Table>
+            <SearchTableContainer />
           </Grid.Column>
     </Grid.Row>
   </Grid>
