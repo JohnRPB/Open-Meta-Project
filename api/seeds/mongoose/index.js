@@ -11,6 +11,7 @@ const seed = async() => {
   require('../../mongo')().then(async ()=> {
     try{
       //cleans the collections
+      //comment out line 15 (below) if running mongoose seeds for the first time for this project
       await Object.keys(models).forEach(model => models[model].collection.drop())
       await studyOverflowSeed();
       await analysisSeed(defaults.analysis);
