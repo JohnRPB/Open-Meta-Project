@@ -1,9 +1,5 @@
+const express = require('express');
 const api = (module.exports = require("express").Router());
-
-// const products = require('./products');
-// const reviews = require('./reviews');
-// import products from './products';
-
 const users = require("./users.js");
 const rmarkdown = require("./rmarkdown");
 const studies = require("./study");
