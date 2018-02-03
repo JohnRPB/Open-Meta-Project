@@ -8,7 +8,8 @@ import ItemTypes from "../components/Project/ItemTypes";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
 
 const initialState = {
-  analyses: [],
+  blocks: [
+  ],
   dustbins: [
     {
       accepts: [
@@ -30,7 +31,8 @@ const initialState = {
   boxes: [
     { name: "Mean", type: ItemTypes.SUMMARY },
     { name: "Regression", type: ItemTypes.METHOD },
-    { name: "Funnel Plot", type: ItemTypes.GRAPH }
+    { name: "Funnel Plot", type: ItemTypes.GRAPH },
+    { name: "module", type: ItemTypes.GRAPH, content: { stuff: "dfasdf"} }
   ],
   droppedBoxNames: [],
   showForm: null,
@@ -49,10 +51,10 @@ const project = (state = initialState, action) => {
       }
       return {
         ...state,
-        analyses: [
-          ...state.analyses.slice(0, index),
+        blocks: [
+          ...state.blocks.slice(0, index),
           { textContent: textContent },
-          ...state.analyses.slice(index)
+          ...state.blocks.slice(index)
         ]
       };
     case HANDLE_DROPPING:
@@ -76,10 +78,10 @@ const project = (state = initialState, action) => {
         ...state,
         dustbins: dustbinsUpdated,
         droppedBoxNames: [...state.droppedBoxNames, [name]],
-        analyses: [
-          ...state.analyses.slice(0, indexOfElement),
+        blocks: [
+          ...state.blocks.slice(0, indexOfElement),
           action.data.item,
-          ...state.analyses.slice(indexOfElement)
+          ...state.blocks.slice(indexOfElement)
         ]
       };
     case SHOW_FORM:
@@ -91,9 +93,9 @@ const project = (state = initialState, action) => {
       console.log("SHOWING DATA", action.data);
       return {
         ...state,
-        analyses: [
-          ...state.analyses.slice(0, action.data),
-          ...state.analyses.slice(action.data + 1)
+        blocks: [
+          ...state.blocks.slice(0, action.data),
+          ...state.blocks.slice(action.data + 1)
         ]
       };
     default:
