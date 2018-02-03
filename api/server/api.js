@@ -1,5 +1,5 @@
 const express = require('express');
-const api = express.Router());
+const api = express.Router();
 const users = require("./users.js");
 const rmarkdown = require("./rmarkdown");
 const studies = require("./study");
@@ -9,8 +9,6 @@ const collections = require("./collections");
 
 api.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "*");
-  res.header("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
   next();
 });
 
