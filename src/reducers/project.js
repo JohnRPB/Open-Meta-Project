@@ -8,7 +8,8 @@ import ItemTypes from "../components/Project/ItemTypes";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
 
 const initialState = {
-  blocks: [],
+  blocks: [
+  ],
   dustbins: [
     {
       accepts: [
@@ -30,7 +31,8 @@ const initialState = {
   boxes: [
     { name: "Mean", type: ItemTypes.SUMMARY },
     { name: "Regression", type: ItemTypes.METHOD },
-    { name: "Funnel Plot", type: ItemTypes.GRAPH }
+    { name: "Funnel Plot", type: ItemTypes.GRAPH },
+    { name: "module", type: ItemTypes.GRAPH, content: { stuff: "dfasdf"} }
   ],
   droppedBoxNames: [],
   showForm: null,

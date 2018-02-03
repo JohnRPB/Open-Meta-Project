@@ -4,8 +4,10 @@
 // ---------------------------------------------------------
 // A mocked collection to supply to the module
 
-export default [
-  {
+export default {
+  10: {
+    active:true,
+    studyId:10,
     id: 1,
     DOI: '199.50.14.161',
     name: 'dolor nemo nobis',
@@ -16,7 +18,9 @@ export default [
     testStatVal: 1.38388474526329,
     stdErr: 0.609837088073623,
   },
-  {
+  11:{
+    active:true,
+    studyId:11,
     id: 2,
     DOI: '134.237.199.12',
     name: 'architecto voluptates et',
@@ -27,7 +31,9 @@ export default [
     testStatVal: 1.61356955059409,
     stdErr: 0.307763313876923,
   },
-  {
+  12: {
+    active:true,
+    studyId:12,
     id: 3,
     DOI: '93.142.28.144',
     name: 'totam eos et',
@@ -38,7 +44,9 @@ export default [
     testStatVal: 1.14256758623624,
     stdErr: 0.837430714109349,
   },
-  {
+  13: {
+    active:true,
+    studyId:13,
     id: 4,
     DOI: '39.163.15.142',
     name: 'qui accusantium ipsam',
@@ -49,7 +57,9 @@ export default [
     testStatVal: 1.28141295396656,
     stdErr: 0.793304516393262,
   },
-  {
+  14: {
+    active:true,
+    studyId:14,
     id: 5,
     DOI: '47.178.230.84',
     name: 'voluptates nostrum ex',
@@ -60,7 +70,9 @@ export default [
     testStatVal: 0.259398958277636,
     stdErr: 0.149144364392106,
   },
-  {
+  15: {
+    active:true,
+    studyId:15,
     id: 6,
     DOI: '41.18.91.203',
     name: 'nihil et est',
@@ -71,7 +83,9 @@ export default [
     testStatVal: 0.625952649700605,
     stdErr: 0.99120617072254,
   },
-  {
+  16: {
+    active:true,
+    studyId:16,
     id: 7,
     DOI: '151.49.10.97',
     name: 'repudiandae corporis et',
@@ -82,7 +96,9 @@ export default [
     testStatVal: 0.179784198366389,
     stdErr: 0.655826394296913,
   },
-  {
+  17: {
+    active:true,
+    studyId:17,
     id: 8,
     DOI: '197.238.162.198',
     name: 'non asperiores et',
@@ -93,7 +109,9 @@ export default [
     testStatVal: 1.66379465126676,
     stdErr: 0.490465997283173,
   },
-  {
+  18: {
+    active:true,
+    studyId:18,
     id: 9,
     DOI: '169.217.91.37',
     name: 'voluptatem deserunt beatae',
@@ -104,7 +122,9 @@ export default [
     testStatVal: 0.812218664479711,
     stdErr: 0.524303779904595,
   },
-  {
+  19: {
+    active:true,
+    studyId:19,
     id: 10,
     DOI: '121.46.28.106',
     name: 'vitae sunt rerum',
@@ -115,7 +135,9 @@ export default [
     testStatVal: 1.52631641472473,
     stdErr: 0.1227728314181,
   },
-  {
+  20: {
+    active:true,
+    studyId:20,
     id: 11,
     DOI: '142.110.64.61',
     name: 'et error accusantium',
@@ -126,7 +148,9 @@ export default [
     testStatVal: 1.53394707535226,
     stdErr: 0.217400183956159,
   },
-  {
+  21: {
+    active:true,
+    studyId:21,
     id: 12,
     DOI: '1.7.22.6',
     name: 'blanditiis dolor et',
@@ -137,7 +161,9 @@ export default [
     testStatVal: 1.50941287622039,
     stdErr: 0.978620035610898,
   },
-  {
+  22: {
+    active:true,
+    studyId:22,
     id: 13,
     DOI: '123.81.60.204',
     name: 'totam mollitia perferendis',
@@ -148,7 +174,9 @@ export default [
     testStatVal: 1.1829913074367,
     stdErr: 0.167467915588981,
   },
-  {
+  23: {
+    active:true,
+    studyId:23,
     id: 14,
     DOI: '207.133.72.75',
     name: 'aut autem nobis',
@@ -159,7 +187,9 @@ export default [
     testStatVal: 0.302266101365597,
     stdErr: 0.711760173191631,
   },
-  {
+  24: {
+    active:true,
+    studyId:24,
     id: 15,
     DOI: '136.169.173.203',
     name: 'est similique quis',
@@ -170,7 +200,9 @@ export default [
     testStatVal: 1.0519213755461,
     stdErr: 0.797433584577932,
   },
-  {
+  25: {
+    active:true,
+    studyId:25,
     id: 16,
     DOI: '144.88.58.152',
     name: 'quos facere at',
@@ -181,7 +213,9 @@ export default [
     testStatVal: 1.86182561841034,
     stdErr: 0.570736348956377,
   },
-  {
+  26: {
+    active:true,
+    studyId:26,
     id: 17,
     DOI: '180.231.31.166',
     name: 'sit officia error',
@@ -192,7 +226,9 @@ export default [
     testStatVal: 0.973874849345075,
     stdErr: 0.557025890430368,
   },
-  {
+  27: {
+    active:true,
+    studyId:27,
     id: 18,
     DOI: '54.217.30.138',
     name: 'expedita ut aut',
@@ -203,7 +239,9 @@ export default [
     testStatVal: 1.56461544490568,
     stdErr: 0.143947808887437,
   },
-  {
+  28: {
+    active:true,
+    studyId:28,
     id: 19,
     DOI: '131.226.193.199',
     name: 'harum enim velit',
@@ -214,7 +252,9 @@ export default [
     testStatVal: 1.02770777129627,
     stdErr: 0.861306483529045,
   },
-  {
+  29: {
+    active:true,
+    studyId:29,
     id: 20,
     DOI: '79.200.98.134',
     name: 'reprehenderit nemo itaque',
@@ -225,7 +265,9 @@ export default [
     testStatVal: 0.323815156804212,
     stdErr: 0.115453608402623,
   },
-  {
+  30: {
+    active:true,
+    studyId:30,
     id: 21,
     DOI: '190.38.125.144',
     name: 'magnam voluptatem eum',
@@ -236,7 +278,9 @@ export default [
     testStatVal: 1.31020343114511,
     stdErr: 0.769671279880504,
   },
-  {
+  31: {
+    active:true,
+    studyId:31,
     id: 22,
     DOI: '218.85.58.145',
     name: 'blanditiis maiores vero',
@@ -247,7 +291,9 @@ export default [
     testStatVal: 0.61654971928219,
     stdErr: 0.29804111670103,
   },
-  {
+  32: {
+    active:true,
+    studyId:32,
     id: 23,
     DOI: '66.140.94.63',
     name: 'reiciendis accusantium dolores',
@@ -258,7 +304,9 @@ export default [
     testStatVal: 0.188942752503682,
     stdErr: 0.867579830911122,
   },
-  {
+  33: {
+    active:true,
+    studyId:33,
     id: 24,
     DOI: '106.42.165.74',
     name: 'veniam ea aut',
@@ -269,7 +317,9 @@ export default [
     testStatVal: 0.661353254415819,
     stdErr: 0.941348382549564,
   },
-  {
+  34: {
+    active:true,
+    studyId:34,
     id: 25,
     DOI: '130.41.213.227',
     name: 'rerum omnis et',
@@ -280,7 +330,9 @@ export default [
     testStatVal: 0.408091424778344,
     stdErr: 0.618257486749428,
   },
-  {
+  35: {
+    active:true,
+    studyId:35,
     id: 26,
     DOI: '172.228.207.116',
     name: 'ea delectus corrupti',
@@ -291,7 +343,9 @@ export default [
     testStatVal: 0.659727433140144,
     stdErr: 0.0150305450173311,
   },
-  {
+  36: {
+    active:true,
+    studyId:36,
     id: 27,
     DOI: '181.246.205.53',
     name: 'perspiciatis consequuntur qui',
@@ -302,7 +356,9 @@ export default [
     testStatVal: 0.980275724458215,
     stdErr: 0.351414016255547,
   },
-  {
+  37: {
+    active:true,
+    studyId:37,
     id: 28,
     DOI: '78.147.27.154',
     name: 'iusto dignissimos similique',
@@ -313,7 +369,9 @@ export default [
     testStatVal: 1.46095022036742,
     stdErr: 0.596728117959473,
   },
-  {
+  38: {
+    active:true,
+    studyId:38,
     id: 29,
     DOI: '138.147.42.180',
     name: 'quis quod dignissimos',
@@ -324,7 +382,9 @@ export default [
     testStatVal: 1.32228315116557,
     stdErr: 0.74954364795549,
   },
-  {
+  39: {
+    active:true,
+    studyId:39,
     id: 30,
     DOI: '217.147.171.33',
     name: 'qui sed ipsa',
@@ -335,7 +395,9 @@ export default [
     testStatVal: 0.754691923328441,
     stdErr: 0.415315250599599,
   },
-  {
+  40: {
+    active:true,
+    studyId:40,
     id: 31,
     DOI: '203.78.99.229',
     name: 'ut aperiam velit',
@@ -346,7 +408,9 @@ export default [
     testStatVal: 1.44400666737038,
     stdErr: 0.65001740284379,
   },
-  {
+  41: {
+    active:true,
+    studyId:41,
     id: 32,
     DOI: '237.70.82.164',
     name: 'voluptates fuga nihil',
@@ -357,7 +421,9 @@ export default [
     testStatVal: 1.48355831837217,
     stdErr: 0.830096460501075,
   },
-  {
+  42: {
+    active:true,
+    studyId:42,
     id: 33,
     DOI: '160.104.237.251',
     name: 'rerum cum ex',
@@ -368,7 +434,9 @@ export default [
     testStatVal: 1.34430814663524,
     stdErr: 0.364498479582716,
   },
-  {
+  43: {
+    active:true,
+    studyId:43,
     id: 34,
     DOI: '165.191.180.98',
     name: 'et repellat et',
@@ -379,7 +447,9 @@ export default [
     testStatVal: 0.942611065632151,
     stdErr: 0.391330420756356,
   },
-  {
+  44: {
+    active:true,
+    studyId:44,
     id: 35,
     DOI: '89.167.132.50',
     name: 'voluptatem ipsa mollitia',
@@ -390,7 +460,9 @@ export default [
     testStatVal: 1.41247761472573,
     stdErr: 0.0265341306554028,
   },
-  {
+  45: {
+    active:true,
+    studyId:45,
     id: 36,
     DOI: '172.89.208.235',
     name: 'iste optio vitae',
@@ -401,7 +473,9 @@ export default [
     testStatVal: 0.670244999789132,
     stdErr: 0.440032240915718,
   },
-  {
+  46: {
+    active:true,
+    studyId:46,
     id: 37,
     DOI: '88.1.181.233',
     name: 'corrupti ut molestiae',
@@ -412,7 +486,9 @@ export default [
     testStatVal: 1.31142905996949,
     stdErr: 0.920199816993871,
   },
-  {
+  47: {
+    active:true,
+    studyId:47,
     id: 38,
     DOI: '67.9.211.178',
     name: 'maxime dolor unde',
@@ -423,7 +499,9 @@ export default [
     testStatVal: 0.893403466959161,
     stdErr: 0.244721739709243,
   },
-  {
+  48: {
+    active:true,
+    studyId:48,
     id: 39,
     DOI: '110.37.84.250',
     name: 'omnis quod quas',
@@ -434,7 +512,9 @@ export default [
     testStatVal: 0.832647171597194,
     stdErr: 0.478190249466485,
   },
-  {
+  49: {
+    active:true,
+    studyId:49,
     id: 40,
     DOI: '126.148.81.116',
     name: 'sunt reprehenderit labore',
@@ -445,7 +525,9 @@ export default [
     testStatVal: 0.199806551178737,
     stdErr: 0.824849905906034,
   },
-  {
+  50: {
+    active:true,
+    studyId:50,
     id: 41,
     DOI: '16.143.86.202',
     name: 'est dolorem et',
@@ -456,7 +538,9 @@ export default [
     testStatVal: 0.270813843627125,
     stdErr: 0.0674667120966752,
   },
-  {
+  51: {
+    active:true,
+    studyId:51,
     id: 42,
     DOI: '189.87.49.234',
     name: 'adipisci illo architecto',
@@ -467,7 +551,9 @@ export default [
     testStatVal: 1.41253802432959,
     stdErr: 0.821151090504444,
   },
-  {
+  52: {
+    active:true,
+    studyId:52,
     id: 43,
     DOI: '120.205.225.117',
     name: 'tempora similique placeat',
@@ -478,7 +564,9 @@ export default [
     testStatVal: 0.982076063288335,
     stdErr: 0.471920822880239,
   },
-  {
+  53: {
+    active:true,
+    studyId:53,
     id: 44,
     DOI: '134.161.240.135',
     name: 'qui neque voluptatem',
@@ -489,7 +577,9 @@ export default [
     testStatVal: 1.72605954871967,
     stdErr: 0.386143872210975,
   },
-  {
+  54: {
+    active:true,
+    studyId:54,
     id: 45,
     DOI: '68.230.106.152',
     name: 'consequatur eos dolorem',
@@ -500,7 +590,9 @@ export default [
     testStatVal: 0.103040938250064,
     stdErr: 0.503992386928168,
   },
-  {
+  55: {
+    active:true,
+    studyId:55,
     id: 46,
     DOI: '162.169.77.51',
     name: 'placeat minima aliquid',
@@ -511,7 +603,9 @@ export default [
     testStatVal: 1.85371829604905,
     stdErr: 0.856219938646539,
   },
-  {
+  56: {
+    active:true,
+    studyId:56,
     id: 47,
     DOI: '63.175.251.0',
     name: 'quibusdam eius quo',
@@ -522,7 +616,9 @@ export default [
     testStatVal: 0.530303872612844,
     stdErr: 0.782364083867105,
   },
-  {
+  57: {
+    active:true,
+    studyId:57,
     id: 48,
     DOI: '80.94.30.246',
     name: 'recusandae impedit veritatis',
@@ -533,7 +629,9 @@ export default [
     testStatVal: 0.0186371864470036,
     stdErr: 0.934019328359366,
   },
-  {
+  58: {
+    active:true,
+    studyId:58,
     id: 49,
     DOI: '120.114.236.128',
     name: 'eius tempore tenetur',
@@ -544,7 +642,9 @@ export default [
     testStatVal: 1.03878398154898,
     stdErr: 0.832132207336069,
   },
-  {
+  59: {
+    active:true,
+    studyId:59,
     id: 50,
     DOI: '140.244.8.221',
     name: 'aliquam illo voluptatum',
@@ -555,7 +655,9 @@ export default [
     testStatVal: 1.67502915053354,
     stdErr: 0.39071122168694,
   },
-  {
+  60: {
+    active:true,
+    studyId:60,
     id: 51,
     DOI: '246.201.100.121',
     name: 'et eos impedit',
@@ -566,7 +668,9 @@ export default [
     testStatVal: 0.254390012417499,
     stdErr: 0.754797618436954,
   },
-  {
+  61: {
+    active:true,
+    studyId:61,
     id: 52,
     DOI: '63.63.173.12',
     name: 'ut et qui',
@@ -577,7 +681,9 @@ export default [
     testStatVal: 0.0585414539007738,
     stdErr: 0.467992375350842,
   },
-  {
+  62: {
+    active:true,
+    studyId:62,
     id: 53,
     DOI: '189.117.218.186',
     name: 'quia voluptatem eius',
@@ -588,7 +694,9 @@ export default [
     testStatVal: 1.24291394877785,
     stdErr: 0.806957474670414,
   },
-  {
+  63: {
+    active:true,
+    studyId:63,
     id: 54,
     DOI: '40.57.148.167',
     name: 'non perspiciatis et',
@@ -599,7 +707,9 @@ export default [
     testStatVal: 0.243356049746768,
     stdErr: 0.327969290841748,
   },
-  {
+  64: {
+    active:true,
+    studyId:64,
     id: 55,
     DOI: '207.140.127.156',
     name: 'dolores optio veritatis',
@@ -610,7 +720,9 @@ export default [
     testStatVal: 0.30281568591205,
     stdErr: 0.225384624260501,
   },
-  {
+  65: {
+    active:true,
+    studyId:65,
     id: 56,
     DOI: '27.138.94.242',
     name: 'rerum aperiam nulla',
@@ -621,7 +733,9 @@ export default [
     testStatVal: 0.599307885441224,
     stdErr: 0.361645074560651,
   },
-  {
+  66: {
+    active:true,
+    studyId:66,
     id: 57,
     DOI: '217.43.138.94',
     name: 'odio aut non',
@@ -632,7 +746,9 @@ export default [
     testStatVal: 1.89655109080453,
     stdErr: 0.607121664468792,
   },
-  {
+  67: {
+    active:true,
+    studyId:67,
     id: 58,
     DOI: '13.82.218.154',
     name: 'laudantium aut nostrum',
@@ -643,7 +759,9 @@ export default [
     testStatVal: 1.29997816704927,
     stdErr: 0.167358140138034,
   },
-  {
+  68: {
+    active:true,
+    studyId:68,
     id: 59,
     DOI: '83.88.104.111',
     name: 'omnis voluptate consequatur',
@@ -654,7 +772,9 @@ export default [
     testStatVal: 0.716725435854206,
     stdErr: 0.66107782990498,
   },
-  {
+  69: {
+    active:true,
+    studyId:69,
     id: 60,
     DOI: '144.117.5.122',
     name: 'repudiandae exercitationem impedit',
@@ -665,7 +785,9 @@ export default [
     testStatVal: 0.93743362616587,
     stdErr: 0.524748561683348,
   },
-  {
+  70: {
+    active:true,
+    studyId:70,
     id: 61,
     DOI: '238.182.125.68',
     name: 'possimus repudiandae vero',
@@ -676,7 +798,9 @@ export default [
     testStatVal: 1.22901577834485,
     stdErr: 0.50477226022925,
   },
-  {
+  71: {
+    active:true,
+    studyId:71,
     id: 62,
     DOI: '69.253.159.4',
     name: 'dolor voluptatem qui',
@@ -687,7 +811,9 @@ export default [
     testStatVal: 0.849244298634176,
     stdErr: 0.140741206154313,
   },
-  {
+  72: {
+    active:true,
+    studyId:72,
     id: 63,
     DOI: '90.40.223.127',
     name: 'et cum molestiae',
@@ -698,7 +824,9 @@ export default [
     testStatVal: 1.42656418710285,
     stdErr: 0.292136545460854,
   },
-  {
+  73: {
+    active:true,
+    studyId:73,
     id: 64,
     DOI: '113.67.157.129',
     name: 'atque ut unde',
@@ -709,7 +837,9 @@ export default [
     testStatVal: 1.74141804798439,
     stdErr: 0.236585998470001,
   },
-  {
+  74: {
+    active:true,
+    studyId:74,
     id: 65,
     DOI: '74.170.126.103',
     name: 'eos quam maxime',
@@ -720,7 +850,9 @@ export default [
     testStatVal: 0.0397036288922168,
     stdErr: 0.45650325300862,
   },
-  {
+  75: {
+    active:true,
+    studyId:75,
     id: 66,
     DOI: '105.46.50.180',
     name: 'nihil distinctio doloremque',
@@ -731,7 +863,9 @@ export default [
     testStatVal: 0.979637751617236,
     stdErr: 0.108746478427493,
   },
-  {
+  76: {
+    active:true,
+    studyId:76,
     id: 67,
     DOI: '98.146.67.21',
     name: 'et minima veniam',
@@ -742,7 +876,9 @@ export default [
     testStatVal: 0.65353915215496,
     stdErr: 0.814329096230004,
   },
-  {
+  77: {
+    active:true,
+    studyId:77,
     id: 68,
     DOI: '8.82.186.154',
     name: 'ut cupiditate consequatur',
@@ -753,7 +889,9 @@ export default [
     testStatVal: 0.839126316238704,
     stdErr: 0.943841926636345,
   },
-  {
+  78: {
+    active:true,
+    studyId:78,
     id: 69,
     DOI: '237.54.233.186',
     name: 'ipsum ipsa corrupti',
@@ -764,7 +902,9 @@ export default [
     testStatVal: 1.96242363029118,
     stdErr: 0.616022332973594,
   },
-  {
+  79: {
+    active:true,
+    studyId:79,
     id: 70,
     DOI: '199.118.127.196',
     name: 'officiis consequatur corporis',
@@ -775,7 +915,9 @@ export default [
     testStatVal: 1.6688934757539,
     stdErr: 0.898253597409828,
   },
-  {
+  80: {
+    active:true,
+    studyId:80,
     id: 71,
     DOI: '97.178.243.91',
     name: 'laboriosam eum debitis',
@@ -786,7 +928,9 @@ export default [
     testStatVal: 1.28030799405118,
     stdErr: 0.102235506073179,
   },
-  {
+  81: {
+    active:true,
+    studyId:81,
     id: 72,
     DOI: '47.26.0.216',
     name: 'consequatur fugit molestiae',
@@ -797,7 +941,9 @@ export default [
     testStatVal: 0.206098613636398,
     stdErr: 0.523015634887813,
   },
-  {
+  82: {
+    active:true,
+    studyId:82,
     id: 73,
     DOI: '2.222.191.42',
     name: 'aut omnis eius',
@@ -808,7 +954,9 @@ export default [
     testStatVal: 0.488900759254422,
     stdErr: 0.655280766229822,
   },
-  {
+  83: {
+    active:true,
+    studyId:83,
     id: 74,
     DOI: '216.220.150.116',
     name: 'amet neque odio',
@@ -819,7 +967,9 @@ export default [
     testStatVal: 0.0154799701534811,
     stdErr: 0.63186684674853,
   },
-  {
+  84: {
+    active:true,
+    studyId:84,
     id: 75,
     DOI: '112.249.159.199',
     name: 'rerum soluta molestiae',
@@ -830,7 +980,9 @@ export default [
     testStatVal: 0.635917636788033,
     stdErr: 0.0512329335172079,
   },
-  {
+  85: {
+    active:true,
+    studyId:85,
     id: 76,
     DOI: '136.156.233.102',
     name: 'nobis consectetur repellat',
@@ -841,7 +993,9 @@ export default [
     testStatVal: 0.308192898893778,
     stdErr: 0.936065693080936,
   },
-  {
+  86: {
+    active:true,
+    studyId:86,
     id: 77,
     DOI: '247.191.89.4',
     name: 'aut quia laboriosam',
@@ -852,7 +1006,9 @@ export default [
     testStatVal: 1.28781333060036,
     stdErr: 0.367513318801903,
   },
-  {
+  87: {
+    active:true,
+    studyId:87,
     id: 78,
     DOI: '58.143.245.33',
     name: 'iusto ratione rem',
@@ -863,7 +1019,9 @@ export default [
     testStatVal: 1.89907950501141,
     stdErr: 0.442741177164289,
   },
-  {
+  88: {
+    active:true,
+    studyId:88,
     id: 79,
     DOI: '115.252.86.134',
     name: 'et repudiandae fuga',
@@ -874,7 +1032,9 @@ export default [
     testStatVal: 0.681038077598104,
     stdErr: 0.830731502864924,
   },
-  {
+  89: {
+    active:true,
+    studyId:89,
     id: 80,
     DOI: '69.156.103.108',
     name: 'quaerat blanditiis sit',
@@ -885,7 +1045,9 @@ export default [
     testStatVal: 1.20424319198465,
     stdErr: 0.0803558584892252,
   },
-  {
+  90: {
+    active:true,
+    studyId:90,
     id: 81,
     DOI: '62.197.238.112',
     name: 'quae autem placeat',
@@ -896,7 +1058,9 @@ export default [
     testStatVal: 1.29127799720115,
     stdErr: 0.00374308437421678,
   },
-  {
+  91: {
+    active:true,
+    studyId:91,
     id: 82,
     DOI: '242.161.236.45',
     name: 'ipsa voluptatem ut',
@@ -907,7 +1071,9 @@ export default [
     testStatVal: 0.290107877360454,
     stdErr: 0.0731964904936158,
   },
-  {
+  92: {
+    active:true,
+    studyId:92,
     id: 83,
     DOI: '17.58.157.11',
     name: 'officia vel dolor',
@@ -918,7 +1084,9 @@ export default [
     testStatVal: 1.47296257568793,
     stdErr: 0.298990739647146,
   },
-  {
+  93: {
+    active:true,
+    studyId:93,
     id: 84,
     DOI: '141.166.156.217',
     name: 'tempora consectetur in',
@@ -929,7 +1097,9 @@ export default [
     testStatVal: 1.5306051135684,
     stdErr: 0.165217535195013,
   },
-  {
+  94: {
+    active:true,
+    studyId:94,
     id: 85,
     DOI: '106.168.171.35',
     name: 'omnis iure est',
@@ -940,7 +1110,9 @@ export default [
     testStatVal: 0.907029057578242,
     stdErr: 0.797450545584504,
   },
-  {
+  95: {
+    active:true,
+    studyId:95,
     id: 86,
     DOI: '246.133.124.246',
     name: 'asperiores non praesentium',
@@ -951,7 +1123,9 @@ export default [
     testStatVal: 0.903369190305542,
     stdErr: 0.5351469922424,
   },
-  {
+  96: {
+    active:true,
+    studyId:96,
     id: 87,
     DOI: '194.83.110.3',
     name: 'omnis facilis et',
@@ -962,7 +1136,9 @@ export default [
     testStatVal: 1.13777348501833,
     stdErr: 0.981774499599345,
   },
-  {
+  97: {
+    active:true,
+    studyId:97,
     id: 88,
     DOI: '114.210.210.2',
     name: 'quia voluptatum voluptas',
@@ -973,7 +1149,9 @@ export default [
     testStatVal: 0.714434874758618,
     stdErr: 0.0980152507945138,
   },
-  {
+  98: {
+    active:true,
+    studyId:98,
     id: 89,
     DOI: '112.116.34.193',
     name: 'impedit id culpa',
@@ -984,7 +1162,9 @@ export default [
     testStatVal: 0.553358435489352,
     stdErr: 0.589582427473017,
   },
-  {
+  99: {
+    active:true,
+    studyId:99,
     id: 90,
     DOI: '95.70.78.186',
     name: 'tempora qui recusandae',
@@ -995,7 +1175,9 @@ export default [
     testStatVal: 0.924236940316012,
     stdErr: 0.813965479999377,
   },
-  {
+  100: {
+    active:true,
+    studyId:100,
     id: 91,
     DOI: '26.250.29.49',
     name: 'fuga maxime atque',
@@ -1006,7 +1188,9 @@ export default [
     testStatVal: 0.373591797586675,
     stdErr: 0.402615967166542,
   },
-  {
+  101: {
+    active:true,
+    studyId:101,
     id: 92,
     DOI: '63.124.148.55',
     name: 'ex inventore reprehenderit',
@@ -1017,7 +1201,9 @@ export default [
     testStatVal: 1.23549181231667,
     stdErr: 0.240835434509183,
   },
-  {
+  102: {
+    active:true,
+    studyId:102,
     id: 93,
     DOI: '16.22.69.145',
     name: 'ut dolore et',
@@ -1028,7 +1214,9 @@ export default [
     testStatVal: 0.566162212819173,
     stdErr: 0.599570104785232,
   },
-  {
+  103: {
+    active:true,
+    studyId:103,
     id: 94,
     DOI: '100.2.255.243',
     name: 'illo in dolores',
@@ -1039,7 +1227,9 @@ export default [
     testStatVal: 1.54923818619111,
     stdErr: 0.12592870229112,
   },
-  {
+  104: {
+    active:true,
+    studyId:104,
     id: 95,
     DOI: '116.55.212.26',
     name: 'odit quam sint',
@@ -1050,7 +1240,9 @@ export default [
     testStatVal: 1.35583087631028,
     stdErr: 0.35090564613849,
   },
-  {
+  105: {
+    active:true,
+    studyId:105,
     id: 96,
     DOI: '172.235.157.2',
     name: 'libero fugit eos',
@@ -1061,7 +1253,9 @@ export default [
     testStatVal: 0.535112949004817,
     stdErr: 0.413711741998938,
   },
-  {
+  106: {
+    active:true,
+    studyId:106,
     id: 97,
     DOI: '105.94.89.190',
     name: 'est nisi expedita',
@@ -1072,7 +1266,9 @@ export default [
     testStatVal: 1.96938842552907,
     stdErr: 0.988294953395302,
   },
-  {
+  107: {
+    active:true,
+    studyId:107,
     id: 98,
     DOI: '1.141.235.93',
     name: 'sed blanditiis et',
@@ -1083,7 +1279,9 @@ export default [
     testStatVal: 0.497774516743632,
     stdErr: 0.192685641314533,
   },
-  {
+  108: {
+    active:true,
+    studyId:108,
     id: 99,
     DOI: '104.162.150.211',
     name: 'non repellendus voluptatem',
@@ -1094,7 +1292,9 @@ export default [
     testStatVal: 0.318140122271947,
     stdErr: 0.142911223519448,
   },
-  {
+  109: {
+    active:true,
+    studyId:109,
     id: 100,
     DOI: '163.134.167.96',
     name: 'sequi dolorem aut',
@@ -1105,4 +1305,4 @@ export default [
     testStatVal: 1.38197010496471,
     stdErr: 0.561144093558685,
   },
-];
+};

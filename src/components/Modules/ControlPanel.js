@@ -19,50 +19,26 @@ import {
   Checkbox,
   List,
 } from 'semantic-ui-react';
+import StudyInclusionBoxContainer from '../../containers/Modules/StudyInclusionBoxContainer';
 
 class ControlPanel extends React.Component {
   constructor(props) {
     super(props);
     this.props=props;
-    this.state = {
-      
-    }
-  }
-
-  updateState = async (updatedState) => {
-    this.setState({
-      ...updatedState
-    });
   }
 
   render() {
     return (
-      <PanelContainer {...this.props} updateState={this.updateState}>
+      <Container>
         <Divider horizontal inverted />
         <h4> Studies included </h4>
-        {this.props.children}
+        <StudyInclusionBoxContainer moduleIdx={this.props.moduleIdx} />
         <Divider horizontal inverted />
         <h4> Controls </h4>
-      </PanelContainer>
+      </Container>
   );
   }
 };
-
-const renderChildren = (props) => {
-  return React.Children.map(props.children, child => {
-    return React.cloneElement(child, {
-      studies: props.studies
-    });
-  });
-}
-
-const PanelContainer = (props) => {
-  return (
-    <Container fluid>
-      {renderChildren(props)}
-    </Container>
-  )
-}
 
 export default ControlPanel;
 

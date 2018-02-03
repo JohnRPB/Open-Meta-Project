@@ -68,14 +68,14 @@ class MasterDocument extends Component {
             </div>
             <div className="twelve wide column">
               <div>
-                {blocks.map((analysis, index) => {
+                {blocks.map((block, index) => {
                   return (
                     <div key={index} className="fluid">
                       <ul>
                         <li onClick={e => handleClick(e, index)}>
-                          {analysis.textContent
-                            ? analysis.textContent
-                            : analysis.name}
+                          {block.textContent
+                            ? block.textContent
+                            : JSON.stringify(block)}
                         </li>
                         <br />
                         <br />
@@ -147,9 +147,9 @@ class MasterDocument extends Component {
                 </div>
               ) : null}
             </div>
+             <Module moduleIdx={0} />
           </div>
         </div>
-        <Module endpoint = {"simplePlot"} collection={collection.slice(0,99)}/>
       </div>
     );
   }

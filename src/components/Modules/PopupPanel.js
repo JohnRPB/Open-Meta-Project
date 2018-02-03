@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Button, Popup } from 'semantic-ui-react'
 import "../../index.css";
 
@@ -15,7 +16,6 @@ const PopupPanel = ({trigger, children}) => (
     inverted={true}
     trigger={trigger}
     position="right center"
-    content="The default theme's basic popup removes the pointing arrow."
     basic
   >
    <Popup.Content>
