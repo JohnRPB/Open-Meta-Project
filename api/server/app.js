@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
+const api = require('./api');
 
 // Setup logger
 
@@ -26,7 +27,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 //json parser
 app.use(bodyParser.json());
 
-app.use('/api', require('./api'));
+app.use('/api', api);
 
 // Serve static assets
 // app.use(require('./tokenVerify'));
