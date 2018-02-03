@@ -7,7 +7,7 @@ let User = mongooseModels.User;
 router.post('/', async (req, res) => {
   try {
     console.log("entered / route in api/login");
-    
+
     let users = await User.find()
     var message;
     for (var user of users) {
