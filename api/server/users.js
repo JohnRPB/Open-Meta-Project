@@ -3,8 +3,8 @@ var router = express.Router();
 
 
 //access to database
-let sequelizeModels = require("./../models/sequelize");
-let mongooseModels = require("./../models/mongoose");
+let sequelizeModels = require("./../models/sequelize/index");
+let mongooseModels = require("./../models/mongoose/index");
 let User = mongooseModels.User;
 let Study = sequelizeModels.Study;
 let Journal = sequelizeModels.Journal;
