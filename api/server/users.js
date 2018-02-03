@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 
-
 //access to database
 let sequelizeModels = require("./../models/sequelize");
 let mongooseModels = require("./../models/mongoose");
@@ -38,7 +37,10 @@ router.get("/", function(req, res, next) {
 // getting a single user
 router.get("/:userId", async (req, res, next) => {
   console.log("on the new user routes", req.params.userId);
-  let user = await mongoUser.findById(req.params.userId).populate("profile");
+  let user = await mongoUser
+    .findById(req.params.userId)
+    .populate("profile")
+    .populate("analyses");
   res.json(user);
 });
 

@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import StudyCheckbox from '../components/Modules/StudyCheckbox.js';
 
-// optional  
+// optional
 import serialize from 'form-serialize';
 
 import * as Actions from '../actions'
 import { bindActionCreators } from 'redux';
 
 //let StudyCheckboxContainer = () => {
-  //return ( 
-    
+  //return (
+
   //)
 //}
 
@@ -27,7 +27,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     handleClick: async (e) => {
       console.log("e.target: ", e.target);
       console.log("e.target.checked: ", e.target.checked);
-      
+
       dispatch(
         Actions.updateSingleStudy(
           e.target.checked,
@@ -43,4 +43,3 @@ StudyCheckboxContainer = withRouter(
 );
 
 export default StudyCheckboxContainer;
-

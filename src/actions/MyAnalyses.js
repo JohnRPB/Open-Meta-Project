@@ -23,6 +23,7 @@ export function getAnalyses(id) {
     axios
       .get(`${root}/api/myanalyses`)
       .then(response => {
+        console.log("response => ", response);
         dispatch(getAnalysesSuccess(response.data));
       })
       .catch(e => {

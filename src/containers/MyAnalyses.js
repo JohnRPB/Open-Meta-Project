@@ -14,6 +14,7 @@ function mapStateToProps(state) {
 const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
     getAnalyses: id => {
+      console.log("inside actions");
       dispatch(getAnalyses(id));
     }
   };

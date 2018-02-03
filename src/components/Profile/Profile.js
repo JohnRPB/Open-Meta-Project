@@ -12,6 +12,7 @@ import {
 } from "semantic-ui-react";
 import johann from "../../assets/images/johann.jpeg";
 import AnalysesTable from "./Table";
+const moment = require("moment");
 
 class Profile extends Component {
   constructor(props) {
@@ -21,29 +22,35 @@ class Profile extends Component {
 
   componentWillMount() {
     this.props.getUser(this.props.match.params.user_id);
-    this.props.getAnalyses("*");
   }
 
   render() {
-    // setting analyses content after fetching
     if (!this.props.isFetching) {
-      console.log("profile props => ", this.props);
-      var analysisRows = this.props.Analyses.slice(0, 10).map(analysis => {
-        return (
-          <Table.Row>
-            <Table.Cell>{analysis.data.header.title}</Table.Cell>
-            <Table.Cell collapsing textAlign="right">
-              10 hours ago
-            </Table.Cell>
-          </Table.Row>
-        );
-      });
+      var { User, isFetching } = this.props;
+      console.log("deconstructed User", User);
     }
 
+    console.log("props => ", this.props);
+    // setting analyses content after fetching
+    // if (!this.props.isFetching) {
+    //   console.log("profile props inside FETCHING => ", this.props);
+    //   console.log("profile/user => ", User);
+    //   var analysisRows = this.props.Analyses.slice(0, 10).map(analysis => {
+    //     return (
+    //       <Table.Row>
+    //         <Table.Cell>{analysis.data.header.title}</Table.Cell>
+    //         <Table.Cell collapsing textAlign="right">
+    //           10 hours ago
+    //         </Table.Cell>
+    //       </Table.Row>
+    //     );
+    //   });
+    // }
+
     return (
-      <div class="ui  vertical masthead center aligned segment">
-        <div class="following bar">
-          <div class="ui container">
+      <div className="ui  vertical masthead center aligned segment">
+        <div className="following bar">
+          <div className="ui container">
             <Nav />
           </div>
         </div>
@@ -55,18 +62,21 @@ class Profile extends Component {
 
             <Grid.Column width={14}>
               <Segment>
-                <Image src={johann} centered circular="true" size="small" />
-                <h2>Johann Baptista</h2>
-                <h3>Web Developer, Data Scientist, Swing Dancer</h3>
+                {/* create middleware to make pictures perfectly square? */}
+                <Image
+                  src={!this.props.isFetching ? `${User.profile.image}` : null}
+                  centered
+                  circular="true"
+                  size="small"
+                />
+                <h2>
+                  {!this.props.isFetching
+                    ? `${User.profile.f_name} ${User.profile.l_name}`
+                    : null}
+                </h2>
+                <h3> {!this.props.isFetching ? User.profile.title : null}</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  {!this.props.isFetching ? User.profile.description : null}
                 </p>
               </Segment>
 
@@ -84,7 +94,11 @@ class Profile extends Component {
                   </Statistic>
 
                   <Statistic>
-                    <Statistic.Value>15</Statistic.Value>
+                    <Statistic.Value>
+                      {!this.props.isFetching
+                        ? `${User.analyses.length}`
+                        : null}
+                    </Statistic.Value>
                     <Statistic.Label>Reviews</Statistic.Label>
                   </Statistic>
 
@@ -99,12 +113,30 @@ class Profile extends Component {
                 <Table.Header>
                   <Table.Row>
                     <Table.HeaderCell colSpan="3">
-                      Johann's Analyses
+                      {!this.props.isFetching
+                        ? `${this.props.User.profile.f_name}'s Analyses`
+                        : null}
                     </Table.HeaderCell>
                   </Table.Row>
                 </Table.Header>
-
-                <Table.Body>{analysisRows}</Table.Body>
+                <Table.Body>
+                  {!this.props.isFetching
+                    ? User.analyses.map(analyses => {
+                        return (
+                          <Table.Row>
+                            <Table.Cell>
+                              {analyses.data.header.title}
+                            </Table.Cell>
+                            <Table.Cell collapsing textAlign="right">
+                              {moment(analyses.hist[0].time).format(
+                                `MMMM Do YYYY`
+                              )}
+                            </Table.Cell>
+                          </Table.Row>
+                        );
+                      })
+                    : null}
+                </Table.Body>
               </Table>
             </Grid.Column>
             <Grid.Column width={1} />

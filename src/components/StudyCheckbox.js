@@ -5,18 +5,15 @@
 // Div inside popup panel that displays study selection
 // options
 
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
   Link,
-  Switch,
-} from 'react-router-dom';
-import {
-  Checkbox,
-  List,
-} from 'semantic-ui-react';
+  Switch
+} from "react-router-dom";
+import { Checkbox, List } from "semantic-ui-react";
 
 class StudyUnit extends React.Component {
   constructor(props) {
@@ -24,13 +21,12 @@ class StudyUnit extends React.Component {
     this.props = props;
   }
 
-
   render() {
     return (
       <Checkbox
         label={this.props.study.name}
-        name={this.props.study.Id},
-        onChange={this.props.handleClick},
+        name={this.props.study.Id}
+        onChange={this.props.handleClick}
         checked={this.props.study.checked}
       />
     );
