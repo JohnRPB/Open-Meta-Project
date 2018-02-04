@@ -23,9 +23,12 @@ api.get("/express-test", (req, res) => res.send({ express: "working!" })) //demo
 api.use("/login", login)
 api.use("/register", register)
 
+// ------------
 //for each request append to the body the username and the token
 //use the username to find the user
 //use the token to verify user and allow him/her to use the site
+// ------------
+
 // api.use((req, res, next) => {
 //   // check header or url parameters or post parameters for token
 //   var token =
