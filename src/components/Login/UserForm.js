@@ -78,8 +78,6 @@ class UserForm extends Component {
         }
         console.log("token added =>");
         return data
-        // data = data.json()
-        // console.log("data returned => ", data);
       }).catch(error => console.error('Error:', error))
     }
 
