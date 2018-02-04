@@ -76,6 +76,7 @@ class UserForm extends Component {
           this.props._addToken(data.token)
           this.props.history.push("/dashboard")
         }
+        console.log("token added =>");
         return data
         // data = data.json()
         // console.log("data returned => ", data);
