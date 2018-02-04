@@ -35,6 +35,7 @@ class UserForm extends Component {
     console.log("obj =>", obj.passHash);
 
     if(obj.action == "login"){
+      console.log("login starting");
       fetch("http://localhost:8000/api/login", {
         method: "post",
         headers: {
@@ -60,6 +61,7 @@ class UserForm extends Component {
     }
 
     if(obj.action == "register"){
+      console.log("register starting");
       fetch("http://localhost:8000/api/register", {
         method: "post",
         headers: {
@@ -70,7 +72,10 @@ class UserForm extends Component {
         return response.json()
       }).then(data => {
         console.log("data returned => ", data);
-        this.props.history.push("/dashboard")
+        if(data.token){
+          this.props._addToken(data.token)
+          this.props.history.push("/dashboard")
+        }
         return data
         // data = data.json()
         // console.log("data returned => ", data);

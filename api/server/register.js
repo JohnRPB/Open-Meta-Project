@@ -11,7 +11,15 @@ router.post('/', async (req, res) => {
       if (err) return handleError(err);
       // saved!
     })
-    
+
+    var token = jwt.sign(
+      {email: registrant.email, passHash: registrant.passHash},
+      'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
+    )
+
+    res.json({
+      token
+    })
   } catch (e) {
     console.log("error on api post /register", e);
   }

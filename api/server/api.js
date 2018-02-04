@@ -9,11 +9,8 @@ const rmarkdown = require("./rmarkdown");
 const studies = require("./study");
 const myanalyses = require("./MyAnalyses");
 const login = require("./login")
-<<<<<<< HEAD
 const register = require("./register")
-=======
 const collections = require("./collections");
->>>>>>> 3c82c34345c28b4bf576d45672009e30e4e0b8fc
 
 api.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
