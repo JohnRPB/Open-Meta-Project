@@ -18,9 +18,10 @@ const boxSource = {
     return {
       name: props.name,
       content: {
+        name: "simplePlot",
         type: "graphic",
         outputLoc: "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
-        studies: studies
+        studies: studies.slice(0, 10)
       }
     };
   },

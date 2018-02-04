@@ -15,6 +15,9 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
     getAnalyses: id => {
       dispatch(getAnalyses(id));
+    },
+    getCollections: id => {
+      dispatch(getAnalyses(id));
     }
   };
 };

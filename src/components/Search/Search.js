@@ -8,14 +8,22 @@ import {
   Button,
   Table
 } from 'semantic-ui-react';
+import SearchTableContainer from '../../containers/SearchTableContainer';
+import SearchCollectionContainer from '../../containers/SearchCollectionContainer.js';
 
-const Search = ({
-  onSubmit
-}) => {
+const Search = ({ onSubmit }) => {
   return (
     <div>
-      <Header as="h1">Search (Work in progress)</Header>
-      <Grid divided = 'vertically' padded>
+      <br />
+      <br />
+      <Grid divided="vertically" padded>
+        <Grid.Row>
+          <Grid.Column width={1}>
+    </Grid.Column>
+    <Grid.Column width={7}>
+      <SearchCollectionContainer />
+    </Grid.Column>
+        </Grid.Row>
         <Grid.Row>
           <Grid.Column width={1}>
           </Grid.Column>
@@ -41,11 +49,10 @@ const Search = ({
       </Form>
       </Grid.Column>
           <Grid.Column width={7}>
-            <Table celled>
-            </Table>
+            <SearchTableContainer />
           </Grid.Column>
-    </Grid.Row>
-  </Grid>
+        </Grid.Row>
+      </Grid>
     </div>
   );
 };

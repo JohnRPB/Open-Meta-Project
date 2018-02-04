@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
   
 
   return {
-    studies: currentModule.studies
+    studies: currentModule.content.studies
   }
 }
 

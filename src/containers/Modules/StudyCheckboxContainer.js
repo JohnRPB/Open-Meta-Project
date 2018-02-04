@@ -16,29 +16,30 @@ import {bindActionCreators} from 'redux';
 
 const mapStateToProps = (state, ownProps) => {
   let currentStudy =
-    state.project.blocks[ownProps.moduleIdx].studies[
-      ownProps.studyId.toString()
+    state.project.blocks[ownProps.moduleIdx].content.studies[
+      ownProps.studyIdx
     ];
 
   return {
     checked: currentStudy.active,
     studyName: currentStudy.name,
     moduleIdx: ownProps.moduleIdx, // passed to container
-    studyId: ownProps.studyId, // passed to container
+    studyIdx: ownProps.studyIdx, // passed to container
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    handleClick: async e => {
+    handleClick: async (e, data) => {
+      console.log("data: ", data);
       console.log('e.target: ', e.target);
       console.log('e.target.checked: ', e.target.checked);
 
       dispatch(
         Actions.updateSingleStudy(
-          e.target.moduleIdx,
-          e.target.studyId,
-          e.target.checked,
+          data.moduleidx,
+          data.studyidx,
+          data.checked,
         ),
       );
     },

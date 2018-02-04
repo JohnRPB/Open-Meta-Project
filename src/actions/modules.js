@@ -1,30 +1,37 @@
 import axios from 'axios';
 import {store} from '../index.js';
+console.log("------------------- START store -------------------");
+console.log(store);
+console.log("-------------------- END store --------------------");
+
 
 // Remove a study
 export const REMOVE_STUDY = 'REMOVE_STUDY';
-export const removeStudy = (moduleIdx, studyId) => {
+export const removeStudy = (moduleIdx, studyIdx) => {
   return {
     type: REMOVE_STUDY,
-    data: {moduleIdx, studyId},
+    data: {moduleIdx, studyIdx},
   };
 };
 
 // Add a study
 export const ADD_STUDY = 'ADD_STUDY';
-export const addStudy = (moduleIdx, studyId) => {
+export const addStudy = (moduleIdx, studyIdx) => {
   return {
     type: ADD_STUDY,
-    data: {moduleIdx, studyId},
+    data: {moduleIdx, studyIdx},
   };
 };
 
 // update module's output location
 export const UPDATE_LOC = 'UPDATE_LOC';
-export const updateLoc = (updatedLoc) => {
+export const updateLoc = (moduleIdx, updatedLoc) => {
   return {
     type: UPDATE_LOC,
-    data: updatedLoc
+    data: {
+      moduleIdx,
+      updatedLoc
+    }
   }
 }
 
@@ -33,21 +40,15 @@ export const updateLoc = (updatedLoc) => {
 // 2018-02-02 11:05
 // ---------------------------------------------------------
 
-
 const computeOcpuAndGetImg = async (rootUrl, data) => { 
     // Sends request and waits for it
-    let x = [];
-    let y = [];
-    for (let key in data) {
-      x.push(data[key].sampleSize)
-      y.push(data[key].testStatVal)
-    }
 
     let postR = await axios({
       method: 'post',
       url: rootUrl,
-      x: x,
-      y: y
+      data: {
+        json: JSON.stringify(data)
+      }
     });
 
     console.log('------------------- START postR.data -------------------');
@@ -56,20 +57,25 @@ const computeOcpuAndGetImg = async (rootUrl, data) => {
 
     // Ocpu returns indented list of URLS; we split it here
     let resultArr = postR.data.split('\n');
-    return `https://cloud.opencpu.org${resultArr[4]}/png`;
+    let graphicalOutput = resultArr.filter(url => url.match(/graphics/g));
+   console.log( `https://cloud.opencpu.org${graphicalOutput}/png`);
+    return `https://cloud.opencpu.org${graphicalOutput}/png`;
 }
 
 export const UPDATE_SINGLE_STUDY = 'UPDATE_SINGLE_STUDY';
-export const updateSingleStudy = async (moduleIdx, studyId, updateType) => {
+export const updateSingleStudy = (moduleIdx, studyIdx, updateType) => {
   return async dispatch => {
     // dispatch study status modification action
     dispatch(
       updateType
-        ? addStudy(moduleIdx, studyId)
-        : removeStudy(moduleIdx, studyId),
+        ? addStudy(moduleIdx, studyIdx)
+        : removeStudy(moduleIdx, studyIdx),
     );
 
-    let moduleContent = store.project.blocks[moduleIdx].content;
+    console.log("moduleIdx: ", moduleIdx);
+    
+    
+    let moduleContent = store.getState().project.blocks[moduleIdx].content;
     let rootUrl = `http://johnrpb.ocpu.io/openCPU_test/R/${ moduleContent.name }`;
 
     // make request to Ocpu and fetch img url
@@ -80,6 +86,6 @@ export const updateSingleStudy = async (moduleIdx, studyId, updateType) => {
       console.log("Error with Ocpu request" + e);
     }
 
-    dispatch(updateLoc(imgUrl));
+    dispatch(updateLoc(moduleIdx, imgUrl));
   };
 };

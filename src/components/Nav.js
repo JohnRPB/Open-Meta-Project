@@ -16,7 +16,7 @@ const Nav = () => {
       </NavLink>
 
       <div className="right menu">
-        <Search size="small" />
+        <Search placeholder="Search website..." size="small" />
 
         <Dropdown item text={<i className="user circle outline icon" />}>
           <Dropdown.Menu>

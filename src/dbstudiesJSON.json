@@ -1,10 +1,4 @@
-// ---------------------------------------------------------
-// Test study array
-// 2018-01-31 22:58
-// ---------------------------------------------------------
-// A mocked collection to supply to the module
-
-export default [
+[
   {
     "active":true,
     "studyId":10,
@@ -1206,4 +1200,3 @@ export default [
     "stdErr": 0.561144093558685
   }
 ]
-

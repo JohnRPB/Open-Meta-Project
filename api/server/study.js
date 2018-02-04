@@ -26,7 +26,7 @@ router.post('/submit', async (req, res, next) => {
         },
       },
     });
-    
+
     if (!currentStudy) {
       let studyJournal = await Journal.find({
         where: {
@@ -35,7 +35,7 @@ router.post('/submit', async (req, res, next) => {
           },
         },
       });
-      
+
       if (!studyJournal) {
         let journalBuild = {};
         Object.keys(bodyInfo.journal).forEach(key => {
@@ -61,7 +61,7 @@ router.post('/submit', async (req, res, next) => {
         },
       });
     }
-    
+
     for (let i = 0; i < bodyInfo.authors.length; i++) {
       let currentAuthor = await Author.find({
         where: {
@@ -105,7 +105,7 @@ router.post('/submit', async (req, res, next) => {
       await mongoStudy.save();
       mongoStudy = await StudyOverflow.findOne({sqlId: currentStudy.id});
     }
-    
+
     mongoStudy.payload = mongoStudy.payload || {};
     mongoStudy.payload.url = mongoStudy.payload.url || [];
     if (!mongoStudy.payload.url.includes(bodyInfo.url)) {
@@ -175,7 +175,7 @@ router.get('/search', async (req, res, next) => {
       tagResults = await Tag.findAll(tagParams);
       console.log(tagResults);
     } catch (e) {
-    res.status(500).send(e.stack);
+      res.status(500).send(e.stack);
     }
     if (tagResults.length) {
       tagResults.forEach(result => {
@@ -203,8 +203,8 @@ router.get('/search', async (req, res, next) => {
         },
       });
     });
-    let studyResults 
-    try{
+    let studyResults;
+    try {
       studyResults = Study.findAll(studyParams);
     } catch (e) {
       res.status(500).send(e.stack);
@@ -230,7 +230,7 @@ router.get('/search', async (req, res, next) => {
     authorArray.forEach(name => {
       authorParams.where[Op.or].push({name: {[Op.iLike]: `%${name}%`}});
     });
-    let authorResults  
+    let authorResults;
     try {
       authorResults = await Author.findAll(authorParams);
     } catch (e) {
@@ -263,11 +263,11 @@ router.get('/search', async (req, res, next) => {
         },
       });
     });
-    let journalResults 
-    try{
+    let journalResults;
+    try {
       journalResults = await Journal.findAll(journalParams);
     } catch (e) {
-    res.status(500).send(e.stack);
+      res.status(500).send(e.stack);
     }
     if (journalResults.length) {
       journalResults.forEach(journal => {
@@ -282,5 +282,39 @@ router.get('/search', async (req, res, next) => {
   }
 
   res.send(JSON.stringify(results));
+});
+
+router.get('/ids', async (req, res, next) => {
+  let results = [];
+  let query = req.query.studies;
+  let queryParams = {
+    where: {
+      id: {
+        [Op.or]: [],
+      },
+    },
+  };
+  if (query[0] == '_') {
+    query = query.substring(1);
+  }
+  let idArray = query.split('_');
+  idArray.forEach(id => {
+    queryParams.where.id[Op.or].push(Number(id));
+  });
+  let rawStudies;
+  try {
+    rawStudies = await Study.findAll(queryParams);
+    console.log(rawStudies)
+  } catch (e) {
+    res.status(500).send(e.stack);
+  }
+  if (rawStudies.length) {
+    rawStudies.map(study => {
+      results.push(study.dataValues);
+    });
+  }
+
+  res.send(JSON.stringify(results));
+
 });
 module.exports = router;

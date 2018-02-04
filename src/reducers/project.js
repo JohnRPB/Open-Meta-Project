@@ -1,9 +1,16 @@
 import {
+  REMOVE_STUDY,
+  ADD_STUDY,
+  UPDATE_LOC
+} from "../actions/modules";
+
+import {
   ADD_TEXT,
   HANDLE_DROPPING,
   SHOW_FORM,
   DELETE_ELEMENT
 } from "../actions/project";
+
 import ItemTypes from "../components/Project/ItemTypes";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
 
@@ -40,6 +47,7 @@ const initialState = {
 };
 
 const project = (state = initialState, action) => {
+  let blocks;
   switch (action.type) {
     case ADD_TEXT:
       let { index, textContent } = action.data;
@@ -98,6 +106,39 @@ const project = (state = initialState, action) => {
           ...state.blocks.slice(action.data + 1)
         ]
       };
+    case UPDATE_LOC:
+      blocks = state.blocks.slice();
+      blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc 
+      return {
+        ...state,
+        blocks: [
+          ...blocks.slice(0, action.data.moduleIdx),
+          blocks[action.data.moduleIdx],
+          ...blocks.slice(action.data.moduleIdx + 1)
+        ]
+      }
+    case REMOVE_STUDY:
+      blocks = state.blocks.slice();
+      blocks[action.data.moduleIdx].content.studies[action.data.studyIdx].active = false; 
+      return {
+        ...state,
+        blocks: [
+          ...blocks.slice(0, action.data.moduleIdx),
+          blocks[action.data.moduleIdx],
+          ...blocks.slice(action.data.moduleIdx + 1)
+        ]
+      }
+    case ADD_STUDY:
+      blocks = state.blocks.slice();
+      blocks[action.data.moduleIdx].content.studies[action.data.studyIdx].active = true; 
+      return {
+        ...state,
+        blocks: [
+          ...blocks.slice(0, action.data.moduleIdx),
+          blocks[action.data.moduleIdx],
+          ...blocks.slice(action.data.moduleIdx + 1)
+        ]
+      }
     default:
       return state;
   }
