@@ -11,6 +11,7 @@ router.post('/', async (req, res) => {
       if (err) return handleError(err);
       // saved!
     })
+    
   } catch (e) {
     console.log("error on api post /register", e);
   }

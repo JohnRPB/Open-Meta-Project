@@ -1,17 +1,19 @@
-var mongoose = require('mongoose');
-var bluebird = require('bluebird');
+var mongoose = require("mongoose");
+var bluebird = require("bluebird");
 
 mongoose.Promise = bluebird;
 
 var models = {};
 
-models.Analysis = require('./analysis.js');
-models.StudyOverflow = require('./study.js');
-models.User = require('./user.js');
+models.Analysis = require("./analysis.js");
+models.StudyOverflow = require("./study.js");
+models.User = require("./user.js");
+models.Collection = require("./collection.js");
+models.Profile = require("./Profile.js");
 
 module.exports = models;
 
-// 
+//
 // {
 //   id: 54982384,
 //   hist: [
