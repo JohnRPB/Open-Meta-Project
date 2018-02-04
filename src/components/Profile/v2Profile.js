@@ -14,8 +14,8 @@ import {
 const moment = require("moment");
 
 class Profile extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.isFetching = true;
   }
 
@@ -29,7 +29,7 @@ class Profile extends Component {
       console.log("deconstructed User", User);
     }
 
-    console.log("profile props => ", this.props);
+    console.log("props => ", this.props);
     // setting analyses content after fetching
     // if (!this.props.isFetching) {
     //   console.log("profile props inside FETCHING => ", this.props);

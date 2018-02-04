@@ -27,9 +27,12 @@ const mongoose = require("mongoose");
 const faker = require("faker");
 
 class MyAnalyses extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.isFetching = true;
+    // why arent these showing up???
+    this.UserId = "5a74fa36425cf997daab4328";
+    this.test = true;
   }
 
   componentWillMount() {
@@ -38,8 +41,11 @@ class MyAnalyses extends Component {
   }
 
   render() {
+    console.log("props after render => ", this.props);
+
     let analysisCards;
     if (!this.props.isFetching) {
+      console.log("props => ", this.props);
       analysisCards = this.props.MyAnalyses.slice(0, 3).map(analysis => {
         return (
           <Card
@@ -51,11 +57,12 @@ class MyAnalyses extends Component {
       });
     }
 
+    console.log("props in my analysis => ", this.props);
     return (
       <div className="ui  vertical masthead center aligned segment">
         <div className="following bar">
           <div className="ui container">
-            <Nav />
+            <Nav userId="5a74fa36425cf997daab4328" />
           </div>
         </div>
         <br />
@@ -75,6 +82,7 @@ class MyAnalyses extends Component {
                 </Header>
                 <br />
                 <Button.Group basic>
+                  <Button>Recent</Button>
                   <Button>Collections</Button>
                   <Button>Analyses</Button>
                   <Button>Reviews</Button>

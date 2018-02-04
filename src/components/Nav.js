@@ -2,17 +2,18 @@ import React from "react";
 import { Dropdown, Menu, Search } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
-const Nav = () => {
+const Nav = userId => {
+  console.log("userId in nav => ", userId);
   return (
     <div className="ui secondary menu">
       <NavLink to="/landing" className="item">
         Open Meta
       </NavLink>
       <NavLink to="/dashboard" className="item">
-        My Dashboard
+        Dashboard
       </NavLink>
       <NavLink to="/myanalyses" className="item">
-        My Reviews
+        My Data
       </NavLink>
 
       <div className="right menu">
@@ -22,9 +23,9 @@ const Nav = () => {
           <Dropdown.Menu>
             <Dropdown.Item>My Account</Dropdown.Item>
             <Dropdown.Item>
-              <NavLink to="/profile">Profile</NavLink>
+              <NavLink to={`/profile/`}>Profile</NavLink>
             </Dropdown.Item>
-            <Dropdown.Item>Other</Dropdown.Item>
+            <Dropdown.Item>Log Out</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </div>

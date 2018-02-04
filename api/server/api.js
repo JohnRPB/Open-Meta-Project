@@ -7,7 +7,7 @@ const api = (module.exports = require("express").Router());
 const users = require("./users.js");
 const rmarkdown = require("./rmarkdown");
 const studies = require("./study");
-const myanalyses = require("./MyAnalyses");
+const analyses = require("./analyses");
 const login = require("./login");
 const collections = require("./collections");
 
@@ -57,7 +57,7 @@ api
   .get("/express-test", (req, res) => res.send({ express: "working!" })) //demo route to prove api is working
   .use("/users", users)
   .use("/rmarkdown", rmarkdown)
-  .use("/myanalyses", myanalyses)
+  .use("/analyses", analyses)
   .use("/studies", studies)
   .use("/collections", collections);
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import {
   Grid,
   Image,
@@ -35,7 +36,11 @@ class Dashboard extends Component {
         return (
           <Card
             key={analysis._id}
-            header={analysis.data.header.title}
+            header={
+              <NavLink to={`/analysis/${analysis._id}`}>
+                {analysis.data.header.title}
+              </NavLink>
+            }
             description={faker.lorem.paragraph()}
           />
         );
@@ -79,7 +84,7 @@ class Dashboard extends Component {
               </Dimmer>
             ) : (
               <div>
-                <Header as="h2">Papers you might be interested in</Header>
+                <Header as="h2">Analyses you might be interested in</Header>
                 <Card.Group>{analysisCards}</Card.Group>
               </div>
             )}
