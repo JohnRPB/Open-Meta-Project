@@ -13,18 +13,16 @@ import StudyCheckboxContainer from "../../containers/Modules/StudyCheckboxContai
 
 const StudyInclusionBox = (props) => {
 
-  let studyIds = [];
-  for (let key in props.studies) {
-    studyIds.push(key)
-  }
+  console.log("props: ", props);
+  
 
   return (
      <List divided inverted relaxed>
-      {studyIds.map(studyId => {
+      {props.studies.map((study, studyIdx) => {
         return (
           <List.Item>
             <List.Header as="a">
-              <StudyCheckboxContainer moduleIdx={props.moduleIdx} studyId={studyId}/>
+              <StudyCheckboxContainer moduleIdx={props.moduleIdx} studyIdx={studyIdx}/>
             </List.Header>
           </List.Item>
         );

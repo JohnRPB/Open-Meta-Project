@@ -31,8 +31,8 @@ class StudyCheckbox extends React.Component {
         label={this.props.studyName}
         onChange={this.props.handleClick}
         checked={this.props.checked}
-        moduleIdx={this.props.moduleIdx}
-        studyId={this.props.studyId}
+        moduleidx={this.props.moduleIdx}
+        studyidx={this.props.studyIdx}
       />
     );
   }
