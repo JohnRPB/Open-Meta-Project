@@ -54,6 +54,7 @@ class UserForm extends Component {
           console.log("data returned => ", data);
           if (data.token) {
             this.props._addToken(data.token);
+            this.props._addId(data.id);
             this.props.history.push("/profile");
           }
           return data;
@@ -79,11 +80,13 @@ class UserForm extends Component {
           console.log("data returned => ", data);
           if (data.token) {
             this.props._addToken(data.token);
+            this.props._addId(data.id);
             //checking the decoded of the token
             console.log(
               "this is the token going to the token test route =>",
               this.props._token
             );
+            console.log("this is the id from the server =>", data.id);
 
             fetch("http://localhost:8000/api/tokentest", {
               method: "get",
