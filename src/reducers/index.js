@@ -5,8 +5,10 @@ import demo from "./demo";
 import project from "./project";
 import MyAnalysesPage from "./MyAnalyses";
 import Dashboard from "./Dashboard";
-import search from "./search";
+import Token from "./Token"
 import Profile from "./Profile";
+import sitesearch from "./sitesearch";
+import search from "./search";
 import sitesearch from "./sitesearch";
 import modules from "./modules";
 
@@ -15,6 +17,7 @@ const Reducers = combineReducers({
   project,
   MyAnalysesPage,
   Dashboard,
+  Token,
   routing: routerReducer,
   search,
   Profile,

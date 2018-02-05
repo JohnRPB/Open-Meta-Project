@@ -11,7 +11,7 @@
 //for rest of team
 //for each api route check the cookie
 
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 //styling
 import "./UserForm.css";
@@ -22,7 +22,7 @@ var serialize = require("form-serialize");
 //fix form serializer
 
 class UserForm extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.sendForm = this.sendForm.bind(this);
   }
@@ -31,28 +31,74 @@ class UserForm extends Component {
     e.preventDefault();
     var form = document.querySelector("#example-form");
     var str = serialize(form);
-    var obj = serialize(form, {hash: true});
+    var obj = serialize(form, { hash: true });
     console.log("obj =>", obj.passHash);
 
-    fetch("http://localhost:8000/api/login", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(obj)
-    }).then(response => {
-      // if(response.ok) {
-      //   return response.blob();
-      // }
-      // throw new Error('Network response was not ok.');
-      return response.json()
-    }).then(data => {
-      console.log("data returned => ", data);
-      return data
-      // data = data.json()
-      // console.log("data returned => ", data);
-    }).catch(error => console.error('Error:', error))
+    if (obj.action == "login") {
+      console.log("login starting");
+      fetch("http://localhost:8000/api/login", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(obj)
+      })
+        .then(response => {
+          // if(response.ok) {
+          //   return response.blob();
+          // }
+          // throw new Error('Network response was not ok.');
+          return response.json();
+        })
+        .then(data => {
+          console.log("data returned => ", data);
+          if (data.token) {
+            this.props._addToken(data.token);
+            this.props.history.push("/profile");
+          }
+          return data;
+          // data = data.json()
+          // console.log("data returned => ", data);
+        })
+        .catch(error => console.error("Error:", error));
+    }
 
+    if (obj.action == "register") {
+      console.log("register starting");
+      fetch("http://localhost:8000/api/register", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(obj)
+      })
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          console.log("data returned => ", data);
+          if (data.token) {
+            this.props._addToken(data.token);
+            //checking the decoded of the token
+            console.log(
+              "this is the token going to the token test route =>",
+              this.props._token
+            );
+
+            fetch("http://localhost:8000/api/tokentest", {
+              method: "get",
+              headers: new Headers({
+                "x-access-token": this.props._token
+              })
+            }).then(data => {
+              this.props.history.push("/profile");
+            });
+          }
+          console.log("token added");
+          return data;
+        })
+        .catch(error => console.error("Error:", error));
+    }
   }
 
   render() {
@@ -81,7 +127,7 @@ class UserForm extends Component {
                     placeholder="password"
                   />
                   <div>
-                    <input type="passHash" placeholder="repeat password" />
+                    <input type="password" placeholder="repeat password" />
                     <input type="submit" value="reset password" />
                     <div>
                       <input type="submit" value="register" />
