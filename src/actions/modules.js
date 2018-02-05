@@ -57,9 +57,9 @@ const computeOcpuAndGetImg = async (rootUrl, data) => {
 
     // Ocpu returns indented list of URLS; we split it here
     let resultArr = postR.data.split('\n');
-    let graphicalOutput = resultArr.filter(url => url.match(/graphics/g));
+    let graphicalOutput = resultArr.filter(url => url.match(/\.html/g));
    console.log( `https://cloud.opencpu.org${graphicalOutput}/png`);
-    return `https://cloud.opencpu.org${graphicalOutput}/png`;
+    return `https://cloud.opencpu.org${graphicalOutput}`;
 }
 
 export const UPDATE_SINGLE_STUDY = 'UPDATE_SINGLE_STUDY';
