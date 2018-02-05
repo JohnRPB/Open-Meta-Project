@@ -1,7 +1,7 @@
 module.exports = {
-  analysis: 10,
-  user: 10,
-  //added*
-  profile: 10,
-  collection: 10
+  analysis: 30,
+  category: 5,
+  collection: 10,
+  comment: 80,
+  user: 20,
 };

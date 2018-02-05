@@ -31,7 +31,7 @@ api
   .use("/myanalyses", myanalyses)
   .use("/studies", studies)
   .use("/collections", collections)
-  // .use("/login", login)
+  .use("/login", login)
 
 // No routes matched? 404.
 api.use((req, res) => res.status(404).end());

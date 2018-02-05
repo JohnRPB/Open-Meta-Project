@@ -1,17 +1,48 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let ProfileSchema = new Schema({
-  f_name: String,
-  l_name: String,
-  title: String,
-  organization: String,
-  description: String,
-  image: String
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
+  fname: {
+    type: String,
+  },
+  lname: {
+    type: String,
+  },
+  title: {
+    type: String,
+  },
+  email: {
+    type: String,
+  },
+  organization: {
+    type: String,
+  },
+  background: {
+    type: String,
+  },
+  image: {
+    type: String,
+  },
+  forkedFromTimes: {
+    type: Number,
+  },
+  forkedTimes: {
+    type: Number,
+  },
   // reviews: [Schema.Types.ObjectId],
   // papers: [Schema.Types.ObjectId],
 });
+// const autoPop = next => {
+//   this.populate('User');
+//
+//   next();
+// };
+// ProfileSchema.pre('find', autoPop).pre('findOne', autoPop);
 
-let Profile = mongoose.model("Profile", ProfileSchema);
+let Profile = mongoose.model('Profile', ProfileSchema);
 
 module.exports = Profile;
