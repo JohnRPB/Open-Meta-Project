@@ -1,9 +1,12 @@
-import {NEW_TABLES, PERSIST_TABLE} from '../actions/search'
+import {BUMP_AUTHORS, CEASE_PERSIST, CHANGE_PAGE, FLIP_ACTIVE, NEW_TABLES, PERSIST_TABLE, RESET_AUTHORS} from '../actions/search'
 
 const initialState = {
   persistObj: {},
   persistantTables: [],
-  newTables:[]
+  newTables:[],
+  page: 1,
+  active: 1,
+  authors: 1
 }
 
 const search = (state = initialState, action) => {
@@ -12,10 +15,10 @@ const search = (state = initialState, action) => {
       let checkedStudies = action.tables.filter(study => !state.persistObj[study.id]);
       return {
         ...state,
-        newTables: checkedStudies
+        newTables: checkedStudies,
+        page: 1
       };
     case PERSIST_TABLE:
-      console.log(action);
       let newPersistTableArray = state.persistantTables.slice(0);
       let newPersistTable; 
       let newHashObj = Object.assign({}, state.hashObj);
@@ -32,6 +35,45 @@ const search = (state = initialState, action) => {
         persistantTables: newPersistTableArray,
         newTables: updatedNewTables,
         persistObj: newHashObj
+      }
+    case CEASE_PERSIST:
+      console.log(action);
+      let updatedPersistTables = [];
+      let updatedNonPersist = [];
+      let updatedHashObj = {}
+      state.persistantTables.forEach(study => {
+        if(study.id == action.table){
+          updatedNonPersist = [study].concat(state.newTables.slice(0));
+        } else {
+          updatedPersistTables.push(study);
+          updatedHashObj[study.id] = 1;
+        }
+      });
+      return {
+        ...state,
+        persistantTables: updatedPersistTables,
+        newTables: updatedNonPersist,
+        persistObj: updatedHashObj
+      }
+    case CHANGE_PAGE:
+      return {
+        ...state,
+        page: action.number
+      }
+    case FLIP_ACTIVE:
+      return {
+        ...state,
+        active: !state.active
+      }
+    case BUMP_AUTHORS:
+      return {
+        ...state,
+        authors: state.authors + 1
+      }
+    case RESET_AUTHORS:
+      return {
+        ...state,
+        authors: 1
       }
     default:
       return state

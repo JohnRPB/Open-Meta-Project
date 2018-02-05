@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavContainer from "../../containers/NavContainer";
 import update from "immutability-helper";
 import { DragDropContext } from "react-dnd";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
@@ -48,6 +49,7 @@ class MasterDocument extends Component {
 
     return (
       <div>
+        <NavContainer />
         <h1>Welcome to your project</h1>
         <h2>Drag and drop blocks onto your document</h2>
         <div className="ui fluid Document">

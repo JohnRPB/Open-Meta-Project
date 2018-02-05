@@ -8,7 +8,8 @@ import serialize from "form-serialize";
 function mapStateToProps(state, ownProps) {
   return {
     query: state.sitesearch.query,
-    results: state.sitesearch.results
+    results: state.sitesearch.results,
+    field: state.sitesearch.value
   };
 }
 
@@ -21,12 +22,12 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
       console.log("VALUE", value);
       const data = serialize(form, { hash: true });
       console.log("DATA FROM ACTION", data);
-      if (value === "Collection") {
-        dispatch(getCollections(data));
-      } else if (value === "User") {
-        dispatch(getUsers(data));
+      if (value == "Collection") {
+        dispatch(getCollections(data, value));
+      } else if (value == "User") {
+        dispatch(getUsers(data, value));
       } else {
-        dispatch(getAnalyses(data));
+        dispatch(getAnalyses(data, "Analysis"));
       }
       //form.reset();
     }

@@ -11,11 +11,13 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 import ProfileContainer from "./containers/ProfileContainer";
 import MyAnalyses from "./containers/MyAnalyses";
-import SearchContainer from "./containers/SearchContainer";
+import Search from "./components/Search/Search";
+import AnalysisContainer from "./containers/AnalysisContainer.js";
+import AllAnalyses from "./containers/AllAnalyses";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-const Routes = () => {
+const Routes = ({ history }) => {
   return (
     <Router>
       <div>
@@ -28,8 +30,15 @@ const Routes = () => {
         <Route exact path="/dashboard" component={DashboardContainer} />
         <Route exact path="/landing" component={Landing} />
         <Route exact path="/profile/:user_id?" component={ProfileContainer} />
-        <Route exact path="/myanalyses" component={MyAnalyses} />
-        <Route exact path="/search" component={SearchContainer} />
+        <Route exact path="/search" component={Search} />
+        <Route exact path="/myanalyses/:user_id?" component={MyAnalyses} />
+        {/* ANALYSIS ROUTES */}
+        <Route exact path="/analyses" component={AllAnalyses} />
+        <Route
+          exact
+          path="/analysis/:anaysis_id?"
+          component={AnalysisContainer}
+        />
       </div>
     </Router>
   );

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import NavContainer from "../../containers/NavContainer";
 import Nav from "../Nav";
 import {
   Dropdown,
@@ -17,7 +19,6 @@ import {
   Dimmer,
   Loader
 } from "semantic-ui-react";
-import johann from "../../assets/images/johann.jpeg";
 import Related from "./Related";
 import ModalForm from "./ModalForm";
 import AnalysisModal from "./AnalysisModal";
@@ -26,57 +27,85 @@ import Table from "../Profile/Table";
 const faker = require("faker");
 
 class MyAnalyses extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.isFetching = true;
+    // why arent these showing up???
+    this.UserId = "5a74fa36425cf997daab4328";
+    this.test = true;
   }
 
   componentWillMount() {
-    this.props.getAnalyses("*");
+    // this.props.getAnalyses("*");
     // this.props.getCollections("*")
   }
 
   render() {
+    // creating cards from user's analyses
     let analysisCards;
     if (!this.props.isFetching) {
-      analysisCards = this.props.MyAnalyses.slice(0, 3).map(analysis => {
-        return (
-          <Card
-            fluid
-            header={analysis.data.header.title}
-            description={faker.lorem.paragraph()}
-          />
-        );
-      });
+      console.log("MY DATA props => ", this.props);
+      analysisCards = this.props.Dashboard.user.analyses
+        .slice(0, 3)
+        .map(analysis => {
+          return (
+            <Card
+              fluid
+              key={analysis._id}
+              header={
+                <NavLink to={`/analysis/${analysis._id}`}>
+                  {analysis.data.header.title}
+                </NavLink>
+              }
+              description={faker.lorem.paragraph()}
+            />
+          );
+        });
     }
+    console.log("MYANALYSES props => ", this.props);
 
     return (
       <div className="ui  vertical masthead center aligned segment">
         <div className="following bar">
           <div className="ui container">
-            <Nav />
+            {/* <Nav userId="5a74fa36425cf997daab4328" /> */}
+            <NavContainer />
           </div>
         </div>
         <br />
         <br />
         <Container>
           <Grid>
+            {/* header & sub-menu */}
             <Grid.Row>
               {" "}
               <Grid.Column width={3} />
               <Grid.Column width={3}>
-                <Image src={johann} circular size="small" />
+                <Image
+                  src={`${this.props.Dashboard.user.profile.image}`}
+                  circular
+                  size="small"
+                />
               </Grid.Column>
               <Grid.Column width={4}>
                 <br />
                 <Header as="h1" floated="left">
-                  Johann
+                  {this.props.Dashboard.user.profile.f_name}
                 </Header>
                 <br />
                 <Button.Group basic>
-                  <Button>Collections</Button>
-                  <Button>Analyses</Button>
-                  <Button>Reviews</Button>
+                  <Button>
+                    <NavLink to="/myanalyses">Recent</NavLink>
+                  </Button>
+                  <Button>
+                    <NavLink to="/collections">Collections</NavLink>
+                  </Button>
+                  <Button>
+                    <NavLink to="/analyses">Analyses</NavLink>
+                  </Button>
+                  <Button>
+                    <NavLink to="/reviews">Reviews</NavLink>
+                  </Button>
                 </Button.Group>
               </Grid.Column>
             </Grid.Row>

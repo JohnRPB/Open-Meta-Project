@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     testStatType: DataTypes.STRING,
     testStatVal: DataTypes.FLOAT,
     stdErr: DataTypes.FLOAT,
+    url: DataTypes.STRING,
   });
 
   Study.associate = function(models) {
@@ -22,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Study.belongsToMany(models.Tag, {
       through: models.JoinStudyTag,
-      as: 'TaggedStudy',
+      as: 'Tags',
       foreignKey: 'studyId',
     });
 
@@ -32,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Study.belongsToMany(models.Author, {
       through: models.JoinStudyAuthor,
-      as: 'Studies',
+      as: 'Authors',
       foreignKey: 'studyId',
     });
   };

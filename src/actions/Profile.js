@@ -50,7 +50,7 @@ export function getAnalysesSuccess(data) {
 export function getAnalyses(id) {
   return dispatch => {
     axios
-      .get(`${root}/api/myanalyses`)
+      .get(`${root}/api/analyses`)
       .then(response => {
         dispatch(getAnalysesSuccess(response.data));
       })
