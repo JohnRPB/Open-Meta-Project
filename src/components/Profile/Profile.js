@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Nav from "../Nav";
+import NavContainer from "../../containers/NavContainer";
 import {
   Segment,
   Grid,
@@ -44,7 +44,7 @@ class Profile extends Component {
       <div class="ui  vertical masthead center aligned segment">
         <div class="following bar">
           <div class="ui container">
-            <Nav />
+            <NavContainer />
           </div>
         </div>
         <br />

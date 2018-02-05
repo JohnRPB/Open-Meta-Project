@@ -7,18 +7,26 @@ import {
   GET_ANALYSES_ERROR,
   GET_COLLECTIONS_RESULTS,
   GET_COLLECTIONS_START,
-  GET_COLLECTIONS_ERROR
+  GET_COLLECTIONS_ERROR,
+  REDIRECT_SUBMISSION
 } from "../actions/sitesearch";
 
 const initialState = {
   query: "",
   results: [],
+  value: null,
   isFetching: false,
-  error: null
+  error: null,
+  submission: false
 };
 
 const sitesearch = (state = initialState, action) => {
   switch (action.type) {
+    case REDIRECT_SUBMISSION:
+      return {
+        ...state,
+        submission: true
+      };
     case GET_USERS_START:
       return {
         ...state,
@@ -29,14 +37,14 @@ const sitesearch = (state = initialState, action) => {
       return {
         ...state,
         isFetching: false,
+        query: action.query,
         results: action.data,
-        query: "Test Succeeded!  " + action.data
+        value: action.value
       };
     case GET_USERS_ERROR:
       return {
         ...state,
         isFetching: false,
-        results: action.data,
         query: "Test Failed!  " + action.data
       };
     case GET_ANALYSES_START:
@@ -46,18 +54,17 @@ const sitesearch = (state = initialState, action) => {
         error: null
       };
     case GET_ANALYSES_RESULTS:
-      console.log("ACTION.DATA =>", action.data);
       return {
         ...state,
         isFetching: false,
         query: action.query,
-        results: action.data
+        results: action.data,
+        value: action.value
       };
     case GET_ANALYSES_ERROR:
       return {
         ...state,
         isFetching: false,
-        results: action.data,
         query: "Test Failed  " + action.data
       };
     case GET_COLLECTIONS_START:
@@ -70,14 +77,14 @@ const sitesearch = (state = initialState, action) => {
       return {
         ...state,
         isFetching: false,
-        query: action.data,
-        results: action.data
+        query: action.query,
+        results: action.data,
+        value: action.value
       };
     case GET_COLLECTIONS_ERROR:
       return {
         ...state,
         isFetching: false,
-        results: action.data,
         query: "Test Failed  " + action.data
       };
     default:

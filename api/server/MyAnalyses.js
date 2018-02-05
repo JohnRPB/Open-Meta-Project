@@ -29,7 +29,7 @@ router.get("/:search", async function(req, res, next) {
 
   //Handle asynchronous problems by putting the following outside the try block
   result.forEach(element => {
-    if (element.data.header.title.includes(query)) {
+    if (element.data.header.title.toLowerCase().includes(query.toLowerCase())) {
       console.log(element.data.header.title);
       results.push(element);
     }
