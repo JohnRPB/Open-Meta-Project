@@ -74,7 +74,16 @@ class UserForm extends Component {
         console.log("data returned => ", data);
         if(data.token){
           this.props._addToken(data.token)
-          fetch("http://localhost:8000/api/tokentest")
+          //checking the decoded of the token
+          console.log("this is the token going to the token test route =>", this.props._token);
+
+          fetch("http://localhost:8000/api/tokentest", {
+            method: "get",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({token: this.props._token})
+          })
           this.props.history.push("/profile")
         }
         console.log("token added");

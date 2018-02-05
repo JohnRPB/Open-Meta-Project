@@ -4,6 +4,12 @@ import { bindActionCreators } from 'redux';
 
 import UserForm from '../components/Login/UserForm' //component inside of login
 
+function mapStateToProps(state) {
+  return {
+    _token: state.Token.token
+  };
+}
+
 function mapDispatchToProps(dispatch) {
   return {
     _addToken: (token) => {
@@ -12,4 +18,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(null, mapDispatchToProps)(UserForm);
+export default connect(mapStateToProps, mapDispatchToProps)(UserForm);

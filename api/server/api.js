@@ -1,4 +1,5 @@
 const api = (module.exports = require("express").Router());
+var jwt = require('jsonwebtoken');
 
 // const products = require('./products');
 // const reviews = require('./reviews');
@@ -41,10 +42,11 @@ api.use((req, res, next) => {
       'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
       (err, decod) => {
         if (err) {
-          res.status(403).json({
-            message: 'Wrong Token',
-          });
-          //remove this part when starting auth for all routes
+          // res.status(403).json({
+          //   message: 'Wrong Token',
+          // });
+          //remove this part when starting auth for all routes, and use the above
+          console.log("wrong token");
           next()
         } else {
           //If decoded then call next() so that respective route is called.
@@ -54,9 +56,12 @@ api.use((req, res, next) => {
       },
     );
   } else {
-    res.status(403).json({
-      message: 'No Token',
-    });
+    // res.status(403).json({
+    //   message: 'No Token',
+    // });
+    //remove this part when starting auth for all routes, and use the above
+    console.log("no token");
+    next()
   }
 });
 
