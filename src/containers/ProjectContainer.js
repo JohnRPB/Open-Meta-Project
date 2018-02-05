@@ -13,7 +13,7 @@ import MasterDocument from "../components/Project/MasterDocument";
 
 function mapStateToProps(state) {
   return {
-    analyses: state.project.analyses,
+    blocks: state.project.blocks,
     dustbins: state.project.dustbins,
     boxes: state.project.boxes,
     droppedBoxNames: state.project.droppedBoxNames,

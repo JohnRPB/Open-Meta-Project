@@ -23,7 +23,6 @@ import ModalForm from "./ModalForm";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
 import Table from "../Profile/Table";
-const mongoose = require("mongoose");
 const faker = require("faker");
 
 class MyAnalyses extends Component {
@@ -34,6 +33,7 @@ class MyAnalyses extends Component {
 
   componentWillMount() {
     this.props.getAnalyses("*");
+    // this.props.getCollections("*")
   }
 
   render() {

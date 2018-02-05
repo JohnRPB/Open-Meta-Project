@@ -28,6 +28,7 @@ class Dashboard extends Component {
   render() {
     console.log("dashboard props => ", this.props);
     let analysisCards;
+
     if (!this.props.isFetching) {
       console.log("inside if");
       analysisCards = this.props.DashboardRelated.slice(0, 6).map(analysis => {

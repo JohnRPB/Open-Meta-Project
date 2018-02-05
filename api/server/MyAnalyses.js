@@ -10,7 +10,6 @@ let Analysis = models.Analysis;
 router.get("/", function(req, res, next) {
   Analysis.find({})
     .then(result => {
-      console.log("result => ", result);
       res.json(result);
     })
     .catch(e => res.status(500).send(e.stack));
