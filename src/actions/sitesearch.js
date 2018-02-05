@@ -41,19 +41,20 @@ export const getAnalysesResults = data => {
   return { type: GET_ANALYSES_RESULTS, data };
 };
 export const GET_ANALYSES_ERROR = "GET_ANALYSES_ERROR";
-export const getAnalysesError = data => {
-  return { type: GET_ANALYSES_ERROR, data };
+export const getAnalysesError = (data, query) => {
+  return { type: GET_ANALYSES_ERROR, data, query };
 };
 
 export function getAnalyses(data) {
   return dispatch => {
     dispatch(getAnalysesStart());
+    console.log("query =>", data.query);
+    let query = data.query;
     axios
-      .get(`${root}/api/myanalyses`)
+      .get(`http://localhost:8000/api/myanalyses/${query}`)
       .then(response => {
-        console.log("response =>", response);
-        console.log("query =>", data.query);
-        dispatch(getAnalysesResults(response.data));
+        console.log("response =>", response.data);
+        dispatch(getAnalysesResults(response.data, query));
       })
       .catch(e => {
         dispatch(getAnalysesError(e));
@@ -82,7 +83,7 @@ export function getCollections(data) {
       .then(response => {
         console.log("response =>", response);
         console.log("query =>", data.query);
-        dispatch(getCollectionsResults(response.data));
+        dispatch(getCollectionsResults(response));
       })
       .catch(e => {
         dispatch(getCollectionsError(e));

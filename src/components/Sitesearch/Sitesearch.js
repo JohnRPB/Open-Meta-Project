@@ -39,7 +39,7 @@ class Sitesearch extends Component {
         <br />
         <br />
         <Container>
-          <form>
+          <div>
             <div className="ui fluid category search">
               <form
                 onSubmit={e => handleSubmit(e)}
@@ -53,12 +53,15 @@ class Sitesearch extends Component {
                   //onChange={e => onChange(e)}
                 />
                 {/* <i type="submit" className="search icon" /> */}
-                <button class="ui primary basic button" type="submitAnalyses">
+                <button
+                  className="ui primary basic button"
+                  type="submitAnalyses"
+                >
                   Analyses
                 </button>
 
                 <button
-                  class="ui secondary basic button"
+                  className="ui secondary basic button"
                   onClick={e => handleSubmit(e, "Collection")}
                 >
                   Collections
@@ -66,7 +69,7 @@ class Sitesearch extends Component {
 
                 <button
                   onClick={e => handleSubmit(e, "User")}
-                  class="ui positive basic button"
+                  className="ui positive basic button"
                 >
                   People
                 </button>
@@ -75,7 +78,7 @@ class Sitesearch extends Component {
             <div className="results">
               <Results results={results} />
             </div>
-          </form>
+          </div>
           <GoogleSearch />
         </Container>
       </div>

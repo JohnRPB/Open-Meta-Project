@@ -5,9 +5,9 @@ const Results = ({ results }) => {
     return (
       <ul>
         {results.map((result, i) => (
-          <li class="ui card" key={i}>
-            {result}
-          </li>
+          <a className="ui card" key={i}>
+            {JSON.stringify(result)}
+          </a>
         ))}
       </ul>
     );

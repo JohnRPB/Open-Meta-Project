@@ -46,13 +46,12 @@ const sitesearch = (state = initialState, action) => {
         error: null
       };
     case GET_ANALYSES_RESULTS:
-      console.log(action.data);
+      console.log("ACTION.DATA =>", action.data);
       return {
         ...state,
         isFetching: false,
-        query: action.data,
-        results: action.data,
-        query: "Test Succeeded!  " + action.data
+        query: action.query,
+        results: action.data
       };
     case GET_ANALYSES_ERROR:
       return {
@@ -72,8 +71,7 @@ const sitesearch = (state = initialState, action) => {
         ...state,
         isFetching: false,
         query: action.data,
-        results: action.data,
-        query: "Test Succeeded!  " + action.data
+        results: action.data
       };
     case GET_COLLECTIONS_ERROR:
       return {
