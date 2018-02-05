@@ -13,12 +13,12 @@ module.exports = {
       joinStudyTagArray.push({
         studyId: Math.floor(Math.random() * (studyNum + 1)),
         tagId: Math.floor(Math.random() * (tagNum + 1)),
+        weight: Math.floor(1 + Math.random() * 100),
       });
     }
     // console.log("joinStudyTagArray: ", joinStudyTagArray);
-    
 
-    return queryInterface.bulkInsert("JoinStudyTags", joinStudyTagArray);
+    return queryInterface.bulkInsert('JoinStudyTags', joinStudyTagArray);
   },
 
   down: (queryInterface, Sequelize) => {

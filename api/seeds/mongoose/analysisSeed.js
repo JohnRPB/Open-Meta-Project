@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const mongoModels = require('../../models/mongoose');
 const Analysis = mongoModels.Analysis;
+const User = mongoModels.User;
 const StudyOverflow = mongoModels.StudyOverflow;
 const faker = require('faker');
 const models = require('../../models/sequelize');
@@ -11,6 +12,7 @@ const seed = async n => {
   try {
     let authors = await Authors.findAll();
     let studies = await StudyOverflow.find();
+    let users = await User.find();
     for (let i = 0; i < n; i++) {
       let idArray = [];
       let includeArray = [];
