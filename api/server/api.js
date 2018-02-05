@@ -11,6 +11,7 @@ const myanalyses = require("./MyAnalyses");
 const login = require("./login")
 const register = require("./register")
 const collections = require("./collections");
+const tokentest = require("./tokentest");
 
 api.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -29,38 +30,41 @@ api.use("/register", register)
 //use the token to verify user and allow him/her to use the site
 // ------------
 
-// api.use((req, res, next) => {
-//   // check header or url parameters or post parameters for token
-//   var token =
-//     req.body.token || req.query.token || req.headers['x-access-token'];
-//   if (token) {
-//     //Decode the token
-//     jwt.verify(
-//       token,
-//       'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
-//       (err, decod) => {
-//         if (err) {
-//           res.status(403).json({
-//             message: 'Wrong Token',
-//           });
-//         } else {
-//           //If decoded then call next() so that respective route is called.
-//           req.decoded = decod;
-//           next();
-//         }
-//       },
-//     );
-//   } else {
-//     res.status(403).json({
-//       message: 'No Token',
-//     });
-//   }
-// });
+api.use((req, res, next) => {
+  // check header or url parameters or post parameters for token
+  var token =
+    req.body.token || req.query.token || req.headers['x-access-token'];
+  if (token) {
+    //Decode the token
+    jwt.verify(
+      token,
+      'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
+      (err, decod) => {
+        if (err) {
+          res.status(403).json({
+            message: 'Wrong Token',
+          });
+          //remove this part when starting auth for all routes
+          next()
+        } else {
+          //If decoded then call next() so that respective route is called.
+          req.decoded = decod;
+          next();
+        }
+      },
+    );
+  } else {
+    res.status(403).json({
+      message: 'No Token',
+    });
+  }
+});
 
 //rest of the backend
 api
   .get("/express-test", (req, res) => res.send({ express: "working!" })) //demo route to prove api is working
   .use("/users", users)
+  .use("/tokentest", tokentest)
   .use("/rmarkdown", rmarkdown)
   .use("/myanalyses", myanalyses)
   .use("/studies", studies)
