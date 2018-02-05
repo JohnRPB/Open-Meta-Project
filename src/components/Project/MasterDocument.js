@@ -68,7 +68,6 @@ class MasterDocument extends Component {
           <Grid.Column>
             <div ref={this.handleContextRef}>
               <Segment>
-                {/* <Grid.Column width={4}> */}
                 <Rail position="left">
                   <Sticky context={contextRef}>
                     <h2>Modules</h2>
@@ -84,9 +83,7 @@ class MasterDocument extends Component {
                     </div>
                   </Sticky>
                 </Rail>
-                {/* </Grid.Column> */}
 
-                {/* <Grid.Column width={12}> */}
                 <h2>Document</h2>
                 <div>
                   {blocks.map((block, index) => {
@@ -113,7 +110,7 @@ class MasterDocument extends Component {
                                 className="submitText ui primary button"
                                 type="submit"
                               >
-                                +
+                                Add Text
                               </button>
                             </Form>
                             <div>
@@ -135,7 +132,7 @@ class MasterDocument extends Component {
                                 className="negative ui button"
                                 onClick={e => handleDelete(e, index)}
                               >
-                                Delete
+                                Delete Item
                               </button>
                             </div>
                           </div>
@@ -152,7 +149,7 @@ class MasterDocument extends Component {
                         placeholder="Input text here"
                       />
                       <button className="ui primary button" type="submit">
-                        +
+                        Add Text
                       </button>
                     </Form>
                     <div>
@@ -167,7 +164,6 @@ class MasterDocument extends Component {
                     </div>
                   </div>
                 ) : null}
-                {/* </Grid.Column> */}
 
                 <Module moduleIdx={0} />
               </Segment>
