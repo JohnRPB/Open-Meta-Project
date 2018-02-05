@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavContainer from "../../containers/NavContainer";
 import Nav from "../Nav";
 import {
   Dropdown,
@@ -54,7 +55,7 @@ class MyAnalyses extends Component {
       <div className="ui  vertical masthead center aligned segment">
         <div className="following bar">
           <div className="ui container">
-            <Nav />
+            <NavContainer />
           </div>
         </div>
         <br />

@@ -1,41 +1,45 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Sitesearch from "../components/Sitesearch/Sitesearch";
-import { getUsers, getAnalyses, getCollections } from "../actions/sitesearch";
+import Nav from "../components/Nav";
+import {
+  getUsers,
+  getAnalyses,
+  getCollections,
+  redirectSubmission
+} from "../actions/sitesearch";
 import { withRouter } from "react-router";
 import serialize from "form-serialize";
+import { push } from "react-router-redux";
 
 function mapStateToProps(state, ownProps) {
   return {
     query: state.sitesearch.query,
     results: state.sitesearch.results,
-    field: state.sitesearch.value
+    field: state.sitesearch.value,
+    submission: state.sitesearch.submission
   };
 }
 
 const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
+    submission: () => {
+      dispatch(redirectSubmission());
+    },
     handleSubmit: (e, value) => {
       e.preventDefault();
-      e.stopPropagation();
+      //e.stopPropagation();
       const form = e.target;
       console.log("VALUE", value);
       const data = serialize(form, { hash: true });
       console.log("DATA FROM ACTION", data);
-      if (value == "Collection") {
-        dispatch(getCollections(data, value));
-      } else if (value == "User") {
-        dispatch(getUsers(data, value));
-      } else {
-        dispatch(getAnalyses(data, "Analysis"));
-      }
+      dispatch(getAnalyses(data, "Analysis"));
       //form.reset();
     }
   };
 };
 
-const SitesearchContainer = withRouter(
-  connect(mapStateToProps, mapDispatchtoProps)(Sitesearch)
+const NavContainer = withRouter(
+  connect(mapStateToProps, mapDispatchtoProps)(Nav)
 );
 
-export default SitesearchContainer;
+export default NavContainer;

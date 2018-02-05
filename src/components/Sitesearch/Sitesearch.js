@@ -10,7 +10,7 @@ import {
 } from "semantic-ui-react";
 import Results from "./Results";
 //import Feed from "./Feed";
-import Nav from "../Nav";
+import NavContainer from "../../containers/NavContainer";
 //import Related from "./Related";
 import GoogleSearch from "./GoogleSearch";
 
@@ -19,27 +19,32 @@ class Sitesearch extends Component {
     super(props);
   }
 
+  // console.log("QUERY IS", this.props.location.search.slice(7));
+  // if (this.props.location.search.slice(7)) {
+  //   this.props.query = this.props.location.search.slice(7);
+  // }
   render() {
     const {
       results,
       handleSubmit,
       onChange,
-      active,
+      field,
       onClickCollection,
-      onClickUser
+      onClickUser,
+      query
     } = this.props;
 
     return (
       <div className="ui vertical masthead center aligned segment">
         <div className="following bar">
           <div className="ui container">
-            <Nav />
+            <NavContainer />
           </div>
         </div>
         <br />
         <br />
         <Container>
-          <form>
+          <div>
             <div className="ui fluid category search">
               <form
                 onSubmit={e => handleSubmit(e)}
@@ -50,32 +55,58 @@ class Sitesearch extends Component {
                   name="query"
                   type="text"
                   placeholder="Search..."
-                  //onChange={e => onChange(e)}
+                  defaultValue={this.props.location.search.slice(7)}
                 />
-                {/* <i type="submit" className="search icon" /> */}
-                <button class="ui primary basic button" type="submitAnalyses">
-                  Analyses
-                </button>
+
+                <button className="ui primary basic button">Analyses</button>
+              </form>
+
+              <form
+                onSubmit={e => handleSubmit(e, "Collection")}
+                className="ui fluid icon input"
+              >
+                <input
+                  className="prompt"
+                  name="query"
+                  type="text"
+                  placeholder="Search..."
+                  defaultValue={this.props.location.search.slice(7)}
+                />
 
                 <button
-                  class="ui secondary basic button"
-                  onClick={e => handleSubmit(e, "Collection")}
+                  className="ui secondary basic button"
+                  //  onClick={e => handleSubmit(e, "Collection")}
                 >
                   Collections
                 </button>
+              </form>
+
+              <form
+                onSubmit={e => handleSubmit(e, "User")}
+                className="ui fluid icon input"
+              >
+                <input
+                  className="prompt"
+                  name="query"
+                  type="text"
+                  placeholder="Search..."
+                  defaultValue={this.props.location.search.slice(7)}
+                />
 
                 <button
-                  onClick={e => handleSubmit(e, "User")}
-                  class="ui positive basic button"
+                  //  onClick={e => handleSubmit(e, "User")}
+                  className="ui positive basic button"
                 >
                   People
                 </button>
               </form>
             </div>
             <div className="results">
-              <Results results={results} />
+              <Results query={query} results={results} field={field} />
             </div>
-          </form>
+          </div>
+
+          <h3>Or, search OpenMeta's webpages:</h3>
           <GoogleSearch />
         </Container>
       </div>
