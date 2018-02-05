@@ -1,8 +1,4 @@
-import {
-  REMOVE_STUDY,
-  ADD_STUDY,
-  UPDATE_LOC
-} from "../actions/modules";
+import { REMOVE_STUDY, ADD_STUDY, UPDATE_LOC } from "../actions/modules";
 
 import {
   ADD_TEXT,
@@ -15,8 +11,7 @@ import ItemTypes from "../components/Project/ItemTypes";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
 
 const initialState = {
-  blocks: [
-  ],
+  blocks: [],
   dustbins: [
     {
       accepts: [
@@ -39,7 +34,7 @@ const initialState = {
     { name: "Mean", type: ItemTypes.SUMMARY },
     { name: "Regression", type: ItemTypes.METHOD },
     { name: "Funnel Plot", type: ItemTypes.GRAPH },
-    { name: "module", type: ItemTypes.GRAPH, content: { stuff: "dfasdf"} }
+    { name: "module", type: ItemTypes.GRAPH, content: { stuff: "dfasdf" } }
   ],
   droppedBoxNames: [],
   showForm: null,
@@ -108,7 +103,7 @@ const project = (state = initialState, action) => {
       };
     case UPDATE_LOC:
       blocks = state.blocks.slice();
-      blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc 
+      blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
       return {
         ...state,
         blocks: [
@@ -116,10 +111,12 @@ const project = (state = initialState, action) => {
           blocks[action.data.moduleIdx],
           ...blocks.slice(action.data.moduleIdx + 1)
         ]
-      }
+      };
     case REMOVE_STUDY:
       blocks = state.blocks.slice();
-      blocks[action.data.moduleIdx].content.studies[action.data.studyIdx].active = false; 
+      blocks[action.data.moduleIdx].content.studies[
+        action.data.studyIdx
+      ].active = false;
       return {
         ...state,
         blocks: [
@@ -127,10 +124,12 @@ const project = (state = initialState, action) => {
           blocks[action.data.moduleIdx],
           ...blocks.slice(action.data.moduleIdx + 1)
         ]
-      }
+      };
     case ADD_STUDY:
       blocks = state.blocks.slice();
-      blocks[action.data.moduleIdx].content.studies[action.data.studyIdx].active = true; 
+      blocks[action.data.moduleIdx].content.studies[
+        action.data.studyIdx
+      ].active = true;
       return {
         ...state,
         blocks: [
@@ -138,7 +137,7 @@ const project = (state = initialState, action) => {
           blocks[action.data.moduleIdx],
           ...blocks.slice(action.data.moduleIdx + 1)
         ]
-      }
+      };
     default:
       return state;
   }
