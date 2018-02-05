@@ -1,5 +1,5 @@
 const api = (module.exports = require("express").Router());
-var jwt = require('jsonwebtoken');
+var jwt = require("jsonwebtoken");
 
 // const products = require('./products');
 // const reviews = require('./reviews');
@@ -9,8 +9,8 @@ const users = require("./users.js");
 const rmarkdown = require("./rmarkdown");
 const studies = require("./study");
 const myanalyses = require("./MyAnalyses");
-const login = require("./login")
-const register = require("./register")
+const login = require("./login");
+const register = require("./register");
 const collections = require("./collections");
 const tokentest = require("./tokentest");
 
@@ -20,10 +20,10 @@ api.use((req, res, next) => {
   next();
 });
 
-api.get("/express-test", (req, res) => res.send({ express: "working!" })) //demo route to prove api is working
+api.get("/express-test", (req, res) => res.send({ express: "working!" })); //demo route to prove api is working
 
-api.use("/login", login)
-api.use("/register", register)
+api.use("/login", login);
+api.use("/register", register);
 
 // ------------
 //for each request append to the body the username and the token
@@ -34,12 +34,12 @@ api.use("/register", register)
 api.use((req, res, next) => {
   // check header or url parameters or post parameters for token
   var token =
-    req.body.token || req.query.token || req.headers['x-access-token'];
+    req.body.token || req.query.token || req.headers["x-access-token"];
   if (token) {
     //Decode the token
     jwt.verify(
       token,
-      'thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj',
+      "thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj",
       (err, decod) => {
         if (err) {
           // res.status(403).json({
@@ -47,13 +47,14 @@ api.use((req, res, next) => {
           // });
           //remove this part when starting auth for all routes, and use the above
           console.log("wrong token");
-          next()
+          next();
         } else {
           //If decoded then call next() so that respective route is called.
+          console.log("token found");
           req.decoded = decod;
           next();
         }
-      },
+      }
     );
   } else {
     // res.status(403).json({
@@ -61,7 +62,7 @@ api.use((req, res, next) => {
     // });
     //remove this part when starting auth for all routes, and use the above
     console.log("no token");
-    next()
+    next();
   }
 });
 
