@@ -4,17 +4,19 @@ For the authentification to any route
   - add the token from the redux store to props using a container (it is located under the "Token" value )
   - make a fetch request and add the token to the request body like so:
     ```
-    fetch("http://localhost:8000/api/login", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({token: "add token here from props"})
+    fetch("http://localhost:8000/api/tokentest", {
+      method: "get",
+      headers: new Headers({
+        "x-access-token": this.props._token
+      })
+    }).then(data => {
+      this.props.history.push("/profile");
+    });
     ```
   - now in the route the request will have a decoded object with the email and passHash (check the console for the server for this)
   ^^ that can now be used for any database accessing via req.decoded.email and req.decoded.passHash
 
-  feel free to slack me for any questions on this -> I can also set the authentification up for a route after you set up the route as well 
+  feel free to slack me for any questions on this -> I can also set the authentification up for a route after you set up the route as well
 
 Note from Gene:
 
