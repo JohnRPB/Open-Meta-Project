@@ -25,7 +25,7 @@ import ReviewModal from "./ReviewModal";
 import Table from "../Profile/Table";
 const faker = require("faker");
 
-class MyAnalyses extends Component {
+class AllAnalyses extends Component {
   constructor() {
     super();
     this.isFetching = true;
@@ -108,26 +108,6 @@ class MyAnalyses extends Component {
               </Grid.Column>
             </Grid.Row>
 
-            {/* COLLECTIONS */}
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <br />
-                <ModalForm />
-              </Grid.Column>
-              <Grid.Column width={13}>
-                <Segment>
-                  {" "}
-                  <Header as="h1" textalign="left">
-                    Recent Collections
-                  </Header>
-                  <Divider />
-                  <Related />
-                  <br />
-                  <p>See all collections</p>
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
-
             {/* ANALYSES */}
             <Grid.Row>
               <Grid.Column width={3}>
@@ -155,35 +135,13 @@ class MyAnalyses extends Component {
                 </Segment>
               </Grid.Column>
             </Grid.Row>
-
-            {/* REVIEWS */}
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <br />
-                <ReviewModal />
-              </Grid.Column>
-
-              <Grid.Column width={13}>
-                <Segment>
-                  <Header as="h1" textalign="left">
-                    Recent Reviews
-                  </Header>
-                  <Divider />
-                  <Card.Group>
-                    <Card fluid color="red" header="Option 1" />
-                    <Card fluid color="orange" header="Option 2" />
-                    <Card fluid color="yellow" header="Option 3" />
-                  </Card.Group>
-                  <br />
-                  <p>See all reviews</p>
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
           </Grid>
         </Container>
+        <br />
+        <br />
       </div>
     );
   }
 }
 
-export default MyAnalyses;
+export default AllAnalyses;

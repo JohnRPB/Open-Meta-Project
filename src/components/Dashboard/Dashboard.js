@@ -23,7 +23,10 @@ class Dashboard extends Component {
   }
 
   componentWillMount() {
+    this.props.getUser("5a74fa36425cf997daab4328");
+    // need to change this query to show related results once tags are set up
     this.props.getAnalyses("*");
+    console.log("dashboard props (willmount) => ", this.props);
   }
 
   render() {
@@ -31,7 +34,6 @@ class Dashboard extends Component {
     let analysisCards;
 
     if (!this.props.isFetching) {
-      console.log("inside if");
       analysisCards = this.props.DashboardRelated.slice(0, 6).map(analysis => {
         return (
           <Card

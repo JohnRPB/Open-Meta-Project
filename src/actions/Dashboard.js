@@ -27,3 +27,32 @@ export function getAnalyses(id) {
       });
   };
 }
+
+// -------------------------------
+// GETTING A USER
+// -------------------------------
+
+export const GET_USER = "GET_USER";
+
+export function getUserSuccess(data) {
+  return {
+    type: GET_USER,
+    data: data,
+    isFetching: false
+  };
+}
+
+export function getUser(id) {
+  return dispatch => {
+    axios
+      // dave is already using this route to grab studies?
+      .get(`${root}/api/users/${id}`)
+      .then(response => {
+        console.log("response =>", response);
+        dispatch(getUserSuccess(response.data));
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  };
+}

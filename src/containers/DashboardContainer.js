@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import Dashboard from "../components/Dashboard/Dashboard";
-import { getAnalyses } from "../actions/Dashboard";
+import { getAnalyses, getUser } from "../actions/Dashboard";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state) {
   return {
+    ...state,
     DashboardRelated: state.Dashboard.analyses,
     isFetching: state.Dashboard.isFetching
   };
@@ -15,8 +16,8 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
     getAnalyses: id => {
       dispatch(getAnalyses(id));
     },
-    getCollections: id => {
-      dispatch(getAnalyses(id));
+    getUser: id => {
+      dispatch(getUser(id));
     }
   };
 };

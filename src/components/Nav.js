@@ -3,7 +3,6 @@ import { Dropdown, Menu, Search } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
 const Nav = userId => {
-  console.log("userId in nav => ", userId);
   return (
     <div className="ui secondary menu">
       <NavLink to="/landing" className="item">

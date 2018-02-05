@@ -19,32 +19,16 @@ class Profile extends Component {
     this.isFetching = true;
   }
 
-  componentWillMount() {
-    this.props.getUser(this.props.match.params.user_id);
-  }
+  // componentWillMount() {
+  //   this.props.getUser(this.props.match.params.user_id);
+  // }
 
   render() {
-    if (!this.props.isFetching) {
-      var { User, isFetching } = this.props;
-      console.log("deconstructed User", User);
-    }
-
-    console.log("profile props => ", this.props);
-    // setting analyses content after fetching
     // if (!this.props.isFetching) {
-    //   console.log("profile props inside FETCHING => ", this.props);
-    //   console.log("profile/user => ", User);
-    //   var analysisRows = this.props.Analyses.slice(0, 10).map(analysis => {
-    //     return (
-    //       <Table.Row>
-    //         <Table.Cell>{analysis.data.header.title}</Table.Cell>
-    //         <Table.Cell collapsing textAlign="right">
-    //           10 hours ago
-    //         </Table.Cell>
-    //       </Table.Row>
-    //     );
-    //   });
+    //   var { User } = this.props.Dashboard;
+    //   console.log("user => ", User);
     // }
+    console.log("PROFILE PAGE props => ", this.props);
 
     return (
       <div className="ui  vertical masthead center aligned segment">
@@ -63,19 +47,32 @@ class Profile extends Component {
               <Segment>
                 {/* create middleware to make pictures perfectly square? */}
                 <Image
-                  src={!this.props.isFetching ? `${User.profile.image}` : null}
+                  src={
+                    !this.props.isFetching
+                      ? `${this.props.Dashboard.user.profile.image}`
+                      : null
+                  }
                   centered
                   circular="true"
                   size="small"
                 />
                 <h2>
                   {!this.props.isFetching
-                    ? `${User.profile.f_name} ${User.profile.l_name}`
+                    ? `${this.props.Dashboard.user.profile.f_name} ${
+                        this.props.Dashboard.user.profile.l_name
+                      }`
                     : null}
                 </h2>
-                <h3> {!this.props.isFetching ? User.profile.title : null}</h3>
+                <h3>
+                  {" "}
+                  {!this.props.isFetching
+                    ? this.props.Dashboard.user.profile.title
+                    : null}
+                </h3>
                 <p>
-                  {!this.props.isFetching ? User.profile.description : null}
+                  {!this.props.isFetching
+                    ? this.props.Dashboard.user.profile.description
+                    : null}
                 </p>
               </Segment>
 
@@ -95,7 +92,7 @@ class Profile extends Component {
                   <Statistic>
                     <Statistic.Value>
                       {!this.props.isFetching
-                        ? `${User.analyses.length}`
+                        ? `${this.props.Dashboard.user.analyses.length}`
                         : null}
                     </Statistic.Value>
                     <Statistic.Label>Reviews</Statistic.Label>
@@ -113,14 +110,16 @@ class Profile extends Component {
                   <Table.Row>
                     <Table.HeaderCell colSpan="3">
                       {!this.props.isFetching
-                        ? `${this.props.User.profile.f_name}'s Analyses`
+                        ? `${
+                            this.props.Dashboard.user.profile.f_name
+                          }'s Analyses`
                         : null}
                     </Table.HeaderCell>
                   </Table.Row>
                 </Table.Header>
                 <Table.Body>
                   {!this.props.isFetching
-                    ? User.analyses.map(analysis => {
+                    ? this.props.Dashboard.user.analyses.map(analysis => {
                         return (
                           <Table.Row>
                             <Table.Cell>

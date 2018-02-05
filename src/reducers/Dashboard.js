@@ -15,6 +15,12 @@ export function DashboardPage(state = initialState, action) {
         analyses: action.data,
         isFetching: false
       };
+    case Actions.GET_USER:
+      return {
+        ...state,
+        user: action.data,
+        isFetching: false
+      };
     default:
       return state;
   }

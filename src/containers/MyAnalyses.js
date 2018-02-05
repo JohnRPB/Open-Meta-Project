@@ -6,9 +6,9 @@ import { withRouter } from "react-router";
 
 function mapStateToProps(state) {
   return {
-    ...state,
-    MyAnalyses: state.MyAnalysesPage.analyses,
-    isFetching: state.MyAnalysesPage.isFetching
+    ...state
+    // MyAnalyses: state.MyAnalysesPage.analyses,
+    // isFetching: state.MyAnalysesPage.isFetching
   };
 }
 
