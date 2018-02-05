@@ -52,7 +52,7 @@ class UserForm extends Component {
         console.log("data returned => ", data);
         if(data.token){
           this.props._addToken(data.token)
-          this.props.history.push("/tokentest")
+          this.props.history.push("/profile")
         }
         return data
         // data = data.json()
@@ -74,9 +74,10 @@ class UserForm extends Component {
         console.log("data returned => ", data);
         if(data.token){
           this.props._addToken(data.token)
-          this.props.history.push("/tokentest")
+          fetch("http://localhost:8000/api/tokentest")
+          this.props.history.push("/profile")
         }
-        console.log("token added =>");
+        console.log("token added");
         return data
       }).catch(error => console.error('Error:', error))
     }
@@ -109,7 +110,7 @@ class UserForm extends Component {
                     placeholder="password"
                   />
                   <div>
-                    <input type="passHash" placeholder="repeat password" />
+                    <input type="password" placeholder="repeat password" />
                     <input type="submit" value="reset password" />
                     <div>
                       <input type="submit" value="register" />
