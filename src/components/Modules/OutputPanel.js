@@ -21,11 +21,17 @@ const OutputPanel = (props) => {
   console.log("------------------- START props.outputLoc -------------------");
   console.log(props);
   console.log("-------------------- END props.outputLoc --------------------");
+
+  console.log("------------------- START windows -------------------");
+  console.log(document);
+  console.log("-------------------- END windows --------------------");
   
+  
+  // <Image src={props.outputLoc} alt="line" style={{width: 400}} />
   return (
    <Card>
       <Card.Content>
-          <Image src={props.outputLoc} alt="line" style={{width: 400}} />
+        <iframe src={props.outputLoc}></iframe>
       </Card.Content>
     </Card>
   );
