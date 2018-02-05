@@ -9,7 +9,7 @@ models.Analysis = require("./analysis.js");
 models.StudyOverflow = require("./study.js");
 models.User = require("./user.js");
 models.Collection = require("./collection.js");
-models.Profile = require("./Profile.js");
+models.Profile = require("./profile.js");
 
 module.exports = models;
 

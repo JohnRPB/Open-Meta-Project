@@ -1,4 +1,4 @@
-import * as Actions from '../actions'
+import * as Actions from '../actions/modules.js';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 

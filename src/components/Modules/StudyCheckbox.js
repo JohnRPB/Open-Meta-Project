@@ -1,5 +1,5 @@
 // ---------------------------------------------------------
-// Study selector Popup
+// Study Checkbox
 // 2018-02-01 08:23
 // ---------------------------------------------------------
 // Div inside popup panel that displays study selection
@@ -18,20 +18,21 @@ import {
   List,
 } from 'semantic-ui-react';
 
-class StudyUnit extends React.Component {
+class StudyCheckbox extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
+    // additional props: moduleId, studyId
   }
-
 
   render() {
     return (
       <Checkbox
-        label={this.props.study.name}
-        name={this.props.study.Id},
-        onChange={this.props.handleClick},
-        checked={this.props.study.checked}
+        label={this.props.studyName}
+        onChange={this.props.handleClick}
+        checked={this.props.checked}
+        moduleidx={this.props.moduleIdx}
+        studyidx={this.props.studyIdx}
       />
     );
   }
