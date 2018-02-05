@@ -23,7 +23,7 @@ class Dashboard extends Component {
   }
 
   componentWillMount() {
-    this.props.getUser("5a74fa36425cf997daab4328");
+    this.props.getUser(this.props._id);
     // need to change this query to show related results once tags are set up
     this.props.getAnalyses("*");
     console.log("dashboard props (willmount) => ", this.props);
