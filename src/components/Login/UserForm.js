@@ -55,7 +55,7 @@ class UserForm extends Component {
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
-            this.props.history.push("/profile");
+            this.props.history.push("/dashboard");
           }
           return data;
           // data = data.json()
@@ -87,15 +87,7 @@ class UserForm extends Component {
               this.props._token
             );
             console.log("this is the id from the server =>", data.id);
-
-            fetch("http://localhost:8000/api/tokentest", {
-              method: "get",
-              headers: new Headers({
-                "x-access-token": this.props._token
-              })
-            }).then(data => {
-              this.props.history.push("/profile");
-            });
+            this.props.history.push("/dashboard");
           }
           console.log("token added");
           return data;

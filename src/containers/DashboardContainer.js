@@ -6,6 +6,7 @@ import { withRouter } from "react-router";
 function mapStateToProps(state) {
   return {
     ...state,
+    _id: state.Token.id,
     DashboardRelated: state.Dashboard.analyses,
     isFetching: state.Dashboard.isFetching
   };
