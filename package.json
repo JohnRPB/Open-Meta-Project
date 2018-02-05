@@ -9,6 +9,7 @@
     "child_process": "^1.0.2",
     "classnames": "^2.2.5",
     "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
     "dangerously-set-inner-html": "^2.0.1",
     "debug": "^3.1.0",
     "faker": "^4.1.0",
@@ -42,24 +43,21 @@
     "yargs": "^10.1.1"
   },
   "scripts": {
-    "start":
-      "concurrently \"react-scripts start\" \"nodemon api/server/index.js\"",
+    "start": "concurrently \"react-scripts start\" \"nodemon api/server/index.js\"",
     "update": "npm i && cd api && npm i && cd ..",
     "app": "react-scripts start",
     "api": "nodemon api/server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy-front":
-      "npm run build && cd build && mv index.html 200.html && echo openmeta.surge.sh > CNAME && surge .",
+    "deploy-front": "npm run build && cd build && mv index.html 200.html && echo openmeta.surge.sh > CNAME && surge .",
     "deploy-back": "git subtree push --prefix api heroku master",
     "deploy-all": "npm run deploy-back && npm run deploy-front",
     "sql:migrate:undo": "cd api && npm run sql db:migrate:undo:all && cd ..",
     "sql:migrate": "cd api && npm run sql db:migrate && cd ..",
     "sql:seed:undo": "cd api && npm run sql db:seed:undo:all && cd ..",
     "sql:seed": "cd api && node ./seeds/sequelize/config.js && cd ..",
-    "sql:s":
-      "cd api && npm run sql:migrate:undo && npm run sql:migrate && npm run sql:seed && cd ..",
+    "sql:s": "cd api && npm run sql:migrate:undo && npm run sql:migrate && npm run sql:seed && cd ..",
     "mg:seed": "node api/seeds/mongoose",
     "console": "cd api && node repl.js",
     "c": "cd api && node repl.js",
