@@ -3,7 +3,7 @@ import React from "react";
 //custom components and containers
 import TestCompContainer from "./containers/TestCompContainer";
 import About from "./components/About/About";
-import UserForm from "./containers/UserForm"; //userform container 
+import UserForm from "./containers/UserForm"; //userform container
 import ProjectContainer from "./containers/ProjectContainer";
 import DashboardContainer from "./containers/DashboardContainer";
 import SitesearchContainer from "./containers/SitesearchContainer";
@@ -14,6 +14,7 @@ import MyAnalyses from "./containers/MyAnalyses";
 import SearchContainer from "./containers/SearchContainer";
 import AnalysisContainer from "./containers/AnalysisContainer.js";
 import AllAnalyses from "./containers/AllAnalyses";
+import NewProfileContainer from "./containers/NewProfileContainer";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -25,6 +26,7 @@ const Routes = ({ history }) => {
         <Route exact path="/sitesearch" component={SitesearchContainer} />
         <Route exact path="/project" component={ProjectContainer} />
         <Route exact path="/login" component={UserForm} />
+        <Route exact path="/newprofile" component={NewProfileContainer} />
         <Route exact path="/test" component={TestCompContainer} />
         <Route exact path="/about" component={About} />
         <Route exact path="/dashboard" component={DashboardContainer} />
