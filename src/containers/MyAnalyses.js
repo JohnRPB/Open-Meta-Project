@@ -6,14 +6,16 @@ import { withRouter } from "react-router";
 
 function mapStateToProps(state) {
   return {
-    MyAnalyses: state.MyAnalysesPage.analyses,
-    isFetching: state.MyAnalysesPage.isFetching
+    ...state
+    // MyAnalyses: state.MyAnalysesPage.analyses,
+    // isFetching: state.MyAnalysesPage.isFetching
   };
 }
 
 const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
     getAnalyses: id => {
+      console.log("inside actions");
       dispatch(getAnalyses(id));
     }
   };

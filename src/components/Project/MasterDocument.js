@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavContainer from "../../containers/NavContainer";
 import update from "immutability-helper";
 import { DragDropContext } from "react-dnd";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
@@ -19,6 +20,9 @@ import {
   Popup
 } from "semantic-ui-react";
 
+import collection from "../../databaseStudies";
+import Module from "../Modules/Module";
+
 class MasterDocument extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +36,7 @@ class MasterDocument extends Component {
     console.log("this props => ", this.props);
     // const { boxes, dustbins } = this.state;
     const {
-      analyses,
+      blocks,
       boxes,
       dustbins,
       handleDrop,
@@ -44,8 +48,9 @@ class MasterDocument extends Component {
 
     return (
       <div>
+        <NavContainer />
         <h1>Welcome to your project</h1>
-        <h2>Drag and drop analyses onto your document</h2>
+        <h2>Drag and drop blocks onto your document</h2>
         <div className="ui fluid Document">
           <div className="ui grid">
             <div className="three column row">
@@ -65,14 +70,14 @@ class MasterDocument extends Component {
             </div>
             <div className="twelve wide column">
               <div>
-                {analyses.map((analysis, index) => {
+                {blocks.map((block, index) => {
                   return (
                     <div key={index} className="fluid">
                       <ul>
                         <li onClick={e => handleClick(e, index)}>
-                          {analysis.textContent
-                            ? analysis.textContent
-                            : analysis.name}
+                          {block.textContent
+                            ? block.textContent
+                            : JSON.stringify(block)}
                         </li>
                         <br />
                         <br />
@@ -120,7 +125,7 @@ class MasterDocument extends Component {
                   );
                 })}
               </div>
-              {analyses.length < 1 ? (
+              {blocks.length < 1 ? (
                 <div className="Initial Submission">
                   <form onSubmit={handleSubmit}>
                     <textarea
@@ -144,6 +149,7 @@ class MasterDocument extends Component {
                 </div>
               ) : null}
             </div>
+            <Module moduleIdx={0} />
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import {
   Grid,
   Image,
@@ -11,7 +12,7 @@ import {
   Loader
 } from "semantic-ui-react";
 import Feed from "./Feed";
-import Nav from "../Nav";
+import NavContainer from "../../containers/NavContainer";
 import Related from "./Related";
 const faker = require("faker");
 
@@ -22,7 +23,10 @@ class Dashboard extends Component {
   }
 
   componentWillMount() {
+    this.props.getUser("5a74fa36425cf997daab4328");
+    // need to change this query to show related results once tags are set up
     this.props.getAnalyses("*");
+    console.log("dashboard props (willmount) => ", this.props);
   }
 
   render() {
@@ -30,12 +34,15 @@ class Dashboard extends Component {
     let analysisCards;
 
     if (!this.props.isFetching) {
-      console.log("inside if");
       analysisCards = this.props.DashboardRelated.slice(0, 6).map(analysis => {
         return (
           <Card
             key={analysis._id}
-            header={analysis.data.header.title}
+            header={
+              <NavLink to={`/analysis/${analysis._id}`}>
+                {analysis.data.header.title}
+              </NavLink>
+            }
             description={faker.lorem.paragraph()}
           />
         );
@@ -46,7 +53,7 @@ class Dashboard extends Component {
       <div className="ui  vertical masthead center aligned segment">
         <div className="following bar">
           <div className="ui container">
-            <Nav />
+            <NavContainer />
           </div>
         </div>
         <br />
@@ -79,7 +86,7 @@ class Dashboard extends Component {
               </Dimmer>
             ) : (
               <div>
-                <Header as="h2">Papers you might be interested in</Header>
+                <Header as="h2">Analyses you might be interested in</Header>
                 <Card.Group>{analysisCards}</Card.Group>
               </div>
             )}
