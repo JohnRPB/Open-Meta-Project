@@ -87,7 +87,7 @@ class UserForm extends Component {
               this.props._token
             );
             console.log("this is the id from the server =>", data.id);
-            this.props.history.push("/dashboard");
+            this.props.history.push("/newprofile");
           }
           console.log("token added");
           return data;

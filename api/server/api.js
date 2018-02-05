@@ -17,6 +17,7 @@ const register = require("./register");
 const analyses = require("./analyses");
 const collections = require("./collections");
 const tokentest = require("./tokentest");
+const newprofile = require("./newprofile");
 
 api.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -71,6 +72,7 @@ api.use((req, res, next) => {
 //rest of the backend
 api
   .get("/express-test", (req, res) => res.send({ express: "working!" })) //demo route to prove api is working
+  .use("/newprofile", newprofile)
   .use("/users", users)
   .use("/tokentest", tokentest)
   .use("/rmarkdown", rmarkdown)
