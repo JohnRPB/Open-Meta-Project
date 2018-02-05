@@ -21,10 +21,13 @@ class NewProfile extends Component {
     console.log("obj =>", obj);
 
     fetch("http://localhost:8000/api/newprofile", {
-      method: "post",
+      method: "POST",
       headers: new Headers({
-        "x-access-token": this.props._token
+        "x-access-token": this.props._token,
+        "Content-Type": "application/json"
       }),
+      // mode: "cors",
+      // cache: "default",
       body: JSON.stringify(obj)
     }).then(data => {
       this.props.history.push("/dashboard");

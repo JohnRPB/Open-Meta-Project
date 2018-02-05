@@ -36,14 +36,15 @@ class MyAnalyses extends Component {
   }
 
   componentWillMount() {
-    // this.props.getAnalyses("*");
-    // this.props.getCollections("*")
+    if (!this.props._token) {
+      window.location.href = "/login";
+    }
   }
 
   render() {
     // creating cards from user's analyses
     let analysisCards;
-    if (!this.props.isFetching) {
+    if (this.props.isFetching) {
       console.log("MY DATA props => ", this.props);
       analysisCards = this.props.Dashboard.user.analyses
         .slice(0, 3)

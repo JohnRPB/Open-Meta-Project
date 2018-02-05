@@ -16,12 +16,12 @@ import AnalysisContainer from "./containers/AnalysisContainer.js";
 import AllAnalyses from "./containers/AllAnalyses";
 import NewProfileContainer from "./containers/NewProfileContainer";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const Routes = ({ history }) => {
   return (
     <Router>
-      <div>
+      <Switch>
         <Route exact path="/" component={TestCompContainer} />
         <Route exact path="/sitesearch" component={SitesearchContainer} />
         <Route exact path="/project" component={ProjectContainer} />
@@ -41,7 +41,7 @@ const Routes = ({ history }) => {
           path="/analysis/:anaysis_id?"
           component={AnalysisContainer}
         />
-      </div>
+      </Switch>
     </Router>
   );
 };

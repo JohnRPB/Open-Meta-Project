@@ -19,9 +19,11 @@ class Profile extends Component {
     this.isFetching = true;
   }
 
-  // componentWillMount() {
-  //   this.props.getUser(this.props.match.params.user_id);
-  // }
+  componentWillMount() {
+    if (!this.props._token) {
+      this.props.history.push("/login");
+    }
+  }
 
   render() {
     // if (!this.props.isFetching) {

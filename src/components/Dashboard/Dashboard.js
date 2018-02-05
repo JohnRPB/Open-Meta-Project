@@ -23,9 +23,14 @@ class Dashboard extends Component {
   }
 
   componentWillMount() {
-    this.props.getUser(this.props._id);
+    console.log("DASHBOARD will mount props => ", this.props);
+    if (!this.props._token) {
+      this.props.history.push("/login");
+    }
+    this.props.getUser(this.props._id, this.props._token);
     // need to change this query to show related results once tags are set up
     this.props.getAnalyses("*");
+
     console.log("dashboard props (willmount) => ", this.props);
   }
 

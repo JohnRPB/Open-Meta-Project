@@ -35,8 +35,10 @@ class AllAnalyses extends Component {
   }
 
   componentWillMount() {
-    // this.props.getAnalyses("*");
-    // this.props.getCollections("*")
+    console.log("inside will mount => ", this.props);
+    if (!this.props._token) {
+      this.props.history.push("/login");
+    }
   }
 
   render() {

@@ -50,7 +50,7 @@ api.use((req, res, next) => {
           // });
           //remove this part when starting auth for all routes, and use the above
           console.log("wrong token");
-          next();
+          // next();
         } else {
           //If decoded then call next() so that respective route is called.
           console.log("token found");

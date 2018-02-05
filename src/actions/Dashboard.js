@@ -42,11 +42,15 @@ export function getUserSuccess(data) {
   };
 }
 
-export function getUser(id) {
+export function getUser(id, token) {
   return dispatch => {
-    axios
-      // dave is already using this route to grab studies?
-      .get(`${root}/api/users/${id}`)
+    axios({
+      url: `${root}/api/users/${id}`,
+      method: "get",
+      headers: new Headers({
+        "x-access-token": token
+      })
+    })
       .then(response => {
         console.log("response =>", response);
         dispatch(getUserSuccess(response.data));
