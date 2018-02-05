@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import NavContainer from "../../containers/NavContainer";
 import Nav from "../Nav";
 import {
   Dropdown,
@@ -67,7 +68,8 @@ class MyAnalyses extends Component {
       <div className="ui  vertical masthead center aligned segment">
         <div className="following bar">
           <div className="ui container">
-            <Nav userId="5a74fa36425cf997daab4328" />
+            {/* <Nav userId="5a74fa36425cf997daab4328" /> */}
+            <NavContainer />
           </div>
         </div>
         <br />

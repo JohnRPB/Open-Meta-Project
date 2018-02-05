@@ -17,7 +17,7 @@ import AllAnalyses from "./containers/AllAnalyses";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-const Routes = () => {
+const Routes = ({ history }) => {
   return (
     <Router>
       <div>

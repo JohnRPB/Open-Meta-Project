@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import NavContainer from "../../containers/NavContainer";
 import { NavLink } from "react-router-dom";
-import Nav from "../Nav";
 import {
   Segment,
   Grid,
@@ -31,10 +31,10 @@ class Profile extends Component {
     console.log("PROFILE PAGE props => ", this.props);
 
     return (
-      <div className="ui  vertical masthead center aligned segment">
-        <div className="following bar">
-          <div className="ui container">
-            <Nav />
+      <div class="ui  vertical masthead center aligned segment">
+        <div class="following bar">
+          <div class="ui container">
+            <NavContainer />
           </div>
         </div>
         <br />

@@ -12,7 +12,7 @@ import {
   Loader
 } from "semantic-ui-react";
 import Feed from "./Feed";
-import Nav from "../Nav";
+import NavContainer from "../../containers/NavContainer";
 import Related from "./Related";
 const faker = require("faker");
 
@@ -53,7 +53,7 @@ class Dashboard extends Component {
       <div className="ui  vertical masthead center aligned segment">
         <div className="following bar">
           <div className="ui container">
-            <Nav />
+            <NavContainer />
           </div>
         </div>
         <br />
