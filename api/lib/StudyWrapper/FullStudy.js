@@ -81,8 +81,8 @@ class FullStudy {
           where: {id: this.mongoose.sqlId},
           include: [
             {model: Journal},
-            {model: Tag, as: 'TaggedStudy'},
-            {model: Author, as: 'Studies'},
+            {model: Tag, as: 'Tags'},
+            {model: Author, as: 'Authors'},
           ],
         });
       } catch (e) {
@@ -116,8 +116,8 @@ class FullStudy {
         include: [],
       };
       if (!this.Journal) params.include.push({model: Journal});
-      if (!this.TaggedStudy) params.include.push({model: Tag, as: 'TaggedStudy'});
-      if (!this.Studies) params.include.push({model: Author, as: 'Studies'});
+      if (!this.Tags) params.include.push({model: Tag, as: 'Tags'});
+      if (!this.Authors) params.include.push({model: Author, as: 'Authors'});
       if (params.include.length) {
         let sqlFill;
         try {

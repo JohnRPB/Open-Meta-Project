@@ -2,5 +2,6 @@ module.exports = {
   analysis: 10,
   user: 10,
   //added*
-  profile: 10
+  profile: 10,
+  collection: 10
 };

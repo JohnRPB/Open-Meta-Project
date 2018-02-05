@@ -1,3 +1,4 @@
+var jwt = require('jsonwebtoken');
 module.exports = (req, res, next) => {
   // check header or url parameters or post parameters for token
   var token =
