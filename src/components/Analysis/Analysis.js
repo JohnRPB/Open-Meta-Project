@@ -39,7 +39,12 @@ class Analysis extends Component {
           <br />
           <Container>
             {!this.props.isFetching ? (
-              <p>{JSON.stringify(Analysis.data, null, 5)}</p>
+              <div>
+                <Header as="h1">{Analysis.data.header.title}</Header>
+                <Header as="h2"> By {Analysis.data.header.author}</Header>
+                <p />
+                <p>{JSON.stringify(Analysis.data, null, 5)}</p>
+              </div>
             ) : null}
           </Container>
         </div>

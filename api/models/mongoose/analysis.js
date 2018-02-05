@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 let AnalysisSchema = new Schema({
@@ -6,32 +6,32 @@ let AnalysisSchema = new Schema({
   hist: [
     {
       histId: {
-        type: Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId
       },
       time: {
-        type: Date,
-      },
-    },
+        type: Date
+      }
+    }
   ],
   data: {
     header: {},
     inclusion: {
       included: [Schema.Types.ObjectId],
-      excluded: [Schema.Types.ObjectId],
+      excluded: [Schema.Types.ObjectId]
     },
     analyses: [
       {
         category: {
-          type: String,
+          type: String
         },
         content: {
-          type: String,
-        },
-      },
-    ],
-  },
+          type: String
+        }
+      }
+    ]
+  }
 });
 
-let Analysis = mongoose.model('Analysis', AnalysisSchema);
+let Analysis = mongoose.model("Analysis", AnalysisSchema);
 
 module.exports = Analysis;
