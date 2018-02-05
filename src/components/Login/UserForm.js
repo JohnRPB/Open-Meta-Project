@@ -52,7 +52,7 @@ class UserForm extends Component {
         console.log("data returned => ", data);
         if(data.token){
           this.props._addToken(data.token)
-          this.props.history.push("/dashboard")
+          this.props.history.push("/tokentest")
         }
         return data
         // data = data.json()
@@ -74,7 +74,7 @@ class UserForm extends Component {
         console.log("data returned => ", data);
         if(data.token){
           this.props._addToken(data.token)
-          this.props.history.push("/dashboard")
+          this.props.history.push("/tokentest")
         }
         console.log("token added =>");
         return data
