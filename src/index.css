@@ -4,3 +4,27 @@ body {
   font-family: sans-serif;
 }
 
+.module-card {
+  display:block;
+  margin: 0 auto;
+  border:1px solid black;
+}
+
+/* Override Semantic UI */
+
+.ui.checkbox label {
+  color:white !important; /* fucking stupid, but whatever*/
+}
+    
+.ui.list {
+  height:100px;
+  overflow-y:scroll;
+}
+
+/* Override not working */
+
+.ui.right.center.popup {
+  transform-origin:right 70% !important;
+}
+
+

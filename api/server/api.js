@@ -5,6 +5,7 @@ var jwt = require("jsonwebtoken");
 // const reviews = require('./reviews');
 // import products from './products';
 
+// const express = require('express');
 const users = require("./users.js");
 const rmarkdown = require("./rmarkdown");
 const studies = require("./study");
@@ -16,12 +17,10 @@ const tokentest = require("./tokentest");
 
 api.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "*");
   next();
 });
 
 api.get("/express-test", (req, res) => res.send({ express: "working!" })); //demo route to prove api is working
-
 api.use("/login", login);
 api.use("/register", register);
 
@@ -74,7 +73,10 @@ api
   .use("/rmarkdown", rmarkdown)
   .use("/myanalyses", myanalyses)
   .use("/studies", studies)
-  .use("/collections", collections);
+  .use("/collections", collections)
+  .use("/login", login)
 
 // No routes matched? 404.
 api.use((req, res) => res.status(404).end());
+
+module.exports = api

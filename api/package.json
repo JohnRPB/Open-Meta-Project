@@ -7,6 +7,7 @@
     "bcrypt": "^1.0.3",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
+    "chalk": "^2.3.0",
     "child_process": "^1.0.2",
     "classnames": "^2.2.5",
     "debug": "^3.1.0",
@@ -20,6 +21,7 @@
     "morgan": "^1.9.0",
     "morgan-toolkit": "^1.2.2",
     "nodemon": "^1.14.10",
+    "path": "^0.12.7",
     "pg": "^7.4.1",
     "sequelize": "^4.32.2",
     "sequelize-cli": "^3.2.0",
@@ -37,9 +39,5 @@
     "console": "node repl.js",
     "c": "node repl.js",
     "sql": "./node_modules/sequelize-cli/lib/sequelize"
-  },
-  "devDependencies": {
-    "chalk": "^2.3.0",
-    "path": "^0.12.7"
   }
 }
