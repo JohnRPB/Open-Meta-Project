@@ -22,7 +22,7 @@ const Routes = ({ history }) => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={TestCompContainer} />
+        <Route exact path="/" component={Landing} />
         <Route exact path="/sitesearch" component={SitesearchContainer} />
         <Route exact path="/project" component={ProjectContainer} />
         <Route exact path="/login" component={UserForm} />
