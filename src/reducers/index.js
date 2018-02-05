@@ -8,8 +8,8 @@ import Dashboard from "./Dashboard";
 import Token from "./Token"
 import Profile from "./Profile";
 import sitesearch from "./sitesearch";
+import Analysis from "./Analysis";
 import search from "./search";
-import sitesearch from "./sitesearch";
 import modules from "./modules";
 
 const Reducers = combineReducers({
@@ -22,6 +22,8 @@ const Reducers = combineReducers({
   search,
   Profile,
   sitesearch,
+  Analysis,
+  routing: routerReducer,
   modules
 });
 
