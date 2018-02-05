@@ -5,7 +5,7 @@ const Results = ({ query, results, field }) => {
   if (field == "Analysis" && results.length > 0) {
     return (
       <Card.Group>
-        <h2>Searching Analyses</h2>
+        <h2>Searching Analyses for "{query}"</h2>
         {results.map((result, i) => (
           <Card fluid key={i}>
             <div>
@@ -27,7 +27,7 @@ const Results = ({ query, results, field }) => {
   if (field == "Collection" && results.length > 0) {
     return (
       <Card.Group>
-        <h2>Searching Collections</h2>
+        <h2>Searching Collections for "{query}"</h2>
         {results.map((result, i) => (
           <Card fluid key={i}>
             <div>
@@ -47,7 +47,7 @@ const Results = ({ query, results, field }) => {
   if (field == "User" && results.length > 0) {
     return (
       <Card.Group>
-        <h2>Searching Users</h2>
+        <h2>Searching Users for "{query}"</h2>
         {results.map((result, i) => (
           <Card fluid key={i}>
             <div>

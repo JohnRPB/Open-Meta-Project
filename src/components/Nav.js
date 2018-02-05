@@ -10,9 +10,14 @@ class Nav extends Component {
     super(props);
   }
 
+  state = {
+    redirectToNewPage: false
+  };
+
   handleResultSelect = () => {
-    this.props.handleSubmit();
-    this.props.submission();
+    // this.props.handleSubmit();
+    // this.props.submission();
+    this.setState({ redirectToNewPage: true });
   };
 
   /* <Redirect
@@ -23,12 +28,15 @@ class Nav extends Component {
     console.log(this.props);
     console.log("THIS.SUBMISSION", this.submission);
 
-    if (
-      this.props.submission == true //&&
-      // this.props.location.pathname != "/sitesearch"
-    ) {
+    if (this.state.redirectToNewPage) {
       return <Redirect to="/sitesearch" />;
     }
+    // if (
+    //   this.props.submission == true // &&
+    //   // this.props.location.pathname != "/sitesearch"
+    // ) {
+    //   return <Redirect to="/sitesearch" />;
+    // }
 
     return (
       <div className="ui secondary menu">
@@ -45,9 +53,8 @@ class Nav extends Component {
         <div className="right menu">
           <form
             className="ui search icon input"
-            onSubmit={e => {
-              this.props.handleResultSelect;
-            }}
+            onSubmit={this.handleResultSelect}
+            //  this.props.handleResultSelect;
           >
             <input
               name="query"
