@@ -9,7 +9,6 @@ import Token from "./Token"
 import Profile from "./Profile";
 import sitesearch from "./sitesearch";
 import search from "./search";
-import sitesearch from "./sitesearch";
 import modules from "./modules";
 
 const Reducers = combineReducers({

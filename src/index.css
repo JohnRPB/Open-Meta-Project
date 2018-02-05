@@ -27,4 +27,33 @@ body {
   transform-origin:right 70% !important;
 }
 
+/* Master document page */
 
+
+/* Output panel iframe sytling */
+
+.frame-container {
+  position: relative;
+  margin: 0 -4px;
+  height: 0;
+  /*background: #222;
+  background-image: -webkit-linear-gradient(top, transparent, transparent 4px, #2c2c2c 4px), -webkit-linear-gradient(left, transparent, transparent 4px, #2c2c2c 4px); */
+}
+
+.popup-panel {
+  transform:translateX(100px);
+}
+
+iframe {
+  position: absolute;
+  margin:0;
+  padding:0;
+  border:none;
+  left: 0;
+  top: 0;
+  width:100%;
+  height:500px;
+  border:0;
+  box-sizing: border-box;
+  transition: padding 2.4s linear;
+}

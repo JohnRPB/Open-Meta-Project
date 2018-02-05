@@ -18,6 +18,7 @@ import {
   Container,
   Popup
 } from "semantic-ui-react";
+import "../../index.css";
 
 import collection from "../../databaseStudies";
 import Module from "../Modules/Module";
@@ -147,8 +148,8 @@ class MasterDocument extends Component {
                 </div>
               ) : null}
             </div>
-             <Module moduleIdx={0} />
           </div>
+            <Module moduleIdx={0} />
         </div>
       </div>
     );

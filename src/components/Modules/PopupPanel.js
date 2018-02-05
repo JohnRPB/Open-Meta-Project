@@ -12,13 +12,15 @@ const style = {
 const PopupPanel = ({trigger, children}) => (
 
   <Popup
-    on="focus"
+    on="click"
     inverted={true}
     trigger={trigger}
     position="right center"
+    size='huge'
+    className="popup-panel"
     basic
   >
-   <Popup.Content>
+   <Popup.Content >
       {children}
    </Popup.Content>
   </Popup>

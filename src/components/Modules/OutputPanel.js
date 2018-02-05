@@ -16,22 +16,37 @@ import {
   Card,
   Image,
 } from 'semantic-ui-react';
+import "../../index.css";
+
+// ---------------------------------------------------------
+// Static png
+// 2018-02-05 07:54
+// ---------------------------------------------------------
+
+const StaticDisplay = (props) => {
+  return ( 
+    <Image src={props.outputLoc} />
+  )
+}
+
+// ---------------------------------------------------------
+// iframe 
+// 2018-02-05 07:55
+// ---------------------------------------------------------
+
+const IframeDisplay = (props) => {
+  return (
+    <div className="frame-container">
+      <iframe src={props.outputLoc} frameborder="0" scrolling="no"></iframe>
+    </div>
+  )
+}
 
 const OutputPanel = (props) => {
-  console.log("------------------- START props.outputLoc -------------------");
-  console.log(props);
-  console.log("-------------------- END props.outputLoc --------------------");
-
-  console.log("------------------- START windows -------------------");
-  console.log(document);
-  console.log("-------------------- END windows --------------------");
-  
-  
-  // <Image src={props.outputLoc} alt="line" style={{width: 400}} />
   return (
-   <Card>
-      <Card.Content>
-        <iframe src={props.outputLoc}></iframe>
+   <Card style={{height:"550px", width:"680px"}}>
+      <Card.Content >
+        <IframeDisplay {...props}/>
       </Card.Content>
     </Card>
   );
