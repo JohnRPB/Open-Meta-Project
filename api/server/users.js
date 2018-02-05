@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 
-
 //access to database
 let sequelizeModels = require("./../models/sequelize/index");
 let mongooseModels = require("./../models/mongoose/index");
@@ -38,7 +37,10 @@ router.get("/", function(req, res, next) {
 // getting a single user
 router.get("/:userId", async (req, res, next) => {
   console.log("on the new user routes", req.params.userId);
-  let user = await mongoUser.findById(req.params.userId).populate("profile");
+  let user = await mongoUser
+    .findById(req.params.userId)
+    .populate("profile")
+    .populate("analyses");
   res.json(user);
 });
 
@@ -46,6 +48,29 @@ router.get("/:userId", async (req, res, next) => {
 router.post("/", function(req, res, next) {
   console.log("req.body => ", req.body);
   res.send("response back from api!");
+});
+
+router.get("/search/:search", async function(req, res, next) {
+  console.log("REQ.PARAMS.SEARCH", req.params.search);
+  let query = req.params.search,
+    result,
+    results = [];
+  try {
+    result = await User.find({});
+    console.log("result => ", result);
+  } catch (e) {
+    res.status(500).send(e.stack);
+  }
+
+  //Handle asynchronous problems by putting the following outside the try block
+  result.forEach(element => {
+    if (element.email.toLowerCase().includes(query.toLowerCase())) {
+      console.log(element.email);
+      results.push(element);
+    }
+  });
+  console.log("results => ", results);
+  res.json(results);
 });
 
 module.exports = router;

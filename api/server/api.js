@@ -1,5 +1,7 @@
 const api = (module.exports = require("express").Router());
 var jwt = require("jsonwebtoken");
+const cors = require("cors");
+api.use(cors());
 
 // const products = require('./products');
 // const reviews = require('./reviews');
@@ -12,6 +14,7 @@ const studies = require("./study");
 const myanalyses = require("./MyAnalyses");
 const login = require("./login");
 const register = require("./register");
+const analyses = require("./analyses");
 const collections = require("./collections");
 const tokentest = require("./tokentest");
 
@@ -71,12 +74,12 @@ api
   .use("/users", users)
   .use("/tokentest", tokentest)
   .use("/rmarkdown", rmarkdown)
-  .use("/myanalyses", myanalyses)
+  .use("/analyses", analyses)
   .use("/studies", studies)
   .use("/collections", collections)
-  .use("/login", login)
+  .use("/myanalyses", myanalyses);
 
 // No routes matched? 404.
 api.use((req, res) => res.status(404).end());
 
-module.exports = api
+module.exports = api;

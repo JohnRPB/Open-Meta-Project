@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 let UserSchema = new Schema({
   email: String,
   passHash: String,
-  analyses: [Schema.Types.ObjectId],
+  analyses: [{ type: Schema.Types.ObjectId, ref: "Analysis" }],
   profile: { type: Schema.Types.ObjectId, ref: "Profile" }
 });
 

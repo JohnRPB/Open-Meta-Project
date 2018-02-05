@@ -5,18 +5,15 @@
 // Div inside popup panel that displays study selection
 // options
 
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
   Link,
-  Switch,
-} from 'react-router-dom';
-import {
-  Checkbox,
-  List,
-} from 'semantic-ui-react';
+  Switch
+} from "react-router-dom";
+import { Checkbox, List } from "semantic-ui-react";
 
 class StudyCheckbox extends React.Component {
   constructor(props) {
