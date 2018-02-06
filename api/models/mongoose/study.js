@@ -32,6 +32,7 @@ const unSQL = function(next) {
   if (this._update.sqlStudy) {
     delete this._update.sqlStudy;
   }
+  next();
 };
 
 StudyOverflowSchema

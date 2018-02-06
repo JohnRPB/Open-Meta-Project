@@ -77,6 +77,7 @@ const unSQL = function(next){
         this._update.studies[index] = this._update.studies[index].id;
       }
     });
+  next();
   }
 
 const autoPop = function(next) {
