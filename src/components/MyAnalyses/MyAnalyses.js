@@ -36,15 +36,16 @@ class MyAnalyses extends Component {
   }
 
   componentWillMount() {
-    // this.props.getAnalyses("*");
-    // this.props.getCollections("*")
+    if (!this.props._token) {
+      window.location.href = "/login";
+    }
   }
 
   render() {
+    console.log(" <---- MYANALYSES PROPS ----> ", this.props);
     // creating cards from user's analyses
     let analysisCards;
     if (!this.props.isFetching) {
-      console.log("MY DATA props => ", this.props);
       analysisCards = this.props.Dashboard.user.analyses
         .slice(0, 3)
         .map(analysis => {
@@ -62,7 +63,6 @@ class MyAnalyses extends Component {
           );
         });
     }
-    console.log("MYANALYSES props => ", this.props);
 
     return (
       <div className="ui  vertical masthead center aligned segment">

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import NavContainer from "../../containers/NavContainer";
 import Nav from "../Nav";
 import {
   Dropdown,
@@ -22,30 +23,25 @@ import Related from "./Related";
 import ModalForm from "./ModalForm";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
-import Table from "../Profile/Table";
 const faker = require("faker");
 
-class AllAnalyses extends Component {
+class AllCollections extends Component {
   constructor() {
     super();
     this.isFetching = true;
-    // why arent these showing up???
-    this.UserId = "5a74fa36425cf997daab4328";
-    this.test = true;
   }
 
-  componentWillMount() {
-    console.log("inside will mount => ", this.props);
-    if (!this.props._token) {
-      this.props.history.push("/login");
-    }
-  }
+  // componentWillMount() {
+  //   if (!this.props._token) {
+  //     console.log(" <---- ALL COLLECTIONS PROPS ----> ", this.props);
+  //     window.location.href = "/login";
+  //   }
+  // }
 
   render() {
     // creating cards from user's analyses
     let analysisCards;
     if (!this.props.isFetching) {
-      console.log("MY DATA props => ", this.props);
       analysisCards = this.props.Dashboard.user.analyses
         .slice(0, 3)
         .map(analysis => {
@@ -63,13 +59,13 @@ class AllAnalyses extends Component {
           );
         });
     }
-    console.log("MYANALYSES props => ", this.props);
 
     return (
       <div className="ui  vertical masthead center aligned segment">
         <div className="following bar">
           <div className="ui container">
-            <Nav userId="5a74fa36425cf997daab4328" />
+            {/* <Nav userId="5a74fa36425cf997daab4328" /> */}
+            <NavContainer />
           </div>
         </div>
         <br />
@@ -95,7 +91,7 @@ class AllAnalyses extends Component {
                 <br />
                 <Button.Group basic>
                   <Button>
-                    <NavLink to="/myanalyses">Recent</NavLink>
+                    <NavLink to="/AllCollections">Recent</NavLink>
                   </Button>
                   <Button>
                     <NavLink to="/collections">Collections</NavLink>
@@ -110,40 +106,30 @@ class AllAnalyses extends Component {
               </Grid.Column>
             </Grid.Row>
 
-            {/* ANALYSES */}
+            {/* COLLECTIONS */}
             <Grid.Row>
               <Grid.Column width={3}>
                 <br />
-                <AnalysisModal />
+                <ModalForm />
               </Grid.Column>
-
               <Grid.Column width={13}>
                 <Segment>
-                  {this.props.isFetching ? (
-                    <Dimmer active>
-                      <Loader />
-                    </Dimmer>
-                  ) : (
-                    <div>
-                      <Header as="h1" textalign="left">
-                        Recent Analyses
-                      </Header>
-                      <Divider />
-                      <Card.Group>{analysisCards}</Card.Group>
-                      <br />
-                      <p>See all analyses</p>
-                    </div>
-                  )}
+                  {" "}
+                  <Header as="h1" textalign="left">
+                    Recent Collections
+                  </Header>
+                  <Divider />
+                  <Related />
+                  <br />
+                  <p>See all collections</p>
                 </Segment>
               </Grid.Column>
             </Grid.Row>
           </Grid>
         </Container>
-        <br />
-        <br />
       </div>
     );
   }
 }
 
-export default AllAnalyses;
+export default AllCollections;
