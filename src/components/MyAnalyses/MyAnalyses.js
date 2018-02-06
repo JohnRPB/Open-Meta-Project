@@ -46,6 +46,8 @@ class MyAnalyses extends Component {
     // creating cards from user's analyses
     let analysisCards;
     if (!this.props.isFetching) {
+      console.log("MY DATA props => ", this.props);
+      console.log("Myanalyses: this.props: ", this.props);
       analysisCards = this.props.Dashboard.user.analyses
         .slice(0, 3)
         .map(analysis => {

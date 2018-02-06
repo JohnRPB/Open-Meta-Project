@@ -71,6 +71,13 @@ CollectionSchema.methods.sqlFind = function() {
   .catch(err => console.error(err));
   
 }
+const unSQL = function(next){
+    this._update.studies.forEach((study,index) => {
+      if(typeof study == 'object'){
+        this._update.studies[index] = this._update.studies[index].id;
+      }
+    });
+  }
 
 const autoPop = function(next) {
   this
@@ -84,6 +91,8 @@ const autoPop = function(next) {
 CollectionSchema
   .pre('find', autoPop)
   .pre('findOne', autoPop)
+  .pre('update', unSQL)
+  .pre('findOneAndUpdate', unSQL)
 
 CollectionSchema
   .post('find', async function(docs) {

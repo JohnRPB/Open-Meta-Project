@@ -4,13 +4,15 @@ const mModels = require("./../models/mongoose");
 const Study = sModels.Study;
 const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
+const User = mModels.User;
+const Category = mModels.Category;
 let router = express.Router();
 
 //get collection by id
-router.get("/id/:id", function(req, res, next) {
+router.get('/id/:id', function(req, res, next) {
   Collection.findById(req.params.id)
     .then(result => {
-      console.log("result => ", result);
+      console.log('result => ', result);
       res.json(result);
     })
     .catch(e => res.status(500).send(e.stack));
@@ -49,13 +51,53 @@ router.get('/ids', async (req, res, next) => {
   res.send(JSON.stringify(results));
 });
 
-router.get("/id/:id", function(req, res, next) {
-  Collection.findById(req.params.id)
-    .then(result => {
-      console.log("result => ", result);
-      res.json(result);
-    })
-    .catch(e => res.status(500).send(e.stack));
+router.post('/new', async (req, res, next) => {
+  let body = req.body;
+  console.log(body.category[0]);
+  // currentCollection.studies.forEach(
+  //   (study, index) => {
+  //     console.log(currentCollection.studies[index])
+  //     console.log(currentCollection.studies[index].id)
+  //     currentCollection.studies[index] = currentCollection.studies[index].id
+  //   }
+  // );
+  let currentUser;
+  let currentCategory;
+  try {
+    for (let i = 0; i < body.category.length; i++) {
+      currentCategory = await Category.findOne({
+        name: new RegExp(`^${body.category[i]}$`, 'i'),
+      });
+      if (!currentCategory) {
+        currentCategory = new Category({
+          name: body.category[i],
+        });
+        await currentCategory.save();
+        currentCategory = await Category.findOne({name: currentCategory.name});
+      }
+      body.category[i] = currentCategory._id;
+    }
+    let currentCollection = new Collection(body);
+    await currentCollection.save();
+    currentCollection = await Collection.findOne({
+      $and: [{name: body.name}, {ownerId: body.ownerId}],
+    });
+    let currentUser = await User.findById(body.ownerId);
+    currentUser.analyses.push(currentCollection._id);
+    currentCollection.hist.push({
+      histId: currentCollection._id,
+      time: new Date(),
+    });
+    await Collection.findByIdAndUpdate(
+      currentCollection._id,
+      currentCollection,
+    );
+    await User.findByIdAndUpdate(currentUser._id, currentUser);
+    res.send(JSON.stringify(currentCollection));
+  } catch (e) {
+    console.error(e);
+    res.status(500).send(e.stack);
+  }
 });
 
 router.get("/:search", async function(req, res, next) {

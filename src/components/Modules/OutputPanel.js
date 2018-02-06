@@ -12,7 +12,7 @@ import {
   Link,
   Switch
 } from "react-router-dom";
-import { Card, Image } from "semantic-ui-react";
+import { Card, Image, Container } from "semantic-ui-react";
 import "../../index.css";
 
 // ---------------------------------------------------------
@@ -39,11 +39,9 @@ const IframeDisplay = props => {
 
 const OutputPanel = props => {
   return (
-    <Card style={{ height: "550px", width: "680px" }}>
-      <Card.Content>
-        <IframeDisplay {...props} />
-      </Card.Content>
-    </Card>
+    <Container style={{ height: "550px", width: "680px" }}>
+      <IframeDisplay {...props} />
+    </Container>
   );
 };
 
