@@ -77,9 +77,10 @@ class MasterDocument extends Component {
                   <Sticky context={contextRef}>
                     <h2>Modules</h2>
                     <div>
-                      {boxes.map(({ name, content, type }, index) => (
+                      {boxes.map(({ name, content, loading, type }, index) => (
                         <Box
                           content={content}
+                          loading={loading}
                           name={name}
                           type={type}
                           isDropped={this.isDropped(name)}
@@ -95,19 +96,19 @@ class MasterDocument extends Component {
                   {blocks.map((block, index) => {
                     return (
                       <div key={index} className="fluid">
-                        <ul>
-                          <li onClick={e => handleClick(e, index)}>
+                        <div>
+                          <div onClick={e => handleClick(e, index)}>
                             {block.textContent ? (
                               block.textContent
                             ) : (
                               <Module moduleIdx={index} />
                             )}
                             {/* JSON.stringify(block)} */}
-                          </li>
+                          </div>
                           <br />
                           <br />
                           <br />
-                        </ul>
+                        </div>
                         {index == showForm ? (
                           <div>
                             <Form onSubmit={e => handleSubmit(e, index)}>

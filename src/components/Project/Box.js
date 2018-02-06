@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { DragSource } from "react-dnd";
-//import studies from "../../databaseStudies.js";
+import studies from "../../databaseStudies.js";
+import ItemTypes from "./ItemTypes";
 
 const style = {
   border: "1px dashed gray",
@@ -13,18 +14,26 @@ const style = {
   float: "left"
 };
 
+let createStudies = () =>
+  studies.map(study => Object.assign({}, study)).slice(0, 10);
+
+let createModule = () => {
+  return {
+    name: "simplePlot",
+    type: "graphic",
+    outputLoc:
+      "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
+    studies: createStudies()
+  };
+};
+
 const boxSource = {
   beginDrag(props) {
     return {
       name: props.name,
-      content: props.content
-      // content: {
-      //   name: "simplePlot",
-      //   type: "graphic",
-      //   placeholder: "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
-      //   outputLoc: "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
-      //   studies: studies.slice(0, 10)
-      // }
+      loading: props.loading,
+      type: props.type,
+      content: createModule()
     };
   },
 
