@@ -55,7 +55,7 @@ class UserForm extends Component {
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
-            this.props.history.push("/dashboard");
+            this.props.history.push("/myanalyses");
           }
           return data;
           // data = data.json()
