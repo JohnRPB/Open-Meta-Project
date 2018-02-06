@@ -4,11 +4,13 @@ import {
   ADD_TEXT,
   HANDLE_DROPPING,
   SHOW_FORM,
-  DELETE_ELEMENT
+  DELETE_ELEMENT,
+  GET_UPDATED_MODULES
 } from "../actions/project";
 
 import ItemTypes from "../components/Project/ItemTypes";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
+import studies from "../databaseStudies.js";
 
 const initialState = {
   blocks: [],
@@ -31,10 +33,20 @@ const initialState = {
     // { accepts: [ItemTypes.GRAPH, NativeTypes.FILE], lastDroppedItem: null }
   ],
   boxes: [
-    { name: "Mean", type: ItemTypes.SUMMARY },
-    { name: "Regression", type: ItemTypes.METHOD },
-    { name: "Funnel Plot", type: ItemTypes.GRAPH },
-    { name: "module", type: ItemTypes.GRAPH, content: { stuff: "dfasdf" } }
+    // { name: "Mean", type: ItemTypes.SUMMARY },
+    // { name: "Regression", type: ItemTypes.METHOD },
+    // { name: "Funnel Plot", type: ItemTypes.GRAPH },
+    {
+      name: "test module",
+      type: ItemTypes.GRAPH,
+      content: {
+        name: "simplePlot",
+        type: "graphic",
+        outputLoc:
+          "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
+        studies: studies.slice(0, 10)
+      }
+    }
   ],
   droppedBoxNames: [],
   showForm: null,
@@ -44,6 +56,10 @@ const initialState = {
 const project = (state = initialState, action) => {
   let blocks;
   switch (action.type) {
+    case GET_UPDATED_MODULES:
+      return {
+        ...state
+      };
     case ADD_TEXT:
       let { index, textContent } = action.data;
       //don't allow empty submissions

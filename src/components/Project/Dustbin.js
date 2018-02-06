@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import { DropTarget } from "react-dnd";
 
 const style = {
-  height: "10rem",
+  height: "100%",
   width: "100%",
   marginRight: "1.5rem",
   marginBottom: "1.5rem",
   color: "black",
   padding: "1rem",
-  textAlign: "left",
+  textAlign: "center",
   fontSize: "1rem",
   lineHeight: "normal",
   float: "left"

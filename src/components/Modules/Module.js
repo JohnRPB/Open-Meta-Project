@@ -43,14 +43,14 @@ class Module extends React.Component {
       <Container>
         <PopupPanel
           trigger={
-            <a href="#"> 
-                <OutputPanelContainer moduleIdx={this.props.moduleIdx} />
-            </a>
-          }>
+              <Button>+</Button>
+          }
+          >
           <ControlPanel moduleIdx={this.props.moduleIdx}>
             <StudyInclusionBoxContainer moduleIdx={this.props.moduleIdx}/>
           </ControlPanel>
         </PopupPanel>
+        <OutputPanelContainer moduleIdx={this.props.moduleIdx} />
       </Container>
     );
   }

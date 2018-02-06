@@ -6,10 +6,12 @@ mongoose.Promise = bluebird;
 var models = {};
 
 models.Analysis = require("./analysis.js");
+models.Category = require("./categories.js");
+models.Collection = require("./collection.js");
+models.Comment = require("./comment.js");
+models.Profile = require("./profile.js");
 models.StudyOverflow = require("./study.js");
 models.User = require("./user.js");
-models.Collection = require("./collection.js");
-models.Profile = require("./profile.js");
 
 module.exports = models;
 

@@ -10,7 +10,7 @@ const studyOverflowSeed = async () => {
     for (let i = 0; i < studies.length; i++) {
       let currentStudyOverflow = new StudyOverflow();
       currentStudyOverflow.sqlId = studies[i].id;
-      currentStudyOverflow.payload = {};
+      currentStudyOverflow.payload = {url: studies[i].url};
       await currentStudyOverflow.save();
     }
   } catch (e) {

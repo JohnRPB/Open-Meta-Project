@@ -5,7 +5,7 @@ import demo from "./demo";
 import project from "./project";
 import MyAnalysesPage from "./MyAnalyses";
 import Dashboard from "./Dashboard";
-import Token from "./Token"
+import Token from "./Token";
 import Profile from "./Profile";
 import sitesearch from "./sitesearch";
 import Analysis from "./Analysis";
@@ -23,7 +23,6 @@ const Reducers = combineReducers({
   Profile,
   sitesearch,
   Analysis,
-  routing: routerReducer,
   modules
 });
 

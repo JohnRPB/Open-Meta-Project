@@ -23,6 +23,7 @@ import {
   Rail,
   Sticky
 } from "semantic-ui-react";
+import "../../index.css";
 
 import collection from "../../databaseStudies";
 import Module from "../Modules/Module";
@@ -38,6 +39,10 @@ class MasterDocument extends Component {
 
   isDropped(boxName) {
     return this.props.droppedBoxNames.indexOf(boxName) > -1;
+  }
+
+  componentWillMount() {
+    //this.getUpdatedModules();
   }
 
   render() {
@@ -72,8 +77,9 @@ class MasterDocument extends Component {
                   <Sticky context={contextRef}>
                     <h2>Modules</h2>
                     <div>
-                      {boxes.map(({ name, type }, index) => (
+                      {boxes.map(({ name, content, type }, index) => (
                         <Box
+                          content={content}
                           name={name}
                           type={type}
                           isDropped={this.isDropped(name)}
@@ -91,9 +97,12 @@ class MasterDocument extends Component {
                       <div key={index} className="fluid">
                         <ul>
                           <li onClick={e => handleClick(e, index)}>
-                            {block.textContent
-                              ? block.textContent
-                              : JSON.stringify(block)}
+                            {block.textContent ? (
+                              block.textContent
+                            ) : (
+                              <Module moduleIdx={index} />
+                            )}
+                            {/* JSON.stringify(block)} */}
                           </li>
                           <br />
                           <br />
@@ -164,8 +173,6 @@ class MasterDocument extends Component {
                     </div>
                   </div>
                 ) : null}
-
-                <Module moduleIdx={0} />
               </Segment>
             </div>
           </Grid.Column>
