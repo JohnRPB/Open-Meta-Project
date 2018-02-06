@@ -1,7 +1,6 @@
 import * as Actions from "../actions/MyAnalyses";
 
 const initialState = {
-  analyses: [],
   isFetching: true,
   error: null
 };
@@ -18,6 +17,12 @@ export function MyAnalysesPage(state = initialState, action) {
       return {
         ...state,
         collections: action.data,
+        isFetching: false
+      };
+    case Actions.GET_USER:
+      return {
+        ...state,
+        user: action.data,
         isFetching: false
       };
     default:

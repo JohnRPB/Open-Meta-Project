@@ -1,11 +1,11 @@
 // ---------------------------------------------------------
-// Control Panel 
+// Control Panel
 // 2018-02-01 10:09
 // ---------------------------------------------------------
 // Dynamically passes its props to all of its children
 
-import React, {Component} from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 import {
   Container,
   Divider,
@@ -17,14 +17,14 @@ import {
   Image,
   Button,
   Checkbox,
-  List,
-} from 'semantic-ui-react';
-import StudyInclusionBoxContainer from '../../containers/Modules/StudyInclusionBoxContainer';
+  List
+} from "semantic-ui-react";
+import StudyInclusionBoxContainer from "../../containers/Modules/StudyInclusionBoxContainer";
 
 class ControlPanel extends React.Component {
   constructor(props) {
     super(props);
-    this.props=props;
+    this.props = props;
   }
 
   render() {
@@ -36,9 +36,8 @@ class ControlPanel extends React.Component {
         <Divider horizontal inverted />
         <h4> Controls </h4>
       </Container>
-  );
+    );
   }
-};
+}
 
 export default ControlPanel;
-

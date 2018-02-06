@@ -8,7 +8,7 @@ const initialState = {
 
 export function Collection(state = initialState, action) {
   switch (action.type) {
-    case Actions.GET_ANALYSIS:
+    case Actions.GET_COLLECTION:
       return {
         ...state,
         Collection: action.data,

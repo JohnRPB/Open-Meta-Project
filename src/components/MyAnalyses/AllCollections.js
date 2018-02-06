@@ -20,7 +20,7 @@ import {
   Loader
 } from "semantic-ui-react";
 import Related from "./Related";
-import ModalForm from "./ModalForm";
+import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
 const faker = require("faker");
@@ -69,7 +69,7 @@ class AllCollections extends Component {
           </div>
         </div>
         <br />
-        <br />
+
         <Container>
           <Grid>
             {/* header & sub-menu */}
@@ -110,7 +110,7 @@ class AllCollections extends Component {
             <Grid.Row>
               <Grid.Column width={3}>
                 <br />
-                <ModalForm />
+                <CollectionModal />
               </Grid.Column>
               <Grid.Column width={13}>
                 <Segment>

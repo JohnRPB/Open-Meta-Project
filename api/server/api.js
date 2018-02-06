@@ -14,19 +14,24 @@ const studies = require("./study");
 const myanalyses = require("./MyAnalyses");
 const login = require("./login");
 const register = require("./register");
-const analyses = require("./analyses");
 const collections = require("./collections");
+const analyses = require("./analyses");
 const tokentest = require("./tokentest");
 const newprofile = require("./newprofile");
 
 api.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Credentials', 'true');  
-  res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
-  res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers,Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,HEAD,OPTIONS,POST,PUT,DELETE"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Access-Control-Allow-Headers,Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization"
+  );
   next();
 });
-api.use(cors());
 
 api.get("/express-test", (req, res) => res.send({ express: "working!" })); //demo route to prove api is working
 api.use("/login", login);
@@ -83,6 +88,7 @@ api
   .use("/analyses", analyses)
   .use("/studies", studies)
   .use("/collections", collections)
+  .use("/analyses", analyses)
   .use("/myanalyses", myanalyses);
 
 // No routes matched? 404.

@@ -19,7 +19,7 @@ import {
   Loader
 } from "semantic-ui-react";
 import Related from "./Related";
-import ModalForm from "./ModalForm";
+import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
 import Table from "../Profile/Table";
@@ -73,7 +73,7 @@ class AllAnalyses extends Component {
           </div>
         </div>
         <br />
-        <br />
+
         <Container>
           <Grid>
             {/* header & sub-menu */}
