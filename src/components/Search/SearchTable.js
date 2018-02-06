@@ -1,6 +1,6 @@
 import React from 'react';
 import {Checkbox, Form, Grid, Segment, Button, Modal, Pagination, Table} from 'semantic-ui-react';
-const SearchTable = ({checkedStudy, uncheckedStudy, onClick, secondClick, activePage, pageChange}) => {
+const SearchTable = ({checkedStudy, uncheckedStudy, onClick, secondClick, activePage, pageChange, onSubmit}) => {
   let tableContent = <div />;
   if (checkedStudy.length || uncheckedStudy.length) {
     let uncheckedStudyPage = uncheckedStudy.slice((activePage - 1) * 10, 10 * activePage);
@@ -12,17 +12,19 @@ const SearchTable = ({checkedStudy, uncheckedStudy, onClick, secondClick, active
         <Modal.Header>
           Save Collection
         </Modal.Header>
-        <Form onSubmit={()=>{}}>
+        <Grid centered>
+        <Form onSubmit={onSubmit}>
           <Form.Field>
             <label>Collection Name</label>
             <input type="text" name="collection[name]" />
           </Form.Field>
           <Form.Field>
             <label>Category</label>
-            <input type="text" name="collection[category][0]" />
+            <input type="text" name="category[0]" />
           </Form.Field>
           <Button>Save</Button>
         </Form>
+      </Grid>
         </Modal>
         <Table attached='top' celled>
           <Table.Header>

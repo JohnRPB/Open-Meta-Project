@@ -6,6 +6,7 @@ const studies = require("./study");
 const myanalyses = require("./MyAnalyses");
 const login = require("./login")
 const collections = require("./collections");
+const analyses = require("./analyses");
 const cors = require('cors');
 
 api.use((req, res, next) => {
@@ -31,6 +32,7 @@ api
   .use("/myanalyses", myanalyses)
   .use("/studies", studies)
   .use("/collections", collections)
+  .use("/analyses", analyses)
   .use("/login", login)
 
 // No routes matched? 404.

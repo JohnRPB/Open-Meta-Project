@@ -264,6 +264,9 @@ const seed = async () => {
         for (let i = 0; i < profiles.length; i++) {
           await Profile.findByIdAndUpdate(profiles[i]._id, profiles[i]);
         }
+        for (let i = 0; i < users.length; i++) {
+          await User.findByIdAndUpdate(users[i]._id, profiles[i]);
+        }
 
         return 1;
       } catch (e) {
