@@ -43,9 +43,9 @@ class Nav extends Component {
         <NavLink to="/landing" className="item">
           Open Meta
         </NavLink>
-        <NavLink to="/dashboard" className="item">
+        {/* <NavLink to="/dashboard" className="item">
           My Dashboard
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/myanalyses" className="item">
           My Reviews
         </NavLink>
@@ -72,7 +72,7 @@ class Nav extends Component {
               <Dropdown.Item>
                 <NavLink to="/profile">Profile</NavLink>
               </Dropdown.Item>
-              <Dropdown.Item>Other</Dropdown.Item>
+              <Dropdown.Item>Log Out</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
