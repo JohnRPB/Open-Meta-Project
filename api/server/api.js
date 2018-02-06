@@ -12,6 +12,7 @@ const users = require("./users.js");
 const rmarkdown = require("./rmarkdown");
 const studies = require("./study");
 const myanalyses = require("./MyAnalyses");
+const analyses = require("./analyses");
 const login = require("./login");
 const register = require("./register");
 const collections = require("./collections");

@@ -8,7 +8,7 @@ body {
 
 body {
   font-family: "Raleway", sans-serif;
-  background: #e9f8df;
+  background: #add8e6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,13 +28,13 @@ body {
 }
 
 h1 {
-  color: #416171;
+  color: black;
   font-size: 43px;
   margin: 0;
 }
 
 h2 {
-  color: #349e97;
+  color: black;
   margin: 0;
 }
 
