@@ -20,6 +20,7 @@ const boxSource = {
       content: {
         name: "simplePlot",
         type: "graphic",
+        placeholder: "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
         outputLoc: "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
         studies: studies.slice(0, 10)
       }

@@ -53,6 +53,11 @@ router.post('/submit', async (req, res, next) => {
       Object.keys(bodyInfo.study).forEach(key => {
         studyBuild[key] = bodyInfo.study[key];
       });
+      studyBuild.url = bodyInfo.url;
+      studyBuild.journalId = studyJournal.id;
+      Object.keys(bodyInfo.study.stats).forEach(statKey => {
+        studyBuild[statKey] = bodyInfo.study.stats[statKey];
+      });
       currentStudy = Study.build(studyBuild);
       await currentStudy.save();
       currentStudy = await Study.find({
@@ -147,7 +152,7 @@ router.post('/submit', async (req, res, next) => {
         }
       }
     }
-    res.status(200).send();
+    res.send(JSON.stringify([currentStudy.dataValues]));
   } catch (e) {
     console.error(e);
     res.status(500).send(e.stack);
@@ -158,36 +163,6 @@ router.get('/search', async (req, res, next) => {
   let query = req.query;
   let results = [];
   let hashObj = {};
-
-  if (query.tags) {
-    let tagParams = {
-      where: {
-        [Op.or]: [],
-      },
-      include: [{model: Study, as: 'TaggedArea'}],
-    };
-    let tagArray = query.tags.split('_');
-    tagArray.forEach(tag => {
-      tagParams.where[Op.or].push({name: {[Op.iLike]: `%${tag}%`}});
-    });
-    let tagResults;
-    try {
-      tagResults = await Tag.findAll(tagParams);
-      console.log(tagResults);
-    } catch (e) {
-      res.status(500).send(e.stack);
-    }
-    if (tagResults.length) {
-      tagResults.forEach(result => {
-        result.TaggedArea.forEach(study => {
-          if (hashObj[study.id] == undefined) {
-            results.push(study.dataValues);
-            hashObj[study.id] = 1;
-          }
-        });
-      });
-    }
-  }
 
   if (query.study) {
     let studyParams = {
@@ -224,7 +199,7 @@ router.get('/search', async (req, res, next) => {
       where: {
         [Op.or]: [],
       },
-      include: [{model: Study, as: 'Study'}],
+      include: [{model: Study, as: 'Studies'}],
     };
     let authorArray = query.author.split('_');
     authorArray.forEach(name => {
@@ -281,7 +256,54 @@ router.get('/search', async (req, res, next) => {
     }
   }
 
-  res.send(JSON.stringify(results));
+  if (query.tags) {
+    let tagSearchArray = [];
+    let i = 0;
+    while ((results.length + tagSearchArray.length < 30) & (i < 5)) {
+      let tagParams = {
+        where: {
+          [Op.or]: [],
+        },
+        include: [{model: Study, as: 'Studies'}],
+      };
+      let tagArray = query.tags.split('_');
+      tagArray.forEach(tag => {
+        if (tag.length - i > 0) {
+          let tagMod = tag.substring(0, tag.length - i);
+          tagParams.where[Op.or].push({name: {[Op.iLike]: `%${tagMod}%`}});
+        }
+      });
+      let tagResults;
+      try {
+        tagResults = await Tag.findAll(tagParams);
+        console.log(tagResults);
+      } catch (e) {
+        res.status(500).send(e.stack);
+      }
+      if (tagResults.length) {
+        tagResults.forEach(result => {
+          result.Studies.forEach(study => {
+            if (hashObj[study.id] == undefined) {
+              tagSearchArray.push([
+                study.dataValues,
+                study.JoinStudyTag.weight / i,
+              ]);
+              hashObj[study.id] = 1;
+            }
+          });
+        });
+        tagSearchArray.sort((x, y) => (x[1] < y[1] ? 1 : x[1] > y[1] ? -1 : 0));
+        // console.log(tagSearchArray);
+        tagSearchArray.forEach(study => {
+          results.push(study[0]);
+        });
+        // console.log(results);
+      }
+      i += 2;
+    }
+  }
+
+  res.send(JSON.stringify(results.slice(0, 30)));
 });
 
 router.get('/ids', async (req, res, next) => {
@@ -304,7 +326,7 @@ router.get('/ids', async (req, res, next) => {
   let rawStudies;
   try {
     rawStudies = await Study.findAll(queryParams);
-    console.log(rawStudies)
+    console.log(rawStudies);
   } catch (e) {
     res.status(500).send(e.stack);
   }
@@ -315,6 +337,5 @@ router.get('/ids', async (req, res, next) => {
   }
 
   res.send(JSON.stringify(results));
-
 });
 module.exports = router;

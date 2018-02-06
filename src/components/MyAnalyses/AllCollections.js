@@ -23,26 +23,22 @@ import Related from "./Related";
 import ModalForm from "./ModalForm";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
-import Table from "../Profile/Table";
 const faker = require("faker");
 
-class MyAnalyses extends Component {
+class AllCollections extends Component {
   constructor() {
     super();
     this.isFetching = true;
-    // why arent these showing up???
-    this.UserId = "5a74fa36425cf997daab4328";
-    this.test = true;
   }
 
-  componentWillMount() {
-    if (!this.props._token) {
-      window.location.href = "/login";
-    }
-  }
+  // componentWillMount() {
+  //   if (!this.props._token) {
+  //     console.log(" <---- ALL COLLECTIONS PROPS ----> ", this.props);
+  //     window.location.href = "/login";
+  //   }
+  // }
 
   render() {
-    console.log(" <---- MYANALYSES PROPS ----> ", this.props);
     // creating cards from user's analyses
     let analysisCards;
     if (!this.props.isFetching) {
@@ -95,7 +91,7 @@ class MyAnalyses extends Component {
                 <br />
                 <Button.Group basic>
                   <Button>
-                    <NavLink to="/myanalyses">Recent</NavLink>
+                    <NavLink to="/AllCollections">Recent</NavLink>
                   </Button>
                   <Button>
                     <NavLink to="/collections">Collections</NavLink>
@@ -129,58 +125,6 @@ class MyAnalyses extends Component {
                 </Segment>
               </Grid.Column>
             </Grid.Row>
-
-            {/* ANALYSES */}
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <br />
-                <AnalysisModal />
-              </Grid.Column>
-
-              <Grid.Column width={13}>
-                <Segment>
-                  {this.props.isFetching ? (
-                    <Dimmer active>
-                      <Loader />
-                    </Dimmer>
-                  ) : (
-                    <div>
-                      <Header as="h1" textalign="left">
-                        Recent Analyses
-                      </Header>
-                      <Divider />
-                      <Card.Group>{analysisCards}</Card.Group>
-                      <br />
-                      <p>See all analyses</p>
-                    </div>
-                  )}
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
-
-            {/* REVIEWS */}
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <br />
-                <ReviewModal />
-              </Grid.Column>
-
-              <Grid.Column width={13}>
-                <Segment>
-                  <Header as="h1" textalign="left">
-                    Recent Reviews
-                  </Header>
-                  <Divider />
-                  <Card.Group>
-                    <Card fluid color="red" header="Option 1" />
-                    <Card fluid color="orange" header="Option 2" />
-                    <Card fluid color="yellow" header="Option 3" />
-                  </Card.Group>
-                  <br />
-                  <p>See all reviews</p>
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
           </Grid>
         </Container>
       </div>
@@ -188,4 +132,4 @@ class MyAnalyses extends Component {
   }
 }
 
-export default MyAnalyses;
+export default AllCollections;

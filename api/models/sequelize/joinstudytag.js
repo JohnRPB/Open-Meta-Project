@@ -2,7 +2,8 @@
 module.exports = (sequelize, DataTypes) => {
   var JoinStudyTag = sequelize.define('JoinStudyTag', {
     studyId: DataTypes.INTEGER,
-    tagId: DataTypes.INTEGER
+    tagId: DataTypes.INTEGER,
+    weight: DataTypes.INTEGER
   });  
 
   JoinStudyTag.associate = function(models) {

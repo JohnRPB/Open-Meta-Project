@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Author.belongsToMany(models.Study, {
       through: models.JoinStudyAuthor,
-      as: 'Study',
+      as: 'Studies',
       foreignKey: 'authorId',
     });
   };

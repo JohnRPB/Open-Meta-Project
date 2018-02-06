@@ -10,45 +10,30 @@ import {
 } from 'semantic-ui-react';
 import SearchTableContainer from '../../containers/SearchTableContainer';
 import SearchCollectionContainer from '../../containers/SearchCollectionContainer.js';
+import SearchFormContainer from '../../containers/SearchFormContainer'
 
-const Search = ({ onSubmit }) => {
+const Search = ({}) => {
   return (
     <div>
       <br />
       <br />
       <Grid divided="vertically" padded>
         <Grid.Row>
-          <Grid.Column width={1}>
+          <Grid.Column width={4}>
     </Grid.Column>
-    <Grid.Column width={7}>
+    <Grid.Column width={8}>
       <SearchCollectionContainer />
     </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column width={1}>
+          <Grid.Column width={4}>
           </Grid.Column>
-          <Grid.Column width={7}>
-      <Form onSubmit={onSubmit}>
-        <Form.Field>
-          <label>Keywords</label>
-          <input name="tags" placeholder="Keywords" />
-        </Form.Field>
-        <Form.Field>
-          <label>Study</label>
-          <input name="study" placeholder="Study Name" />
-        </Form.Field>
-        <Form.Field>
-          <label>Author</label>
-          <input name="author" placeholder="Author" />
-        </Form.Field>
-        <Form.Field>
-          <label>Journal</label>
-          <input name="journal" placeholder="Journal" />
-        </Form.Field>
-        <Button type="submit">Submit</Button>
-      </Form>
-      </Grid.Column>
-          <Grid.Column width={7}>
+            <SearchFormContainer />
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={4}>
+          </Grid.Column>
+          <Grid.Column width={8}>
             <SearchTableContainer />
           </Grid.Column>
         </Grid.Row>

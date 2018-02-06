@@ -1,10 +1,10 @@
-const faker = require("faker");
+const faker = require('faker');
 
-const models = require("../../models/sequelize");
+const models = require('../../models/sequelize');
 const Studies = models.Study;
 
-const mongoose = require("mongoose");
-const mongoModels = require("../../models/mongoose");
+const mongoose = require('mongoose');
+const mongoModels = require('../../models/mongoose');
 
 const Collection = mongoModels.Collection;
 
@@ -26,28 +26,27 @@ const MIN_STUDIES_IN_COLLECTION = 5;
 //   return result;
 // };
 
-const collectionSeed = async () => {
+const collectionSeed = async n => {
   let studies = await Studies.findAll();
   let studyIds = studies.map(study => study.id);
   try {
-    for (
-      var i = 0, len = NUMBER_OF_COLLECTIONS;
-      i < NUMBER_OF_COLLECTIONS;
-      i++
-    ) {
+    for (let i = 0; i < n; i++) {
       let currentCollection = new Collection();
-      let numberOfStudies = Math.floor(
-        Math.random() * 10 + 1 + MIN_STUDIES_IN_COLLECTION
-      );
-      currentCollection.studies = []; //getRandom(studyIds, numberOfStudies);
+      let numberOfStudies = Math.floor(Math.random() * 15 + 5);
+      currentCollection.studies = [];
       for (let j = 0; j < numberOfStudies; j++) {
-        currentCollection.studies.push(
-          studies[Math.floor(Math.random() * studies.length)].id
-        );
+        let randomIndex = Math.floor(Math.random() * studies.length);
+        while (currentCollection.studies.includes(studies[randomIndex].id)) {
+          if (currentCollection.studies.length === studies.length) {
+            break;
+          }
+          randomIndex = Math.floor(Math.random() * studies.length);
+        }
+        currentCollection.studies.push(studies[randomIndex].id);
       }
 
-      currentCollection.name = faker.company.bsAdjective() + " collection";
-      currentCollection.save();
+      currentCollection.name = faker.company.bsAdjective() + ' collection';
+      await currentCollection.save();
     }
   } catch (e) {
     console.error(e);
