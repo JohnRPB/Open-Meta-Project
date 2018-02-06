@@ -4,11 +4,11 @@ const mModels = require('./../models/mongoose');
 const Study = sModels.Study;
 const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
+const Analysis = mModels.Analysis;
 let router = express.Router();
 
-//get collection by id
 router.get("/id/:id", function(req, res, next) {
-  Collection.findById(req.params.id)
+  Analysis.findById(req.params.id)
     .then(result => {
       console.log("result => ", result);
       res.json(result);
@@ -16,10 +16,9 @@ router.get("/id/:id", function(req, res, next) {
     .catch(e => res.status(500).send(e.stack));
 });
 
-//get a number of collections by ids as query
 router.get('/ids', async (req, res, next) => {
   let results = [];
-  let query = req.query.collections;
+  let query = req.query.analyses;
   let queryParams = {
     where: {
       id: {
@@ -34,19 +33,20 @@ router.get('/ids', async (req, res, next) => {
   idArray.forEach(id => {
     queryParams.where.id[Op.or].push(id);
   });
-  let rawStudies;
+  let rawAnalyses;
   try {
-    rawStudies = await Collection.find(queryParams);
+    rawAnalyses = await Analysis.find(queryParams);
   } catch (e) {
     res.status(500).send(e.stack);
   }
-  if (rawStudies.length) {
-    rawStudies.map(collection => {
-      results.push(collection.studies);
+  if (rawAnalyses.length) {
+    rawAnalyses.map(analysis => {
+      results.push(analysis);
     });
   }
 
   res.send(JSON.stringify(results));
 
 });
+
 module.exports = router;

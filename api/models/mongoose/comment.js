@@ -14,12 +14,12 @@ let CommentSchema = new Schema({
   },
 });
 
-// const autoPop = next => {
-//   this.populate('User');
-//
-//   next();
-// };
-// CommentSchema.pre('find', autoPop).pre('findOne', autoPop);
+const autoPop = next => {
+  this.populate('user');
+
+  next();
+};
+CommentSchema.pre('find', autoPop).pre('findOne', autoPop);
 
 let Comment = mongoose.model('Comment', CommentSchema);
 
