@@ -17,10 +17,42 @@ export function getAnalysesSuccess(data) {
 export function getAnalyses(id) {
   return dispatch => {
     axios
-      .get(`${root}/api/myanalyses`)
+      .get(`${root}/api/analyses`)
+      .then(response => {
+        dispatch(getAnalysesSuccess(response.data));
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  };
+}
+
+// -------------------------------
+// GETTING A USER
+// -------------------------------
+
+export const GET_USER = "GET_USER";
+
+export function getUserSuccess(data) {
+  return {
+    type: GET_USER,
+    data: data,
+    isFetching: false
+  };
+}
+
+export function getUser(id, token) {
+  return dispatch => {
+    axios({
+      url: `${root}/api/users/${id}`,
+      method: "get",
+      headers: new Headers({
+        "x-access-token": token
+      })
+    })
       .then(response => {
         console.log("response =>", response);
-        dispatch(getAnalysesSuccess(response.data));
+        dispatch(getUserSuccess(response.data));
       })
       .catch(e => {
         console.log(e);

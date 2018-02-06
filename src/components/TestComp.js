@@ -3,7 +3,10 @@ import classnames from "classnames";
 import {Link} from "react-router-dom";
 import logo from "./../logo.svg";
 import "./App/style.css";
+import Module from './Modules/Module';
 
+import collection from "../databaseStudies";
+//<Module endpoint = {"simplePlot"} collection={collection.slice(0,99)}/>
 class App extends Component {
   render() {
     const {className, ...props} = this.props;

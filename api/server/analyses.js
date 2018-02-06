@@ -46,7 +46,6 @@ router.get('/ids', async (req, res, next) => {
   }
 
   res.send(JSON.stringify(results));
-
 });
 
 module.exports = router;

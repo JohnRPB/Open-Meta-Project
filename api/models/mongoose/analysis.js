@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const models = require('./index.js');
 const User = models.User;
@@ -24,28 +24,28 @@ let AnalysisSchema = new Schema({
         ref: 'Analysis',
       },
       time: {
-        type: Date,
-      },
-    },
+        type: Date
+      }
+    }
   ],
   data: {
     header: {},
     inclusion: {
       collectionId: {
         type: Schema.Types.ObjectId,
-        ref: 'Collection',
+        ref: "Collection"
       },
       excluded: {
         type: [Schema.Types.ObjectId],
-        ref: 'StudyOverflow',
-      },
+        ref: "StudyOverflow"
+      }
     },
     blocks: [{}],
     category: {
       type: [Schema.Types.ObjectId],
-      ref: 'Category',
-    },
-  },
+      ref: "Category"
+    }
+  }
 });
 
 AnalysisSchema.methods.fork = async function(newOwnerId) {

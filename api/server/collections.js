@@ -1,6 +1,6 @@
-const express = require('express');
-const sModels = require('./../models/sequelize');
-const mModels = require('./../models/mongoose');
+const express = require("express");
+const sModels = require("./../models/sequelize");
+const mModels = require("./../models/mongoose");
 const Study = sModels.Study;
 const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
@@ -25,14 +25,14 @@ router.get('/ids', async (req, res, next) => {
   let queryParams = {
     where: {
       id: {
-        [Op.or]: [],
-      },
-    },
+        [Op.or]: []
+      }
+    }
   };
-  if (query[0] == '_') {
+  if (query[0] == "_") {
     query = query.substring(1);
   }
-  let idArray = query.split('_');
+  let idArray = query.split("_");
   idArray.forEach(id => {
     queryParams.where.id[Op.or].push(id);
   });
@@ -50,6 +50,7 @@ router.get('/ids', async (req, res, next) => {
 
   res.send(JSON.stringify(results));
 });
+
 router.post('/new', async (req, res, next) => {
   let body = req.body;
   console.log(body.category[0]);
@@ -98,4 +99,28 @@ router.post('/new', async (req, res, next) => {
     res.status(500).send(e.stack);
   }
 });
+
+router.get("/:search", async function(req, res, next) {
+  console.log("REQ.PARAMS.SEARCH", req.params.search);
+  let query = req.params.search,
+    result,
+    results = [];
+  try {
+    result = await Collection.find({});
+    console.log("result => ", result);
+  } catch (e) {
+    res.status(500).send(e.stack);
+  }
+
+  //Handle asynchronous problems by putting the following outside the try block
+  result.forEach(element => {
+    if (element.name.toLowerCase().includes(query.toLowerCase())) {
+      console.log(element.name);
+      results.push(element);
+    }
+  });
+  console.log("results => ", results);
+  res.json(results);
+});
+
 module.exports = router;
