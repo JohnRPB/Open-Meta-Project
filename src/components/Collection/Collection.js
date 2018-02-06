@@ -40,8 +40,6 @@ class Collection extends Component {
           <Container>
             {!this.props.isFetching ? (
               <div>
-                <Header as="h1">{Collection.data.header.title}</Header>
-                <Header as="h2"> By {Collection.data.header.author}</Header>
                 <p />
                 <p>{JSON.stringify(Collection.data, null, 5)}</p>
               </div>

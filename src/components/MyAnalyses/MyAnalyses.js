@@ -111,7 +111,7 @@ class MyAnalyses extends Component {
             </Grid.Row>
 
             {/* COLLECTIONS */}
-            <Grid.Row>
+            <Grid.Row id="collections">
               <Grid.Column width={3}>
                 <br />
                 <ModalForm />
@@ -133,7 +133,7 @@ class MyAnalyses extends Component {
             </Grid.Row>
 
             {/* ANALYSES */}
-            <Grid.Row>
+            <Grid.Row id="analyses" className="hidden">
               <Grid.Column width={3}>
                 <br />
                 <AnalysisModal />
