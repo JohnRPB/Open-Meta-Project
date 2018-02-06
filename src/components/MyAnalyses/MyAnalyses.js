@@ -103,9 +103,9 @@ class MyAnalyses extends Component {
                   <Button>
                     <NavLink to="/analyses">Analyses</NavLink>
                   </Button>
-                  <Button>
+                  {/* <Button>
                     <NavLink to="/reviews">Reviews</NavLink>
-                  </Button>
+                  </Button> */}
                 </Button.Group>
               </Grid.Column>
             </Grid.Row>
@@ -125,7 +125,9 @@ class MyAnalyses extends Component {
                   <Divider />
                   <Related />
                   <br />
-                  <p>See all collections</p>
+                  <NavLink to="/collections">
+                    <p>See all collections</p>
+                  </NavLink>
                 </Segment>
               </Grid.Column>
             </Grid.Row>
@@ -149,9 +151,21 @@ class MyAnalyses extends Component {
                         Recent Analyses
                       </Header>
                       <Divider />
-                      <Card.Group>{analysisCards}</Card.Group>
+                      <Card.Group>
+                        {analysisCards.length ? (
+                          analysisCards
+                        ) : (
+                          <Card
+                            fluid
+                            description="No analyses created yet. Would you like to create
+                          one now?"
+                          />
+                        )}
+                      </Card.Group>
                       <br />
-                      <p>See all analyses</p>
+                      <NavLink to="/analyses">
+                        <p>See all analyses</p>
+                      </NavLink>
                     </div>
                   )}
                 </Segment>
@@ -159,7 +173,7 @@ class MyAnalyses extends Component {
             </Grid.Row>
 
             {/* REVIEWS */}
-            <Grid.Row>
+            {/* <Grid.Row>
               <Grid.Column width={3}>
                 <br />
                 <ReviewModal />
@@ -180,7 +194,7 @@ class MyAnalyses extends Component {
                   <p>See all reviews</p>
                 </Segment>
               </Grid.Column>
-            </Grid.Row>
+            </Grid.Row> */}
           </Grid>
         </Container>
       </div>

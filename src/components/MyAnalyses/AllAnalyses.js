@@ -34,12 +34,12 @@ class AllAnalyses extends Component {
     this.test = true;
   }
 
-  componentWillMount() {
-    console.log("inside will mount => ", this.props);
-    if (!this.props._token) {
-      this.props.history.push("/login");
-    }
-  }
+  // componentWillMount() {
+  //   console.log("inside will mount => ", this.props);
+  //   if (!this.props._token) {
+  //     this.props.history.push("/login");
+  //   }
+  // }
 
   render() {
     // creating cards from user's analyses
@@ -103,9 +103,9 @@ class AllAnalyses extends Component {
                   <Button>
                     <NavLink to="/analyses">Analyses</NavLink>
                   </Button>
-                  <Button>
+                  {/* <Button>
                     <NavLink to="/reviews">Reviews</NavLink>
-                  </Button>
+                  </Button> */}
                 </Button.Group>
               </Grid.Column>
             </Grid.Row>
@@ -129,9 +129,19 @@ class AllAnalyses extends Component {
                         Recent Analyses
                       </Header>
                       <Divider />
-                      <Card.Group>{analysisCards}</Card.Group>
+                      <Card.Group>
+                        {" "}
+                        {analysisCards.length ? (
+                          analysisCards
+                        ) : (
+                          <Card
+                            fluid
+                            description="No analyses created yet. Would you like to create
+                          one now?"
+                          />
+                        )}
+                      </Card.Group>
                       <br />
-                      <p>See all analyses</p>
                     </div>
                   )}
                 </Segment>
