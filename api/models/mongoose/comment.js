@@ -14,7 +14,7 @@ let CommentSchema = new Schema({
   },
 });
 
-const autoPop = next => {
+const autoPop = function(next){
   this.populate('user');
 
   next();

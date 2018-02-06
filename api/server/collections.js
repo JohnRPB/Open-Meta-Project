@@ -49,4 +49,21 @@ router.get('/ids', async (req, res, next) => {
   res.send(JSON.stringify(results));
 
 });
+router.post('/new', async (req, res, next) => {
+  let body = req.body;
+  let currentCollection = new Collection(body);
+  let currentUser;
+  try{
+    await currentCollection.save();
+    currentCollection = await Collection.findOne({$and: [{name: body.name}, {ownerId: body.ownerId}] })
+    currentUser = await User.findById(body.ownerId);
+    currentUser.analyses.push(currentCollection._id);
+    currentCollection.hist.push({histId: currentCollection._id, time: new Date()});
+    await Collection.findByIdAndUpdate(currentCollection._id, currentCollection);
+    await User.findByIdAndUpdate(currentUser._id, currentUser);
+  } catch(e) {
+    res.status(500).send(e.stack);
+  }
+  res.send(JSON.stringify(currentCollection));
+});
 module.exports = router;
