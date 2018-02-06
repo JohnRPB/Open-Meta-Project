@@ -5,39 +5,40 @@ import { connect } from "react-redux";
 import { withRouter, Redirect, Switch } from "react-router";
 import serialize from "form-serialize";
 
+import createHistory from "history/createBrowserHistory";
+
+const history = createHistory();
+
+// // Get the current location.
+// const location = history.location;
+
+// // Listen for changes to the current location.
+// const unlisten = history.listen((location, action) => {
+//   // location is an object like window.location
+//   console.log(action, location.pathname, location.state);
+// });
+
 class Nav extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      redirectToNewPage: false,
+      value: ""
+    };
   }
 
-  state = {
-    redirectToNewPage: false
+  handleChange = event => {
+    this.setState({ value: event.target.value });
   };
 
   handleResultSelect = () => {
-    // this.props.handleSubmit();
-    // this.props.submission();
-    this.setState({ redirectToNewPage: true });
+    history.push({
+      pathname: "/sitesearch",
+      search: `?query=${this.state.value}`
+    });
   };
 
-  /* <Redirect
-      to={`/sitesearch?query=${this.props.location.search.slice(7)}`}
-    /> */
-
   render() {
-    console.log(this.props);
-    console.log("THIS.SUBMISSION", this.submission);
-
-    if (this.state.redirectToNewPage) {
-      return <Redirect to="/sitesearch" />;
-    }
-    // if (
-    //   this.props.submission == true // &&
-    //   // this.props.location.pathname != "/sitesearch"
-    // ) {
-    //   return <Redirect to="/sitesearch" />;
-    // }
-
     return (
       <div className="ui secondary menu">
         <NavLink to="/landing" className="item">
@@ -52,15 +53,16 @@ class Nav extends Component {
 
         <div className="right menu">
           <form
+            //action="/sitesearch"
             className="ui search icon input"
             onSubmit={this.handleResultSelect}
-            //  this.props.handleResultSelect;
           >
             <input
               name="query"
               class="prompt"
               type="text"
               placeholder="Search website..."
+              onChange={this.handleChange}
             />
             <i class="search icon" />
           </form>
