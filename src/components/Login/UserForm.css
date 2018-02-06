@@ -84,7 +84,6 @@ input {
   font-size: 12px;
   margin: 0 auto;
   padding: 13px;
-  text-transform: uppercase;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: 300px;

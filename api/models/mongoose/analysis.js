@@ -1,45 +1,45 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 let AnalysisSchema = new Schema({
   //id is automatic
   ownerId: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: "User"
   },
   comments: {
     type: [Schema.Types.ObjectId],
-    ref: 'Comment'
+    ref: "Comment"
   },
   hist: [
     {
       histId: {
         type: Schema.Types.ObjectId,
-        ref: 'Analysis'
+        ref: "Analysis"
       },
       time: {
-        type: Date,
-      },
-    },
+        type: Date
+      }
+    }
   ],
   data: {
     header: {},
     inclusion: {
       collectionId: {
         type: Schema.Types.ObjectId,
-        ref: 'Collection',
+        ref: "Collection"
       },
       excluded: {
         type: [Schema.Types.ObjectId],
-        ref: 'StudyOverflow',
-      },
+        ref: "StudyOverflow"
+      }
     },
     blocks: [{}],
     category: {
       type: [Schema.Types.ObjectId],
-      ref: 'Category',
-    },
-  },
+      ref: "Category"
+    }
+  }
 });
 
 // const autoPop = (next) => {
@@ -58,6 +58,6 @@ let AnalysisSchema = new Schema({
 //   .pre('find', autoPop)
 //   .pre('findOne', autoPop)
 //
-let Analysis = mongoose.model('Analysis', AnalysisSchema);
+let Analysis = mongoose.model("Analysis", AnalysisSchema);
 
 module.exports = Analysis;

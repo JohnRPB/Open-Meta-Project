@@ -10,20 +10,20 @@ import {
   Header
 } from "semantic-ui-react";
 
-class Analysis extends Component {
+class Collection extends Component {
   constructor(props) {
     super(props);
     this.isFetching = true;
   }
 
   componentWillMount() {
-    this.props.getAnalysis(this.props.match.params.anaysis_id);
+    // this.props.getCollection(this.props.match.params.anaysis_id);
   }
 
   render() {
-    console.log("analysis props => ", this.props);
+    console.log("Collection props => ", this.props);
     if (!this.props.isFetching) {
-      var { Analysis } = this.props;
+      var { Collection } = this.props;
     }
 
     return (
@@ -40,10 +40,10 @@ class Analysis extends Component {
           <Container>
             {!this.props.isFetching ? (
               <div>
-                <Header as="h1">{Analysis.data.header.title}</Header>
-                <Header as="h2"> By {Analysis.data.header.author}</Header>
+                <Header as="h1">{Collection.data.header.title}</Header>
+                <Header as="h2"> By {Collection.data.header.author}</Header>
                 <p />
-                <p>{JSON.stringify(Analysis.data, null, 5)}</p>
+                <p>{JSON.stringify(Collection.data, null, 5)}</p>
               </div>
             ) : null}
           </Container>
@@ -53,4 +53,4 @@ class Analysis extends Component {
   }
 }
 
-export default Analysis;
+export default Collection;
