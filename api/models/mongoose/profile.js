@@ -33,15 +33,7 @@ let ProfileSchema = new Schema({
   forkedTimes: {
     type: Number,
   },
-  // reviews: [Schema.Types.ObjectId],
-  // papers: [Schema.Types.ObjectId],
 });
-// const autoPop = next => {
-//   this.populate('User');
-//
-//   next();
-// };
-// ProfileSchema.pre('find', autoPop).pre('findOne', autoPop);
 
 let Profile = mongoose.model('Profile', ProfileSchema);
 

@@ -112,16 +112,16 @@ const seed = async () => {
         //users complete
         let profileUserHashObj = {};
         for (let i = 0; i < defaults.user; i++) {
-          let randOne = Math.floor(Math.random() * analyses.length);
-          let randTwo = Math.floor(Math.random() * analyses.length);
-          while (randOne == randTwo) {
-            randTwo = Math.floor(Math.random() * analyses.length);
-          }
-          let randThree = Math.floor(Math.random() * analyses.length);
-          let randFour = Math.floor(Math.random() * analyses.length);
-          while (randThree == randFour) {
-            randFour = Math.floor(Math.random() * analyses.length);
-          }
+          // let randOne = Math.floor(Math.random() * analyses.length);
+          // let randTwo = Math.floor(Math.random() * analyses.length);
+          // while (randOne == randTwo) {
+          //   randTwo = Math.floor(Math.random() * analyses.length);
+          // }
+          // let randThree = Math.floor(Math.random() * analyses.length);
+          // let randFour = Math.floor(Math.random() * analyses.length);
+          // while (randThree == randFour) {
+          //   randFour = Math.floor(Math.random() * analyses.length);
+          // }
           let randArray = [];
           let randArrayLength = Math.floor(Math.random() * 3 + 2);
           while (randArray.length < randArrayLength) {
@@ -263,6 +263,9 @@ const seed = async () => {
         }
         for (let i = 0; i < profiles.length; i++) {
           await Profile.findByIdAndUpdate(profiles[i]._id, profiles[i]);
+        }
+        for (let i = 0; i < users.length; i++) {
+          await User.findByIdAndUpdate(users[i]._id, profiles[i]);
         }
 
         return 1;

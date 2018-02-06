@@ -26,18 +26,16 @@ let UserSchema = new Schema({
   },
 });
 
-// const autoPop = (next) => {
-//   this
-//     .populate('Analysis')
-//     .populate('Collection')
-//     .populate('Profile')
-//     .populate('Category')
-//
-//   next();
-// }
-// UserSchema
-//   .pre('find', autoPop)
-//   .pre('findOne', autoPop)
+const autoPop = function(next) {
+  this
+    .populate('profile')
+    .populate('interests')
+
+  next();
+}
+UserSchema
+  .pre('find', autoPop)
+  .pre('findOne', autoPop)
 
 let User = mongoose.model('User', UserSchema);
 
