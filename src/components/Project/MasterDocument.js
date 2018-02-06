@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavContainer from "../../containers/NavContainer";
 import update from "immutability-helper";
 import { DragDropContext } from "react-dnd";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
@@ -16,23 +17,39 @@ import {
   Image,
   Card,
   Container,
-  Popup
+  Popup,
+  TextArea,
+  Form,
+  Rail,
+  Sticky
 } from "semantic-ui-react";
+import "../../index.css";
+
+import collection from "../../databaseStudies";
+import Module from "../Modules/Module";
 
 class MasterDocument extends Component {
   constructor(props) {
     super(props);
   }
 
+  state = {};
+
+  handleContextRef = contextRef => this.setState({ contextRef });
+
   isDropped(boxName) {
     return this.props.droppedBoxNames.indexOf(boxName) > -1;
+  }
+
+  componentWillMount() {
+    //this.getUpdatedModules();
   }
 
   render() {
     console.log("this props => ", this.props);
     // const { boxes, dustbins } = this.state;
     const {
-      analyses,
+      blocks,
       boxes,
       dustbins,
       handleDrop,
@@ -42,110 +59,124 @@ class MasterDocument extends Component {
       handleDelete
     } = this.props;
 
+    const { contextRef } = this.state;
+
     return (
       <div>
+        <NavContainer />
         <h1>Welcome to your project</h1>
-        <h2>Drag and drop analyses onto your document</h2>
-        <div className="ui fluid Document">
-          <div className="ui grid">
-            <div className="three column row">
-              <div className="column"> Inclusion</div>
-            </div>
-            <div className="four wide column">
-              <div>
-                {boxes.map(({ name, type }, index) => (
-                  <Box
-                    name={name}
-                    type={type}
-                    isDropped={this.isDropped(name)}
-                    key={index}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="twelve wide column">
-              <div>
-                {analyses.map((analysis, index) => {
-                  return (
-                    <div key={index} className="fluid">
-                      <ul>
-                        <li onClick={e => handleClick(e, index)}>
-                          {analysis.textContent
-                            ? analysis.textContent
-                            : analysis.name}
-                        </li>
-                        <br />
-                        <br />
-                        <br />
-                      </ul>
-                      {index == showForm ? (
-                        <div>
-                          <form onSubmit={e => handleSubmit(e, index)}>
-                            <textarea
-                              name="textContent"
-                              placeholder="Input text here"
-                            />
-                            <button
-                              className="submitText ui primary button"
-                              type="submit"
-                            >
-                              +
-                            </button>
-                          </form>
-                          <div>
-                            {dustbins.map(
-                              ({ accepts, lastDroppedItem }, index2) => (
-                                <Dustbin
-                                  accepts={accepts}
-                                  lastDroppedItem={lastDroppedItem}
-                                  onDrop={item =>
-                                    handleDrop(index2, item, index)
-                                  }
-                                  key={index2}
-                                />
-                              )
-                            )}
-                          </div>
-                          <div>
-                            <button
-                              className="negative ui button"
-                              onClick={e => handleDelete(e, index)}
-                            >
-                              Delete
-                            </button>
-                          </div>
-                        </div>
-                      ) : null}
+        <h3>
+          Drag and drop modules onto your document. Navigate through document by
+          clicking on items
+        </h3>
+        <Grid centered columns={2}>
+          <Grid.Column>
+            <div ref={this.handleContextRef}>
+              <Segment>
+                <Rail position="left">
+                  <Sticky context={contextRef}>
+                    <h2>Modules</h2>
+                    <div>
+                      {boxes.map(({ name, content, type }, index) => (
+                        <Box
+                          content={content}
+                          name={name}
+                          type={type}
+                          isDropped={this.isDropped(name)}
+                          key={index}
+                        />
+                      ))}
                     </div>
-                  );
-                })}
-              </div>
-              {analyses.length < 1 ? (
-                <div className="Initial Submission">
-                  <form onSubmit={handleSubmit}>
-                    <textarea
-                      name="textContent"
-                      placeholder="Input text here"
-                    />
-                    <button className="ui primary button" type="submit">
-                      +
-                    </button>
-                  </form>
-                  <div>
-                    {dustbins.map(({ accepts, lastDroppedItem }, index) => (
-                      <Dustbin
-                        accepts={accepts}
-                        lastDroppedItem={lastDroppedItem}
-                        onDrop={item => handleDrop(index, item)}
-                        key={index}
-                      />
-                    ))}
-                  </div>
+                  </Sticky>
+                </Rail>
+
+                <h2>Document</h2>
+                <div>
+                  {blocks.map((block, index) => {
+                    return (
+                      <div key={index} className="fluid">
+                        <ul>
+                          <li onClick={e => handleClick(e, index)}>
+                            {block.textContent ? (
+                              block.textContent
+                            ) : (
+                              <Module moduleIdx={index} />
+                            )}
+                            {/* JSON.stringify(block)} */}
+                          </li>
+                          <br />
+                          <br />
+                          <br />
+                        </ul>
+                        {index == showForm ? (
+                          <div>
+                            <Form onSubmit={e => handleSubmit(e, index)}>
+                              <TextArea
+                                name="textContent"
+                                placeholder="Input text here"
+                              />
+                              <button
+                                className="submitText ui primary button"
+                                type="submit"
+                              >
+                                Add Text
+                              </button>
+                            </Form>
+                            <div>
+                              {dustbins.map(
+                                ({ accepts, lastDroppedItem }, index2) => (
+                                  <Dustbin
+                                    accepts={accepts}
+                                    lastDroppedItem={lastDroppedItem}
+                                    onDrop={item =>
+                                      handleDrop(index2, item, index)
+                                    }
+                                    key={index2}
+                                  />
+                                )
+                              )}
+                            </div>
+                            <div>
+                              <button
+                                className="negative ui button"
+                                onClick={e => handleDelete(e, index)}
+                              >
+                                Delete Item
+                              </button>
+                            </div>
+                          </div>
+                        ) : null}
+                      </div>
+                    );
+                  })}
                 </div>
-              ) : null}
+                {blocks.length < 1 ? (
+                  <div className="Initial Submission">
+                    <Form onSubmit={handleSubmit}>
+                      <TextArea
+                        name="textContent"
+                        placeholder="Input text here"
+                      />
+                      <button className="ui primary button" type="submit">
+                        Add Text
+                      </button>
+                    </Form>
+                    <div>
+                      {dustbins.map(({ accepts, lastDroppedItem }, index) => (
+                        <Dustbin
+                          accepts={accepts}
+                          lastDroppedItem={lastDroppedItem}
+                          onDrop={item => handleDrop(index, item)}
+                          key={index}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+              </Segment>
             </div>
-          </div>
-        </div>
+          </Grid.Column>
+        </Grid>
       </div>
     );
   }

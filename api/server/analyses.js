@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express');
 const sModels = require('./../models/sequelize');
 const mModels = require('./../models/mongoose');
