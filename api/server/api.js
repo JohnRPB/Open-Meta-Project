@@ -15,7 +15,6 @@ const myanalyses = require("./MyAnalyses");
 const login = require("./login");
 const register = require("./register");
 const collections = require("./collections");
-const analyses = require("./analyses");
 const tokentest = require("./tokentest");
 const newprofile = require("./newprofile");
 
