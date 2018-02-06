@@ -28,6 +28,7 @@ class Nav extends Component {
 
   handleChange = event => {
     this.setState({ value: event.target.value });
+    event.preventDefault();
   };
 
   handleResultSelect = () => {
