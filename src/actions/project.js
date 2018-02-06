@@ -17,3 +17,8 @@ export const DELETE_ELEMENT = "DELETE_ELEMENT";
 export const deleteElement = data => {
   return { type: DELETE_ELEMENT, data };
 };
+
+export const GET_UPDATED_MODULES = "GET_UPDATED_MODULES";
+export const getUpdatedModules = () => {
+  return { type: GET_UPDATED_MODULES };
+};

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { DragSource } from "react-dnd";
-import studies from "../../databaseStudies.js";
+//import studies from "../../databaseStudies.js";
 
 const style = {
   border: "1px dashed gray",
@@ -17,13 +17,14 @@ const boxSource = {
   beginDrag(props) {
     return {
       name: props.name,
-      content: {
-        name: "simplePlot",
-        type: "graphic",
-        placeholder: "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
-        outputLoc: "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
-        studies: studies.slice(0, 10)
-      }
+      content: props.content
+      // content: {
+      //   name: "simplePlot",
+      //   type: "graphic",
+      //   placeholder: "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
+      //   outputLoc: "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
+      //   studies: studies.slice(0, 10)
+      // }
     };
   },
 

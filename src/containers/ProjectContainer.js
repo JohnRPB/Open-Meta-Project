@@ -51,6 +51,9 @@ function mapDispatchToProps(dispatch) {
       e.stopPropagation();
       dispatch(deleteElement(index));
     }
+    // getUpdatedModules: () => {
+    //   dispatch(getUpdatedModules());
+    // }
   };
 }
 
