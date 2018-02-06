@@ -8,18 +8,38 @@ const User = mModels.User;
 const Category = mModels.Category;
 let router = express.Router();
 
-//get collection by id
-router.get('/id/:id', function(req, res, next) {
+
+// --------------------------------------------
+// get a collection by ID
+// --------------------------------------------
+router.get("/:id", function(req, res, next) {
   Collection.findById(req.params.id)
     .then(result => {
-      console.log('result => ', result);
+      console.log("result => ", result);
       res.json(result);
     })
     .catch(e => res.status(500).send(e.stack));
 });
 
+
+// --------------------------------------------
+// create new collection
+// --------------------------------------------
+
+router.post("/", async (req, res, next) => {
+  let new Collection = await new Collection({
+    title: req.body.title,
+    description:req.body.description
+  })
+
+}
+
+
+
+// --------------------------------------------
 //get a number of collections by ids as query
-router.get('/ids', async (req, res, next) => {
+// --------------------------------------------
+router.get("/ids", async (req, res, next) => {
   let results = [];
   let query = req.query.collections;
   let queryParams = {
@@ -51,7 +71,7 @@ router.get('/ids', async (req, res, next) => {
   res.send(JSON.stringify(results));
 });
 
-router.post('/new', async (req, res, next) => {
+router.post("/new", async (req, res, next) => {
   let body = req.body;
   console.log(body.category[0]);
   // currentCollection.studies.forEach(
@@ -66,31 +86,33 @@ router.post('/new', async (req, res, next) => {
   try {
     for (let i = 0; i < body.category.length; i++) {
       currentCategory = await Category.findOne({
-        name: new RegExp(`^${body.category[i]}$`, 'i'),
+        name: new RegExp(`^${body.category[i]}$`, "i")
       });
       if (!currentCategory) {
         currentCategory = new Category({
-          name: body.category[i],
+          name: body.category[i]
         });
         await currentCategory.save();
-        currentCategory = await Category.findOne({name: currentCategory.name});
+        currentCategory = await Category.findOne({
+          name: currentCategory.name
+        });
       }
       body.category[i] = currentCategory._id;
     }
     let currentCollection = new Collection(body);
     await currentCollection.save();
     currentCollection = await Collection.findOne({
-      $and: [{name: body.name}, {ownerId: body.ownerId}],
+      $and: [{ name: body.name }, { ownerId: body.ownerId }]
     });
     let currentUser = await User.findById(body.ownerId);
     currentUser.analyses.push(currentCollection._id);
     currentCollection.hist.push({
       histId: currentCollection._id,
-      time: new Date(),
+      time: new Date()
     });
     await Collection.findByIdAndUpdate(
       currentCollection._id,
-      currentCollection,
+      currentCollection
     );
     await User.findByIdAndUpdate(currentUser._id, currentUser);
     res.send(JSON.stringify(currentCollection));

@@ -14,6 +14,7 @@ import MyAnalyses from "./containers/MyAnalyses";
 import Search from "./components/Search/Search";
 import AnalysisContainer from "./containers/AnalysisContainer.js";
 import AllAnalyses from "./containers/AllAnalyses";
+import CollectionContainer from "./containers/CollectionContainer.js";
 import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
 
@@ -44,11 +45,11 @@ const Routes = ({ history }) => {
         />
         {/* COLLECTION ROUTES */}
         <Route exact path="/collections" component={AllCollections} />
-        {/* <Route
+        <Route
           exact
           path="/collections/:collection_id?"
           component={CollectionContainer}
-        /> */}
+        />
       </Switch>
     </Router>
   );

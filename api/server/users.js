@@ -39,8 +39,10 @@ router.get("/:userId", async (req, res, next) => {
   console.log("on the new user routes", req.params.userId);
   let user = await mongoUser
     .findById(req.params.userId)
+    .populate("analyses")
     .populate("profile")
-    .populate("analyses");
+    .populate("collections");
+  console.log("user response => ", user);
   res.json(user);
 });
 
