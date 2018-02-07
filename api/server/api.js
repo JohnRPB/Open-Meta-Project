@@ -1,6 +1,21 @@
 const api = (module.exports = require("express").Router());
 var jwt = require("jsonwebtoken");
 const cors = require("cors");
+
+api.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,HEAD,OPTIONS,POST,PUT,DELETE"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Access-Control-Allow-Headers,Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization"
+  );
+  next();
+});
+
 api.use(cors());
 
 // const products = require('./products');
@@ -19,21 +34,7 @@ const collections = require("./collections");
 const tokentest = require("./tokentest");
 const newprofile = require("./newprofile");
 
-api.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET,HEAD,OPTIONS,POST,PUT,DELETE"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Access-Control-Allow-Headers,Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization"
-  );
-  next();
-});
-
-api.get("/express-test", (req, res) => res.send({ express: "working!" })); //demo route to prove api is working
+api.get("/express-test", (req, res) => res.send({express: "working!"})); //demo route to prove api is working
 api.use("/login", login);
 api.use("/register", register);
 
@@ -80,7 +81,7 @@ api.use((req, res, next) => {
 
 //rest of the backend
 api
-  .get("/express-test", (req, res) => res.send({ express: "working!" })) //demo route to prove api is working
+  .get("/express-test", (req, res) => res.send({express: "working!"})) //demo route to prove api is working
   .use("/newprofile", newprofile)
   .use("/users", users)
   .use("/tokentest", tokentest)

@@ -21,9 +21,9 @@ import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
 import SelectCollection from "./components/SelectCollection";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-const Routes = ({ history }) => {
+const Routes = ({history}) => {
   return (
     <Router>
       <Switch>

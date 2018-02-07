@@ -27,6 +27,8 @@ const Landing = () => {
         <br />
         <br />
         <br />
+        <br />
+        <br />
         <div class="ui text container">
           <i class="connectdevelop icon massive" />
           <h2>Your Portal to Papers and Metanalyses</h2>
