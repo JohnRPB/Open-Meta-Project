@@ -24,12 +24,24 @@ router.get("/:id", function(req, res, next) {
 // create new collection
 // --------------------------------------------
 
+<<<<<<< HEAD
 router.post("/", async (req, res, next) => {
   await new Collection({
     title: req.body.title,
     description: req.body.description
   });
 });
+=======
+//router.post("/", async (req, res, next) => {
+  //let new Collection = await new Collection({
+    //title: req.body.title,
+    //description:req.body.description
+  //})
+
+//}
+
+// }
+>>>>>>> 1a156564ec9853ecfdba6635c616bd48ea80cd54
 
 // --------------------------------------------
 //get a number of collections by ids as query
@@ -68,7 +80,6 @@ router.get("/ids", async (req, res, next) => {
 
 router.post("/new", async (req, res, next) => {
   let body = req.body;
-  console.log(body.category[0]);
   // currentCollection.studies.forEach(
   //   (study, index) => {
   //     console.log(currentCollection.studies[index])
@@ -76,9 +87,8 @@ router.post("/new", async (req, res, next) => {
   //     currentCollection.studies[index] = currentCollection.studies[index].id
   //   }
   // );
-  let currentUser;
-  let currentCategory;
   try {
+    let currentCategory;
     for (let i = 0; i < body.category.length; i++) {
       currentCategory = await Category.findOne({
         name: new RegExp(`^${body.category[i]}$`, "i")
@@ -100,16 +110,21 @@ router.post("/new", async (req, res, next) => {
       $and: [{ name: body.name }, { ownerId: body.ownerId }]
     });
     let currentUser = await User.findById(body.ownerId);
-    currentUser.analyses.push(currentCollection._id);
+    console.log("collections 1: ", currentUser.collections);
+    currentUser.collections.push(currentCollection._id);
+    console.log("collections 2: ", currentUser.collections);
+    // console.log(currentCollection._doc);
     currentCollection.hist.push({
       histId: currentCollection._id,
       time: new Date()
     });
-    await Collection.findByIdAndUpdate(
+    currentCollection = await Collection.findByIdAndUpdate(
       currentCollection._id,
       currentCollection
     );
-    await User.findByIdAndUpdate(currentUser._id, currentUser);
+    await currentUser.save(); 
+    currentUser = await User.findById(body.ownerId);
+    console.log(currentUser);
     res.send(JSON.stringify(currentCollection));
   } catch (e) {
     console.error(e);

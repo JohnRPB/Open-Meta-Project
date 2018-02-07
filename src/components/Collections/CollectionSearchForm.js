@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon, Grid, Form, Segment, Menu, Button} from 'semantic-ui-react';
 
-const SearchForm = ({active, onSearch, bumpAuthors,numberOfAuthors, flipActive, onSubmit}) => {
+const CollectionSearchForm = ({active, onSearch, bumpAuthors,numberOfAuthors, flipActive, onSubmit}) => {
   console.log(numberOfAuthors);
   return (
     <Grid.Column width={8}>
@@ -105,4 +105,4 @@ const SearchForm = ({active, onSearch, bumpAuthors,numberOfAuthors, flipActive, 
   );
 };
 
-export default SearchForm;
+export default CollectionSearchForm;

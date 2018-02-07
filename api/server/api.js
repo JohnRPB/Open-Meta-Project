@@ -18,6 +18,7 @@ const register = require("./register");
 const collections = require("./collections");
 const tokentest = require("./tokentest");
 const newprofile = require("./newprofile");
+const analyses = require("./analyses");
 
 api.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -88,7 +89,6 @@ api
   .use("/analyses", analyses)
   .use("/studies", studies)
   .use("/collections", collections)
-  .use("/analyses", analyses)
   .use("/myanalyses", myanalyses);
 
 // No routes matched? 404.

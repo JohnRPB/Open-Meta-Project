@@ -15,7 +15,7 @@ let CommentSchema = new Schema({
 });
 
 const autoPop = function(next){
-  this.populate('user');
+  // this.populate({path:'user', select:'email'});
 
   next();
 };

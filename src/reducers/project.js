@@ -1,4 +1,10 @@
-import { REMOVE_STUDY, ADD_STUDY, UPDATE_LOC } from "../actions/modules";
+import {
+  REMOVE_STUDY,
+  ADD_STUDY,
+  UPDATE_LOC,
+  GET_COMPUTATION_START,
+  GET_COMPUTATION_ERROR
+} from "../actions/modules";
 
 import {
   ADD_TEXT,
@@ -33,21 +39,17 @@ const initialState = {
     // { accepts: [ItemTypes.GRAPH, NativeTypes.FILE], lastDroppedItem: null }
   ],
   boxes: [
-    // { name: "Mean", type: ItemTypes.SUMMARY },
-    // { name: "Regression", type: ItemTypes.METHOD },
-    // { name: "Funnel Plot", type: ItemTypes.GRAPH },
     {
       name: "test module",
+      loading: false,
       type: ItemTypes.GRAPH,
-      content: {
-        name: "simplePlot",
-        type: "graphic",
-        outputLoc:
-          "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
-        studies: studies.slice(0, 10)
-      }
+      content: {}
     }
   ],
+  // { name: "Mean", type: ItemTypes.SUMMARY },
+  // { name: "Regression", type: ItemTypes.METHOD },
+  // { name: "Funnel Plot", type: ItemTypes.GRAPH },
+
   droppedBoxNames: [],
   showForm: null,
   editing: false
@@ -56,6 +58,28 @@ const initialState = {
 const project = (state = initialState, action) => {
   let blocks;
   switch (action.type) {
+    case GET_COMPUTATION_START:
+      blocks = state.blocks.slice();
+      blocks[action.data].loading = true;
+      return {
+        ...state,
+        blocks: [
+          ...blocks.slice(0, action.data),
+          blocks[action.data],
+          ...blocks.slice(action.data + 1)
+        ]
+      };
+    case GET_COMPUTATION_ERROR:
+      blocks = state.blocks.slice();
+      blocks[action.data].loading = false;
+      return {
+        ...state,
+        blocks: [
+          ...blocks.slice(0, action.data),
+          blocks[action.data],
+          ...blocks.slice(action.data + 1)
+        ]
+      };
     case GET_UPDATED_MODULES:
       return {
         ...state
@@ -120,6 +144,7 @@ const project = (state = initialState, action) => {
     case UPDATE_LOC:
       blocks = state.blocks.slice();
       blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
+      blocks[action.data.moduleIdx].loading = false;
       return {
         ...state,
         blocks: [

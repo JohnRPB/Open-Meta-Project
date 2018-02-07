@@ -60,7 +60,8 @@ const seed = async () => {
         //collections need user, hist, category
         for (let i = 0; i < defaults.collection; i++) {
           let collectionBuild = {
-            name: faker.company.bsAdjective() + " collection",
+            name: faker.company.bsAdjective() + ' collection',
+            description: faker.lorem.paragraph(),
             comments: [],
             hist: []
           };
@@ -142,7 +143,7 @@ const seed = async () => {
             profile: profiles[i]._id,
             interests: interestArray
           };
-          profileUserHashObj[userBuild.profile.toString] = i;
+          profileUserHashObj[userBuild.profile.toString()] = i;
           let thisUser = new User(userBuild);
           await thisUser.save();
         }
@@ -245,27 +246,32 @@ const seed = async () => {
           commentBelongsToTarget.comments.push(comments[i]._id);
         }
         for (let i = 0; i < users.length; i++) {
-          profiles[profileUserHashObj[users[i].profile.toString()]] =
+          profiles[profileUserHashObj[users[i].profile._id.toString()]].user =
             users[i]._id;
         }
 
         for (let i = 0; i < analyses.length; i++) {
-          await Analysis.findByIdAndUpdate(analyses[i]._id, analyses[i]);
+          // await Analysis.findByIdAndUpdate(analyses[i]._id, analyses[i]);
+          await analyses[i].save();
         }
         for (let i = 0; i < collections.length; i++) {
-          await Collection.findByIdAndUpdate(
-            collections[i]._id,
-            collections[i]
-          );
+          // await Collection.findByIdAndUpdate(
+          //   collections[i]._id,
+          //   collections[i],
+          // );
+          await collections[i].save();
         }
         for (let i = 0; i < comments.length; i++) {
-          await Comment.findByIdAndUpdate(comments[i]._id, comments[i]);
+          // await Comment.findByIdAndUpdate(comments[i]._id, comments[i]);
+          await comments[i].save();
         }
         for (let i = 0; i < profiles.length; i++) {
-          await Profile.findByIdAndUpdate(profiles[i]._id, profiles[i]);
+          // await Profile.findByIdAndUpdate(profiles[i]._id, profiles[i]);
+          await profiles[i].save();
         }
         for (let i = 0; i < users.length; i++) {
-          await User.findByIdAndUpdate(users[i]._id, users[i]);
+          // await User.findByIdAndUpdate(users[i]._id, users[i]);
+          await users[i].save();
         }
 
         return 1;
