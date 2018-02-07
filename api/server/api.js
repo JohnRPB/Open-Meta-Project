@@ -88,7 +88,6 @@ api
   .use("/analyses", analyses)
   .use("/studies", studies)
   .use("/collections", collections)
-  .use("/analyses", analyses)
   .use("/myanalyses", myanalyses);
 
 // No routes matched? 404.

@@ -9,9 +9,9 @@ import Token from "./Token";
 import Profile from "./Profile";
 import sitesearch from "./sitesearch";
 import Analysis from "./Analysis";
-import Collection from "./Collection";
-import search from "./search";
+import collections from "./collections";
 import modules from "./modules";
+import Collection from "./Collection.js";
 
 const Reducers = combineReducers({
   demo,
@@ -20,7 +20,7 @@ const Reducers = combineReducers({
   Dashboard,
   Token,
   routing: routerReducer,
-  search,
+  collections,
   Profile,
   sitesearch,
   Analysis,

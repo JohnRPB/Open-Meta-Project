@@ -3,6 +3,10 @@ import * as Actions from "../actions/Dashboard";
 const initialState = {
   analyses: [],
   isFetching: true,
+  user: {
+    analyses: [],
+    collections: [],
+  },
   error: null
 };
 
@@ -20,6 +24,17 @@ export function DashboardPage(state = initialState, action) {
         user: action.data,
         isFetching: false
       };
+    case Actions.ADD_COLLECTION:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          collections:[
+            ...state.user.collections,
+            action.data
+          ]
+        }
+      }
     default:
       return state;
   }
