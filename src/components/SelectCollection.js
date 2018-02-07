@@ -7,8 +7,11 @@
 
 //OR has a button that directs to create a collection page
 
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
+
+//ui
+import {Container, Button} from "semantic-ui-react";
 
 //name will change
 import CollectionSearchCollectionsContainer from "../containers/Collections/CollectionSearchCollectionsContainer";
@@ -20,6 +23,8 @@ class SelectCollection extends Component {
 
   componentDidMount() {
     //saves an analysis
+    //hai did this
+    console.log("this.props.location.query =>", this.props.location.query);
   }
 
   // const CurrentAnalysisId = sjdlkjsdflkjsdlkfjs
@@ -36,12 +41,12 @@ class SelectCollection extends Component {
 
   render() {
     return (
-      <div>
-        <div>Select a collection for your analysis </div>
+      <Container>
+        <h3 style={{marginTop: 10}}>Select a collection for your analysis </h3>
         <CollectionSearchCollectionsContainer />
-        <div>No collections yet?</div>
-        <button>Create a Collection</button>
-      </div>
+        <h3 style={{marginTop: 10}}>No collections yet?</h3>
+        <Button>Create a Collection</Button>
+      </Container>
     );
   }
 }
