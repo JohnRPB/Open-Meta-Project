@@ -152,7 +152,7 @@ const project = (state = initialState, action) => {
         ...state,
         blocks: [
           ...state.blocks.slice(0, action.data.index),
-          { textContent: action.data.textContent },
+          { textContent: action.data.textContent, type: "text" },
           ...state.blocks.slice(action.data.index + 1)
         ],
         editing: false
