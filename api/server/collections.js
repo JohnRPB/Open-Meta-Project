@@ -20,6 +20,9 @@ router.get("/:id", function(req, res, next) {
 });
 
 // --------------------------------------------
+// create new collection
+// --------------------------------------------
+
 router.post("/", async (req, res, next) => {
   console.log("collection post route req ", req.body);
   let newObj = {
