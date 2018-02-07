@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {withRouter} from "react-router-dom";
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
 import {
   Button,
@@ -34,11 +34,12 @@ class AnalysisModal extends Component {
   sendForm(e) {
     e.preventDefault();
     var form = document.querySelector("#new-analysis");
-    var obj = serialize(form, {hash: true});
+    var obj = serialize(form, { hash: true });
     obj.id = this.props.id;
-    obj.headers = new Headers({
-      "x-access-token": this.props._token
-    });
+    console.log("obj in analysis => ", obj);
+    // obj.headers = new Headers({
+    //   "x-access-token": this.props._token
+    // });
 
     axios.post(`${root}/api/analyses`, obj).then(response => {
       this.props.history.push(`/selectcollection?id=${response.data}`);
