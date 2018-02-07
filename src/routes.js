@@ -51,6 +51,7 @@ const Routes = ({ history }) => {
           path="/collections/:collection_id?"
           component={CollectionContainer}
         />
+        */}
       </Switch>
     </Router>
   );

@@ -26,13 +26,13 @@ router.get("/:id", function(req, res, next) {
 // create new collection
 // --------------------------------------------
 
-router.post("/", async (req, res, next) => {
-  let new Collection = await new Collection({
-    title: req.body.title,
-    description:req.body.description
-  })
+//router.post("/", async (req, res, next) => {
+  //let new Collection = await new Collection({
+    //title: req.body.title,
+    //description:req.body.description
+  //})
 
-}
+//}
 
 
 
