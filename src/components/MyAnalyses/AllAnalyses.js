@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, {Component} from "react";
+import {NavLink} from "react-router-dom";
 import NavContainer from "../../containers/NavContainer";
 import Nav from "../Nav";
 import {
@@ -57,7 +57,7 @@ class AllAnalyses extends Component {
               key={analysis._id}
               header={
                 <NavLink to={`/analysis/${analysis._id}`}>
-                  {analysis.data.header.title || "My Analysis"}
+                  {analysis.data._id || "My Analysis"}
                 </NavLink>
               }
               description={faker.lorem.paragraph()}

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, withRouter} from "react-router-dom";
 import axios from "axios";
 import {
   Button,
@@ -28,6 +28,7 @@ const root =
 class CollectionModal extends Component {
   constructor(props) {
     super();
+    console.log(props);
     this.sendForm = this.sendForm.bind(this);
   }
 
@@ -70,4 +71,4 @@ class CollectionModal extends Component {
   }
 }
 
-export default CollectionModal;
+export default withRouter(CollectionModal);

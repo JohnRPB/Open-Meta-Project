@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {withRouter} from "react-router-dom";
 import axios from "axios";
 import {
   Button,
@@ -67,4 +68,4 @@ class AnalysisModal extends Component {
   }
 }
 
-export default AnalysisModal;
+export default withRouter(AnalysisModal);
