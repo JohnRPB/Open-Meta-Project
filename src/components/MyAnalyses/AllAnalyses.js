@@ -49,13 +49,14 @@ class AllAnalyses extends Component {
       analysisCards = this.props.Dashboard.user.analyses
         .slice(0, 3)
         .map(analysis => {
+          analysis.data.header = analysis.data.header || {};
           return (
             <Card
               fluid
               key={analysis._id}
               header={
                 <NavLink to={`/analysis/${analysis._id}`}>
-                  {analysis.data.header.title}
+                  { analysis.data.header.title || "My Analysis" }
                 </NavLink>
               }
               description={faker.lorem.paragraph()}
