@@ -59,3 +59,11 @@ export function getUser(id, token) {
       });
   };
 }
+
+export const ADD_COLLECTION = "ADD_COLLECTION";
+export function addCollection(data) {
+  return {
+    type: ADD_COLLECTION,
+    data
+  }
+}

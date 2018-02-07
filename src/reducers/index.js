@@ -9,7 +9,7 @@ import Token from "./Token";
 import Profile from "./Profile";
 import sitesearch from "./sitesearch";
 import Analysis from "./Analysis";
-import search from "./search";
+import collections from "./collections";
 import modules from "./modules";
 
 const Reducers = combineReducers({
@@ -19,7 +19,7 @@ const Reducers = combineReducers({
   Dashboard,
   Token,
   routing: routerReducer,
-  search,
+  collections,
   Profile,
   sitesearch,
   Analysis,

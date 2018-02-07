@@ -8,11 +8,11 @@ import {
   Button,
   Table
 } from 'semantic-ui-react';
-import SearchTableContainer from '../../containers/SearchTableContainer';
-import SearchCollectionContainer from '../../containers/SearchCollectionContainer.js';
-import SearchFormContainer from '../../containers/SearchFormContainer'
+import CollectionSearchTableContainer from '../../containers/Collections/CollectionSearchTableContainer';
+import CollectionSearchCollectionsContainer from '../../containers/Collections/CollectionSearchCollectionsContainer.js'
+import CollectionSearchFormContainer from '../../containers/Collections/CollectionSearchFormContainer'
 
-const Search = ({}) => {
+const CollectionSearch = ({}) => {
   return (
     <div>
       <br />
@@ -22,19 +22,19 @@ const Search = ({}) => {
           <Grid.Column width={4}>
     </Grid.Column>
     <Grid.Column width={8}>
-      <SearchCollectionContainer />
+      <CollectionSearchCollectionsContainer />
     </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column width={4}>
           </Grid.Column>
-            <SearchFormContainer />
+            <CollectionSearchFormContainer />
         </Grid.Row>
         <Grid.Row>
           <Grid.Column width={4}>
           </Grid.Column>
           <Grid.Column width={8}>
-            <SearchTableContainer />
+            <CollectionSearchTableContainer />
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -42,4 +42,4 @@ const Search = ({}) => {
   );
 };
 
-export default Search;
+export default CollectionSearch;

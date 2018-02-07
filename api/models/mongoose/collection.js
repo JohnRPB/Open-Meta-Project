@@ -16,10 +16,11 @@ let CollectionSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User',
   },
-  comments: {
-    type: [Schema.Types.ObjectId],
+  description: String,
+  comments: [{
+    type: Schema.Types.ObjectId,
     ref: 'Comment',
-  },
+  }],
   hist: [
     {
       histId: {
@@ -31,10 +32,10 @@ let CollectionSchema = new Schema({
       },
     },
   ],
-  category: {
-    type: [Schema.Types.ObjectId],
+  category: [{
+    type: Schema.Types.ObjectId,
     ref: 'Category',
-  },
+  }],
 });
 
 CollectionSchema.methods.fork = async function(newOwnerId) {
@@ -82,7 +83,6 @@ const unSQL = function(next){
 
 const autoPop = function(next) {
   this
-    .populate('ownerId')
     .populate('comments')
     .populate('category')
 

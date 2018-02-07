@@ -5,7 +5,7 @@ import {
   Table
 } from 'semantic-ui-react';
 
-const SearchCollection = ({userCollections, onClick}) => {
+const CollectionSearchCollections = ({userCollections, onClick}) => {
   let colorArray = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black'];
 
   return (
@@ -21,7 +21,8 @@ const SearchCollection = ({userCollections, onClick}) => {
               while(colorVar > 12){
                 colorVar -= 13;
               }
-              let htmlValue = collection.studies.join('_');
+              let htmlIds = collection.studies.map(study => study.id);
+              let htmlValue = htmlIds.join('_');
               return (
                 <Table.Cell>
                   <Button animated='fade' color={colorArray[colorVar]} id={htmlValue} style={{width:'100px',height:'100px',whiteSpace:'normal'}} onClick={onClick}> 
@@ -41,4 +42,4 @@ const SearchCollection = ({userCollections, onClick}) => {
     </Segment.Group>
   )
 }
-export default SearchCollection
+export default CollectionSearchCollections

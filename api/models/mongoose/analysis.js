@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const models = require('./index.js');
 const User = models.User;
@@ -13,10 +13,12 @@ let AnalysisSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User',
   },
-  comments: {
-    type: [Schema.Types.ObjectId],
-    ref: 'Comment',
-  },
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Comment',
+    },
+  ],
   hist: [
     {
       histId: {
@@ -24,28 +26,32 @@ let AnalysisSchema = new Schema({
         ref: 'Analysis',
       },
       time: {
-        type: Date
-      }
-    }
+        type: Date,
+      },
+    },
   ],
   data: {
     header: {},
     inclusion: {
       collectionId: {
         type: Schema.Types.ObjectId,
-        ref: "Collection"
+        ref: 'Collection',
       },
-      excluded: {
-        type: [Schema.Types.ObjectId],
-        ref: "StudyOverflow"
-      }
+      excluded: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: 'StudyOverflow',
+        },
+      ],
     },
     blocks: [{}],
-    category: {
-      type: [Schema.Types.ObjectId],
-      ref: "Category"
-    }
-  }
+    category: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+      },
+    ],
+  },
 });
 
 AnalysisSchema.methods.fork = async function(newOwnerId) {
@@ -64,17 +70,15 @@ AnalysisSchema.methods.fork = async function(newOwnerId) {
     },
   };
   let newAnalysis = new Analysis(analysisBuild);
-  try{
+  try {
     await newAnalysis.save();
-  } catch(e) {
+  } catch (e) {
     console.error(e);
   }
 };
 
 const autoPop = function(next) {
-  console.log('this: ', this);
-  this.populate('ownerId')
-    .populate('comments')
+  this.populate('comments')
     .populate('data.inclusion.collectionId')
     .populate('data.category')
     .populate('data.inclusion.excluded');
