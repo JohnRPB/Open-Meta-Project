@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const mModels = require('../../models/mongoose');
-const sModels = require('../../models/sequelize');
+const mModels = require("../../models/mongoose");
+const sModels = require("../../models/sequelize");
 
 const Analysis = mModels.Analysis;
 const Collection = mModels.Collection;
@@ -13,17 +13,17 @@ const User = mModels.User;
 
 const Study = sModels.Study;
 
-const defaults = require('./defaults.js');
-const faker = require('faker');
-const bcrypt = require('bcrypt');
+const defaults = require("./defaults.js");
+const faker = require("faker");
+const bcrypt = require("bcrypt");
 
 const seed = async () => {
-  require('../../mongo')()
+  require("../../mongo")()
     .then(async () => {
       try {
         // cleans the collections
         await Object.keys(mModels).forEach(model =>
-          mModels[model].collection.drop(),
+          mModels[model].collection.drop()
         );
 
         let studies = await Study.findAll();
@@ -36,11 +36,11 @@ const seed = async () => {
             data: {
               header: {},
               inclusion: {
-                excluded: [],
+                excluded: []
               },
               blocks: [],
-              category: [],
-            },
+              category: []
+            }
           };
           let thisAnalysis = new Analysis(analysisBuild);
           await thisAnalysis.save();
@@ -50,7 +50,7 @@ const seed = async () => {
         //category complete
         for (let i = 0; i < defaults.category; i++) {
           let categoryBuild = {
-            name: faker.commerce.department(),
+            name: faker.commerce.department()
           };
           let thisCategory = new Category(categoryBuild);
           await thisCategory.save();
@@ -63,7 +63,7 @@ const seed = async () => {
             name: faker.company.bsAdjective() + ' collection',
             description: faker.lorem.paragraph(),
             comments: [],
-            hist: [],
+            hist: []
           };
           let thisCollection = new Collection(collectionBuild);
           await thisCollection.save();
@@ -74,7 +74,7 @@ const seed = async () => {
         for (let i = 0; i < defaults.comment; i++) {
           let commentBuild = {
             text: faker.lorem.paragraph(),
-            date: new Date(),
+            date: new Date()
           };
           let thisComment = new Comment(commentBuild);
           await thisComment.save();
@@ -92,7 +92,7 @@ const seed = async () => {
             background: faker.lorem.paragraph(),
             image: faker.image.imageUrl(),
             forkedFromTimes: Math.floor(Math.random() * 3 * defaults.user),
-            forkedTimes: Math.floor(Math.random() * 3 * defaults.user),
+            forkedTimes: Math.floor(Math.random() * 3 * defaults.user)
           };
           let thisProfile = new Profile(profileBuild);
           await thisProfile.save();
@@ -103,7 +103,7 @@ const seed = async () => {
         for (let i = 0; i < studies.length; i++) {
           let studyOverflowBuild = {
             sqlId: studies[i].id,
-            payload: {},
+            payload: {}
           };
           let thisStudyOverflow = new StudyOverflow(studyOverflowBuild);
           await thisStudyOverflow.save();
@@ -137,11 +137,11 @@ const seed = async () => {
 
           let userBuild = {
             email: profiles[i].email,
-            passHash: bcrypt.hashSync('password', 8),
+            passHash: bcrypt.hashSync("password", 8),
             analyses: [],
             collections: [],
             profile: profiles[i]._id,
-            interests: interestArray,
+            interests: interestArray
           };
           profileUserHashObj[userBuild.profile.toString()] = i;
           let thisUser = new User(userBuild);
@@ -158,7 +158,7 @@ const seed = async () => {
           users[analysisOwner].analyses.push(analyses[i]._id);
           analyses[i].hist.push({
             histId: analyses[i]._id,
-            time: new Date(),
+            time: new Date()
           });
           analyses[i].data.inclusion.collectionId =
             collections[Math.floor(Math.random() * collections.length)]._id;
@@ -166,7 +166,7 @@ const seed = async () => {
           let excludedArrayLength = Math.floor(Math.random() * 3 + 2);
           while (excludedArray.length < excludedArrayLength) {
             let excludeRandomIndex = Math.floor(
-              Math.random() * studyOverflows.length,
+              Math.random() * studyOverflows.length
             );
             if (!excludedArray.includes(excludeRandomIndex)) {
               excludedArray.push(excludeRandomIndex);
@@ -180,7 +180,7 @@ const seed = async () => {
           let analysisCategoryArrayLength = Math.floor(Math.random() * 3 + 2);
           while (analysisCategoryArray.length < analysisCategoryArrayLength) {
             let analysisRandomIndex = Math.floor(
-              Math.random() * categories.length,
+              Math.random() * categories.length
             );
             if (!analysisCategoryArray.includes(analysisRandomIndex)) {
               analysisCategoryArray.push(analysisRandomIndex);
@@ -198,7 +198,7 @@ const seed = async () => {
           let collectionStudiesArrayLength = Math.floor(Math.random() * 3 + 2);
           while (collectionStudiesArray.length < collectionStudiesArrayLength) {
             let collectionStudiesRand = Math.floor(
-              Math.random() * studies.length,
+              Math.random() * studies.length
             );
             if (!collectionStudiesArray.includes(collectionStudiesRand)) {
               collectionStudiesArray.push(collectionStudiesRand);
@@ -212,7 +212,7 @@ const seed = async () => {
             users[Math.floor(Math.random() * users.length)];
           collections[i].hist.push({
             histId: collections[i]._id,
-            time: new Date(),
+            time: new Date()
           });
           let collectionCategoryArray = [];
           let collectionCategoryArrayLength = Math.floor(Math.random() * 3 + 2);
@@ -220,7 +220,7 @@ const seed = async () => {
             collectionCategoryArray.length < collectionCategoryArrayLength
           ) {
             let collectionCategoryRand = Math.floor(
-              Math.random() * categories.length,
+              Math.random() * categories.length
             );
             if (!collectionCategoryArray.includes(collectionCategoryRand)) {
               collectionCategoryArray.push(collectionCategoryRand);
@@ -237,7 +237,7 @@ const seed = async () => {
           comments[i].user =
             users[Math.floor(Math.random() * users.length)]._id;
           let combinedLengthRand = Math.floor(
-            Math.random() * (collections.length + analyses.length),
+            Math.random() * (collections.length + analyses.length)
           );
           let commentBelongsToTarget =
             combinedLengthRand < analyses.length

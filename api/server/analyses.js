@@ -1,13 +1,13 @@
-const express = require('express');
-const sModels = require('./../models/sequelize');
-const mModels = require('./../models/mongoose');
+const express = require("express");
+const sModels = require("./../models/sequelize");
+const mModels = require("./../models/mongoose");
 const Study = sModels.Study;
 const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
 const Analysis = mModels.Analysis;
 let router = express.Router();
 
-router.get("/id/:id", function(req, res, next) {
+router.get("/:id", function(req, res, next) {
   Analysis.findById(req.params.id)
     .then(result => {
       console.log("result => ", result);
@@ -16,20 +16,20 @@ router.get("/id/:id", function(req, res, next) {
     .catch(e => res.status(500).send(e.stack));
 });
 
-router.get('/ids', async (req, res, next) => {
+router.get("/ids", async (req, res, next) => {
   let results = [];
   let query = req.query.analyses;
   let queryParams = {
     where: {
       id: {
-        [Op.or]: [],
-      },
-    },
+        [Op.or]: []
+      }
+    }
   };
-  if (query[0] == '_') {
+  if (query[0] == "_") {
     query = query.substring(1);
   }
-  let idArray = query.split('_');
+  let idArray = query.split("_");
   idArray.forEach(id => {
     queryParams.where.id[Op.or].push(id);
   });

@@ -23,6 +23,8 @@ const Reducers = combineReducers({
   Profile,
   sitesearch,
   Analysis,
+  Collection,
+  routing: routerReducer,
   modules
 });
 

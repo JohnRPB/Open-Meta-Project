@@ -15,6 +15,7 @@ import CollectionSearch from "./components/Collections/CollectionSearch";
 import LogCheckContainer from "./containers/LogCheck/LogCheckContainer.js";
 import AnalysisContainer from "./containers/AnalysisContainer.js";
 import AllAnalyses from "./containers/AllAnalyses";
+import CollectionContainer from "./containers/CollectionContainer.js";
 import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
 
@@ -49,7 +50,7 @@ const Routes = ({ history }) => {
           exact
           path="/collections/:collection_id?"
           component={CollectionContainer}
-        /> */}
+        />
       </Switch>
     </Router>
   );
