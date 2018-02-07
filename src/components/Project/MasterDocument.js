@@ -43,6 +43,8 @@ class MasterDocument extends Component {
 
   componentWillMount() {
     //this.getUpdatedModules();
+    console.log(this.props);
+    let routingId = this.props.location.pathname.split("/")[-2];
   }
 
   render() {
