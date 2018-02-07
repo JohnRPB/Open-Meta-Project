@@ -2,6 +2,7 @@ const express = require("express");
 const sModels = require("./../models/sequelize");
 const mModels = require("./../models/mongoose");
 const Study = sModels.Study;
+const User = mModels.User;
 const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
 const Analysis = mModels.Analysis;
@@ -29,13 +30,13 @@ router.post("/", async (req, res, next) => {
     ownerId: req.body.id,
     comments: [],
     hist: [],
-    data: { header: {} }
+    data: {header: {}}
   };
 
   let newObj = Object.assign({}, a, {
     data: Object.assign(
       {},
-      { header: {} },
+      {header: {}},
       {
         header: {
           title: req.body.title,
@@ -47,7 +48,7 @@ router.post("/", async (req, res, next) => {
   let newAnalysis = await new Analysis(newObj);
   await newAnalysis.save();
   await User.findByIdAndUpdate(req.body.id, {
-    $push: { analyses: newAnalysis._id }
+    $push: {analyses: newAnalysis._id}
   });
   res.send(newAnalysis._id);
 });
@@ -88,28 +89,27 @@ router.get("/ids", async (req, res, next) => {
   res.send(JSON.stringify(results));
 });
 
-router.put('/:id', async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
   console.log(req.params.id);
   console.log(req.body);
   let updatedAnalysis;
-  let submitter
+  let submitter;
   try {
-    updatedAnalysis = await Analysis.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-    ); 
+    updatedAnalysis = await Analysis.findByIdAndUpdate(req.params.id, req.body);
     console.log(updatedAnalysis);
-    submitter = await User.findById(req.body.ownerId)
+    submitter = await User.findById(req.body.ownerId);
     console.log(submitter);
     let updateUser = true;
     let analysesArray = submitter.analyses || [];
     console.log(analysesArray);
-    for(let i = 0; i < analysesArray.length; i++){
-      if(submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()){
+    for (let i = 0; i < analysesArray.length; i++) {
+      if (
+        submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()
+      ) {
         updateUser = false;
       }
     }
-    if(updateUser){
+    if (updateUser) {
       submitter.analyses.push(updatedAnalysis);
       submitter = await submitter.save();
       res.json(updatedAnalysis);
