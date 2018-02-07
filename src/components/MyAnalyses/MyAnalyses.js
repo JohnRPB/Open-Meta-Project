@@ -21,6 +21,7 @@ import {
 } from "semantic-ui-react";
 import Related from "./Related";
 import CollectionModal from "./CollectionModal";
+
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
 import Table from "../Profile/Table";

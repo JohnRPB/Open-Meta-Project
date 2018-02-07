@@ -39,11 +39,12 @@ class CollectionModal extends Component {
 
     axios.post(`${root}/api/collections`, obj).then(response => {
       console.log("response in modal=> ", response);
-      window.location.href = `/collections/${response.data}/edit`;
+      this.props.history.push(`/collections/${response.data}/edit`);
     });
   }
 
   render() {
+    console.log("collection modal props", this.props);
     return (
       <Modal trigger={<Button>New Collection</Button>}>
         <Modal.Content>
