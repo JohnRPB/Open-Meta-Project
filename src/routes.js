@@ -28,7 +28,7 @@ const Routes = ({ history }) => {
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/sitesearch" component={SitesearchContainer} />
-        <Route exact path="/project" component={ProjectContainer} />
+
         <Route exact path="/login" component={UserForm} />
         <Route exact path="/newprofile" component={NewProfileContainer} />
         <Route exact path="/test" component={TestCompContainer} />
@@ -43,6 +43,11 @@ const Routes = ({ history }) => {
           exact
           path="/analysis/:anaysis_id"
           component={AnalysisContainer}
+        />
+        <Route
+          exact
+          path="/analysis/:analysis_id/edit"
+          component={ProjectContainer}
         />
         {/* COLLECTION ROUTES */}
         <Route exact path="/collections" component={AllCollections} />

@@ -44,8 +44,8 @@ class MasterDocument extends Component {
   componentWillMount() {
     //this.getUpdatedModules();
 
-    let currentStudyId = "12345";
-    // console.log(this.props);
+    let analysisObj = this.props.getAnalysis("5a7b21305483d71df027b6a2");
+    console.log(analysisObj);
     // let routingId = this.props.location.pathname.split("/")[-2];
   }
 
@@ -63,7 +63,8 @@ class MasterDocument extends Component {
       handleDelete,
       editing,
       handleSave,
-      handleEdit
+      handleEdit,
+      Analysis
     } = this.props;
 
     const { contextRef } = this.state;
@@ -75,7 +76,7 @@ class MasterDocument extends Component {
     return (
       <div>
         <NavContainer />
-        <h1>Welcome to your project</h1>
+        <h1>Welcome to analysis ID#:{Analysis._id}</h1>
         <h3>
           Drag and drop modules onto your document. Navigate through document by
           clicking on items
@@ -87,6 +88,7 @@ class MasterDocument extends Component {
                 <Rail position="left">
                   <Sticky context={contextRef}>
                     <h2>Modules</h2>
+                    <br />
                     <div>
                       {boxes.map(
                         (
@@ -109,6 +111,7 @@ class MasterDocument extends Component {
                 </Rail>
 
                 <h2>Document</h2>
+                <br />
                 <div>
                   {blocks.map((block, index) => {
                     return (

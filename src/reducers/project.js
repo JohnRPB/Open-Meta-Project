@@ -15,6 +15,7 @@ import {
   EDIT_ELEMENT,
   SAVE_ELEMENT
 } from "../actions/project";
+import * as Actions from "../actions/Analysis";
 
 import ItemTypes from "../components/Project/ItemTypes";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
@@ -62,12 +63,19 @@ const initialState = {
 
   droppedBoxNames: [],
   showForm: null,
-  editing: false
+  editing: false,
+  Analysis: {}
 };
 
 const project = (state = initialState, action) => {
   let blocks;
   switch (action.type) {
+    case Actions.GET_ANALYSIS:
+      return {
+        ...state,
+        Analysis: action.data,
+        isFetching: false
+      };
     case GET_COMPUTATION_START:
       blocks = state.blocks.slice();
       blocks[action.data].loading = true;
