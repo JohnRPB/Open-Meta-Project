@@ -72,7 +72,10 @@ class Nav extends Component {
               <Dropdown.Item>
                 <NavLink to="/profile">Profile</NavLink>
               </Dropdown.Item>
-              <Dropdown.Item>Log Out</Dropdown.Item>
+              <Dropdown.Item>
+                <NavLink to="/collections/new">Create Collection</NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item>Other</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>

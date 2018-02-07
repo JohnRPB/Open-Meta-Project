@@ -1,4 +1,4 @@
-import {BUMP_AUTHORS, CEASE_PERSIST, CHANGE_PAGE, FLIP_ACTIVE, NEW_TABLES, PERSIST_TABLE, RESET_AUTHORS} from '../actions/search'
+import {BUMP_AUTHORS, CEASE_PERSIST, CHANGE_PAGE, FLIP_ACTIVE, NEW_TABLES, PERSIST_TABLE, RESET_AUTHORS} from '../actions/collections'
 
 const initialState = {
   persistObj: {},
@@ -9,7 +9,7 @@ const initialState = {
   authors: 1
 }
 
-const search = (state = initialState, action) => {
+const collections = (state = initialState, action) => {
   switch(action.type) {
     case NEW_TABLES:
       let checkedStudies = action.tables.filter(study => !state.persistObj[study.id]);
@@ -80,4 +80,4 @@ const search = (state = initialState, action) => {
   }
 }
 
-export default search
+export default collections

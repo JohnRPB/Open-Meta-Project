@@ -16,10 +16,11 @@ let CollectionSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User"
   },
-  comments: {
-    type: [Schema.Types.ObjectId],
-    ref: "Comment"
-  },
+  description: String,
+  comments: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Comment',
+  }],
   hist: [
     {
       histId: {
@@ -31,10 +32,10 @@ let CollectionSchema = new Schema({
       }
     }
   ],
-  category: {
-    type: [Schema.Types.ObjectId],
-    ref: "Category"
-  }
+  category: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Category',
+  }],
 });
 
 CollectionSchema.methods.fork = async function(newOwnerId) {
@@ -67,24 +68,24 @@ CollectionSchema.methods.sqlFind = function() {
           this._doc.studies[i] = this._doc.studies[i].dataValues;
         }
       }
-      return this;
-    })
-    .catch(err => console.error(err));
-};
-const unSQL = function(next) {
-  this._update.studies.forEach((study, index) => {
-    if (typeof study == "object") {
-      this._update.studies[index] = this._update.studies[index].id;
-    }
-  });
+    return this;
+  })
+  .catch(err => console.error(err));
+  
+}
+const unSQL = function(next){
+    this._update.studies.forEach((study,index) => {
+      if(typeof study == 'object'){
+        this._update.studies[index] = this._update.studies[index].id;
+      }
+    });
   next();
-};
+  }
 
 const autoPop = function(next) {
-  this.populate("ownerId")
-    .populate("comments")
-    .populate("category");
-
+  this
+    .populate('comments')
+    .populate('category')
   next();
 };
 

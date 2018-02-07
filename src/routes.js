@@ -11,7 +11,8 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 import ProfileContainer from "./containers/ProfileContainer";
 import MyAnalyses from "./containers/MyAnalyses";
-import Search from "./components/Search/Search";
+import CollectionSearch from "./components/Collections/CollectionSearch";
+import LogCheckContainer from "./containers/LogCheck/LogCheckContainer.js";
 import AnalysisContainer from "./containers/AnalysisContainer.js";
 import AllAnalyses from "./containers/AllAnalyses";
 import CollectionContainer from "./containers/CollectionContainer.js";
@@ -34,7 +35,6 @@ const Routes = ({ history }) => {
         <Route exact path="/dashboard" component={DashboardContainer} />
         <Route exact path="/landing" component={Landing} />
         <Route exact path="/profile/:user_id?" component={ProfileContainer} />
-        <Route exact path="/search" component={Search} />
         <Route exact path="/myanalyses/:user_id?" component={MyAnalyses} />
         {/* ANALYSIS ROUTES */}
         <Route exact path="/analyses" component={AllAnalyses} />
@@ -45,7 +45,8 @@ const Routes = ({ history }) => {
         />
         {/* COLLECTION ROUTES */}
         <Route exact path="/collections" component={AllCollections} />
-        <Route
+        <Route exact path="/collections/new" render={()=><LogCheckContainer Target={CollectionSearch} />} />
+        {/* <Route
           exact
           path="/collections/:collection_id?"
           component={CollectionContainer}
