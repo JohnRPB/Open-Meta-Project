@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, {Component} from "react";
+import {NavLink} from "react-router-dom";
 import axios from "axios";
 import {
   Button,
@@ -34,7 +34,7 @@ class CollectionModal extends Component {
   sendForm(e) {
     e.preventDefault();
     var form = document.querySelector("#new-collection");
-    var obj = serialize(form, { hash: true });
+    var obj = serialize(form, {hash: true});
     obj.id = this.props.id;
 
     axios.post(`${root}/api/collections`, obj).then(response => {
