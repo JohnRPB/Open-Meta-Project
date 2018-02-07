@@ -8,6 +8,7 @@ const journalNum = defaults.journal;
 module.exports = {
   up: (queryInterface, Sequelize) => {
     const testStatTypes = ['t', 'z', 'f', 'eta'];
+    const effectSizeTypes = ['d', 'r', 'eta', 'h'];
 
     let studies = [];
     for (var i = 0, len = studyNum; i < len; i++) {
@@ -19,6 +20,8 @@ module.exports = {
         sampleSize: Math.floor(Math.random() * 200 + 100),
         testStatType: testStatTypes[Math.floor(Math.random() * 4)],
         testStatVal: Math.random() * 2,
+        effectSizeType: effectSizeTypes[Math.floor(Math.random() * 4)],
+        effectSizeVal: Math.random() * 2,
         stdErr: Math.random() * 1,
         url: `${faker.internet.url()}/${faker.random.uuid()}`,
       });

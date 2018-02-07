@@ -29,6 +29,12 @@ module.exports = {
       testStatVal: {
         type: Sequelize.FLOAT
       },
+      effectSizeType: {
+        type: Sequelize.STRING
+      },
+      effectSizeVal: {
+        type: Sequelize.FLOAT
+      },
       stdErr: {
         type: Sequelize.FLOAT
       },

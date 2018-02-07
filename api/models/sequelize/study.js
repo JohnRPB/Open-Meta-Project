@@ -8,6 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     sampleSize: DataTypes.INTEGER,
     testStatType: DataTypes.STRING,
     testStatVal: DataTypes.FLOAT,
+    effectSizeType: DataTypes.STRING,
+    effectSizeVal: DataTypes.FLOAT,
     stdErr: DataTypes.FLOAT,
     url: DataTypes.STRING,
   });

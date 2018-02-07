@@ -21,6 +21,10 @@ class Module extends React.Component {
     this.props = props;
   }
 
+  componentWillMount() {
+    this.props.getOcpu();
+  }
+
   render() {
     return (
       <Container>
