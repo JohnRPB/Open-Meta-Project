@@ -44,7 +44,7 @@ class MasterDocument extends Component {
   componentWillMount() {
     //this.getUpdatedModules();
 
-    let analysisObj = this.props.getAnalysis("5a7b21305483d71df027b6a2");
+    let analysisObj = this.props.getAnalysis("5a7b7c28841dd6697bba76df");
     console.log(analysisObj);
     // let routingId = this.props.location.pathname.split("/")[-2];
   }
@@ -76,7 +76,7 @@ class MasterDocument extends Component {
     return (
       <div>
         <NavContainer />
-        <h1>Welcome to analysis ID#:{Analysis._id}</h1>
+        <h1>{/*Analysis.data.header.title*/}</h1>
         <h3>
           Drag and drop modules onto your document. Navigate through document by
           clicking on items
@@ -107,6 +107,11 @@ class MasterDocument extends Component {
                         )
                       )}
                     </div>
+                  </Sticky>
+                </Rail>
+                <Rail position="right">
+                  <Sticky context={contextRef}>
+                    <Button>Save Document</Button>
                   </Sticky>
                 </Rail>
 
