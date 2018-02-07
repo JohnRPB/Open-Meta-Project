@@ -41,19 +41,28 @@ const Routes = ({ history }) => {
         <Route exact path="/analyses" component={AllAnalyses} />
         <Route
           exact
-          path="/analysis/:anaysis_id?"
+          path="/analysis/:anaysis_id"
           component={AnalysisContainer}
         />
         {/* COLLECTION ROUTES */}
         <Route exact path="/collections" component={AllCollections} />
-        <Route exact path="/collections/new" render={()=><LogCheckContainer Target={CollectionSearch} />} />
-        <Route exact path="/collections/:id/edit" render={props => <LogCheckContainer {...props} Target={CollectionEditorContainer} />} />
-        {/* <Route
+        <Route
           exact
-          path="/collections/:collection_id?"
+          path="/collections/new"
+          render={() => <LogCheckContainer Target={CollectionSearch} />}
+        />
+        <Route
+          exact
+          path="/collections/:id/edit"
+          render={props => (
+            <LogCheckContainer {...props} Target={CollectionEditorContainer} />
+          )}
+        />
+        <Route
+          exact
+          path="/collections/:collection_id"
           component={CollectionContainer}
         />
-        */}
       </Switch>
     </Router>
   );

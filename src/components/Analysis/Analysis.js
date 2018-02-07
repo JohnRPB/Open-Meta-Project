@@ -31,18 +31,18 @@ class Analysis extends Component {
     if (!this.props.isFetching) {
       var { Analysis } = this.props;
 
-      var studies = this.props.Analysis.data.inclusion.collectionId.studies.map(
-        study => {
-          return (
-            <Card
-              fluid
-              header={study.name}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-              meta={study.pubDate}
-            />
-          );
-        }
-      );
+      // var studies = this.props.Analysis.data.inclusion.collectionId.studies.map(
+      //   study => {
+      //     return (
+      //       <Card
+      //         fluid
+      //         header={study.name}
+      //         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+      //         meta={study.pubDate}
+      //       />
+      //     );
+      //   }
+      // );
     }
 
     if (this.props.isFetching) {
@@ -64,7 +64,7 @@ class Analysis extends Component {
             <br />
 
             <Container>
-              <Segment>
+              {/* <Segment>
                 <Header as="h1">Analysis.data.header.title</Header>
                 <Divider />
                 <Header as="h4">
@@ -78,7 +78,7 @@ class Analysis extends Component {
 
               <Header as="h3">Included Studies</Header>
               <Card.Group>{studies}</Card.Group>
-              <Divider />
+              <Divider /> */}
               <p>{JSON.stringify(Analysis.data, null, 5)}</p>
             </Container>
           </div>

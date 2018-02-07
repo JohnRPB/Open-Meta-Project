@@ -20,7 +20,35 @@ router.get('/:id', function(req, res, next) {
 });
 
 // --------------------------------------------
+<<<<<<< HEAD
+// create new collection
+// --------------------------------------------
+
+router.post("/", async (req, res, next) => {
+  console.log("collection post route req ", req.body);
+  let newObj = {
+    name: req.body.title,
+    description: req.body.description,
+    studies: [],
+    ownerId: req.body.id,
+    comments: [],
+    hist: [],
+    category: []
+  };
+
+  let newCollection = await new Collection(newObj);
+  await newCollection.save();
+  await User.findByIdAndUpdate(req.body.id, {
+    $push: { collections: newCollection._id }
+  });
+  res.send(newCollection._id);
+});
+
+// --------------------------------------------
+// get a number of collections by ids as query
+=======
 //get a number of collections by ids as query
+>>>>>>> 0d6a8585241ae684bc249d593166c4756b507086
 // --------------------------------------------
 
 router.get('/ids', async (req, res, next) => {
