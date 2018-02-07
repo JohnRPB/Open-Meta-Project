@@ -19,6 +19,7 @@ import AllAnalyses from "./containers/AllAnalyses";
 import CollectionContainer from "./containers/CollectionContainer.js";
 import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
+import SelectCollection from "./components/SelectCollection";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -39,6 +40,7 @@ const Routes = ({ history }) => {
         <Route exact path="/myanalyses/:user_id?" component={MyAnalyses} />
         {/* ANALYSIS ROUTES */}
         <Route exact path="/analyses" component={AllAnalyses} />
+        <Route exact path="/selectcollection" component={SelectCollection} />
         <Route
           exact
           path="/analysis/:anaysis_id"

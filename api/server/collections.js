@@ -1,6 +1,6 @@
-const express = require('express');
-const sModels = require('./../models/sequelize');
-const mModels = require('./../models/mongoose');
+const express = require("express");
+const sModels = require("./../models/sequelize");
+const mModels = require("./../models/mongoose");
 const Study = sModels.Study;
 const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
@@ -11,7 +11,7 @@ let router = express.Router();
 // --------------------------------------------
 // get a collection by ID
 // --------------------------------------------
-router.get('/:id', function(req, res, next) {
+router.get("/:id", function(req, res, next) {
   Collection.findById(req.params.id)
     .then(result => {
       res.json(result);
@@ -38,7 +38,7 @@ router.post("/", async (req, res, next) => {
   let newCollection = await new Collection(newObj);
   await newCollection.save();
   await User.findByIdAndUpdate(req.body.id, {
-    $push: { collections: newCollection._id }
+    $push: {collections: newCollection._id}
   });
   res.send(newCollection._id);
 });
@@ -47,20 +47,20 @@ router.post("/", async (req, res, next) => {
 // get a number of collections by ids as query
 // --------------------------------------------
 
-router.get('/ids', async (req, res, next) => {
+router.get("/ids", async (req, res, next) => {
   let results = [];
   let query = req.query.collections;
   let queryParams = {
     where: {
       id: {
-        [Op.or]: [],
-      },
-    },
+        [Op.or]: []
+      }
+    }
   };
-  if (query[0] == '_') {
+  if (query[0] == "_") {
     query = query.substring(1);
   }
-  let idArray = query.split('_');
+  let idArray = query.split("_");
   idArray.forEach(id => {
     queryParams.where.id[Op.or].push(id);
   });
@@ -79,7 +79,7 @@ router.get('/ids', async (req, res, next) => {
   res.send(JSON.stringify(results));
 });
 
-router.post('/new', async (req, res, next) => {
+router.post("/new", async (req, res, next) => {
   let body = req.body;
   // currentCollection.studies.forEach(
   //   (study, index) => {
@@ -92,15 +92,15 @@ router.post('/new', async (req, res, next) => {
     let currentCategory;
     for (let i = 0; i < body.category.length; i++) {
       currentCategory = await Category.findOne({
-        name: new RegExp(`^${body.category[i]}$`, 'i'),
+        name: new RegExp(`^${body.category[i]}$`, "i")
       });
       if (!currentCategory) {
         currentCategory = new Category({
-          name: body.category[i],
+          name: body.category[i]
         });
         await currentCategory.save();
         currentCategory = await Category.findOne({
-          name: currentCategory.name,
+          name: currentCategory.name
         });
       }
       body.category[i] = currentCategory._id;
@@ -108,18 +108,18 @@ router.post('/new', async (req, res, next) => {
     let currentCollection = new Collection(body);
     await currentCollection.save();
     currentCollection = await Collection.findOne({
-      $and: [{name: body.name}, {ownerId: body.ownerId}],
+      $and: [{name: body.name}, {ownerId: body.ownerId}]
     });
     let currentUser = await User.findById(body.ownerId);
     currentUser.collections.push(currentCollection._id);
     // console.log(currentCollection._doc);
     currentCollection.hist.push({
       histId: currentCollection._id,
-      time: new Date(),
+      time: new Date()
     });
     currentCollection = await Collection.findByIdAndUpdate(
       currentCollection._id,
-      currentCollection,
+      currentCollection
     );
     await currentUser.save();
     currentUser = await User.findById(body.ownerId);
@@ -131,14 +131,14 @@ router.post('/new', async (req, res, next) => {
   }
 });
 
-router.get('/:search', async function(req, res, next) {
-  console.log('REQ.PARAMS.SEARCH', req.params.search);
+router.get("/:search", async function(req, res, next) {
+  console.log("REQ.PARAMS.SEARCH", req.params.search);
   let query = req.params.search,
     result,
     results = [];
   try {
     result = await Collection.find({});
-    console.log('result => ', result);
+    console.log("result => ", result);
   } catch (e) {
     res.status(500).send(e.stack);
   }
@@ -150,26 +150,29 @@ router.get('/:search', async function(req, res, next) {
       results.push(element);
     }
   });
-  console.log('results => ', results);
+  console.log("results => ", results);
   res.json(results);
 });
 
-router.put('/:id', async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
   let updatedCollection;
-  let submitter
+  let submitter;
   try {
     updatedCollection = await Collection.findByIdAndUpdate(
       req.params.id,
-      req.body,
-    ); 
-    submitter = await User.findById(req.body.ownerId)
+      req.body
+    );
+    submitter = await User.findById(req.body.ownerId);
     let updateUser = true;
-    for(let i = 0; i < submitter.collections.length; i++){
-      if(submitter.collections[i]._id.toString() == updatedCollection._id.toString()){
+    for (let i = 0; i < submitter.collections.length; i++) {
+      if (
+        submitter.collections[i]._id.toString() ==
+        updatedCollection._id.toString()
+      ) {
         updateUser = false;
       }
     }
-    if(updateUser){
+    if (updateUser) {
       submitter.collections.push(updatedCollection);
       submitter = await submitter.save();
       res.json(updatedCollection);
