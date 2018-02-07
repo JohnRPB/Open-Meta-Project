@@ -57,7 +57,7 @@ class AllAnalyses extends Component {
               key={analysis._id}
               header={
                 <NavLink to={`/analysis/${analysis._id}`}>
-                  { analysis.data.header.title || "My Analysis" }
+                  { analysis.data._id || "My Analysis" }
                 </NavLink>
               }
               description={faker.lorem.paragraph()}
