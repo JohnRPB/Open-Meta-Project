@@ -1,22 +1,22 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const smodels = require('../sequelize/');
+const smodels = require("../sequelize/");
 const Study = smodels.Study;
 
 let StudyOverflowSchema = new Schema({
   sqlId: {
-    type: Number,
+    type: Number
   },
   payload: {
-    type: {},
-  },
+    type: {}
+  }
 });
 
 StudyOverflowSchema.methods.sqlPop = function() {
   return Study.find({
     where: {
-      id: this.sqlId,
-    },
+      id: this.sqlId
+    }
   })
     .then(study => {
       if (study.dataValues) {
@@ -35,27 +35,27 @@ const unSQL = function(next) {
   next();
 };
 
-StudyOverflowSchema
-  .pre('update', unSQL)
-  .pre('findOneAndUpdate', unSQL)
-  .post('find', async function(docs) {
-  for (let i = 0; i < docs.length; i++) {
+StudyOverflowSchema.pre("update", unSQL)
+  .pre("findOneAndUpdate", unSQL)
+  .post("find", async function(docs) {
+    for (let i = 0; i < docs.length; i++) {
+      try {
+        await docs[i].sqlPop();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    return docs;
+  })
+  .post("findOne", async function(doc) {
     try {
-      await docs[i].sqlPop();
+      await doc.sqlPop();
     } catch (e) {
       console.error(e);
     }
-  }
-  return docs;
-}).post('findOne', async function(doc) {
-  try {
-    await doc.sqlPop();
-  } catch (e) {
-    console.error(e);
-  }
-  return doc;
-})
+    return doc;
+  });
 
-let StudyOverflow = mongoose.model('StudyOverflow', StudyOverflowSchema);
+let StudyOverflow = mongoose.model("StudyOverflow", StudyOverflowSchema);
 
 module.exports = StudyOverflow;

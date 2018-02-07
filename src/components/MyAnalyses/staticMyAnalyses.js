@@ -19,7 +19,7 @@ import {
 } from "semantic-ui-react";
 import johann from "../../assets/images/johann.jpeg";
 import Related from "./Related";
-import ModalForm from "./ModalForm";
+import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
 import Table from "../Profile/Table";
@@ -93,7 +93,7 @@ class MyAnalyses extends Component {
             <Grid.Row>
               <Grid.Column width={3}>
                 <br />
-                <ModalForm />
+                <CollectionModal />
               </Grid.Column>
               <Grid.Column width={13}>
                 <Segment>

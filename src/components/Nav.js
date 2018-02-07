@@ -28,6 +28,7 @@ class Nav extends Component {
 
   handleChange = event => {
     this.setState({ value: event.target.value });
+    event.preventDefault();
   };
 
   handleResultSelect = () => {
@@ -43,9 +44,9 @@ class Nav extends Component {
         <NavLink to="/landing" className="item">
           Open Meta
         </NavLink>
-        <NavLink to="/dashboard" className="item">
+        {/* <NavLink to="/dashboard" className="item">
           My Dashboard
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/myanalyses" className="item">
           My Reviews
         </NavLink>

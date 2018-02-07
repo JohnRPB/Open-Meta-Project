@@ -20,13 +20,13 @@ import {
   Loader
 } from "semantic-ui-react";
 import Related from "./Related";
-import ModalForm from "./ModalForm";
+import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
 import Table from "../Profile/Table";
 const faker = require("faker");
 
-class MyAnalyses extends Component {
+class MyAnalysesPage extends Component {
   constructor() {
     super();
     this.isFetching = true;
@@ -39,16 +39,18 @@ class MyAnalyses extends Component {
     if (!this.props._token) {
       window.location.href = "/login";
     }
+
+    this.props.getUser(this.props._id, this.props._token);
   }
 
   render() {
     console.log(" <---- MYANALYSES PROPS ----> ", this.props);
     // creating cards from user's analyses
     let analysisCards;
-    if (!this.props.isFetching) {
-      console.log("MY DATA props => ", this.props);
+    if (!this.props.MyAnalysesPage.isFetching) {
+      console.log("inside if");
       console.log("Myanalyses: this.props: ", this.props);
-      analysisCards = this.props.Dashboard.user.analyses
+      analysisCards = this.props.MyAnalysesPage.user.analyses
         .slice(0, 3)
         .map(analysis => {
           return (
@@ -66,102 +68,123 @@ class MyAnalyses extends Component {
         });
     }
 
-    return (
-      <div className="ui  vertical masthead center aligned segment">
-        <div className="following bar">
-          <div className="ui container">
-            {/* <Nav userId="5a74fa36425cf997daab4328" /> */}
-            <NavContainer />
+    if (this.props.MyAnalysesPage.isFetching) {
+      return (
+        <Dimmer active>
+          <Loader content="Loading" />
+        </Dimmer>
+      );
+    } else {
+      return (
+        <div className="ui  vertical masthead center aligned segment">
+          <div className="following bar">
+            <div className="ui container">
+              {/* <Nav userId="5a74fa36425cf997daab4328" /> */}
+              <NavContainer />
+            </div>
           </div>
-        </div>
-        <br />
-        <br />
-        <Container>
-          <Grid>
-            {/* header & sub-menu */}
-            <Grid.Row>
-              {" "}
-              <Grid.Column width={3} />
-              <Grid.Column width={3}>
-                <Image
-                  src={`${this.props.Dashboard.user.profile.image}`}
-                  circular
-                  size="small"
-                />
-              </Grid.Column>
-              <Grid.Column width={4}>
-                <br />
-                <Header as="h1" floated="left">
-                  {this.props.Dashboard.user.profile.f_name}
-                </Header>
-                <br />
-                <Button.Group basic>
-                  <Button>
-                    <NavLink to="/myanalyses">Recent</NavLink>
-                  </Button>
-                  <Button>
-                    <NavLink to="/collections">Collections</NavLink>
-                  </Button>
-                  <Button>
-                    <NavLink to="/analyses">Analyses</NavLink>
-                  </Button>
-                  <Button>
-                    <NavLink to="/reviews">Reviews</NavLink>
-                  </Button>
-                </Button.Group>
-              </Grid.Column>
-            </Grid.Row>
 
-            {/* COLLECTIONS */}
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <br />
-                <ModalForm />
-              </Grid.Column>
-              <Grid.Column width={13}>
-                <Segment>
-                  {" "}
-                  <Header as="h1" textalign="left">
-                    Recent Collections
-                  </Header>
-                  <Divider />
-                  <Related />
+          <br />
+          <Container>
+            <Grid>
+              {/* header & sub-menu */}
+              <Grid.Row>
+                {" "}
+                <Grid.Column width={3} />
+                <Grid.Column width={3}>
+                  <Image
+                    src={`${this.props.MyAnalysesPage.user.profile.image}`}
+                    circular
+                    size="small"
+                  />
+                </Grid.Column>
+                <Grid.Column width={4}>
                   <br />
-                  <p>See all collections</p>
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
+                  <Header as="h1" floated="left">
+                    {this.props.MyAnalysesPage.user.profile.f_name}
+                  </Header>
+                  <br />
+                  <Button.Group basic>
+                    <Button>
+                      <NavLink to="/myanalyses">Recent</NavLink>
+                    </Button>
+                    <Button>
+                      <NavLink to="/collections">Collections</NavLink>
+                    </Button>
+                    <Button>
+                      <NavLink to="/analyses">Analyses</NavLink>
+                    </Button>
+                    {/* <Button>
+                    <NavLink to="/reviews">Reviews</NavLink>
+                  </Button> */}
+                  </Button.Group>
+                </Grid.Column>
+              </Grid.Row>
 
-            {/* ANALYSES */}
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <br />
-                <AnalysisModal />
-              </Grid.Column>
+              {/* COLLECTIONS */}
+              <Grid.Row id="collections">
+                <Grid.Column width={3}>
+                  <br />
+                  <CollectionModal />
+                </Grid.Column>
+                <Grid.Column width={13}>
+                  <Segment>
+                    {" "}
+                    <Header as="h1" textalign="left">
+                      Recent Collections
+                    </Header>
+                    <Divider />
+                    <Related />
+                    <br />
+                    <NavLink to="/collections">
+                      <p>See all collections</p>
+                    </NavLink>
+                  </Segment>
+                </Grid.Column>
+              </Grid.Row>
 
-              <Grid.Column width={13}>
-                <Segment>
-                  {this.props.isFetching ? (
-                    <Dimmer active>
-                      <Loader />
-                    </Dimmer>
-                  ) : (
-                    <div>
-                      <Header as="h1" textalign="left">
-                        Recent Analyses
-                      </Header>
-                      <Divider />
-                      <Card.Group>{analysisCards}</Card.Group>
-                      <br />
-                      <p>See all analyses</p>
-                    </div>
-                  )}
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
+              {/* ANALYSES */}
+              <Grid.Row id="analyses" className="hidden">
+                <Grid.Column width={3}>
+                  <br />
+                  <AnalysisModal />
+                </Grid.Column>
 
-            {/* REVIEWS */}
-            <Grid.Row>
+                <Grid.Column width={13}>
+                  <Segment>
+                    {this.props.isFetching ? (
+                      <Dimmer active>
+                        <Loader />
+                      </Dimmer>
+                    ) : (
+                      <div>
+                        <Header as="h1" textalign="left">
+                          Recent Analyses
+                        </Header>
+                        <Divider />
+                        <Card.Group>
+                          {analysisCards.length ? (
+                            analysisCards
+                          ) : (
+                            <Card
+                              fluid
+                              description="No analyses created yet. Would you like to create
+                          one now?"
+                            />
+                          )}
+                        </Card.Group>
+                        <br />
+                        <NavLink to="/analyses">
+                          <p>See all analyses</p>
+                        </NavLink>
+                      </div>
+                    )}
+                  </Segment>
+                </Grid.Column>
+              </Grid.Row>
+
+              {/* REVIEWS */}
+              {/* <Grid.Row>
               <Grid.Column width={3}>
                 <br />
                 <ReviewModal />
@@ -182,12 +205,13 @@ class MyAnalyses extends Component {
                   <p>See all reviews</p>
                 </Segment>
               </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      </div>
-    );
+            </Grid.Row> */}
+            </Grid>
+          </Container>
+        </div>
+      );
+    }
   }
 }
 
-export default MyAnalyses;
+export default MyAnalysesPage;

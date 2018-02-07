@@ -27,7 +27,7 @@ class Profile extends Component {
 
   render() {
     // if (!this.props.isFetching) {
-    //   var { User } = this.props.Dashboard;
+    //   var { User } = this.props.MyAnalysesPage;
     //   console.log("user => ", User);
     // }
     console.log("PROFILE PAGE props => ", this.props);
@@ -40,7 +40,6 @@ class Profile extends Component {
           </div>
         </div>
         <br />
-        <br />
         <Container>
           <Grid>
             <Grid.Column width={1} />
@@ -51,7 +50,7 @@ class Profile extends Component {
                 <Image
                   src={
                     !this.props.isFetching
-                      ? `${this.props.Dashboard.user.profile.image}`
+                      ? `${this.props.MyAnalysesPage.user.profile.image}`
                       : null
                   }
                   centered
@@ -60,20 +59,20 @@ class Profile extends Component {
                 />
                 <h2>
                   {!this.props.isFetching
-                    ? `${this.props.Dashboard.user.profile.f_name} ${
-                        this.props.Dashboard.user.profile.l_name
+                    ? `${this.props.MyAnalysesPage.user.profile.fname} ${
+                        this.props.MyAnalysesPage.user.profile.lname
                       }`
                     : null}
                 </h2>
                 <h3>
                   {" "}
                   {!this.props.isFetching
-                    ? this.props.Dashboard.user.profile.title
+                    ? this.props.MyAnalysesPage.user.profile.title
                     : null}
                 </h3>
                 <p>
                   {!this.props.isFetching
-                    ? this.props.Dashboard.user.profile.description
+                    ? this.props.MyAnalysesPage.user.profile.background
                     : null}
                 </p>
               </Segment>
@@ -94,7 +93,7 @@ class Profile extends Component {
                   <Statistic>
                     <Statistic.Value>
                       {!this.props.isFetching
-                        ? `${this.props.Dashboard.user.analyses.length}`
+                        ? `${this.props.MyAnalysesPage.user.analyses.length}`
                         : null}
                     </Statistic.Value>
                     <Statistic.Label>Reviews</Statistic.Label>
@@ -113,7 +112,7 @@ class Profile extends Component {
                     <Table.HeaderCell colSpan="3">
                       {!this.props.isFetching
                         ? `${
-                            this.props.Dashboard.user.profile.f_name
+                            this.props.MyAnalysesPage.user.profile.fname
                           }'s Analyses`
                         : null}
                     </Table.HeaderCell>
@@ -121,7 +120,7 @@ class Profile extends Component {
                 </Table.Header>
                 <Table.Body>
                   {!this.props.isFetching
-                    ? this.props.Dashboard.user.analyses.map(analysis => {
+                    ? this.props.MyAnalysesPage.user.analyses.map(analysis => {
                         return (
                           <Table.Row>
                             <Table.Cell>

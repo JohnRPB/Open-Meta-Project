@@ -20,7 +20,7 @@ import {
   Loader
 } from "semantic-ui-react";
 import Related from "./Related";
-import ModalForm from "./ModalForm";
+import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
 const faker = require("faker");
@@ -69,7 +69,7 @@ class AllCollections extends Component {
           </div>
         </div>
         <br />
-        <br />
+
         <Container>
           <Grid>
             {/* header & sub-menu */}
@@ -91,7 +91,7 @@ class AllCollections extends Component {
                 <br />
                 <Button.Group basic>
                   <Button>
-                    <NavLink to="/AllCollections">Recent</NavLink>
+                    <NavLink to="/myanalyses">Recent</NavLink>
                   </Button>
                   <Button>
                     <NavLink to="/collections">Collections</NavLink>
@@ -99,9 +99,9 @@ class AllCollections extends Component {
                   <Button>
                     <NavLink to="/analyses">Analyses</NavLink>
                   </Button>
-                  <Button>
+                  {/* <Button>
                     <NavLink to="/reviews">Reviews</NavLink>
-                  </Button>
+                  </Button> */}
                 </Button.Group>
               </Grid.Column>
             </Grid.Row>
@@ -110,7 +110,7 @@ class AllCollections extends Component {
             <Grid.Row>
               <Grid.Column width={3}>
                 <br />
-                <ModalForm />
+                <CollectionModal />
               </Grid.Column>
               <Grid.Column width={13}>
                 <Segment>
@@ -121,7 +121,6 @@ class AllCollections extends Component {
                   <Divider />
                   <Related />
                   <br />
-                  <p>See all collections</p>
                 </Segment>
               </Grid.Column>
             </Grid.Row>

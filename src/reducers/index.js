@@ -11,6 +11,7 @@ import sitesearch from "./sitesearch";
 import Analysis from "./Analysis";
 import collections from "./collections";
 import modules from "./modules";
+import Collection from "./Collection.js";
 
 const Reducers = combineReducers({
   demo,
@@ -23,6 +24,8 @@ const Reducers = combineReducers({
   Profile,
   sitesearch,
   Analysis,
+  Collection,
+  routing: routerReducer,
   modules
 });
 

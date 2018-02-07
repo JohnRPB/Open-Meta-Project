@@ -7,8 +7,14 @@ import {
   Image,
   Container,
   Popup,
-  Header
+  Header,
+  Dimmer,
+  Loader,
+  Divider,
+  Card,
+  Label
 } from "semantic-ui-react";
+const moment = require("moment");
 
 class Analysis extends Component {
   constructor(props) {
@@ -24,32 +30,61 @@ class Analysis extends Component {
     console.log("analysis props => ", this.props);
     if (!this.props.isFetching) {
       var { Analysis } = this.props;
+
+      var studies = this.props.Analysis.data.inclusion.collectionId.studies.map(
+        study => {
+          return (
+            <Card
+              fluid
+              header={study.name}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+              meta={study.pubDate}
+            />
+          );
+        }
+      );
     }
 
-    return (
-      <div>
-        <div className="ui  vertical masthead center aligned segment">
-          <div className="following bar">
-            <div className="ui container">
-              <Nav />
-            </div>
-          </div>
-          <br />
-          <br />
-          <br />
-          <Container>
-            {!this.props.isFetching ? (
-              <div>
-                <Header as="h1">{Analysis.data.header.title}</Header>
-                <Header as="h2"> By {Analysis.data.header.author}</Header>
-                <p />
-                <p>{JSON.stringify(Analysis.data, null, 5)}</p>
+    if (this.props.isFetching) {
+      return (
+        <Dimmer active>
+          <Loader content="Loading" />
+        </Dimmer>
+      );
+    } else {
+      console.log("single analysis props => ", this.props);
+      return (
+        <div>
+          <div className="ui  vertical masthead center aligned segment">
+            <div className="following bar">
+              <div className="ui container">
+                <Nav />
               </div>
-            ) : null}
-          </Container>
+            </div>
+            <br />
+
+            <Container>
+              <Segment>
+                <Header as="h1">Analysis.data.header.title</Header>
+                <Divider />
+                <Header as="h4">
+                  {Analysis.ownerId.profile.fname}{" "}
+                  {Analysis.ownerId.profile.lname}
+                </Header>
+                <Header as="h5">{Analysis.hist[0].time}</Header>
+                <Label>category</Label> <Label>category2</Label>{" "}
+                <Label>category3</Label>
+              </Segment>
+
+              <Header as="h3">Included Studies</Header>
+              <Card.Group>{studies}</Card.Group>
+              <Divider />
+              <p>{JSON.stringify(Analysis.data, null, 5)}</p>
+            </Container>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
