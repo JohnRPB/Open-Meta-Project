@@ -8,7 +8,6 @@ const User = mModels.User;
 const Category = mModels.Category;
 let router = express.Router();
 
-
 // --------------------------------------------
 // get a collection by ID
 // --------------------------------------------
@@ -21,20 +20,45 @@ router.get("/:id", function(req, res, next) {
     .catch(e => res.status(500).send(e.stack));
 });
 
-
 // --------------------------------------------
 // create new collection
 // --------------------------------------------
 
 router.post("/", async (req, res, next) => {
-  let new Collection = await new Collection({
-    title: req.body.title,
-    description:req.body.description
-  })
+  console.log("analys post route req ", req.body);
+  let a = {
+    name: "",
+    description: "",
+    studies: [],
+    ownerId: {},
+    comments: {},
+    hist: [],
+    category: {}
+  };
 
-}
+  let newObj = Object.assign({}, a, {
+    data: Object.assign(
+      {},
+      { header: {} },
+      {
+        header: {
+          title: req.body.title,
+          description: req.body.description
+        }
+      }
+    )
+  });
+  let newAnalysis = await new Analysis(newObj);
+  res.send(newAnalysis._id);
+});
 
-
+// router.post("/", async (req, res, next) => {
+//   let newCollection = await new Collection({
+//     title: req.body.title,
+//     description: req.body.description
+//   });
+//   console.log("newCollection => ", newCollection);
+// });
 
 // --------------------------------------------
 //get a number of collections by ids as query
