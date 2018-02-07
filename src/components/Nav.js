@@ -76,6 +76,9 @@ class Nav extends Component {
               <Dropdown.Item>
                 <NavLink to="/collections/new">Create Collection</NavLink>
               </Dropdown.Item>
+              <Dropdown.Item>
+                <NavLink to="/selectcollection">Select Collection</NavLink>
+              </Dropdown.Item>
               <Dropdown.Item>Other</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

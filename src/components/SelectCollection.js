@@ -1,3 +1,5 @@
+//pseudo code to be removed
+
 //saves an analysis
 
 //allows selection of a collection and saves to the analysis the collection
@@ -9,7 +11,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 //name will change
-// import SearchCollectionContainer from "./Search/SearchCollection";
+import CollectionSearchCollectionsContainer from "../containers/Collections/CollectionSearchCollectionsContainer";
 
 class SelectCollection extends Component {
   constructor() {
@@ -20,9 +22,12 @@ class SelectCollection extends Component {
     //saves an analysis
   }
 
+  // const CurrentAnalysisId = sjdlkjsdflkjsdlkfjs
+
   onSubmitSelection() {
     //allows selection of a collection and saves to the analysis the collection
     //then give analysis id to edwin
+    //CurrentAnalysisId
   }
 
   onSubmitCreateCollection() {
@@ -33,7 +38,7 @@ class SelectCollection extends Component {
     return (
       <div>
         <div>Select a collection for your analysis </div>
-        {/*<SearchCollection />*/}
+        <CollectionSearchCollectionsContainer />
         <div>No collections yet?</div>
         <button>Create a Collection</button>
       </div>
