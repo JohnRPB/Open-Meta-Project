@@ -24,24 +24,15 @@ router.get("/:id", function(req, res, next) {
 // create new collection
 // --------------------------------------------
 
-<<<<<<< HEAD
-router.post("/", async (req, res, next) => {
-  await new Collection({
-    title: req.body.title,
-    description: req.body.description
-  });
-});
-=======
 //router.post("/", async (req, res, next) => {
-  //let new Collection = await new Collection({
-    //title: req.body.title,
-    //description:req.body.description
-  //})
+//let new Collection = await new Collection({
+//title: req.body.title,
+//description:req.body.description
+//})
 
 //}
 
 // }
->>>>>>> 1a156564ec9853ecfdba6635c616bd48ea80cd54
 
 // --------------------------------------------
 //get a number of collections by ids as query
@@ -122,7 +113,7 @@ router.post("/new", async (req, res, next) => {
       currentCollection._id,
       currentCollection
     );
-    await currentUser.save(); 
+    await currentUser.save();
     currentUser = await User.findById(body.ownerId);
     console.log(currentUser);
     res.send(JSON.stringify(currentCollection));
