@@ -10,6 +10,8 @@ import Profile from "./Profile";
 import sitesearch from "./sitesearch";
 import Analysis from "./Analysis";
 import collections from "./collections";
+import collectionEdit from "./collectionEdit";
+import routeProps from "./routeProps";
 import modules from "./modules";
 import Collection from "./Collection.js";
 
@@ -21,6 +23,8 @@ const Reducers = combineReducers({
   Token,
   routing: routerReducer,
   collections,
+  collectionEdit,
+  routeProps,
   Profile,
   sitesearch,
   Analysis,

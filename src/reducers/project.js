@@ -40,7 +40,13 @@ const initialState = {
   ],
   boxes: [
     {
-      name: "test module",
+      name: "simplePlot",
+      loading: false,
+      type: ItemTypes.GRAPH,
+      content: {}
+    },
+    {
+      name: "funnel",
       loading: false,
       type: ItemTypes.GRAPH,
       content: {}

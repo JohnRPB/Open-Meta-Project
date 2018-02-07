@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { DragSource } from "react-dnd";
-import studies from "../../databaseStudies.js";
+import studies from "../../newStudies.js";
 import ItemTypes from "./ItemTypes";
 
 const style = {
@@ -15,11 +15,11 @@ const style = {
 };
 
 let createStudies = () =>
-  studies.map(study => Object.assign({}, study)).slice(0, 10);
+  studies.map(study => Object.assign({}, study));
 
-let createModule = () => {
+let createModule = (name) => {
   return {
-    name: "simplePlot",
+    name: name,
     type: "graphic",
     outputLoc:
       "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
@@ -33,7 +33,7 @@ const boxSource = {
       name: props.name,
       loading: props.loading,
       type: props.type,
-      content: createModule()
+      content: createModule(props.name)
     };
   },
 

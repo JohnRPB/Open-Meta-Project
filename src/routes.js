@@ -12,6 +12,7 @@ import Landing from "./components/Landing/Landing.js";
 import ProfileContainer from "./containers/ProfileContainer";
 import MyAnalyses from "./containers/MyAnalyses";
 import CollectionSearch from "./components/Collections/CollectionSearch";
+import CollectionEditorContainer from "./containers/CollectionEditor/CollectionEditorContainer";
 import LogCheckContainer from "./containers/LogCheck/LogCheckContainer.js";
 import AnalysisContainer from "./containers/AnalysisContainer.js";
 import AllAnalyses from "./containers/AllAnalyses";
@@ -46,6 +47,7 @@ const Routes = ({ history }) => {
         {/* COLLECTION ROUTES */}
         <Route exact path="/collections" component={AllCollections} />
         <Route exact path="/collections/new" render={()=><LogCheckContainer Target={CollectionSearch} />} />
+        <Route exact path="/collections/:id/edit" render={props => <LogCheckContainer {...props} Target={CollectionEditorContainer} />} />
         {/* <Route
           exact
           path="/collections/:collection_id?"

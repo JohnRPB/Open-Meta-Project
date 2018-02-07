@@ -1,5 +1,6 @@
 var jwt = require("jsonwebtoken");
 const router = require("express").Router();
+const bcrypt = require('bcrypt');
 
 //logs in users
 let mongooseModels = require("./../models/mongoose");
@@ -8,36 +9,36 @@ router.post("/", async (req, res) => {
   try {
     console.log("entered / route in api/login");
 
-    let users = await User.find();
+    let users = await User.find({email: req.body.email});
     var message;
     let userid;
     for (var user of users) {
-      console.log("this is the req.body.email => ", req.body.email);
-      console.log("this is the user.email => ", user.email);
-      console.log("this is the user.passHash => ", user.passHash);
-      console.log("this is the req.body.passHash => ", req.body.passHash);
+      // console.log("this is the req.body.email => ", req.body.email);
+      // console.log("this is the user.email => ", user.email);
+      // console.log("this is the user.passHash => ", user.passHash);
+      // console.log("this is the req.body.passHash => ", req.body.passHash);
 
       if (user.email !== req.body.email) {
         // console.log("this is the wrong req.body.email => ", req.body.email);
         // console.log("this is the wrong user.email => ", user.email);
         message = "Wrong email";
       } else {
-        if (user.passHash !== req.body.passHash) {
+        if (!bcrypt.compareSync(req.body.passHash, user.passHash)) {
           message = "Wrong passHash";
           break;
         } else {
           //create the token.
-          console.log(
-            "============================> tokenification starting! ============================>"
-          );
+          // console.log(
+          //   "============================> tokenification starting! ============================>"
+          // );
           var token = jwt.sign(
             { email: user.email, passHash: user.passHash, id: user._id },
             "thisisthesecrettoopenmetasdjflsdjfslksdjlkjfsdljflsdjfsldfj"
           );
           userid = user._id;
-          console.log(
-            "============================> tokenification complete! ============================>"
-          );
+          // console.log(
+          //   "============================> tokenification complete! ============================>"
+          // );
           message = "Login Successful";
           break;
         }
