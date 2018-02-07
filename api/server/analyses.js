@@ -4,8 +4,14 @@ const mModels = require("./../models/mongoose");
 const Study = sModels.Study;
 const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
+const User = mModels.User;
 const Analysis = mModels.Analysis;
+const User = mModels.User;
 let router = express.Router();
+
+// --------------------------------------------
+// retrieves a single analysis
+// --------------------------------------------
 
 router.get("/:id", function(req, res, next) {
   Analysis.findById(req.params.id)
@@ -15,6 +21,42 @@ router.get("/:id", function(req, res, next) {
     })
     .catch(e => res.status(500).send(e.stack));
 });
+
+// --------------------------------------------
+// creates an analysis
+// --------------------------------------------
+
+router.post("/", async (req, res, next) => {
+  let a = {
+    ownerId: req.body.id,
+    comments: [],
+    hist: [],
+    data: { header: {} }
+  };
+
+  let newObj = Object.assign({}, a, {
+    data: Object.assign(
+      {},
+      { header: {} },
+      {
+        header: {
+          title: req.body.title,
+          description: req.body.description
+        }
+      }
+    )
+  });
+  let newAnalysis = await new Analysis(newObj);
+  await newAnalysis.save();
+  await User.findByIdAndUpdate(req.body.id, {
+    $push: { analyses: newAnalysis._id }
+  });
+  res.send(newAnalysis._id);
+});
+
+// --------------------------------------------
+//
+// --------------------------------------------
 
 router.get("/ids", async (req, res, next) => {
   let results = [];
@@ -46,6 +88,39 @@ router.get("/ids", async (req, res, next) => {
   }
 
   res.send(JSON.stringify(results));
+});
+
+router.put('/:id', async (req, res, next) => {
+  console.log(req.params.id);
+  console.log(req.body);
+  let updatedAnalysis;
+  let submitter
+  try {
+    updatedAnalysis = await Analysis.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+    ); 
+    console.log(updatedAnalysis);
+    submitter = await User.findById(req.body.ownerId)
+    console.log(submitter);
+    let updateUser = true;
+    let analysesArray = submitter.analyses || [];
+    console.log(analysesArray);
+    for(let i = 0; i < analysesArray.length; i++){
+      if(submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()){
+        updateUser = false;
+      }
+    }
+    if(updateUser){
+      submitter.analyses.push(updatedAnalysis);
+      submitter = await submitter.save();
+      res.json(updatedAnalysis);
+    } else {
+      res.status(200).send();
+    }
+  } catch (e) {
+    res.status(500).send(e.stack);
+  }
 });
 
 module.exports = router;

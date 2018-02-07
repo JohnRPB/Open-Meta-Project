@@ -17,10 +17,12 @@ let CollectionSchema = new Schema({
     ref: "User"
   },
   description: String,
-  comments: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Comment',
-  }],
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Comment"
+    }
+  ],
   hist: [
     {
       histId: {
@@ -32,10 +34,12 @@ let CollectionSchema = new Schema({
       }
     }
   ],
-  category: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Category',
-  }],
+  category: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Category"
+    }
+  ]
 });
 
 CollectionSchema.methods.fork = async function(newOwnerId) {
@@ -68,24 +72,36 @@ CollectionSchema.methods.sqlFind = function() {
           this._doc.studies[i] = this._doc.studies[i].dataValues;
         }
       }
+<<<<<<< HEAD
+      return this;
+    })
+    .catch(err => console.error(err));
+};
+const unSQL = function(next) {
+  this._update.studies.forEach((study, index) => {
+    if (typeof study == "object") {
+      this._update.studies[index] = this._update.studies[index].id;
+    }
+  });
+=======
     return this;
   })
   .catch(err => console.error(err));
   
 }
 const unSQL = function(next){
-    this._update.studies.forEach((study,index) => {
+  let studiesArray = this._update.studies || [];
+    studiesArray.forEach((study,index) => {
       if(typeof study == 'object'){
         this._update.studies[index] = this._update.studies[index].id;
       }
     });
+>>>>>>> 0d6a8585241ae684bc249d593166c4756b507086
   next();
-  }
+};
 
 const autoPop = function(next) {
-  this
-    .populate('comments')
-    .populate('category')
+  this.populate("comments").populate("category");
   next();
 };
 

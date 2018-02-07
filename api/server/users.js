@@ -9,8 +9,8 @@ let Study = sequelizeModels.Study;
 let Journal = sequelizeModels.Journal;
 let Tag = sequelizeModels.Tag;
 
-console.log("Journal: ", Journal);
-console.log("User: ", User);
+// console.log("Journal: ", Journal);
+// console.log("User: ", User);
 
 // ------------------------
 // access to mongoDB
@@ -23,22 +23,23 @@ let mongoUser = mongoModels.User;
 // ------------------------
 
 /* GET home page. */
-router.get("/", function(req, res, next) {
-  console.log("are we getting here?");
-  Study.findAll({
-    include: [{ model: Tag, as: "Tags" }]
-  })
-    .then(users => {
-      res.status(200).send(users);
-    })
-    .catch(e => res.status(500).send(e.stack));
-});
+// router.get("/", function(req, res, next) {
+//   console.log("are we getting here?");
+  //
+  //what the hell is this?
+  //
+  // Study.findAll({
+  //   include: [{ model: Tag, as: "Tags" }]
+  // })
+//     .then(users => {
+//       res.status(200).send(users);
+//     })
+//     .catch(e => res.status(500).send(e.stack));
+// });
 
 // getting a single user
 router.get("/:userId", async (req, res, next) => {
-  console.log("on the new user routes", req.params.userId);
-  let user = await mongoUser.findById(req.params.userId)
-  console.log(user);
+  let user = await mongoUser.findById(req.params.userId);
   res.json(user);
 });
 

@@ -14,29 +14,36 @@ let router = express.Router();
 router.get("/:id", function(req, res, next) {
   Collection.findById(req.params.id)
     .then(result => {
-      console.log("result => ", result);
       res.json(result);
     })
     .catch(e => res.status(500).send(e.stack));
 });
 
 // --------------------------------------------
-// create new collection
+router.post("/", async (req, res, next) => {
+  console.log("collection post route req ", req.body);
+  let newObj = {
+    name: req.body.title,
+    description: req.body.description,
+    studies: [],
+    ownerId: req.body.id,
+    comments: [],
+    hist: [],
+    category: []
+  };
+
+  let newCollection = await new Collection(newObj);
+  await newCollection.save();
+  await User.findByIdAndUpdate(req.body.id, {
+    $push: {collections: newCollection._id}
+  });
+  res.send(newCollection._id);
+});
+
+// --------------------------------------------
+// get a number of collections by ids as query
 // --------------------------------------------
 
-//router.post("/", async (req, res, next) => {
-//let new Collection = await new Collection({
-//title: req.body.title,
-//description:req.body.description
-//})
-
-//}
-
-// }
-
-// --------------------------------------------
-//get a number of collections by ids as query
-// --------------------------------------------
 router.get("/ids", async (req, res, next) => {
   let results = [];
   let query = req.query.collections;
@@ -98,12 +105,10 @@ router.post("/new", async (req, res, next) => {
     let currentCollection = new Collection(body);
     await currentCollection.save();
     currentCollection = await Collection.findOne({
-      $and: [{ name: body.name }, { ownerId: body.ownerId }]
+      $and: [{name: body.name}, {ownerId: body.ownerId}]
     });
     let currentUser = await User.findById(body.ownerId);
-    console.log("collections 1: ", currentUser.collections);
     currentUser.collections.push(currentCollection._id);
-    console.log("collections 2: ", currentUser.collections);
     // console.log(currentCollection._doc);
     currentCollection.hist.push({
       histId: currentCollection._id,
@@ -144,6 +149,36 @@ router.get("/:search", async function(req, res, next) {
   });
   console.log("results => ", results);
   res.json(results);
+});
+
+router.put("/:id", async (req, res, next) => {
+  let updatedCollection;
+  let submitter;
+  try {
+    updatedCollection = await Collection.findByIdAndUpdate(
+      req.params.id,
+      req.body
+    );
+    submitter = await User.findById(req.body.ownerId);
+    let updateUser = true;
+    for (let i = 0; i < submitter.collections.length; i++) {
+      if (
+        submitter.collections[i]._id.toString() ==
+        updatedCollection._id.toString()
+      ) {
+        updateUser = false;
+      }
+    }
+    if (updateUser) {
+      submitter.collections.push(updatedCollection);
+      submitter = await submitter.save();
+      res.json(updatedCollection);
+    } else {
+      res.status(200).send();
+    }
+  } catch (e) {
+    res.status(500).send(e.stack);
+  }
 });
 
 module.exports = router;

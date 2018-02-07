@@ -60,7 +60,7 @@ class Collection extends Component {
             <br />
             <Container>
               <Container>
-                <Segment>
+                {/* <Segment>
                   <Header as="h1">{Collection.name}</Header>
                   <Divider />
                   <Header as="h4">
@@ -78,7 +78,8 @@ class Collection extends Component {
                   <Header as="h3">Included Studies</Header>
                   <Card.Group items={studies} />
                 </Segment>
-                <Divider />
+                <Divider /> */}
+                <p>{JSON.stringify(Collection)}</p>
               </Container>
             </Container>
           </div>
