@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 import {
   Button,
   Header,
@@ -20,11 +21,12 @@ class CollectionModal extends Component {
   sendForm(e) {
     e.preventDefault();
     var form = document.querySelector("#new-collection");
-    var str = serialize(form);
     var obj = serialize(form, { hash: true });
-    console.log("foorm => ", obj);
 
-    fetch();
+    axios.post(`${root}/api/collections`, obj).then(response => {
+      console.log("response in modal=> ", response);
+      this.props.history.push(`/davesPage?id=${response.data}`);
+    });
   }
 
   render() {

@@ -7,6 +7,10 @@ const Collection = mModels.Collection;
 const Analysis = mModels.Analysis;
 let router = express.Router();
 
+// --------------------------------------------
+// retrieves a single analysis
+// --------------------------------------------
+
 router.get("/:id", function(req, res, next) {
   Analysis.findById(req.params.id)
     .then(result => {
@@ -15,6 +19,34 @@ router.get("/:id", function(req, res, next) {
     })
     .catch(e => res.status(500).send(e.stack));
 });
+
+// --------------------------------------------
+// creates an analysis
+// --------------------------------------------
+
+router.post("/", async (req, res, next) => {
+  console.log("analys post route req ", req.body);
+  let a = { ownerId: {}, comments: {}, hist: [], data: { header: {} } };
+
+  let newObj = Object.assign({}, a, {
+    data: Object.assign(
+      {},
+      { header: {} },
+      {
+        header: {
+          title: req.body.title,
+          description: req.body.description
+        }
+      }
+    )
+  });
+  let newAnalysis = await new Analysis(newObj);
+  res.send(newAnalysis._id);
+});
+
+// --------------------------------------------
+//
+// --------------------------------------------
 
 router.get("/ids", async (req, res, next) => {
   let results = [];

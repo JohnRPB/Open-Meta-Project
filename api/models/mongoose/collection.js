@@ -11,6 +11,7 @@ const Op = Sequelize.Op;
 
 let CollectionSchema = new Schema({
   name: String,
+  description: String,
   studies: [Number],
   ownerId: {
     type: Schema.Types.ObjectId,
