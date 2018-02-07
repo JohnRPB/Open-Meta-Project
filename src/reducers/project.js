@@ -11,7 +11,9 @@ import {
   HANDLE_DROPPING,
   SHOW_FORM,
   DELETE_ELEMENT,
-  GET_UPDATED_MODULES
+  GET_UPDATED_MODULES,
+  EDIT_ELEMENT,
+  SAVE_ELEMENT
 } from "../actions/project";
 
 import ItemTypes from "../components/Project/ItemTypes";
@@ -40,13 +42,15 @@ const initialState = {
   ],
   boxes: [
     {
-      name: "simplePlot",
+      displayName: "Simple Plot",
+      functionName: "simplePlot",
       loading: false,
       type: ItemTypes.GRAPH,
       content: {}
     },
     {
-      name: "funnel",
+      displayName: "Funnel Plot",
+      functionName: "funnel",
       loading: false,
       type: ItemTypes.GRAPH,
       content: {}
@@ -102,7 +106,7 @@ const project = (state = initialState, action) => {
         ...state,
         blocks: [
           ...state.blocks.slice(0, index),
-          { textContent: textContent },
+          { textContent: textContent, type: "text" },
           ...state.blocks.slice(index)
         ]
       };
@@ -137,6 +141,21 @@ const project = (state = initialState, action) => {
       return {
         ...state,
         showForm: action.data
+      };
+    case EDIT_ELEMENT:
+      return {
+        ...state,
+        editing: true
+      };
+    case SAVE_ELEMENT:
+      return {
+        ...state,
+        blocks: [
+          ...state.blocks.slice(0, action.data.index),
+          { textContent: action.data.textContent },
+          ...state.blocks.slice(action.data.index + 1)
+        ],
+        editing: false
       };
     case DELETE_ELEMENT:
       console.log("SHOWING DATA", action.data);
