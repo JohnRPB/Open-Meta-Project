@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
 import {
   Button,
@@ -37,7 +38,7 @@ class AnalysisModal extends Component {
     obj.id = this.props.id;
 
     axios.post(`${root}/api/analyses`, obj).then(response => {
-      window.location.href = `/selectcollection?id=${response.data}`;
+      this.props.history.push(`/selectcollection?id=${response.data}`);
     });
   }
 
@@ -67,4 +68,4 @@ class AnalysisModal extends Component {
   }
 }
 
-export default AnalysisModal;
+export default withRouter(AnalysisModal);

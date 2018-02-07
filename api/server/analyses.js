@@ -6,7 +6,6 @@ const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
 const User = mModels.User;
 const Analysis = mModels.Analysis;
-const User = mModels.User;
 let router = express.Router();
 
 // --------------------------------------------
