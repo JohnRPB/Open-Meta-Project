@@ -9,7 +9,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 //name will change
-import SearchCollectionContainer from "./Search/SearchCollection";
+// import SearchCollectionContainer from "./Search/SearchCollection";
 
 class SelectCollection extends Component {
   constructor() {
@@ -33,7 +33,7 @@ class SelectCollection extends Component {
     return (
       <div>
         <div>Select a collection for your analysis </div>
-        <SearchCollection />
+        {/*<SearchCollection />*/}
         <div>No collections yet?</div>
         <button>Create a Collection</button>
       </div>
