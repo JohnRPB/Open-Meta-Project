@@ -26,7 +26,7 @@ import {
 import "../../index.css";
 
 import collection from "../../databaseStudies";
-import Module from "../Modules/Module";
+import ModuleContainer from "../../containers/Modules/ModuleContainer";
 
 class MasterDocument extends Component {
   constructor(props) {
@@ -103,7 +103,7 @@ class MasterDocument extends Component {
                             {block.textContent ? (
                               block.textContent
                             ) : (
-                              <Module moduleIdx={index} />
+                              <ModuleContainer moduleIdx={index} />
                             )}
                             {/* JSON.stringify(block)} */}
                           </div>

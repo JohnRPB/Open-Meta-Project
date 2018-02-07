@@ -4,11 +4,12 @@ const router = require("express").Router();
 //logs in users
 let mongooseModels = require("./../models/mongoose");
 let User = mongooseModels.User;
+const bcrypt = require('bcrypt');
 router.post("/", async (req, res) => {
   try {
     var registrant = await new User({
       email: req.body.email,
-      passHash: req.body.passHash
+      passHash: bcrypt.hashSync(req.body.passHash, 8)
     });
     await registrant.save(function(err) {
       if (err) return handleError(err);

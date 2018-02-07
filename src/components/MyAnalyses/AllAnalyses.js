@@ -45,6 +45,7 @@ class AllAnalyses extends Component {
 
   render() {
     let analysisCards;
+<<<<<<< HEAD
     if (!this.props.MyAnalysesPage.isFetching) {
       console.log("MyAnalyses: this.props: ", this.props);
 
@@ -64,6 +65,27 @@ class AllAnalyses extends Component {
           />
         );
       });
+=======
+    if (!this.props.isFetching) {
+      console.log("MY DATA props => ", this.props);
+      analysisCards = this.props.Dashboard.user.analyses
+        .slice(0, 3)
+        .map(analysis => {
+          analysis.data.header = analysis.data.header || {};
+          return (
+            <Card
+              fluid
+              key={analysis._id}
+              header={
+                <NavLink to={`/analysis/${analysis._id}`}>
+                  { analysis.data.header.title || "My Analysis" }
+                </NavLink>
+              }
+              description={faker.lorem.paragraph()}
+            />
+          );
+        });
+>>>>>>> 0d6a8585241ae684bc249d593166c4756b507086
     }
 
     if (this.props.MyAnalysesPage.isFetching) {
