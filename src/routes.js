@@ -41,7 +41,7 @@ const Routes = ({ history }) => {
         <Route exact path="/analyses" component={AllAnalyses} />
         <Route
           exact
-          path="/analysis/:anaysis_id?"
+          path="/analysis/:anaysis_id"
           component={AnalysisContainer}
         />
         <Route
@@ -63,12 +63,11 @@ const Routes = ({ history }) => {
             <LogCheckContainer {...props} Target={CollectionEditorContainer} />
           )}
         />
-        {/* <Route
+        <Route
           exact
-          path="/collections/:collection_id?"
+          path="/collections/:collection_id"
           component={CollectionContainer}
         />
-        */}
       </Switch>
     </Router>
   );
