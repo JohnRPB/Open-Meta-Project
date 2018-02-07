@@ -20,7 +20,6 @@ router.get('/:id', function(req, res, next) {
 });
 
 // --------------------------------------------
-<<<<<<< HEAD
 // create new collection
 // --------------------------------------------
 
@@ -46,9 +45,6 @@ router.post("/", async (req, res, next) => {
 
 // --------------------------------------------
 // get a number of collections by ids as query
-=======
-//get a number of collections by ids as query
->>>>>>> 0d6a8585241ae684bc249d593166c4756b507086
 // --------------------------------------------
 
 router.get('/ids', async (req, res, next) => {
