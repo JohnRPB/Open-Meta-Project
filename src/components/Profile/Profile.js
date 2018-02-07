@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import NavContainer from "../../containers/NavContainer";
 import { NavLink } from "react-router-dom";
+import defaultpicture from "../../assets/images/default.jpg";
+
 import {
   Segment,
   Grid,
@@ -48,11 +50,7 @@ class Profile extends Component {
               <Segment>
                 {/* create middleware to make pictures perfectly square? */}
                 <Image
-                  src={
-                    !this.props.isFetching
-                      ? `${this.props.MyAnalysesPage.user.profile.image}`
-                      : null
-                  }
+                  src={defaultpicture}
                   centered
                   circular="true"
                   size="small"
@@ -125,13 +123,15 @@ class Profile extends Component {
                           <Table.Row>
                             <Table.Cell>
                               <NavLink to={`/analysis/${analysis._id}`}>
-                                {analysis.data.header.title}
+                                {/* {analysis.data.header.title} */}
+                                {analysis._id}
                               </NavLink>
                             </Table.Cell>
                             <Table.Cell collapsing textAlign="right">
-                              {moment(analysis.hist[0].time).format(
+                              {/* FIXME */}
+                              {/* {moment(analysis.hist[0].time).format(
                                 `MMMM Do YYYY`
-                              )}
+                              )} */}
                             </Table.Cell>
                           </Table.Row>
                         );

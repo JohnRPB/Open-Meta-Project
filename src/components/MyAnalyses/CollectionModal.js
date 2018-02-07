@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
+import axios from "axios";
 import {
   Button,
   Header,
@@ -11,20 +12,36 @@ import {
 } from "semantic-ui-react";
 var serialize = require("form-serialize");
 
+// --------------------------------------------
+// routing
+// --------------------------------------------
+
+const root =
+  process.env.NODE_ENV === "production"
+    ? "https://radiant-taiga-58264.herokuapp.com"
+    : "http://localhost:8000";
+
+// --------------------------------------------
+// component
+// --------------------------------------------
+
 class CollectionModal extends Component {
   constructor(props) {
     super();
+    console.log(props);
     this.sendForm = this.sendForm.bind(this);
   }
 
   sendForm(e) {
     e.preventDefault();
     var form = document.querySelector("#new-collection");
-    var str = serialize(form);
     var obj = serialize(form, { hash: true });
-    console.log("foorm => ", obj);
+    obj.id = this.props.id;
 
-    fetch();
+    axios.post(`${root}/api/collections`, obj).then(response => {
+      console.log("response in modal=> ", response);
+      this.props.history.push(`/collections/${response.data}/edit`);
+    });
   }
 
   render() {
@@ -44,7 +61,6 @@ class CollectionModal extends Component {
                 <TextArea name="description" />
               </Form.Field>
 
-              {/* attach form data to redirect */}
               <Button type="submit">Create</Button>
             </Form>
           </Modal.Description>
@@ -54,4 +70,4 @@ class CollectionModal extends Component {
   }
 }
 
-export default CollectionModal;
+export default withRouter(CollectionModal);

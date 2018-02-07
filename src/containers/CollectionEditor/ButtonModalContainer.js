@@ -67,9 +67,6 @@ const mapDispatchToProps = dispatch => {
             let putObject = {
               ownerId: returnObject.ownerId,
               data: {
-                header: {
-                  title: 'Placeholder Title'
-                },
                 inclusion: {
                   collectionId: returnObject.collectionId,
                 },

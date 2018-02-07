@@ -24,15 +24,13 @@ import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
 import Table from "../Profile/Table";
+import defaultpicture from "../../assets/images/default.jpg";
 const faker = require("faker");
 
 class MyAnalysesPage extends Component {
   constructor() {
     super();
     this.isFetching = true;
-    // why arent these showing up???
-    this.UserId = "5a74fa36425cf997daab4328";
-    this.test = true;
   }
 
   componentWillMount() {
@@ -44,12 +42,11 @@ class MyAnalysesPage extends Component {
   }
 
   render() {
-    console.log(" <---- MYANALYSES PROPS ----> ", this.props);
-    // creating cards from user's analyses
     let analysisCards;
     if (!this.props.MyAnalysesPage.isFetching) {
-      console.log("inside if");
-      console.log("Myanalyses: this.props: ", this.props);
+      console.log("MyAnalyses: this.props: ", this.props);
+
+      // creates cards for each analysis
       analysisCards = this.props.MyAnalysesPage.user.analyses
         .slice(0, 3)
         .map(analysis => {
@@ -59,12 +56,27 @@ class MyAnalysesPage extends Component {
               key={analysis._id}
               header={
                 <NavLink to={`/analysis/${analysis._id}`}>
-                  {analysis.data.header.title}
+                  {analysis._id}
+                  {/* {analysis.data.header.title} */}
                 </NavLink>
               }
               description={faker.lorem.paragraph()}
             />
           );
+        });
+
+      // creates cards for each collection
+      var collectionCards = this.props.MyAnalysesPage.user.collections
+        .slice(0, 6)
+        .map(collection => {
+          return {
+            header: (
+              <NavLink to={`/collections/${collection._id}`}>
+                Title: {collection.name}
+              </NavLink>
+            ),
+            description: `Description: ${collection.description}`
+          };
         });
     }
 
@@ -92,11 +104,7 @@ class MyAnalysesPage extends Component {
                 {" "}
                 <Grid.Column width={3} />
                 <Grid.Column width={3}>
-                  <Image
-                    src={`${this.props.MyAnalysesPage.user.profile.image}`}
-                    circular
-                    size="small"
-                  />
+                  <Image src={defaultpicture} circular size="small" />
                 </Grid.Column>
                 <Grid.Column width={4}>
                   <br />
@@ -125,7 +133,7 @@ class MyAnalysesPage extends Component {
               <Grid.Row id="collections">
                 <Grid.Column width={3}>
                   <br />
-                  <CollectionModal />
+                  <CollectionModal id={this.props.MyAnalysesPage.user._id} />
                 </Grid.Column>
                 <Grid.Column width={13}>
                   <Segment>
@@ -134,7 +142,7 @@ class MyAnalysesPage extends Component {
                       Recent Collections
                     </Header>
                     <Divider />
-                    <Related />
+                    <Card.Group items={collectionCards} itemsPerRow={3} />
                     <br />
                     <NavLink to="/collections">
                       <p>See all collections</p>
@@ -147,7 +155,7 @@ class MyAnalysesPage extends Component {
               <Grid.Row id="analyses" className="hidden">
                 <Grid.Column width={3}>
                   <br />
-                  <AnalysisModal />
+                  <AnalysisModal id={this.props.MyAnalysesPage.user._id} />
                 </Grid.Column>
 
                 <Grid.Column width={13}>

@@ -39,9 +39,7 @@ let mongoUser = mongoModels.User;
 
 // getting a single user
 router.get("/:userId", async (req, res, next) => {
-  console.log("on the new user routes", req.params.userId);
-  let user = await mongoUser.findById(req.params.userId)
-  console.log(user);
+  let user = await mongoUser.findById(req.params.userId);
   res.json(user);
 });
 
