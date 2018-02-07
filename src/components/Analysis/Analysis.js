@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import Nav from "../Nav";
 import {
   Segment,
@@ -23,13 +23,17 @@ class Analysis extends Component {
   }
 
   componentWillMount() {
+    console.log(
+      "this.props.match.params.anaysis_id ==> ",
+      this.props.match.params.anaysis_id
+    );
     this.props.getAnalysis(this.props.match.params.anaysis_id);
   }
 
   render() {
     console.log("analysis props => ", this.props);
     if (!this.props.isFetching) {
-      var { Analysis } = this.props;
+      var {Analysis} = this.props;
 
       // var studies = this.props.Analysis.data.inclusion.collectionId.studies.map(
       //   study => {

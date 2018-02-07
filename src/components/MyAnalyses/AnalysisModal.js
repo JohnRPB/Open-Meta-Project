@@ -36,6 +36,9 @@ class AnalysisModal extends Component {
     var form = document.querySelector("#new-analysis");
     var obj = serialize(form, {hash: true});
     obj.id = this.props.id;
+    obj.headers = new Headers({
+      "x-access-token": this.props._token
+    });
 
     axios.post(`${root}/api/analyses`, obj).then(response => {
       this.props.history.push(`/selectcollection?id=${response.data}`);

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, {Component} from "react";
+import {NavLink} from "react-router-dom";
 import NavContainer from "../../containers/NavContainer";
 import Nav from "../Nav";
 import {
@@ -22,16 +22,16 @@ import {
 import Related from "./Related";
 import CollectionModal from "./CollectionModal";
 
-import AnalysisModal from "./AnalysisModal";
+import AnalysisModal from "../../containers/AnalysisContainer"; //container
 import ReviewModal from "./ReviewModal";
 import Table from "../Profile/Table";
 import defaultpicture from "../../assets/images/default.jpg";
 const faker = require("faker");
 
 class MyAnalysesPage extends Component {
-  constructor() {
+  constructor(props) {
     super();
-    this.isFetching = true;
+    // this.isFetching = true;
   }
 
   componentWillMount() {
@@ -43,6 +43,11 @@ class MyAnalysesPage extends Component {
   }
 
   render() {
+    console.log(
+      "this.props.MyAnalysesPage.isFetching =====>",
+      this.props.MyAnalysesPage.isFetching
+    );
+
     let analysisCards;
     if (!this.props.MyAnalysesPage.isFetching) {
       console.log("MyAnalyses: this.props: ", this.props);
@@ -82,11 +87,7 @@ class MyAnalysesPage extends Component {
     }
 
     if (this.props.MyAnalysesPage.isFetching) {
-      return (
-        <Dimmer active>
-          <Loader content="Loading" />
-        </Dimmer>
-      );
+      return null;
     } else {
       return (
         <div className="ui  vertical masthead center aligned segment">
@@ -161,11 +162,7 @@ class MyAnalysesPage extends Component {
 
                 <Grid.Column width={13}>
                   <Segment>
-                    {this.props.isFetching ? (
-                      <Dimmer active>
-                        <Loader />
-                      </Dimmer>
-                    ) : (
+                    {this.props.MyAnalysesPage.isFetching ? null : (
                       <div>
                         <Header as="h1" textalign="left">
                           Recent Analyses
@@ -191,7 +188,6 @@ class MyAnalysesPage extends Component {
                   </Segment>
                 </Grid.Column>
               </Grid.Row>
-
               {/* REVIEWS */}
               {/* <Grid.Row>
               <Grid.Column width={3}>
