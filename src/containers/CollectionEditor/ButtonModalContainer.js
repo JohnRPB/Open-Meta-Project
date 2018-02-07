@@ -7,20 +7,26 @@ import axios from 'axios';
 import root from '../../lib/root';
 
 const mapStateToProps = state => {
+  let analysisArray = state.routeProps.search ? state.routeProps.search.split('=') : [null]
+  console.log(analysisArray);
+  let analysisId = analysisArray[analysisArray.length - 1]
+  let destination = analysisId ? `/analysis/${analysisId}/edit` : `/collections/${state.routeProps.params.id}`
   return {
     open: state.collectionEdit.varObj.open,
     categories: state.collectionEdit.varObj.buttons,
     isFetching: state.collectionEdit.varObj.isFetching,
     persisted: state.collectionEdit.persisted,
     ownerId: state.Dashboard.user._id,
+    endOfItAll: ()=> state.routeProps.history.push(destination),
     collectionId: state.routeProps.params.id,
-    analysisId: state.routeProps.search ? state.routeProps.search : null,
+    analysisId: analysisId
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     changeCategory: n => dispatch(changeButton(n)),
+    onClose: () => dispatch(setOpen(false)),
     saveCollection: (
       collectionId,
       analysisId,
@@ -57,6 +63,26 @@ const mapDispatchToProps = dispatch => {
         })
         .then(returnObject => {
           console.log(returnObject);
+          if(returnObject.analysisId){
+            let putObject = {
+              ownerId: returnObject.ownerId,
+              data: {
+                header: {
+                  title: 'Placeholder Title'
+                },
+                inclusion: {
+                  collectionId: returnObject.collectionId,
+                },
+              },
+            }
+            let analysisString = `${root()}/api/analyses/${returnObject.analysisId}`;
+            axios.put(analysisString, putObject)
+              .then(response => {
+                console.log(response)
+                console.log(response.data)
+              })
+              .catch(err => console.error(err));
+          }
         })
         .catch(err => console.error(err));
     },
@@ -69,6 +95,7 @@ const mergeProps = (stateProps, dispatchProps) => {
     categories: stateProps.categories,
     isFetching: stateProps.isFetching,
     changeCategory: dispatchProps.changeCategory,
+    onClose: dispatchProps.onClose,
     onSave: e => {
       e.preventDefault();
       const form = e.target;
@@ -81,6 +108,7 @@ const mergeProps = (stateProps, dispatchProps) => {
         stateProps.ownerId,
         data.description,
       );
+      stateProps.endOfItAll();
     },
   };
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import {Button, Grid, Modal, Form} from 'semantic-ui-react';
 
-const ButtonModal = ({onSave, changeCategory, categories, open}) => {
+const ButtonModal = ({onSave, changeCategory, onClose, categories, open}) => {
   return (
-    <Modal open={open}>
+    <Modal open={open} onClose={onClose} closeIcon={true}>
       <Modal.Header>Save Collection</Modal.Header>
       <Grid centered>
         <Form onSubmit={onSave}>

@@ -74,7 +74,8 @@ CollectionSchema.methods.sqlFind = function() {
   
 }
 const unSQL = function(next){
-    this._update.studies.forEach((study,index) => {
+  let studiesArray = this._update.studies || [];
+    studiesArray.forEach((study,index) => {
       if(typeof study == 'object'){
         this._update.studies[index] = this._update.studies[index].id;
       }

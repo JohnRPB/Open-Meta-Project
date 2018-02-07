@@ -28,15 +28,16 @@ StudyOverflowSchema.methods.sqlPop = function() {
       console.log(err);
     });
 };
-const unSQL = function(next) {
-  if (this._update.sqlStudy) {
-    delete this._update.sqlStudy;
-  }
-  next();
-};
+// const unSQL = function(next) {
+//   if (this._update.sqlStudy) {
+//     delete this._update.sqlStudy;
+//   }
+//   next();
+// };
 
-StudyOverflowSchema.pre("update", unSQL)
-  .pre("findOneAndUpdate", unSQL)
+StudyOverflowSchema
+  // .pre("update", unSQL)
+  // .pre("findOneAndUpdate", unSQL)
   .post("find", async function(docs) {
     for (let i = 0; i < docs.length; i++) {
       try {

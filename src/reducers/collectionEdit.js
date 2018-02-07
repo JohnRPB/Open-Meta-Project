@@ -14,7 +14,7 @@ const initialState = {
     tab: 0,
     page: 1,
     buttons: 1,
-    open: false
+    open: false,
   },
   hashObj: {},
   results: [],
