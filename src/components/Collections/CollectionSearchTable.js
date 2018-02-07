@@ -1,6 +1,6 @@
 import React from 'react';
 import {Checkbox, Form, Grid, Segment, Button, Modal, Pagination, Table} from 'semantic-ui-react';
-const SearchTable = ({checkedStudy, uncheckedStudy, onClick, secondClick, activePage, pageChange, onSubmit}) => {
+const CollectionSearchTable = ({checkedStudy, uncheckedStudy, onClick, secondClick, activePage, pageChange, onSubmit}) => {
   let tableContent = <div />;
   if (checkedStudy.length || uncheckedStudy.length) {
     let uncheckedStudyPage = uncheckedStudy.slice((activePage - 1) * 10, 10 * activePage);
@@ -94,4 +94,4 @@ const SearchTable = ({checkedStudy, uncheckedStudy, onClick, secondClick, active
   return tableContent;
 };
 
-export default SearchTable;
+export default CollectionSearchTable;

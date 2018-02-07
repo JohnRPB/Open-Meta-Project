@@ -4,6 +4,7 @@ const mModels = require("./../models/mongoose");
 const Study = sModels.Study;
 const StudyOverflow = mModels.StudyOverflow;
 const Collection = mModels.Collection;
+const User = mModels.User;
 const Analysis = mModels.Analysis;
 let router = express.Router();
 
@@ -25,8 +26,12 @@ router.get("/:id", function(req, res, next) {
 // --------------------------------------------
 
 router.post("/", async (req, res, next) => {
-  console.log("analys post route req ", req.body);
-  let a = { ownerId: {}, comments: {}, hist: [], data: { header: {} } };
+  let a = {
+    ownerId: req.body.id,
+    comments: [],
+    hist: [],
+    data: { header: {} }
+  };
 
   let newObj = Object.assign({}, a, {
     data: Object.assign(
@@ -41,6 +46,10 @@ router.post("/", async (req, res, next) => {
     )
   });
   let newAnalysis = await new Analysis(newObj);
+  await newAnalysis.save();
+  await User.findByIdAndUpdate(req.body.id, {
+    $push: { analyses: newAnalysis._id }
+  });
   res.send(newAnalysis._id);
 });
 

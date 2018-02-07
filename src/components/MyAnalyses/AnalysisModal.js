@@ -11,10 +11,18 @@ import {
 } from "semantic-ui-react";
 var serialize = require("form-serialize");
 
+// --------------------------------------------
+// routing
+// --------------------------------------------
+
 const root =
   process.env.NODE_ENV === "production"
     ? "https://radiant-taiga-58264.herokuapp.com"
     : "http://localhost:8000";
+
+// --------------------------------------------
+// component
+// --------------------------------------------
 
 class AnalysisModal extends Component {
   constructor(props) {
@@ -26,14 +34,15 @@ class AnalysisModal extends Component {
     e.preventDefault();
     var form = document.querySelector("#new-analysis");
     var obj = serialize(form, { hash: true });
+    obj.id = this.props.id;
 
     axios.post(`${root}/api/analyses`, obj).then(response => {
-      console.log("response in modal=> ", response);
-      this.props.history.push(`/davesPage?id=${response.data}`);
+      window.location.href = `/selectcollection?id=${response.data}`;
     });
   }
 
   render() {
+    console.log("modal props => ", this.props);
     return (
       <Modal trigger={<Button>New Analysis</Button>}>
         <Modal.Content>

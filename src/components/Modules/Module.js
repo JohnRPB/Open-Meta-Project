@@ -1,29 +1,12 @@
-import React, {Component} from 'react';
-import axios from 'axios';
-import {
-  Container,
-  Divider,
-  Dimmer,
-  Loader,
-  Button
-} from 'semantic-ui-react';
+import React, { Component } from "react";
+import axios from "axios";
+import { Container, Divider, Dimmer, Loader, Button } from "semantic-ui-react";
 
-import PopupPanel from './PopupPanel';
-import ControlPanel from './ControlPanel';
+import PopupPanel from "./PopupPanel";
+import ControlPanel from "./ControlPanel";
 
-import OutputPanelContainer from '../../containers/Modules/OutputPanelContainer';
-import StudyInclusionBoxContainer from '../../containers/Modules/StudyInclusionBoxContainer';
-
-// ---------------------------------------------------------
-// Loader
-// 2018-01-31 22:49
-// ---------------------------------------------------------
-
-const LoadingComp = () => (
-  <Dimmer active>
-    <Loader inverted>Loading</Loader>
-  </Dimmer>
-);
+import OutputPanelContainer from "../../containers/Modules/OutputPanelContainer";
+import StudyInclusionBoxContainer from "../../containers/Modules/StudyInclusionBoxContainer";
 
 // ---------------------------------------------------------
 // Top-level Module
@@ -41,13 +24,9 @@ class Module extends React.Component {
   render() {
     return (
       <Container>
-        <PopupPanel
-          trigger={
-              <Button>+</Button>
-          }
-          >
+        <PopupPanel trigger={<Button>+</Button>}>
           <ControlPanel moduleIdx={this.props.moduleIdx}>
-            <StudyInclusionBoxContainer moduleIdx={this.props.moduleIdx}/>
+            <StudyInclusionBoxContainer moduleIdx={this.props.moduleIdx} />
           </ControlPanel>
         </PopupPanel>
         <OutputPanelContainer moduleIdx={this.props.moduleIdx} />

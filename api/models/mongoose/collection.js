@@ -11,16 +11,18 @@ const Op = Sequelize.Op;
 
 let CollectionSchema = new Schema({
   name: String,
-  description: String,
   studies: [Number],
   ownerId: {
     type: Schema.Types.ObjectId,
     ref: "User"
   },
-  comments: {
-    type: [Schema.Types.ObjectId],
-    ref: "Comment"
-  },
+  description: String,
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Comment"
+    }
+  ],
   hist: [
     {
       histId: {
@@ -32,10 +34,12 @@ let CollectionSchema = new Schema({
       }
     }
   ],
-  category: {
-    type: [Schema.Types.ObjectId],
-    ref: "Category"
-  }
+  category: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Category"
+    }
+  ]
 });
 
 CollectionSchema.methods.fork = async function(newOwnerId) {
@@ -82,10 +86,7 @@ const unSQL = function(next) {
 };
 
 const autoPop = function(next) {
-  this.populate("ownerId")
-    .populate("comments")
-    .populate("category");
-
+  this.populate("comments").populate("category");
   next();
 };
 

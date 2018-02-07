@@ -26,7 +26,7 @@ let mongoUser = mongoModels.User;
 router.get("/", function(req, res, next) {
   console.log("are we getting here?");
   Study.findAll({
-    include: [{ model: Tag, as: "TaggedStudy" }]
+    include: [{ model: Tag, as: "Tags" }]
   })
     .then(users => {
       res.status(200).send(users);
@@ -36,13 +36,7 @@ router.get("/", function(req, res, next) {
 
 // getting a single user
 router.get("/:userId", async (req, res, next) => {
-  console.log("on the new user routes", req.params.userId);
-  let user = await mongoUser
-    .findById(req.params.userId)
-    .populate("analyses")
-    .populate("profile")
-    .populate("collections");
-  console.log("user response => ", user);
+  let user = await mongoUser.findById(req.params.userId);
   res.json(user);
 });
 

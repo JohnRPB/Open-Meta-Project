@@ -1,8 +1,8 @@
-import SearchForm from "../components/Search/SearchForm";
+import CollectionSearchForm from "../../components/Collections/CollectionSearchForm";
 import { connect } from "react-redux";
 import serialize from "form-serialize";
 import axios from "axios";
-import {newTables, flipActive, bumpAuthors, resetAuthors} from '../actions/search';
+import {newTables, flipActive, bumpAuthors, resetAuthors} from '../../actions/collections';
 // import { withRouter } from "react-router";
 const root =
   process.env.NODE_ENV === "production"
@@ -10,8 +10,8 @@ const root =
     : "http://localhost:8000";
 const mapStateToProps = (state) => {
   return {
-    numberOfAuthors: state.search.authors,
-    active: state.search.active
+    numberOfAuthors: state.collections.authors,
+    active: state.collections.active
   }
 }
 
@@ -58,6 +58,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const SearchFormContainer = connect(mapStateToProps, mapDispatchToProps)(SearchForm);
+const CollectionSearchFormContainer = connect(mapStateToProps, mapDispatchToProps)(CollectionSearchForm);
 
-export default SearchFormContainer;
+export default CollectionSearchFormContainer;

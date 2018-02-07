@@ -12,6 +12,19 @@ import {
 } from "semantic-ui-react";
 var serialize = require("form-serialize");
 
+// --------------------------------------------
+// routing
+// --------------------------------------------
+
+const root =
+  process.env.NODE_ENV === "production"
+    ? "https://radiant-taiga-58264.herokuapp.com"
+    : "http://localhost:8000";
+
+// --------------------------------------------
+// component
+// --------------------------------------------
+
 class CollectionModal extends Component {
   constructor(props) {
     super();
@@ -22,10 +35,11 @@ class CollectionModal extends Component {
     e.preventDefault();
     var form = document.querySelector("#new-collection");
     var obj = serialize(form, { hash: true });
+    obj.id = this.props.id;
 
     axios.post(`${root}/api/collections`, obj).then(response => {
       console.log("response in modal=> ", response);
-      this.props.history.push(`/davesPage?id=${response.data}`);
+      window.location.href = `/collections/${response.data}/edit`;
     });
   }
 
@@ -46,7 +60,6 @@ class CollectionModal extends Component {
                 <TextArea name="description" />
               </Form.Field>
 
-              {/* attach form data to redirect */}
               <Button type="submit">Create</Button>
             </Form>
           </Modal.Description>
