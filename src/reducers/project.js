@@ -149,6 +149,7 @@ const project = (state = initialState, action) => {
       };
     case UPDATE_LOC:
       blocks = state.blocks.slice();
+      blocks[action.data.moduleIdx].content = Object.assign({}, blocks[action.data.moduleIdx].content)
       blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
       blocks[action.data.moduleIdx].loading = false;
       return {
