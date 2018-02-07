@@ -8,7 +8,6 @@ const User = mModels.User;
 const Category = mModels.Category;
 let router = express.Router();
 
-
 // --------------------------------------------
 // get a collection by ID
 // --------------------------------------------
@@ -20,7 +19,6 @@ router.get("/:id", function(req, res, next) {
     })
     .catch(e => res.status(500).send(e.stack));
 });
-
 
 // --------------------------------------------
 // create new collection
@@ -34,7 +32,7 @@ router.get("/:id", function(req, res, next) {
 
 //}
 
-
+// }
 
 // --------------------------------------------
 //get a number of collections by ids as query

@@ -12,8 +12,21 @@ import {
   Link,
   Switch
 } from "react-router-dom";
-import { Card, Image, Container } from "semantic-ui-react";
+import { Card, Image, Container, Dimmer, Loader } from "semantic-ui-react";
 import "../../index.css";
+
+// ---------------------------------------------------------
+// Loader
+// 2018-01-31 22:49
+// ---------------------------------------------------------
+
+const LoadingComp = () => (
+  <Container>
+    <Dimmer active>
+      <Loader inverted>Loading</Loader>
+    </Dimmer>
+  </Container>
+);
 
 // ---------------------------------------------------------
 // Static png
@@ -29,18 +42,29 @@ const StaticDisplay = props => {
 // 2018-02-05 07:55
 // ---------------------------------------------------------
 
-const IframeDisplay = props => {
-  return (
-    <div className="frame-container">
-      <iframe src={props.outputLoc} frameborder="0" scrolling="no" />
-    </div>
-  );
-};
+class IframeDisplay extends Component {
+  // componentDidMount() {
+  //   this.input.onload = () => {
+  //     return LoadingComp();
+  //   };
+  // }
+
+  // //ref={iframe => {
+  //   this.input = iframe;
+  // }}
+  render() {
+    return (
+      <div className="frame-container">
+        <iframe src={this.props.outputLoc} frameBorder="0" scrolling="no" />
+      </div>
+    );
+  }
+}
 
 const OutputPanel = props => {
   return (
     <Container style={{ height: "550px", width: "680px" }}>
-      <IframeDisplay {...props} />
+      {props.loading ? <LoadingComp /> : <IframeDisplay {...props} />}
     </Container>
   );
 };
