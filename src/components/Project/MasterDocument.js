@@ -43,8 +43,10 @@ class MasterDocument extends Component {
 
   componentWillMount() {
     //this.getUpdatedModules();
-    console.log(this.props);
-    let routingId = this.props.location.pathname.split("/")[-2];
+
+    let analysisObj = this.props.getAnalysis("5a7b21305483d71df027b6a2");
+    console.log(analysisObj);
+    // let routingId = this.props.location.pathname.split("/")[-2];
   }
 
   render() {
@@ -58,15 +60,23 @@ class MasterDocument extends Component {
       handleSubmit,
       handleClick,
       showForm,
-      handleDelete
+      handleDelete,
+      editing,
+      handleSave,
+      handleEdit,
+      Analysis
     } = this.props;
 
     const { contextRef } = this.state;
 
+    let style = {
+      border: "5px solid gray"
+    };
+
     return (
       <div>
         <NavContainer />
-        <h1>Welcome to your project</h1>
+      {/*<h1>Welcome to analysis ID#:{Analysis._id}</h1>*/}
         <h3>
           Drag and drop modules onto your document. Navigate through document by
           clicking on items
@@ -78,74 +88,120 @@ class MasterDocument extends Component {
                 <Rail position="left">
                   <Sticky context={contextRef}>
                     <h2>Modules</h2>
+                    <br />
                     <div>
-                      {boxes.map(({ name, content, loading, type }, index) => (
-                        <Box
-                          content={content}
-                          loading={loading}
-                          name={name}
-                          type={type}
-                          isDropped={this.isDropped(name)}
-                          key={index}
-                        />
-                      ))}
+                      {boxes.map(
+                        (
+                          { displayName, functionName, content, loading, type },
+                          index
+                        ) => (
+                          <Box
+                            content={content}
+                            loading={loading}
+                            functionName={functionName}
+                            displayName={displayName}
+                            type={type}
+                            isDropped={this.isDropped(displayName)}
+                            key={index}
+                          />
+                        )
+                      )}
                     </div>
                   </Sticky>
                 </Rail>
 
                 <h2>Document</h2>
+                <br />
                 <div>
                   {blocks.map((block, index) => {
                     return (
                       <div key={index} className="fluid">
                         <div>
-                          <div onClick={e => handleClick(e, index)}>
+                          <div
+                            onClick={e => {
+                              handleClick(e, index);
+                            }}
+                            style={index == showForm ? style : null}
+                          >
                             {block.textContent ? (
                               block.textContent
                             ) : (
                               <ModuleContainer moduleIdx={index} />
                             )}
-                            {/* JSON.stringify(block)} */}
                           </div>
-                          <br />
                           <br />
                           <br />
                         </div>
                         {index == showForm ? (
                           <div>
-                            <Form onSubmit={e => handleSubmit(e, index)}>
-                              <TextArea
-                                name="textContent"
-                                placeholder="Input text here"
-                              />
-                              <button
-                                className="submitText ui primary button"
-                                type="submit"
-                              >
-                                Add Text
-                              </button>
-                            </Form>
                             <div>
-                              {dustbins.map(
-                                ({ accepts, lastDroppedItem }, index2) => (
-                                  <Dustbin
-                                    accepts={accepts}
-                                    lastDroppedItem={lastDroppedItem}
-                                    onDrop={item =>
-                                      handleDrop(index2, item, index)
-                                    }
-                                    key={index2}
+                              {editing ? (
+                                <Form onSubmit={e => handleSave(e, index)}>
+                                  <TextArea
+                                    name="textContent"
+                                    defaultValue={blocks[index].textContent}
                                   />
-                                )
+                                  <Button>Save</Button>
+                                </Form>
+                              ) : (
+                                <div>
+                                  {blocks[index].textContent ? (
+                                    <div>
+                                      <Button.Group>
+                                        <Button
+                                          positive
+                                          onClick={e => handleEdit(e, index)}
+                                        >
+                                          Edit
+                                        </Button>
+                                        <Button.Or />
+
+                                        <Button
+                                          negative
+                                          onClick={e => handleDelete(e, index)}
+                                        >
+                                          Delete
+                                        </Button>
+                                      </Button.Group>
+                                    </div>
+                                  ) : (
+                                    <Button
+                                      negative
+                                      onClick={e => handleDelete(e, index)}
+                                    >
+                                      Delete
+                                    </Button>
+                                  )}
+                                </div>
                               )}
                             </div>
                             <div>
-                              <button
-                                className="negative ui button"
-                                onClick={e => handleDelete(e, index)}
-                              >
-                                Delete Item
-                              </button>
+                              <Form onSubmit={e => handleSubmit(e, index)}>
+                                <TextArea
+                                  name="textContent"
+                                  placeholder="Input text below"
+                                />
+                                <button
+                                  className="submitText ui primary button"
+                                  type="submit"
+                                >
+                                  Add Text
+                                </button>
+                              </Form>
+                              <div>
+                                {dustbins.map(
+                                  ({ accepts, lastDroppedItem }, index2) => (
+                                    <Dustbin
+                                      accepts={accepts}
+                                      lastDroppedItem={lastDroppedItem}
+                                      onDrop={item =>
+                                        handleDrop(index2, item, index)
+                                      }
+                                      key={index2}
+                                    />
+                                  )
+                                )}
+                              </div>
                             </div>
                           </div>
                         ) : null}
@@ -158,7 +214,7 @@ class MasterDocument extends Component {
                     <Form onSubmit={handleSubmit}>
                       <TextArea
                         name="textContent"
-                        placeholder="Input text here"
+                        placeholder="Input text below"
                       />
                       <button className="ui primary button" type="submit">
                         Add Text

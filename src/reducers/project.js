@@ -11,8 +11,11 @@ import {
   HANDLE_DROPPING,
   SHOW_FORM,
   DELETE_ELEMENT,
-  GET_UPDATED_MODULES
+  GET_UPDATED_MODULES,
+  EDIT_ELEMENT,
+  SAVE_ELEMENT
 } from "../actions/project";
+import * as Actions from "../actions/Analysis";
 
 import ItemTypes from "../components/Project/ItemTypes";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
@@ -40,13 +43,15 @@ const initialState = {
   ],
   boxes: [
     {
-      name: "simplePlot",
+      displayName: "Simple Plot",
+      functionName: "simplePlot",
       loading: false,
       type: ItemTypes.GRAPH,
       content: {}
     },
     {
-      name: "funnel",
+      displayName: "Funnel Plot",
+      functionName: "funnel",
       loading: false,
       type: ItemTypes.GRAPH,
       content: {}
@@ -58,12 +63,19 @@ const initialState = {
 
   droppedBoxNames: [],
   showForm: null,
-  editing: false
+  editing: false,
+  Analysis: {}
 };
 
 const project = (state = initialState, action) => {
   let blocks;
   switch (action.type) {
+    case Actions.GET_ANALYSIS:
+      return {
+        ...state,
+        Analysis: action.data,
+        isFetching: false
+      };
     case GET_COMPUTATION_START:
       blocks = state.blocks.slice();
       blocks[action.data].loading = true;
@@ -102,7 +114,7 @@ const project = (state = initialState, action) => {
         ...state,
         blocks: [
           ...state.blocks.slice(0, index),
-          { textContent: textContent },
+          { textContent: textContent, type: "text" },
           ...state.blocks.slice(index)
         ]
       };
@@ -138,6 +150,21 @@ const project = (state = initialState, action) => {
         ...state,
         showForm: action.data
       };
+    case EDIT_ELEMENT:
+      return {
+        ...state,
+        editing: true
+      };
+    case SAVE_ELEMENT:
+      return {
+        ...state,
+        blocks: [
+          ...state.blocks.slice(0, action.data.index),
+          { textContent: action.data.textContent, type: "text" },
+          ...state.blocks.slice(action.data.index + 1)
+        ],
+        editing: false
+      };
     case DELETE_ELEMENT:
       console.log("SHOWING DATA", action.data);
       return {
@@ -149,6 +176,7 @@ const project = (state = initialState, action) => {
       };
     case UPDATE_LOC:
       blocks = state.blocks.slice();
+      blocks[action.data.moduleIdx].content = Object.assign({}, blocks[action.data.moduleIdx].content)
       blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
       blocks[action.data.moduleIdx].loading = false;
       return {
