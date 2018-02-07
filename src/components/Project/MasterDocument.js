@@ -76,7 +76,7 @@ class MasterDocument extends Component {
     return (
       <div>
         <NavContainer />
-        <h1>Welcome to analysis ID#:{Analysis._id}</h1>
+      {/*<h1>Welcome to analysis ID#:{Analysis._id}</h1>*/}
         <h3>
           Drag and drop modules onto your document. Navigate through document by
           clicking on items
