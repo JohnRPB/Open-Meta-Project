@@ -6,6 +6,7 @@ import {
   editElement,
   saveElement
 } from "../actions/project";
+import { getAnalysis } from "../actions/Analysis";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { withRouter } from "react-router";
@@ -20,7 +21,11 @@ function mapStateToProps(state) {
     boxes: state.project.boxes,
     droppedBoxNames: state.project.droppedBoxNames,
     showForm: state.project.showForm,
-    editing: state.project.editing
+    editing: state.project.editing,
+    Analysis: state.project.Analysis
+    // _id: state.Token.id,
+    // _token: state.Token.token,
+    // isFetching: state.MyAnalysesPage.isFetching
   };
 }
 
@@ -32,12 +37,12 @@ function mapDispatchToProps(dispatch) {
       const form = e.target;
       const data = serialize(form, { hash: true });
       console.log("DATA", data);
-      data.index = index + 1;
+      data.index = index;
       dispatch(addText(data));
       form.reset();
     },
     handleDrop: (index2, item, index) => {
-      index += 1;
+      //index += 1;
       let args = { index2, item, index };
       dispatch(handleDropping(args));
     },
@@ -69,6 +74,9 @@ function mapDispatchToProps(dispatch) {
       data.index = index;
       dispatch(saveElement(data));
       form.reset();
+    },
+    getAnalysis: id => {
+      dispatch(getAnalysis(id));
     }
     // getUpdatedModules: () => {
     //   dispatch(getUpdatedModules());
