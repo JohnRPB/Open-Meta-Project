@@ -18,7 +18,8 @@ import serialize from "form-serialize";
 
 import MasterDocument from "../components/Project/MasterDocument";
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
+  console.log(ownProps);
   return {
     ...state,
     blocks: state.project.blocks,
@@ -28,7 +29,8 @@ function mapStateToProps(state) {
     showForm: state.project.showForm,
     editing: state.project.editing,
     Analysis: state.project.Analysis,
-    title: state.project.title
+    title: state.project.title,
+    analysisId: ownProps.match.params.analysis_id
     // _id: state.Token.id,
     // _token: state.Token.token,
     // isFetching: state.MyAnalysesPage.isFetching
@@ -100,4 +102,4 @@ function mapDispatchToProps(dispatch) {
 const ProjectContainer = withRouter(
   connect(mapStateToProps, mapDispatchToProps)(MasterDocument)
 );
-export default ProjectContainer;
+export default withRouter(ProjectContainer);
