@@ -224,6 +224,7 @@ const project = (state = initialState, action) => {
       // blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
       // blocks[action.data.moduleIdx].loading = false;
 
+      // let blocksUpdate = state.blocks.slice(0);
       return {
         ...state,
         blocks: [

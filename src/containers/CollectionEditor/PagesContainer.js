@@ -11,8 +11,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    pageChange: number => {
-      dispatch(setPage(number));
+    pageChange: (e,data) => {
+      console.log(data)
+      dispatch(setPage(data.activePage));
     }
   }
 }
