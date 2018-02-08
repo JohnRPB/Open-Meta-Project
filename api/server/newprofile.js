@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
       title: req.body.title,
       organization: req.body.organization,
       background: req.body.description,
-      image: ""
+      forkedFromTimes: 0
     });
 
     await registrantProfile.save(function(err) {

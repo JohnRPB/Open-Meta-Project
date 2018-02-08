@@ -106,11 +106,20 @@ class AllCollections extends Component {
                 <Grid.Column width={3}>
                   <Image src={defaultpicture} circular size="small" />
                 </Grid.Column>
-                <Grid.Column width={4}>
+                <Grid.Column width={8}>
                   <br />
-                  <Header as="h1" floated="left">
-                    {this.props.MyAnalysesPage.user.profile.fname}
+
+                  <Header as="h1" floated="left" textalign="left">
+                    {`${this.props.MyAnalysesPage.user.profile.fname} ${
+                      this.props.MyAnalysesPage.user.profile.lname
+                    }`}
+                    <Header.Subheader>
+                      {" "}
+                      {this.props.MyAnalysesPage.user.profile.title} at{" "}
+                      {this.props.MyAnalysesPage.user.profile.organization}
+                    </Header.Subheader>
                   </Header>
+
                   <br />
                 </Grid.Column>
               </Grid.Row>
@@ -128,7 +137,18 @@ class AllCollections extends Component {
                       All Collections
                     </Header>
                     <Divider />
-                    <Card.Group items={collectionCards} itemsPerRow={3} />
+                    <Card.Group
+                      items={
+                        collectionCards.length
+                          ? collectionCards
+                          : [
+                              {
+                                description: "No current collections"
+                              }
+                            ]
+                      }
+                      itemsPerRow={3}
+                    />
                     <br />
                   </Segment>
                 </Grid.Column>
