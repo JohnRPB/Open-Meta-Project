@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import NavContainer from "../../containers/NavContainer";
 import update from "immutability-helper";
-import { DragDropContext } from "react-dnd";
-import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
+import {DragDropContext} from "react-dnd";
+import HTML5Backend, {NativeTypes} from "react-dnd-html5-backend";
 import Dustbin from "./Dustbin";
 import Box from "./Box";
 import ItemTypes from "./ItemTypes";
@@ -42,7 +42,7 @@ class MasterDocument extends Component {
 
   state = {};
 
-  handleContextRef = contextRef => this.setState({ contextRef });
+  handleContextRef = contextRef => this.setState({contextRef});
 
   isDropped(boxName) {
     return this.props.droppedBoxNames.indexOf(boxName) > -1;
@@ -50,7 +50,6 @@ class MasterDocument extends Component {
 
   componentDidMount() {
     //this.getUpdatedModules();
-
     this.props.getAnalysis("5a7b7c28841dd6697bba76d2");
     // let routingId = this.props.location.pathname.split("/")[-2];
   }
@@ -74,7 +73,7 @@ class MasterDocument extends Component {
       saveDocument
     } = this.props;
 
-    const { contextRef } = this.state;
+    const {contextRef} = this.state;
 
     let style = {
       border: "5px solid gray"
@@ -103,7 +102,7 @@ class MasterDocument extends Component {
                     <div>
                       {boxes.map(
                         (
-                          { displayName, functionName, content, loading, type },
+                          {displayName, functionName, content, loading, type},
                           index
                         ) => (
                           <Box
@@ -218,7 +217,7 @@ class MasterDocument extends Component {
                               </Form>
                               <div>
                                 {dustbins.map(
-                                  ({ accepts, lastDroppedItem }, index2) => (
+                                  ({accepts, lastDroppedItem}, index2) => (
                                     <Dustbin
                                       accepts={accepts}
                                       lastDroppedItem={lastDroppedItem}
@@ -249,7 +248,7 @@ class MasterDocument extends Component {
                       </button>
                     </Form>
                     <div>
-                      {dustbins.map(({ accepts, lastDroppedItem }, index) => (
+                      {dustbins.map(({accepts, lastDroppedItem}, index) => (
                         <Dustbin
                           accepts={accepts}
                           lastDroppedItem={lastDroppedItem}
