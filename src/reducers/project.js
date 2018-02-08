@@ -194,6 +194,17 @@ const project = (state = initialState, action) => {
           }
         }
       };
+    case SAVE_DOCUMENT:
+      return {
+        ...state,
+        Analysis: {
+          ...state.Analysis,
+          data: {
+            ...state.Analysis.data,
+            blocks: state.blocks
+          }
+        }
+      };
     case DELETE_ELEMENT:
       console.log("SHOWING DATA", action.data);
       return {
