@@ -21,7 +21,15 @@ class Module extends React.Component {
     this.props = props;
   }
 
-  componentWillMount() {
+  componentWillReceiveProps(nextProps) {
+    console.log("============================");
+    console.log(nextProps);
+    console.log("============================");
+  }
+  componentDidMount() {
+    console.log("============================");
+    console.log("THIS COMPONENT HAS MOUNTED");
+    console.log("============================");
     this.props.getOcpu();
   }
 

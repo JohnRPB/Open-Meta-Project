@@ -20,8 +20,7 @@ let createModule = name => {
   return {
     name: name,
     type: "graphic",
-    outputLoc:
-      "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
+    outputLoc: "Click on studies to load image",
     studies: createStudies()
   };
 };
