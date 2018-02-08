@@ -4,16 +4,16 @@
 // ---------------------------------------------------------
 // Recieves api URL and renders result inside a card
 
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
   Link,
-  Switch
-} from "react-router-dom";
-import { Card, Image, Container, Dimmer, Loader } from "semantic-ui-react";
-import "../../index.css";
+  Switch,
+} from 'react-router-dom';
+import {Card, Image, Container, Dimmer, Loader} from 'semantic-ui-react';
+import '../../index.css';
 
 // ---------------------------------------------------------
 // Loader
@@ -55,8 +55,15 @@ class IframeDisplay extends Component {
   render() {
     return (
       <div className="frame-container">
-        <a href={this.props.outputLoc} style={{float:"right"}}>See larger</a>
-        <iframe src={this.props.outputLoc} frameBorder="0" title={this.props.outputLoc} scrolling="no" />
+        <a href={this.props.outputLoc} style={{float: 'right'}}>
+          See larger
+        </a>
+        <iframe
+          src={this.props.outputLoc}
+          frameBorder="0"
+          title={this.props.outputLoc}
+          scrolling="no"
+        />
       </div>
     );
   }
@@ -64,7 +71,7 @@ class IframeDisplay extends Component {
 
 const OutputPanel = props => {
   return (
-    <Container style={{ height: "550px", width: "680px" }}>
+    <Container style={{height: '550px', width: '680px'}}>
       {props.loading ? <LoadingComp /> : <IframeDisplay {...props} />}
     </Container>
   );

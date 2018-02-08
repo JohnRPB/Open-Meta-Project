@@ -25,6 +25,13 @@ import {
 } from "semantic-ui-react";
 import "../../index.css";
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  NavLink
+} from "react-router-dom";
+
 import collection from "../../databaseStudies";
 import ModuleContainer from "../../containers/Modules/ModuleContainer";
 
@@ -41,10 +48,11 @@ class MasterDocument extends Component {
     return this.props.droppedBoxNames.indexOf(boxName) > -1;
   }
 
-  componentDidMount() {
+  componentWillMount() {
     //this.getUpdatedModules();
 
-    this.props.getAnalysis("5a7b7c28841dd6697bba76d2");
+    this.props.getAnalysisAndLoad(this.props.analysisId);
+
     // let routingId = this.props.location.pathname.split("/")[-2];
   }
 
@@ -64,7 +72,8 @@ class MasterDocument extends Component {
       handleSave,
       handleEdit,
       Analysis,
-      saveDocument
+      saveDocument,
+      title
     } = this.props;
 
     const { contextRef } = this.state;
@@ -76,11 +85,19 @@ class MasterDocument extends Component {
     return (
       <div>
         <NavContainer />
-        <h1>{/*Analysis.data.header.title*/}</h1>
-        <h3>
-          Drag and drop modules onto your document. Navigate through document by
-          clicking on items
-        </h3>
+        <br />
+        <br />
+        <br />
+        <center>
+          <h2>{title}</h2>
+        </center>
+        <br />
+        <center>
+          <h3>
+            Drag and drop modules onto your document. Navigate through document
+            by clicking on items
+          </h3>
+        </center>
         <Grid centered columns={2}>
           <Grid.Column>
             <div ref={this.handleContextRef}>
@@ -111,6 +128,13 @@ class MasterDocument extends Component {
                 </Rail>
                 <Rail position="right">
                   <Sticky context={contextRef}>
+                    <NavLink
+                      className="ui button brown"
+                      to={`/${Analysis._id}`}
+                    >
+                      Go to Analysis page
+                    </NavLink>
+                    <br />
                     <Button
                       onClick={e => saveDocument(e, Analysis._id, Analysis)}
                       color="orange"
@@ -189,7 +213,7 @@ class MasterDocument extends Component {
                               <Form onSubmit={e => handleSubmit(e, index)}>
                                 <TextArea
                                   name="textContent"
-                                  placeholder="Input text below"
+                                  placeholder="Input text"
                                 />
                                 <button
                                   className="submitText ui primary button"
@@ -222,10 +246,7 @@ class MasterDocument extends Component {
                 {blocks.length < 1 ? (
                   <div className="Initial Submission">
                     <Form onSubmit={handleSubmit}>
-                      <TextArea
-                        name="textContent"
-                        placeholder="Input text below"
-                      />
+                      <TextArea name="textContent" placeholder="Input text" />
                       <button className="ui primary button" type="submit">
                         Add Text
                       </button>
