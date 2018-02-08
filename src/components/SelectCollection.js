@@ -92,6 +92,7 @@ class SelectCollection extends Component {
 
     // /updateanalysis/:id/:ownerId/:collectionId
 
+    //this slice is the analysis id
     fetch(
       `http://localhost:8000/api/analyses/updateanalysis/${this.props.location.search.slice(
         4
@@ -107,8 +108,12 @@ class SelectCollection extends Component {
     )
       .then(data => {
         // to Edwin
-        // this.props.history.push("/profile");
-        console.log("fetch works!!!!!! ");
+        console.log(
+          "fetch works!!!!!! redirecting to the create analysis page"
+        );
+        this.props.history.push(
+          `/analysis/${this.props.location.search.slice(4)}/edit`
+        );
       })
       .catch(e => {
         console.log("falcon heavy #3");
@@ -119,26 +124,30 @@ class SelectCollection extends Component {
     console.log("props =>", this.props._selectedCollection);
     return (
       <Container>
-        <h3 style={{marginTop: 10}}>Select a collection for your analysis </h3>
+        <h2 style={{marginTop: 20, marginBottom: 50}}>
+          Select A Collection For Your Analysis{" "}
+        </h2>
         <CollectionSearchCollectionsContainer />
 
-        <h3 style={{marginTop: 10}}>Your currently selected collection: </h3>
+        <h3 style={{marginTop: 20}}>Your currently selected collection: </h3>
         {!this.props._selectedCollection ? (
           <div>
             <div>none selected yet</div>
-            <h3 style={{marginTop: 10}}>No collections yet?</h3>
+            <h3 style={{marginTop: 20}}>Create a new collection:</h3>
             <CollectionModal id={this.props.Token.id} />
           </div>
         ) : (
           <div>
             <div>{this.props._selectedCollection}</div>
-            <h3 style={{marginTop: 10}}>
+            <h3 style={{marginTop: 20}}>
               Selected a collection? Click here to go on to creating your
               analysis:{" "}
             </h3>
             <Button onClick={this.onSubmitSelection}>
               Create your Analysis
             </Button>
+            <h3 style={{marginTop: 50}}>Create a new collection:</h3>
+            <CollectionModal id={this.props.Token.id} />
           </div>
         )}
       </Container>
