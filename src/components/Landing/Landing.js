@@ -31,6 +31,7 @@ const Landing = () => {
         <br />
         <div class="ui text container">
           <i class="connectdevelop icon massive" />
+          <br />
           <h2>Your Portal to Papers and Metanalyses</h2>
         </div>
         <br />
@@ -66,7 +67,7 @@ const Landing = () => {
               <Grid.Row columns={3}>
                 <Grid.Column>
                   <i class="flask icon huge" />
-
+                  <br />
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Est suscipit praesentium repudiandae ad neque, repellendus
@@ -75,6 +76,7 @@ const Landing = () => {
                     repudiandae.{" "}
                   </p>
                   <Button>Science!</Button>
+                  <br />
                 </Grid.Column>
                 <Grid.Column>
                   <i class="line graph icon huge" />
@@ -88,6 +90,7 @@ const Landing = () => {
                     repudiandae.
                   </p>
                   <Button>Analyses!</Button>
+                  <br />
                 </Grid.Column>
                 <Grid.Column>
                   <i class="thermometer icon huge" />
@@ -101,6 +104,7 @@ const Landing = () => {
                     repudiandae.
                   </p>
                   <Button>So Meta!</Button>
+                  <br />
                 </Grid.Column>
               </Grid.Row>
             </Grid>
