@@ -50,7 +50,7 @@ class Nav extends Component {
         <NavLink to="/myanalyses" className="item">
           My Reviews
         </NavLink>
-        <NavLink to="/collections/5a7a42405aed131eefe06b67/edit" className="item">
+        <NavLink to="/collections/5a7b1ba0934e0f1f54ba84d9/edit" className="item">
           Collection
         </NavLink>
         <NavLink to="/collections/5a7a42405aed131eefe06b67/edit?analysis=5a7a423f5aed131eefe06b40" className="item">
