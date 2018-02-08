@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
-import { DragSource } from "react-dnd";
+import {DragSource} from "react-dnd";
 import studies from "../../newStudies.js";
 import ItemTypes from "./ItemTypes";
 
@@ -14,6 +14,7 @@ const style = {
   float: "left"
 };
 
+//drop studies in here
 let createStudies = () => studies.map(study => Object.assign({}, study));
 
 let createModule = name => {
@@ -44,16 +45,11 @@ const boxSource = {
 
 class Box extends Component {
   render() {
-    const {
-      displayName,
-      isDropped,
-      isDragging,
-      connectDragSource
-    } = this.props;
+    const {displayName, isDropped, isDragging, connectDragSource} = this.props;
     const opacity = isDragging ? 0.4 : 1;
 
     return connectDragSource(
-      <div style={{ ...style, opacity }}>
+      <div style={{...style, opacity}}>
         {isDropped ? <s>{displayName}</s> : displayName}
       </div>
     );

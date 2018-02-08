@@ -42,6 +42,7 @@ class SelectCollection extends Component {
       data: {inclusion: {collectionId: this.props._selectedCollection}}
     };
     console.log("obj =>", obj);
+
     // console.log(
     //   "this.props.location.search.splice(4) =>",
     //   this.props.location.search.slice(4)
