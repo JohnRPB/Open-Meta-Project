@@ -41,11 +41,10 @@ class MasterDocument extends Component {
     return this.props.droppedBoxNames.indexOf(boxName) > -1;
   }
 
-  componentWillMount() {
+  componentDidMount() {
     //this.getUpdatedModules();
 
-    let analysisObj = this.props.getAnalysis("5a7b7c28841dd6697bba76df");
-    console.log(analysisObj);
+    this.props.getAnalysis("5a7b7c28841dd6697bba76d2");
     // let routingId = this.props.location.pathname.split("/")[-2];
   }
 
@@ -64,7 +63,8 @@ class MasterDocument extends Component {
       editing,
       handleSave,
       handleEdit,
-      Analysis
+      Analysis,
+      saveDocument
     } = this.props;
 
     const { contextRef } = this.state;
@@ -111,7 +111,12 @@ class MasterDocument extends Component {
                 </Rail>
                 <Rail position="right">
                   <Sticky context={contextRef}>
-                    <Button>Save Document</Button>
+                    <Button
+                      onClick={e => saveDocument(e, Analysis._id)}
+                      color="orange"
+                    >
+                      Save Document
+                    </Button>
                   </Sticky>
                 </Rail>
 
