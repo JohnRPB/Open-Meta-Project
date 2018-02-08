@@ -18,12 +18,18 @@ export function getAnalysesSuccess(data) {
   };
 }
 
-export function getAnalyses(id) {
+export function getAnalyses(ids) {
+  let promises = [];
+
+  for (let i = 0; i < ids.length; i++) {
+    promises.push(axios.get(`${root}/api/analyses${ids[i]}`));
+  }
+
   return dispatch => {
     axios
-      .get(`${root}/api/analyses`)
+      .all(promises)
       .then(response => {
-        console.log("response => ", response);
+        console.log("response in actions => ", response);
         dispatch(getAnalysesSuccess(response.data));
       })
       .catch(e => {
@@ -31,6 +37,21 @@ export function getAnalyses(id) {
       });
   };
 }
+
+// original
+// export function getAnalyses(ids) {
+//   return dispatch => {
+//     axios
+//       .get(`${root}/api/analyses`)
+//       .then(response => {
+//         console.log("response => ", response);
+//         dispatch(getAnalysesSuccess(response.data));
+//       })
+//       .catch(e => {
+//         console.log(e);
+//       });
+//   };
+// }
 
 // -------------------
 // COLLECTIONS

@@ -57,6 +57,13 @@ const initialState = {
       loading: false,
       type: ItemTypes.GRAPH,
       content: {}
+    },
+    {
+      displayName: "Forest Plot",
+      functionName: "forest",
+      loading: false,
+      type: ItemTypes.GRAPH,
+      content: {}
     }
   ],
   // { name: "Mean", type: ItemTypes.SUMMARY },

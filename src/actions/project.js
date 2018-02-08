@@ -53,14 +53,14 @@ export function updateAnalysisSuccess(data) {
   };
 }
 
-export function updateAnalysis(id) {
+export function updateAnalysis(id, obj) {
   console.log("id => ", id);
   return dispatch => {
     axios
-      .put(`${root}/api/analyses/${id}`)
+      .put(`${root}/api/analyses/${id}`, obj)
       .then(response => {
-        console.log("response => ", response);
-        dispatch(updateAnalysisSuccess(response.data));
+        console.log(response);
+        console.log(response.data);
       })
       .catch(e => {
         console.log(e);

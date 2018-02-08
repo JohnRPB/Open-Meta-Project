@@ -28,6 +28,12 @@ class MyAnalysesPage extends Component {
       window.location.href = "/login";
     }
     this.props.getUser(this.props._id, this.props._token);
+
+    //getting all review ids
+    // let analysisIds = this.props.MyAnalysesPage.user.analyses.map(study => {
+    //   return study._id;
+    // });
+    // console.log("ids => ", analysisIds);
   }
 
   render() {
@@ -43,8 +49,8 @@ class MyAnalysesPage extends Component {
               key={analysis._id}
               header={
                 <NavLink to={`/analysis/${analysis._id}`}>
-                  {analysis._id}
-                  {/* {analysis.data.header.title} */}
+                  {/* {analysis._id} */}
+                  {analysis.data.header.title}
                 </NavLink>
               }
               description={faker.lorem.paragraph()}

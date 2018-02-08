@@ -19,9 +19,6 @@ import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
 import SelectCollectionContainer from "./containers/SelectCollectionContainer";
 
-// -------------------------
-// Components
-// -------------------------
 import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 import CollectionSearch from "./components/Collections/CollectionSearch";

@@ -115,9 +115,13 @@ class Profile extends Component {
                         <Table.Row key={analysis._id}>
                           <Table.Cell>
                             <NavLink to={`/analysis/${analysis._id}`}>
-                              {/* {analysis.data.header.title} */}
-                              {analysis._id}
+                              {analysis.data.header.title}
                             </NavLink>
+                          </Table.Cell>
+                          <Table.Cell collapsing textAlign="right">
+                            {moment(analysis.hist[0].time).format(
+                              "MMMM Do YYYY"
+                            )}
                           </Table.Cell>
                         </Table.Row>
                       );
