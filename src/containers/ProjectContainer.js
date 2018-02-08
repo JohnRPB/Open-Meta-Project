@@ -4,7 +4,9 @@ import {
   showForm,
   deleteElement,
   editElement,
-  saveElement
+  saveElement,
+  saveDocument,
+  updateAnalysis
 } from "../actions/project";
 import { getAnalysis } from "../actions/Analysis";
 import { connect } from "react-redux";
@@ -36,7 +38,6 @@ function mapDispatchToProps(dispatch) {
       e.stopPropagation();
       const form = e.target;
       const data = serialize(form, { hash: true });
-      console.log("DATA", data);
       data.index = index;
       dispatch(addText(data));
       form.reset();
@@ -70,13 +71,17 @@ function mapDispatchToProps(dispatch) {
       e.stopPropagation();
       const form = e.target;
       const data = serialize(form, { hash: true });
-      console.log("DATA", data);
       data.index = index;
       dispatch(saveElement(data));
       form.reset();
     },
     getAnalysis: id => {
       dispatch(getAnalysis(id));
+    },
+    saveDocument: id => {
+      console.log("ANALYSIS ID", id);
+      dispatch(saveDocument());
+      //dispatch(updateAnalysis(id));
     }
     // getUpdatedModules: () => {
     //   dispatch(getUpdatedModules());

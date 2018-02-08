@@ -29,12 +29,15 @@ const seed = async () => {
         let studies = await Study.findAll();
 
         //analysis still needs users, comments, hist, collections, excluded, categories
+
         for (let i = 0; i < defaults.analysis; i++) {
           let analysisBuild = {
             comments: [],
             hist: [],
             data: {
-              header: {},
+              header: {
+                title: "An analysis of " + faker.name.jobType()
+              },
               inclusion: {
                 excluded: []
               },
@@ -43,6 +46,10 @@ const seed = async () => {
             }
           };
           let thisAnalysis = new Analysis(analysisBuild);
+          console.log(
+            "ANALYSIS DATA ===========================================",
+            thisAnalysis.data.header
+          );
           await thisAnalysis.save();
         }
         let analyses = await Analysis.find();
@@ -60,7 +67,7 @@ const seed = async () => {
         //collections need user, hist, category
         for (let i = 0; i < defaults.collection; i++) {
           let collectionBuild = {
-            name: faker.company.bsAdjective() + ' collection',
+            name: faker.company.bsAdjective() + " collection",
             description: faker.lorem.paragraph(),
             comments: [],
             hist: []
