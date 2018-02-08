@@ -12,6 +12,7 @@
 //for each api route check the cookie
 
 import React, { Component } from "react";
+import root from '../../lib/root';
 
 //styling
 import "./UserForm.css";
@@ -36,7 +37,7 @@ class UserForm extends Component {
 
     if (obj.action == "login") {
       console.log("login starting");
-      fetch("http://localhost:8000/api/login", {
+      fetch(`${root()}/api/login`, {
         method: "post",
         headers: {
           "Content-Type": "application/json"
