@@ -85,7 +85,8 @@ function mapDispatchToProps(dispatch) {
     },
     saveDocument: (e, id, obj) => {
       console.log("ANALYSIS ID", id);
-      // dispatch(saveDocument());
+      alert("Document saved and analysis is updated!");
+      //dispatch(saveDocument());
       dispatch(updateAnalysis(id, obj));
     },
     loadDocument: data => {

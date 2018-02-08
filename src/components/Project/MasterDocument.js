@@ -130,7 +130,7 @@ class MasterDocument extends Component {
                   <Sticky context={contextRef}>
                     <NavLink
                       className="ui button brown"
-                      to={`/${Analysis._id}`}
+                      to={`/analysis/${Analysis._id}`}
                     >
                       Go to Analysis page
                     </NavLink>

@@ -184,7 +184,17 @@ const project = (state = initialState, action) => {
         title: action.data.header.title
       };
     case UPDATE_ANALYSIS:
-      alert("Document saved and analysis is updated!");
+      return {
+        ...state,
+        Analysis: {
+          ...state.Analysis,
+          data: {
+            ...state.Analysis.data,
+            blocks: state.blocks
+          }
+        }
+      };
+    case SAVE_DOCUMENT:
       return {
         ...state,
         Analysis: {
