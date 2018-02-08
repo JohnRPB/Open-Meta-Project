@@ -17,16 +17,16 @@ import AllAnalyses from "./containers/AllAnalyses";
 import CollectionContainer from "./containers/CollectionContainer.js";
 import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
+import SelectCollectionContainer from "./containers/SelectCollectionContainer";
 
-// -------------------------
-// Components
-// -------------------------
 import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
 import CollectionSearch from "./components/Collections/CollectionSearch";
 import SelectCollection from "./components/SelectCollection";
 import About from "./components/About/About";
 import UserForm from "./containers/UserForm"; //userform container
+
+
 
 // -------------------------
 // Routes
@@ -48,7 +48,11 @@ const Routes = ({ history }) => {
         <Route exact path="/myanalyses/:user_id?" component={MyAnalyses} />
         {/* ANALYSIS ROUTES */}
         <Route exact path="/analyses" component={AllAnalyses} />
-        <Route exact path="/selectcollection" component={SelectCollection} />
+        <Route
+          exact
+          path="/selectcollection"
+          component={SelectCollectionContainer}
+        />
         <Route
           exact
           path="/analysis/:anaysis_id"
