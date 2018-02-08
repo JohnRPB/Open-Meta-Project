@@ -4,7 +4,7 @@ import { NavLink, BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { withRouter, Redirect, Switch } from "react-router";
 import serialize from "form-serialize";
-
+import InfoModal from "./InfoModal";
 import createHistory from "history/createBrowserHistory";
 
 const history = createHistory();
@@ -39,6 +39,7 @@ class Nav extends Component {
   };
 
   render() {
+    console.log("nav props => ", this.props);
     return (
       <Menu fixed="top" inverted>
         <Container>
@@ -52,7 +53,7 @@ class Nav extends Component {
           <NavLink to="/myanalyses" className="item">
             My analyses
           </NavLink>
-         
+
           <div className="right menu">
             <Menu.Item>
               <form
@@ -71,15 +72,17 @@ class Nav extends Component {
               </form>
             </Menu.Item>
 
+            <Menu.Item>
+              <InfoModal />
+            </Menu.Item>
             <Dropdown item icon={<i className="user circle outline icon" />}>
               <Dropdown.Menu>
-                <Dropdown.Item>My Account</Dropdown.Item>
                 <Dropdown.Item>
                   <NavLink to="/profile" style={{ color: "black" }}>
                     Profile
                   </NavLink>
                 </Dropdown.Item>
-                <Dropdown.Item>
+                {/* <Dropdown.Item>
                   <NavLink to="/collections/new" style={{ color: "black" }}>
                     Create Collection
                   </NavLink>
@@ -88,8 +91,21 @@ class Nav extends Component {
                   <NavLink to="/selectcollection" style={{ color: "black" }}>
                     Select Collection
                   </NavLink>
+                </Dropdown.Item> */}
+                <Dropdown.Item>
+                  <a href="/landing" style={{ color: "black" }}>
+                    Sign Out
+                  </a>
+                  {/* {this.props.Token ? (
+                    <a href="/landing" style={{ color: "black" }}>
+                      Sign Out
+                    </a>
+                  ) : (
+                    <a href="/login" style={{ color: "black" }}>
+                      Log In
+                    </a>
+                  )} */}
                 </Dropdown.Item>
-                <Dropdown.Item>Other</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </div>

@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
-import NavContainer from '../../containers/NavContainer';
-import update from 'immutability-helper';
-import {DragDropContext} from 'react-dnd';
-import HTML5Backend, {NativeTypes} from 'react-dnd-html5-backend';
-import Dustbin from './Dustbin';
-import Box from './Box';
-import ItemTypes from './ItemTypes';
+import React, {Component} from "react";
+import NavContainer from "../../containers/NavContainer";
+import update from "immutability-helper";
+import {DragDropContext} from "react-dnd";
+import HTML5Backend, {NativeTypes} from "react-dnd-html5-backend";
+import Dustbin from "./Dustbin";
+import Box from "./Box";
+import ItemTypes from "./ItemTypes";
 import {
   Dropdown,
   Menu,
@@ -119,7 +119,7 @@ class MasterDocument extends Component {
                       {boxes.map(
                         (
                           {displayName, functionName, content, loading, type},
-                          index,
+                          index
                         ) => (
                           <Box
                             content={content}
@@ -139,7 +139,8 @@ class MasterDocument extends Component {
                   <Sticky context={contextRef}>
                     <NavLink
                       className="ui button brown"
-                      to={`/${Analysis._id}`}>
+                      to={`/analysis/${Analysis._id}`}
+                    >
                       Go to Analysis page
                     </NavLink>
                     <br />
