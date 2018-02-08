@@ -78,10 +78,10 @@ function mapDispatchToProps(dispatch) {
     getAnalysis: id => {
       dispatch(getAnalysis(id));
     },
-    saveDocument: id => {
+    saveDocument: (e, id, obj) => {
       console.log("ANALYSIS ID", id);
       dispatch(saveDocument());
-      //dispatch(updateAnalysis(id));
+      dispatch(updateAnalysis(id, obj));
     }
     // getUpdatedModules: () => {
     //   dispatch(getUpdatedModules());
