@@ -118,11 +118,11 @@ class Profile extends Component {
                               {analysis.data.header.title}
                             </NavLink>
                           </Table.Cell>
-                          <Table.Cell collapsing textAlign="right">
+                          {/* <Table.Cell collapsing textAlign="right">
                             {moment(analysis.hist[0].time).format(
                               "MMMM Do YYYY"
                             )}
-                          </Table.Cell>
+                          </Table.Cell> */}
                         </Table.Row>
                       );
                     })}

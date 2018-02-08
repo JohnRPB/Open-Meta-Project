@@ -20,32 +20,27 @@ class AllAnalyses extends Component {
   constructor() {
     super();
     this.isFetching = true;
-    // why arent these showing up???
-    this.UserId = "5a74fa36425cf997daab4328";
-    this.test = true;
   }
 
   render() {
     let analysisCards;
     if (!this.props.isFetching) {
       console.log("MY DATA props => ", this.props);
-      analysisCards = this.props.Dashboard.user.analyses
-        .slice(0, 3)
-        .map(analysis => {
-          analysis.data.header = analysis.data.header || {};
-          return (
-            <Card
-              fluid
-              key={analysis._id}
-              header={
-                <NavLink to={`/analysis/${analysis._id}`}>
-                  {analysis.data._id || "My Analysis"}
-                </NavLink>
-              }
-              description={faker.lorem.paragraph()}
-            />
-          );
-        });
+      analysisCards = this.props.MyAnalysesPage.user.analyses.map(analysis => {
+        analysis.data.header = analysis.data.header || {};
+        return (
+          <Card
+            fluid
+            key={analysis._id}
+            header={
+              <NavLink to={`/analysis/${analysis._id}`}>
+                {analysis.data.header.title || "My Analysis"}
+              </NavLink>
+            }
+            description={faker.lorem.paragraph()}
+          />
+        );
+      });
     }
 
     if (this.props.MyAnalysesPage.isFetching) {

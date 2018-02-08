@@ -66,11 +66,13 @@ class Collection extends Component {
                 <Segment>
                   <h1>
                     {Collection.name}{" "}
-                    <span style={{ fontSize: "16px" }}>
-                      <NavLink to={`${Collection._id}/edit`}>
-                        <Icon name="edit" mini />
-                      </NavLink>
-                    </span>
+                    {this.props.Token ? (
+                      <span style={{ fontSize: "16px" }}>
+                        <NavLink to={`${Collection._id}/edit`}>
+                          <Icon name="edit" mini />
+                        </NavLink>
+                      </span>
+                    ) : null}
                   </h1>
 
                   {tags.length ? tags : <Label>no tags</Label>}

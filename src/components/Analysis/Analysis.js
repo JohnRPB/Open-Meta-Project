@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../Nav";
+import { NavLink } from "react-router-dom";
 import {
   Segment,
   Container,
@@ -8,7 +9,8 @@ import {
   Loader,
   Divider,
   Label,
-  Table
+  Table,
+  Icon
 } from "semantic-ui-react";
 const moment = require("moment");
 
@@ -27,32 +29,38 @@ class Analysis extends Component {
       var { Analysis } = this.props;
 
       // creating cards objects for card group
-      var studies = Analysis.data.inclusion.collectionId.studies.map(study => {
-        return {
-          header: study.name,
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-          meta: study.pubDate
-        };
-      });
+      if (Analysis.data.inclusion.collectionId) {
+        var studies = Analysis.data.inclusion.collectionId.studies.map(
+          study => {
+            return {
+              header: study.name,
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+              meta: study.pubDate
+            };
+          }
+        );
+      }
 
       // creating rows for option 2
-      var rows = Analysis.data.inclusion.collectionId.studies.map(study => {
-        return (
-          <Table.Row>
-            <Table.Cell>{study.name}</Table.Cell>
-            <Table.Cell>{study.sampleSize}</Table.Cell>
-            <Table.Cell>{study.stdErr}</Table.Cell>
-            <Table.Cell>{study.testStatType}</Table.Cell>
-            <Table.Cell>{study.testStatVal}</Table.Cell>
-            <Table.Cell>
-              <a target="_blank" href={study.url}>
-                Link
-              </a>
-            </Table.Cell>
-          </Table.Row>
-        );
-      });
+      if (Analysis.data.inclusion.collectionId) {
+        var rows = Analysis.data.inclusion.collectionId.studies.map(study => {
+          return (
+            <Table.Row>
+              <Table.Cell>{study.name}</Table.Cell>
+              <Table.Cell>{study.sampleSize}</Table.Cell>
+              <Table.Cell>{study.stdErr}</Table.Cell>
+              <Table.Cell>{study.testStatType}</Table.Cell>
+              <Table.Cell>{study.testStatVal}</Table.Cell>
+              <Table.Cell>
+                <a target="_blank" href={study.url}>
+                  Link
+                </a>
+              </Table.Cell>
+            </Table.Row>
+          );
+        });
+      }
 
       // creates labels for categories
       var tags = Analysis.data.category.map(el => {
@@ -85,7 +93,16 @@ class Analysis extends Component {
 
             <Container>
               <Segment>
-                <Header as="h1">{Analysis.data.header.title}</Header>
+                <h1>
+                  {Analysis.data.header.title}{" "}
+                  {this.props.Token.token ? (
+                    <span style={{ fontSize: "16px" }}>
+                      <NavLink to={`${Analysis._id}/edit`}>
+                        <Icon name="edit" mini />
+                      </NavLink>
+                    </span>
+                  ) : null}
+                </h1>
 
                 {/* <Header as="h4">
                   {Analysis.ownerId.profile.fname}{" "}
@@ -94,7 +111,10 @@ class Analysis extends Component {
                 {/* <Header as="h5">{Analysis.hist[0].time}</Header> */}
                 {tags.length ? tags : <Label>no tags</Label>}
                 <Divider />
-                <p> by John Doe on date </p>
+
+                {`by ${Analysis.ownerId.profile.fname} ${
+                  Analysis.ownerId.profile.lname
+                } on ${moment(Analysis.hist[0].time).format("MMMM Do YYYY")} `}
               </Segment>
 
               <Segment>
@@ -125,7 +145,13 @@ class Analysis extends Component {
                     </Table.Row>
                   </Table.Header>
 
-                  <Table.Body>{rows}</Table.Body>
+                  <Table.Body>
+                    {rows ? (
+                      rows
+                    ) : (
+                      <Table.Cell>No selected studies.</Table.Cell>
+                    )}
+                  </Table.Body>
                 </Table>
               </Segment>
 
