@@ -25,6 +25,13 @@ import {
 } from "semantic-ui-react";
 import "../../index.css";
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  NavLink
+} from "react-router-dom";
+
 import collection from "../../databaseStudies";
 import ModuleContainer from "../../containers/Modules/ModuleContainer";
 
@@ -115,6 +122,13 @@ class MasterDocument extends Component {
                 </Rail>
                 <Rail position="right">
                   <Sticky context={contextRef}>
+                    <NavLink
+                      className="ui button brown"
+                      to={`/${Analysis._id}`}
+                    >
+                      Go to Analysis page
+                    </NavLink>
+                    <br />
                     <Button
                       onClick={e => saveDocument(e, Analysis._id, Analysis)}
                       color="orange"
