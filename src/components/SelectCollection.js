@@ -17,7 +17,7 @@ import root from "../lib/root";
 import {Container, Button} from "semantic-ui-react";
 
 //name will change
-import CollectionSearchCollectionsContainer from "../containers/Collections/CollectionSearchCollectionsContainer";
+import CollectionSearchCollectionsContainer from "../containers/SelectCollection/CollectionSearchCollectionsContainer";
 
 class SelectCollection extends Component {
   constructor() {
@@ -46,19 +46,37 @@ class SelectCollection extends Component {
     //   this.props.location.search.slice(4)
     // );
 
-    axios
-      .put(`${root()}/analyses/${this.props.location.search.slice(4)}`, obj)
-      .then(response => {
-        // if(response.ok) {
-        //   return response.blob();
-        // }
-        // throw new Error('Network response was not ok.');
-        console.log("fetch done in Components/SelectCollection.js");
-        //this.props.history.push this.props.history.push("/myanalyses/:id")
-      })
-      .catch(e => {
-        console.log("fetch error in Components/SelectCollection.js");
-      });
+    // axios({
+    //   method: "PUT",
+    //   url: `${root()}/analyses/${this.props.location.search.slice(4)}`,
+    //   ownerId: this.props.Token.id,
+    //   data: {inclusion: {collectionId: this.props._selectedCollection}}
+    // })
+    //   .then(response => {
+    //     console.log("fetch done in Components/SelectCollection.js");
+    //   })
+    //   .catch(error => {
+    //     console.log("fetch error in Components/SelectCollection.js");
+    //   });
+
+    // axios
+    //   .post(
+    //     `${root()}/analyses/updateanalysis/${this.props.location.search.slice(
+    //       4
+    //     )}`,
+    //     obj
+    //   )
+    //   .then(response => {
+    //     // if(response.ok) {
+    //     //   return response.blob();
+    //     // }
+    //     // throw new Error('Network response was not ok.');
+    //     console.log("fetch done in Components/SelectCollection.js");
+    //     //this.props.history.push this.props.history.push("/myanalyses/:id")
+    //   })
+    //   .catch(e => {
+    //     console.log("fetch error in Components/SelectCollection.js");
+    //   });
 
     // fetch({
     //   method: "put",
@@ -70,6 +88,30 @@ class SelectCollection extends Component {
     //   // }),
     //   body: JSON.stringify(obj)
     // });
+
+    // /updateanalysis/:id/:ownerId/:collectionId
+
+    fetch(
+      `http://localhost:8000/api/analyses/updateanalysis/${this.props.location.search.slice(
+        4
+      )}/${this.props.Token.id}/${this.props._selectedCollection}`,
+      {
+        headers: {
+          "Content-Type": "application/json"
+        }
+        // headers: new Headers({
+        //   "x-access-token": this.props.Token.token
+        // }),
+      }
+    )
+      .then(data => {
+        // to Edwin
+        // this.props.history.push("/profile");
+        console.log("fetch works!!!!!! ");
+      })
+      .catch(e => {
+        console.log("falcon heavy #3");
+      });
   }
 
   render() {

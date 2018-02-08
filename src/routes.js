@@ -19,7 +19,7 @@ import AllAnalyses from "./containers/AllAnalyses";
 import CollectionContainer from "./containers/CollectionContainer.js";
 import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
-import SelectCollectionContainer from "./containers/SelectCollectionContainer";
+import SelectCollectionContainer from "./containers/SelectCollection/SelectCollectionContainer";
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
