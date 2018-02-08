@@ -52,7 +52,7 @@ class Nav extends Component {
           <NavLink to="/myanalyses" className="item">
             My Reviews
           </NavLink>
-         
+
           <div className="right menu">
             <Menu.Item>
               <form

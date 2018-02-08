@@ -51,7 +51,6 @@ export function getCollections(id) {
     axios
       .get(`${root}/api/collections`)
       .then(response => {
-        console.log("response =>", response);
         dispatch(getCollectionsSuccess(response.data));
       })
       .catch(e => {
@@ -84,7 +83,6 @@ export function getUser(id, token) {
       })
     })
       .then(response => {
-        console.log("response =>", response);
         dispatch(getUserSuccess(response.data));
       })
       .catch(e => {

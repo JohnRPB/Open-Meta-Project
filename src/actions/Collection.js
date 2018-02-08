@@ -19,12 +19,10 @@ export function getCollectionSuccess(data) {
 }
 
 export function getCollection(id) {
-  console.log("id => ", id);
   return dispatch => {
     axios
       .get(`${root}/api/collections/${id}`)
       .then(response => {
-        console.log("response => ", response);
         dispatch(getCollectionSuccess(response.data));
       })
       .catch(e => {

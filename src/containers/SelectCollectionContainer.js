@@ -6,7 +6,8 @@ import SelectCollection from "../components/SelectCollection";
 
 function mapStateToProps(state) {
   return {
-    ...state
+    ...state,
+    _selectedCollection: state.SelectCollection.id
   };
 }
 
@@ -20,4 +21,4 @@ const SelectCollectionContainer = withRouter(
   connect(mapStateToProps, mapDispatchToProps)(SelectCollection)
 );
 
-export default SelectCollection;
+export default SelectCollectionContainer;

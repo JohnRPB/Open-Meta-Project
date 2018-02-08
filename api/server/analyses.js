@@ -92,6 +92,7 @@ router.get("/ids", async (req, res, next) => {
 router.put("/:id", async (req, res, next) => {
   console.log(req.params.id);
   console.log(req.body);
+  //{data: {inclusion: {collectionId: "#"}}}
   let updatedAnalysis;
   let submitter;
   try {

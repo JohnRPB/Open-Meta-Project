@@ -1,27 +1,19 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import {
-  Dropdown,
-  Menu,
   Segment,
   Header,
   Grid,
   Divider,
-  Button,
   Image,
   Card,
   Container,
-  Label,
-  Statistic,
-  Icon,
   Dimmer,
-  Loader,
-  Feed
+  Loader
 } from "semantic-ui-react";
 import NavContainer from "../../containers/NavContainer";
 import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
-import ReviewModal from "./ReviewModal";
 import defaultpicture from "../../assets/images/default.jpg";
 const faker = require("faker");
 
@@ -159,7 +151,9 @@ class MyAnalysesPage extends Component {
               <Grid.Row id="analyses" className="hidden">
                 <Grid.Column width={3}>
                   <br />
-                  <AnalysisModal id={this.props.MyAnalysesPage.user._id.toString()} />
+                  <AnalysisModal
+                    id={this.props.MyAnalysesPage.user._id.toString()}
+                  />
                 </Grid.Column>
 
                 <Grid.Column width={13}>
