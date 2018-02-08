@@ -6,6 +6,8 @@ import {
   CHANGE_BUTTON,
   SET_PAGE,
   SET_OPEN,
+  CLEAR,
+  SET_CURRENT_COLLECTION
 } from '../actions/collectionEdit';
 
 const initialState = {
@@ -19,6 +21,7 @@ const initialState = {
   hashObj: {},
   results: [],
   persisted: [],
+  study: null
 };
 
 const reduceObject = {
@@ -63,12 +66,12 @@ const reduceObject = {
   PERSIST_ALL: (state, action) => {
     let newPersisted = state.persisted.slice(0).concat(state.results.slice(0));
     let newHash = {};
-    newPersisted.forEach(study => newHash[study.id] = 1);
+    newPersisted.forEach(study => (newHash[study.id] = 1));
     return {
       ...state,
       persisted: newPersisted,
       results: [],
-      hashObj: newHash
+      hashObj: newHash,
     };
   },
   SET_TAB: (state, action) => {
@@ -106,6 +109,15 @@ const reduceObject = {
         open: action.bool,
       },
     };
+  },
+  CLEAR: (state, action) => {
+    return initialState
+  },
+  SET_CURRENT_COLLECTION: (state, action) => {
+    return {
+      ...state,
+      current: action.collection
+    }
   }
 };
 

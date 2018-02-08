@@ -63,18 +63,19 @@ class Nav extends Component {
               >
                 <input
                   name="query"
-                  class="prompt"
+                  className="prompt"
                   type="text"
                   placeholder="Search website..."
                   onChange={this.handleChange}
                 />
-                <i class="search icon" />
+                <i className="search icon" />
               </form>
             </Menu.Item>
+
             <Menu.Item>
               <InfoModal />
             </Menu.Item>
-            <Dropdown item text={<i className="user circle outline icon" />}>
+            <Dropdown item icon={<i className="user circle outline icon" />}>
               <Dropdown.Menu>
                 <Dropdown.Item>
                   <NavLink to="/profile" style={{ color: "black" }}>
