@@ -18,9 +18,9 @@ import dave from "../../assets/images/dave.png";
 const Landing = () => {
   return (
     <div>
-      <div class="ui  vertical masthead center aligned segment">
-        <div class="following bar">
-          <div class="ui container">
+      <div className="ui  vertical masthead center aligned segment">
+        <div className="following bar">
+          <div className="ui container">
             <NavContainer />
           </div>
         </div>
@@ -29,8 +29,8 @@ const Landing = () => {
         <br />
         <br />
         <br />
-        <div class="ui text container">
-          <i class="connectdevelop icon massive" />
+        <div className="ui text container">
+          <i className="connectdevelop icon massive" />
           <h2>Your Portal to Papers and Metanalyses</h2>
         </div>
         <br />
@@ -65,7 +65,7 @@ const Landing = () => {
             <Grid>
               <Grid.Row columns={3}>
                 <Grid.Column>
-                  <i class="flask icon huge" />
+                  <i className="flask icon huge" />
 
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -77,7 +77,7 @@ const Landing = () => {
                   <Button>Science!</Button>
                 </Grid.Column>
                 <Grid.Column>
-                  <i class="line graph icon huge" />
+                  <i className="line graph icon huge" />
                   <br />
                   <p>
                     {" "}
@@ -90,7 +90,7 @@ const Landing = () => {
                   <Button>Analyses!</Button>
                 </Grid.Column>
                 <Grid.Column>
-                  <i class="thermometer icon huge" />
+                  <i className="thermometer icon huge" />
                   <br />
                   <p>
                     {" "}
@@ -117,7 +117,7 @@ const Landing = () => {
                       <Image
                         src={johann}
                         centered
-                        circular="true"
+                        circular={true}
                         size="tiny"
                       />
                     }
@@ -135,7 +135,7 @@ const Landing = () => {
                 <Grid.Column>
                   <Popup
                     trigger={
-                      <Image src={gene} centered circular="true" size="tiny" />
+                      <Image src={gene} centered circular={true} size="tiny" />
                     }
                     content="The man behind the
                     machine."
@@ -151,7 +151,7 @@ const Landing = () => {
                 <Grid.Column>
                   <Popup
                     trigger={
-                      <Image src={dave} centered circular="true" size="tiny" />
+                      <Image src={dave} centered circular={true} size="tiny" />
                     }
                     content={`"Dazzle me."`}
                   />
@@ -166,7 +166,7 @@ const Landing = () => {
                 <Grid.Column>
                   <Popup
                     trigger={
-                      <Image src={edwin} centered circular="true" size="tiny" />
+                      <Image src={edwin} centered circular={true} size="tiny" />
                     }
                     content="Ready to go #beastmode at a moment's notice."
                   />
@@ -182,7 +182,7 @@ const Landing = () => {
                 <Grid.Column>
                   <Popup
                     trigger={
-                      <Image src={hai} centered circular="true" size="tiny" />
+                      <Image src={hai} centered circular={true} size="tiny" />
                     }
                     content="It's pronounced /hi/."
                   />

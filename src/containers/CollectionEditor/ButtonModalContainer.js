@@ -1,31 +1,41 @@
 import {connect} from 'react-redux';
 import ButtonModal from '../../components/CollectionEditor/ButtonModal';
-import {setFetch, changeButton, setOpen} from '../../actions/collectionEdit';
+import {
+  setFetch,
+  clear,
+  changeButton,
+  setOpen,
+} from '../../actions/collectionEdit';
 import {addCollection} from '../../actions/Dashboard';
 import serialize from 'form-serialize';
 import axios from 'axios';
 import root from '../../lib/root';
 
 const mapStateToProps = state => {
-  let analysisArray = state.routeProps.search ? state.routeProps.search.split('=') : [null]
+  let analysisArray = state.routeProps.search
+    ? state.routeProps.search.split('=')
+    : [null];
   console.log(analysisArray);
-  let analysisId = analysisArray[analysisArray.length - 1]
-  let destination = analysisId ? `/analysis/${analysisId}/edit` : `/collections/${state.routeProps.params.id}`
+  let analysisId = analysisArray[analysisArray.length - 1];
+  let destination = analysisId
+    ? `/analysis/${analysisId}/edit`
+    : `/collections/${state.routeProps.params.id}`;
   return {
     open: state.collectionEdit.varObj.open,
     categories: state.collectionEdit.varObj.buttons,
     isFetching: state.collectionEdit.varObj.isFetching,
     persisted: state.collectionEdit.persisted,
     ownerId: state.Dashboard.user._id,
-    endOfItAll: ()=> state.routeProps.history.push(destination),
+    endOfItAll: () => state.routeProps.history.push(destination),
     collectionId: state.routeProps.params.id,
-    analysisId: analysisId
+    analysisId: analysisId,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     changeCategory: n => dispatch(changeButton(n)),
+    clear: () => dispatch(clear()),
     onClose: () => dispatch(setOpen(false)),
     saveCollection: (
       collectionId,
@@ -63,7 +73,7 @@ const mapDispatchToProps = dispatch => {
         })
         .then(returnObject => {
           console.log(returnObject);
-          if(returnObject.analysisId){
+          if (returnObject.analysisId) {
             let putObject = {
               ownerId: returnObject.ownerId,
               data: {
@@ -71,12 +81,15 @@ const mapDispatchToProps = dispatch => {
                   collectionId: returnObject.collectionId,
                 },
               },
-            }
-            let analysisString = `${root()}/api/analyses/${returnObject.analysisId}`;
-            axios.put(analysisString, putObject)
+            };
+            let analysisString = `${root()}/api/analyses/${
+              returnObject.analysisId
+            }`;
+            axios
+              .put(analysisString, putObject)
               .then(response => {
-                console.log(response)
-                console.log(response.data)
+                console.log(response);
+                console.log(response.data);
               })
               .catch(err => console.error(err));
           }
@@ -105,6 +118,7 @@ const mergeProps = (stateProps, dispatchProps) => {
         stateProps.ownerId,
         data.description,
       );
+      dispatchProps.clear();
       stateProps.endOfItAll();
     },
   };

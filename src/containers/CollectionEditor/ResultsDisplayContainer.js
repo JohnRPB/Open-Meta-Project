@@ -6,7 +6,7 @@ import root from '../../lib/root';
 const mapStateToProps = state => {
   return {
     persisted: state.collectionEdit.persisted,
-    results: state.collectionEdit.results,
+    results: state.collectionEdit.results.slice((state.collectionEdit.varObj.page - 1) * 10, 10 * state.collectionEdit.varObj.page),
     isFetching: state.collectionEdit.varObj.isFetching,
   };
 };

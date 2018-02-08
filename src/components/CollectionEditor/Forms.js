@@ -12,7 +12,7 @@ const Forms = ({activeTab, isFetching, setTab}) => {
         {tabTitles.map((title, index) => {
           return (
             <Menu.Item
-              active={activeTab == index}
+              active={activeTab === index}
               key={index}
               onClick={() => {
                 setTab(index);

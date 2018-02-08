@@ -76,7 +76,7 @@ class Collection extends Component {
                     {Collection.name}{" "}
                     <span style={{ fontSize: "16px" }}>
                       <NavLink to={`${Collection._id}/edit`}>
-                        <Icon name="edit" mini />
+                        <Icon name="edit" mini="true" />
                       </NavLink>
                     </span>
                   </h1>

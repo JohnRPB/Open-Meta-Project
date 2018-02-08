@@ -60,3 +60,10 @@ export const setOpen = bool => {
     bool
   }
 }
+
+export const CLEAR = "CLEAR";
+export const clear = () => {
+  return {
+    type: CLEAR,
+  }
+}

@@ -6,6 +6,7 @@ import {
   CHANGE_BUTTON,
   SET_PAGE,
   SET_OPEN,
+  CLEAR
 } from '../actions/collectionEdit';
 
 const initialState = {
@@ -63,12 +64,12 @@ const reduceObject = {
   PERSIST_ALL: (state, action) => {
     let newPersisted = state.persisted.slice(0).concat(state.results.slice(0));
     let newHash = {};
-    newPersisted.forEach(study => newHash[study.id] = 1);
+    newPersisted.forEach(study => (newHash[study.id] = 1));
     return {
       ...state,
       persisted: newPersisted,
       results: [],
-      hashObj: newHash
+      hashObj: newHash,
     };
   },
   SET_TAB: (state, action) => {
@@ -106,7 +107,21 @@ const reduceObject = {
         open: action.bool,
       },
     };
-  }
+  },
+  CLEAR: (state, action) => {
+    return {
+      varObj: {
+        isFetching: false,
+        tab: 0,
+        page: 1,
+        buttons: 1,
+        open: false,
+      },
+      hashObj: {},
+      results: [],
+      persisted: [],
+    };
+  },
 };
 
 const collectionEdit = (state = initialState, action) => {

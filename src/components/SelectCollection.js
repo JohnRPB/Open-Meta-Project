@@ -36,29 +36,29 @@ class SelectCollection extends Component {
     //then give analysis id to edwin
     //CurrentAnalysisId
     e.preventDefault();
-    let obj = {
-      ownerId: this.props.Token.id,
-      data: {inclusion: {collectionId: this.props._selectedCollection}}
-    };
-    console.log("obj =>", obj);
+    // let obj = {
+    //   ownerId: this.props.Token.id,
+    //   data: {inclusion: {collectionId: this.props._selectedCollection}}
+    // };
+    // console.log("obj =>", obj);
     // console.log(
     //   "this.props.location.search.splice(4) =>",
     //   this.props.location.search.slice(4)
     // );
 
-    axios
-      .put(`${root()}/analyses/${this.props.location.search.slice(4)}`, obj)
-      .then(response => {
-        // if(response.ok) {
-        //   return response.blob();
-        // }
-        // throw new Error('Network response was not ok.');
-        console.log("fetch done in Components/SelectCollection.js");
-        //this.props.history.push this.props.history.push("/myanalyses/:id")
-      })
-      .catch(e => {
-        console.log("fetch error in Components/SelectCollection.js");
-      });
+    // axios
+    //   .post(`${root()}/api/analyses/${}`, obj)
+    //   .then(response => {
+    //     // if(response.ok) {
+    //     //   return response.blob();
+    //     // }
+    //     // throw new Error('Network response was not ok.');
+    //     console.log("fetch done in Components/SelectCollection.js");
+        this.props.history.push(`/analysis/${this.props.location.search.slice(4)}`)
+      // })
+      // .catch(e => {
+      //   console.log("fetch error in Components/SelectCollection.js");
+      // });
 
     // fetch({
     //   method: "put",

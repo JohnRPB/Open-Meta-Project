@@ -56,7 +56,7 @@ class IframeDisplay extends Component {
     return (
       <div className="frame-container">
         <a href={this.props.outputLoc} style={{float:"right"}}>See larger</a>
-        <iframe src={this.props.outputLoc} frameBorder="0" scrolling="no" />
+        <iframe src={this.props.outputLoc} frameBorder="0" title={this.props.outputLoc} scrolling="no" />
       </div>
     );
   }
