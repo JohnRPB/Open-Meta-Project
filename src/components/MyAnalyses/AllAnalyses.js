@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {NavLink} from "react-router-dom";
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import NavContainer from "../../containers/NavContainer";
 import Nav from "../Nav";
 import {
@@ -23,7 +23,6 @@ import Related from "./Related";
 import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
-import Table from "../Profile/Table";
 import defaultpicture from "../../assets/images/default.jpg";
 const faker = require("faker");
 
@@ -35,13 +34,6 @@ class AllAnalyses extends Component {
     this.UserId = "5a74fa36425cf997daab4328";
     this.test = true;
   }
-
-  // componentWillMount() {
-  //   console.log("inside will mount => ", this.props);
-  //   if (!this.props._token) {
-  //     this.props.history.push("/login");
-  //   }
-  // }
 
   render() {
     let analysisCards;
@@ -81,7 +73,10 @@ class AllAnalyses extends Component {
               <NavContainer />
             </div>
           </div>
-
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <Container>
             <Grid>
@@ -92,26 +87,21 @@ class AllAnalyses extends Component {
                 <Grid.Column width={3}>
                   <Image src={defaultpicture} circular size="small" />
                 </Grid.Column>
-                <Grid.Column width={4}>
+                <Grid.Column width={8}>
                   <br />
-                  <Header as="h1" floated="left">
-                    {this.props.MyAnalysesPage.user.profile.f_name}
+
+                  <Header as="h1" floated="left" textalign="left">
+                    {`${this.props.MyAnalysesPage.user.profile.fname} ${
+                      this.props.MyAnalysesPage.user.profile.lname
+                    }`}
+                    <Header.Subheader>
+                      {" "}
+                      {this.props.MyAnalysesPage.user.profile.title} at{" "}
+                      {this.props.MyAnalysesPage.user.profile.organization}
+                    </Header.Subheader>
                   </Header>
+
                   <br />
-                  <Button.Group basic>
-                    <Button>
-                      <NavLink to="/myanalyses">Recent</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/collections">Collections</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/analyses">Analyses</NavLink>
-                    </Button>
-                    {/* <Button>
-                    <NavLink to="/reviews">Reviews</NavLink>
-                  </Button> */}
-                  </Button.Group>
                 </Grid.Column>
               </Grid.Row>
 
@@ -131,7 +121,7 @@ class AllAnalyses extends Component {
                     ) : (
                       <div>
                         <Header as="h1" textalign="left">
-                          Recent Analyses
+                          All Analyses
                         </Header>
                         <Divider />
                         <Card.Group>
@@ -146,9 +136,6 @@ class AllAnalyses extends Component {
                           )}
                         </Card.Group>
                         <br />
-                        <NavLink to="/analyses">
-                          <p>See all analyses</p>
-                        </NavLink>
                       </div>
                     )}
                   </Segment>

@@ -2,8 +2,13 @@ import {
   addText,
   handleDropping,
   showForm,
-  deleteElement
+  deleteElement,
+  editElement,
+  saveElement,
+  saveDocument,
+  updateAnalysis
 } from "../actions/project";
+import { getAnalysis } from "../actions/Analysis";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { withRouter } from "react-router";
@@ -17,7 +22,12 @@ function mapStateToProps(state) {
     dustbins: state.project.dustbins,
     boxes: state.project.boxes,
     droppedBoxNames: state.project.droppedBoxNames,
-    showForm: state.project.showForm
+    showForm: state.project.showForm,
+    editing: state.project.editing,
+    Analysis: state.project.Analysis
+    // _id: state.Token.id,
+    // _token: state.Token.token,
+    // isFetching: state.MyAnalysesPage.isFetching
   };
 }
 
@@ -28,12 +38,12 @@ function mapDispatchToProps(dispatch) {
       e.stopPropagation();
       const form = e.target;
       const data = serialize(form, { hash: true });
-      console.log("DATA", data);
       data.index = index;
       dispatch(addText(data));
       form.reset();
     },
     handleDrop: (index2, item, index) => {
+      //index += 1;
       let args = { index2, item, index };
       dispatch(handleDropping(args));
     },
@@ -50,6 +60,28 @@ function mapDispatchToProps(dispatch) {
       e.preventDefault();
       e.stopPropagation();
       dispatch(deleteElement(index));
+    },
+    handleEdit: (e, index) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dispatch(editElement(index));
+    },
+    handleSave: (e, index) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const form = e.target;
+      const data = serialize(form, { hash: true });
+      data.index = index;
+      dispatch(saveElement(data));
+      form.reset();
+    },
+    getAnalysis: id => {
+      dispatch(getAnalysis(id));
+    },
+    saveDocument: (e, id, obj) => {
+      console.log("ANALYSIS ID", id);
+      dispatch(saveDocument());
+      dispatch(updateAnalysis(id, obj));
     }
     // getUpdatedModules: () => {
     //   dispatch(getUpdatedModules());

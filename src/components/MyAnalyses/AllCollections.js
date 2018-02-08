@@ -92,7 +92,10 @@ class AllCollections extends Component {
               <NavContainer />
             </div>
           </div>
-
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <Container>
             <Grid>
@@ -103,26 +106,21 @@ class AllCollections extends Component {
                 <Grid.Column width={3}>
                   <Image src={defaultpicture} circular size="small" />
                 </Grid.Column>
-                <Grid.Column width={4}>
+                <Grid.Column width={8}>
                   <br />
-                  <Header as="h1" floated="left">
-                    {this.props.MyAnalysesPage.user.profile.f_name}
+
+                  <Header as="h1" floated="left" textalign="left">
+                    {`${this.props.MyAnalysesPage.user.profile.fname} ${
+                      this.props.MyAnalysesPage.user.profile.lname
+                    }`}
+                    <Header.Subheader>
+                      {" "}
+                      {this.props.MyAnalysesPage.user.profile.title} at{" "}
+                      {this.props.MyAnalysesPage.user.profile.organization}
+                    </Header.Subheader>
                   </Header>
+
                   <br />
-                  <Button.Group basic>
-                    <Button>
-                      <NavLink to="/myanalyses">Recent</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/collections">Collections</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/analyses">Analyses</NavLink>
-                    </Button>
-                    {/* <Button>
-                    <NavLink to="/reviews">Reviews</NavLink>
-                  </Button> */}
-                  </Button.Group>
                 </Grid.Column>
               </Grid.Row>
 
@@ -136,14 +134,22 @@ class AllCollections extends Component {
                   <Segment>
                     {" "}
                     <Header as="h1" textalign="left">
-                      Recent Collections
+                      All Collections
                     </Header>
                     <Divider />
-                    <Card.Group items={collectionCards} itemsPerRow={3} />
+                    <Card.Group
+                      items={
+                        collectionCards.length
+                          ? collectionCards
+                          : [
+                              {
+                                description: "No current collections"
+                              }
+                            ]
+                      }
+                      itemsPerRow={3}
+                    />
                     <br />
-                    <NavLink to="/collections">
-                      <p>See all collections</p>
-                    </NavLink>
                   </Segment>
                 </Grid.Column>
               </Grid.Row>

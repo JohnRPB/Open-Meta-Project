@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {withRouter} from "react-router-dom";
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
 import {
   Button,
@@ -35,10 +35,12 @@ class AnalysisModal extends Component {
     console.log("send form starting");
     e.preventDefault();
     var form = document.querySelector("#new-analysis");
-    var obj = serialize(form, {hash: true});
+    var obj = serialize(form, { hash: true });
     obj.id = this.props.id;
-    console.log("send form axios starting");
-    console.log("send form obj is like this:", obj);
+    console.log("obj in analysis => ", obj);
+    // obj.headers = new Headers({
+    //   "x-access-token": this.props._token
+    // });
 
     axios
       .post(`${root}/api/analyses`, obj)

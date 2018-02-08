@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Nav from "../Nav";
 import {
   Segment,
@@ -33,7 +33,7 @@ class Analysis extends Component {
   render() {
     console.log("analysis props => ", this.props);
     if (!this.props.isFetching) {
-      var {Analysis} = this.props;
+      var { Analysis } = this.props;
 
       // var studies = this.props.Analysis.data.inclusion.collectionId.studies.map(
       //   study => {
@@ -66,23 +66,27 @@ class Analysis extends Component {
               </div>
             </div>
             <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
             <Container>
-              {/* <Segment>
+              <Segment>
                 <Header as="h1">Analysis.data.header.title</Header>
                 <Divider />
-                <Header as="h4">
+                {/* <Header as="h4">
                   {Analysis.ownerId.profile.fname}{" "}
                   {Analysis.ownerId.profile.lname}
-                </Header>
-                <Header as="h5">{Analysis.hist[0].time}</Header>
+                </Header> */}
+                {/* <Header as="h5">{Analysis.hist[0].time}</Header> */}
                 <Label>category</Label> <Label>category2</Label>{" "}
                 <Label>category3</Label>
               </Segment>
 
               <Header as="h3">Included Studies</Header>
-              <Card.Group>{studies}</Card.Group>
-              <Divider /> */}
+              {/* <Card.Group>{studies}</Card.Group> */}
+              <Divider />
               <p>{JSON.stringify(Analysis.data, null, 5)}</p>
             </Container>
           </div>

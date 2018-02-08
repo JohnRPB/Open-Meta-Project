@@ -14,15 +14,13 @@ const style = {
   float: "left"
 };
 
-let createStudies = () =>
-  studies.map(study => Object.assign({}, study));
+let createStudies = () => studies.map(study => Object.assign({}, study));
 
-let createModule = (name) => {
+let createModule = name => {
   return {
     name: name,
     type: "graphic",
-    outputLoc:
-      "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png",
+    outputLoc: "Click on studies to load image",
     studies: createStudies()
   };
 };
@@ -30,27 +28,33 @@ let createModule = (name) => {
 const boxSource = {
   beginDrag(props) {
     return {
-      name: props.name,
+      displayName: props.displayName,
       loading: props.loading,
       type: props.type,
-      content: createModule(props.name)
+      functionName: props.functionName,
+      content: createModule(props.functionName)
     };
   },
 
   isDragging(props, monitor) {
     const item = monitor.getItem();
-    return props.name === item.name;
+    return props.displayName === item.displayName;
   }
 };
 
 class Box extends Component {
   render() {
-    const { name, isDropped, isDragging, connectDragSource } = this.props;
+    const {
+      displayName,
+      isDropped,
+      isDragging,
+      connectDragSource
+    } = this.props;
     const opacity = isDragging ? 0.4 : 1;
 
     return connectDragSource(
       <div style={{ ...style, opacity }}>
-        {isDropped ? <s>{name}</s> : name}
+        {isDropped ? <s>{displayName}</s> : displayName}
       </div>
     );
   }

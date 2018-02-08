@@ -37,6 +37,8 @@ const newprofile = require("./newprofile");
 api.get("/express-test", (req, res) => res.send({express: "working!"})); //demo route to prove api is working
 api.use("/login", login);
 api.use("/register", register);
+api.use("/rmarkdown", rmarkdown)
+api.use(cors());
 
 // ------------
 //for each request append to the body the username and the token
@@ -85,7 +87,6 @@ api
   .use("/newprofile", newprofile)
   .use("/users", users)
   .use("/tokentest", tokentest)
-  .use("/rmarkdown", rmarkdown)
   .use("/analyses", analyses)
   .use("/studies", studies)
   .use("/collections", collections)
