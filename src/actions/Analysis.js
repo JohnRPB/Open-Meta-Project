@@ -19,12 +19,10 @@ export function getAnalysisSuccess(data) {
 }
 
 export function getAnalysis(id) {
-  console.log("id => ", id);
   return dispatch => {
     axios
       .get(`${root}/api/analyses/${id}`)
       .then(response => {
-        console.log("response => ", response);
         dispatch(getAnalysisSuccess(response.data));
       })
       .catch(e => {

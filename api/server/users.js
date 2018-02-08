@@ -17,6 +17,7 @@ let Tag = sequelizeModels.Tag;
 // ------------------------
 let mongoModels = require("./../models/mongoose");
 let mongoUser = mongoModels.User;
+let mongoAnalysis = mongoModels.Analysis;
 
 // ------------------------
 // Routes
@@ -25,25 +26,38 @@ let mongoUser = mongoModels.User;
 /* GET home page. */
 // router.get("/", function(req, res, next) {
 //   console.log("are we getting here?");
-  //
-  //what the hell is this?
-  //
-  // Study.findAll({
-  //   include: [{ model: Tag, as: "Tags" }]
-  // })
+//
+//what the hell is this?
+//
+// Study.findAll({
+//   include: [{ model: Tag, as: "Tags" }]
+// })
 //     .then(users => {
 //       res.status(200).send(users);
 //     })
 //     .catch(e => res.status(500).send(e.stack));
 // });
 
+// ------------------------
 // getting a single user
+// ------------------------
 router.get("/:userId", async (req, res, next) => {
-  let user = await mongoUser.findById(req.params.userId);
-  res.json(user);
+  var user = await mongoUser.findById(req.params.userId);
+  // console.log("user in api =>", user);
+  let analyses = await user.analyses.map(async study => {
+    let populatedStudy = await mongoAnalysis.findById(study._id);
+    return populatedStudy;
+  });
+
+  Promise.all(analyses).then(result => {
+    user.analyses = result;
+    res.json(user);
+  });
 });
 
+// ------------------------
 /* Login or register user */
+// ------------------------
 router.post("/", function(req, res, next) {
   console.log("req.body => ", req.body);
   res.send("response back from api!");

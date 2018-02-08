@@ -7,20 +7,22 @@ import {
   Image,
   Container,
   Popup,
-  Header
+  Header,
+  Divider
 } from "semantic-ui-react";
 import hai from "../../assets/images/hai.jpg";
 import gene from "../../assets/images/gene.jpeg";
 import johann from "../../assets/images/johann.jpeg";
 import edwin from "../../assets/images/edwin.jpeg";
 import dave from "../../assets/images/dave.png";
+import graph from "../../assets/images/graph.png";
 
 const Landing = () => {
   return (
     <div>
-      <div class="ui  vertical masthead center aligned segment">
-        <div class="following bar">
-          <div class="ui container">
+      <div className="ui  vertical masthead center aligned segment">
+        <div className="following bar">
+          <div className="ui container">
             <NavContainer />
           </div>
         </div>
@@ -37,36 +39,80 @@ const Landing = () => {
         <br />
         <br />
         <Container>
+          {/* ABOUT TEXT */}
           <Segment>
             <Grid>
-              <Grid.Row columns={2}>
+              <Grid.Row>
                 <Grid.Column>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Est suscipit praesentium repudiandae ad neque, repellendus
                     eaque voluptates possimus consequuntur error modi nesciunt
                     nihil quas sed harum consequatur repellat. Earum,
-                    repudiandae.{" "}
-                  </p>
-                </Grid.Column>
-                <Grid.Column>
-                  <p>
-                    {" "}
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Est suscipit praesentium repudiandae ad neque, repellendus
-                    eaque voluptates possimus consequuntur error modi nesciunt
-                    nihil quas sed harum consequatur repellat. Earum,
-                    repudiandae.
+                    repudiandae.Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Est suscipit praesentium repudiandae ad
+                    neque, repellendus eaque voluptates possimus consequuntur
+                    error modi nesciunt nihil quas sed harum consequatur
+                    repellat. Earum, repudiandae.
                   </p>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
           </Segment>
+
+          {/* ANALYSIS EXAMPLE */}
+          <Segment>
+            <Grid>
+              <Grid.Row columns={2}>
+                <Grid.Column>
+                  <h3>Create Dynamic Reviews</h3>
+                  <Divider />
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est suscipit praesentium repudiandae ad neque, repellendus
+                    eaque voluptates possimus consequuntur error modi nesciunt
+                    nihil quas sed harum consequatur repellat. Earum,
+                    repudiandae.Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Est suscipit praesentium repudiandae ad
+                    neque, repellendus eaque voluptates possimus consequuntur
+                    error modi nesciunt nihil quas sed harum consequatur
+                    repellat. Earum, repudiandae.
+                  </p>
+                </Grid.Column>
+
+                <Grid.Column>
+                  <Image src={graph} bordered centered />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Segment>
+
+          {/* <Grid.Row columns={2} />
+            <Grid.Column>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+                suscipit praesentium repudiandae ad neque, repellendus eaque
+                voluptates possimus consequuntur error modi nesciunt nihil quas
+                sed harum consequatur repellat. Earum, repudiandae.Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Est suscipit
+                praesentium repudiandae ad neque, repellendus eaque voluptates
+                possimus consequuntur error modi nesciunt nihil quas sed harum
+                consequatur repellat. Earum, repudiandae.
+              </p>
+            </Grid.Column>
+            <Grid.Column>
+              <Image src={graph} />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid> */}
+
+          {/* FEATURES */}
           <Segment>
             <Grid>
               <Grid.Row columns={3}>
                 <Grid.Column>
-                  <i class="flask icon huge" />
+                  <i className="laptop icon huge" />
+                  <br />
                   <br />
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -79,8 +125,10 @@ const Landing = () => {
                   <br />
                 </Grid.Column>
                 <Grid.Column>
-                  <i class="line graph icon huge" />
+                  <i className="cubes icon huge" />
                   <br />
+                  <br />
+
                   <p>
                     {" "}
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -93,7 +141,8 @@ const Landing = () => {
                   <br />
                 </Grid.Column>
                 <Grid.Column>
-                  <i class="thermometer icon huge" />
+                  <i className="group icon huge" />
+                  <br />
                   <br />
                   <p>
                     {" "}
@@ -109,6 +158,8 @@ const Landing = () => {
               </Grid.Row>
             </Grid>
           </Segment>
+
+          {/* OUR TEAM */}
           <Segment>
             <h3>Our Team</h3>
             <Grid>

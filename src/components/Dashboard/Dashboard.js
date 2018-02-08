@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import {
   Grid,
-  Image,
-  Segment,
   Header,
   Container,
   Card,
@@ -13,7 +11,7 @@ import {
 } from "semantic-ui-react";
 import Feed from "./Feed";
 import NavContainer from "../../containers/NavContainer";
-import Related from "./Related";
+
 const faker = require("faker");
 
 class Dashboard extends Component {

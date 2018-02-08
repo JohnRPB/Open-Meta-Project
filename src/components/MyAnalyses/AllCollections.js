@@ -1,28 +1,18 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import NavContainer from "../../containers/NavContainer";
-import Nav from "../Nav";
 import {
-  Dropdown,
-  Menu,
   Segment,
   Header,
   Grid,
   Divider,
-  Button,
   Image,
   Card,
   Container,
-  Label,
-  Statistic,
-  Icon,
   Dimmer,
   Loader
 } from "semantic-ui-react";
-import Related from "./Related";
 import CollectionModal from "./CollectionModal";
-import AnalysisModal from "./AnalysisModal";
-import ReviewModal from "./ReviewModal";
 import defaultpicture from "../../assets/images/default.jpg";
 
 const faker = require("faker");

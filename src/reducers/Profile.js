@@ -9,7 +9,6 @@ const initialState = {
 export function Profile(state = initialState, action) {
   switch (action.type) {
     case Actions.GET_USER:
-      console.log("reducer => ", action);
       return {
         ...state,
         user: action.data,

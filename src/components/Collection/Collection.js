@@ -3,11 +3,7 @@ import Nav from "../Nav";
 import { NavLink } from "react-router-dom";
 import {
   Segment,
-  Grid,
-  Button,
-  Image,
   Container,
-  Popup,
   Header,
   Dimmer,
   Loader,
@@ -16,7 +12,6 @@ import {
   Card,
   Icon
 } from "semantic-ui-react";
-const moment = require("moment");
 
 class Collection extends Component {
   constructor(props) {
@@ -29,14 +24,12 @@ class Collection extends Component {
   }
 
   render() {
-    console.log("Collection props => ", this.props);
     if (!this.props.isFetching) {
       var { Collection } = this.props;
 
       var tags = this.props.Collection.category.map(el => {
         return <Label>{el.name}</Label>;
       });
-      console.log("tags => ", tags);
 
       var studies = this.props.Collection.studies.map(study => {
         return {
@@ -46,7 +39,6 @@ class Collection extends Component {
           meta: study.pubDate
         };
       });
-      console.log("studies => ", studies);
     }
 
     if (this.props.isFetching) {
@@ -74,17 +66,17 @@ class Collection extends Component {
                 <Segment>
                   <h1>
                     {Collection.name}{" "}
-                    <span style={{ fontSize: "16px" }}>
-                      <NavLink to={`${Collection._id}/edit`}>
-                        <Icon name="edit" mini />
-                      </NavLink>
-                    </span>
+                    {this.props.Token ? (
+                      <span style={{ fontSize: "16px" }}>
+                        <NavLink to={`${Collection._id}/edit`}>
+                          <Icon name="edit" mini />
+                        </NavLink>
+                      </span>
+                    ) : null}
                   </h1>
 
-                  <Divider />
                   {tags.length ? tags : <Label>no tags</Label>}
-                  <br />
-                  <br />
+                  <Divider />
                   <p>{Collection.description}</p>
                 </Segment>
                 <Segment>
