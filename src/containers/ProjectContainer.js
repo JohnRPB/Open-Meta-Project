@@ -6,7 +6,9 @@ import {
   editElement,
   saveElement,
   saveDocument,
-  updateAnalysis
+  updateAnalysis,
+  loadDocument,
+  getAnalysisAndLoad
 } from "../actions/project";
 import { getAnalysis } from "../actions/Analysis";
 import { connect } from "react-redux";
@@ -24,7 +26,8 @@ function mapStateToProps(state) {
     droppedBoxNames: state.project.droppedBoxNames,
     showForm: state.project.showForm,
     editing: state.project.editing,
-    Analysis: state.project.Analysis
+    Analysis: state.project.Analysis,
+    title: state.project.title
     // _id: state.Token.id,
     // _token: state.Token.token,
     // isFetching: state.MyAnalysesPage.isFetching
@@ -42,9 +45,9 @@ function mapDispatchToProps(dispatch) {
       dispatch(addText(data));
       form.reset();
     },
-    handleDrop: (index2, item, index) => {
-      //index += 1;
-      let args = { index2, item, index };
+    handleDrop: (indexOfDustbins, item, index) => {
+      // if (index > 0) index -= 1;
+      let args = { indexOfDustbins, item, index };
       dispatch(handleDropping(args));
     },
     handleClick: (e, index) => {
@@ -75,14 +78,18 @@ function mapDispatchToProps(dispatch) {
       dispatch(saveElement(data));
       form.reset();
     },
-    getAnalysis: id => {
-      dispatch(getAnalysis(id));
+    getAnalysisAndLoad: id => {
+      dispatch(getAnalysisAndLoad(id));
     },
     saveDocument: (e, id, obj) => {
       console.log("ANALYSIS ID", id);
-      dispatch(saveDocument());
+      // dispatch(saveDocument());
       dispatch(updateAnalysis(id, obj));
+    },
+    loadDocument: data => {
+      dispatch(loadDocument(data));
     }
+
     // getUpdatedModules: () => {
     //   dispatch(getUpdatedModules());
     // }
