@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../Nav";
+import { NavLink } from "react-router-dom";
 import {
   Segment,
   Grid,
@@ -12,7 +13,8 @@ import {
   Loader,
   Divider,
   Label,
-  Card
+  Card,
+  Icon
 } from "semantic-ui-react";
 const moment = require("moment");
 
@@ -23,7 +25,6 @@ class Collection extends Component {
   }
 
   componentWillMount() {
-    console.log("URL PARAM => ", this.props);
     this.props.getCollection(this.props.match.params.collection_id);
   }
 
@@ -31,6 +32,11 @@ class Collection extends Component {
     console.log("Collection props => ", this.props);
     if (!this.props.isFetching) {
       var { Collection } = this.props;
+
+      var tags = this.props.Collection.category.map(el => {
+        return <Label>{el.name}</Label>;
+      });
+      console.log("tags => ", tags);
 
       var studies = this.props.Collection.studies.map(study => {
         return {
@@ -40,6 +46,7 @@ class Collection extends Component {
           meta: study.pubDate
         };
       });
+      console.log("studies => ", studies);
     }
 
     if (this.props.isFetching) {
@@ -58,28 +65,45 @@ class Collection extends Component {
               </div>
             </div>
             <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <Container>
               <Container>
-                {/* <Segment>
-                  <Header as="h1">{Collection.name}</Header>
-                  <Divider />
-                  <Header as="h4">
-                    {Collection.ownerId.profile.fname}{" "}
-                    {Collection.ownerId.profile.lname}
-                  </Header>
-                  <Header as="h5">
-                    {moment(Collection.hist[0].time).format(`MMMM Do YYYY`)}
-                  </Header>
-                  <Label>category</Label> <Label>category2</Label>{" "}
-                  <Label>category3</Label>
-                </Segment>
-
                 <Segment>
-                  <Header as="h3">Included Studies</Header>
-                  <Card.Group items={studies} />
+                  <h1>
+                    {Collection.name}{" "}
+                    <span style={{ fontSize: "16px" }}>
+                      <NavLink to={`${Collection._id}/edit`}>
+                        <Icon name="edit" mini />
+                      </NavLink>
+                    </span>
+                  </h1>
+
+                  <Divider />
+                  {tags.length ? tags : <Label>no tags</Label>}
+                  <br />
+                  <br />
+                  <p>{Collection.description}</p>
                 </Segment>
-                <Divider /> */}
-                <p>{JSON.stringify(Collection)}</p>
+                <Segment>
+                  <Header as="h2">Included Studies</Header>
+                  <Divider />
+                  <Card.Group
+                    items={
+                      studies.length
+                        ? studies
+                        : [
+                            {
+                              header: "No selected studies",
+                              description: "Click here to add studies."
+                            }
+                          ]
+                    }
+                  />
+                </Segment>
+                <Divider />
               </Container>
             </Container>
           </div>

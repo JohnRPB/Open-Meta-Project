@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import NavContainer from "../../containers/NavContainer";
-import Nav from "../Nav";
 import {
   Dropdown,
   Menu,
@@ -17,13 +15,13 @@ import {
   Statistic,
   Icon,
   Dimmer,
-  Loader
+  Loader,
+  Feed
 } from "semantic-ui-react";
-import Related from "./Related";
+import NavContainer from "../../containers/NavContainer";
 import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
 import ReviewModal from "./ReviewModal";
-import Table from "../Profile/Table";
 import defaultpicture from "../../assets/images/default.jpg";
 const faker = require("faker");
 
@@ -37,15 +35,12 @@ class MyAnalysesPage extends Component {
     if (!this.props._token) {
       window.location.href = "/login";
     }
-
     this.props.getUser(this.props._id, this.props._token);
   }
 
   render() {
     let analysisCards;
     if (!this.props.MyAnalysesPage.isFetching) {
-      console.log("MyAnalyses: this.props: ", this.props);
-
       // creates cards for each analysis
       analysisCards = this.props.MyAnalysesPage.user.analyses
         .slice(0, 3)
@@ -95,7 +90,10 @@ class MyAnalysesPage extends Component {
               <NavContainer />
             </div>
           </div>
-
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <Container>
             <Grid>
@@ -106,26 +104,21 @@ class MyAnalysesPage extends Component {
                 <Grid.Column width={3}>
                   <Image src={defaultpicture} circular size="small" />
                 </Grid.Column>
-                <Grid.Column width={4}>
+                <Grid.Column width={8}>
                   <br />
-                  <Header as="h1" floated="left">
-                    {this.props.MyAnalysesPage.user.profile.f_name}
+
+                  <Header as="h1" floated="left" textalign="left">
+                    {`${this.props.MyAnalysesPage.user.profile.fname} ${
+                      this.props.MyAnalysesPage.user.profile.lname
+                    }`}
+                    <Header.Subheader>
+                      {" "}
+                      {this.props.MyAnalysesPage.user.profile.title} at{" "}
+                      {this.props.MyAnalysesPage.user.profile.organization}
+                    </Header.Subheader>
                   </Header>
+
                   <br />
-                  <Button.Group basic>
-                    <Button>
-                      <NavLink to="/myanalyses">Recent</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/collections">Collections</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/analyses">Analyses</NavLink>
-                    </Button>
-                    {/* <Button>
-                    <NavLink to="/reviews">Reviews</NavLink>
-                  </Button> */}
-                  </Button.Group>
                 </Grid.Column>
               </Grid.Row>
 
@@ -142,7 +135,18 @@ class MyAnalysesPage extends Component {
                       Recent Collections
                     </Header>
                     <Divider />
-                    <Card.Group items={collectionCards} itemsPerRow={3} />
+                    <Card.Group
+                      items={
+                        collectionCards.length
+                          ? collectionCards
+                          : [
+                              {
+                                description: "No current collections"
+                              }
+                            ]
+                      }
+                      itemsPerRow={3}
+                    />
                     <br />
                     <NavLink to="/collections">
                       <p>See all collections</p>

@@ -13,12 +13,12 @@ router.post("/", async (req, res) => {
     console.log("req.body.last in new profile =>", req.body.last);
 
     let registrantProfile = await new Profile({
-      f_name: req.body.first,
-      l_name: req.body.last,
+      fname: req.body.first,
+      lname: req.body.last,
       title: req.body.title,
       organization: req.body.organization,
-      description: req.body.description,
-      image: ""
+      background: req.body.description,
+      forkedFromTimes: 0
     });
 
     await registrantProfile.save(function(err) {
@@ -31,11 +31,11 @@ router.post("/", async (req, res) => {
     });
 
     res.json({
-      f_name: registrantProfile.f_name,
-      l_name: registrantProfile.l_name,
+      fname: registrantProfile.fname,
+      lname: registrantProfile.lname,
       title: registrantProfile.title,
       organization: registrantProfile.organization,
-      description: registrantProfile.description,
+      background: registrantProfile.background,
       image: registrantProfile.image
     });
   } catch (e) {

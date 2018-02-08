@@ -32,14 +32,25 @@ class AnalysisModal extends Component {
   }
 
   sendForm(e) {
+    console.log("send form starting");
     e.preventDefault();
     var form = document.querySelector("#new-analysis");
     var obj = serialize(form, { hash: true });
     obj.id = this.props.id;
+    console.log("obj in analysis => ", obj);
+    // obj.headers = new Headers({
+    //   "x-access-token": this.props._token
+    // });
 
-    axios.post(`${root}/api/analyses`, obj).then(response => {
-      this.props.history.push(`/selectcollection?id=${response.data}`);
-    });
+    axios
+      .post(`${root}/api/analyses`, obj)
+      .then(response => {
+        console.log("response in axios post gotten =>", response);
+        this.props.history.push(`/selectcollection?id=${response.data}`);
+      })
+      .catch(e => {
+        console.log("error in axios post sendForm", e);
+      });
   }
 
   render() {

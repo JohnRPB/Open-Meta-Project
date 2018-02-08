@@ -1,17 +1,15 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-//custom components and containers
+// -------------------------
+// Containers
+// -------------------------
 import TestCompContainer from "./containers/TestCompContainer";
-import About from "./components/About/About";
-import UserForm from "./containers/UserForm"; //userform container
 import ProjectContainer from "./containers/ProjectContainer";
 import DashboardContainer from "./containers/DashboardContainer";
 import SitesearchContainer from "./containers/SitesearchContainer";
-import Dashboard from "./components/Dashboard/Dashboard";
-import Landing from "./components/Landing/Landing.js";
 import ProfileContainer from "./containers/ProfileContainer";
 import MyAnalyses from "./containers/MyAnalyses";
-import CollectionSearch from "./components/Collections/CollectionSearch";
 import CollectionEditorContainer from "./containers/CollectionEditor/CollectionEditorContainer";
 import LogCheckContainer from "./containers/LogCheck/LogCheckContainer.js";
 import AnalysisContainer from "./containers/AnalysisContainer.js";
@@ -19,8 +17,20 @@ import AllAnalyses from "./containers/AllAnalyses";
 import CollectionContainer from "./containers/CollectionContainer.js";
 import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
+import SelectCollectionContainer from "./containers/SelectCollectionContainer";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Landing from "./components/Landing/Landing.js";
+import CollectionSearch from "./components/Collections/CollectionSearch";
+import SelectCollection from "./components/SelectCollection";
+import About from "./components/About/About";
+import UserForm from "./containers/UserForm"; //userform container
+
+
+
+// -------------------------
+// Routes
+// -------------------------
 
 const Routes = ({ history }) => {
   return (
@@ -28,7 +38,6 @@ const Routes = ({ history }) => {
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/sitesearch" component={SitesearchContainer} />
-        <Route exact path="/project" component={ProjectContainer} />
         <Route exact path="/login" component={UserForm} />
         <Route exact path="/newprofile" component={NewProfileContainer} />
         <Route exact path="/test" component={TestCompContainer} />
@@ -41,8 +50,18 @@ const Routes = ({ history }) => {
         <Route exact path="/analyses" component={AllAnalyses} />
         <Route
           exact
+          path="/selectcollection"
+          component={SelectCollectionContainer}
+        />
+        <Route
+          exact
           path="/analysis/:anaysis_id"
           component={AnalysisContainer}
+        />
+        <Route
+          exact
+          path="/analysis/:analysis_id/edit"
+          component={ProjectContainer}
         />
         {/* COLLECTION ROUTES */}
         <Route exact path="/collections" component={AllCollections} />
