@@ -66,13 +66,8 @@ const Landing = () => {
             <Grid>
               <Grid.Row columns={3}>
                 <Grid.Column>
-<<<<<<< HEAD
                   <i className="flask icon huge" />
-
-=======
-                  <i class="flask icon huge" />
                   <br />
->>>>>>> master
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Est suscipit praesentium repudiandae ad neque, repellendus

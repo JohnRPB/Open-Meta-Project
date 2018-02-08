@@ -16,7 +16,6 @@ const mapDispatchToProps = dispatch => {
     changeStudyStatus: (id, persist, index) => {
       dispatch(changePersist(id, persist, index));
     },
-    setOpen: bool => dispatch(setOpen(bool))
   };
 };
 

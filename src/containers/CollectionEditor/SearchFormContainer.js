@@ -7,6 +7,7 @@ import {setFetch, newResults} from '../../actions/collectionEdit';
 
 const mapStateToProps = state => {
   return {
+    isFetching: state.collectionEdit.varObj.isFetching
   }
 }
 

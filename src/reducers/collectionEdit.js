@@ -6,7 +6,8 @@ import {
   CHANGE_BUTTON,
   SET_PAGE,
   SET_OPEN,
-  CLEAR
+  CLEAR,
+  SET_CURRENT_COLLECTION
 } from '../actions/collectionEdit';
 
 const initialState = {
@@ -20,6 +21,7 @@ const initialState = {
   hashObj: {},
   results: [],
   persisted: [],
+  study: null
 };
 
 const reduceObject = {
@@ -109,19 +111,14 @@ const reduceObject = {
     };
   },
   CLEAR: (state, action) => {
-    return {
-      varObj: {
-        isFetching: false,
-        tab: 0,
-        page: 1,
-        buttons: 1,
-        open: false,
-      },
-      hashObj: {},
-      results: [],
-      persisted: [],
-    };
+    return initialState
   },
+  SET_CURRENT_COLLECTION: (state, action) => {
+    return {
+      ...state,
+      current: action.collection
+    }
+  }
 };
 
 const collectionEdit = (state = initialState, action) => {
