@@ -57,7 +57,7 @@ class AllAnalyses extends Component {
               key={analysis._id}
               header={
                 <NavLink to={`/analysis/${analysis._id}`}>
-                  { analysis.data._id || "My Analysis" }
+                  {analysis.data._id || "My Analysis"}
                 </NavLink>
               }
               description={faker.lorem.paragraph()}
@@ -81,7 +81,10 @@ class AllAnalyses extends Component {
               <NavContainer />
             </div>
           </div>
-
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <Container>
             <Grid>
@@ -95,23 +98,9 @@ class AllAnalyses extends Component {
                 <Grid.Column width={4}>
                   <br />
                   <Header as="h1" floated="left">
-                    {this.props.MyAnalysesPage.user.profile.f_name}
+                    {this.props.MyAnalysesPage.user.profile.fname}
                   </Header>
                   <br />
-                  <Button.Group basic>
-                    <Button>
-                      <NavLink to="/myanalyses">Recent</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/collections">Collections</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/analyses">Analyses</NavLink>
-                    </Button>
-                    {/* <Button>
-                    <NavLink to="/reviews">Reviews</NavLink>
-                  </Button> */}
-                  </Button.Group>
                 </Grid.Column>
               </Grid.Row>
 
@@ -131,7 +120,7 @@ class AllAnalyses extends Component {
                     ) : (
                       <div>
                         <Header as="h1" textalign="left">
-                          Recent Analyses
+                          All Analyses
                         </Header>
                         <Divider />
                         <Card.Group>
@@ -146,9 +135,6 @@ class AllAnalyses extends Component {
                           )}
                         </Card.Group>
                         <br />
-                        <NavLink to="/analyses">
-                          <p>See all analyses</p>
-                        </NavLink>
                       </div>
                     )}
                   </Segment>

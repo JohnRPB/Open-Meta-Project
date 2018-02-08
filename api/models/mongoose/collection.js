@@ -46,7 +46,7 @@ CollectionSchema.methods.fork = async function(newOwnerId) {
   let collectionBuild = {
     ownerId: newOwnerId,
     studies: this.studies.splice(0),
-    hist: this.hist.splice(0).concat({ histId: this._id, time: new Date() }),
+    hist: this.hist.splice(0).concat({histId: this._id, time: new Date()}),
     category: this.data.category.splice(0)
   };
   let newCollection = new Collection(collectionBuild);
@@ -72,18 +72,17 @@ CollectionSchema.methods.sqlFind = function() {
           this._doc.studies[i] = this._doc.studies[i].dataValues;
         }
       }
-    return this;
-  })
-  .catch(err => console.error(err));
-  
-}
-const unSQL = function(next){
+      return this;
+    })
+    .catch(err => console.error(err));
+};
+const unSQL = function(next) {
   let studiesArray = this._update.studies || [];
-    studiesArray.forEach((study,index) => {
-      if(typeof study == 'object'){
-        this._update.studies[index] = this._update.studies[index].id;
-      }
-    });
+  studiesArray.forEach((study, index) => {
+    if (typeof study == "object") {
+      this._update.studies[index] = this._update.studies[index].id;
+    }
+  });
   next();
 };
 

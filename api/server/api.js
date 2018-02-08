@@ -1,23 +1,6 @@
 const api = (module.exports = require("express").Router());
 var jwt = require("jsonwebtoken");
 const cors = require("cors");
-api.use(cors());
-
-// const products = require('./products');
-// const reviews = require('./reviews');
-// import products from './products';
-
-// const express = require('express');
-const users = require("./users.js");
-const rmarkdown = require("./rmarkdown");
-const studies = require("./study");
-const myanalyses = require("./MyAnalyses");
-const login = require("./login");
-const register = require("./register");
-const collections = require("./collections");
-const tokentest = require("./tokentest");
-const newprofile = require("./newprofile");
-const analyses = require("./analyses");
 
 api.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -33,7 +16,25 @@ api.use((req, res, next) => {
   next();
 });
 
-api.get("/express-test", (req, res) => res.send({ express: "working!" })); //demo route to prove api is working
+api.use(cors());
+
+// const products = require('./products');
+// const reviews = require('./reviews');
+// import products from './products';
+
+// const express = require('express');
+const users = require("./users.js");
+const rmarkdown = require("./rmarkdown");
+const studies = require("./study");
+const myanalyses = require("./MyAnalyses");
+const analyses = require("./analyses");
+const login = require("./login");
+const register = require("./register");
+const collections = require("./collections");
+const tokentest = require("./tokentest");
+const newprofile = require("./newprofile");
+
+api.get("/express-test", (req, res) => res.send({express: "working!"})); //demo route to prove api is working
 api.use("/login", login);
 api.use("/register", register);
 
@@ -80,7 +81,7 @@ api.use((req, res, next) => {
 
 //rest of the backend
 api
-  .get("/express-test", (req, res) => res.send({ express: "working!" })) //demo route to prove api is working
+  .get("/express-test", (req, res) => res.send({express: "working!"})) //demo route to prove api is working
   .use("/newprofile", newprofile)
   .use("/users", users)
   .use("/tokentest", tokentest)

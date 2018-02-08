@@ -92,7 +92,10 @@ class AllCollections extends Component {
               <NavContainer />
             </div>
           </div>
-
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <Container>
             <Grid>
@@ -106,23 +109,9 @@ class AllCollections extends Component {
                 <Grid.Column width={4}>
                   <br />
                   <Header as="h1" floated="left">
-                    {this.props.MyAnalysesPage.user.profile.f_name}
+                    {this.props.MyAnalysesPage.user.profile.fname}
                   </Header>
                   <br />
-                  <Button.Group basic>
-                    <Button>
-                      <NavLink to="/myanalyses">Recent</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/collections">Collections</NavLink>
-                    </Button>
-                    <Button>
-                      <NavLink to="/analyses">Analyses</NavLink>
-                    </Button>
-                    {/* <Button>
-                    <NavLink to="/reviews">Reviews</NavLink>
-                  </Button> */}
-                  </Button.Group>
                 </Grid.Column>
               </Grid.Row>
 
@@ -136,14 +125,11 @@ class AllCollections extends Component {
                   <Segment>
                     {" "}
                     <Header as="h1" textalign="left">
-                      Recent Collections
+                      All Collections
                     </Header>
                     <Divider />
                     <Card.Group items={collectionCards} itemsPerRow={3} />
                     <br />
-                    <NavLink to="/collections">
-                      <p>See all collections</p>
-                    </NavLink>
                   </Segment>
                 </Grid.Column>
               </Grid.Row>
