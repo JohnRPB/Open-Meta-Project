@@ -51,7 +51,7 @@ class MasterDocument extends Component {
   componentWillMount() {
     //this.getUpdatedModules();
 
-    this.props.getAnalysisAndLoad("5a7b7c28841dd6697bba76d2");
+    this.props.getAnalysisAndLoad(this.props.analysisId);
 
     // let routingId = this.props.location.pathname.split("/")[-2];
   }
