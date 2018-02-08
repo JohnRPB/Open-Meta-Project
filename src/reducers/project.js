@@ -206,19 +206,28 @@ const project = (state = initialState, action) => {
         ]
       };
     case UPDATE_LOC:
-      blocks = state.blocks.slice();
-      blocks[action.data.moduleIdx].content = Object.assign(
-        {},
-        blocks[action.data.moduleIdx].content
-      );
-      blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
-      blocks[action.data.moduleIdx].loading = false;
+      //we are manipulating state in place here. we need to create a new object at that index
+      // blocks = state.blocks.slice();
+      // blocks[action.data.moduleIdx].content = Object.assign(
+      //   {},
+      //   blocks[action.data.moduleIdx].content
+      // );
+      // blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
+      // blocks[action.data.moduleIdx].loading = false;
+
       return {
         ...state,
         blocks: [
-          ...blocks.slice(0, action.data.moduleIdx),
-          blocks[action.data.moduleIdx],
-          ...blocks.slice(action.data.moduleIdx + 1)
+          ...state.blocks.slice(0, action.data.moduleIdx),
+          {
+            ...state.blocks[action.data.moduleIdx],
+            content: {
+              ...state.blocks[action.data.moduleIdx].content,
+              outputLoc: action.data.updatedLoc
+            },
+            loading: false
+          },
+          ...state.blocks.slice(action.data.moduleIdx + 1)
         ]
       };
     case REMOVE_STUDY:

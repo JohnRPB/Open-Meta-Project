@@ -25,6 +25,13 @@ import {
 } from "semantic-ui-react";
 import "../../index.css";
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  NavLink
+} from "react-router-dom";
+
 import collection from "../../databaseStudies";
 import ModuleContainer from "../../containers/Modules/ModuleContainer";
 
@@ -76,11 +83,15 @@ class MasterDocument extends Component {
     return (
       <div>
         <NavContainer />
+        <br />
         <h1>{/*Analysis.data.header.title*/}</h1>
-        <h3>
-          Drag and drop modules onto your document. Navigate through document by
-          clicking on items
-        </h3>
+        <br />
+        <center>
+          <h3>
+            Drag and drop modules onto your document. Navigate through document
+            by clicking on items
+          </h3>
+        </center>
         <Grid centered columns={2}>
           <Grid.Column>
             <div ref={this.handleContextRef}>
@@ -111,6 +122,13 @@ class MasterDocument extends Component {
                 </Rail>
                 <Rail position="right">
                   <Sticky context={contextRef}>
+                    <NavLink
+                      className="ui button brown"
+                      to={`/${Analysis._id}`}
+                    >
+                      Go to Analysis page
+                    </NavLink>
+                    <br />
                     <Button
                       onClick={e => saveDocument(e, Analysis._id, Analysis)}
                       color="orange"
