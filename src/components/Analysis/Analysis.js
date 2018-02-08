@@ -23,6 +23,10 @@ class Analysis extends Component {
   }
 
   componentWillMount() {
+    console.log(
+      "this.props.match.params.anaysis_id ==> ",
+      this.props.match.params.anaysis_id
+    );
     this.props.getAnalysis(this.props.match.params.anaysis_id);
   }
 
@@ -62,23 +66,27 @@ class Analysis extends Component {
               </div>
             </div>
             <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
             <Container>
-              {/* <Segment>
+              <Segment>
                 <Header as="h1">Analysis.data.header.title</Header>
                 <Divider />
-                <Header as="h4">
+                {/* <Header as="h4">
                   {Analysis.ownerId.profile.fname}{" "}
                   {Analysis.ownerId.profile.lname}
-                </Header>
-                <Header as="h5">{Analysis.hist[0].time}</Header>
+                </Header> */}
+                {/* <Header as="h5">{Analysis.hist[0].time}</Header> */}
                 <Label>category</Label> <Label>category2</Label>{" "}
                 <Label>category3</Label>
               </Segment>
 
               <Header as="h3">Included Studies</Header>
-              <Card.Group>{studies}</Card.Group>
-              <Divider /> */}
+              {/* <Card.Group>{studies}</Card.Group> */}
+              <Divider />
               <p>{JSON.stringify(Analysis.data, null, 5)}</p>
             </Container>
           </div>

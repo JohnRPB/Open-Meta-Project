@@ -42,6 +42,10 @@ class Profile extends Component {
           </div>
         </div>
         <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Container>
           <Grid>
             <Grid.Column width={1} />
@@ -79,13 +83,12 @@ class Profile extends Component {
                 {" "}
                 <Statistic.Group widths="four">
                   <Statistic>
-                    <Statistic.Value>52</Statistic.Value>
-                    <Statistic.Label>Reviews</Statistic.Label>
-                  </Statistic>
-
-                  <Statistic>
-                    <Statistic.Value>41</Statistic.Value>
-                    <Statistic.Label>Forks</Statistic.Label>
+                    <Statistic.Value>
+                      {!this.props.isFetching
+                        ? `${this.props.MyAnalysesPage.user.collections.length}`
+                        : null}
+                    </Statistic.Value>
+                    <Statistic.Label>Collections</Statistic.Label>
                   </Statistic>
 
                   <Statistic>
@@ -99,6 +102,10 @@ class Profile extends Component {
 
                   <Statistic>
                     <Statistic.Value>42</Statistic.Value>
+                    <Statistic.Label>Forks</Statistic.Label>
+                  </Statistic>
+                  <Statistic>
+                    <Statistic.Value>3</Statistic.Value>
                     <Statistic.Label>Followers</Statistic.Label>
                   </Statistic>
                 </Statistic.Group>

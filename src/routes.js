@@ -19,16 +19,17 @@ import AllAnalyses from "./containers/AllAnalyses";
 import CollectionContainer from "./containers/CollectionContainer.js";
 import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
+import SelectCollection from "./components/SelectCollection";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-const Routes = ({ history }) => {
+const Routes = ({history}) => {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/sitesearch" component={SitesearchContainer} />
-        <Route exact path="/project" component={ProjectContainer} />
+
         <Route exact path="/login" component={UserForm} />
         <Route exact path="/newprofile" component={NewProfileContainer} />
         <Route exact path="/test" component={TestCompContainer} />
@@ -39,10 +40,16 @@ const Routes = ({ history }) => {
         <Route exact path="/myanalyses/:user_id?" component={MyAnalyses} />
         {/* ANALYSIS ROUTES */}
         <Route exact path="/analyses" component={AllAnalyses} />
+        <Route exact path="/selectcollection" component={SelectCollection} />
         <Route
           exact
           path="/analysis/:anaysis_id"
           component={AnalysisContainer}
+        />
+        <Route
+          exact
+          path="/analysis/:analysis_id/edit"
+          component={ProjectContainer}
         />
         {/* COLLECTION ROUTES */}
         <Route exact path="/collections" component={AllCollections} />

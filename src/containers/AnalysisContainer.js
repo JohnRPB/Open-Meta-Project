@@ -1,9 +1,10 @@
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import Analysis from "../components/Analysis/Analysis";
-import { getAnalysis } from "../actions/Analysis";
-import { withRouter } from "react-router";
+import {getAnalysis} from "../actions/Analysis";
+import {withRouter} from "react-router";
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
+  console.log("ownProps in Analysis Container ====>", ownProps.history);
   return {
     ...state,
     Analysis: state.Analysis.Analysis,

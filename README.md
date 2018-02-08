@@ -1,7 +1,23 @@
-Notes from Steven:
+This full stack application is currently in its early development stages. Readme will be created and application will be deployed this coming week, stay tuned!
+
+============================ Notes to the developers on this project >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Note from Gene:
+
+Push to heroku with the following:
+
+    git subtree push --prefix api heroku master
+
+That way it will only send the back end and not the whole thing.
+
+Current URLs:
+Front: http://lazy-quicksand.surge.sh/
+Back: https://radiant-taiga-58264.herokuapp.com/
+
+Note from Steven:
 
 For the authentification to any route
-  - add the token from the redux store to props using a container (it is located under the "Token" value )
+  - add the token from the redux store to props using a container (it is located under the "Token" key in the redux store )
   - make a fetch request and add the token to the request body like so:
     ```
     fetch("http://localhost:8000/api/tokentest", {
@@ -17,18 +33,8 @@ For the authentification to any route
   ^^ that can now be used for any database accessing via req.decoded.email and req.decoded.passHash
 
   feel free to slack me for any questions on this -> I can also set the authentification up for a route after you set up the route as well
-
-Note from Gene:
-
-Push to heroku with the following:
-
-    git subtree push --prefix api heroku master
-
-That way it will only send the back end and not the whole thing.
-
-Current URLs:
-Front: http://lazy-quicksand.surge.sh/
-Back: https://radiant-taiga-58264.herokuapp.com/
+  
+============================ Notes to the developers on this project >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

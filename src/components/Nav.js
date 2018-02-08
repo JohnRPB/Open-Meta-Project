@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Dropdown, Menu } from "semantic-ui-react";
+import { Dropdown, Menu, Container } from "semantic-ui-react";
 import { NavLink, BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { withRouter, Redirect, Switch } from "react-router";
@@ -40,53 +40,61 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="ui secondary menu">
-        <NavLink to="/landing" className="item">
-          Open Meta
-        </NavLink>
-        {/* <NavLink to="/dashboard" className="item">
+      <Menu fixed="top" inverted>
+        <Container>
+          <NavLink to="/landing" className="item">
+            Open Meta
+          </NavLink>
+
+          {/* <NavLink to="/dashboard" className="item">
           My Dashboard
         </NavLink> */}
-        <NavLink to="/myanalyses" className="item">
-          My Reviews
-        </NavLink>
-        <NavLink to="/collections/5a7b1ba0934e0f1f54ba84d9/edit" className="item">
-          Collection
-        </NavLink>
-        <NavLink to="/collections/5a7a42405aed131eefe06b67/edit?analysis=5a7a423f5aed131eefe06b40" className="item">
-          Collection W/ Analysis
-        </NavLink>
+          <NavLink to="/myanalyses" className="item">
+            My Reviews
+          </NavLink>
+         
+          <div className="right menu">
+            <Menu.Item>
+              <form
+                //action="/sitesearch"
+                className="ui search icon input"
+                onSubmit={this.handleResultSelect}
+              >
+                <input
+                  name="query"
+                  class="prompt"
+                  type="text"
+                  placeholder="Search website..."
+                  onChange={this.handleChange}
+                />
+                <i class="search icon" />
+              </form>
+            </Menu.Item>
 
-        <div className="right menu">
-          <form
-            //action="/sitesearch"
-            className="ui search icon input"
-            onSubmit={this.handleResultSelect}
-          >
-            <input
-              name="query"
-              class="prompt"
-              type="text"
-              placeholder="Search website..."
-              onChange={this.handleChange}
-            />
-            <i class="search icon" />
-          </form>
-
-          <Dropdown item text={<i className="user circle outline icon" />}>
-            <Dropdown.Menu>
-              <Dropdown.Item>My Account</Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/profile">Profile</NavLink>
-              </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink to="/collections/new">Create Collection</NavLink>
-              </Dropdown.Item>
-              <Dropdown.Item>Other</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
-      </div>
+            <Dropdown item text={<i className="user circle outline icon" />}>
+              <Dropdown.Menu>
+                <Dropdown.Item>My Account</Dropdown.Item>
+                <Dropdown.Item>
+                  <NavLink to="/profile" style={{ color: "black" }}>
+                    Profile
+                  </NavLink>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <NavLink to="/collections/new" style={{ color: "black" }}>
+                    Create Collection
+                  </NavLink>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <NavLink to="/selectcollection" style={{ color: "black" }}>
+                    Select Collection
+                  </NavLink>
+                </Dropdown.Item>
+                <Dropdown.Item>Other</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+        </Container>
+      </Menu>
     );
   }
 }
