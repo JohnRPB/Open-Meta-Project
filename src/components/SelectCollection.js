@@ -18,6 +18,7 @@ import {Container, Button} from "semantic-ui-react";
 
 //name will change
 import CollectionSearchCollectionsContainer from "../containers/SelectCollection/CollectionSearchCollectionsContainer";
+import CollectionModal from "./MyAnalyses/CollectionModal";
 
 class SelectCollection extends Component {
   constructor() {
@@ -126,7 +127,7 @@ class SelectCollection extends Component {
           <div>
             <div>none selected yet</div>
             <h3 style={{marginTop: 10}}>No collections yet?</h3>
-            <Button>Create a Collection</Button>
+            <CollectionModal id={this.props.Token.id} />
           </div>
         ) : (
           <div>
