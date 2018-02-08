@@ -67,7 +67,7 @@ class UserForm extends Component {
 
     if (obj.action == "register") {
       console.log("register starting");
-      fetch("http://localhost:8000/api/register", {
+      fetch(`${root()}/api/register`, {
         method: "post",
         headers: {
           "Content-Type": "application/json"

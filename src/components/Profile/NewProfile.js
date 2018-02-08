@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Checkbox, Form, Container } from "semantic-ui-react";
+import root from '../../lib/root';
 
 //form serializer
 var serialize = require("form-serialize");
@@ -20,7 +21,7 @@ class NewProfile extends Component {
     console.log("starting fetch");
     console.log("obj =>", obj);
 
-    fetch("http://localhost:8000/api/newprofile", {
+    fetch(`${root()}/api/newprofile`, {
       method: "POST",
       headers: new Headers({
         "x-access-token": this.props._token,
