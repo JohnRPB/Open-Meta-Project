@@ -112,7 +112,7 @@ class MasterDocument extends Component {
                 <Rail position="right">
                   <Sticky context={contextRef}>
                     <Button
-                      onClick={e => saveDocument(e, Analysis._id)}
+                      onClick={e => saveDocument(e, Analysis._id, Analysis)}
                       color="orange"
                     >
                       Save Document
