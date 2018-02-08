@@ -1,5 +1,5 @@
-import { combineReducers } from "redux";
-import { routerReducer } from "react-router-redux";
+import {combineReducers} from "redux";
+import {routerReducer} from "react-router-redux";
 
 import demo from "./demo";
 import project from "./project";
@@ -14,9 +14,11 @@ import collectionEdit from "./collectionEdit";
 import routeProps from "./routeProps";
 import modules from "./modules";
 import Collection from "./Collection.js";
+import SelectCollection from "./SelectCollection.js";
 
 const Reducers = combineReducers({
   demo,
+  SelectCollection,
   project,
   MyAnalysesPage,
   Dashboard,
