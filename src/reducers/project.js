@@ -15,7 +15,9 @@ import {
   EDIT_ELEMENT,
   SAVE_ELEMENT,
   SAVE_DOCUMENT,
-  UPDATE_ANALYSIS
+  UPDATE_ANALYSIS,
+  GET_ANALYSIS_AND_LOAD,
+  LOAD_DOCUMENT
 } from "../actions/project";
 import * as Actions from "../actions/Analysis";
 
@@ -73,18 +75,13 @@ const initialState = {
   droppedBoxNames: [],
   showForm: null,
   editing: false,
-  Analysis: {}
+  Analysis: {},
+  title: null
 };
 
 const project = (state = initialState, action) => {
   let blocks;
   switch (action.type) {
-    case Actions.GET_ANALYSIS:
-      return {
-        ...state,
-        Analysis: action.data,
-        isFetching: false
-      };
     case GET_COMPUTATION_START:
       blocks = state.blocks.slice();
       blocks[action.data].loading = true;
@@ -174,18 +171,20 @@ const project = (state = initialState, action) => {
         ],
         editing: false
       };
-    case SAVE_DOCUMENT:
+    case GET_ANALYSIS_AND_LOAD:
       return {
         ...state,
-        Analysis: {
-          ...state.Analysis,
-          data: {
-            ...state.Analysis.data,
-            blocks: state.blocks
-          }
-        }
+        Analysis: action.data,
+        isFetching: false
+      };
+    case LOAD_DOCUMENT:
+      return {
+        ...state,
+        blocks: [...state.blocks, ...action.data.blocks],
+        title: action.data.header.title
       };
     case UPDATE_ANALYSIS:
+      alert("Document saved and analysis is updated!");
       return {
         ...state,
         Analysis: {

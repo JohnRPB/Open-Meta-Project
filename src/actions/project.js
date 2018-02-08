@@ -29,10 +29,10 @@ export const saveElement = data => {
   return { type: SAVE_ELEMENT, data };
 };
 
-export const SAVE_DOCUMENT = "SAVE_DOCUMENT";
-export const saveDocument = () => {
-  return { type: SAVE_DOCUMENT };
-};
+// export const SAVE_DOCUMENT = "SAVE_DOCUMENT";
+// export const saveDocument = () => {
+//   return { type: SAVE_DOCUMENT };
+// };
 
 export const DELETE_ELEMENT = "DELETE_ELEMENT";
 export const deleteElement = data => {
@@ -61,6 +61,40 @@ export function updateAnalysis(id, obj) {
       .then(response => {
         console.log(response);
         console.log(response.data);
+        dispatch(updateAnalysisSuccess(response.data));
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  };
+}
+
+export const LOAD_DOCUMENT = "LOAD_DOCUMENT";
+export const loadDocument = data => {
+  return { type: LOAD_DOCUMENT, data: data };
+};
+
+export const GET_ANALYSIS_AND_LOAD = "GET_ANALYSIS_AND_LOAD";
+export function getAnalysisAndLoadSuccess(data) {
+  return {
+    type: GET_ANALYSIS_AND_LOAD,
+    data: data,
+    isFetching: false
+  };
+}
+
+export function getAnalysisAndLoad(id) {
+  return dispatch => {
+    axios
+      .get(`${root}/api/analyses/${id}`)
+      .then(response => {
+        dispatch(getAnalysisAndLoadSuccess(response.data));
+        console.log("response.data => ", response.data);
+        return response.data;
+      })
+      .then(answer => {
+        console.log("answer =>", answer);
+        dispatch(loadDocument(answer.data));
       })
       .catch(e => {
         console.log(e);
