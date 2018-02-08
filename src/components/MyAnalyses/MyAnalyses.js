@@ -1,27 +1,19 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import {
-  Dropdown,
-  Menu,
   Segment,
   Header,
   Grid,
   Divider,
-  Button,
   Image,
   Card,
   Container,
-  Label,
-  Statistic,
-  Icon,
   Dimmer,
-  Loader,
-  Feed
+  Loader
 } from "semantic-ui-react";
 import NavContainer from "../../containers/NavContainer";
 import CollectionModal from "./CollectionModal";
 import AnalysisModal from "./AnalysisModal";
-import ReviewModal from "./ReviewModal";
 import defaultpicture from "../../assets/images/default.jpg";
 const faker = require("faker");
 
@@ -36,6 +28,12 @@ class MyAnalysesPage extends Component {
       window.location.href = "/login";
     }
     this.props.getUser(this.props._id, this.props._token);
+
+    //getting all review ids
+    // let analysisIds = this.props.MyAnalysesPage.user.analyses.map(study => {
+    //   return study._id;
+    // });
+    // console.log("ids => ", analysisIds);
   }
 
   render() {
@@ -51,8 +49,8 @@ class MyAnalysesPage extends Component {
               key={analysis._id}
               header={
                 <NavLink to={`/analysis/${analysis._id}`}>
-                  {analysis._id}
-                  {/* {analysis.data.header.title} */}
+                  {/* {analysis._id} */}
+                  {analysis.data.header.title}
                 </NavLink>
               }
               description={faker.lorem.paragraph()}
@@ -159,7 +157,9 @@ class MyAnalysesPage extends Component {
               <Grid.Row id="analyses" className="hidden">
                 <Grid.Column width={3}>
                   <br />
-                  <AnalysisModal id={this.props.MyAnalysesPage.user._id.toString()} />
+                  <AnalysisModal
+                    id={this.props.MyAnalysesPage.user._id.toString()}
+                  />
                 </Grid.Column>
 
                 <Grid.Column width={13}>

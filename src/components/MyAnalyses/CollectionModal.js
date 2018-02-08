@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {NavLink, withRouter} from "react-router-dom";
+import React, { Component } from "react";
+import { NavLink, withRouter } from "react-router-dom";
 import axios from "axios";
 import {
   Button,
@@ -28,24 +28,21 @@ const root =
 class CollectionModal extends Component {
   constructor(props) {
     super();
-    console.log(props);
     this.sendForm = this.sendForm.bind(this);
   }
 
   sendForm(e) {
     e.preventDefault();
     var form = document.querySelector("#new-collection");
-    var obj = serialize(form, {hash: true});
+    var obj = serialize(form, { hash: true });
     obj.id = this.props.id;
 
     axios.post(`${root}/api/collections`, obj).then(response => {
-      console.log("response in modal=> ", response);
       this.props.history.push(`/collections/${response.data}/edit`);
     });
   }
 
   render() {
-    console.log("collection modal props", this.props);
     return (
       <Modal trigger={<Button>New Collection</Button>}>
         <Modal.Content>

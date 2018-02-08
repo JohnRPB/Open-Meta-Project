@@ -26,8 +26,6 @@ import SelectCollection from "./components/SelectCollection";
 import About from "./components/About/About";
 import UserForm from "./containers/UserForm"; //userform container
 
-
-
 // -------------------------
 // Routes
 // -------------------------
