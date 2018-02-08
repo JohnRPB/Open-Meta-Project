@@ -52,19 +52,7 @@ class Nav extends Component {
           <NavLink to="/myanalyses" className="item">
             My Reviews
           </NavLink>
-          <NavLink
-            to="/collections/5a7a42405aed131eefe06b67/edit"
-            className="item"
-          >
-            Collection
-          </NavLink>
-          <NavLink
-            to="/collections/5a7a42405aed131eefe06b67/edit?analysis=5a7a423f5aed131eefe06b40"
-            className="item"
-          >
-            Collection W/ Analysis
-          </NavLink>
-
+         
           <div className="right menu">
             <Menu.Item>
               <form

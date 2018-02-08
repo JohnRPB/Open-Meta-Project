@@ -152,7 +152,7 @@ class MyAnalysesPage extends Component {
               <Grid.Row id="analyses" className="hidden">
                 <Grid.Column width={3}>
                   <br />
-                  <AnalysisModal id={this.props.MyAnalysesPage.user._id} />
+                  <AnalysisModal id={this.props.MyAnalysesPage.user._id.toString()} />
                 </Grid.Column>
 
                 <Grid.Column width={13}>
