@@ -48,9 +48,11 @@ class MasterDocument extends Component {
     return this.props.droppedBoxNames.indexOf(boxName) > -1;
   }
 
-  componentDidMount() {
+  componentWillMount() {
     //this.getUpdatedModules();
-    this.props.getAnalysis("5a7b7c28841dd6697bba76d2");
+
+    this.props.getAnalysisAndLoad("5a7c901b9f581818cb1c67d1");
+
     // let routingId = this.props.location.pathname.split("/")[-2];
   }
 
@@ -70,7 +72,8 @@ class MasterDocument extends Component {
       handleSave,
       handleEdit,
       Analysis,
-      saveDocument
+      saveDocument,
+      title
     } = this.props;
 
     const {contextRef} = this.state;
@@ -83,7 +86,11 @@ class MasterDocument extends Component {
       <div>
         <NavContainer />
         <br />
-        <h1>{/*Analysis.data.header.title*/}</h1>
+        <br />
+        <br />
+        <center>
+          <h2>{title}</h2>
+        </center>
         <br />
         <center>
           <h3>
@@ -206,7 +213,7 @@ class MasterDocument extends Component {
                               <Form onSubmit={e => handleSubmit(e, index)}>
                                 <TextArea
                                   name="textContent"
-                                  placeholder="Input text below"
+                                  placeholder="Input text"
                                 />
                                 <button
                                   className="submitText ui primary button"
@@ -239,10 +246,7 @@ class MasterDocument extends Component {
                 {blocks.length < 1 ? (
                   <div className="Initial Submission">
                     <Form onSubmit={handleSubmit}>
-                      <TextArea
-                        name="textContent"
-                        placeholder="Input text below"
-                      />
+                      <TextArea name="textContent" placeholder="Input text" />
                       <button className="ui primary button" type="submit">
                         Add Text
                       </button>
