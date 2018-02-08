@@ -10,6 +10,9 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 
+import axios from "axios";
+import root from "../lib/root";
+
 //ui
 import {Container, Button} from "semantic-ui-react";
 
@@ -34,24 +37,17 @@ class SelectCollection extends Component {
     //CurrentAnalysisId
     e.preventDefault();
     let obj = {
+      ownerId: this.props.Token.id,
       data: {inclusion: {collectionId: this.props._selectedCollection}}
     };
     console.log("obj =>", obj);
-    console.log(
-      "this.props.location.search.splice(4) =>",
-      this.props.location.search.slice(4)
-    );
+    // console.log(
+    //   "this.props.location.search.splice(4) =>",
+    //   this.props.location.search.slice(4)
+    // );
 
-    fetch(
-      `http://localhost:8000/analyses/${this.props.location.search.slice(4)}`,
-      {
-        method: "put",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(obj)
-      }
-    )
+    axios
+      .put(`${root()}/analyses/${this.props.location.search.slice(4)}`, obj)
       .then(response => {
         // if(response.ok) {
         //   return response.blob();
@@ -63,6 +59,17 @@ class SelectCollection extends Component {
       .catch(e => {
         console.log("fetch error in Components/SelectCollection.js");
       });
+
+    // fetch({
+    //   method: "put",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   // headers: new Headers({
+    //   //   "x-access-token": this.props.Token.token
+    //   // }),
+    //   body: JSON.stringify(obj)
+    // });
   }
 
   render() {
