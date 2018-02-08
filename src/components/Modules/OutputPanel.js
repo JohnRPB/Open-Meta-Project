@@ -20,13 +20,6 @@ import '../../index.css';
 // 2018-01-31 22:49
 // ---------------------------------------------------------
 
-const LoadingComp = () => (
-  <Container>
-    <Dimmer active>
-      <Loader inverted>Loading</Loader>
-    </Dimmer>
-  </Container>
-);
 
 // ---------------------------------------------------------
 // Static png
@@ -72,7 +65,10 @@ class IframeDisplay extends Component {
 const OutputPanel = props => {
   return (
     <Container style={{height: '550px', width: '680px'}}>
-      {props.loading ? <LoadingComp /> : <IframeDisplay {...props} />}
+      <Dimmer active={props.loading} >
+        <Loader inverted>Loading</Loader> 
+      </Dimmer>
+      <IframeDisplay {...props} />
     </Container>
   );
 };

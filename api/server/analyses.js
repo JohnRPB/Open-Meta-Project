@@ -90,19 +90,20 @@ router.get("/ids", async (req, res, next) => {
 });
 
 router.put("/:id", async (req, res, next) => {
-  console.log(req.params.id);
+  // console.log(req.params.id);
+  console.log("begin put request: \n")
   console.log(req.body);
   //{data: {inclusion: {collectionId: "#"}}}
   let updatedAnalysis;
   let submitter;
   try {
     updatedAnalysis = await Analysis.findByIdAndUpdate(req.params.id, req.body);
-    console.log(updatedAnalysis);
+    // console.log(updatedAnalysis);
     submitter = await User.findById(req.body.ownerId);
-    console.log(submitter);
+    // console.log(submitter);
     let updateUser = true;
     let analysesArray = submitter.analyses || [];
-    console.log(analysesArray);
+    // console.log(analysesArray);
     for (let i = 0; i < analysesArray.length; i++) {
       if (
         submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()

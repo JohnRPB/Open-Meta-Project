@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import NavContainer from "../../containers/NavContainer";
-import update from "immutability-helper";
-import { DragDropContext } from "react-dnd";
-import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
-import Dustbin from "./Dustbin";
-import Box from "./Box";
-import ItemTypes from "./ItemTypes";
+import React, {Component} from 'react';
+import NavContainer from '../../containers/NavContainer';
+import update from 'immutability-helper';
+import {DragDropContext} from 'react-dnd';
+import HTML5Backend, {NativeTypes} from 'react-dnd-html5-backend';
+import Dustbin from './Dustbin';
+import Box from './Box';
+import ItemTypes from './ItemTypes';
 import {
   Dropdown,
   Menu,
@@ -21,19 +21,19 @@ import {
   TextArea,
   Form,
   Rail,
-  Sticky
-} from "semantic-ui-react";
-import "../../index.css";
+  Sticky,
+} from 'semantic-ui-react';
+import '../../index.css';
 
 import {
   BrowserRouter as Router,
   Route,
   Switch,
-  NavLink
-} from "react-router-dom";
+  NavLink,
+} from 'react-router-dom';
 
-import collection from "../../databaseStudies";
-import ModuleContainer from "../../containers/Modules/ModuleContainer";
+import collection from '../../databaseStudies';
+import ModuleContainer from '../../containers/Modules/ModuleContainer';
 
 class MasterDocument extends Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class MasterDocument extends Component {
 
   state = {};
 
-  handleContextRef = contextRef => this.setState({ contextRef });
+  handleContextRef = contextRef => this.setState({contextRef});
 
   isDropped(boxName) {
     return this.props.droppedBoxNames.indexOf(boxName) > -1;
@@ -56,8 +56,17 @@ class MasterDocument extends Component {
     // let routingId = this.props.location.pathname.split("/")[-2];
   }
 
+  // shouldComponentUpdate(nextProps) {
+  //   let change = false;
+  //   change = change ||  nextProps.blocks.length !== this.props.blocks.length;
+  //   change = change ||  nextProps.showForm !== this.props.showForm;
+  //
+  //   return change;
+  //   
+  // }
+
   render() {
-    console.log("this props => ", this.props);
+    console.log('this props => ', this.props);
     // const { boxes, dustbins } = this.state;
     const {
       blocks,
@@ -73,13 +82,13 @@ class MasterDocument extends Component {
       handleEdit,
       Analysis,
       saveDocument,
-      title
+      title,
     } = this.props;
 
-    const { contextRef } = this.state;
+    const {contextRef} = this.state;
 
     let style = {
-      border: "5px solid gray"
+      border: '5px solid gray',
     };
 
     return (
@@ -109,8 +118,8 @@ class MasterDocument extends Component {
                     <div>
                       {boxes.map(
                         (
-                          { displayName, functionName, content, loading, type },
-                          index
+                          {displayName, functionName, content, loading, type},
+                          index,
                         ) => (
                           <Box
                             content={content}
@@ -121,7 +130,7 @@ class MasterDocument extends Component {
                             isDropped={this.isDropped(displayName)}
                             key={index}
                           />
-                        )
+                        ),
                       )}
                     </div>
                   </Sticky>
@@ -130,15 +139,18 @@ class MasterDocument extends Component {
                   <Sticky context={contextRef}>
                     <NavLink
                       className="ui button brown"
-                      to={`/${Analysis._id}`}
-                    >
+                      to={`/${Analysis._id}`}>
                       Go to Analysis page
                     </NavLink>
                     <br />
                     <Button
-                      onClick={e => saveDocument(e, Analysis._id, Analysis)}
-                      color="orange"
-                    >
+                      onClick={e => {
+                        let uAnalysis = Analysis;
+                        uAnalysis.data.blocks = this.props.blocks;
+                        saveDocument(e, Analysis._id, uAnalysis);
+                        alert('Document saved and analysis is updated!');
+                      }}
+                      color="orange">
                       Save Document
                     </Button>
                   </Sticky>
@@ -155,8 +167,7 @@ class MasterDocument extends Component {
                             onClick={e => {
                               handleClick(e, index);
                             }}
-                            style={index == showForm ? style : null}
-                          >
+                            style={index == showForm ? style : null}>
                             {block.textContent ? (
                               block.textContent
                             ) : (
@@ -184,16 +195,14 @@ class MasterDocument extends Component {
                                       <Button.Group>
                                         <Button
                                           positive
-                                          onClick={e => handleEdit(e, index)}
-                                        >
+                                          onClick={e => handleEdit(e, index)}>
                                           Edit
                                         </Button>
                                         <Button.Or />
 
                                         <Button
                                           negative
-                                          onClick={e => handleDelete(e, index)}
-                                        >
+                                          onClick={e => handleDelete(e, index)}>
                                           Delete
                                         </Button>
                                       </Button.Group>
@@ -201,8 +210,7 @@ class MasterDocument extends Component {
                                   ) : (
                                     <Button
                                       negative
-                                      onClick={e => handleDelete(e, index)}
-                                    >
+                                      onClick={e => handleDelete(e, index)}>
                                       Delete
                                     </Button>
                                   )}
@@ -217,14 +225,13 @@ class MasterDocument extends Component {
                                 />
                                 <button
                                   className="submitText ui primary button"
-                                  type="submit"
-                                >
+                                  type="submit">
                                   Add Text
                                 </button>
                               </Form>
                               <div>
                                 {dustbins.map(
-                                  ({ accepts, lastDroppedItem }, index2) => (
+                                  ({accepts, lastDroppedItem}, index2) => (
                                     <Dustbin
                                       accepts={accepts}
                                       lastDroppedItem={lastDroppedItem}
@@ -233,7 +240,7 @@ class MasterDocument extends Component {
                                       }
                                       key={index2}
                                     />
-                                  )
+                                  ),
                                 )}
                               </div>
                             </div>
@@ -252,7 +259,7 @@ class MasterDocument extends Component {
                       </button>
                     </Form>
                     <div>
-                      {dustbins.map(({ accepts, lastDroppedItem }, index) => (
+                      {dustbins.map(({accepts, lastDroppedItem}, index) => (
                         <Dustbin
                           accepts={accepts}
                           lastDroppedItem={lastDroppedItem}
