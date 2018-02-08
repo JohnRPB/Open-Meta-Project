@@ -55,6 +55,8 @@ export function updateAnalysisSuccess(data) {
 
 export function updateAnalysis(id, obj) {
   console.log("id => ", id);
+  console.log("OBJECT FROM UPDATE =>>>>>>>>>>>>>>>>>>>>>>>>>>>", obj);
+
   return dispatch => {
     axios
       .put(`${root}/api/analyses/${id}`, obj)
