@@ -1,13 +1,20 @@
 import {connect} from 'react-redux';
 import CollectionEditor from '../../components/CollectionEditor/CollectionEditor';
-import {setFetch, persistAll, newResults} from '../../actions/collectionEdit';
+import {
+  setFetch,
+  persistAll,
+  newResults,
+  clear,
+  setCurrentCollection,
+} from '../../actions/collectionEdit';
 import axios from 'axios';
 import root from '../../lib/root';
 
 const mapStateToProps = state => {
+  console.log(state.collectionEdit);
   return {
     collectionId: state.routeProps.params.id,
-    analysisId: state.routeProps.search ? state.routeProps.search : null,
+    currentCollection: state.collectionEdit.current,
   };
 };
 
@@ -16,9 +23,11 @@ const mapDispatchToProps = dispatch => {
     getQueryCollection: collectionId => {
       let getString = `${root()}/api/collections/${collectionId}`;
       dispatch(setFetch(true));
+      dispatch(clear());
       axios
         .get(getString)
         .then(response => {
+          dispatch(setCurrentCollection(response.data));
           dispatch(newResults(response.data.studies));
           dispatch(persistAll());
           dispatch(setFetch(false));
@@ -30,12 +39,16 @@ const mapDispatchToProps = dispatch => {
 
 const mergeProps = (stateProps, dispatchProps) => {
   return {
-    initCollection: () => dispatchProps.getQueryCollection(stateProps.collectionId)
-  }
-}
+    initCollection: () =>
+      dispatchProps.getQueryCollection(stateProps.collectionId),
+    currentCollection: stateProps.currentCollection
+  };
+};
 
-const CollectionEditorContainer = connect(mapStateToProps, mapDispatchToProps, mergeProps)(
-  CollectionEditor,
-);
+const CollectionEditorContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  mergeProps,
+)(CollectionEditor);
 
 export default CollectionEditorContainer;

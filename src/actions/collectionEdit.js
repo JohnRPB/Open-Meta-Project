@@ -60,3 +60,18 @@ export const setOpen = bool => {
     bool
   }
 }
+
+export const CLEAR = "CLEAR";
+export const clear = () => {
+  return {
+    type: CLEAR,
+  }
+}
+
+export const SET_CURRENT_COLLECTION = "SET_CURRENT_COLLECTION";
+export const setCurrentCollection = collection => {
+  return {
+    type: SET_CURRENT_COLLECTION,
+    collection
+  }
+}

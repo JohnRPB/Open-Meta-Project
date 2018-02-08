@@ -108,7 +108,7 @@ class UserForm extends Component {
               id="login"
               name="action"
               value="login"
-              checked
+              defaultChecked
             />
             <input type="radio" id="register" name="action" value="register" />
             <input type="radio" id="reset" name="action" value="reset" />
@@ -133,16 +133,16 @@ class UserForm extends Component {
               </div>
             </div>
             <div id="labels">
-              <label for="login">
+              <label htmlFor="login">
                 Already registered? <span>Login</span>
               </label>
-              <label for="reset">
+              <label htmlFor="reset">
                 Password lost? <span>Reset</span>
               </label>
-              <label for="login">
+              <label htmlFor="login">
                 <span>Back</span>
               </label>
-              <label for="register">
+              <label htmlFor="register">
                 Not registered? <span>Create an account</span>
               </label>
             </div>
