@@ -98,8 +98,10 @@ router.put("/:id", async (req, res, next) => {
   try {
     updatedAnalysis = await Analysis.findByIdAndUpdate(req.params.id, req.body);
     console.log(updatedAnalysis);
+
     submitter = await User.findById(req.body.ownerId);
     console.log(submitter);
+
     let updateUser = true;
     let analysesArray = submitter.analyses || [];
     console.log(analysesArray);
@@ -121,5 +123,48 @@ router.put("/:id", async (req, res, next) => {
     res.status(500).send(e.stack);
   }
 });
+
+router.get(
+  "/updateanalysis/:id/:ownerId/:collectionId",
+  async (req, res, next) => {
+    console.log(req.params.id);
+    console.log(req.body);
+    //{data: {inclusion: {collectionId: "#"}}}
+    let updatedAnalysis;
+    let submitter;
+    try {
+      console.log("still running over here");
+
+      updatedAnalysis = await Analysis.findByIdAndUpdate(req.params.id, {
+        data: {inclusion: {collectionId: req.params.ownerId}}
+      });
+      console.log(updatedAnalysis);
+
+      submitter = await User.findById(req.params.ownerId);
+      console.log(submitter);
+
+      let updateUser = true;
+
+      let analysesArray = submitter.analyses || [];
+      console.log(analysesArray);
+      for (let i = 0; i < analysesArray.length; i++) {
+        if (
+          submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()
+        ) {
+          updateUser = false;
+        }
+      }
+      if (updateUser) {
+        submitter.analyses.push(updatedAnalysis);
+        submitter = await submitter.save();
+        res.json(updatedAnalysis);
+      } else {
+        res.status(200).send();
+      }
+    } catch (e) {
+      res.status(500).send(e.stack);
+    }
+  }
+);
 
 module.exports = router;

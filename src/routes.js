@@ -17,7 +17,7 @@ import AllAnalyses from "./containers/AllAnalyses";
 import CollectionContainer from "./containers/CollectionContainer.js";
 import AllCollections from "./containers/AllCollections";
 import NewProfileContainer from "./containers/NewProfileContainer";
-import SelectCollectionContainer from "./containers/SelectCollectionContainer";
+import SelectCollectionContainer from "./containers/SelectCollection/SelectCollectionContainer";
 
 import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./components/Landing/Landing.js";
