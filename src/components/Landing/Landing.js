@@ -31,8 +31,9 @@ const Landing = () => {
         <br />
         <br />
         <br />
-        <div className="ui text container">
-          <i className="connectdevelop icon massive" />
+        <div class="ui text container">
+          <i class="connectdevelop icon massive" />
+          <br />
           <h2>Your Portal to Papers and Metanalyses</h2>
         </div>
         <br />
@@ -120,7 +121,8 @@ const Landing = () => {
                     nihil quas sed harum consequatur repellat. Earum,
                     repudiandae.{" "}
                   </p>
-                  <Button>Technology</Button>
+                  <Button>Science!</Button>
+                  <br />
                 </Grid.Column>
                 <Grid.Column>
                   <i className="cubes icon huge" />
@@ -135,7 +137,8 @@ const Landing = () => {
                     nihil quas sed harum consequatur repellat. Earum,
                     repudiandae.
                   </p>
-                  <Button>Analyses</Button>
+                  <Button>Analyses!</Button>
+                  <br />
                 </Grid.Column>
                 <Grid.Column>
                   <i className="group icon huge" />
@@ -149,7 +152,8 @@ const Landing = () => {
                     nihil quas sed harum consequatur repellat. Earum,
                     repudiandae.
                   </p>
-                  <Button>Community</Button>
+                  <Button>So Meta!</Button>
+                  <br />
                 </Grid.Column>
               </Grid.Row>
             </Grid>

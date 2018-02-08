@@ -8,13 +8,15 @@ import serialize from "form-serialize";
 
 const mapStateToProps = (state, ownProps) => {
   let currentModule = state.project.blocks[ownProps.moduleIdx];
-
-  let outputLoc = currentModule
-    ? currentModule.content.outputLoc
-    : "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png";
+  console.log("===========================");
+  console.log("CURRENT MODULE", currentModule);
+  console.log("===========================");
+  // let outputLoc = currentModule
+  //   ? currentModule.content.outputLoc
+  //   : "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png";
 
   return {
-    outputLoc,
+    outputLoc: currentModule.content.outputLoc,
     loading: currentModule.loading
   };
 };

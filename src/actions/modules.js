@@ -57,7 +57,7 @@ const computeOcpuAndGetImg = async (rootUrl, data) => {
   // Ocpu returns indented list of URLS; we split it here
   let resultArr = postR.data.split("\n");
   let graphicalOutput = resultArr.filter(url => url.match(/\.html/g));
-  if (graphicalOutput.length < 1) { 
+  if (graphicalOutput.length < 1) {
     graphicalOutput = resultArr.filter(url => url.match(/\graphics/g));
     return `https://cloud.opencpu.org${graphicalOutput}/png`;
   }
@@ -104,9 +104,8 @@ export const updateSingleStudy = (moduleIdx, studyIdx, updateType) => {
 };
 
 export const INITIAL_UPDATE = "INITIAL_UPDATE";
-export const initialUpdate = (moduleIdx) => {
+export const initialUpdate = moduleIdx => {
   return async dispatch => {
-
     let moduleContent = store.getState().project.blocks[moduleIdx].content;
     let rootUrl = `http://johnrpb.ocpu.io/openCPU_test/R/${moduleContent.name}`;
 
