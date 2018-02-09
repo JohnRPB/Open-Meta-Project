@@ -60,8 +60,8 @@ const Results = ({ query, results, field }) => {
                   {result.profile.fname} {result.profile.lname}
                 </Item.Header>
                 <Item.Meta>{result.email}</Item.Meta>
-                <Item.Meta>{result.title}</Item.Meta>
-                <Item.Meta>{result.organization}</Item.Meta>
+                <Item.Meta>{result.profile.title}</Item.Meta>
+                <Item.Meta>{result.profile.organization}</Item.Meta>
                 <Item.Description>{result.profile.background}</Item.Description>
 
                 {/* <Item.Meta>Analyses:</Item.Meta>
