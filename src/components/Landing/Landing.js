@@ -64,7 +64,7 @@ const Landing = () => {
                 <Grid.Column>
                   <h3>Create Dynamic Reviews</h3>
                   <Divider />
-                  <p>
+                  <p style={{fontWeight:"15px", marginLeft:"40px", textAlign:"left"}}>
                     With the scope and depth of R's already available statistical libraries,
                     rendered using our intuitive drag and drop interface, explore multiple
                     datasets and probe the scientific landscape, propped up by a community
@@ -107,18 +107,16 @@ const Landing = () => {
             <Grid>
               <Grid.Row columns={3}>
                 <Grid.Column>
-
-                  <i className="laptop icon huge" />
                   <br />
+                  <i className="laptop icon huge" />
                   <br />
                   <h3> Explore datasets, conveniently </h3>
                   {/*<Button>Science!</Button>*/}
                   <br />
                 </Grid.Column>
                 <Grid.Column>
-
-                  <i className="cubes icon huge" />
                   <br />
+                  <i className="cubes icon huge" />
                   <br />
 
                   <h3>Contribute to our tools with open source</h3>
@@ -126,8 +124,8 @@ const Landing = () => {
                   <br />
                 </Grid.Column>
                 <Grid.Column>
-                  <i className="group icon huge" />
                   <br />
+                  <i className="group icon huge" />
                   <br />
                   <h3> Join our community </h3>
                   {/*<Button>So Meta!</Button>*/}
