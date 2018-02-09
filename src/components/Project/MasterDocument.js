@@ -88,7 +88,8 @@ class MasterDocument extends Component {
     const { contextRef } = this.state;
 
     let style = {
-      border: "5px solid gray"
+      border: "3px solid pink",
+      borderRadius:'8px'
     };
 
     return (
