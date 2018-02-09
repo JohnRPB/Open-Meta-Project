@@ -52,7 +52,11 @@ router.get('/sitesearch/:search', async function(req, res, next) {
 
   //Handle asynchronous problems by putting the following outside the try block
   result.forEach(element => {
-    if (element.email.toLowerCase().includes(query.toLowerCase())) {
+    if (
+      element.email.toLowerCase().includes(query.toLowerCase()) ||
+      element.profile.lname.toLowerCase().includes(query.toLowerCase()) ||
+      element.profile.fname.toLowerCase().includes(query.toLowerCase())
+    ) {
       console.log(element.email);
       results.push(element);
     }

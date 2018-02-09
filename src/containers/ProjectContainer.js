@@ -9,14 +9,14 @@ import {
   updateAnalysis,
   loadDocument,
   getAnalysisAndLoad
-} from "../actions/project";
-import {getAnalysis} from "../actions/Analysis";
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
-import {withRouter} from "react-router";
-import serialize from "form-serialize";
+} from '../actions/project';
+import { getAnalysis } from '../actions/Analysis';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router';
+import serialize from 'form-serialize';
 
-import MasterDocument from "../components/Project/MasterDocument";
+import MasterDocument from '../components/Project/MasterDocument';
 
 function mapStateToProps(state, ownProps) {
   console.log(ownProps);
@@ -43,21 +43,21 @@ function mapDispatchToProps(dispatch) {
       e.preventDefault();
       e.stopPropagation();
       const form = e.target;
-      const data = serialize(form, {hash: true});
+      const data = serialize(form, { hash: true });
       data.index = index;
       dispatch(addText(data));
       form.reset();
     },
     handleDrop: (indexOfDustbins, item, index) => {
-      // if (index > 0) index -= 1;
-      let args = {indexOfDustbins, item, index};
+      // if (index == 0) index -= 1;
+      let args = { indexOfDustbins, item, index };
       dispatch(handleDropping(args));
     },
     handleClick: (e, index) => {
       // Don't reload the page
       e.preventDefault();
       e.stopPropagation();
-      if (e.target.classList.contains("submitText")) {
+      if (e.target.classList.contains('submitText')) {
         return;
       }
       dispatch(showForm(index));
@@ -76,7 +76,7 @@ function mapDispatchToProps(dispatch) {
       e.preventDefault();
       e.stopPropagation();
       const form = e.target;
-      const data = serialize(form, {hash: true});
+      const data = serialize(form, { hash: true });
       data.index = index;
       dispatch(saveElement(data));
       form.reset();
@@ -85,8 +85,6 @@ function mapDispatchToProps(dispatch) {
       dispatch(getAnalysisAndLoad(id));
     },
     saveDocument: (e, id, obj) => {
-      console.log("ANALYSIS ID", id);
-      // alert("Document saved and analysis is updated!");
       //dispatch(saveDocument());
       dispatch(updateAnalysis(id, obj));
     },

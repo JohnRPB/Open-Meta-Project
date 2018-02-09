@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import Nav from "../Nav";
-import { NavLink } from "react-router-dom";
+import React, { Component } from 'react';
+import Nav from '../Nav';
+import { NavLink } from 'react-router-dom';
 import {
   Segment,
   Container,
@@ -11,7 +11,7 @@ import {
   Label,
   Card,
   Icon
-} from "semantic-ui-react";
+} from 'semantic-ui-react';
 
 class Collection extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class Collection extends Component {
         return {
           header: study.name,
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
           meta: study.pubDate
         };
       });
@@ -68,9 +68,9 @@ class Collection extends Component {
               <Container>
                 <Segment>
                   <h1>
-                    {Collection.name}{" "}
+                    {Collection.name}{' '}
                     {this.props.Token ? (
-                      <span style={{ fontSize: "16px" }}>
+                      <span style={{ fontSize: '16px' }}>
                         <NavLink to={`${Collection._id}/edit`}>
                           <Icon name="edit" mini />
                         </NavLink>
@@ -91,8 +91,8 @@ class Collection extends Component {
                         ? studies
                         : [
                             {
-                              header: "No selected studies",
-                              description: "Click here to add studies."
+                              header: 'No selected studies',
+                              description: 'Click here to add studies.'
                             }
                           ]
                     }
