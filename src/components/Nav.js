@@ -50,7 +50,7 @@ class Nav extends Component {
           My Dashboard
         </NavLink> */}
           <NavLink to="/myanalyses" className="item">
-            My analyses
+            My Analyses
           </NavLink>
 
           <div className="right menu">
