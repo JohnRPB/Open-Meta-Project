@@ -90,73 +90,71 @@ class MasterDocument extends Component {
           <br />
           <br />
           <br />
+          <br />
           <center>
             <h2>{title}</h2>
           </center>
-          <Divider />
+          <br />
           <center>
             <h3>
               Drag and drop modules onto your document. Navigate through
               document by clicking on items
             </h3>
-            <br />
-            <br />
           </center>{" "}
-          <div ref={this.handleContextRef}>
-            {/* ---------------------- */}
-            {/*       modules          */}
-            {/* ---------------------- */}
-
-            <Grid columns={2}>
-              <Grid.Column width={4}>
-                <Sticky context={contextRef}>
-                  <h2>Modules</h2>
-                  <Divider />
-                  <div>
-                    {boxes.map(
-                      (
-                        { displayName, functionName, content, loading, type },
-                        index
-                      ) => (
-                        <Box
-                          content={content}
-                          loading={loading}
-                          functionName={functionName}
-                          displayName={displayName}
-                          type={type}
-                          isDropped={this.isDropped(displayName)}
-                          key={index}
-                        />
-                      )
-                    )}
-
-                    <NavLink
-                      className="ui button brown"
-                      to={`/analysis/${Analysis._id}`}
-                    >
-                      Go to Analysis page
-                    </NavLink>
-
-                    <br />
-                    <br />
-                    <Button
-                      onClick={e => saveDocument(e, Analysis._id, Analysis)}
-                      color="orange"
-                    >
-                      Save Document
-                    </Button>
-                  </div>
-                </Sticky>
-              </Grid.Column>
-
-              {/* ---------------------- */}
-              {/*      MAIN WINDOW       */}
-              {/* ---------------------- */}
-              <Grid.Column width={1} />
-              <Grid.Column width={11}>
+          <Grid centered columns={2}>
+            <Grid.Column>
+              <div ref={this.handleContextRef}>
                 <Segment>
+                  <Rail position="left">
+                    <Sticky context={contextRef}>
+                      <h2>Modules</h2>
+                      <br />
+                      <div>
+                        {boxes.map(
+                          (
+                            {
+                              displayName,
+                              functionName,
+                              content,
+                              loading,
+                              type
+                            },
+                            index
+                          ) => (
+                            <Box
+                              content={content}
+                              loading={loading}
+                              functionName={functionName}
+                              displayName={displayName}
+                              type={type}
+                              isDropped={this.isDropped(displayName)}
+                              key={index}
+                            />
+                          )
+                        )}
+                      </div>
+                    </Sticky>
+                  </Rail>
+                  <Rail position="right">
+                    <Sticky context={contextRef}>
+                      <NavLink
+                        className="ui button brown"
+                        to={`/analysis/${Analysis._id}`}
+                      >
+                        Go to Analysis page
+                      </NavLink>
+                      <br />
+                      <Button
+                        onClick={e => saveDocument(e, Analysis._id, Analysis)}
+                        color="orange"
+                      >
+                        Save Document
+                      </Button>
+                    </Sticky>
+                  </Rail>
+
                   <h2>Document</h2>
-                  <Divider />
+                  <br />
                   <div>
                     {blocks.map((block, index) => {
                       return (
@@ -227,36 +225,15 @@ class MasterDocument extends Component {
                                   <TextArea
                                     name="textContent"
                                     placeholder="Input text"
-                                  />{" "}
-                                  <br />
-                                  <br />
-                                  <div>
-                                    {dustbins.map(
-                                      (
-                                        { accepts, lastDroppedItem },
-                                        index2
-                                      ) => (
-                                        <Dustbin
-                                          accepts={accepts}
-                                          lastDroppedItem={lastDroppedItem}
-                                          onDrop={item =>
-                                            handleDrop(index2, item, index)
-                                          }
-                                          key={index2}
-                                        />
-                                      )
-                                    )}
-                                  </div>
-                                  <br />
-                                  <br />
+                                  />
                                   <button
                                     className="submitText ui primary button"
                                     type="submit"
                                   >
-                                    Submit
+                                    Add Text
                                   </button>
                                 </Form>
-                                {/* <div>
+                                <div>
                                   {dustbins.map(
                                     ({ accepts, lastDroppedItem }, index2) => (
                                       <Dustbin
@@ -269,7 +246,7 @@ class MasterDocument extends Component {
                                       />
                                     )
                                   )}
-                                </div> */}
+                                </div>
                               </div>
                             </div>
                           ) : null}
@@ -281,32 +258,26 @@ class MasterDocument extends Component {
                     <div className="Initial Submission">
                       <Form onSubmit={handleSubmit}>
                         <TextArea name="textContent" placeholder="Input text" />
-                        <br />
-                        <br />
-                        <div>
-                          {dustbins.map(
-                            ({ accepts, lastDroppedItem }, index) => (
-                              <Dustbin
-                                accepts={accepts}
-                                lastDroppedItem={lastDroppedItem}
-                                onDrop={item => handleDrop(index, item)}
-                                key={index}
-                              />
-                            )
-                          )}
-                        </div>
-                        <br />
-                        <br />
                         <button className="ui primary button" type="submit">
-                          Submit
+                          Add Text
                         </button>
                       </Form>
+                      <div>
+                        {dustbins.map(({ accepts, lastDroppedItem }, index) => (
+                          <Dustbin
+                            accepts={accepts}
+                            lastDroppedItem={lastDroppedItem}
+                            onDrop={item => handleDrop(index, item)}
+                            key={index}
+                          />
+                        ))}
+                      </div>
                     </div>
                   ) : null}
                 </Segment>
-              </Grid.Column>
-            </Grid>
-          </div>
+              </div>
+            </Grid.Column>
+          </Grid>
         </Container>
       </div>
     );

@@ -39,7 +39,6 @@ class Nav extends Component {
   };
 
   render() {
-    console.log("nav props => ", this.props);
     return (
       <Menu fixed="top" inverted>
         <Container>

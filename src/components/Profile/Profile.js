@@ -110,12 +110,18 @@ class Profile extends Component {
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
+                    {console.log(
+                      "MyAnalysesPage.user.analyses => ",
+                      MyAnalysesPage.user.analyses
+                    )}
                     {MyAnalysesPage.user.analyses.map(analysis => {
                       return (
                         <Table.Row key={analysis._id}>
                           <Table.Cell>
                             <NavLink to={`/analysis/${analysis._id}`}>
-                              {analysis.data.header.title}
+                              {analysis.data.header
+                                ? analysis.data.header.title
+                                : "untitled"}
                             </NavLink>
                           </Table.Cell>
                           {/* <Table.Cell collapsing textAlign="right">
