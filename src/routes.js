@@ -30,8 +30,11 @@ import UserForm from "./containers/UserForm"; //userform container
 // Routes
 // -------------------------
 
-const Routes = ({ history }) => {
-  return (
+const Routes = ({ history, token }) => {
+  console.log("Route Props: ", history);
+  let display = (<Router><Route path="/" component={UserForm} /></Router>);
+  if(token){
+    display = (
     <Router>
       <Switch>
         <Route exact path="/" component={Landing} />
@@ -46,43 +49,22 @@ const Routes = ({ history }) => {
         <Route exact path="/myanalyses/:user_id?" component={MyAnalyses} />
         {/* ANALYSIS ROUTES */}
         <Route exact path="/analyses" component={AllAnalyses} />
-        <Route
-          exact
-          path="/selectcollection"
-          component={SelectCollectionContainer}
-        />
-        <Route
-          exact
-          path="/analysis/:anaysis_id"
-          component={AnalysisContainer}
-        />
-        <Route
-          exact
-          path="/analysis/:analysis_id/edit"
-          component={ProjectContainer}
+        <Route exact path="/selectcollection" component={SelectCollectionContainer} />
+        <Route exact path="/analysis/:anaysis_id" component={AnalysisContainer} />
+        <Route exact path="/analysis/:analysis_id/edit" component={ProjectContainer}
         />
         {/* COLLECTION ROUTES */}
         <Route exact path="/collections" component={AllCollections} />
-        <Route
-          exact
-          path="/collections/new"
-          render={() => <LogCheckContainer Target={CollectionSearch} />}
-        />
-        <Route
-          exact
-          path="/collections/:id/edit"
-          render={props => (
-            <LogCheckContainer {...props} Target={CollectionEditorContainer} />
+        <Route exact path="/collections/new" render={() => <LogCheckContainer Target={CollectionSearch} />} />
+        <Route exact path="/collections/:id/edit" render={props => ( <LogCheckContainer {...props} Target={CollectionEditorContainer} />
           )}
         />
-        <Route
-          exact
-          path="/collections/:collection_id"
-          component={CollectionContainer}
-        />
+        <Route exact path="/collections/:collection_id" component={CollectionContainer} />
       </Switch>
     </Router>
   );
+  }
+return display
 };
 
 export default Routes;
