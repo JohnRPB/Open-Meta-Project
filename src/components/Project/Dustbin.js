@@ -40,7 +40,7 @@ class Dustbin extends Component {
     }
 
     return connectDropTarget(
-      <div style={{ ...style, backgroundColor }}>
+      <div style={{ ...style, backgroundColor, border: "1px dotted black" }}>
         {isActive ? "Release to drop" : `Insert module here!`}
         {/* //This field accepts: ${accepts.join(", ")}`} */}
 

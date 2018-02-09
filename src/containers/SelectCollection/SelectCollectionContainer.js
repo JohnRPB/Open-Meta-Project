@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {withRouter} from "react-router";
 
-import SelectCollection from "../components/SelectCollection";
+import SelectCollection from "../../components/SelectCollection";
 
 function mapStateToProps(state) {
   return {

@@ -1,8 +1,11 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
-import { DragSource } from "react-dnd";
+import {DragSource} from "react-dnd";
 import studies from "../../newStudies.js";
 import ItemTypes from "./ItemTypes";
+
+//for the studies
+import {store} from "../../index.js";
 
 const style = {
   border: "1px dashed gray",
@@ -14,7 +17,27 @@ const style = {
   float: "left"
 };
 
-let createStudies = () => studies.map(study => Object.assign({}, study));
+//drop studies in here
+let createStudies = () => {
+  let reduxStore = store.getState();
+  let reduxStudies =
+    reduxStore.project.Analysis.data.inclusion.collectionId.studies;
+
+  if (!reduxStudies) {
+    reduxStudies = studies;
+  }
+
+  reduxStudies = reduxStudies.map(study => {
+    study.active = true;
+    return study;
+  });
+
+  console.log(
+    "the store inside the box => ",
+    reduxStore.project.Analysis.data.inclusion.collectionId.studies
+  );
+  return reduxStudies.map(study => Object.assign({}, study));
+};
 
 let createModule = name => {
   return {
@@ -43,17 +66,14 @@ const boxSource = {
 };
 
 class Box extends Component {
+  componentDidMount() {}
+
   render() {
-    const {
-      displayName,
-      isDropped,
-      isDragging,
-      connectDragSource
-    } = this.props;
+    const {displayName, isDropped, isDragging, connectDragSource} = this.props;
     const opacity = isDragging ? 0.4 : 1;
 
     return connectDragSource(
-      <div style={{ ...style, opacity }}>
+      <div style={{...style, opacity}}>
         {isDropped ? <s>{displayName}</s> : displayName}
       </div>
     );
