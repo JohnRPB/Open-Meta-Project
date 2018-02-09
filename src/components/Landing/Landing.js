@@ -44,17 +44,14 @@ const Landing = () => {
             <Grid>
               <Grid.Row>
                 <Grid.Column>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Est suscipit praesentium repudiandae ad neque, repellendus
-                    eaque voluptates possimus consequuntur error modi nesciunt
-                    nihil quas sed harum consequatur repellat. Earum,
-                    repudiandae.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Est suscipit praesentium repudiandae ad
-                    neque, repellendus eaque voluptates possimus consequuntur
-                    error modi nesciunt nihil quas sed harum consequatur
-                    repellat. Earum, repudiandae.
-                  </p>
+                  <h3>
+                    OpenMeta is a platform for sharing and conducting scientific reviews, powered 
+                    by R. With our tools, anyone can manage a collection of studies, conduct a
+                    systematic review, post interactive documents to the web, share their content 
+                    with others, and get rapid feedback on their work. {' '} Join a community that 
+                    supports transparency and reproducibility in science, and start participating
+                    in the exciting process of scientific discovery!
+                  </h3>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
@@ -68,15 +65,14 @@ const Landing = () => {
                   <h3>Create Dynamic Reviews</h3>
                   <Divider />
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Est suscipit praesentium repudiandae ad neque, repellendus
-                    eaque voluptates possimus consequuntur error modi nesciunt
-                    nihil quas sed harum consequatur repellat. Earum,
-                    repudiandae.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Est suscipit praesentium repudiandae ad
-                    neque, repellendus eaque voluptates possimus consequuntur
-                    error modi nesciunt nihil quas sed harum consequatur
-                    repellat. Earum, repudiandae.
+                    With the scope and depth of R's already available statistical libraries,
+                    rendered using our intuitive drag and drop interface, explore multiple
+                    datasets and probe the scientific landscape, propped up by a community
+                    that cares about reproducibility and transparency. Share your analyses
+                    with others, see graphs and statistical output delivered in an interactive 
+                    manner, and download your analyses into R Markdown documents for greater
+                    control and customization. Never put off a scientific debate again; get
+                    answers quickly and spread your knowedlge effectively, with OpenMeta.
                   </p>
                 </Grid.Column>
 
@@ -115,14 +111,8 @@ const Landing = () => {
                   <i className="laptop icon huge" />
                   <br />
                   <br />
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Est suscipit praesentium repudiandae ad neque, repellendus
-                    eaque voluptates possimus consequuntur error modi nesciunt
-                    nihil quas sed harum consequatur repellat. Earum,
-                    repudiandae.{" "}
-                  </p>
-                  <Button>Science!</Button>
+                  <h3> Explore datasets, conveniently </h3>
+                  {/*<Button>Science!</Button>*/}
                   <br />
                 </Grid.Column>
                 <Grid.Column>
@@ -131,30 +121,16 @@ const Landing = () => {
                   <br />
                   <br />
 
-                  <p>
-                    {" "}
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Est suscipit praesentium repudiandae ad neque, repellendus
-                    eaque voluptates possimus consequuntur error modi nesciunt
-                    nihil quas sed harum consequatur repellat. Earum,
-                    repudiandae.
-                  </p>
-                  <Button>Analyses!</Button>
+                  <h3>Contribute to our tools with open source</h3>
+                  {/*<Button>Analyses!</Button>*/}
                   <br />
                 </Grid.Column>
                 <Grid.Column>
                   <i className="group icon huge" />
                   <br />
                   <br />
-                  <p>
-                    {" "}
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Est suscipit praesentium repudiandae ad neque, repellendus
-                    eaque voluptates possimus consequuntur error modi nesciunt
-                    nihil quas sed harum consequatur repellat. Earum,
-                    repudiandae.
-                  </p>
-                  <Button>So Meta!</Button>
+                  <h3> Join our community </h3>
+                  {/*<Button>So Meta!</Button>*/}
                   <br />
                 </Grid.Column>
               </Grid.Row>
