@@ -19,6 +19,9 @@ class Module extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
+    this.state = {
+      time: new Date().getTime()
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -30,6 +33,7 @@ class Module extends React.Component {
     console.log("============================");
     console.log("THIS COMPONENT HAS MOUNTED");
     console.log("============================");
+    console.log(this.state.time);
     this.props.getOcpu();
   }
 
