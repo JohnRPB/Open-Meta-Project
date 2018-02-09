@@ -13,6 +13,7 @@ import {
   Icon
 } from "semantic-ui-react";
 const moment = require("moment");
+var _ = require("lodash");
 
 class Analysis extends Component {
   constructor(props) {
@@ -29,18 +30,18 @@ class Analysis extends Component {
       var { Analysis } = this.props;
 
       // creating cards objects for card group
-      if (Analysis.data.inclusion.collectionId) {
-        var studies = Analysis.data.inclusion.collectionId.studies.map(
-          study => {
-            return {
-              header: study.name,
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-              meta: study.pubDate
-            };
-          }
-        );
-      }
+      // if (Analysis.data.inclusion.collectionId) {
+      //   var studies = Analysis.data.inclusion.collectionId.studies.map(
+      //     study => {
+      //       return {
+      //         header: study.name,
+      //         description:
+      //           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+      //         meta: study.pubDate
+      //       };
+      //     }
+      //   );
+      // }
 
       // creating rows for option 2
       if (Analysis.data.inclusion.collectionId) {
@@ -66,6 +67,23 @@ class Analysis extends Component {
       var tags = Analysis.data.category.map(el => {
         return <Label>{el.name}</Label>;
       });
+
+      // creating iframes out of blocks
+      var blocks = Analysis.data.blocks.map(block => {
+        if (block.type === "graph") {
+          console.log(" HIT! => ", block.content.outputLoc);
+          return (
+            <iframe
+              src={`${block.content.outputLoc}`}
+              title={`${block.content.outputLoc}`}
+            />
+          );
+        } else {
+          return null;
+        }
+      });
+      console.log("blocks => ", blocks);
+      _.compact(blocks);
     }
 
     // renders loader if isFetching, otherwise renders component
@@ -94,7 +112,10 @@ class Analysis extends Component {
             <Container>
               <Segment>
                 <h1>
-                  {Analysis.data.header.title}{" "}
+                  {console.log("ANAYLYSIS => ", Analysis)}
+                  {Analysis.data.header
+                    ? Analysis.data.header.title
+                    : "My Analysis"}{" "}
                   {this.props.Token.token ? (
                     <span style={{ fontSize: "16px" }}>
                       <NavLink to={`${Analysis._id}/edit`}>
@@ -155,14 +176,19 @@ class Analysis extends Component {
                 </Table>
               </Segment>
 
-              <Segment>
-                <Header as="h2">Blocks</Header>
-                <Divider />
-              </Segment>
-              <Divider />
-              <p>{JSON.stringify(Analysis.data, null, 5)}</p>
+              {blocks.length ? (
+                <Segment>
+                  <Divider />
+                  {blocks}
+                </Segment>
+              ) : null}
+
+              {/* <p>{JSON.stringify(Analysis.data.blocks, null, 5)}</p> */}
             </Container>
           </div>
+          <br />
+          <br />
+          <br />
         </div>
       );
     }
