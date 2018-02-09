@@ -42,9 +42,9 @@ class Profile extends Component {
 
       return (
         // NAV BAR
-        <div class="ui  vertical masthead center aligned segment">
-          <div class="following bar">
-            <div class="ui container">
+        <div className="ui  vertical masthead center aligned segment">
+          <div className="following bar">
+            <div className="ui container">
               <NavContainer />
             </div>
           </div>
@@ -60,12 +60,7 @@ class Profile extends Component {
               {/* USER PICTURE AND DEMOGRAPHICS */}
               <Grid.Column width={14}>
                 <Segment>
-                  <Image
-                    src={defaultpicture}
-                    centered
-                    circular="true"
-                    size="small"
-                  />
+                  <Image src={defaultpicture} centered circular size="small" />
                   <h2>
                     {`${MyAnalysesPage.user.profile.fname} ${
                       MyAnalysesPage.user.profile.lname
@@ -115,21 +110,25 @@ class Profile extends Component {
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
+                    {console.log(
+                      "MyAnalysesPage.user.analyses => ",
+                      MyAnalysesPage.user.analyses
+                    )}
                     {MyAnalysesPage.user.analyses.map(analysis => {
                       return (
-                        <Table.Row>
+                        <Table.Row key={analysis._id}>
                           <Table.Cell>
                             <NavLink to={`/analysis/${analysis._id}`}>
-                              {/* {analysis.data.header.title} */}
-                              {analysis._id}
+                              {analysis.data.header
+                                ? analysis.data.header.title
+                                : "untitled"}
                             </NavLink>
                           </Table.Cell>
-                          <Table.Cell collapsing textAlign="right">
-                            {/* FIXME */}
-                            {/* {moment(analysis.hist[0].time).format(
-                                `MMMM Do YYYY`
-                              )} */}
-                          </Table.Cell>
+                          {/* <Table.Cell collapsing textAlign="right">
+                            {moment(analysis.hist[0].time).format(
+                              "MMMM Do YYYY"
+                            )}
+                          </Table.Cell> */}
                         </Table.Row>
                       );
                     })}

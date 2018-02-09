@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Grid,
   Image,
@@ -6,13 +6,15 @@ import {
   Header,
   Container,
   Card,
-  Statistic
-} from "semantic-ui-react";
-import Results from "./Results";
+  Statistic,
+  Tab,
+  Button
+} from 'semantic-ui-react';
+import Results from './Results';
 //import Feed from "./Feed";
-import NavContainer from "../../containers/NavContainer";
+import NavContainer from '../../containers/NavContainer';
 //import Related from "./Related";
-import GoogleSearch from "./GoogleSearch";
+import GoogleSearch from './GoogleSearch';
 
 class Sitesearch extends Component {
   constructor(props) {
@@ -23,6 +25,12 @@ class Sitesearch extends Component {
   // if (this.props.location.search.slice(7)) {
   //   this.props.query = this.props.location.search.slice(7);
   // }
+
+  componentDidMount() {
+    console.log('SITE SEARCH IS BEING HIT');
+    this.props.showResults(this.props.location.search.slice(7));
+  }
+
   render() {
     const {
       results,
@@ -31,7 +39,8 @@ class Sitesearch extends Component {
       field,
       onClickCollection,
       onClickUser,
-      query
+      query,
+      showResults
     } = this.props;
 
     return (
@@ -46,7 +55,39 @@ class Sitesearch extends Component {
         <Container>
           <div>
             <div className="ui fluid category search">
-              <form
+              <Button.Group>
+                <Button
+                  color="brown"
+                  onClick={e => {
+                    showResults(
+                      this.props.location.search.slice(7),
+                      'Analysis'
+                    );
+                  }}
+                >
+                  Analyses
+                </Button>
+                <Button
+                  color="orange"
+                  onClick={e => {
+                    showResults(
+                      this.props.location.search.slice(7),
+                      'Collection'
+                    );
+                  }}
+                >
+                  Collections
+                </Button>
+                <Button
+                  color="yellow"
+                  onClick={e => {
+                    showResults(this.props.location.search.slice(7), 'User');
+                  }}
+                >
+                  Users
+                </Button>
+              </Button.Group>
+              {/* <form
                 onSubmit={e => handleSubmit(e)}
                 className="ui fluid icon input"
               >
@@ -62,7 +103,7 @@ class Sitesearch extends Component {
               </form>
 
               <form
-                onSubmit={e => handleSubmit(e, "Collection")}
+                onSubmit={e => handleSubmit(e, 'Collection')}
                 className="ui fluid icon input"
               >
                 <input
@@ -82,7 +123,7 @@ class Sitesearch extends Component {
               </form>
 
               <form
-                onSubmit={e => handleSubmit(e, "User")}
+                onSubmit={e => handleSubmit(e, 'User')}
                 className="ui fluid icon input"
               >
                 <input
@@ -99,8 +140,10 @@ class Sitesearch extends Component {
                 >
                   People
                 </button>
-              </form>
+              </form> */}
             </div>
+            <br />
+            <br />
             <div className="results">
               <Results query={query} results={results} field={field} />
             </div>

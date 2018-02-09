@@ -55,12 +55,51 @@ export function updateAnalysisSuccess(data) {
 
 export function updateAnalysis(id, obj) {
   console.log("id => ", id);
+  console.log("OBJECT FROM UPDATE =>>>>>>>>>>>>>>>>>>>>>>>>>>>", obj);
+
   return dispatch => {
     axios
       .put(`${root}/api/analyses/${id}`, obj)
       .then(response => {
-        console.log(response);
-        console.log(response.data);
+        console.log(
+          "RESPONSE DATA =>>>>>>>>>>>>>>>>>>>>>>>>>>>",
+          response.data
+        );
+
+        dispatch(updateAnalysisSuccess(response.data));
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  };
+}
+
+export const LOAD_DOCUMENT = "LOAD_DOCUMENT";
+export const loadDocument = data => {
+  return { type: LOAD_DOCUMENT, data: data };
+};
+
+export const GET_ANALYSIS_AND_LOAD = "GET_ANALYSIS_AND_LOAD";
+export function getAnalysisAndLoadSuccess(data) {
+  return {
+    type: GET_ANALYSIS_AND_LOAD,
+    data: data,
+    isFetching: false
+  };
+}
+
+export function getAnalysisAndLoad(id) {
+  return dispatch => {
+    axios
+      .get(`${root}/api/analyses/${id}`)
+      .then(response => {
+        dispatch(getAnalysisAndLoadSuccess(response.data));
+        console.log("response.data => ", response.data);
+        return response.data;
+      })
+      .then(answer => {
+        console.log("answer =>", answer);
+        dispatch(loadDocument(answer.data));
       })
       .catch(e => {
         console.log(e);

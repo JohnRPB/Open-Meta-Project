@@ -8,7 +8,7 @@ const ExistingDisplay = ({existingCollections, onClick}) => {
     existing = (
       <Segment.Group>
         <Segment color="blue" textAlign="center">
-          <b>Use Existing Collection</b>
+          <b>Add Existing Collection</b>
         </Segment>
         <Segment style={{overflowX: 'scroll'}}>
           <Table singleLine style={{borderWidth: '0px'}}>

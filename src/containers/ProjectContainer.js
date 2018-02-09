@@ -6,25 +6,31 @@ import {
   editElement,
   saveElement,
   saveDocument,
-  updateAnalysis
-} from "../actions/project";
-import { getAnalysis } from "../actions/Analysis";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { withRouter } from "react-router";
-import serialize from "form-serialize";
+  updateAnalysis,
+  loadDocument,
+  getAnalysisAndLoad
+} from '../actions/project';
+import { getAnalysis } from '../actions/Analysis';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router';
+import serialize from 'form-serialize';
 
-import MasterDocument from "../components/Project/MasterDocument";
+import MasterDocument from '../components/Project/MasterDocument';
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
+  console.log(ownProps);
   return {
+    ...state,
     blocks: state.project.blocks,
     dustbins: state.project.dustbins,
     boxes: state.project.boxes,
     droppedBoxNames: state.project.droppedBoxNames,
     showForm: state.project.showForm,
     editing: state.project.editing,
-    Analysis: state.project.Analysis
+    Analysis: state.project.Analysis,
+    title: state.project.title,
+    analysisId: ownProps.match.params.analysis_id
     // _id: state.Token.id,
     // _token: state.Token.token,
     // isFetching: state.MyAnalysesPage.isFetching
@@ -42,16 +48,16 @@ function mapDispatchToProps(dispatch) {
       dispatch(addText(data));
       form.reset();
     },
-    handleDrop: (index2, item, index) => {
-      //index += 1;
-      let args = { index2, item, index };
+    handleDrop: (indexOfDustbins, item, index) => {
+      // if (index == 0) index -= 1;
+      let args = { indexOfDustbins, item, index };
       dispatch(handleDropping(args));
     },
     handleClick: (e, index) => {
       // Don't reload the page
       e.preventDefault();
       e.stopPropagation();
-      if (e.target.classList.contains("submitText")) {
+      if (e.target.classList.contains('submitText')) {
         return;
       }
       dispatch(showForm(index));
@@ -75,14 +81,17 @@ function mapDispatchToProps(dispatch) {
       dispatch(saveElement(data));
       form.reset();
     },
-    getAnalysis: id => {
-      dispatch(getAnalysis(id));
+    getAnalysisAndLoad: id => {
+      dispatch(getAnalysisAndLoad(id));
     },
     saveDocument: (e, id, obj) => {
-      console.log("ANALYSIS ID", id);
-      dispatch(saveDocument());
+      //dispatch(saveDocument());
       dispatch(updateAnalysis(id, obj));
+    },
+    loadDocument: data => {
+      dispatch(loadDocument(data));
     }
+
     // getUpdatedModules: () => {
     //   dispatch(getUpdatedModules());
     // }
@@ -92,4 +101,4 @@ function mapDispatchToProps(dispatch) {
 const ProjectContainer = withRouter(
   connect(mapStateToProps, mapDispatchToProps)(MasterDocument)
 );
-export default ProjectContainer;
+export default withRouter(ProjectContainer);

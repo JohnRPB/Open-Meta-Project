@@ -7,14 +7,18 @@ import OutputPanel from "../../components/Modules/OutputPanel.js";
 import serialize from "form-serialize";
 
 const mapStateToProps = (state, ownProps) => {
+  console.log(state.project)
+  console.log("===========================");
+  console.log("CURRENT MODULE", currentModule);
+  console.log("CURRENT MODULE", ownProps);
+  console.log("===========================");
   let currentModule = state.project.blocks[ownProps.moduleIdx];
-
-  let outputLoc = currentModule
-    ? currentModule.content.outputLoc
-    : "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png";
+  // let outputLoc = currentModule
+  //   ? currentModule.content.outputLoc
+  //   : "http://www.sharpsightlabs.com/wp-content/uploads/2014/11/scatterplot-in-r_basic.png";
 
   return {
-    outputLoc,
+    outputLoc: currentModule.content.outputLoc,
     loading: currentModule.loading
   };
 };

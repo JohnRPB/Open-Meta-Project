@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background:radial-gradient(to center top, #e7ebf1, #9ac9de) !important;
 }
 
 .module-card {
@@ -57,3 +58,12 @@ iframe {
   box-sizing: border-box;
   transition: padding 2.4s linear;
 }
+
+/* Override landing page CSS columns */
+
+/*Not working*/
+/*#root > div > div > div:nth-child(10) > div:nth-child(2) > div > div {*/
+  /*display:flex !important;*/
+  /*flex-direction:row;*/
+  /*justify-content:space-around;*/
+/*}*/

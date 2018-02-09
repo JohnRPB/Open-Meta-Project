@@ -1,13 +1,9 @@
-import React, { Component } from "react";
-import Nav from "../Nav";
-import { NavLink } from "react-router-dom";
+import React, { Component } from 'react';
+import Nav from '../Nav';
+import { NavLink } from 'react-router-dom';
 import {
   Segment,
-  Grid,
-  Button,
-  Image,
   Container,
-  Popup,
   Header,
   Dimmer,
   Loader,
@@ -15,8 +11,7 @@ import {
   Label,
   Card,
   Icon
-} from "semantic-ui-react";
-const moment = require("moment");
+} from 'semantic-ui-react';
 
 class Collection extends Component {
   constructor(props) {
@@ -24,29 +19,29 @@ class Collection extends Component {
     this.isFetching = true;
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    this.props.getCollection(this.props.match.params.collection_id);
+  }
+  componentWillUpdate() {
     this.props.getCollection(this.props.match.params.collection_id);
   }
 
   render() {
-    console.log("Collection props => ", this.props);
     if (!this.props.isFetching) {
       var { Collection } = this.props;
 
       var tags = this.props.Collection.category.map(el => {
         return <Label>{el.name}</Label>;
       });
-      console.log("tags => ", tags);
 
       var studies = this.props.Collection.studies.map(study => {
         return {
           header: study.name,
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
           meta: study.pubDate
         };
       });
-      console.log("studies => ", studies);
     }
 
     if (this.props.isFetching) {
@@ -73,18 +68,18 @@ class Collection extends Component {
               <Container>
                 <Segment>
                   <h1>
-                    {Collection.name}{" "}
-                    <span style={{ fontSize: "16px" }}>
-                      <NavLink to={`${Collection._id}/edit`}>
-                        <Icon name="edit" mini="true" />
-                      </NavLink>
-                    </span>
+                    {Collection.name}{' '}
+                    {this.props.Token ? (
+                      <span style={{ fontSize: '16px' }}>
+                        <NavLink to={`${Collection._id}/edit`}>
+                          <Icon name="edit" mini />
+                        </NavLink>
+                      </span>
+                    ) : null}
                   </h1>
 
-                  <Divider />
                   {tags.length ? tags : <Label>no tags</Label>}
-                  <br />
-                  <br />
+                  <Divider />
                   <p>{Collection.description}</p>
                 </Segment>
                 <Segment>
@@ -96,8 +91,8 @@ class Collection extends Component {
                         ? studies
                         : [
                             {
-                              header: "No selected studies",
-                              description: "Click here to add studies."
+                              header: 'No selected studies',
+                              description: 'Click here to add studies.'
                             }
                           ]
                     }

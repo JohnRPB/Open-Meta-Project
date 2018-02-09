@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import ButtonModal from '../../components/CollectionEditor/ButtonModal';
+import SaveButton from '../../components/CollectionEditor/SaveButton';
 import {
   setFetch,
   clear,
@@ -21,8 +21,6 @@ const mapStateToProps = state => {
     ? `/analysis/${analysisId}/edit`
     : `/collections/${state.routeProps.params.id}`;
   return {
-    open: state.collectionEdit.varObj.open,
-    categories: state.collectionEdit.varObj.buttons,
     isFetching: state.collectionEdit.varObj.isFetching,
     persisted: state.collectionEdit.persisted,
     ownerId: state.Dashboard.user._id,
@@ -40,31 +38,27 @@ const mapDispatchToProps = dispatch => {
     saveCollection: (
       collectionId,
       analysisId,
-      name,
-      persisted,
       ownerId,
-      description,
+      persisted,
+      data
     ) => {
       let putString = `${root()}/api/collections/${collectionId}`;
-      let collectionBody = {
-        name: name,
-        studies: persisted,
-        ownerId: ownerId,
-        description: description,
-        comments: [],
-        category: [],
-      };
-      console.log(collectionBody);
+      console.log(collectionModel);
       if (analysisId) console.log(analysisId);
       dispatch(setFetch(true));
+      let collectionModel = {
+        name: data.name,
+        description: data.description,
+        ownerId: ownerId,
+        studies: persisted
+      }
       axios
-        .put(putString, collectionBody)
+        .put(putString, collectionModel)
         .then(response => {
           if (typeof response.data == 'object') {
             dispatch(addCollection(response.data));
           }
           dispatch(setFetch(false));
-          dispatch(setOpen(false));
           return {
             ownerId,
             collectionId,
@@ -101,11 +95,7 @@ const mapDispatchToProps = dispatch => {
 
 const mergeProps = (stateProps, dispatchProps) => {
   return {
-    open: stateProps.open,
-    categories: stateProps.categories,
     isFetching: stateProps.isFetching,
-    changeCategory: dispatchProps.changeCategory,
-    onClose: dispatchProps.onClose,
     onSave: e => {
       e.preventDefault();
       const form = e.target;
@@ -113,10 +103,9 @@ const mergeProps = (stateProps, dispatchProps) => {
       dispatchProps.saveCollection(
         stateProps.collectionId,
         stateProps.analysisId,
-        data.collection.name,
-        stateProps.persisted,
         stateProps.ownerId,
-        data.description,
+        stateProps.persisted,
+        data
       );
       dispatchProps.clear();
       stateProps.endOfItAll();
@@ -124,10 +113,10 @@ const mergeProps = (stateProps, dispatchProps) => {
   };
 };
 
-const ButtonModalContainer = connect(
+const SaveButtonContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
   mergeProps,
-)(ButtonModal);
+)(SaveButton);
 
-export default ButtonModalContainer;
+export default SaveButtonContainer;

@@ -12,13 +12,11 @@ let router = express.Router();
 // retrieves a single analysis
 // --------------------------------------------
 
-router.get("/:id", function(req, res, next) {
-  Analysis.findById(req.params.id)
-    .then(result => {
-      console.log("result => ", result);
-      res.json(result);
-    })
-    .catch(e => res.status(500).send(e.stack));
+router.get("/:id", async (req, res, next) => {
+  let analysis = await Analysis.findById(req.params.id);
+  let profile = await User.findById(analysis.ownerId);
+  analysis.ownerId = profile;
+  res.json(analysis);
 });
 
 // --------------------------------------------
@@ -29,7 +27,7 @@ router.post("/", async (req, res, next) => {
   let a = {
     ownerId: req.body.id,
     comments: [],
-    hist: [],
+    hist: [{}, {time: Date.now()}],
     data: {header: {}}
   };
 
@@ -90,19 +88,21 @@ router.get("/ids", async (req, res, next) => {
 });
 
 router.put("/:id", async (req, res, next) => {
-  console.log(req.params.id);
+  // console.log(req.params.id);
+  console.log("begin put request: \n")
   console.log(req.body);
   //{data: {inclusion: {collectionId: "#"}}}
   let updatedAnalysis;
   let submitter;
   try {
     updatedAnalysis = await Analysis.findByIdAndUpdate(req.params.id, req.body);
-    console.log(updatedAnalysis);
+    // console.log(updatedAnalysis);
     submitter = await User.findById(req.body.ownerId);
-    console.log(submitter);
+    // console.log(submitter);
+
     let updateUser = true;
     let analysesArray = submitter.analyses || [];
-    console.log(analysesArray);
+    // console.log(analysesArray);
     for (let i = 0; i < analysesArray.length; i++) {
       if (
         submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()
@@ -121,5 +121,25 @@ router.put("/:id", async (req, res, next) => {
     res.status(500).send(e.stack);
   }
 });
+
+router.get(
+  "/updateanalysis/:id/:ownerId/:collectionId",
+  async (req, res, next) => {
+    console.log(req.params.id);
+    console.log(req.body);
+    //{data: {inclusion: {collectionId: "#"}}}
+    let updatedAnalysis;
+    let submitter;
+    try {
+      currentAnalysis = await Analysis.findByIdAndUpdate(req.params.id);
+      currentAnalysis.ownerId = req.params.ownerId;
+      currentAnalysis.data.inclusion.collectionId = req.params.collectionId;
+      currentAnalysis = await Analysis.findByIdAndUpdate(req.params.id, currentAnalysis);
+      res.json(updatedAnalysis);
+    } catch (e) {
+      res.status(500).send(e.stack);
+    }
+  }
+);
 
 module.exports = router;

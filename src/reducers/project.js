@@ -15,7 +15,9 @@ import {
   EDIT_ELEMENT,
   SAVE_ELEMENT,
   SAVE_DOCUMENT,
-  UPDATE_ANALYSIS
+  UPDATE_ANALYSIS,
+  GET_ANALYSIS_AND_LOAD,
+  LOAD_DOCUMENT
 } from "../actions/project";
 import * as Actions from "../actions/Analysis";
 
@@ -73,18 +75,13 @@ const initialState = {
   droppedBoxNames: [],
   showForm: null,
   editing: false,
-  Analysis: {}
+  Analysis: {},
+  title: null
 };
 
 const project = (state = initialState, action) => {
   let blocks;
   switch (action.type) {
-    case Actions.GET_ANALYSIS:
-      return {
-        ...state,
-        Analysis: action.data,
-        isFetching: false
-      };
     case GET_COMPUTATION_START:
       blocks = state.blocks.slice();
       blocks[action.data].loading = true;
@@ -128,6 +125,7 @@ const project = (state = initialState, action) => {
         ]
       };
     case HANDLE_DROPPING:
+      console.log(action)
       let indexOfElement = action.data.index;
       //takes care of initial submission
       if (indexOfElement === undefined) {
@@ -174,7 +172,19 @@ const project = (state = initialState, action) => {
         ],
         editing: false
       };
-    case SAVE_DOCUMENT:
+    case GET_ANALYSIS_AND_LOAD:
+      return {
+        ...state,
+        Analysis: action.data,
+        isFetching: false
+      };
+    case LOAD_DOCUMENT:
+      return {
+        ...state,
+        blocks: [...state.blocks, ...action.data.blocks],
+        title: action.data.header.title
+      };
+    case UPDATE_ANALYSIS:
       return {
         ...state,
         Analysis: {
@@ -185,7 +195,7 @@ const project = (state = initialState, action) => {
           }
         }
       };
-    case UPDATE_ANALYSIS:
+    case SAVE_DOCUMENT:
       return {
         ...state,
         Analysis: {
@@ -206,20 +216,32 @@ const project = (state = initialState, action) => {
         ]
       };
     case UPDATE_LOC:
-      blocks = state.blocks.slice();
-      blocks[action.data.moduleIdx].content = Object.assign(
-        {},
-        blocks[action.data.moduleIdx].content
-      );
-      blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
-      blocks[action.data.moduleIdx].loading = false;
+      console.log(state.blocks)
+      console.log(action.data);
+      //we are manipulating state in place here. we need to create a new object at that index
+      // blocks = state.blocks.slice();
+      // blocks[action.data.moduleIdx].content = Object.assign(
+      //   {},
+      //   blocks[action.data.moduleIdx].content
+      // );
+      // blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
+      // blocks[action.data.moduleIdx].loading = false;
+
+      // let blocksUpdate = state.blocks.slice(0);
       return {
         ...state,
-        blocks: [
-          ...blocks.slice(0, action.data.moduleIdx),
-          blocks[action.data.moduleIdx],
-          ...blocks.slice(action.data.moduleIdx + 1)
-        ]
+        blocks: 
+          state.blocks.slice(0, action.data.moduleIdx).concat(
+          [{
+            ...state.blocks[action.data.moduleIdx],
+            content: {
+              ...state.blocks[action.data.moduleIdx].content,
+              outputLoc: action.data.updatedLoc
+            },
+            loading: false
+          }]).concat(
+          ...state.blocks.slice(action.data.moduleIdx + 1)
+          )
       };
     case REMOVE_STUDY:
       blocks = state.blocks.slice();
