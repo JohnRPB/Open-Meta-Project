@@ -1,7 +1,7 @@
 ---
 title: "simplePlot"
 
-```{r, echo=FALSE}
+```{r}
 
 simplePlot <- function (json = "~/Documents/SoftwareDevelopment/VikingCodeSchool/final_project/openMeta/src/dbstudiesJSON.json") 
 {

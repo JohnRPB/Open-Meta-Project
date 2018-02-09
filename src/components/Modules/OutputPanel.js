@@ -12,7 +12,7 @@ import {
   Link,
   Switch
 } from "react-router-dom";
-import { Card, Image, Container, Dimmer, Loader } from "semantic-ui-react";
+import { Card, Image, Container, Dimmer, Loader, Segment } from "semantic-ui-react";
 import "../../index.css";
 
 // ---------------------------------------------------------
@@ -21,11 +21,9 @@ import "../../index.css";
 // ---------------------------------------------------------
 
 const LoadingComp = () => (
-  <Container>
     <Dimmer active>
       <Loader inverted>Loading</Loader>
     </Dimmer>
-  </Container>
 );
 
 // ---------------------------------------------------------
@@ -66,9 +64,9 @@ class IframeDisplay extends Component {
 
 const OutputPanel = props => {
   return (
-    <Container style={{ height: "550px", width: "680px", margin:"100px" }}>
+    <Segment style={{ height: "550px", width: "680px", border:"none" }}>
       {props.loading ? <LoadingComp /> : <IframeDisplay {...props} />}
-    </Container>
+    </Segment>
   );
 };
 

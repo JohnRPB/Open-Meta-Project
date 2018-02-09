@@ -10,7 +10,7 @@ const api = require('./api');
 // Setup logger
 
 // app.use(morgan(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length] :response-time ms'));
-app.use(morganToolkit());
+// app.use(morganToolkit());
 //mongo-middleware
 // app.use((req, res, next) =>
 const mongoose = require('mongoose');

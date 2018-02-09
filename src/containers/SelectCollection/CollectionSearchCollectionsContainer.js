@@ -28,11 +28,11 @@ function mapDispatchToProps(dispatch) {
       console.log("e.target ====>", e.target);
       dispatch(selectCollection(e.target.id));
 
-      let getString = `${root}/api/collections/${e.target.id}`;
-      axios
-        .get(getString)
-        .then(response => dispatch(newTables(response.data.studies)))
-        .catch(err => console.error(err));
+      // let getString = `${root}/api/studies/ids?studies=${e.target.id}`;
+      // axios
+      //   .get(getString)
+      //   .then(response => dispatch(newTables(response.data)))
+      //   .catch(err => console.error(err));
     }
   };
 }

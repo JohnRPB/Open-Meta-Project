@@ -29,10 +29,10 @@ export const saveElement = data => {
   return { type: SAVE_ELEMENT, data };
 };
 
-// export const SAVE_DOCUMENT = "SAVE_DOCUMENT";
-// export const saveDocument = () => {
-//   return { type: SAVE_DOCUMENT };
-// };
+export const SAVE_DOCUMENT = "SAVE_DOCUMENT";
+export const saveDocument = () => {
+  return { type: SAVE_DOCUMENT };
+};
 
 export const DELETE_ELEMENT = "DELETE_ELEMENT";
 export const deleteElement = data => {
@@ -55,12 +55,17 @@ export function updateAnalysisSuccess(data) {
 
 export function updateAnalysis(id, obj) {
   console.log("id => ", id);
+  console.log("OBJECT FROM UPDATE =>>>>>>>>>>>>>>>>>>>>>>>>>>>", obj);
+
   return dispatch => {
     axios
       .put(`${root}/api/analyses/${id}`, obj)
       .then(response => {
-        console.log(response);
-        console.log(response.data);
+        console.log(
+          "RESPONSE DATA =>>>>>>>>>>>>>>>>>>>>>>>>>>>",
+          response.data
+        );
+
         dispatch(updateAnalysisSuccess(response.data));
       })
       .catch(e => {

@@ -54,7 +54,6 @@ class AnalysisModal extends Component {
   }
 
   render() {
-    console.log("modal props => ", this.props);
     return (
       <Modal trigger={<Button>New Analysis</Button>}>
         <Modal.Content>
