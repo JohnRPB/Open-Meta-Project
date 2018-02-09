@@ -4,6 +4,7 @@ const faker = require('faker');
 const defaults = require('./defaults.js');
 const studyNum = defaults.study;
 const journalNum = defaults.journal;
+const reals = require('../../newStudies.js');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -26,28 +27,15 @@ module.exports = {
         url: `${faker.internet.url()}/${faker.random.uuid()}`,
       });
     }
+    for (var i = 0; i < reals.length; i++) {
+      let bodyObj = reals[i];
+      bodyObj.url = `${faker.internet.url()}/${faker.random.uuid()}`;
+      studies.push(bodyObj);
+    }
+    console.log('past both loops');
 
     return queryInterface.bulkInsert('Studies', studies);
   },
 
-  //[>
-  //Add altering commands here.
-  //Return a promise to correctly handle asynchronicity.
-
-  //Example:
-  //return queryInterface.bulkInsert('Person', [{
-  //name: 'John Doe',
-  //isBetaMember: false
-  //}], {});
-  //*/
-  //},
-
-  down: (queryInterface, Sequelize) => {
-    //[>
-    //Add reverting commands here.
-    //Return a promise to correctly handle asynchronicity.
-    //Example:
-    //return queryInterface.bulkDelete('Person', null, {});
-    //*/
-  },
+  down: (queryInterface, Sequelize) => {},
 };
