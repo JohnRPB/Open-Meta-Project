@@ -4,6 +4,9 @@ import {DragSource} from "react-dnd";
 import studies from "../../newStudies.js";
 import ItemTypes from "./ItemTypes";
 
+//for the studies
+import {store} from "../../index.js";
+
 const style = {
   border: "1px dashed gray",
   backgroundColor: "white",
@@ -15,7 +18,21 @@ const style = {
 };
 
 //drop studies in here
-let createStudies = () => studies.map(study => Object.assign({}, study));
+let createStudies = () => {
+  let reduxStore = store.getState();
+  let reduxStudies =
+    reduxStore.project.Analysis.data.inclusion.collectionId.studies;
+
+  if (!reduxStudies) {
+    reduxStudies = studies;
+  }
+
+  console.log(
+    "the store inside the box => ",
+    reduxStore.project.Analysis.data.inclusion.collectionId.studies
+  );
+  return reduxStudies.map(study => Object.assign({}, study));
+};
 
 let createModule = name => {
   return {
@@ -44,6 +61,8 @@ const boxSource = {
 };
 
 class Box extends Component {
+  componentDidMount() {}
+
   render() {
     const {displayName, isDropped, isDragging, connectDragSource} = this.props;
     const opacity = isDragging ? 0.4 : 1;

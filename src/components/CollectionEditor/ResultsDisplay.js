@@ -1,24 +1,19 @@
 import React from 'react';
 import {Button, Checkbox, Dimmer, Segment, Table} from 'semantic-ui-react';
 import PagesContainer from '../../containers/CollectionEditor/PagesContainer';
-import ButtonModalContainer from '../../containers/CollectionEditor/ButtonModalContainer';
 
 const ResultsDisplay = ({
   persisted,
   results,
   changeStudyStatus,
   isFetching,
-  setOpen
 }) => {
   let display = null;
   if (persisted.length || results.length)
     display = (
       <Segment>
+        <h3>Studies In Collection</h3>
         <Dimmer active={isFetching} inverted />
-        <Button disabled={persisted.length < 1} onClick={()=>setOpen(true)}>
-          Save Collection
-        </Button>
-        <ButtonModalContainer />
         <Table attached="top" celled>
           <Table.Header>
             <Table.Row>
