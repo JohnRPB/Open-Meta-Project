@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import Nav from "../Nav";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {
   Segment,
   Container,
@@ -26,7 +26,7 @@ class Analysis extends Component {
 
   render() {
     if (!this.props.isFetching) {
-      var { Analysis } = this.props;
+      var {Analysis} = this.props;
 
       // creating cards objects for card group
       if (Analysis.data.inclusion.collectionId) {
@@ -94,9 +94,11 @@ class Analysis extends Component {
             <Container>
               <Segment>
                 <h1>
-                  {Analysis.data.header.title}{" "}
+                  {Analysis.data.header
+                    ? Analysis.data.header.title
+                    : "My Analysis"}{" "}
                   {this.props.Token.token ? (
-                    <span style={{ fontSize: "16px" }}>
+                    <span style={{fontSize: "16px"}}>
                       <NavLink to={`${Analysis._id}/edit`}>
                         <Icon name="edit" mini />
                       </NavLink>
