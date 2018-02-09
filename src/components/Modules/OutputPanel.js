@@ -48,14 +48,17 @@ class IframeDisplay extends Component {
   render() {
     return (
       <div className="frame-container">
-        <a href={this.props.outputLoc} style={{float: 'right'}}>
-          See larger
-        </a>
+        <div>
+          <a href={this.props.outputLoc} style={{float: 'right'}}>
+            See larger
+          </a>
+      </div>
         <iframe
           src={this.props.outputLoc}
           frameBorder="0"
           title={this.props.outputLoc}
           scrolling="no"
+          style={{marginTop:"20px"}}
         />
       </div>
     );
