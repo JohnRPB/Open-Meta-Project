@@ -56,6 +56,15 @@ class MasterDocument extends Component {
     // let routingId = this.props.location.pathname.split("/")[-2];
   }
 
+  // shouldComponentUpdate(nextProps) {
+  //   let change = false;
+  //   change = change ||  nextProps.blocks.length !== this.props.blocks.length;
+  //   change = change ||  nextProps.showForm !== this.props.showForm;
+  //
+  //   return change;
+  //
+  // }
+
   render() {
     console.log("this props => ", this.props);
     // const { boxes, dustbins } = this.state;
@@ -140,7 +149,12 @@ class MasterDocument extends Component {
                     <br />
                     <br />
                     <Button
-                      onClick={e => saveDocument(e, Analysis._id, Analysis)}
+                      onClick={e => {
+                        let uAnalysis = Analysis;
+                        uAnalysis.data.blocks = this.props.blocks;
+                        saveDocument(e, Analysis._id, uAnalysis);
+                        alert("Document saved and analysis is updated!");
+                      }}
                       color="orange"
                     >
                       Save Document

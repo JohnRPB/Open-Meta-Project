@@ -31,8 +31,8 @@ const Landing = () => {
         <br />
         <br />
         <br />
-        <div class="ui text container">
-          <i class="connectdevelop icon massive" />
+        <div className="ui text container">
+          <i className="connectdevelop icon massive" />
           <br />
           <h2>Your Portal to Papers and Metanalyses</h2>
         </div>
@@ -111,6 +111,7 @@ const Landing = () => {
             <Grid>
               <Grid.Row columns={3}>
                 <Grid.Column>
+
                   <i className="laptop icon huge" />
                   <br />
                   <br />
@@ -125,6 +126,7 @@ const Landing = () => {
                   <br />
                 </Grid.Column>
                 <Grid.Column>
+
                   <i className="cubes icon huge" />
                   <br />
                   <br />
@@ -172,7 +174,7 @@ const Landing = () => {
                       <Image
                         src={johann}
                         centered
-                        circular="true"
+                        circular={true}
                         size="tiny"
                       />
                     }
@@ -190,7 +192,7 @@ const Landing = () => {
                 <Grid.Column>
                   <Popup
                     trigger={
-                      <Image src={gene} centered circular="true" size="tiny" />
+                      <Image src={gene} centered circular={true} size="tiny" />
                     }
                     content="The man behind the
                     machine."
@@ -206,7 +208,7 @@ const Landing = () => {
                 <Grid.Column>
                   <Popup
                     trigger={
-                      <Image src={dave} centered circular="true" size="tiny" />
+                      <Image src={dave} centered circular={true} size="tiny" />
                     }
                     content={`"Dazzle me."`}
                   />
@@ -221,7 +223,7 @@ const Landing = () => {
                 <Grid.Column>
                   <Popup
                     trigger={
-                      <Image src={edwin} centered circular="true" size="tiny" />
+                      <Image src={edwin} centered circular={true} size="tiny" />
                     }
                     content="Ready to go #beastmode at a moment's notice."
                   />
@@ -237,7 +239,7 @@ const Landing = () => {
                 <Grid.Column>
                   <Popup
                     trigger={
-                      <Image src={hai} centered circular="true" size="tiny" />
+                      <Image src={hai} centered circular={true} size="tiny" />
                     }
                     content="It's pronounced /hi/."
                   />

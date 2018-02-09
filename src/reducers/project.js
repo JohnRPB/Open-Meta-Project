@@ -184,7 +184,17 @@ const project = (state = initialState, action) => {
         title: action.data.header.title
       };
     case UPDATE_ANALYSIS:
-      alert("Document saved and analysis is updated!");
+      return {
+        ...state,
+        Analysis: {
+          ...state.Analysis,
+          data: {
+            ...state.Analysis.data,
+            blocks: state.blocks
+          }
+        }
+      };
+    case SAVE_DOCUMENT:
       return {
         ...state,
         Analysis: {
@@ -214,6 +224,7 @@ const project = (state = initialState, action) => {
       // blocks[action.data.moduleIdx].content.outputLoc = action.data.updatedLoc;
       // blocks[action.data.moduleIdx].loading = false;
 
+      // let blocksUpdate = state.blocks.slice(0);
       return {
         ...state,
         blocks: [

@@ -183,7 +183,7 @@ class Analysis extends Component {
                 </Segment>
               ) : null}
 
-              <p>{JSON.stringify(Analysis.data.blocks, null, 5)}</p>
+              {/* <p>{JSON.stringify(Analysis.data.blocks, null, 5)}</p> */}
             </Container>
           </div>
           <br />
