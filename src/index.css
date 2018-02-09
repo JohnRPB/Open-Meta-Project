@@ -58,3 +58,12 @@ iframe {
   box-sizing: border-box;
   transition: padding 2.4s linear;
 }
+
+/* Override landing page CSS columns */
+
+/*Not working*/
+/*#root > div > div > div:nth-child(10) > div:nth-child(2) > div > div {*/
+  /*display:flex !important;*/
+  /*flex-direction:row;*/
+  /*justify-content:space-around;*/
+/*}*/
