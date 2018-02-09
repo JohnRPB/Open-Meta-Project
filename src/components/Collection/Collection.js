@@ -22,6 +22,9 @@ class Collection extends Component {
   componentDidMount() {
     this.props.getCollection(this.props.match.params.collection_id);
   }
+  componentWillUpdate() {
+    this.props.getCollection(this.props.match.params.collection_id);
+  }
 
   render() {
     if (!this.props.isFetching) {

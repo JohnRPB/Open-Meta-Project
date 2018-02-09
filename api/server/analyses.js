@@ -131,40 +131,11 @@ router.get(
     let updatedAnalysis;
     let submitter;
     try {
-      console.log("still running over here");
-
-      updatedAnalysis = await Analysis.findByIdAndUpdate(req.params.id, {
-        data: {inclusion: {collectionId: req.params.collectionId}}
-      });
-
-      console.log("req.params.ownerId => ", req.params.ownerId);
-      console.log("updatedAnalysis => ", updatedAnalysis);
-
+      currentAnalysis = await Analysis.findByIdAndUpdate(req.params.id);
+      currentAnalysis.ownerId = req.params.ownerId;
+      currentAnalysis.data.inclusion.collectionId = req.params.collectionId;
+      currentAnalysis = await Analysis.findByIdAndUpdate(req.params.id, currentAnalysis);
       res.json(updatedAnalysis);
-      // console.log("analysis updated");
-      //
-      // submitter = await User.findById(req.params.ownerId);
-      //
-      // console.log("analysis updated");
-      //
-      // let updateUser = true;
-      //
-      // let analysesArray = submitter.analyses || [];
-      // console.log(analysesArray);
-      // for (let i = 0; i < analysesArray.length; i++) {
-      //   if (
-      //     submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()
-      //   ) {
-      //     updateUser = false;
-      //   }
-      // }
-      // if (updateUser) {
-      //   submitter.analyses.push(updatedAnalysis);
-      //   submitter = await submitter.save();
-      //   res.json(updatedAnalysis);
-      // } else {
-      //   res.status(200).send();
-      // }
     } catch (e) {
       res.status(500).send(e.stack);
     }

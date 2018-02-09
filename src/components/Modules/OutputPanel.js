@@ -57,7 +57,7 @@ class IframeDisplay extends Component {
           <a href={this.props.outputLoc} style={{float: 'right'}}>
             See larger
           </a>
-      </div>
+        </div>
         <iframe
           src={this.props.outputLoc}
           frameBorder="0"
@@ -71,6 +71,7 @@ class IframeDisplay extends Component {
 }
 
 const OutputPanel = props => {
+  console.log("Output Props: ", props);
   return (
     <Segment style={{ height: "550px", width: "680px", border:"none" }}>
       {props.loading ? <LoadingComp /> : <IframeDisplay {...props} />}
