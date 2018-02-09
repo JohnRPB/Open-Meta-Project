@@ -27,6 +27,11 @@ let createStudies = () => {
     reduxStudies = studies;
   }
 
+  reduxStudies = reduxStudies.map(study => {
+    study.active = true;
+    return study;
+  });
+
   console.log(
     "the store inside the box => ",
     reduxStore.project.Analysis.data.inclusion.collectionId.studies

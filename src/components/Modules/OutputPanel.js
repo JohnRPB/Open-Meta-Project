@@ -4,22 +4,27 @@
 // ---------------------------------------------------------
 // Recieves api URL and renders result inside a card
 
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
   Link,
-  Switch,
-} from 'react-router-dom';
-import {Card, Image, Container, Dimmer, Loader} from 'semantic-ui-react';
-import '../../index.css';
+  Switch
+} from "react-router-dom";
+import { Card, Image, Container, Dimmer, Loader, Segment } from "semantic-ui-react";
+import "../../index.css";
 
 // ---------------------------------------------------------
 // Loader
 // 2018-01-31 22:49
 // ---------------------------------------------------------
 
+const LoadingComp = () => (
+    <Dimmer active>
+      <Loader inverted>Loading</Loader>
+    </Dimmer>
+);
 
 // ---------------------------------------------------------
 // Static png
@@ -67,12 +72,9 @@ class IframeDisplay extends Component {
 
 const OutputPanel = props => {
   return (
-    <Container style={{height: '550px', width: '680px'}}>
-      <Dimmer active={props.loading} >
-        <Loader inverted>Loading</Loader> 
-      </Dimmer>
-      <IframeDisplay {...props} />
-    </Container>
+    <Segment style={{ height: "550px", width: "680px", border:"none" }}>
+      {props.loading ? <LoadingComp /> : <IframeDisplay {...props} />}
+    </Segment>
   );
 };
 

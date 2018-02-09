@@ -37,7 +37,34 @@ class Module extends React.Component {
     this.props.getOcpu();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+
+    console.log("------------------- START this.props.moduleIdx -------------------");
+    console.log(this.props.moduleIdx);
+    console.log("-------------------- END this.props.moduleIdx --------------------");
+    
+
+    if (prevProps.moduleIdx !== this.props.moduleIdx) {
+      this.props.getOcpu();
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+
+    console.log("-------------- Will receive props -----------------");
+    
+
+    if (this.props.moduleIdx !== nextProps.moduleIdx) {
+      this.props.getOcpu();
+    }
+  }
+
+
   render() {
+    console.log("------------------- START this.props.moduleIdx (render) -------------------");
+    console.log(this.props.moduleIdx);
+    console.log("-------------------- END this.props.moduleIdx --------------------");
+
     return (
       <Container>
         <PopupPanel trigger={<Button>+</Button>}>
