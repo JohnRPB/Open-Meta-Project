@@ -27,14 +27,14 @@ router.post("/", async (req, res, next) => {
   let a = {
     ownerId: req.body.id,
     comments: [],
-    hist: [{}, { time: Date.now() }],
-    data: { header: {} }
+    hist: [{}, {time: Date.now()}],
+    data: {header: {}}
   };
 
   let newObj = Object.assign({}, a, {
     data: Object.assign(
       {},
-      { header: {} },
+      {header: {}},
       {
         header: {
           title: req.body.title,
@@ -46,7 +46,7 @@ router.post("/", async (req, res, next) => {
   let newAnalysis = await new Analysis(newObj);
   await newAnalysis.save();
   await User.findByIdAndUpdate(req.body.id, {
-    $push: { analyses: newAnalysis._id }
+    $push: {analyses: newAnalysis._id}
   });
   res.send(newAnalysis._id);
 });
@@ -134,31 +134,37 @@ router.get(
       console.log("still running over here");
 
       updatedAnalysis = await Analysis.findByIdAndUpdate(req.params.id, {
-        data: {inclusion: {collectionId: req.params.ownerId}}
+        data: {inclusion: {collectionId: req.params.collectionId}}
       });
-      console.log(updatedAnalysis);
 
-      submitter = await User.findById(req.params.ownerId);
-      console.log(submitter);
+      console.log("req.params.ownerId => ", req.params.ownerId);
+      console.log("updatedAnalysis => ", updatedAnalysis);
 
-      let updateUser = true;
-
-      let analysesArray = submitter.analyses || [];
-      console.log(analysesArray);
-      for (let i = 0; i < analysesArray.length; i++) {
-        if (
-          submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()
-        ) {
-          updateUser = false;
-        }
-      }
-      if (updateUser) {
-        submitter.analyses.push(updatedAnalysis);
-        submitter = await submitter.save();
-        res.json(updatedAnalysis);
-      } else {
-        res.status(200).send();
-      }
+      res.json(updatedAnalysis);
+      // console.log("analysis updated");
+      //
+      // submitter = await User.findById(req.params.ownerId);
+      //
+      // console.log("analysis updated");
+      //
+      // let updateUser = true;
+      //
+      // let analysesArray = submitter.analyses || [];
+      // console.log(analysesArray);
+      // for (let i = 0; i < analysesArray.length; i++) {
+      //   if (
+      //     submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()
+      //   ) {
+      //     updateUser = false;
+      //   }
+      // }
+      // if (updateUser) {
+      //   submitter.analyses.push(updatedAnalysis);
+      //   submitter = await submitter.save();
+      //   res.json(updatedAnalysis);
+      // } else {
+      //   res.status(200).send();
+      // }
     } catch (e) {
       res.status(500).send(e.stack);
     }

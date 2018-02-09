@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import { Accordion, Icon } from "semantic-ui-react";
+import React, {Component} from "react";
+import {Accordion, Icon} from "semantic-ui-react";
 
 export default class AccordionExampleStyled extends Component {
-  state = { activeIndex: 0 };
+  state = {activeIndex: 0};
 
   handleClick = (e, titleProps) => {
-    const { index } = titleProps;
-    const { activeIndex } = this.state;
+    const {index} = titleProps;
+    const {activeIndex} = this.state;
     const newIndex = activeIndex === index ? -1 : index;
 
-    this.setState({ activeIndex: newIndex });
+    this.setState({activeIndex: newIndex});
   };
 
   render() {
-    const { activeIndex } = this.state;
+    const {activeIndex} = this.state;
 
     return (
       <Accordion styled fluid>
@@ -27,9 +27,11 @@ export default class AccordionExampleStyled extends Component {
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 0}>
           <p>
-            A dog is a type of domesticated animal. Known for its loyalty and
-            faithfulness, it can be found as a welcome guest in many households
-            across the world.
+            Open Meta is a platform for creating meta-analyses from tens to
+            millions of studies easily. It is the platform for researchers and
+            statisticians to find grounded scientific truth based on statistical
+            analysis. For information on what meta analyses are:
+            https://en.wikipedia.org/wiki/Meta-analysis
           </p>
         </Accordion.Content>
 
@@ -43,9 +45,12 @@ export default class AccordionExampleStyled extends Component {
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 1}>
           <p>
-            There are many breeds of dogs. Each breed varies in size and
-            temperament. Owners often select a breed of dog that they find to be
-            compatible with their own lifestyle and desires from a companion.
+            To start, create an account on the Open Meta platform. Meta-analyses
+            creation on Open Meta is based on two important parts: the
+            Collection and the Analyses. The Collection is the collection of
+            studies you want to create a Meta-Analysis for. Open Meta aggregates
+            data from millions of studies available on the web. Next, the
+            Anlysis is the meta-analyses which aggregates your collection data.
           </p>
         </Accordion.Content>
 

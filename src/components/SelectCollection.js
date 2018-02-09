@@ -47,7 +47,6 @@ class SelectCollection extends Component {
     //   this.props.location.search.slice(4)
     // );
 
-
     // axios({
     //   method: "PUT",
     //   url: `${root()}/analyses/${this.props.location.search.slice(4)}`,
@@ -75,12 +74,11 @@ class SelectCollection extends Component {
     //     // throw new Error('Network response was not ok.');
     //     console.log("fetch done in Components/SelectCollection.js");
 
-        this.props.history.push(`/analysis/${this.props.location.search.slice(4)}`)
-      // })
-      // .catch(e => {
-      //   console.log("fetch error in Components/SelectCollection.js");
-      // });
-
+    this.props.history.push(`/analysis/${this.props.location.search.slice(4)}`);
+    // })
+    // .catch(e => {
+    //   console.log("fetch error in Components/SelectCollection.js");
+    // });
 
     // fetch({
     //   method: "put",
