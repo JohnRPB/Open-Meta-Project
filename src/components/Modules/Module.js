@@ -7,6 +7,7 @@ import ControlPanel from "./ControlPanel";
 
 import OutputPanelContainer from "../../containers/Modules/OutputPanelContainer";
 import StudyInclusionBoxContainer from "../../containers/Modules/StudyInclusionBoxContainer";
+import DownloadButtonContainer from '../../containers/DashboardContainer';
 
 // ---------------------------------------------------------
 // Top-level Module
@@ -46,6 +47,7 @@ class Module extends React.Component {
           </ControlPanel>
         </PopupPanel>
         <OutputPanelContainer moduleIdx={this.props.moduleIdx} />
+        <DownloadButtonContainer moduleIndex={this.props.moduleIdx} />
       </Container>
     );
   }
