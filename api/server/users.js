@@ -1,9 +1,9 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
 
 //access to database
-let sequelizeModels = require("./../models/sequelize/index");
-let mongooseModels = require("./../models/mongoose/index");
+let sequelizeModels = require('./../models/sequelize/index');
+let mongooseModels = require('./../models/mongoose/index');
 let User = mongooseModels.User;
 let Study = sequelizeModels.Study;
 let Journal = sequelizeModels.Journal;
@@ -15,7 +15,7 @@ let Tag = sequelizeModels.Tag;
 // ------------------------
 // access to mongoDB
 // ------------------------
-let mongoModels = require("./../models/mongoose");
+let mongoModels = require('./../models/mongoose');
 let mongoUser = mongoModels.User;
 let mongoAnalysis = mongoModels.Analysis;
 
@@ -38,10 +38,33 @@ let mongoAnalysis = mongoModels.Analysis;
 //     .catch(e => res.status(500).send(e.stack));
 // });
 
+router.get('/sitesearch/:search', async function(req, res, next) {
+  console.log('REQ.PARAMS.SEARCH', req.params.search);
+  let query = req.params.search,
+    result,
+    results = [];
+  try {
+    result = await User.find({});
+    console.log('result => ', result);
+  } catch (e) {
+    res.status(500).send(e.stack);
+  }
+
+  //Handle asynchronous problems by putting the following outside the try block
+  result.forEach(element => {
+    if (element.email.toLowerCase().includes(query.toLowerCase())) {
+      console.log(element.email);
+      results.push(element);
+    }
+  });
+  console.log('results => ', results);
+  res.json(results);
+});
+
 // ------------------------
 // getting a single user
 // ------------------------
-router.get("/:userId", async (req, res, next) => {
+router.get('/:userId', async (req, res, next) => {
   var user = await mongoUser.findById(req.params.userId);
   // console.log("user in api =>", user);
   let analyses = await user.analyses.map(async study => {
@@ -58,32 +81,9 @@ router.get("/:userId", async (req, res, next) => {
 // ------------------------
 /* Login or register user */
 // ------------------------
-router.post("/", function(req, res, next) {
-  console.log("req.body => ", req.body);
-  res.send("response back from api!");
-});
-
-router.get("/search/:search", async function(req, res, next) {
-  console.log("REQ.PARAMS.SEARCH", req.params.search);
-  let query = req.params.search,
-    result,
-    results = [];
-  try {
-    result = await User.find({});
-    console.log("result => ", result);
-  } catch (e) {
-    res.status(500).send(e.stack);
-  }
-
-  //Handle asynchronous problems by putting the following outside the try block
-  result.forEach(element => {
-    if (element.email.toLowerCase().includes(query.toLowerCase())) {
-      console.log(element.email);
-      results.push(element);
-    }
-  });
-  console.log("results => ", results);
-  res.json(results);
+router.post('/', function(req, res, next) {
+  console.log('req.body => ', req.body);
+  res.send('response back from api!');
 });
 
 module.exports = router;

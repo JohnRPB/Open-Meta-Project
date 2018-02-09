@@ -1,25 +1,25 @@
-import axios from "axios";
+import axios from 'axios';
 const root =
-  process.env.NODE_ENV === "production"
-    ? "https://radiant-taiga-58264.herokuapp.com"
-    : "http://localhost:8000";
+  process.env.NODE_ENV === 'production'
+    ? 'https://radiant-taiga-58264.herokuapp.com'
+    : 'http://localhost:8000';
 
-export const REDIRECT_SUBMISSION = "REDIRECT_SUBMISSION";
+export const REDIRECT_SUBMISSION = 'REDIRECT_SUBMISSION';
 export const redirectSubmission = () => {
   return { type: REDIRECT_SUBMISSION };
 };
 
-export const GET_USERS_START = "GET_USERS_START";
+export const GET_USERS_START = 'GET_USERS_START';
 export const getUsersStart = () => {
   return { type: GET_USERS_START };
 };
 
-export const GET_USERS_RESULTS = "GET_USERS_RESULTS";
+export const GET_USERS_RESULTS = 'GET_USERS_RESULTS';
 export const getUsersResults = (data, query, value) => {
   return { type: GET_USERS_RESULTS, data, query, value };
 };
 
-export const GET_USERS_ERROR = "GET_USERS_ERROR";
+export const GET_USERS_ERROR = 'GET_USERS_ERROR';
 export const getUsersError = data => {
   return { type: GET_USERS_ERROR, data };
 };
@@ -27,12 +27,12 @@ export const getUsersError = data => {
 export function getUsers(data, value) {
   return dispatch => {
     dispatch(getUsersStart());
-    console.log("query =>", data.query);
-    let query = data.query;
+    console.log('query =>', data);
+    let query = data;
     axios
-      .get(`${root}/api/users/search/${query}`)
+      .get(`${root}/api/users/sitesearch/${query}`)
       .then(response => {
-        console.log("response =>", response.data);
+        console.log('response =>', response.data);
         dispatch(getUsersResults(response.data, query, value));
       })
       .catch(e => {
@@ -41,15 +41,15 @@ export function getUsers(data, value) {
   };
 }
 
-export const GET_ANALYSES_START = "GET_ANALYSES_START";
+export const GET_ANALYSES_START = 'GET_ANALYSES_START';
 export const getAnalysesStart = () => {
   return { type: GET_ANALYSES_START };
 };
-export const GET_ANALYSES_RESULTS = "GET_ANALYSES_RESULTS";
+export const GET_ANALYSES_RESULTS = 'GET_ANALYSES_RESULTS';
 export const getAnalysesResults = (data, query, value) => {
   return { type: GET_ANALYSES_RESULTS, data, query, value };
 };
-export const GET_ANALYSES_ERROR = "GET_ANALYSES_ERROR";
+export const GET_ANALYSES_ERROR = 'GET_ANALYSES_ERROR';
 export const getAnalysesError = data => {
   return { type: GET_ANALYSES_ERROR, data };
 };
@@ -57,12 +57,12 @@ export const getAnalysesError = data => {
 export function getAnalyses(data, value) {
   return dispatch => {
     dispatch(getAnalysesStart());
-    console.log("query =>", data.query);
-    let query = data.query;
+    console.log('query =>', data);
+    let query = data;
     axios
       .get(`${root}/api/myanalyses/${query}`)
       .then(response => {
-        console.log("response =>", response.data);
+        console.log('response =>', response.data);
         dispatch(getAnalysesResults(response.data, query, value));
       })
       .catch(e => {
@@ -71,15 +71,15 @@ export function getAnalyses(data, value) {
   };
 }
 
-export const GET_COLLECTIONS_START = "GET_COLLECTIONS_START";
+export const GET_COLLECTIONS_START = 'GET_COLLECTIONS_START';
 export const getCollectionsStart = () => {
   return { type: GET_COLLECTIONS_START };
 };
-export const GET_COLLECTIONS_RESULTS = "GET_COLLECTIONS_RESULTS";
+export const GET_COLLECTIONS_RESULTS = 'GET_COLLECTIONS_RESULTS';
 export const getCollectionsResults = (data, query, value) => {
   return { type: GET_COLLECTIONS_RESULTS, data, query, value };
 };
-export const GET_COLLECTIONS_ERROR = "GET_COLLECTIONS_ERROR";
+export const GET_COLLECTIONS_ERROR = 'GET_COLLECTIONS_ERROR';
 export const getCollectionsError = data => {
   return { type: GET_COLLECTIONS_ERROR, data };
 };
@@ -87,12 +87,12 @@ export const getCollectionsError = data => {
 export function getCollections(data, value) {
   return dispatch => {
     dispatch(getCollectionsStart());
-    console.log("query =>", data.query);
-    let query = data.query;
+    console.log('query =>', data);
+    let query = data;
     axios
-      .get(`${root}/api/collections/${query}`)
+      .get(`${root}/api/collections/sitesearch/${query}`)
       .then(response => {
-        console.log("response =>", response.data);
+        console.log('response =>', response.data);
         dispatch(getCollectionsResults(response.data, query, value));
       })
       .catch(e => {
