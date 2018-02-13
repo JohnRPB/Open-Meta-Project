@@ -32,7 +32,12 @@ import UserForm from "./containers/UserForm"; //userform container
 
 const Routes = ({ history, token }) => {
   console.log("Route Props: ", history);
-  let display = (<Router><Route path="/" component={UserForm} /></Router>);
+  let display = (<Router>
+    <Switch>
+    <Route exact path="/" component={Landing} />
+    <Route path="/" component={UserForm} />
+  </Switch>
+    </Router>);
   if(token){
     display = (
     <Router>
