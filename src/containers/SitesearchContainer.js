@@ -31,13 +31,13 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
     //   }
     //   form.reset();
     // },
-    showResults: (data, value) => {
-      console.log('VALUE', value);
+    showResults: (data, field) => {
+      console.log('field', field);
       console.log('DATA FROM ACTION', data);
-      if (value == 'Collection') {
-        dispatch(getCollections(data, value));
-      } else if (value == 'User') {
-        dispatch(getUsers(data, value));
+      if (field == 'Collection') {
+        dispatch(getCollections(data, field));
+      } else if (field == 'User') {
+        dispatch(getUsers(data, field));
       } else {
         dispatch(getAnalyses(data, 'Analysis'));
       }
