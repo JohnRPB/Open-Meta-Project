@@ -8,7 +8,7 @@ For a quick overview of what has been accomplished, see the "Project Showcase" s
 
 ## Rationale and technical concepts
 
-Meta-analyses are among the most useful techniques available today for resolving scientific debates, but despite the profusion of tools available for conducting them, the technical simplicity of the analyses themselves, and their essentially *social* nature---in that they evaluate the work of peers and colleagues---there is as yet no central repository where scientists and academics can conduct and share these analyses. Such a repository would provide the basis for improved reprodubility, faster dissemination of research, and rapid feedback, which are the goals of the Open Meta Project.
+[Meta-analyses](https://en.wikipedia.org/wiki/Meta-analysis) are among the most useful techniques available today for resolving scientific debates, but despite the profusion of tools available for conducting them, the technical simplicity of the analyses themselves, and their essentially *social* nature---in that they evaluate the work of peers and colleagues---there is as yet no central repository where scientists and academics can conduct and share these analyses. Such a repository would provide the basis for improved reprodubility, faster dissemination of research, and rapid feedback, which are the goals of the Open Meta Project.
 
 In order to make the process of conducting a meta-anlaysis interactive and desconstructable, as well as available to those not steeped in the world of scientific computing, our website uses R packages, accessible through a simple drag-and-drop interface, as the analytical/graphical units. These R packages are referenced as API calls inside React *modules*---layers of code, accessible through a JavaScript GUI, which control parameters of the analyses (e.g. studies included)---and these API calls are sent to a public server hosted by OpenCPU, on which the R packages are installed. 
 
@@ -87,3 +87,5 @@ For the authentification to any route
   feel free to slack me for any questions on this -> I can also set the authentification up for a route after you set up the route as well
   
 ============================ Notes to the developers on this project >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[1](https://www.the-scientist.com/?articles.view/articleNo/18596/title/Meta-Analysis-Gaining-Status-In-Science-And-Policymaking/)
