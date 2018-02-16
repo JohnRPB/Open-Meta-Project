@@ -4,7 +4,7 @@ The Open Meta Project is a collaborative effort to produce a website where scien
 
 For a quick overview of what has been accomplished, see the "Project Showcase" section.
 
-#### Note: This project is under *active* development, and documentation is being added every day.
+#### Note: This project is under *active* development, and documentation is being added every day. 
 
 ## Rationale and technical concepts
 
@@ -19,7 +19,9 @@ The encapsulation of every meta-analytic procedure as a single API call, moreove
 ## Project Showcase
 (as of February 16th, 2018)
 
-Currently, we stand at five collaborators, more than three weeks, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood". Below are the ones that are complete in some form:
+Currently, we stand at five collaborators, more than three weeks, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood". Below, you will find a listing of these original features, as well as some visual demonstrations of them functioning.
+
+These are the features that are complete in some form:
 
 * SQL database for storing meta-analytically useful information about studies, as well as associations and attributes that make studies conveniently searchable (published journal, authors, year, scientific field, etc)
 * Form pages where new studies can be located, submitted, and/or added to publicly available user "collections"
@@ -51,6 +53,10 @@ Features that will be developed in the future:
 * Support for following other users
 * "Activity feed" that allows users to see recent submissions
 * Many more features...
+
+Preview [the site](https://www.openmeta.surge.sh).
+
+#### Note: The website is currently down for bug fixes, but will be back up shortly.
 
 ============================ Notes to the developers on this project >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -87,5 +93,3 @@ For the authentification to any route
   feel free to slack me for any questions on this -> I can also set the authentification up for a route after you set up the route as well
   
 ============================ Notes to the developers on this project >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-[1](https://www.the-scientist.com/?articles.view/articleNo/18596/title/Meta-Analysis-Gaining-Status-In-Science-And-Policymaking/)
