@@ -51,17 +51,17 @@ class UserForm extends Component {
           // throw new Error('Network response was not ok.');
           return response.json();
         })
-        .then(data => {
+        .then(async data => {
           console.log("data returned => ", data);
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
-            this.props.history.push("/myanalyses");
           }
           return data;
           // data = data.json()
           // console.log("data returned => ", data);
         })
+        .then(data => this.props.history.push(`/myanalyses/${data.id}`))
         .catch(error => console.error("Error:", error));
     }
 
