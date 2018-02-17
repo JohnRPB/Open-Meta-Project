@@ -4,7 +4,7 @@ The Open Meta Project is a collaborative effort to produce a website where scien
 
 For a quick overview of what has been accomplished, see the "Project Showcase" section.
 
-#### Note: This project is under *active* development, and documentation is being added every day. 
+#### Note: This project is under active development, and documentation is being added every day!
 
 ## Rationale and technical concepts
 
