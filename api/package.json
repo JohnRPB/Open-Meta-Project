@@ -40,6 +40,7 @@
     "mg:seed": "node seeds/mongoose",
     "console": "node repl.js",
     "c": "node repl.js",
+    "sql:c":"node SQLrepl.js",
     "sql": "./node_modules/sequelize-cli/lib/sequelize"
   }
 }
