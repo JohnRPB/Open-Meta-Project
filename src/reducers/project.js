@@ -23,7 +23,6 @@ import * as Actions from "../actions/Analysis";
 
 import ItemTypes from "../components/Project/ItemTypes";
 import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
-import studies from "../databaseStudies.js";
 
 const initialState = {
   blocks: [],

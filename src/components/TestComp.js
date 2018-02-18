@@ -5,7 +5,6 @@ import logo from "./../logo.svg";
 import "./App/style.css";
 import Module from './Modules/Module';
 
-import collection from "../databaseStudies";
 //<Module endpoint = {"simplePlot"} collection={collection.slice(0,99)}/>
 class App extends Component {
   render() {

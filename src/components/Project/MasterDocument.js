@@ -32,7 +32,6 @@ import {
   NavLink
 } from "react-router-dom";
 
-import collection from "../../databaseStudies";
 import ModuleContainer from "../../containers/Modules/ModuleContainer";
 
 class MasterDocument extends Component {
