@@ -34,7 +34,7 @@ const Landing = () => {
         <div className="ui text container">
           <i className="connectdevelop icon massive" />
           <br />
-          <h2>Your Portal to Papers and Metanalyses</h2>
+          <h2>Your Portal to Papers and Meta-analyses</h2>
         </div>
         <br />
         <br />
