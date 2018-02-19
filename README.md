@@ -45,7 +45,7 @@ The encapsulation of every meta-analytic procedure as a single API call, moreove
 ## Project Showcase
 (as of February 16th, 2018)
 
-Currently, we stand at five collaborators, two weeks of active development, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood". Below, you will find a listing of these original features, as well as some visual demonstrations of them functioning.
+Currently, we stand at five collaborators, two weeks of active development, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood". Below, you will find a listing of these original features (to see some of them functioning, check out the "Walkthrough" section above).
 
 These are the features that are complete in some form:
 
