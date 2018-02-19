@@ -4,8 +4,7 @@ The Open Meta Project is a website where scientists can conduct, comment on, and
 
 With our platform, R's considerable statistical libraries can be harnessed to conduct meta-analyses through an accessible user interface. No coding expertise required. And to expand the project's statistical capabilities (beyond the provided functions), users only need to know R, not JavaScript.
 
-Shareable, reproducible, and interactive scientific analyses---these are the goals of the Open Meta project. For an overview of what has been accomplished, see the "Project Showcase" section; for a more in-depth explanation of the underlying 
-architercture, see "Rationale and technical concepts".
+Shareable, reproducible, and interactive scientific analyses---these are the goals of the Open Meta project. For an overview of what has been accomplished, see the "Walkthrough" and "Feature list" sections; for a more in-depth explanation of the underlying architercture, see "Rationale and technical concepts".
 
 #### Note: This project is under active development, and documentation is being added every day. The free Heroku dynos that host our back-end also go to sleep after 30 min of inactivity; you may have to wait 20 seconds to log in, on the first access.
 
@@ -31,7 +30,7 @@ architercture, see "Rationale and technical concepts".
 
 ## Walkthrough
 
-We are working on integrating (and the reducing the complexity of) our documentation; to view some of the available user flows at the moment, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
+We are working on integrating (and the reducing the complexity of) our documentation; to view some of the user flows in our application, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
 
 ## Rationale and technical concepts
 
@@ -43,10 +42,10 @@ In our system, every component of a meta-analysis (the actual effect size and co
 
 The encapsulation of every meta-analytic procedure as an API call, moreover, allows R-savy contributors to add procedures to our site without knowing any JavaScript. This gives the Open Meta Project considerable opportunity for lateral expansion, through the addition of new R packages, and allows it to rapidly support the newest procedures, making them available to the scientific community as they are developed.
 
-## Project Showcase
+## Feature list
 (as of February 16th, 2018)
 
-Currently, we stand at five collaborators, two weeks of active development, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood". Below, you will find a listing of these original features (to see some of them functioning, check out the "Walkthrough" section above).
+Currently, we stand at five collaborators, two weeks of active development, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood".
 
 These are the features that are complete in some form:
 
@@ -80,7 +79,7 @@ Features that will be developed in the future:
 * "Activity feed" that allows users to see recent submissions
 * Many more features...
 
-Preview [the site](https://www.openmeta.surge.sh).
+Preview [the site](https://www.open-meta-project.surge.sh).
 
 ============================ Notes to the developers on this project >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
