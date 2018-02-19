@@ -4,7 +4,7 @@ A website where scientists can conduct, comment on, and share meta-analyses. A m
 
 With the Open Meta Project, scientists have a platform where R's considerable statistical libraries can be harnessed to conduct meta-analyses through an accessible user interface. No coding expertise required. And to expand the project's statistical capabilities (beyond the provided functions), users only need to know R, not JavaScript.
 
-Distributed, reproducible, and interactive scientific analyses---these are the goal of the Open Meta project. For a quick overview of what has been accomplished, see the "Project Showcase" section; for a more in-depth explanation of the underlying architercture, see "Rationale and technical concepts".
+Shareable, reproducible, and interactive scientific analyses---these are the goal of the Open Meta project. For a quick overview of what has been accomplished, see the "Project Showcase" section; for a more in-depth explanation of the underlying architercture, see "Rationale and technical concepts".
 
 #### Note: This project is under active development, and documentation is being added every day.
 
