@@ -71,6 +71,7 @@ Features that are under development:
 
 Features that will be developed in the future:
 
+* Non-graphical modules that allow access to statistical model outputs
 * Ability to browse profiles of other users
 * Ability to "fork" a user's analysis and edit it
 * Support for changing parameters of analyses on another user's page (in non-permanent, exploratory way)
