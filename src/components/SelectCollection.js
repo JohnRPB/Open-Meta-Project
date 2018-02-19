@@ -92,10 +92,11 @@ class SelectCollection extends Component {
     // });
 
     // /updateanalysis/:id/:ownerId/:collectionId
-
+${this.props.location.search.slice(4)}
     //this slice is the analysis id
+    axios.put(`${root}/api/analyses/${this.props.location.search.slice(4)}/updateanalysis`)
     fetch(
-      `http://localhost:8000/api/analyses/updateanalysis/${this.props.location.search.slice(
+      `${root}/api/analyses/updateanalysis/${this.props.location.search.slice(
         4
       )}/${this.props.Token.id}/${this.props._selectedCollection}`,
       {

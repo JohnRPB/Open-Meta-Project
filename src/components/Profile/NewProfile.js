@@ -4,6 +4,12 @@ import { Button, Checkbox, Form, Container } from "semantic-ui-react";
 //form serializer
 var serialize = require("form-serialize");
 
+// Dynamic URL
+const root =
+  process.env.NODE_ENV === 'production'
+    ? process.env.REACT_APP_HEROKU_URL
+    : 'http://localhost:8000';
+
 class NewProfile extends Component {
   constructor() {
     super();
@@ -20,7 +26,7 @@ class NewProfile extends Component {
     console.log("starting fetch");
     console.log("obj =>", obj);
 
-    fetch("http://localhost:8000/api/newprofile", {
+    fetch(`${root}/api/newprofile`, {
       method: "POST",
       headers: new Headers({
         "x-access-token": this.props._token,

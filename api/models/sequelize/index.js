@@ -4,8 +4,16 @@ var fs        = require('fs');
 var path      = require('path');
 var Sequelize = require('sequelize');
 var basename  = path.basename(__filename);
+
+// Selects subset of config file that matches application deployment state (e.g. 'development' or 'production')
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../../config/sequelize/config.js')[env];
+
+console.log("------------------- START process.env.NODE_ENV -------------------");
+console.log(process.env.NODE_ENV);
+console.log("-------------------- END process.env.NODE_ENV --------------------");
+
+
 var db        = {};
 
 if (config.use_env_variable) {
