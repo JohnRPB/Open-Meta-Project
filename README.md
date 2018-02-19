@@ -7,7 +7,7 @@ With our platform, R's considerable statistical libraries can be harnessed to co
 Shareable, reproducible, and interactive scientific analyses---these are the goal of the Open Meta project. For an overview of what has been accomplished, see the "Project Showcase" section; for a more in-depth explanation of the underlying 
 architercture, see "Rationale and technical concepts".
 
-#### Note: This project is under active development, and documentation is being added every day. Some site features may be fragile.
+#### Note: This project is under active development, and documentation is being added every day.
 
 ## Main technologies
 
