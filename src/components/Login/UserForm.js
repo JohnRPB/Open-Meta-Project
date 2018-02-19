@@ -19,6 +19,12 @@ import "./UserForm.css";
 //form serializer
 var serialize = require("form-serialize");
 
+// Dynamic URL
+const root =
+  process.env.NODE_ENV === 'production'
+    ? process.env.REACT_APP_HEROKU_URL
+    : 'http://localhost:8000';
+
 //fix form serializer
 
 class UserForm extends Component {
@@ -36,7 +42,7 @@ class UserForm extends Component {
 
     if (obj.action == "login") {
       console.log("login starting");
-      fetch("http://localhost:8000/api/login", {
+      fetch(`${root}/api/login`, {
         method: "post",
         headers: {
           "Content-Type": "application/json"
@@ -66,7 +72,7 @@ class UserForm extends Component {
 
     if (obj.action == "register") {
       console.log("register starting");
-      fetch("http://localhost:8000/api/register", {
+      fetch(`${root}/api/register`, {
         method: "post",
         headers: {
           "Content-Type": "application/json"

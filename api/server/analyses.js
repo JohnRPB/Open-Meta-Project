@@ -52,7 +52,7 @@ router.post("/", async (req, res, next) => {
 });
 
 // --------------------------------------------
-//
+// 
 // --------------------------------------------
 
 router.get("/ids", async (req, res, next) => {
@@ -87,22 +87,36 @@ router.get("/ids", async (req, res, next) => {
   res.send(JSON.stringify(results));
 });
 
+// ---------------------------------------------------------
+// Update any analysis by replacing it with the updated
+// verion entirely and adds the analysis to the user if it
+// is a new analysis
+// 2018-02-18 09:30
+// ---------------------------------------------------------
+
 router.put("/:id", async (req, res, next) => {
-  // console.log(req.params.id);
-  console.log("begin put request: \n")
+
+  console.log("------------------- START req.body (router.put) -------------------");
   console.log(req.body);
-  //{data: {inclusion: {collectionId: "#"}}}
+  console.log("-------------------- END req.body (router.put) --------------------");
+  
   let updatedAnalysis;
   let submitter;
+
   try {
+    // Analysis is updated here 
     updatedAnalysis = await Analysis.findByIdAndUpdate(req.params.id, req.body);
-    // console.log(updatedAnalysis);
+
+    // Now we have to add the analysis ID to the analysis owner, if they don't
+    // already have it
+
+    // First fetch the analysis owner
     submitter = await User.findById(req.body.ownerId);
-    // console.log(submitter);
 
     let updateUser = true;
     let analysesArray = submitter.analyses || [];
-    // console.log(analysesArray);
+
+    // Check if analysis exists in owner object
     for (let i = 0; i < analysesArray.length; i++) {
       if (
         submitter.analyses[i]._id.toString() == updatedAnalysis._id.toString()
@@ -110,10 +124,13 @@ router.put("/:id", async (req, res, next) => {
         updateUser = false;
       }
     }
+    // If not, push it and save the user
     if (updateUser) {
       submitter.analyses.push(updatedAnalysis);
       submitter = await submitter.save();
       res.json(updatedAnalysis);
+
+    // If so, don't do anything and send back 'okay'
     } else {
       res.status(200).send();
     }
@@ -122,11 +139,11 @@ router.put("/:id", async (req, res, next) => {
   }
 });
 
-router.get(
+router.put(
   "/updateanalysis/:id/:ownerId/:collectionId",
   async (req, res, next) => {
-    console.log(req.params.id);
-    console.log(req.body);
+    console.log("req.params.id: ", req.params.id);
+    console.log("req.body: ", req.body);
     //{data: {inclusion: {collectionId: "#"}}}
     let updatedAnalysis;
     let submitter;
