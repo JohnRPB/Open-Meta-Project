@@ -1,10 +1,29 @@
 # The Open Meta Project
 
-A website where scientists can conduct, comment on, and share meta-analyses. A meta-analysis asseses the weight of evidence for a research proposition by aggregating the results of a set of studies that address that proposition; it is common in the social, clinical, and pyschological sciences, and is often used to settle important debates. 
+The Open Meta Project is a website where scientists can conduct, comment on, and share meta-analyses. A meta-analysis asseses the weight of evidence for a research proposition by aggregating the results of a set of studies that address that proposition. It is common in the social, clinical, and pyschological sciences, and is often used to settle important debates. 
 
 With the Open Meta Project, scientists have a platform where R's considerable statistical libraries can be harnessed to conduct meta-analyses through an accessible user interface. No coding expertise required. And to expand the project's statistical capabilities (beyond the provided functions), users only need to know R, not JavaScript.
 
-Shareable, reproducible, and interactive scientific analyses---these are the goal of the Open Meta project. For a quick overview of what has been accomplished, see the "Project Showcase" section; for a more in-depth explanation of the underlying architercture, see "Rationale and technical concepts".
+Shareable, reproducible, and interactive scientific analyses---these are the goal of the Open Meta project. For an overview of what has been accomplished, see the "Project Showcase" section; for a more in-depth explanation of the underlying architercture, see "Rationale and technical concepts".
+
+## Main technologies
+
+#### JavaScript
+* [React](https://reactjs.org/) - Frontend framework
+* [Node.js](https://nodejs.org/en/) - JavaScript runtime
+* [Express](https://expressjs.com/) - Server architecture 
+* [npm](https://www.npmjs.com/) - Dependency Management
+* [MongoDB](https://www.mongodb.com/) - NoSQL database
+* [Postgres](https://www.postgresql.org/) - SQL database
+* [Mongoose](http://mongoosejs.com/) - Object Relational Mapping for JavaScript and MongoDB
+* [Sequelize](http://mongoosejs.com/) - Object Relational Mapping for JavaScript and SQL databases
+* [Passport](http://www.passportjs.org/) - Authentication
+
+#### R
+* [OpenCPU](https://www.opencpu.org/) - Interoperable web interface to R
+* [ggplot2](http://ggplot2.org/) - Premiere graphics library
+* [metafor](http://www.metafor-project.org/doku.php) - Library for meta-analysis
+* [Plotly](https://plot.ly/) - Library for interactive plotting
 
 #### Note: This project is under active development, and documentation is being added every day.
 
