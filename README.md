@@ -95,11 +95,14 @@ That way it will only send the back end and not the whole thing.
 Note from Johann:
 
 .env file at project root now contains environmental property, REACT_APP_HEROKU_URL; set this to the URL
-you use to deploy the back-end
+you use to deploy the back-end.
+
 To deploy the front-end, it is now necessary to use "npm run deploy-front-[gene/johann]"
 
 Current URLs:
+
 Front: openmeta.surge.sh (Gene) / open-meta-project.surge.sh (Johann)
+
 Back: openmeta.herokuapp.com (Gene) / open-meta-project.herokuapp.com (Johann)
 
 Note from Steven:
