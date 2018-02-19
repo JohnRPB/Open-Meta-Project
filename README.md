@@ -52,11 +52,11 @@ Once they enter the descriptive information for the collection, they are taken t
 
 ![select-studies](assets/select_studies2.png)
 
-From the "My analyses" page, they could also choose to start directly, with a new analysis, and they would see an almost identical modal, but afterwards they would be taken to a page that prompts them to either select an existing collection for their analysis or start one from scratch.
+From the "My analyses" page, they could also choose to start directly with a new analysis (they would see an almost identical modal), and they would be taken to a page that prompts them to either select an existing collection for their analysis or create a new one.
 
 ![select-collection](assets/select_collection.png)
 
-We are working on integrating (and the reducing the complexity of) our documentation; to view some of the in-progress user flows in our application, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
+#### Note: We are working on integrating our documentation; to view some of the in-progress user flows as GIFs, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
 
 ## Rationale and technical concepts
 
