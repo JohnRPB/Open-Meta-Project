@@ -30,6 +30,8 @@ architercture, see "Rationale and technical concepts".
 
 ## Walkthrough
 
+We are working on integrating (and the reducing the complexity of) our documentation; to view some of the available user flows at the moment, see https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md.
+
 ## Rationale and technical concepts
 
 [Meta-analyses](https://en.wikipedia.org/wiki/Meta-analysis) are among the most useful techniques available today for resolving scientific debates, but despite the profusion of tools available for conducting them, the technical simplicity of the analyses themselves, and their essentially *social* nature---in that they evaluate the work of peers and colleagues---there is as yet no central repository where scientists and academics can conduct and share these analyses. Such a repository would provide the basis for improved reprodubility, faster dissemination of research, and rapid feedback, which are the goals of the Open Meta Project.
