@@ -30,9 +30,31 @@ Shareable, reproducible, and interactive scientific analyses---these are the goa
 
 ## Project Showcase
 
-Currently, we stand at five collaborators, two weeks of active development, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood", which are detailed in the "Feature list" section. Below, we present just a few of the 
+Currently, we stand at five collaborators, two weeks of active development, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood", which are detailed in the "Feature list" section. Below, we present a few main views of the program.
+
+On the landing page, users get to see what Open Meta is all about.
 
 ![landing-page](assets/landing_page.png)
+
+An email and password is required. First-time visitors can also register for an account.
+
+![login-page](assets/login_page.png)
+
+Once logged in, the user is taken to the taken to the "My analyses" page, where they can see two things: collections of studies that they put together, which might be used for an analysis, and their analyses. 
+
+![my-analyses](assets/my_analyses.png)
+
+From there, they can choose to initiate a new collection, by hitting the "New collection" button. That brings up a modal.
+
+![collection-modal](assets/collection_modal.png)
+
+Once they enter the descriptive information for the collection, they are taken to a page where they can search for studies with a combination of keywords, name, journal, or author. If they still don't find the study they're after, they can enter it via the "Submit study" tab.
+
+![select-studies](assets/select_studies2.png)
+
+From the "My analyses" page, they could also choose to start directly, with a new analysis, and they would see an almost identical modal, but afterwards they would be taken to a page that prompts them to either select an existing collection for their analysis or start one from scratch.
+
+![select-collection](assets/select_collection.png)
 
 We are working on integrating (and the reducing the complexity of) our documentation; to view some of the in-progress user flows in our application, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
 
