@@ -25,8 +25,8 @@ architercture, see "Rationale and technical concepts".
 #### R
 * [OpenCPU](https://www.opencpu.org/) - Interoperable web interface to R
 * [ggplot2](http://ggplot2.org/) - Premiere graphics library
-* [metafor](http://www.metafor-project.org/doku.php) - Library for meta-analysis
-* [Plotly](https://plot.ly/) - Library for interactive plotting
+* [metafor](http://www.metafor-project.org/doku.php) - Meta-analysis
+* [Plotly](https://plot.ly/) - Interactive plotting
 
 ## Walkthrough
 
