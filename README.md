@@ -30,7 +30,7 @@ architercture, see "Rationale and technical concepts".
 
 ## Walkthrough
 
-We are working on integrating (and the reducing the complexity of) our documentation; to view some of the available user flows at the moment, see https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md.
+We are working on integrating (and the reducing the complexity of) our documentation; to view some of the available user flows at the moment, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
 
 ## Rationale and technical concepts
 
