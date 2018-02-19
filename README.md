@@ -23,7 +23,7 @@ architercture, see "Rationale and technical concepts".
 * [Passport](http://www.passportjs.org/) - Authentication
 
 #### R
-* [OpenCPU](https://www.opencpu.org/) - Interoperable web interface to R
+* [OpenCPU](https://www.opencpu.org/) - Web interface to R
 * [ggplot2](http://ggplot2.org/) - Premiere graphics library
 * [metafor](http://www.metafor-project.org/doku.php) - Meta-analysis
 * [Plotly](https://plot.ly/) - Interactive plotting
