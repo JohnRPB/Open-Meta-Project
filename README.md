@@ -2,7 +2,7 @@
 
 The Open Meta Project is a website where scientists can conduct, comment on, and share meta-analyses. A meta-analysis asseses the weight of evidence for a research proposition by aggregating the results of a set of studies that address that proposition. It is common in the social, clinical, and pyschological sciences, and is often used to settle important debates. 
 
-With the Open Meta Project, scientists have a platform where R's considerable statistical libraries can be harnessed to conduct meta-analyses through an accessible user interface. No coding expertise required. And to expand the project's statistical capabilities (beyond the provided functions), users only need to know R, not JavaScript.
+With our platform, R's considerable statistical libraries can be harnessed to conduct meta-analyses through an accessible user interface. No coding expertise required. And to expand the project's statistical capabilities (beyond the provided functions), users only need to know R, not JavaScript.
 
 Shareable, reproducible, and interactive scientific analyses---these are the goal of the Open Meta project. For an overview of what has been accomplished, see the "Project Showcase" section; for a more in-depth explanation of the underlying architercture, see "Rationale and technical concepts".
 
