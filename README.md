@@ -1,8 +1,6 @@
 # The Open Meta Project
 
-The Open Meta Project is a collaborative effort to produce a website where scientists can conduct, comment on, and share meta-analyses. We are in the early stages of the project, so please let us know if you would like to contribute (baptistajohann@gmail.com); much work has been done, but more remains.
-
-For a quick overview of what has been accomplished, see the "Project Showcase" section.
+A website where scientists can conduct, comment on, and share meta-analyses. For a quick overview of what has been accomplished, see the "Project Showcase" section.
 
 #### Note: This project is under active development, and documentation is being added every day.
 
