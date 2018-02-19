@@ -7,7 +7,7 @@ With our platform, R's considerable statistical libraries can be harnessed to co
 Shareable, reproducible, and interactive scientific analyses---these are the goals of the Open Meta project. For an overview of what has been accomplished, see the "Project Showcase" section; for a more in-depth explanation of the underlying 
 architercture, see "Rationale and technical concepts".
 
-#### Note: This project is under active development, and documentation is being added every day.
+#### Note: This project is under active development, and documentation is being added every day. The free Heroku dynos that host our back-end also go to sleep after 30 min of inactivity; you may have to wait 20 seconds to log in, on the first access.
 
 ## Main technologies
 
