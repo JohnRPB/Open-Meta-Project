@@ -4,7 +4,7 @@ The Open Meta Project is a website where scientists can conduct, comment on, and
 
 With our platform, R's considerable statistical libraries can be harnessed to conduct meta-analyses through an accessible user interface. No coding expertise required. And to expand the project's statistical capabilities (beyond the provided functions), users only need to know R, not JavaScript.
 
-Shareable, reproducible, and interactive scientific analyses---these are the goals of the Open Meta project. For an overview of what has been accomplished, see the "Walkthrough" and "Feature list" sections; for a more in-depth explanation of the underlying architercture, see "Rationale and technical concepts".
+Shareable, reproducible, and interactive scientific analyses---these are the goals of the Open Meta project. For an overview of what has been accomplished, see the "Project showcase" and "Feature list" sections; for a more in-depth explanation of the underlying architercture, see "Rationale and technical concepts".
 
 #### Note: This project is under active development, and documentation is being added every day. The free Heroku dynos that host our back-end also go to sleep after 30 min of inactivity; you may have to wait 20 seconds to log in, on the first access.
 
@@ -28,9 +28,13 @@ Shareable, reproducible, and interactive scientific analyses---these are the goa
 * [metafor](http://www.metafor-project.org/doku.php) - Meta-analysis
 * [Plotly](https://plot.ly/) - Interactive plotting
 
-## Walkthrough
+## Project Showcase
 
-We are working on integrating (and the reducing the complexity of) our documentation; to view some of the user flows in our application, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
+Currently, we stand at five collaborators, two weeks of active development, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood", which are detailed in the "Feature list" section. Below, we present just a few of the 
+
+![landing-page](assets/landing_page.png)
+
+We are working on integrating (and the reducing the complexity of) our documentation; to view some of the in-progress user flows in our application, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
 
 ## Rationale and technical concepts
 
@@ -44,8 +48,6 @@ The encapsulation of every meta-analytic procedure as an API call, moreover, all
 
 ## Feature list
 (as of February 16th, 2018)
-
-Currently, we stand at five collaborators, two weeks of active development, and over 10,000 lines of original code. Our website allows users to register an account, save and edit collections of studies that address a particular research question, and conduct and edit a simple drag-and-drop analysis with three demonstration modules. This requires a considerable range of features "under the hood".
 
 These are the features that are complete in some form:
 
