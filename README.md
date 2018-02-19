@@ -13,14 +13,15 @@ architercture, see "Rationale and technical concepts".
 
 #### JavaScript
 * [React](https://reactjs.org/) - Frontend framework
+* [Redux](https://redux.js.org/) - State management for complex applications
 * [Node.js](https://nodejs.org/en/) - JavaScript runtime
 * [Express](https://expressjs.com/) - Server architecture 
-* [npm](https://www.npmjs.com/) - Dependency Management
 * [MongoDB](https://www.mongodb.com/) - NoSQL database
 * [Postgres](https://www.postgresql.org/) - SQL database
-* [Mongoose](http://mongoosejs.com/) - Object Relational Mapping for JavaScript and MongoDB
-* [Sequelize](http://mongoosejs.com/) - Object Relational Mapping for JavaScript and SQL databases
+* [Mongoose](http://mongoosejs.com/) - Object Relational Mapper (ORM) for MongoDB
+* [Sequelize](http://mongoosejs.com/) - ORM for SQL
 * [Passport](http://www.passportjs.org/) - Authentication
+* [Semantic UI React](https://react.semantic-ui.com/) - Component library for React
 
 #### R
 * [OpenCPU](https://www.opencpu.org/) - Web interface to R
