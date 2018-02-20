@@ -7,6 +7,7 @@ const ResultsDisplay = ({
   results,
   changeStudyStatus,
   isFetching,
+  activePage
 }) => {
   let display = null;
   if (persisted.length || results.length)
@@ -48,7 +49,7 @@ const ResultsDisplay = ({
                 <Table.Row key={study.id}>
                   <Table.Cell>
                     <Checkbox
-                      onChange={() => changeStudyStatus(study.id, 1, index)}
+                      onChange={() => changeStudyStatus(study.id, 1, index + (activePage -1) * 10)}
                     />
                   </Table.Cell>
                   <Table.Cell>{study.DOI}</Table.Cell>

@@ -72,12 +72,14 @@ class Analysis extends Component {
       var blocks = Analysis.data.blocks.map(block => {
         if (block.type === "graph") {
           console.log(" HIT! => ", block.content.outputLoc);
-          return (
+          return block.type === "graph" ? (
             <iframe
               src={`${block.content.outputLoc}`}
               title={`${block.content.outputLoc}`}
+              style={{position:'relative'}}
             />
-          );
+          ) : (
+            <h4>{block.textContent}</h4>);
         } else {
           return null;
         }

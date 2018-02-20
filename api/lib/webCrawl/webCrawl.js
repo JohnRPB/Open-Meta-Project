@@ -15,7 +15,7 @@ const webCrawler = async (url, options = {log: 0, write: 0, callback: null}) => 
   // let responseData = fs.readFileSync('./rawCrawlerResponse.txt', 'utf-8');
 
   //----------------------------------------
-  //Filter weird characters
+  //Filter exotic characters
   //----------------------------------------
   let curReg = /<script.+?\/script>/gi;
   let processedData 

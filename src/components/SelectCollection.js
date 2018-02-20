@@ -73,12 +73,11 @@ class SelectCollection extends Component {
     //     // }
     //     // throw new Error('Network response was not ok.');
     //     console.log("fetch done in Components/SelectCollection.js");
-
-    this.props.history.push(`/analysis/${this.props.location.search.slice(4)}`);
-    // })
-    // .catch(e => {
-    //   console.log("fetch error in Components/SelectCollection.js");
-    // });
+    // this.props.history.push(`/analysis/${this.props.location.search.slice(4)}/edit`)
+      // })
+      // .catch(e => {
+      //   console.log("fetch error in Components/SelectCollection.js");
+      // });
 
     // fetch({
     //   method: "put",
@@ -96,7 +95,11 @@ ${this.props.location.search.slice(4)}
     //this slice is the analysis id
     axios.put(`${root}/api/analyses/${this.props.location.search.slice(4)}/updateanalysis`)
     fetch(
+<<<<<<< HEAD
       `${root}/api/analyses/updateanalysis/${this.props.location.search.slice(
+=======
+      `${root()}/api/analyses/updateanalysis/${this.props.location.search.slice(
+>>>>>>> heroku
         4
       )}/${this.props.Token.id}/${this.props._selectedCollection}`,
       {

@@ -12,6 +12,7 @@
 //for each api route check the cookie
 
 import React, { Component } from "react";
+import root from '../../lib/root';
 
 //styling
 import "./UserForm.css";
@@ -42,7 +43,7 @@ class UserForm extends Component {
 
     if (obj.action == "login") {
       console.log("login starting");
-      fetch(`${root}/api/login`, {
+      fetch(`${root()}/api/login`, {
         method: "post",
         headers: {
           "Content-Type": "application/json"
@@ -56,23 +57,23 @@ class UserForm extends Component {
           // throw new Error('Network response was not ok.');
           return response.json();
         })
-        .then(data => {
+        .then(async data => {
           console.log("data returned => ", data);
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
-            this.props.history.push("/myanalyses");
           }
           return data;
           // data = data.json()
           // console.log("data returned => ", data);
         })
+        .then(data => this.props.history.push(`/myanalyses/${data.id}`))
         .catch(error => console.error("Error:", error));
     }
 
     if (obj.action == "register") {
       console.log("register starting");
-      fetch(`${root}/api/register`, {
+      fetch(`${root()}/api/register`, {
         method: "post",
         headers: {
           "Content-Type": "application/json"

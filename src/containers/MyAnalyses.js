@@ -4,11 +4,12 @@ import MyAnalyses from "../components/MyAnalyses/MyAnalyses";
 import { getAnalyses, getUser } from "../actions/MyAnalyses";
 import { withRouter } from "react-router";
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
+  console.log(ownProps);
   return {
     ...state,
     // user: state.MyAnalysesPage.user,
-    _id: state.Token.id,
+    _id: ownProps.match.params.user_id,
     _token: state.Token.token,
     isFetching: state.MyAnalysesPage.isFetching
   };
