@@ -5,11 +5,6 @@ import root from '../../lib/root';
 //form serializer
 var serialize = require("form-serialize");
 
-// Dynamic URL
-const root =
-  process.env.NODE_ENV === 'production'
-    ? process.env.REACT_APP_HEROKU_URL
-    : 'http://localhost:8000';
 
 class NewProfile extends Component {
   constructor() {
