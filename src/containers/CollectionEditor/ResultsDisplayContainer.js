@@ -8,6 +8,7 @@ const mapStateToProps = state => {
     persisted: state.collectionEdit.persisted,
     results: state.collectionEdit.results.slice((state.collectionEdit.varObj.page - 1) * 10, 10 * state.collectionEdit.varObj.page),
     isFetching: state.collectionEdit.varObj.isFetching,
+    activePage: state.collectionEdit.varObj.page,
   };
 };
 

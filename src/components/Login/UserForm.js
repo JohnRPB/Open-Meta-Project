@@ -11,19 +11,14 @@
 //for rest of team
 //for each api route check the cookie
 
-import React, { Component } from "react";
+import React, {Component} from 'react';
+import root from '../../lib/root';
 
 //styling
-import "./UserForm.css";
+import './UserForm.css';
 
 //form serializer
-var serialize = require("form-serialize");
-
-// Dynamic URL
-const root =
-  process.env.NODE_ENV === 'production'
-    ? process.env.REACT_APP_HEROKU_URL
-    : 'http://localhost:8000';
+var serialize = require('form-serialize');
 
 //fix form serializer
 
@@ -35,19 +30,19 @@ class UserForm extends Component {
 
   sendForm(e) {
     e.preventDefault();
-    var form = document.querySelector("#example-form");
+    var form = document.querySelector('#example-form');
     var str = serialize(form);
-    var obj = serialize(form, { hash: true });
-    console.log("obj =>", obj.passHash);
+    var obj = serialize(form, {hash: true});
+    console.log('obj =>', obj.passHash);
 
-    if (obj.action == "login") {
-      console.log("login starting");
-      fetch(`${root}/api/login`, {
-        method: "post",
+    if (obj.action == 'login') {
+      console.log('login starting');
+      fetch(`${root()}/api/login`, {
+        method: 'post',
         headers: {
-          "Content-Type": "application/json"
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(obj)
+        body: JSON.stringify(obj),
       })
         .then(response => {
           // if(response.ok) {
@@ -56,49 +51,49 @@ class UserForm extends Component {
           // throw new Error('Network response was not ok.');
           return response.json();
         })
-        .then(data => {
-          console.log("data returned => ", data);
+        .then(async data => {
+          console.log('data returned => ', data);
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
-            this.props.history.push("/myanalyses");
           }
           return data;
           // data = data.json()
           // console.log("data returned => ", data);
         })
-        .catch(error => console.error("Error:", error));
+        .then(data => this.props.history.push(`/myanalyses/${data.id}`))
+        .catch(error => console.error('Error:', error));
     }
 
-    if (obj.action == "register") {
-      console.log("register starting");
-      fetch(`${root}/api/register`, {
-        method: "post",
+    if (obj.action == 'register') {
+      console.log('register starting');
+      fetch(`${root()}/api/register`, {
+        method: 'post',
         headers: {
-          "Content-Type": "application/json"
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(obj)
+        body: JSON.stringify(obj),
       })
         .then(response => {
           return response.json();
         })
         .then(data => {
-          console.log("data returned => ", data);
+          console.log('data returned => ', data);
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
             //checking the decoded of the token
             console.log(
-              "this is the token going to the token test route =>",
-              this.props._token
+              'this is the token going to the token test route =>',
+              this.props._token,
             );
-            console.log("this is the id from the server =>", data.id);
-            this.props.history.push("/newprofile");
+            console.log('this is the id from the server =>', data.id);
+            this.props.history.push('/newprofile');
           }
-          console.log("token added");
+          console.log('token added');
           return data;
         })
-        .catch(error => console.error("Error:", error));
+        .catch(error => console.error('Error:', error));
     }
   }
 

@@ -78,7 +78,7 @@ const CollectionEditor = ({initCollection, isFetching, currentCollection}) => {
       <NavContainer />
       {display}
     </div>
-  )
+  );
 };
 
 export default CollectionEditor;

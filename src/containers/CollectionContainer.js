@@ -6,7 +6,8 @@ import { withRouter } from "react-router";
 function mapStateToProps(state) {
   return {
     Collection: state.Collection.Collection,
-    isFetching: state.Collection.isFetching
+    isFetching: state.Collection.isFetching,
+    Token: state.Token
   };
 }
 

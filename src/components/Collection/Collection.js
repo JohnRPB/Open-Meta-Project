@@ -22,9 +22,6 @@ class Collection extends Component {
   componentDidMount() {
     this.props.getCollection(this.props.match.params.collection_id);
   }
-  componentWillUpdate() {
-    this.props.getCollection(this.props.match.params.collection_id);
-  }
 
   render() {
     if (!this.props.isFetching) {
@@ -69,7 +66,7 @@ class Collection extends Component {
                 <Segment>
                   <h1>
                     {Collection.name}{' '}
-                    {this.props.Token ? (
+                    {this.props.Token.token ? (
                       <span style={{ fontSize: '16px' }}>
                         <NavLink to={`${Collection._id}/edit`}>
                           <Icon name="edit" mini />

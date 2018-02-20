@@ -7,14 +7,14 @@
 
 //OR has a button that directs to create a collection page
 
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 import axios from 'axios';
 import root from '../lib/root';
 import NavContainer from '../containers/NavContainer';
 //ui
-import { Container, Button } from 'semantic-ui-react';
+import {Container, Button} from 'semantic-ui-react';
 
 //name will change
 import CollectionSearchCollectionsContainer from '../containers/SelectCollection/CollectionSearchCollectionsContainer';
@@ -73,8 +73,7 @@ class SelectCollection extends Component {
     //     // }
     //     // throw new Error('Network response was not ok.');
     //     console.log("fetch done in Components/SelectCollection.js");
-
-    this.props.history.push(`/analysis/${this.props.location.search.slice(4)}`);
+    // this.props.history.push(`/analysis/${this.props.location.search.slice(4)}/edit`)
     // })
     // .catch(e => {
     //   console.log("fetch error in Components/SelectCollection.js");
@@ -92,29 +91,28 @@ class SelectCollection extends Component {
     // });
 
     // /updateanalysis/:id/:ownerId/:collectionId
-${this.props.location.search.slice(4)}
+    // ${this.props.location.search.slice(4)}
     //this slice is the analysis id
-    axios.put(`${root}/api/analyses/${this.props.location.search.slice(4)}/updateanalysis`)
     fetch(
       `${root}/api/analyses/updateanalysis/${this.props.location.search.slice(
-        4
+        4,
       )}/${this.props.Token.id}/${this.props._selectedCollection}`,
       {
         headers: {
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
         // headers: new Headers({
         //   "x-access-token": this.props.Token.token
         // }),
-      }
+      },
     )
       .then(data => {
         // to Edwin
         console.log(
-          'fetch works!!!!!! redirecting to the create analysis page'
+          'fetch works!!!!!! redirecting to the create analysis page',
         );
         this.props.history.push(
-          `/analysis/${this.props.location.search.slice(4)}/edit`
+          `/analysis/${this.props.location.search.slice(4)}/edit`,
         );
       })
       .catch(e => {
@@ -128,31 +126,29 @@ ${this.props.location.search.slice(4)}
       <div>
         <NavContainer />
         <Container>
-          <h2 style={{ marginTop: 20, marginBottom: 50 }}>
+          <h2 style={{marginTop: 20, marginBottom: 50}}>
             Select A Collection For Your Analysis{' '}
           </h2>
           <CollectionSearchCollectionsContainer />
 
-          <h3 style={{ marginTop: 20 }}>
-            Your currently selected collection:{' '}
-          </h3>
+          <h3 style={{marginTop: 20}}>Your currently selected collection: </h3>
           {!this.props._selectedCollection ? (
             <div>
               <div>none selected yet</div>
-              <h3 style={{ marginTop: 20 }}>Create a new collection:</h3>
+              <h3 style={{marginTop: 20}}>Create a new collection:</h3>
               <CollectionModal id={this.props.Token.id} />
             </div>
           ) : (
             <div>
               <div>{this.props._selectedCollection}</div>
-              <h3 style={{ marginTop: 20 }}>
+              <h3 style={{marginTop: 20}}>
                 Selected a collection? Click here to go on to creating your
                 analysis:{' '}
               </h3>
               <Button onClick={this.onSubmitSelection}>
                 Create your Analysis
               </Button>
-              <h3 style={{ marginTop: 50 }}>Create a new collection:</h3>
+              <h3 style={{marginTop: 50}}>Create a new collection:</h3>
               <CollectionModal id={this.props.Token.id} />
             </div>
           )}

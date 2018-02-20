@@ -53,71 +53,71 @@ export default class AccordionExampleStyled extends Component {
             Anlysis is the meta-analyses which aggregates your collection data.
           </p>
         </Accordion.Content>
-
-        <Accordion.Title
-          active={activeIndex === 2}
-          index={2}
-          onClick={this.handleClick}
-        >
-          <Icon name="dropdown" />
-          What is a collection?
-        </Accordion.Title>
-        <Accordion.Content active={activeIndex === 2}>
-          <p>
-            Three common ways for a prospective owner to acquire a dog is from
-            pet shops, private owners, or shelters.
-          </p>
-          <p>
-            A pet shop may be the most convenient way to buy a dog. Buying a dog
-            from a private owner allows you to assess the pedigree and
-            upbringing of your dog before choosing to take it home. Lastly,
-            finding your dog from a shelter, helps give a good home to a dog who
-            may not find one so readily.
-          </p>
-        </Accordion.Content>
-        <Accordion.Title
-          active={activeIndex === 3}
-          index={3}
-          onClick={this.handleClick}
-        >
-          <Icon name="dropdown" />
-          What is a review?
-        </Accordion.Title>
-        <Accordion.Content active={activeIndex === 3}>
-          <p>
-            Three common ways for a prospective owner to acquire a dog is from
-            pet shops, private owners, or shelters.
-          </p>
-          <p>
-            A pet shop may be the most convenient way to buy a dog. Buying a dog
-            from a private owner allows you to assess the pedigree and
-            upbringing of your dog before choosing to take it home. Lastly,
-            finding your dog from a shelter, helps give a good home to a dog who
-            may not find one so readily.
-          </p>
-        </Accordion.Content>
-
-        <Accordion.Title
-          active={activeIndex === 4}
-          index={4}
-          onClick={this.handleClick}
-        >
-          <Icon name="dropdown" />
-          Walkthrough
-        </Accordion.Title>
-        <Accordion.Content active={activeIndex === 4}>
-          <p>
-            Three common ways for a prospective owner to acquire a dog is from
-            pet shops, private owners, or shelters.
-          </p>
-          <p>
-            A pet shop may be the most convenient way to buy a dog. Buying a dog
-            from a private owner allows you to assess the pedigree and
-            upbringing of your dog before choosing to take it home. Lastly,
-            finding your dog from a shelter, helps give a good home to a dog who
-            may not find one so readily.
-          </p>
-        </Accordion.Content>
+        {/*  */}
+        {/* <Accordion.Title */}
+        {/*   active={activeIndex === 2} */}
+        {/*   index={2} */}
+        {/*   onClick={this.handleClick} */}
+        {/* > */}
+        {/*   <Icon name="dropdown" /> */}
+        {/*   What is a collection? */}
+        {/* </Accordion.Title> */}
+        {/* <Accordion.Content active={activeIndex === 2}> */}
+        {/*   <p> */}
+        {/*     Three common ways for a prospective owner to acquire a dog is from */}
+        {/*     pet shops, private owners, or shelters. */}
+        {/*   </p> */}
+        {/*   <p> */}
+        {/*     A pet shop may be the most convenient way to buy a dog. Buying a dog */}
+        {/*     from a private owner allows you to assess the pedigree and */}
+        {/*     upbringing of your dog before choosing to take it home. Lastly, */}
+        {/*     finding your dog from a shelter, helps give a good home to a dog who */}
+        {/*     may not find one so readily. */}
+        {/*   </p> */}
+        {/* </Accordion.Content> */}
+        {/* <Accordion.Title */}
+        {/*   active={activeIndex === 3} */}
+        {/*   index={3} */}
+        {/*   onClick={this.handleClick} */}
+        {/* > */}
+        {/*   <Icon name="dropdown" /> */}
+        {/*   What is a review? */}
+        {/* </Accordion.Title> */}
+        {/* <Accordion.Content active={activeIndex === 3}> */}
+        {/*   <p> */}
+        {/*     Three common ways for a prospective owner to acquire a dog is from */}
+        {/*     pet shops, private owners, or shelters. */}
+        {/*   </p> */}
+        {/*   <p> */}
+        {/*     A pet shop may be the most convenient way to buy a dog. Buying a dog */}
+        {/*     from a private owner allows you to assess the pedigree and */}
+        {/*     upbringing of your dog before choosing to take it home. Lastly, */}
+        {/*     finding your dog from a shelter, helps give a good home to a dog who */}
+        {/*     may not find one so readily. */}
+        {/*   </p> */}
+        {/* </Accordion.Content> */}
+        {/*  */}
+        {/* <Accordion.Title */}
+        {/*   active={activeIndex === 4} */}
+        {/*   index={4} */}
+        {/*   onClick={this.handleClick} */}
+        {/* > */}
+        {/*   <Icon name="dropdown" /> */}
+        {/*   Walkthrough */}
+        {/* </Accordion.Title> */}
+        {/* <Accordion.Content active={activeIndex === 4}> */}
+        {/*   <p> */}
+        {/*     Three common ways for a prospective owner to acquire a dog is from */}
+        {/*     pet shops, private owners, or shelters. */}
+        {/*   </p> */}
+        {/*   <p> */}
+        {/*     A pet shop may be the most convenient way to buy a dog. Buying a dog */}
+        {/*     from a private owner allows you to assess the pedigree and */}
+        {/*     upbringing of your dog before choosing to take it home. Lastly, */}
+        {/*     finding your dog from a shelter, helps give a good home to a dog who */}
+        {/*     may not find one so readily. */}
+        {/*   </p> */}
+        {/* </Accordion.Content> */}
       </Accordion>
     );
   }

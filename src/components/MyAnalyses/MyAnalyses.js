@@ -27,7 +27,10 @@ class MyAnalysesPage extends Component {
     if (!this.props._token) {
       window.location.href = "/login";
     }
-    this.props.getUser(this.props._id, this.props._token);
+    console.log(this.props);
+    if( this.props._id){
+      this.props.getUser(this.props._id, this.props._token);
+    }
 
     //getting all review ids
     // let analysisIds = this.props.MyAnalysesPage.user.analyses.map(study => {
