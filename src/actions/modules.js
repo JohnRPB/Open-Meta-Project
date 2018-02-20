@@ -1,8 +1,5 @@
 import axios from "axios";
 import { store } from "../index.js";
-console.log("------------------- START store -------------------");
-console.log(store);
-console.log("-------------------- END store --------------------");
 
 // Remove a study
 export const REMOVE_STUDY = "REMOVE_STUDY";

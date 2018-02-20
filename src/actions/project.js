@@ -1,7 +1,7 @@
 import axios from "axios";
 const root =
   process.env.NODE_ENV === "production"
-    ? "https://radiant-taiga-58264.herokuapp.com"
+    ? process.env.REACT_APP_HEROKU_URL
     : "http://localhost:8000";
 
 export const ADD_TEXT = "ADD_TEXT";
