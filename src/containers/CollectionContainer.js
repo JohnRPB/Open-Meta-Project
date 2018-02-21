@@ -1,11 +1,11 @@
 import { connect } from "react-redux";
 import Collection from "../components/Collection/Collection";
-import { getCollection } from "../actions/Collection";
+import { getCollection } from "../lib/apiHelpers.js";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state) {
   return {
-    Collection: state.Collection.Collection,
+    Collection: state.sessionInfo.collection,
     isFetching: state.Collection.isFetching,
     Token: state.Token
   };
@@ -14,7 +14,7 @@ function mapStateToProps(state) {
 const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
     getCollection: id => {
-      dispatch(getCollection(id));
+      getCollection(id, dispatch);
     }
   };
 };

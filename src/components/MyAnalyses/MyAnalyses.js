@@ -28,6 +28,8 @@ class MyAnalysesPage extends Component {
     }
     if (!this.props.currentUser._id){
       this.isFetching = true;
+    } else {
+      this.props.getUser(this.props.currentUser._id);
     }
   }
   // componentWillUpdate(nextProps){

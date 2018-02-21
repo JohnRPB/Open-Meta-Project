@@ -51,22 +51,22 @@ export function updateAnalysisSuccess(data) {
 }
 
 export function updateAnalysis(id, obj) {
-  console.log("id => ", id);
-  console.log("OBJECT FROM UPDATE =>>>>>>>>>>>>>>>>>>>>>>>>>>>", obj);
+  // console.log("id => ", id);
+  // console.log("OBJECT FROM UPDATE =>>>>>>>>>>>>>>>>>>>>>>>>>>>", obj);
 
   return dispatch => {
     axios
       .put(`${root()}/api/analyses/${id}`, obj)
       .then(response => {
-        console.log(
-          "RESPONSE DATA =>>>>>>>>>>>>>>>>>>>>>>>>>>>",
-          response.data
-        );
+        // console.log(
+        //   "RESPONSE DATA =>>>>>>>>>>>>>>>>>>>>>>>>>>>",
+        //   response.data
+        // );
 
         dispatch(updateAnalysisSuccess(response.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }
@@ -91,15 +91,15 @@ export function getAnalysisAndLoad(id) {
       .get(`${root()}/api/analyses/${id}`)
       .then(response => {
         dispatch(getAnalysisAndLoadSuccess(response.data));
-        console.log("response.data => ", response.data);
+        // console.log("response.data => ", response.data);
         return response.data;
       })
       .then(answer => {
-        console.log("answer =>", answer);
+        // console.log("answer =>", answer);
         dispatch(loadDocument(answer.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }

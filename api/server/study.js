@@ -276,7 +276,7 @@ router.get('/search', async (req, res, next) => {
       let tagResults;
       try {
         tagResults = await Tag.findAll(tagParams);
-        console.log(tagResults);
+        // console.log(tagResults);
       } catch (e) {
         res.status(500).send(e.stack);
       }
@@ -326,7 +326,7 @@ router.get('/ids', async (req, res, next) => {
   let rawStudies;
   try {
     rawStudies = await Study.findAll(queryParams);
-    console.log(rawStudies);
+    // console.log(rawStudies);
   } catch (e) {
     res.status(500).send(e.stack);
   }

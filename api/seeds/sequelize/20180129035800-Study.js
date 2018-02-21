@@ -32,7 +32,7 @@ module.exports = {
       bodyObj.url = `${faker.internet.url()}/${faker.random.uuid()}`;
       studies.push(bodyObj);
     }
-    console.log('past both loops');
+    // console.log('past both loops');
 
     return queryInterface.bulkInsert('Studies', studies);
   },

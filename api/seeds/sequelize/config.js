@@ -15,15 +15,15 @@ for (let i = 0; i < seedArray.length; i++) {
 
   // View stdout and stderr of child process
   child.stdout.on('data', data => {
-    console.log(`
-    CHILD PROCESS: ${seedArray[i]}
-    ${data.toString()}
-    `);
+    // console.log(`
+    // CHILD PROCESS: ${seedArray[i]}
+    // ${data.toString()}
+    // `);
   });
   child.stderr.on('data', data => {
-    console.log(`
-    CHILD PROCESS ERROR: ${seedArray[i]}
-    ${data.toString()}
-    `);
+    // console.log(`
+    // CHILD PROCESS ERROR: ${seedArray[i]}
+    // ${data.toString()}
+    // `);
   });
 }

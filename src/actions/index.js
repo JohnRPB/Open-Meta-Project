@@ -16,12 +16,12 @@ export const expressTestError = data => {
   return {type: EXPRESS_TEST_ERROR, data};
 };
 
-console.log("------------------- START process.env.REACT_APP_HEROKU_URL -------------------");
-console.log(process.env.REACT_APP_HEROKU_URL);
-console.log("-------------------- END process.env.REACT_APP_HEROKU_URL --------------------");
+// console.log("------------------- START process.env.REACT_APP_HEROKU_URL -------------------");
+// console.log(process.env.REACT_APP_HEROKU_URL);
+// console.log("-------------------- END process.env.REACT_APP_HEROKU_URL --------------------");
 
 
-console.log('root: ', root);
+// console.log('root: ', root);
 
 export const EXPRESS_TEST = 'EXPRESS_TEST';
 export const expressTest = () => {
@@ -34,7 +34,7 @@ export const expressTest = () => {
         }
       })
       .then(res => {
-        console.log(res);
+        // console.log(res);
         dispatch(expressTestResults(JSON.stringify(res.data)));
       })
       .catch(err => dispatch(expressTestError(err)));
@@ -61,8 +61,8 @@ export const dbTest = () => {
     axios
       .get(`${root()}/api/users`)
       .then(res => {
-        console.log(res);
-        console.log(`ROOT: ${root()}/api/users`);
+        // console.log(res);
+        // console.log(`ROOT: ${root()}/api/users`);
         dispatch(dbTestResults(JSON.stringify(res.data)));
       })
       .catch(err => dispatch(dbTestError(err)));

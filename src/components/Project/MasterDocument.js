@@ -65,7 +65,7 @@ class MasterDocument extends Component {
   // }
 
   render() {
-    console.log("this props => ", this.props);
+    // console.log("this props => ", this.props);
     // const { boxes, dustbins } = this.state;
     const {
       blocks,

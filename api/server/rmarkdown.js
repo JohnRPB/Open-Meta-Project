@@ -7,7 +7,7 @@ const axios = require('axios');
 // const fs = require('fs');
 
 router.get('/', (req, res, next) => {
-  console.log('hello');
+  // console.log('hello');
 });
 router.get('/:func/:number', (req, res, next) => {
   axios

@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
       id: registrant._id
     });
   } catch (e) {
-    console.log("error on api post /register", e);
+    console.error("error on api post /register", e);
   }
 });
 

@@ -21,11 +21,11 @@ export function getUser(id) {
       // dave is already using this route to grab studies?
       .get(`${root()}/api/users/${id}`)
       .then(response => {
-        console.log("response =>", response);
+        // console.log("response =>", response);
         dispatch(getUserSuccess(response.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }
@@ -52,7 +52,7 @@ export function getAnalyses(id) {
         dispatch(getAnalysesSuccess(response.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }

@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     pageChange: (e,data) => {
-      console.log(data)
+      // console.log(data)
       dispatch(setPage(data.activePage));
     }
   }

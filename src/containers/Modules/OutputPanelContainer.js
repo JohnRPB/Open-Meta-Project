@@ -7,11 +7,11 @@ import OutputPanel from "../../components/Modules/OutputPanel.js";
 // import serialize from "form-serialize";
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state.project)
-  console.log("===========================");
+  // console.log(state.project)
+  // console.log("===========================");
   // console.log("CURRENT MODULE", currentModule);
-  console.log("CURRENT MODULE", ownProps);
-  console.log("===========================");
+  // console.log("CURRENT MODULE", ownProps);
+  // console.log("===========================");
   let currentModule = state.project.blocks[ownProps.moduleIdx];
   // let outputLoc = currentModule
   //   ? currentModule.content.outputLoc

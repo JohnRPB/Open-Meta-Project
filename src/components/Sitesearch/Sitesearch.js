@@ -27,7 +27,7 @@ class Sitesearch extends Component {
   // }
 
   componentDidMount() {
-    console.log('SITE SEARCH IS BEING HIT');
+    // console.log('SITE SEARCH IS BEING HIT');
     this.props.showResults(this.props.location.search.slice(7), 'Analysis');
   }
 

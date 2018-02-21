@@ -37,7 +37,7 @@ const collections = (state = initialState, action) => {
         persistObj: newHashObj
       }
     case CEASE_PERSIST:
-      console.log(action);
+      // console.log(action);
       let updatedPersistTables = [];
       let updatedNonPersist = [];
       let updatedHashObj = {}

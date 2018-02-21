@@ -53,7 +53,7 @@ class AllCollections extends Component {
 
       // creates cards for each collection
       var collectionCards = this.props.user.collections
-        .slice(0, 6)
+        .slice(0)
         .map(collection => {
           return {
             header: (

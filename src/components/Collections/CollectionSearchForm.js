@@ -16,7 +16,7 @@ const CollectionSearchForm = ({
   flipActive,
   onSubmit,
 }) => {
-  console.log(numberOfAuthors);
+  // console.log(numberOfAuthors);
   return (
     <Grid.Column width={8}>
       <Menu attached="top" tabular>

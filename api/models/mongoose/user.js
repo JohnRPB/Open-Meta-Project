@@ -41,14 +41,14 @@ const autoPop = function(next) {
   next();
 };
 const unPop = function(next) {
-  console.log('update: ', this.update());
-  console.log('getUpdate: ', this.getUpdate());
+  // console.log('update: ', this.update());
+  // console.log('getUpdate: ', this.getUpdate());
   next();
 };
 
 const postUpdate = function(doc) {
-  console.log(doc);
-  console.log(doc._doc);
+  // console.log(doc);
+  // console.log(doc._doc);
 };
 UserSchema.pre('find', autoPop)
   .pre('findOne', autoPop)

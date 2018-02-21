@@ -36,21 +36,21 @@ class Module extends React.Component {
   //   console.log('============================');
   // }
   componentDidMount() {
-    console.log('============================');
-    console.log('THIS COMPONENT HAS MOUNTED');
-    console.log('============================');
-    console.log(this.state.time);
+    // console.log('============================');
+    // console.log('THIS COMPONENT HAS MOUNTED');
+    // console.log('============================');
+    // console.log(this.state.time);
     this.props.getOcpu();
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(
-      '------------------- START this.props.moduleIdx -------------------',
-    );
-    console.log(this.props.moduleIdx);
-    console.log(
-      '-------------------- END this.props.moduleIdx --------------------',
-    );
+    // console.log(
+    //   '------------------- START this.props.moduleIdx -------------------',
+    // );
+    // console.log(this.props.moduleIdx);
+    // console.log(
+    //   '-------------------- END this.props.moduleIdx --------------------',
+    // );
 
     if (prevProps.moduleIdx !== this.props.moduleIdx) {
       this.props.getOcpu();
@@ -58,7 +58,7 @@ class Module extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('-------------- Will receive props -----------------');
+    // console.log('-------------- Will receive props -----------------');
 
     if (this.props.moduleIdx !== nextProps.moduleIdx) {
       this.props.getOcpu();
@@ -66,13 +66,13 @@ class Module extends React.Component {
   }
 
   render() {
-    console.log(
-      '------------------- START this.props.moduleIdx (render) -------------------',
-    );
-    console.log(this.props.moduleIdx);
-    console.log(
-      '-------------------- END this.props.moduleIdx --------------------',
-    );
+    // console.log(
+    //   '------------------- START this.props.moduleIdx (render) -------------------',
+    // );
+    // console.log(this.props.moduleIdx);
+    // console.log(
+    //   '-------------------- END this.props.moduleIdx --------------------',
+    // );
 
     return (
       <Container>

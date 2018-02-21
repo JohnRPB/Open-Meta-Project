@@ -20,11 +20,19 @@ class Collection extends Component {
   }
 
   componentDidMount() {
+    // console.log(this.props.Collection);
     this.props.getCollection(this.props.match.params.collection_id);
   }
 
+  componentWillReceiveProps() {
+    if(this.props.Collection._id){
+      // console.log(this.props.Collection);
+      this.isFetching = false;
+    }
+  }
+
   render() {
-    if (!this.props.isFetching) {
+    if (!this.isFetching) {
       var { Collection } = this.props;
 
       var tags = this.props.Collection.category.map(el => {
@@ -41,7 +49,7 @@ class Collection extends Component {
       });
     }
 
-    if (this.props.isFetching) {
+    if (this.isFetching) {
       return (
         <Dimmer active>
           <Loader content="Loading" />

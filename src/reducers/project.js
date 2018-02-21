@@ -124,7 +124,7 @@ const project = (state = initialState, action) => {
         ]
       };
     case HANDLE_DROPPING:
-      console.log(action)
+      // console.log(action)
       let indexOfElement = action.data.index;
       //takes care of initial submission
       if (indexOfElement === undefined) {
@@ -206,7 +206,7 @@ const project = (state = initialState, action) => {
         }
       };
     case DELETE_ELEMENT:
-      console.log("SHOWING DATA", action.data);
+      // console.log("SHOWING DATA", action.data);
       return {
         ...state,
         blocks: [
@@ -215,8 +215,8 @@ const project = (state = initialState, action) => {
         ]
       };
     case UPDATE_LOC:
-      console.log(state.blocks)
-      console.log(action.data);
+      // console.log(state.blocks)
+      // console.log(action.data);
       //we are manipulating state in place here. we need to create a new object at that index
       // blocks = state.blocks.slice();
       // blocks[action.data.moduleIdx].content = Object.assign(

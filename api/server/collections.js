@@ -24,7 +24,7 @@ router.get('/:id', function(req, res, next) {
 // --------------------------------------------
 
 router.post('/', async (req, res, next) => {
-  console.log('collection post route req ', req.body);
+  // console.log('collection post route req ', req.body);
   let newObj = {
     name: req.body.title,
     description: req.body.description,
@@ -123,7 +123,7 @@ router.post('/new', async (req, res, next) => {
     );
     await currentUser.save();
     currentUser = await User.findById(body.ownerId);
-    console.log(currentUser);
+    // console.log(currentUser);
     res.send(JSON.stringify(currentCollection));
   } catch (e) {
     console.error(e);
@@ -139,6 +139,7 @@ router.put('/:id', async (req, res, next) => {
       req.params.id,
       req.body
     );
+    updatedCollection = await Collection.findById(req.params.id);
     submitter = await User.findById(req.body.ownerId);
     let updateUser = true;
     for (let i = 0; i < submitter.collections.length; i++) {
@@ -152,11 +153,14 @@ router.put('/:id', async (req, res, next) => {
     if (updateUser) {
       submitter.collections.push(updatedCollection);
       submitter = await submitter.save();
+      // console.log(updatedCollection);
       res.json(updatedCollection);
     } else {
+      // console.log(updatedCollection);
       res.status(200).send();
     }
   } catch (e) {
+    console.error(e);
     res.status(500).send(e.stack);
   }
 });

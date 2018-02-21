@@ -61,11 +61,11 @@ api.use((req, res, next) => {
           //   message: 'Wrong Token',
           // });
           //remove this part when starting auth for all routes, and use the above
-          console.log("wrong token");
+          // console.log("wrong token");
           // next();
         } else {
           //If decoded then call next() so that respective route is called.
-          console.log("token found");
+          // console.log("token found");
           req.decoded = decod;
           next();
         }
@@ -76,7 +76,7 @@ api.use((req, res, next) => {
     //   message: 'No Token',
     // });
     //remove this part when starting auth for all routes, and use the above
-    console.log("no token");
+    // console.log("no token");
     next();
   }
 });

@@ -39,13 +39,13 @@ let mongoAnalysis = mongoModels.Analysis;
 // });
 
 router.get('/sitesearch/:search', async function(req, res, next) {
-  console.log('REQ.PARAMS.SEARCH', req.params.search);
+  // console.log('REQ.PARAMS.SEARCH', req.params.search);
   let query = req.params.search,
     result,
     results = [];
   try {
     result = await User.find({});
-    console.log('result => ', result);
+    // console.log('result => ', result);
   } catch (e) {
     res.status(500).send(e.stack);
   }
@@ -57,11 +57,11 @@ router.get('/sitesearch/:search', async function(req, res, next) {
       element.profile.lname.toLowerCase().includes(query.toLowerCase()) ||
       element.profile.fname.toLowerCase().includes(query.toLowerCase())
     ) {
-      console.log(element.email);
+      // console.log(element.email);
       results.push(element);
     }
   });
-  console.log('results => ', results);
+  // console.log('results => ', results);
   res.json(results);
 });
 
@@ -81,7 +81,7 @@ router.get('/:userId', async (req, res, next) => {
 /* Login or register user */
 // ------------------------
 router.post('/', function(req, res, next) {
-  console.log('req.body => ', req.body);
+  // console.log('req.body => ', req.body);
   res.send('response back from api!');
 });
 

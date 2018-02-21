@@ -24,8 +24,8 @@ class NewProfile extends Component {
     // var str = serialize(form);
     var obj = serialize(form, { hash: true });
 
-    console.log("starting fetch");
-    console.log("obj =>", obj);
+    // console.log("starting fetch");
+    // console.log("obj =>", obj);
 
     fetch(`${root()}/api/newprofile`, {
       method: "POST",

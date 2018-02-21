@@ -31,7 +31,7 @@ import UserForm from './containers/UserForm'; //userform container
 // -------------------------
 
 const Routes = (props) => {
-  console.log('Route Props: ', props);
+  // console.log('Route Props: ', props);
   let display = (
     <Router>
       <Switch>
