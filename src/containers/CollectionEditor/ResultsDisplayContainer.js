@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import ResultsDisplay from '../../components/CollectionEditor/ResultsDisplay';
-import {changePersist, setOpen} from '../../actions/collectionEdit';
-import root from '../../lib/root';
+import {changePersist} from '../../actions/collectionEdit';
+// import root from '../../lib/root';
 
 const mapStateToProps = state => {
   return {

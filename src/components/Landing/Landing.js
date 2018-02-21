@@ -3,7 +3,7 @@ import NavContainer from "../../containers/NavContainer";
 import {
   Segment,
   Grid,
-  Button,
+  // Button,
   Image,
   Container,
   Popup,

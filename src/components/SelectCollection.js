@@ -8,9 +8,9 @@
 //OR has a button that directs to create a collection page
 
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
-import axios from 'axios';
+// import axios from 'axios';
 import root from '../lib/root';
 import NavContainer from '../containers/NavContainer';
 //ui
@@ -29,7 +29,7 @@ class SelectCollection extends Component {
   componentDidMount() {
     //saves an analysis
     //hai did this
-    console.log('this.props.location.query =>', this.props.location.query);
+    // console.log('this.props.location.query =>', this.props.location.query);
   }
 
   onSubmitSelection(e) {
@@ -96,7 +96,7 @@ class SelectCollection extends Component {
     fetch(
       `${root}/api/analyses/updateanalysis/${this.props.location.search.slice(
         4,
-      )}/${this.props.Token.id}/${this.props._selectedCollection}`,
+      )}/${this.props._id}/${this.props._selectedCollection}`,
       {
         headers: {
           'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ class SelectCollection extends Component {
             <div>
               <div>none selected yet</div>
               <h3 style={{marginTop: 20}}>Create a new collection:</h3>
-              <CollectionModal id={this.props.Token.id} />
+              <CollectionModal id={this.props._id} />
             </div>
           ) : (
             <div>
@@ -149,7 +149,7 @@ class SelectCollection extends Component {
                 Create your Analysis
               </Button>
               <h3 style={{marginTop: 50}}>Create a new collection:</h3>
-              <CollectionModal id={this.props.Token.id} />
+              <CollectionModal id={this.props._id} />
             </div>
           )}
         </Container>

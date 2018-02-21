@@ -15,7 +15,7 @@ import {
 import CollectionModal from "./CollectionModal";
 import defaultpicture from "../../assets/images/default.jpg";
 
-const faker = require("faker");
+// const faker = require("faker");
 
 class AllCollections extends Component {
   constructor() {
@@ -31,29 +31,28 @@ class AllCollections extends Component {
   // }
 
   render() {
-    let analysisCards;
-    if (!this.props.MyAnalysesPage.isFetching) {
-      console.log("MyAnalyses: this.props: ", this.props);
+    if (!this.props.isFetching) {
+      // console.log("MyAnalyses: this.props: ", this.props);
 
       // creates cards for each analysis
-      analysisCards = this.props.MyAnalysesPage.user.analyses.map(analysis => {
-        return (
-          <Card
-            fluid
-            key={analysis._id}
-            header={
-              <NavLink to={`/analysis/${analysis._id}`}>
-                {analysis._id}
-                {/* {analysis.data.header.title} */}
-              </NavLink>
-            }
-            description={faker.lorem.paragraph()}
-          />
-        );
-      });
+      // let analysisCards = this.props.user.analyses.map(analysis => {
+      //   return (
+      //     <Card
+      //       fluid
+      //       key={analysis._id}
+      //       header={
+      //         <NavLink to={`/analysis/${analysis._id}`}>
+      //           {analysis._id}
+      //           {#<{(| {analysis.data.header.title} |)}>#}
+      //         </NavLink>
+      //       }
+      //       description={faker.lorem.paragraph()}
+      //     />
+      //   );
+      // });
 
       // creates cards for each collection
-      var collectionCards = this.props.MyAnalysesPage.user.collections
+      var collectionCards = this.props.user.collections
         .slice(0, 6)
         .map(collection => {
           return {
@@ -67,7 +66,7 @@ class AllCollections extends Component {
         });
     }
 
-    if (this.props.MyAnalysesPage.isFetching) {
+    if (this.props.isFetching) {
       return (
         <Dimmer active>
           <Loader content="Loading" />
@@ -100,13 +99,13 @@ class AllCollections extends Component {
                   <br />
 
                   <Header as="h1" floated="left" textalign="left">
-                    {`${this.props.MyAnalysesPage.user.profile.fname} ${
-                      this.props.MyAnalysesPage.user.profile.lname
+                    {`${this.props.user.profile.fname} ${
+                      this.props.user.profile.lname
                     }`}
                     <Header.Subheader>
                       {" "}
-                      {this.props.MyAnalysesPage.user.profile.title} at{" "}
-                      {this.props.MyAnalysesPage.user.profile.organization}
+                      {this.props.user.profile.title} at{" "}
+                      {this.props.user.profile.organization}
                     </Header.Subheader>
                   </Header>
 
@@ -118,7 +117,7 @@ class AllCollections extends Component {
               <Grid.Row id="collections">
                 <Grid.Column width={3}>
                   <br />
-                  <CollectionModal id={this.props.MyAnalysesPage.user._id} />
+                  <CollectionModal id={this.props.user._id} />
                 </Grid.Column>
                 <Grid.Column width={13}>
                   <Segment>

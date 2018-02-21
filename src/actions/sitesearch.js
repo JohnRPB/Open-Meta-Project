@@ -1,8 +1,5 @@
 import axios from 'axios';
-const root =
-  process.env.NODE_ENV === 'production'
-    ? process.env.REACT_APP_HEROKU_URL
-    : 'http://localhost:8000';
+import root from '../lib/root';
 
 export const REDIRECT_SUBMISSION = 'REDIRECT_SUBMISSION';
 export const redirectSubmission = () => {
@@ -30,7 +27,7 @@ export function getUsers(data, value) {
     console.log('query =>', data);
     let query = data;
     axios
-      .get(`${root}/api/users/sitesearch/${query}`)
+      .get(`${root()}/api/users/sitesearch/${query}`)
       .then(response => {
         console.log('response =>', response.data);
         dispatch(getUsersResults(response.data, query, value));
@@ -60,7 +57,7 @@ export function getAnalyses(data, value) {
     console.log('query =>', data);
     let query = data;
     axios
-      .get(`${root}/api/myanalyses/${query}`)
+      .get(`${root()}/api/myanalyses/${query}`)
       .then(response => {
         console.log('response =>', response.data);
         dispatch(getAnalysesResults(response.data, query, value));
@@ -90,7 +87,7 @@ export function getCollections(data, value) {
     console.log('query =>', data);
     let query = data;
     axios
-      .get(`${root}/api/collections/sitesearch/${query}`)
+      .get(`${root()}/api/collections/sitesearch/${query}`)
       .then(response => {
         console.log('response =>', response.data);
         dispatch(getCollectionsResults(response.data, query, value));

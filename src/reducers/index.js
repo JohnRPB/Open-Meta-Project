@@ -13,6 +13,7 @@ import collections from "./collections";
 import collectionEdit from "./collectionEdit";
 import routeProps from "./routeProps";
 import modules from "./modules";
+import sessionInfo from "./sessionInfo";
 import Collection from "./Collection.js";
 import SelectCollection from "./SelectCollection.js";
 
@@ -31,7 +32,7 @@ const Reducers = combineReducers({
   sitesearch,
   Analysis,
   Collection,
-  routing: routerReducer,
+  sessionInfo,
   modules
 });
 

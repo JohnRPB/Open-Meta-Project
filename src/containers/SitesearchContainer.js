@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Sitesearch from '../components/Sitesearch/Sitesearch';
 import { getUsers, getAnalyses, getCollections } from '../actions/sitesearch';
 import { withRouter } from 'react-router';
-import serialize from 'form-serialize';
+// import serialize from 'form-serialize';
 
 function mapStateToProps(state, ownProps) {
   return {
@@ -34,9 +34,9 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
     showResults: (data, field) => {
       console.log('field', field);
       console.log('DATA FROM ACTION', data);
-      if (field == 'Collection') {
+      if (field === 'Collection') {
         dispatch(getCollections(data, field));
-      } else if (field == 'User') {
+      } else if (field === 'User') {
         dispatch(getUsers(data, field));
       } else {
         dispatch(getAnalyses(data, 'Analysis'));

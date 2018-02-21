@@ -1,8 +1,5 @@
 import axios from "axios";
-const root =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_HEROKU_URL
-    : "http://localhost:8000";
+import root from '../lib/root.js';
 
 export const GET_ANALYSES = "GET_ANALYSES";
 
@@ -17,7 +14,7 @@ export function getAnalysesSuccess(data) {
 export function getAnalyses(id) {
   return dispatch => {
     axios
-      .get(`${root}/api/analyses`)
+      .get(`${root()}/api/analyses`)
       .then(response => {
         console.log("response => ", response);
         dispatch(getAnalysesSuccess(response.data));
@@ -45,7 +42,7 @@ export function getUserSuccess(data) {
 export function getUser(id, token) {
   return dispatch => {
     axios({
-      url: `${root}/api/users/${id}`,
+      url: `${root()}/api/users/${id}`,
       method: "get",
       headers: new Headers({
         "x-access-token": token

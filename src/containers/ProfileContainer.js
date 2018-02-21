@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import { connect } from "react-redux";
 import Profile from "../components/Profile/Profile";
 import { getUser } from "../actions/Profile";
@@ -10,7 +10,8 @@ function mapStateToProps(state) {
     ...state,
     _token: state.Token.token,
     // Analyses: state.Profile.analyses,
-    isFetching: state.Profile.isFetching
+    user: state.sessionInfo.user,
+    isFetching: state.MyAnalysesPage.isFetching
   };
 }
 

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {
-  Grid,
-  Image,
-  Segment,
-  Header,
+  // Grid,
+  // Image,
+  // Segment,
+  // Header,
   Container,
-  Card,
-  Statistic,
-  Tab,
+  // Card,
+  // Statistic,
+  // Tab,
   Button
 } from 'semantic-ui-react';
 import Results from './Results';
@@ -17,9 +17,9 @@ import NavContainer from '../../containers/NavContainer';
 import GoogleSearch from './GoogleSearch';
 
 class Sitesearch extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   // console.log("QUERY IS", this.props.location.search.slice(7));
   // if (this.props.location.search.slice(7)) {
@@ -34,11 +34,11 @@ class Sitesearch extends Component {
   render() {
     const {
       results,
-      handleSubmit,
-      onChange,
+      // handleSubmit,
+      // onChange,
       field,
-      onClickCollection,
-      onClickUser,
+      // onClickCollection,
+      // onClickUser,
       query,
       showResults
     } = this.props;

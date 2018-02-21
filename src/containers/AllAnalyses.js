@@ -1,11 +1,12 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import { connect } from "react-redux";
 import AllAnalyses from "../components/MyAnalyses/AllAnalyses";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state) {
   return {
-    ...state
+    user: state.MyAnalysesPage.user,
+    isFetching: state.MyAnalysesPage.isFetching
     // MyAnalyses: state.MyAnalysesPage.analyses,
     // isFetching: state.MyAnalysesPage.isFetching
   };

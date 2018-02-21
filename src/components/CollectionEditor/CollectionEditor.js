@@ -1,7 +1,7 @@
 import React from 'react';
 import ExistingDisplayContainer from '../../containers/CollectionEditor/ExistingDisplayContainer';
 import FormsContainer from '../../containers/CollectionEditor/FormsContainer';
-import PagesContainer from '../../containers/CollectionEditor/PagesContainer';
+// import PagesContainer from '../../containers/CollectionEditor/PagesContainer';
 import ResultsDisplayContainer from '../../containers/CollectionEditor/ResultsDisplayContainer';
 import SaveButtonContainer from '../../containers/CollectionEditor/SaveButtonContainer.js';
 import NavContainer from '../../containers/NavContainer.js';

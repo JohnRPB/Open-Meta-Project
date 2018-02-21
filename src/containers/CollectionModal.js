@@ -5,7 +5,6 @@ import { withRouter } from "react-router";
 
 function mapStateToProps(state, ownProps) {
   return {
-    ...state,
     userId: ownProps.id,
     _id: state.Token.id,
     _token: state.Token.token

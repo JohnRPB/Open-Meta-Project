@@ -31,11 +31,11 @@ class UserForm extends Component {
   sendForm(e) {
     e.preventDefault();
     var form = document.querySelector('#example-form');
-    var str = serialize(form);
+    // var str = serialize(form);
     var obj = serialize(form, {hash: true});
     console.log('obj =>', obj.passHash);
 
-    if (obj.action == 'login') {
+    if (obj.action === 'login') {
       console.log('login starting');
       fetch(`${root()}/api/login`, {
         method: 'post',
@@ -56,16 +56,17 @@ class UserForm extends Component {
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
+            this.props.userFromId(data.id);
           }
           return data;
           // data = data.json()
           // console.log("data returned => ", data);
         })
-        .then(data => this.props.history.push(`/myanalyses/${data.id}`))
+        .then(data => this.props.history.push(`/myanalyses`))
         .catch(error => console.error('Error:', error));
     }
 
-    if (obj.action == 'register') {
+    if (obj.action === 'register') {
       console.log('register starting');
       fetch(`${root()}/api/register`, {
         method: 'post',

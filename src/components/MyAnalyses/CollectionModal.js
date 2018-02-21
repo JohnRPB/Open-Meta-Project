@@ -1,25 +1,20 @@
 import React, { Component } from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import { 
+  // NavLink, 
+  withRouter 
+} from "react-router-dom";
 import axios from "axios";
+import root from '../../lib/root';
 import {
   Button,
   Header,
-  Image,
+  // Image,
   Modal,
   Form,
-  Input,
+  // Input,
   TextArea
 } from "semantic-ui-react";
 var serialize = require("form-serialize");
-
-// --------------------------------------------
-// routing
-// --------------------------------------------
-
-const root =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_HEROKU_URL
-    : "http://localhost:8000";
 
 // --------------------------------------------
 // component
@@ -35,9 +30,9 @@ class CollectionModal extends Component {
     e.preventDefault();
     var form = document.querySelector("#new-collection");
     var obj = serialize(form, { hash: true });
-    obj.id = this.props.id;
+    obj.id = this.props._id;
 
-    axios.post(`${root}/api/collections`, obj).then(response => {
+    axios.post(`${root()}/api/collections`, obj).then(response => {
       this.props.history.push(`/collections/${response.data}/edit`);
     });
   }

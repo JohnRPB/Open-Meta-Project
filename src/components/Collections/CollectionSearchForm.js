@@ -1,23 +1,33 @@
 import React from 'react';
-import {Icon, Grid, Form, Segment, Menu, Button} from 'semantic-ui-react';
+import {
+  // Icon,
+  Grid,
+  Form,
+  Segment,
+  Menu,
+  Button,
+} from 'semantic-ui-react';
 
-const CollectionSearchForm = ({active, onSearch, bumpAuthors,numberOfAuthors, flipActive, onSubmit}) => {
+const CollectionSearchForm = ({
+  active,
+  onSearch,
+  bumpAuthors,
+  numberOfAuthors,
+  flipActive,
+  onSubmit,
+}) => {
   console.log(numberOfAuthors);
   return (
     <Grid.Column width={8}>
       <Menu attached="top" tabular>
         <Menu.Item
           active={active}
-          onClick={() => {
-            active ? null : flipActive();
-          }}
+          onClick={() => (active ? null : flipActive())}
           name="Search for Studies"
         />
         <Menu.Item
           active={!active}
-          onClick={() => {
-            !active ? null : flipActive();
-          }}
+          onClick={() => (!active ? null : flipActive())}
           name="Submit Study"
         />
       </Menu>
@@ -78,13 +88,19 @@ const CollectionSearchForm = ({active, onSearch, bumpAuthors,numberOfAuthors, fl
                 <input name={`authors[0][name]`} placeholder="Author" />
               </div>
             </Form.Field>
-              {[...Array(numberOfAuthors - 1)].map((x,i) =>(
-            <Form.Field key={i}>
+            {[...Array(numberOfAuthors - 1)].map((x, i) => (
+              <Form.Field key={i}>
                 <label>Author</label>
                 <input name={`authors[${i + 1}][name]`} placeholder="Author" />
-            </Form.Field>
-              ))}
-              <Button type='button' onClick={bumpAuthors} content='add author' icon='plus' labelPosition='left' />
+              </Form.Field>
+            ))}
+            <Button
+              type="button"
+              onClick={bumpAuthors}
+              content="add author"
+              icon="plus"
+              labelPosition="left"
+            />
             <Form.Field required>
               <label>Journal</label>
               <input name="journal[name]" placeholder="Journal" />

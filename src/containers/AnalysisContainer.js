@@ -4,8 +4,8 @@ import { getAnalysis } from "../actions/Analysis";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state, ownProps) {
+  console.log('hello from container');
   return {
-    ...state,
     Analysis: state.Analysis.Analysis,
     isFetching: state.Analysis.isFetching
   };

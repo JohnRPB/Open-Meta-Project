@@ -1,7 +1,8 @@
 import {connect} from "react-redux";
 import CollectionSearchCollections from "../../components/Collections/CollectionsSearchCollections.js";
-import axios from "axios";
-import {newTables} from "../../actions/collections";
+// import axios from "axios";
+// import {newTables} from "../../actions/collections";
+// import root from '../../lib/root';
 
 //adding access to frontend url
 import {withRouter} from "react-router";
@@ -9,13 +10,9 @@ import {withRouter} from "react-router";
 //for the selection of a collection in the select collection page
 import {selectCollection} from "../../actions/SelectCollection";
 
-const root =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_HEROKU_URL
-    : "http://localhost:8000";
 
 function mapStateToProps(state) {
-  console.log(state);
+  // console.log(state);
   return {
     userCollections: state.Dashboard.user.collections
   };

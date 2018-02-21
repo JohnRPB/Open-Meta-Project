@@ -1,8 +1,5 @@
 import axios from "axios";
-const root =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_HEROKU_URL
-    : "http://localhost:8000";
+import root from '../lib/root.js';
 
 // -------------------
 // ANALYSES
@@ -22,7 +19,7 @@ export function getAnalyses(ids) {
   let promises = [];
 
   for (let i = 0; i < ids.length; i++) {
-    promises.push(axios.get(`${root}/api/analyses${ids[i]}`));
+    promises.push(axios.get(`${root()}/api/analyses${ids[i]}`));
   }
 
   return dispatch => {
@@ -42,7 +39,7 @@ export function getAnalyses(ids) {
 // export function getAnalyses(ids) {
 //   return dispatch => {
 //     axios
-//       .get(`${root}/api/analyses`)
+//       .get(`${root()}/api/analyses`)
 //       .then(response => {
 //         console.log("response => ", response);
 //         dispatch(getAnalysesSuccess(response.data));
@@ -70,7 +67,7 @@ export function getCollectionsSuccess(data) {
 export function getCollections(id) {
   return dispatch => {
     axios
-      .get(`${root}/api/collections`)
+      .get(`${root()}/api/collections`)
       .then(response => {
         dispatch(getCollectionsSuccess(response.data));
       })
@@ -97,7 +94,7 @@ export function getUserSuccess(data) {
 export function getUser(id, token) {
   return dispatch => {
     axios({
-      url: `${root}/api/users/${id}`,
+      url: `${root()}/api/users/${id}`,
       method: "get",
       headers: new Headers({
         "x-access-token": token
@@ -110,4 +107,12 @@ export function getUser(id, token) {
         console.log(e);
       });
   };
+}
+
+export const SET_FETCH = "SET_FETCH";
+export const setFetch = bool => {
+  return {
+    type: SET_FETCH,
+    bool
+  }
 }

@@ -25,8 +25,8 @@ class AllAnalyses extends Component {
   render() {
     let analysisCards;
     if (!this.props.isFetching) {
-      console.log("MY DATA props => ", this.props);
-      analysisCards = this.props.MyAnalysesPage.user.analyses.map(analysis => {
+      // console.log("MY DATA props => ", this.props);
+      analysisCards = this.props.user.analyses.map(analysis => {
         analysis.data.header = analysis.data.header || {};
         return (
           <Card
@@ -43,7 +43,7 @@ class AllAnalyses extends Component {
       });
     }
 
-    if (this.props.MyAnalysesPage.isFetching) {
+    if (this.props.isFetching) {
       return (
         <Dimmer active>
           <Loader content="Loading" />
@@ -76,13 +76,13 @@ class AllAnalyses extends Component {
                   <br />
 
                   <Header as="h1" floated="left" textalign="left">
-                    {`${this.props.MyAnalysesPage.user.profile.fname} ${
-                      this.props.MyAnalysesPage.user.profile.lname
+                    {`${this.props.user.profile.fname} ${
+                      this.props.user.profile.lname
                     }`}
                     <Header.Subheader>
                       {" "}
-                      {this.props.MyAnalysesPage.user.profile.title} at{" "}
-                      {this.props.MyAnalysesPage.user.profile.organization}
+                      {this.props.user.profile.title} at{" "}
+                      {this.props.user.profile.organization}
                     </Header.Subheader>
                   </Header>
 
@@ -94,7 +94,7 @@ class AllAnalyses extends Component {
               <Grid.Row id="analyses" className="hidden">
                 <Grid.Column width={3}>
                   <br />
-                  <AnalysisModal id={this.props.MyAnalysesPage.user._id} />
+                  <AnalysisModal id={this.props.user._id} />
                 </Grid.Column>
 
                 <Grid.Column width={13}>

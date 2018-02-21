@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Routes from "./routes";
+// import Routes from "./routes";
 import RouterContainer from "./RouterContainer";
 
 import "./index.css";

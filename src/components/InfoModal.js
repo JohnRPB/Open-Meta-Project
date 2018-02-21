@@ -1,5 +1,10 @@
 import React from 'react';
-import { Button, Header, Icon, Modal } from 'semantic-ui-react';
+import {
+  // Button,
+  Header,
+  // Icon,
+  Modal
+} from 'semantic-ui-react';
 import AccordionExampleStyled from './InfoAccordian';
 
 const InfoModal = () => (

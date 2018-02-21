@@ -19,10 +19,10 @@ import {
   GET_ANALYSIS_AND_LOAD,
   LOAD_DOCUMENT
 } from "../actions/project";
-import * as Actions from "../actions/Analysis";
+// import * as Actions from "../actions/Analysis";
 
 import ItemTypes from "../components/Project/ItemTypes";
-import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
+import { NativeTypes } from "react-dnd-html5-backend";
 
 const initialState = {
   blocks: [],

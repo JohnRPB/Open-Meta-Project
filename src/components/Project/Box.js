@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {DragSource} from "react-dnd";
 import studies from "../../newStudies.js";
-import ItemTypes from "./ItemTypes";
+// import ItemTypes from "./ItemTypes";
 
 //for the studies
 import {store} from "../../index.js";

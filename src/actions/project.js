@@ -1,8 +1,5 @@
 import axios from "axios";
-const root =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_HEROKU_URL
-    : "http://localhost:8000";
+import root from '../lib/root.js';
 
 export const ADD_TEXT = "ADD_TEXT";
 export const addText = data => {
@@ -59,7 +56,7 @@ export function updateAnalysis(id, obj) {
 
   return dispatch => {
     axios
-      .put(`${root}/api/analyses/${id}`, obj)
+      .put(`${root()}/api/analyses/${id}`, obj)
       .then(response => {
         console.log(
           "RESPONSE DATA =>>>>>>>>>>>>>>>>>>>>>>>>>>>",
@@ -91,7 +88,7 @@ export function getAnalysisAndLoadSuccess(data) {
 export function getAnalysisAndLoad(id) {
   return dispatch => {
     axios
-      .get(`${root}/api/analyses/${id}`)
+      .get(`${root()}/api/analyses/${id}`)
       .then(response => {
         dispatch(getAnalysisAndLoadSuccess(response.data));
         console.log("response.data => ", response.data);
