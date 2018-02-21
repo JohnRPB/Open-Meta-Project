@@ -66,7 +66,7 @@ After the users saves their analysis and hits the "Go to analysis" button on the
 
 Every graphic both on the editing and display pages is interactive; zoomable, draggable, downloadable, and searchable; through the power of OpenCPU and ggplotly. You can even hover over a point and see its statistics, or view a full-page version of the graphic.
 
-![interactive-graphics](assets/interactive_graphic.png)
+![interactive-graphics](assets/interactive-graphic.png)
 
 #### Note: We are working on integrating our documentation; to view some of the in-progress user flows as GIFs, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
 
