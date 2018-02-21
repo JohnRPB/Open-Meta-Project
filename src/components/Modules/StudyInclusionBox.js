@@ -13,7 +13,7 @@ import StudyCheckboxContainer from "../../containers/Modules/StudyCheckboxContai
 
 const StudyInclusionBox = (props) => {
 
-  console.log("props: ", props);
+  // console.log("props: ", props);
   
 
   return (

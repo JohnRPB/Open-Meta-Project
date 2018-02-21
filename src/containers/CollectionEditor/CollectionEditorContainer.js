@@ -11,7 +11,7 @@ import axios from 'axios';
 import root from '../../lib/root';
 
 const mapStateToProps = state => {
-  console.log(state.collectionEdit);
+  // console.log(state.collectionEdit);
   return {
     collectionId: state.routeProps.params.id,
     currentCollection: state.collectionEdit.current,

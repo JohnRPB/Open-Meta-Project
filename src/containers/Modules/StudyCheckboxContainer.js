@@ -31,9 +31,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     handleClick: async (e, data) => {
-      console.log("data: ", data);
-      console.log('e.target: ', e.target);
-      console.log('e.target.checked: ', e.target.checked);
+      // console.log("data: ", data);
+      // console.log('e.target: ', e.target);
+      // console.log('e.target.checked: ', e.target.checked);
 
       dispatch(
         Actions.updateSingleStudy(

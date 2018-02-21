@@ -71,7 +71,7 @@ class Analysis extends Component {
       // creating iframes out of blocks
       var blocks = Analysis.data.blocks.map(block => {
         if (block.type === "graph") {
-          console.log(" HIT! => ", block.content.outputLoc);
+          // console.log(" HIT! => ", block.content.outputLoc);
           return block.type === "graph" ? (
             <iframe
               src={`${block.content.outputLoc}`}
@@ -84,7 +84,7 @@ class Analysis extends Component {
           return null;
         }
       });
-      console.log("blocks => ", blocks);
+      // console.log("blocks => ", blocks);
       _.compact(blocks);
     }
 
@@ -117,7 +117,7 @@ class Analysis extends Component {
                   {Analysis.data.header
                     ? Analysis.data.header.title
                     : "My Analysis"}{" "}
-                  {this.props.Token.token ? (
+                  {this.props.token ? (
                     <span style={{fontSize: "16px"}}>
                       <NavLink to={`${Analysis._id}/edit`}>
                         <Icon name="edit" mini />

@@ -6,7 +6,7 @@ const router = require('express').Router()
 
 router.get('/', async (req, res) => {
   //checks that decoded contains email and passHash
-  console.log("req.decoded => ", req.decoded)
+  // console.log("req.decoded => ", req.decoded)
 });
 
 module.exports = router

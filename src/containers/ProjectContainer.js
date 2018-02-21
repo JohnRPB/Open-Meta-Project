@@ -19,7 +19,7 @@ import serialize from 'form-serialize';
 import MasterDocument from '../components/Project/MasterDocument';
 
 function mapStateToProps(state, ownProps) {
-  console.log(ownProps);
+  // console.log(ownProps);
   return {
     blocks: state.project.blocks,
     dustbins: state.project.dustbins,

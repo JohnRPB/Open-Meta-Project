@@ -26,11 +26,11 @@ export function getAnalyses(ids) {
     axios
       .all(promises)
       .then(response => {
-        console.log("response in actions => ", response);
+        // console.log("response in actions => ", response);
         dispatch(getAnalysesSuccess(response.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }
@@ -45,7 +45,7 @@ export function getAnalyses(ids) {
 //         dispatch(getAnalysesSuccess(response.data));
 //       })
 //       .catch(e => {
-//         console.log(e);
+//         console.error(e);
 //       });
 //   };
 // }
@@ -72,7 +72,7 @@ export function getCollections(id) {
         dispatch(getCollectionsSuccess(response.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }
@@ -104,7 +104,7 @@ export function getUser(id, token) {
         dispatch(getUserSuccess(response.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }

@@ -28,12 +28,17 @@ class CollectionModal extends Component {
 
   sendForm(e) {
     e.preventDefault();
+    let queryString = '';
+    console.log(this.props);
+    if(this.props.analysisID){
+      queryString = `?analysis=${this.props.analysisID}`
+    }
     var form = document.querySelector("#new-collection");
     var obj = serialize(form, { hash: true });
     obj.id = this.props._id;
 
     axios.post(`${root()}/api/collections`, obj).then(response => {
-      this.props.history.push(`/collections/${response.data}/edit`);
+      this.props.history.push(`/collections/${response.data}/edit${queryString}`);
     });
   }
 

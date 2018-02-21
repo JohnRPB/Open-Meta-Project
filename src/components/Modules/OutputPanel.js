@@ -78,7 +78,7 @@ class IframeDisplay extends Component {
 }
 
 const OutputPanel = props => {
-  console.log('Output Props: ', props);
+  // console.log('Output Props: ', props);
   return (
     <Segment style={{height: '550px', width: '680px', border: 'none'}}>
       {props.loading ? <LoadingComp /> : <IframeDisplay {...props} />}

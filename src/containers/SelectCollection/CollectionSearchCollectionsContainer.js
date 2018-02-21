@@ -14,7 +14,7 @@ import {selectCollection} from "../../actions/SelectCollection";
 function mapStateToProps(state) {
   // console.log(state);
   return {
-    userCollections: state.Dashboard.user.collections
+    userCollections: state.sessionInfo.user.collections || []
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -22,7 +22,7 @@ function mapDispatchToProps(dispatch) {
     onClick: e => {
       e.preventDefault();
       // e.target.id
-      console.log("e.target ====>", e.target);
+      // console.log("e.target ====>", e.target);
       dispatch(selectCollection(e.target.id));
 
       // let getString = `${root}/api/studies/ids?studies=${e.target.id}`;

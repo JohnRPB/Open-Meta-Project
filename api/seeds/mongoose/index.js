@@ -46,10 +46,10 @@ const seed = async () => {
             }
           };
           let thisAnalysis = new Analysis(analysisBuild);
-          console.log(
-            "ANALYSIS DATA ===========================================",
-            thisAnalysis.data.header
-          );
+          // console.log(
+          //   "ANALYSIS DATA ===========================================",
+          //   thisAnalysis.data.header
+          // );
           await thisAnalysis.save();
         }
         let analyses = await Analysis.find();

@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const mapStateToProps = state => {
   return {
-    existingCollections: state.Dashboard.user.collections,
+    existingCollections: state.sessionInfo.user.collections,
   };
 };
 const mapDispatchToProps = dispatch => {

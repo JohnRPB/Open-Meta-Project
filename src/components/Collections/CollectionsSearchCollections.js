@@ -41,19 +41,19 @@ const CollectionSearchCollections = ({
                 let htmlIds = collection.studies.map(study => study.id);
                 let htmlValue = htmlIds.join("_");
 
-                console.log(
-                  "history for collectionssearchcollections",
-                  history
-                );
+                // console.log(
+                //   "history for collectionssearchcollections",
+                //   history
+                // );
                 if (history.location.pathname === "/selectcollection") {
-                  console.log("called");
+                  // console.log("called");
                   htmlValue = userCollections[index]._id.toString();
                 }
-                console.log("match for collectionssearchcollections", match);
-                console.log(
-                  "location for collectionssearchcollections",
-                  location
-                );
+                // console.log("match for collectionssearchcollections", match);
+                // console.log(
+                //   "location for collectionssearchcollections",
+                //   location
+                // );
 
                 return (
                   <Table.Cell>

@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
       e.preventDefault();
       const form = e.target;
       const data = serialize(form, {hash: true});
-      console.log(data);
+      // console.log(data);
       let getString = `${root()}/api/studies/search?`;
       Object.keys(data).forEach(key => {
         getString += `&${key}=` + data[key].split(" ").join("_");

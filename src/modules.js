@@ -12,12 +12,12 @@ const getData = async () => {
       .then(response => {
         let rdocumentString = '';
         let functionDef = `${response.data}`;
-        console.log("------------------- START functionDef -------------------");
-        console.log(functionDef);
-        console.log("-------------------- END functionDef --------------------");
+        // console.log("------------------- START functionDef -------------------");
+        // console.log(functionDef);
+        // console.log("-------------------- END functionDef --------------------");
         fs.writeFile('auto_modules.js', functionDef, 'utf8', err => {
           if(err) next(err);
-          console.log('File Written');
+          // console.log('File Written');
         })
       })
       .catch(e => console.error(e));

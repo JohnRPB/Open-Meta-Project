@@ -32,8 +32,8 @@ const mapDispatchtoProps = (dispatch, ownProps) => {
     //   form.reset();
     // },
     showResults: (data, field) => {
-      console.log('field', field);
-      console.log('DATA FROM ACTION', data);
+      // console.log('field', field);
+      // console.log('DATA FROM ACTION', data);
       if (field === 'Collection') {
         dispatch(getCollections(data, field));
       } else if (field === 'User') {

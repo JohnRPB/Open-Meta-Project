@@ -28,7 +28,7 @@ class Profile extends Component {
   }
 
   render() {
-    console.log("PROFILE PAGE props => ", this.props);
+    // console.log("PROFILE PAGE props => ", this.props);
 
     if (this.props.isFetching) {
       return (
@@ -108,10 +108,6 @@ class Profile extends Component {
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
-                    {console.log(
-                      "this.props.user.analyses => ",
-                      this.props.user.analyses
-                    )}
                     {this.props.user.analyses.map(analysis => {
                       return (
                         <Table.Row key={analysis._id}>

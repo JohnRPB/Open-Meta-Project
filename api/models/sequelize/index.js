@@ -9,9 +9,9 @@ var basename  = path.basename(__filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../../config/sequelize/config.js')[env];
 
-console.log("------------------- START process.env.NODE_ENV -------------------");
-console.log(process.env.NODE_ENV);
-console.log("-------------------- END process.env.NODE_ENV --------------------");
+// console.log("------------------- START process.env.NODE_ENV -------------------");
+// console.log(process.env.NODE_ENV);
+// console.log("-------------------- END process.env.NODE_ENV --------------------");
 
 
 var db        = {};

@@ -16,11 +16,11 @@ export function getAnalyses(id) {
     axios
       .get(`${root()}/api/analyses`)
       .then(response => {
-        console.log("response => ", response);
+        // console.log("response => ", response);
         dispatch(getAnalysesSuccess(response.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }
@@ -49,11 +49,11 @@ export function getUser(id, token) {
       })
     })
       .then(response => {
-        console.log("response =>", response);
+        // console.log("response =>", response);
         dispatch(getUserSuccess(response.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }

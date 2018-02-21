@@ -27,7 +27,7 @@ class Profile extends Component {
   render() {
     // setting analyses content after fetching
     if (!this.props.isFetching) {
-      console.log("profile props => ", this.props);
+      // console.log("profile props => ", this.props);
       var analysisRows = this.props.Analyses.slice(0, 10).map(analysis => {
         return (
           <Table.Row>

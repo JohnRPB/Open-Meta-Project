@@ -40,11 +40,11 @@ class MyAnalyses extends Component {
   }
 
   render() {
-    console.log("props after render => ", this.props);
+    // console.log("props after render => ", this.props);
 
     let analysisCards;
     if (!this.props.isFetching) {
-      console.log("props => ", this.props);
+      // console.log("props => ", this.props);
       analysisCards = this.props.MyAnalyses.slice(0, 3).map(analysis => {
         return (
           <Card
@@ -56,7 +56,7 @@ class MyAnalyses extends Component {
       });
     }
 
-    console.log("props in my analysis => ", this.props);
+    // console.log("props in my analysis => ", this.props);
     return (
       <div className="ui  vertical masthead center aligned segment">
         <div className="following bar">

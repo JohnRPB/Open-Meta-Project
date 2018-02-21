@@ -96,9 +96,9 @@ router.get("/ids", async (req, res, next) => {
 
 router.put("/:id", async (req, res, next) => {
 
-  console.log("------------------- START req.body (router.put) -------------------");
-  console.log(req.body);
-  console.log("-------------------- END req.body (router.put) --------------------");
+  // console.log("------------------- START req.body (router.put) -------------------");
+  // console.log(req.body);
+  // console.log("-------------------- END req.body (router.put) --------------------");
   
   let updatedAnalysis;
   let submitter;
@@ -139,19 +139,24 @@ router.put("/:id", async (req, res, next) => {
   }
 });
 
-router.put(
+router.get(
   "/updateanalysis/:id/:ownerId/:collectionId",
   async (req, res, next) => {
-    console.log("req.params.id: ", req.params.id);
-    console.log("req.body: ", req.body);
+    // console.log("req.params.id: ", req.params.id);
+    // console.log("req.body: ", req.body);
     //{data: {inclusion: {collectionId: "#"}}}
+    console.log('here');
     let updatedAnalysis;
     let submitter;
     try {
       currentAnalysis = await Analysis.findByIdAndUpdate(req.params.id);
       currentAnalysis.ownerId = req.params.ownerId;
       currentAnalysis.data.inclusion.collectionId = req.params.collectionId;
-      currentAnalysis = await Analysis.findByIdAndUpdate(req.params.id, currentAnalysis);
+      console.log(currentAnalysis);
+      console.log(Object.keys(currentAnalysis));
+      await currentAnalysis.save();
+      // currentAnalysis = await Analysis.findByIdAndUpdate(req.params.id, currentAnalysis);
+      console.log(currentAnalysis);
       res.json(updatedAnalysis);
     } catch (e) {
       res.status(500).send(e.stack);

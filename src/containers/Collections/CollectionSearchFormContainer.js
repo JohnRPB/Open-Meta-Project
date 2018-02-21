@@ -38,7 +38,7 @@ function mapDispatchToProps(dispatch) {
       e.preventDefault();
       const form = e.target;
       const data = serialize(form, { hash: true });
-      console.log(data);
+      // console.log(data);
       data.study.stats.sampleSize = Number(data.study.stats.sampleSize)
       data.study.stats.testStatVal = Number(data.study.stats.testStatVal)
       data.study.stats.stdErr = Number(data.study.stats.stdErr)

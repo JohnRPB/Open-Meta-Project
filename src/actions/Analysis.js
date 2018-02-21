@@ -23,7 +23,7 @@ export function getAnalysis(id) {
         dispatch(getAnalysisSuccess(response.data));
       })
       .catch(e => {
-        console.log(e);
+        console.error(e);
       });
   };
 }

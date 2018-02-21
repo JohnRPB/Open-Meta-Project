@@ -25,7 +25,7 @@ StudyOverflowSchema.methods.sqlPop = function() {
       return this;
     })
     .catch(err => {
-      console.log(err);
+      console.error(err);
     });
 };
 // const unSQL = function(next) {

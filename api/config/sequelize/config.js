@@ -4,7 +4,7 @@ require("dotenv").config({
   path: path.join(__dirname, "../.env")
 });
 
-console.log("process.env.USER_NAME: ", process.env.USER_NAME);
+// console.log("process.env.USER_NAME: ", process.env.USER_NAME);
 
 // old URL: "https://radiant-taiga-58264.herokuapp.com"
 const databaseURL = "https://open-meta-project.herokuapp.com";

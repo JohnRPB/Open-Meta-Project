@@ -94,7 +94,7 @@ class SelectCollection extends Component {
     // ${this.props.location.search.slice(4)}
     //this slice is the analysis id
     fetch(
-      `${root}/api/analyses/updateanalysis/${this.props.location.search.slice(
+      `${root()}/api/analyses/updateanalysis/${this.props.location.search.slice(
         4,
       )}/${this.props._id}/${this.props._selectedCollection}`,
       {
@@ -108,20 +108,20 @@ class SelectCollection extends Component {
     )
       .then(data => {
         // to Edwin
-        console.log(
-          'fetch works!!!!!! redirecting to the create analysis page',
-        );
+        // console.log(
+        //   'fetch works!!!!!! redirecting to the create analysis page',
+        // );
         this.props.history.push(
           `/analysis/${this.props.location.search.slice(4)}/edit`,
         );
       })
       .catch(e => {
-        console.log('falcon heavy #3');
+        console.error('falcon heavy #3');
       });
   }
 
   render() {
-    console.log('props =>', this.props._selectedCollection);
+    // console.log('props =>', this.props._selectedCollection);
     return (
       <div>
         <NavContainer />
@@ -136,7 +136,8 @@ class SelectCollection extends Component {
             <div>
               <div>none selected yet</div>
               <h3 style={{marginTop: 20}}>Create a new collection:</h3>
-              <CollectionModal id={this.props._id} />
+              {console.log(this.props.location.search.slice(4))}
+              <CollectionModal id={this.props._id} analysisID={this.props.location.search.slice(4)}/>
             </div>
           ) : (
             <div>

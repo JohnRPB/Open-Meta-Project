@@ -24,12 +24,12 @@ export const getUsersError = data => {
 export function getUsers(data, value) {
   return dispatch => {
     dispatch(getUsersStart());
-    console.log('query =>', data);
+    // console.log('query =>', data);
     let query = data;
     axios
       .get(`${root()}/api/users/sitesearch/${query}`)
       .then(response => {
-        console.log('response =>', response.data);
+        // console.log('response =>', response.data);
         dispatch(getUsersResults(response.data, query, value));
       })
       .catch(e => {
@@ -54,12 +54,12 @@ export const getAnalysesError = data => {
 export function getAnalyses(data, value) {
   return dispatch => {
     dispatch(getAnalysesStart());
-    console.log('query =>', data);
+    // console.log('query =>', data);
     let query = data;
     axios
       .get(`${root()}/api/myanalyses/${query}`)
       .then(response => {
-        console.log('response =>', response.data);
+        // console.log('response =>', response.data);
         dispatch(getAnalysesResults(response.data, query, value));
       })
       .catch(e => {
@@ -84,12 +84,12 @@ export const getCollectionsError = data => {
 export function getCollections(data, value) {
   return dispatch => {
     dispatch(getCollectionsStart());
-    console.log('query =>', data);
+    // console.log('query =>', data);
     let query = data;
     axios
       .get(`${root()}/api/collections/sitesearch/${query}`)
       .then(response => {
-        console.log('response =>', response.data);
+        // console.log('response =>', response.data);
         dispatch(getCollectionsResults(response.data, query, value));
       })
       .catch(e => {

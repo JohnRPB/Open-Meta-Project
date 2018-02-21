@@ -8,9 +8,9 @@ let Profile = mongooseModels.Profile;
 
 router.post("/", async (req, res) => {
   try {
-    console.log("req.body =>", req.body);
-    console.log("req.body.first in new profile =>", req.body.first);
-    console.log("req.body.last in new profile =>", req.body.last);
+    // console.log("req.body =>", req.body);
+    // console.log("req.body.first in new profile =>", req.body.first);
+    // console.log("req.body.last in new profile =>", req.body.last);
 
     let registrantProfile = await new Profile({
       fname: req.body.first,
@@ -39,7 +39,7 @@ router.post("/", async (req, res) => {
       image: registrantProfile.image
     });
   } catch (e) {
-    console.log("error in profile route =>", e);
+    console.error("error in profile route =>", e);
   }
 });
 
