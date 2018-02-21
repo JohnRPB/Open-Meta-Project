@@ -56,6 +56,14 @@ From the "My analyses" page, they could also choose to start directly with a new
 
 ![select-collection](assets/select_collection.png)
 
+Now the user can finally create their analysis by dragging and dropping from the available modules onto the document. They can also write text to describe each analysis, and they can control which studies are included/excluded by tapping the "+" icon, which will update the graph in real-time.
+
+![analysis_in_progress](assets/analysis_in_progress.png)
+
+After the users saves their analysis and hits the "Go to analysis" button on the previous page, they are taken to a view of their analysis as a whole, including the studies that made it up and the modules they selected.
+
+![analysis_completed](assets/analysis_completed.png)
+
 #### Note: We are working on integrating our documentation; to view some of the in-progress user flows as GIFs, see [this document](https://github.com/memyselfandhai/openMeta/blob/dev/setup_readme.md).
 
 ## Rationale and technical concepts
