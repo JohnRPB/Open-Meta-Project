@@ -1,8 +1,5 @@
 import axios from 'axios';
-const root =
-  process.env.NODE_ENV === 'production'
-    ? process.env.REACT_APP_HEROKU_URL
-    : 'http://localhost:8000';
+import root from '../lib/root';
 
 export const EXPRESS_TEST_START = 'EXPRESS_TEST_START';
 export const expressTestStart = () => {
@@ -31,7 +28,7 @@ export const expressTest = () => {
   return dispatch => {
     dispatch(expressTestStart());
     axios
-      .get(`${root}/api/express-test`,{
+      .get(`${root()}/api/express-test`,{
         headers: {
           'content-type': 'application/json'
         }
@@ -62,10 +59,10 @@ export const dbTest = () => {
   return dispatch => {
     dispatch(dbTestStart());
     axios
-      .get(`${root}/api/users`)
+      .get(`${root()}/api/users`)
       .then(res => {
         console.log(res);
-        console.log("ROOT: " + `${root}/api/users`);
+        console.log(`ROOT: ${root()}/api/users`);
         dispatch(dbTestResults(JSON.stringify(res.data)));
       })
       .catch(err => dispatch(dbTestError(err)));

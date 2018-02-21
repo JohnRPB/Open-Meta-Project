@@ -69,17 +69,12 @@ router.get('/sitesearch/:search', async function(req, res, next) {
 // getting a single user
 // ------------------------
 router.get('/:userId', async (req, res, next) => {
+  try{
   var user = await mongoUser.findById(req.params.userId);
-  // console.log("user in api =>", user);
-  let analyses = await user.analyses.map(async study => {
-    let populatedStudy = await mongoAnalysis.findById(study._id);
-    return populatedStudy;
-  });
-
-  Promise.all(analyses).then(result => {
-    user.analyses = result;
     res.json(user);
-  });
+  }catch(e){
+    res.status(500).send(e.stack);
+  }
 });
 
 // ------------------------

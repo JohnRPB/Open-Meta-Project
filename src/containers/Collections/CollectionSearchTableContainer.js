@@ -1,13 +1,10 @@
 import { connect } from "react-redux";
 import { ceasePersist, changePage, persistTable } from '../../actions/collections';
 import { addCollection } from '../../actions/Dashboard';
+import root from '../../lib/root';
 import CollectionSearchTable from '../../components/Collections/CollectionSearchTable';
 import serialize from "form-serialize";
 import axios from 'axios';
-const root =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_HEROKU_URL
-    : "http://localhost:8000";
 
 
 const mapStateToProps = state => {
@@ -35,7 +32,7 @@ const mapDispatchToProps = dispatch => {
     },
     submit: (body) => {
       console.log(body);
-      axios.post(`${root}/api/collections/new`, body)
+      axios.post(`${root()}/api/collections/new`, body)
         .then(response => {
           // dispatch(response.data);
           console.log(response.data);

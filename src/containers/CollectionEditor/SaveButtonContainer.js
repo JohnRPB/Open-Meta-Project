@@ -43,7 +43,6 @@ const mapDispatchToProps = dispatch => {
       data
     ) => {
       let putString = `${root()}/api/collections/${collectionId}`;
-      console.log(collectionModel);
       if (analysisId) console.log(analysisId);
       dispatch(setFetch(true));
       let collectionModel = {
@@ -55,7 +54,7 @@ const mapDispatchToProps = dispatch => {
       axios
         .put(putString, collectionModel)
         .then(response => {
-          if (typeof response.data == 'object') {
+          if (typeof response.data === 'object') {
             dispatch(addCollection(response.data));
           }
           dispatch(setFetch(false));

@@ -5,14 +5,14 @@ import {
   deleteElement,
   editElement,
   saveElement,
-  saveDocument,
+  // saveDocument,
   updateAnalysis,
   loadDocument,
   getAnalysisAndLoad
 } from '../actions/project';
-import { getAnalysis } from '../actions/Analysis';
+// import { getAnalysis } from '../actions/Analysis';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router';
 import serialize from 'form-serialize';
 
@@ -21,7 +21,6 @@ import MasterDocument from '../components/Project/MasterDocument';
 function mapStateToProps(state, ownProps) {
   console.log(ownProps);
   return {
-    ...state,
     blocks: state.project.blocks,
     dustbins: state.project.dustbins,
     boxes: state.project.boxes,

@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import { connect } from "react-redux";
 import Nav from "../components/Nav";
-import {
-  getUsers,
-  getAnalyses,
-  getCollections,
-  redirectSubmission
-} from "../actions/sitesearch";
+// import {
+  // getUsers,
+  // getAnalyses,
+  // getCollections,
+  // redirectSubmission
+// } from "../actions/sitesearch";
 import { withRouter } from "react-router";
-import serialize from "form-serialize";
-import { push } from "react-router-redux";
+// import serialize from "form-serialize";
+// import { push } from "react-router-redux";
 
 function mapStateToProps(state, ownProps) {
   return {

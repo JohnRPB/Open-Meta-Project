@@ -1,8 +1,8 @@
-import * as Actions from "../actions/MyAnalyses";
+import * as Actions from '../actions/MyAnalyses';
 
 const initialState = {
   isFetching: true,
-  error: null
+  error: null,
 };
 
 export function MyAnalysesPage(state = initialState, action) {
@@ -11,19 +11,24 @@ export function MyAnalysesPage(state = initialState, action) {
       return {
         ...state,
         analyses: action.data,
-        isFetching: false
+        isFetching: false,
       };
     case Actions.GET_COLLECTIONS:
       return {
         ...state,
         collections: action.data,
-        isFetching: false
+        isFetching: false,
       };
     case Actions.GET_USER:
       return {
         ...state,
         user: action.data,
-        isFetching: false
+        isFetching: false,
+      };
+    case Actions.SET_FETCH:
+      return {
+        ...state,
+        isFetching: action.bool,
       };
     default:
       return state;

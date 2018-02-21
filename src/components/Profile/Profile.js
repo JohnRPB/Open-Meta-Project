@@ -14,13 +14,12 @@ import {
   Table,
   Divider
 } from "semantic-ui-react";
-const moment = require("moment");
+// const moment = require("moment");
 
 class Profile extends Component {
-  constructor() {
-    super();
-    this.isFetching = true;
-  }
+  // constructor() {
+  //   super();
+  // }
 
   componentWillMount() {
     if (!this.props._token) {
@@ -31,14 +30,13 @@ class Profile extends Component {
   render() {
     console.log("PROFILE PAGE props => ", this.props);
 
-    if (this.props.MyAnalysesPage.isFetching) {
+    if (this.props.isFetching) {
       return (
         <Dimmer active>
           <Loader content="Loading" />
         </Dimmer>
       );
     } else {
-      let { MyAnalysesPage } = this.props;
 
       return (
         // NAV BAR
@@ -62,13 +60,13 @@ class Profile extends Component {
                 <Segment>
                   <Image src={defaultpicture} centered circular size="small" />
                   <h2>
-                    {`${MyAnalysesPage.user.profile.fname} ${
-                      MyAnalysesPage.user.profile.lname
+                    {`${this.props.user.profile.fname} ${
+                      this.props.user.profile.lname
                     }`}
                   </h2>
                   <Divider />
-                  <h3> {MyAnalysesPage.user.profile.title}</h3>
-                  <p>{MyAnalysesPage.user.profile.background}</p>
+                  <h3> {this.props.user.profile.title}</h3>
+                  <p>{this.props.user.profile.background}</p>
                 </Segment>
 
                 {/* USER STATISTICS */}
@@ -77,19 +75,19 @@ class Profile extends Component {
                   <Statistic.Group widths="four">
                     <Statistic>
                       <Statistic.Value>
-                        {`${MyAnalysesPage.user.collections.length}`}
+                        {`${this.props.user.collections.length}`}
                       </Statistic.Value>
                       <Statistic.Label>Collections</Statistic.Label>
                     </Statistic>
                     <Statistic>
                       <Statistic.Value>
-                        {`${MyAnalysesPage.user.analyses.length}`}
+                        {`${this.props.user.analyses.length}`}
                       </Statistic.Value>
                       <Statistic.Label>Reviews</Statistic.Label>
                     </Statistic>
                     <Statistic>
                       <Statistic.Value>
-                        {`${MyAnalysesPage.user.profile.forkedFromTimes}`}
+                        {`${this.props.user.profile.forkedFromTimes}`}
                       </Statistic.Value>
                       <Statistic.Label>Forks</Statistic.Label>
                     </Statistic>
@@ -105,16 +103,16 @@ class Profile extends Component {
                   <Table.Header>
                     <Table.Row>
                       <Table.HeaderCell colSpan="3">
-                        {`${MyAnalysesPage.user.profile.fname}'s Analyses`}
+                        {`${this.props.user.profile.fname}'s Analyses`}
                       </Table.HeaderCell>
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
                     {console.log(
-                      "MyAnalysesPage.user.analyses => ",
-                      MyAnalysesPage.user.analyses
+                      "this.props.user.analyses => ",
+                      this.props.user.analyses
                     )}
-                    {MyAnalysesPage.user.analyses.map(analysis => {
+                    {this.props.user.analyses.map(analysis => {
                       return (
                         <Table.Row key={analysis._id}>
                           <Table.Cell>

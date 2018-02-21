@@ -1,43 +1,43 @@
 import React, { Component } from "react";
 import NavContainer from "../../containers/NavContainer";
-import update from "immutability-helper";
+// import update from "immutability-helper";
 import { DragDropContext } from "react-dnd";
-import HTML5Backend, { NativeTypes } from "react-dnd-html5-backend";
+import HTML5Backend from "react-dnd-html5-backend";
 import Dustbin from "./Dustbin";
 import Box from "./Box";
-import ItemTypes from "./ItemTypes";
+// import ItemTypes from "./ItemTypes";
 import {
-  Dropdown,
-  Menu,
+  // Dropdown,
+  // Menu,
   Segment,
-  Header,
+  // Header,
   Grid,
   Divider,
   Button,
-  Image,
-  Card,
+  // Image,
+  // Card,
   Container,
-  Popup,
+  // Popup,
   TextArea,
   Form,
-  Rail,
+  // Rail,
   Sticky
 } from "semantic-ui-react";
 import "../../index.css";
 
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
+  // BrowserRouter as Router,
+  // Route,
+  // Switch,
   NavLink
 } from "react-router-dom";
 
 import ModuleContainer from "../../containers/Modules/ModuleContainer";
 
 class MasterDocument extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   state = {};
 
@@ -180,7 +180,7 @@ class MasterDocument extends Component {
                               onClick={e => {
                                 handleClick(e, index);
                               }}
-                              style={index == showForm ? style : null}
+                              style={index === showForm ? style : null}
                             >
                               {block.textContent ? (
                                 block.textContent
@@ -191,7 +191,7 @@ class MasterDocument extends Component {
                             <br />
                             <br />
                           </div>
-                          {index == showForm ? (
+                          {index === showForm ? (
                             <div>
                               <div>
                                 {editing ? (

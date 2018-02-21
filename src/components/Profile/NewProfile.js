@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { Button, Checkbox, Form, Container } from "semantic-ui-react";
+import { 
+  Button, 
+  // Checkbox, 
+  Form, 
+  Container 
+} from "semantic-ui-react";
 import root from '../../lib/root';
 
 //form serializer
@@ -16,7 +21,7 @@ class NewProfile extends Component {
     e.preventDefault();
 
     var form = document.querySelector("#example-form");
-    var str = serialize(form);
+    // var str = serialize(form);
     var obj = serialize(form, { hash: true });
 
     console.log("starting fetch");

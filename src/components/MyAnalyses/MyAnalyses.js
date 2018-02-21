@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
 import {
   Segment,
   Header,
@@ -9,41 +9,48 @@ import {
   Card,
   Container,
   Dimmer,
-  Loader
-} from "semantic-ui-react";
-import NavContainer from "../../containers/NavContainer";
-import CollectionModal from "./CollectionModal";
-import AnalysisModal from "./AnalysisModal";
-import defaultpicture from "../../assets/images/default.jpg";
-const faker = require("faker");
+  Loader,
+} from 'semantic-ui-react';
+import NavContainer from '../../containers/NavContainer';
+import CollectionModal from './CollectionModal';
+import AnalysisModal from './AnalysisModal';
+import defaultpicture from '../../assets/images/default.jpg';
+const faker = require('faker');
 
 class MyAnalysesPage extends Component {
-  constructor() {
-    super();
-    this.isFetching = true;
-  }
+  // constructor() {
+  //   super();
+  // }
 
   componentWillMount() {
     if (!this.props._token) {
-      window.location.href = "/login";
+      window.location.href = '/login';
     }
-    console.log(this.props);
-    if( this.props._id){
-      this.props.getUser(this.props._id, this.props._token);
+    if (!this.props.currentUser._id){
+      this.isFetching = true;
     }
-
-    //getting all review ids
-    // let analysisIds = this.props.MyAnalysesPage.user.analyses.map(study => {
-    //   return study._id;
-    // });
-    // console.log("ids => ", analysisIds);
   }
+  // componentWillUpdate(nextProps){
+  //   console.log(this.props);
+  //   if( nextProps._id){
+  //     this.props.getUser(nextProps._id, nextProps._token);
+  //   }
+
+  //getting all review ids
+  // let analysisIds = this.props.MyAnalysesPage.user.analyses.map(study => {
+  //   return study._id;
+  // });
+  // console.log("ids => ", analysisIds);
+  // }
 
   render() {
     let analysisCards;
-    if (!this.props.MyAnalysesPage.isFetching) {
+    if (this.props.currentUser._id && this.props.isFetching){
+      this.props.stopFetch();
+    }
+    if (!this.props.isFetching) {
       // creates cards for each analysis
-      analysisCards = this.props.MyAnalysesPage.user.analyses
+      analysisCards = this.props.currentUser.analyses
         .slice(0, 3)
         .map(analysis => {
           return (
@@ -62,7 +69,7 @@ class MyAnalysesPage extends Component {
         });
 
       // creates cards for each collection
-      var collectionCards = this.props.MyAnalysesPage.user.collections
+      var collectionCards = this.props.currentUser.collections
         .slice(0, 6)
         .map(collection => {
           return {
@@ -71,12 +78,12 @@ class MyAnalysesPage extends Component {
                 Title: {collection.name}
               </NavLink>
             ),
-            description: `Description: ${collection.description}`
+            description: `Description: ${collection.description}`,
           };
         });
     }
 
-    if (this.props.MyAnalysesPage.isFetching) {
+    if (this.props.isFetching) {
       return (
         <Dimmer active>
           <Loader content="Loading" />
@@ -100,7 +107,7 @@ class MyAnalysesPage extends Component {
             <Grid>
               {/* header & sub-menu */}
               <Grid.Row>
-                {" "}
+                {' '}
                 <Grid.Column width={3} />
                 <Grid.Column width={3}>
                   <Image src={defaultpicture} circular size="small" />
@@ -109,13 +116,13 @@ class MyAnalysesPage extends Component {
                   <br />
 
                   <Header as="h1" floated="left" textalign="left">
-                    {`${this.props.MyAnalysesPage.user.profile.fname} ${
-                      this.props.MyAnalysesPage.user.profile.lname
+                    {`${this.props.currentUser.profile.fname} ${
+                      this.props.currentUser.profile.lname
                     }`}
                     <Header.Subheader>
-                      {" "}
-                      {this.props.MyAnalysesPage.user.profile.title} at{" "}
-                      {this.props.MyAnalysesPage.user.profile.organization}
+                      {' '}
+                      {this.props.currentUser.profile.title} at{' '}
+                      {this.props.currentUser.profile.organization}
                     </Header.Subheader>
                   </Header>
 
@@ -127,11 +134,11 @@ class MyAnalysesPage extends Component {
               <Grid.Row id="collections">
                 <Grid.Column width={3}>
                   <br />
-                  <CollectionModal id={this.props.MyAnalysesPage.user._id} />
+                  <CollectionModal id={this.props.currentUser._id} />
                 </Grid.Column>
                 <Grid.Column width={13}>
                   <Segment>
-                    {" "}
+                    {' '}
                     <Header as="h1" textalign="left">
                       Recent Collections
                     </Header>
@@ -142,8 +149,8 @@ class MyAnalysesPage extends Component {
                           ? collectionCards
                           : [
                               {
-                                description: "No current collections"
-                              }
+                                description: 'No current collections',
+                              },
                             ]
                       }
                       itemsPerRow={3}
@@ -160,9 +167,7 @@ class MyAnalysesPage extends Component {
               <Grid.Row id="analyses" className="hidden">
                 <Grid.Column width={3}>
                   <br />
-                  <AnalysisModal
-                    id={this.props.MyAnalysesPage.user._id.toString()}
-                  />
+                  <AnalysisModal id={this.props.currentUser._id.toString()} />
                 </Grid.Column>
 
                 <Grid.Column width={13}>

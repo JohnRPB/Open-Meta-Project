@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  Link,
-  Switch,
-} from 'react-router-dom'
+import React from 'react';
+// import {
+  // BrowserRouter as Router,
+  // Route,
+  // NavLink,
+  // Link,
+  // Switch,
+// } from 'react-router-dom'
 import {
   List,
 } from 'semantic-ui-react';

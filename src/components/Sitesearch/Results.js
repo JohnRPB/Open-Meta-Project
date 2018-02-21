@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
-import { Card, Image, Item } from 'semantic-ui-react';
+import React from 'react';
+import { 
+  Card, 
+  // Image, 
+  Item 
+} from 'semantic-ui-react';
 
 const Results = ({ query, results, field }) => {
-  if (field == 'Analysis' && results.length > 0) {
+  if (field === 'Analysis' && results.length > 0) {
     return (
       <Card.Group>
         <h2>Searching Analyses for "{query}"</h2>
@@ -24,7 +28,7 @@ const Results = ({ query, results, field }) => {
       </Card.Group>
     );
   }
-  if (field == 'Collection' && results.length > 0) {
+  if (field === 'Collection' && results.length > 0) {
     return (
       <Card.Group>
         <h2>Searching Collections for "{query}"</h2>
@@ -48,7 +52,7 @@ const Results = ({ query, results, field }) => {
       </Card.Group>
     );
   }
-  if (field == 'User' && results.length > 0) {
+  if (field === 'User' && results.length > 0) {
     return (
       <Card.Group>
         <h2>Searching Users for "{query}"</h2>

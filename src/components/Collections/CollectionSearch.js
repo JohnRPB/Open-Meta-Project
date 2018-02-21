@@ -1,18 +1,16 @@
-import React, {
-  Component
-} from 'react';
+import React from 'react';
 import {
   Grid,
-  Header,
-  Form,
-  Button,
-  Table
+  // Header,
+  // Form,
+  // Button,
+  // Table
 } from 'semantic-ui-react';
 import CollectionSearchTableContainer from '../../containers/Collections/CollectionSearchTableContainer';
 import CollectionSearchCollectionsContainer from '../../containers/Collections/CollectionSearchCollectionsContainer.js'
 import CollectionSearchFormContainer from '../../containers/Collections/CollectionSearchFormContainer'
 
-const CollectionSearch = ({}) => {
+const CollectionSearch = () => {
   return (
     <div>
       <br />

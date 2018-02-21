@@ -1,5 +1,11 @@
 import React from 'react';
-import {Button, Checkbox, Dimmer, Segment, Table} from 'semantic-ui-react';
+import {
+  // Button, 
+  Checkbox, 
+  Dimmer, 
+  Segment, 
+  Table
+} from 'semantic-ui-react';
 import PagesContainer from '../../containers/CollectionEditor/PagesContainer';
 
 const ResultsDisplay = ({
@@ -7,7 +13,7 @@ const ResultsDisplay = ({
   results,
   changeStudyStatus,
   isFetching,
-  activePage
+  activePage,
 }) => {
   let display = null;
   if (persisted.length || results.length)
@@ -49,7 +55,13 @@ const ResultsDisplay = ({
                 <Table.Row key={study.id}>
                   <Table.Cell>
                     <Checkbox
-                      onChange={() => changeStudyStatus(study.id, 1, index + (activePage -1) * 10)}
+                      onChange={() =>
+                        changeStudyStatus(
+                          study.id,
+                          1,
+                          index + (activePage - 1) * 10,
+                        )
+                      }
                     />
                   </Table.Cell>
                   <Table.Cell>{study.DOI}</Table.Cell>

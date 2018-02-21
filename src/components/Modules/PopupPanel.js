@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { Button, Popup } from 'semantic-ui-react'
+import { Popup } from 'semantic-ui-react'
 import "../../index.css";
 
-const style = {
-  borderRadius: 0,
-  opacity: 0.7,
-  padding: '2em',
-}
+// const style = {
+//   borderRadius: 0,
+//   opacity: 0.7,
+//   padding: '2em',
+// }
 
 const PopupPanel = ({trigger, children}) => (
 

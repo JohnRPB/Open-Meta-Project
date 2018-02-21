@@ -23,7 +23,7 @@ const collections = (state = initialState, action) => {
       let newPersistTable; 
       let newHashObj = Object.assign({}, state.hashObj);
       state.newTables.forEach((study,index) => {
-        if(study.id == action.table){
+        if(study.id === action.table){
           newPersistTable = [study, index];
           newHashObj[study.id] = 1;
         }
@@ -42,7 +42,7 @@ const collections = (state = initialState, action) => {
       let updatedNonPersist = [];
       let updatedHashObj = {}
       state.persistantTables.forEach(study => {
-        if(study.id == action.table){
+        if(study.id === action.table){
           updatedNonPersist = [study].concat(state.newTables.slice(0));
         } else {
           updatedPersistTables.push(study);

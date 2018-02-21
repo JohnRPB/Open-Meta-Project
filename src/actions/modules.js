@@ -55,7 +55,7 @@ const computeOcpuAndGetImg = async (rootUrl, data) => {
   let resultArr = postR.data.split("\n");
   let graphicalOutput = resultArr.filter(url => url.match(/\.html/g));
   if (graphicalOutput.length < 1) {
-    graphicalOutput = resultArr.filter(url => url.match(/\graphics/g));
+    graphicalOutput = resultArr.filter(url => url.match(/graphics/g));
     return `https://cloud.opencpu.org${graphicalOutput}/png`;
   }
   return `https://cloud.opencpu.org${graphicalOutput}`;

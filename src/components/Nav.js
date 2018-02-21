@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { Dropdown, Menu, Container } from "semantic-ui-react";
-import { NavLink, BrowserRouter, Route } from "react-router-dom";
-import { connect } from "react-redux";
-import { withRouter, Redirect, Switch } from "react-router";
-import serialize from "form-serialize";
-import InfoModal from "./InfoModal";
-import createHistory from "history/createBrowserHistory";
+import React, {Component} from 'react';
+import {Dropdown, Menu, Container} from 'semantic-ui-react';
+import {NavLink} from 'react-router-dom';
+// import {connect} from 'react-redux';
+// import {withRouter, Redirect, Switch} from 'react-router';
+// import serialize from 'form-serialize';
+import InfoModal from './InfoModal';
+import createHistory from 'history/createBrowserHistory';
 
 const history = createHistory();
 
@@ -22,19 +22,19 @@ class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ""
+      value: '',
     };
   }
 
   handleChange = event => {
-    this.setState({ value: event.target.value });
+    this.setState({value: event.target.value});
     //event.preventDefault();
   };
 
   handleResultSelect = () => {
     history.push({
-      pathname: "/sitesearch",
-      search: `?query=${this.state.value}`
+      pathname: '/sitesearch',
+      search: `?query=${this.state.value}`,
     });
   };
 
@@ -58,8 +58,7 @@ class Nav extends Component {
               <form
                 //action="/sitesearch"
                 className="ui search icon input"
-                onSubmit={this.handleResultSelect}
-              >
+                onSubmit={this.handleResultSelect}>
                 <input
                   name="query"
                   className="prompt"
@@ -77,7 +76,7 @@ class Nav extends Component {
             <Dropdown item icon={<i className="user circle outline icon" />}>
               <Dropdown.Menu>
                 <Dropdown.Item>
-                  <NavLink to="/profile" style={{ color: "black" }}>
+                  <NavLink to="/profile" style={{color: 'black'}}>
                     Profile
                   </NavLink>
                 </Dropdown.Item>
@@ -92,7 +91,7 @@ class Nav extends Component {
                   </NavLink>
                 </Dropdown.Item> */}
                 <Dropdown.Item>
-                  <a href="/landing" style={{ color: "black" }}>
+                  <a href="/landing" style={{color: 'black'}}>
                     Sign Out
                   </a>
                   {/* {this.props.Token ? (

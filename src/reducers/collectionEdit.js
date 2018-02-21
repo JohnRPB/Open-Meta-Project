@@ -1,14 +1,14 @@
-import {
-  NEW_RESULTS,
-  SET_FETCH,
-  CHANGE_PERSIST,
-  SET_TAB,
-  CHANGE_BUTTON,
-  SET_PAGE,
-  SET_OPEN,
-  CLEAR,
-  SET_CURRENT_COLLECTION
-} from '../actions/collectionEdit';
+// import {
+//   NEW_RESULTS,
+//   SET_FETCH,
+//   CHANGE_PERSIST,
+//   SET_TAB,
+//   CHANGE_BUTTON,
+//   SET_PAGE,
+//   SET_OPEN,
+//   CLEAR,
+//   SET_CURRENT_COLLECTION
+// } from '../actions/collectionEdit';
 
 const initialState = {
   varObj: {

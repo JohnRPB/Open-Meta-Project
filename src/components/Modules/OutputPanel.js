@@ -4,16 +4,23 @@
 // ---------------------------------------------------------
 // Recieves api URL and renders result inside a card
 
-import React, { Component } from "react";
+import React, {Component} from 'react';
+// import {
+// BrowserRouter as Router,
+// Route,
+// NavLink,
+// Link,
+// Switch
+// } from "react-router-dom";
 import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  Link,
-  Switch
-} from "react-router-dom";
-import { Card, Image, Container, Dimmer, Loader, Segment } from "semantic-ui-react";
-import "../../index.css";
+  // Card,
+  // Image,
+  // Container,
+  Dimmer,
+  Loader,
+  Segment,
+} from 'semantic-ui-react';
+import '../../index.css';
 
 // ---------------------------------------------------------
 // Loader
@@ -21,9 +28,9 @@ import "../../index.css";
 // ---------------------------------------------------------
 
 const LoadingComp = () => (
-    <Dimmer active>
-      <Loader inverted>Loading</Loader>
-    </Dimmer>
+  <Dimmer active>
+    <Loader inverted>Loading</Loader>
+  </Dimmer>
 );
 
 // ---------------------------------------------------------
@@ -31,9 +38,9 @@ const LoadingComp = () => (
 // 2018-02-05 07:54
 // ---------------------------------------------------------
 
-const StaticDisplay = props => {
-  return <Image src={props.outputLoc} />;
-};
+// const StaticDisplay = props => {
+//   return <Image src={props.outputLoc} />;
+// };
 
 // ---------------------------------------------------------
 // iframe
@@ -63,7 +70,7 @@ class IframeDisplay extends Component {
           frameBorder="0"
           title={this.props.outputLoc}
           scrolling="no"
-          style={{marginTop:"20px"}}
+          style={{marginTop: '20px'}}
         />
       </div>
     );
@@ -71,9 +78,9 @@ class IframeDisplay extends Component {
 }
 
 const OutputPanel = props => {
-  console.log("Output Props: ", props);
+  console.log('Output Props: ', props);
   return (
-    <Segment style={{ height: "550px", width: "680px", border:"none" }}>
+    <Segment style={{height: '550px', width: '680px', border: 'none'}}>
       {props.loading ? <LoadingComp /> : <IframeDisplay {...props} />}
     </Segment>
   );

@@ -1,13 +1,13 @@
 import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
+// import {bindActionCreators} from "redux";
 import {withRouter} from "react-router";
 
 import SelectCollection from "../../components/SelectCollection";
 
 function mapStateToProps(state) {
   return {
-    ...state,
-    _selectedCollection: state.SelectCollection.id
+    _selectedCollection: state.SelectCollection.id,
+    _id: state.sessionInfo.user._id
   };
 }
 

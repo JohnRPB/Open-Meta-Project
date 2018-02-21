@@ -24,11 +24,11 @@ const dustbinTarget = {
 class Dustbin extends Component {
   render() {
     const {
-      accepts,
+      // accepts,
       isOver,
       canDrop,
       connectDropTarget,
-      lastDroppedItem
+      // lastDroppedItem
     } = this.props;
     const isActive = isOver && canDrop;
 

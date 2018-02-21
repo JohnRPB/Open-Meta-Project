@@ -1,8 +1,5 @@
 import axios from "axios";
-const root =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_HEROKU_URL
-    : "http://localhost:8000";
+import root from '../lib/root.js';
 
 // -------------------------------
 // GETTING A USER
@@ -22,7 +19,7 @@ export function getUser(id) {
   return dispatch => {
     axios
       // dave is already using this route to grab studies?
-      .get(`${root}/api/users/${id}`)
+      .get(`${root()}/api/users/${id}`)
       .then(response => {
         console.log("response =>", response);
         dispatch(getUserSuccess(response.data));
@@ -50,7 +47,7 @@ export function getAnalysesSuccess(data) {
 export function getAnalyses(id) {
   return dispatch => {
     axios
-      .get(`${root}/api/analyses`)
+      .get(`${root()}/api/analyses`)
       .then(response => {
         dispatch(getAnalysesSuccess(response.data));
       })

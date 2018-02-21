@@ -4,20 +4,20 @@
 // ---------------------------------------------------------
 // Dynamically passes its props to all of its children
 
-import React, { Component } from "react";
-import axios from "axios";
+import React from "react";
+// import axios from "axios";
 import {
   Container,
   Divider,
-  Dimmer,
-  Loader,
-  Segment,
-  Card,
-  Icon,
-  Image,
-  Button,
-  Checkbox,
-  List
+  // Dimmer,
+  // Loader,
+  // Segment,
+  // Card,
+  // Icon,
+  // Image,
+  // Button,
+  // Checkbox,
+  // List
 } from "semantic-ui-react";
 import StudyInclusionBoxContainer from "../../containers/Modules/StudyInclusionBoxContainer";
 

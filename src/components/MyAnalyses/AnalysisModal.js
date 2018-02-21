@@ -1,25 +1,18 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
+import root from '../../lib/root';
 import {
   Button,
   Header,
-  Image,
+  // Image,
   Modal,
   Form,
-  Input,
+  // Input,
   TextArea
 } from "semantic-ui-react";
 var serialize = require("form-serialize");
 
-// --------------------------------------------
-// routing
-// --------------------------------------------
-
-const root =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_HEROKU_URL
-    : "http://localhost:8000";
 
 // --------------------------------------------
 // component
@@ -36,14 +29,14 @@ class AnalysisModal extends Component {
     e.preventDefault();
     var form = document.querySelector("#new-analysis");
     var obj = serialize(form, { hash: true });
-    obj.id = this.props.id;
+    obj.id = this.props._id;
     console.log("obj in analysis => ", obj);
     // obj.headers = new Headers({
     //   "x-access-token": this.props._token
     // });
 
     axios
-      .post(`${root}/api/analyses`, obj)
+      .post(`${root()}/api/analyses`, obj)
       .then(response => {
         console.log("response in axios post gotten =>", response);
         this.props.history.push(`/selectcollection?id=${response.data}`);

@@ -1,8 +1,4 @@
-import axios from "axios";
-const root =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_HEROKU_URL
-    : "http://localhost:8000";
+// import axios from "axios";
 
 export const ADD_TOKEN = "ADD_TOKEN";
 export const ADD_ID = "ADD_ID";
