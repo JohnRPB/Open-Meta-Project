@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 
 app.use('/api', api);
 // Serve static assets
-app.use(require('./api/server/tokenVerify.js'));
+// app.use(require('./api/server/tokenVerify.js'));
 // app.use('/', (req,res,next) => res.send('Works'));
 // app.use(express.static(path.resolve(__dirname, '..', 'build')));
 // Serve our api
