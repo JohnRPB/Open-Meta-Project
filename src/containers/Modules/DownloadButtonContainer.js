@@ -3,7 +3,7 @@ import DownloadButton from '../../components/Modules/DownloadButton';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    block: state.project.blocks[ownProps.moduleIndex]
+    block: state.AnalysisEditPage.blocks[ownProps.moduleIndex]
   }
 }
 

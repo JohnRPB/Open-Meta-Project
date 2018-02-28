@@ -23,16 +23,16 @@ api.use(cors());
 // import products from './products';
 
 // const express = require('express');
-const users = require("./users.js");
-const rmarkdown = require("./rmarkdown");
-const studies = require("./study");
-const myanalyses = require("./MyAnalyses");
-const analyses = require("./analyses");
-const login = require("./login");
-const register = require("./register");
-const collections = require("./collections");
-const tokentest = require("./tokentest");
-const newprofile = require("./newprofile");
+const users = require("./routes/users.js");
+const rmarkdown = require("./routes/rmarkdown");
+const studies = require("./routes/study");
+const myanalyses = require("./routes/myanalyses");
+const analyses = require("./routes/analyses");
+const login = require("./routes/login");
+const register = require("./routes/register");
+const collections = require("./routes/collections");
+const tokentest = require("./routes/tokentest");
+const newprofile = require("./routes/newprofile");
 
 api.get("/express-test", (req, res) => res.send({express: "working!"})); //demo route to prove api is working
 api.use("/login", login);

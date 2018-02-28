@@ -5,17 +5,7 @@
 // Recieves api URL and renders result inside a card
 
 import React, {Component} from 'react';
-// import {
-// BrowserRouter as Router,
-// Route,
-// NavLink,
-// Link,
-// Switch
-// } from "react-router-dom";
 import {
-  // Card,
-  // Image,
-  // Container,
   Dimmer,
   Loader,
   Segment,
@@ -37,6 +27,7 @@ const LoadingComp = () => (
 // Static png
 // 2018-02-05 07:54
 // ---------------------------------------------------------
+// Experimental feature
 
 // const StaticDisplay = props => {
 //   return <Image src={props.outputLoc} />;
@@ -48,15 +39,6 @@ const LoadingComp = () => (
 // ---------------------------------------------------------
 
 class IframeDisplay extends Component {
-  // componentDidMount() {
-  //   this.input.onload = () => {
-  //     return LoadingComp();
-  //   };
-  // }
-
-  // //ref={iframe => {
-  //   this.input = iframe;
-  // }}
   render() {
     return (
       <div className="frame-container">
@@ -78,7 +60,6 @@ class IframeDisplay extends Component {
 }
 
 const OutputPanel = props => {
-  // console.log('Output Props: ', props);
   return (
     <Segment style={{height: '550px', width: '680px', border: 'none'}}>
       {props.loading ? <LoadingComp /> : <IframeDisplay {...props} />}

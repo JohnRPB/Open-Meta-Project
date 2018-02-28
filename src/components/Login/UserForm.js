@@ -23,12 +23,8 @@ var serialize = require('form-serialize');
 //fix form serializer
 
 class UserForm extends Component {
-  constructor(props) {
-    super();
-    this.sendForm = this.sendForm.bind(this);
-  }
 
-  sendForm(e) {
+  sendForm = (e) => {
     e.preventDefault();
     var form = document.querySelector('#example-form');
     // var str = serialize(form);

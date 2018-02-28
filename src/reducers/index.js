@@ -1,38 +1,34 @@
 import {combineReducers} from "redux";
 import {routerReducer} from "react-router-redux";
 
-import demo from "./demo";
-import project from "./project";
+import AnalysisEditPage from "./AnalysisEditPage";
 import MyAnalysesPage from "./MyAnalyses";
-import Dashboard from "./Dashboard";
-import Token from "./Token";
-import Profile from "./Profile";
-import sitesearch from "./sitesearch";
-import Analysis from "./Analysis";
-import collections from "./collections";
-import collectionEdit from "./collectionEdit";
+import DashboardPage from "./DashboardPage";
+import ProfilePage from "./ProfilePage";
+import SiteSearchPage from "./SiteSearchPage";
+import AnalysisDisplayPage from "./AnalysisDisplayPage";
+// import collections from "./collections";
+import CollectionEditPage from "./CollectionEditPage";
 import routeProps from "./routeProps";
 import modules from "./modules";
-import sessionInfo from "./sessionInfo";
-import Collection from "./Collection.js";
-import SelectCollection from "./SelectCollection.js";
+import session from "./session";
+import CollectionDisplayPage from "./CollectionDisplayPage.js";
+import SelectCollectionPage from "./SelectCollectionPage.js";
 
 const Reducers = combineReducers({
-  demo,
-  SelectCollection,
-  project,
   MyAnalysesPage,
-  Dashboard,
-  Token,
-  routing: routerReducer,
-  collections,
-  collectionEdit,
+  AnalysisEditPage,
+  CollectionEditPage,
+  SelectCollectionPage,
+  ProfilePage,
+  SiteSearchPage,
+  DashboardPage,
+  AnalysisDisplayPage,
+  CollectionDisplayPage,
+  // collections,
   routeProps,
-  Profile,
-  sitesearch,
-  Analysis,
-  Collection,
-  sessionInfo,
+  session,
+  routing: routerReducer,
   modules
 });
 

@@ -1,6 +1,6 @@
 import root from './root';
 import axios from 'axios';
-import {setUser, setCollection, setAnalysis} from '../actions/sessionInfo.js';
+import {setUser, setCollection, setAnalysis} from '../actions/session.js';
 
 export const getUser = (id, dispatch) => {
   return axios.get(`${root()}/api/users/${id}`)
