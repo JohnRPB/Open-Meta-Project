@@ -83,7 +83,7 @@ export const updateSingleStudy = (moduleIdx, studyIdx, updateType) => {
 
     // console.log("moduleIdx: ", moduleIdx);
     let moduleContent = store.getState().AnalysisEditPage.blocks[moduleIdx].content;
-    let rootUrl = `http://johnrpb.ocpu.io/openCPU_test/R/${moduleContent.name}`;
+    let rootUrl = `https://johnrpb.ocpu.io/openCPU_test/R/${moduleContent.name}`;
 
     // make request to Ocpu and fetch img url
     let imgUrl;
@@ -105,7 +105,7 @@ export const initialUpdate = moduleIdx => {
   // console.log("inside init update " , moduleIdx);
   return async dispatch => {
     let moduleContent = store.getState().AnalysisEditPage.blocks[moduleIdx].content;
-    let rootUrl = `http://johnrpb.ocpu.io/openCPU_test/R/${moduleContent.name}`;
+    let rootUrl = `https://johnrpb.ocpu.io/openCPU_test/R/${moduleContent.name}`;
 
     // make request to Ocpu and fetch img url
     let imgUrl;
