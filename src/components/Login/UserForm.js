@@ -25,6 +25,7 @@ var serialize = require('form-serialize');
 class UserForm extends Component {
 
   sendForm = (e) => {
+    console.log(process.env);
     e.preventDefault();
     var form = document.querySelector('#example-form');
     // var str = serialize(form);
