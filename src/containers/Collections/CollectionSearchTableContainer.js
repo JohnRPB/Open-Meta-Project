@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { ceasePersist, changePage, persistTable } from '../../actions/collections';
-import { addCollection } from '../../actions/Dashboard';
+import { addCollection } from '../../actions/DashboardPage';
 import root from '../../lib/root';
 import CollectionSearchTable from '../../components/Pages/Collections/CollectionSearchTable';
 import serialize from "form-serialize";

@@ -4,7 +4,7 @@ import FormsContainer from '../../../containers/Pages/CollectionEdit/FormsContai
 // import PagesContainer from '../../containers/CollectionEdit/PagesContainer';
 import ResultsDisplayContainer from '../../../containers/Pages/CollectionEdit/ResultsDisplayContainer';
 import SaveButtonContainer from '../../../containers/Pages/CollectionEdit/SaveButtonContainer.js';
-import Container from '../../../containers/Navbar/NavContainer.js';
+import NavContainer from '../../../containers/Navbar/NavContainer.js';
 
 import {Dimmer, Form, Grid, Loader} from 'semantic-ui-react';
 
@@ -75,15 +75,7 @@ const CollectionEdit = ({initCollection, isFetching, currentCollection}) => {
   }
   return (
     <div>
-      <gContainer />
-
-
-
-
-
-
-
-
+      <NavContainer />
       {display}
     </div>
   );

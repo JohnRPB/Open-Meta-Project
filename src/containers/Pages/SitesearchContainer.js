@@ -1,6 +1,6 @@
 // import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Sitesearch from '../../components/Pages/Sitesearch/Sitesearch';
+import Sitesearch from '../../components/Pages/Sitesearch/SitesearchPage';
 import { getUsers, getAnalyses, getCollections } from '../../actions/SiteSearchPage';
 import { withRouter } from 'react-router';
 // import serialize from 'form-serialize';

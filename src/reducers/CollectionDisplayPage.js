@@ -1,4 +1,4 @@
-import * as Actions from "../actions/Collection";
+import * as Actions from "../actions/CollectionDisplayPage";
 
 const initialState = {
   Collection: null,

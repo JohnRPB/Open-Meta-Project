@@ -12,8 +12,8 @@ import UserFormContainer from './containers/Login/UserFormContainer'; //userform
 // Registration
 import NewProfileContainer from './containers/Pages/Profile/NewProfileContainer';
 // Informational pages
-import About from './components/Pages/About/About';
-import Landing from './components/Pages/Landing/Landing.js';
+import About from './components/Pages/About/AboutPage';
+import Landing from './components/Pages/Landing/LandingPage.js';
 // Personal
 import DashboardContainer from './containers/Pages/DashboardContainer';
 import ProfilePageContainer from './containers/Pages/Profile/ProfilePageContainer';

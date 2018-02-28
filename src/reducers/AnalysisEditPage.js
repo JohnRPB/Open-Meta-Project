@@ -21,8 +21,13 @@ import {
 } from "../actions/AnalysisEditPage";
 // import * as Actions from "../actions/Analysis";
 
-import ItemTypes from "../components/Pages/AnalysisEdit/ItemTypes";
 import { NativeTypes } from "react-dnd-html5-backend";
+
+const ItemTypes = {
+  METHOD: "method",
+  SUMMARY: "summary",
+  GRAPH: "graph"
+};
 
 const initialState = {
   blocks: [],
