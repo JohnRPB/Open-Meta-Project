@@ -1,4 +1,4 @@
-import * as Actions from "../actions/Dashboard";
+import * as Actions from "../actions/DashboardPage";
 
 const initialState = {
   analyses: [],

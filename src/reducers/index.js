@@ -2,7 +2,7 @@ import {combineReducers} from "redux";
 import {routerReducer} from "react-router-redux";
 
 import AnalysisEditPage from "./AnalysisEditPage";
-import MyAnalysesPage from "./MyAnalyses";
+import MyAnalysesPage from "./MyAnalysesPage";
 import DashboardPage from "./DashboardPage";
 import ProfilePage from "./ProfilePage";
 import SiteSearchPage from "./SiteSearchPage";

@@ -21,3 +21,19 @@ export const setAnalysis = analysis => {
     analysis
   }
 }
+
+export const ADD_TOKEN = "ADD_TOKEN";
+export function addToken(token) {
+  return {
+    type: ADD_TOKEN,
+    data: token
+  };
+}
+
+export const ADD_ID = "ADD_ID";
+export function addId(id) {
+  return {
+    type: ADD_ID,
+    data: id
+  };
+}

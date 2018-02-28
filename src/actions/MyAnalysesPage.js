@@ -1,17 +1,17 @@
-import axios from "axios";
+import axios from 'axios';
 import root from '../lib/root.js';
 
 // -------------------
 // ANALYSES
 // -------------------
 
-export const GET_ANALYSES = "GET_ANALYSES";
+export const GET_ANALYSES = 'GET_ANALYSES';
 
 export function getAnalysesSuccess(data) {
   return {
     type: GET_ANALYSES,
     data: data,
-    isFetching: false
+    isFetching: false,
   };
 }
 
@@ -54,13 +54,13 @@ export function getAnalyses(ids) {
 // COLLECTIONS
 // -------------------
 
-export const GET_COLLECTIONS = "GET_COLLECTIONS";
+export const GET_COLLECTIONS = 'GET_COLLECTIONS';
 
 export function getCollectionsSuccess(data) {
   return {
     type: GET_COLLECTIONS,
     data: data,
-    isFetching: false
+    isFetching: false,
   };
 }
 
@@ -81,13 +81,13 @@ export function getCollections(id) {
 // GETTING A USER
 // -------------------------------
 
-export const GET_USER = "GET_USER";
+export const GET_USER = 'GET_USER';
 
 export function getUserSuccess(data) {
   return {
     type: GET_USER,
     data: data,
-    isFetching: false
+    isFetching: false,
   };
 }
 
@@ -95,10 +95,10 @@ export function getUser(id, token) {
   return dispatch => {
     axios({
       url: `${root()}/api/users/${id}`,
-      method: "get",
+      method: 'get',
       headers: new Headers({
-        "x-access-token": token
-      })
+        'x-access-token': token,
+      }),
     })
       .then(response => {
         dispatch(getUserSuccess(response.data));
@@ -109,10 +109,10 @@ export function getUser(id, token) {
   };
 }
 
-export const SET_FETCH = "SET_FETCH";
+export const SET_FETCH = 'SET_FETCH';
 export const setFetch = bool => {
   return {
     type: SET_FETCH,
-    bool
-  }
-}
+    bool,
+  };
+};

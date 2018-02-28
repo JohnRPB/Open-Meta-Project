@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import Dashboard from "../../components/Pages/Dashboard/Dashboard";
-import { getAnalyses, getUser } from "../../actions/Dashboard";
+import Dashboard from "../../components/Pages/Dashboard/DashboardPage";
+import { getAnalyses, getUser } from "../../actions/DashboardPage";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state) {

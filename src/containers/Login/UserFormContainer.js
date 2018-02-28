@@ -1,4 +1,4 @@
-import { addToken, addId } from "../../actions/Token";
+import { addToken, addId } from "../../actions/session";
 import { connect } from "react-redux";
 // import { bindActionCreators } from "redux";
 import { getUser } from '../../lib/apiHelpers.js';
