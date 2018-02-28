@@ -57,10 +57,14 @@ router.post('/:func', (req, res, next) => {
       res.writeHead(200);
       console.log(results);
       results
-        .generateNodeStream({type: 'nodebuffer', compression: "DEFLATE",
-    compressionOptions: {
-        level: 9
-    }, streamFiles: true})
+        .generateNodeStream({
+          type: 'nodebuffer',
+          compression: 'DEFLATE',
+          compressionOptions: {
+            level: 9,
+          },
+          streamFiles: true,
+        })
         .pipe(res)
         .on('finish', () => {
           res.end();
@@ -68,5 +72,7 @@ router.post('/:func', (req, res, next) => {
     })
     .catch(e => console.error(e));
 });
+
+router.get('/test/dickbutt', (req, res) => res.send({things: 'stuff'}));
 
 module.exports = router;

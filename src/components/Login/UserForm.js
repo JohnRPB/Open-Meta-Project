@@ -25,6 +25,7 @@ var serialize = require('form-serialize');
 class UserForm extends Component {
 
   sendForm = (e) => {
+    console.log(process.env);
     e.preventDefault();
     var form = document.querySelector('#example-form');
     // var str = serialize(form);
@@ -95,6 +96,7 @@ class UserForm extends Component {
   }
 
   render() {
+    console.log(process.env);
     return (
       <div>
         <div id="wrapper">
