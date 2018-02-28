@@ -14,6 +14,7 @@ const api = require('./api/server/api.js');
 //mongo-middleware
 // app.use((req, res, next) =>
 const mongoose = require('mongoose');
+console.log(process.env);
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.use((req, res, next) => {
