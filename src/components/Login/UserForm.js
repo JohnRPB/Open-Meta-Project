@@ -96,6 +96,7 @@ class UserForm extends Component {
   }
 
   render() {
+    console.log(process.env);
     return (
       <div>
         <div id="wrapper">
