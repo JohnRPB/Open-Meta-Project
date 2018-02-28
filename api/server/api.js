@@ -31,7 +31,7 @@ const analyses = require("./routes/analyses");
 const login = require("./routes/login");
 const register = require("./routes/register");
 const collections = require("./routes/collections");
-const tokentest = require("./routes/tokentest");
+// const tokentest = require("./routes/tokentest");
 const newprofile = require("./routes/newprofile");
 
 api.get("/express-test", (req, res) => res.send({express: "working!"})); //demo route to prove api is working
@@ -83,10 +83,10 @@ api.use((req, res, next) => {
 
 //rest of the backend
 api
-  .get("/express-test", (req, res) => res.send({express: "working!"})) //demo route to prove api is working
+  // .get("/express-test", (req, res) => res.send({express: "working!"})) //demo route to prove api is working
   .use("/newprofile", newprofile)
   .use("/users", users)
-  .use("/tokentest", tokentest)
+  // .use("/tokentest", tokentest)
   .use("/analyses", analyses)
   .use("/studies", studies)
   .use("/collections", collections)
