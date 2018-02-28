@@ -5,7 +5,7 @@ import StudyInclusionBox from '../../components/Modules/StudyInclusionBox';
 
 const mapStateToProps = (state, ownProps) => {
    let currentModule =
-    state.project.blocks[ownProps.moduleIdx];
+    state.AnalysisEditPage.blocks[ownProps.moduleIdx];
   // console.log("------------------- START currentModule -------------------");
   // console.log(currentModule);
   // console.log("-------------------- END currentModule --------------------");

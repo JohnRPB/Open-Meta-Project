@@ -3,9 +3,9 @@ import LogCheck from "../../components/LogCheck/LogCheck";
 import { setHistory, setLocation, setMatch, setParams, setSearch } from "../../actions/routeProps";
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state.Token.token);
+  // console.log(state.session.token);
   return {
-    token: state.Token.token,
+    token: state.session.token,
     Target: ownProps.Target,
     history: ownProps.history,
     location: ownProps.location,

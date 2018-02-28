@@ -16,7 +16,7 @@ import * as Actions from '../../actions/modules.js';
 
 const mapStateToProps = (state, ownProps) => {
   let currentStudy =
-    state.project.blocks[ownProps.moduleIdx].content.studies[
+    state.AnalysisEditPage.blocks[ownProps.moduleIdx].content.studies[
       ownProps.studyIdx
     ];
 

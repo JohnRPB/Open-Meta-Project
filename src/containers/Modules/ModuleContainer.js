@@ -10,10 +10,10 @@ import * as Actions from '../../actions/modules.js';
 
 const mapStateToProps = (state, ownProps) => {
   let correct = 0;
-  correct = state.project.showForm ? state.project.showForm : 0;
+  correct = state.AnalysisEditPage.showForm ? state.AnalysisEditPage.showForm : 0;
   correct = correct ? correct : 0
   return {
-    block:state.project.blocks[ownProps.moduleIdx],
+    block:state.AnalysisEditPage.blocks[ownProps.moduleIdx],
     correct: correct,
     moduleIdx: ownProps.moduleIdx
   }

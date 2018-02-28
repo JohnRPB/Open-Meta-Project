@@ -6,13 +6,6 @@
 // options
 
 import React from "react";
-// import {
-  // BrowserRouter as Router,
-  // Route,
-  // NavLink,
-  // Link,
-  // Switch
-// } from "react-router-dom";
 import { Checkbox } from "semantic-ui-react";
 
 class StudyCheckbox extends React.Component {

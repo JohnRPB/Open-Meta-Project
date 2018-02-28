@@ -1,4 +1,4 @@
-import CollectionSearchForm from "../../components/Collections/CollectionSearchForm";
+import CollectionSearchForm from "../../components/Pages/Collections/CollectionSearchForm";
 import { connect } from "react-redux";
 import serialize from "form-serialize";
 import axios from "axios";
