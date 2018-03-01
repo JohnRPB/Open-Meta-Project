@@ -1,14 +1,14 @@
 import {connect} from "react-redux";
-import CollectionSearchCollections from "../../../components/Pages/Collections/CollectionsSearchCollections.js";
+import CollectionSearchCollections from "components/Pages/Collections/CollectionsSearchCollections.js";
 // import axios from "axios";
-// import {newTables} from "../../actions/collections";
-// import root from '../../lib/root';
+// import {newTables} from "actions/collections";
+// import root from 'lib/root';
 
 //adding access to frontend url
 import {withRouter} from "react-router";
 
 //for the selection of a collection in the select collection page
-import {selectCollection} from "../../../actions/SelectCollectionPage";
+import {selectCollection} from "actions/SelectCollectionPage";
 
 
 function mapStateToProps(state) {

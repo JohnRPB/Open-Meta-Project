@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
-import Forms from '../../../components/Pages/CollectionEdit/Forms';
-import {setTab} from '../../../actions/CollectionEditPage';
+import Forms from 'components/Pages/CollectionEdit/Forms';
+import {setTab} from 'actions/CollectionEditPage';
 
 const mapStateToProps = state => {
   return {

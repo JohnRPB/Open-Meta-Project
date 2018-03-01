@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import NewProfile from "../../../components/Pages/Profile/NewProfile";
+import NewProfile from "components/Pages/Profile/NewProfile";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state) {

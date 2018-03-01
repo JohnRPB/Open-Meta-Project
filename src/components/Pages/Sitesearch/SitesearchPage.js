@@ -12,7 +12,7 @@ import {
 } from 'semantic-ui-react';
 import Results from './Results';
 //import Feed from "./Feed";
-import NavContainer from '../../../containers/Navbar/NavContainer';
+import NavContainer from 'containers/Navbar/NavContainer';
 //import Related from "./Related";
 import GoogleSearch from './GoogleSearch';
 

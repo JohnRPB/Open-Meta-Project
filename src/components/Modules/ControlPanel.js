@@ -19,7 +19,7 @@ import {
   // Checkbox,
   // List
 } from "semantic-ui-react";
-import StudyInclusionBoxContainer from "../../containers/Modules/StudyInclusionBoxContainer";
+import StudyInclusionBoxContainer from "containers/Modules/StudyInclusionBoxContainer";
 
 class ControlPanel extends React.Component {
   constructor(props) {

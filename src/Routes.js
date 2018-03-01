@@ -7,30 +7,30 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 // ---------------------------------------------------------
 
 // Authentication
-import UserFormContainer from './containers/Login/UserFormContainer'; //userform container
+import UserFormContainer from 'containers/Login/UserFormContainer'; //userform container
 // Registration
-import NewProfileContainer from './containers/Pages/Profile/NewProfileContainer';
+import NewProfileContainer from 'containers/Pages/Profile/NewProfileContainer';
 // Informational pages
 import About from './components/Pages/About/AboutPage';
 import Landing from './components/Pages/Landing/LandingPage.js';
 // Personal
-import DashboardContainer from './containers/Pages/DashboardContainer';
-import ProfilePageContainer from './containers/Pages/Profile/ProfilePageContainer';
+import DashboardContainer from 'containers/Pages/DashboardContainer';
+import ProfilePageContainer from 'containers/Pages/Profile/ProfilePageContainer';
 // Main Page
-import MyAnalyses from './containers/Pages/MyAnalyses/MyAnalyses';
+import MyAnalyses from 'containers/Pages/MyAnalyses/MyAnalyses';
 // Editors
-import AnalysisEditContainer from './containers/Pages/AnalysisEditContainer';
-import CollectionEditContainer from './containers/Pages/CollectionEdit/CollectionEditContainer';
+import AnalysisEditContainer from 'containers/Pages/AnalysisEditContainer';
+import CollectionEditContainer from 'containers/Pages/CollectionEdit/CollectionEditContainer';
 // Select collection diversion page
-import SelectCollectionPageContainer from './containers/Pages/SelectCollection/SelectCollectionPageContainer';
+import SelectCollectionPageContainer from 'containers/Pages/SelectCollection/SelectCollectionPageContainer';
 // Single resource display pages 
-import AnalysisDisplayContainer from './containers/Pages/AnalysisDisplayContainer.js';
-import CollectionDisplayContainer from './containers/Pages/CollectionDisplayContainer.js';
+import AnalysisDisplayContainer from 'containers/Pages/AnalysisDisplayContainer.js';
+import CollectionDisplayContainer from 'containers/Pages/CollectionDisplayContainer.js';
 // Multi-resource display pages
-import AllAnalyses from './containers/Pages/MyAnalyses/AllAnalyses';
-import AllCollections from './containers/Pages/MyAnalyses/AllCollections';
+import AllAnalyses from 'containers/Pages/MyAnalyses/AllAnalyses';
+import AllCollections from 'containers/Pages/MyAnalyses/AllCollections';
 // Search
-import SitesearchContainer from './containers/Pages/SitesearchContainer';
+import SitesearchContainer from 'containers/Pages/SitesearchContainer';
 
 // -------------------------
 // Routes

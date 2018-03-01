@@ -1,7 +1,7 @@
 // import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import StudyInclusionBox from '../../components/Modules/StudyInclusionBox';
+import StudyInclusionBox from 'components/Modules/StudyInclusionBox';
 
 const mapStateToProps = (state, ownProps) => {
    let currentModule =

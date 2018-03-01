@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavContainer from "../../containers/NavContainer";
+import NavContainer from "containers/NavContainer";
 import {
   Segment,
   Grid,

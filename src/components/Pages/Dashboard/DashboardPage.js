@@ -10,7 +10,7 @@ import {
   Loader
 } from "semantic-ui-react";
 import Feed from "./Feed";
-import NavContainer from "../../../containers/Navbar/NavContainer";
+import NavContainer from "containers/Navbar/NavContainer";
 
 const faker = require("faker");
 

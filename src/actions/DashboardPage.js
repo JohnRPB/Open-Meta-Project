@@ -1,5 +1,5 @@
 import axios from "axios";
-import root from '../lib/root.js';
+import root from 'lib/root.js';
 
 export const GET_ANALYSES = "GET_ANALYSES";
 

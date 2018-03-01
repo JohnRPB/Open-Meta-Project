@@ -1,4 +1,4 @@
-import {BUMP_AUTHORS, CEASE_PERSIST, CHANGE_PAGE, FLIP_ACTIVE, NEW_TABLES, PERSIST_TABLE, RESET_AUTHORS} from '../actions/collections'
+import {BUMP_AUTHORS, CEASE_PERSIST, CHANGE_PAGE, FLIP_ACTIVE, NEW_TABLES, PERSIST_TABLE, RESET_AUTHORS} from 'actions/collections'
 
 const initialState = {
   persistObj: {},

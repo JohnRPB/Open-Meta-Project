@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavContainer from "../../../containers/Navbar/NavContainer";
+import NavContainer from "containers/Navbar/NavContainer";
 import { NavLink } from "react-router-dom";
 import defaultpicture from "../../../assets/images/default.jpg";
 

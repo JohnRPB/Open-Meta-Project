@@ -1,9 +1,9 @@
 import {connect} from 'react-redux';
-import {changeButton, newResults, setFetch} from '../../../actions/CollectionEditPage';
-import SubmitForm from '../../../components/Pages/CollectionEdit/SubmitForm';
+import {changeButton, newResults, setFetch} from 'actions/CollectionEditPage';
+import SubmitForm from 'components/Pages/CollectionEdit/SubmitForm';
 import serialize from 'form-serialize';
 import axios from 'axios';
-import root from '../../../lib/root';
+import root from 'lib/root';
 
 const mapStateToProps = state => {
   return {

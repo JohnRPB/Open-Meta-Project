@@ -9,7 +9,7 @@ import {
   GET_COLLECTIONS_START,
   GET_COLLECTIONS_ERROR,
   REDIRECT_SUBMISSION
-} from "../actions/SiteSearchPage";
+} from "actions/SiteSearchPage";
 
 const initialState = {
   query: "",

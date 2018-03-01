@@ -1,9 +1,9 @@
 import {connect} from 'react-redux';
-import SearchForm from '../../../components/Pages/CollectionEdit/SearchForm';
+import SearchForm from 'components/Pages/CollectionEdit/SearchForm';
 import serialize from 'form-serialize';
-import root from '../../../lib/root';
+import root from 'lib/root';
 import axios from 'axios'
-import {setFetch, newResults} from '../../../actions/CollectionEditPage';
+import {setFetch, newResults} from 'actions/CollectionEditPage';
 
 const mapStateToProps = state => {
   return {

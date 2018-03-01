@@ -6,7 +6,7 @@ import {
   Segment, 
   Table
 } from 'semantic-ui-react';
-import PagesContainer from '../../../containers/Pages/CollectionEdit/PagesContainer';
+import PagesContainer from 'containers/Pages/CollectionEdit/PagesContainer';
 
 const ResultsDisplay = ({
   persisted,

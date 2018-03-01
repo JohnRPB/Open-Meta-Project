@@ -7,15 +7,15 @@ import {
   saveElement,
   // saveDocument,
   updateAnalysis,
-} from '../../actions/AnalysisEditPage';
-// import { getAnalysis } from '../actions/AnalysisDisplayPage';
+} from 'actions/AnalysisEditPage';
+// import { getAnalysis } from 'actions/AnalysisDisplayPage';
 import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router';
 import serialize from 'form-serialize';
 
-import AnalysisEditPage from '../../components/Pages/AnalysisEdit/AnalysisEditPage';
-import { getAnalysisFor } from "../../lib/apiHelpers";
+import AnalysisEditPage from 'components/Pages/AnalysisEdit/AnalysisEditPage';
+import { getAnalysisFor } from "lib/apiHelpers";
 
 function mapStateToProps(state, ownProps) {
   // console.log(ownProps);
