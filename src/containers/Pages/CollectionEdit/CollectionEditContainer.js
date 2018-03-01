@@ -8,7 +8,7 @@ import {
   setCurrentCollection,
 } from '../../../actions/CollectionEditPage';
 import axios from 'axios';
-import root from '../../../lib/root';
+import root from 'lib/root';
 
 const mapStateToProps = state => {
   // console.log(state.CollectionEditPage);

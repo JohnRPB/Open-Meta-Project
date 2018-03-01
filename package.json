@@ -52,12 +52,12 @@
     "yargs": "^10.1.1"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"nodemon index.js\"",
+    "start": "concurrently \"react-app-rewired start\" \"nodemon index.js\"",
     "update": "npm i && cd api && npm i && cd ..",
-    "app": "react-scripts start",
+    "app": "react-app-rewired start",
     "api": "nodemon api/server/index.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "npm run build && git add -A && git commit -m 'deploying' && git push heroku master",
     "sql:migrate:undo": "cd api && npm run sql db:migrate:undo:all && cd ..",
@@ -74,6 +74,7 @@
   "devDependencies": {
     "chalk": "^2.3.0",
     "path": "^0.12.7",
+    "react-app-rewired": "^1.4.1",
     "react-dev-utils": "^4.2.1"
   }
 }
