@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
   correct = state.AnalysisEditPage.showForm ? state.AnalysisEditPage.showForm : 0;
   correct = correct ? correct : 0
   return {
-    block:state.AnalysisEditPage.blocks[ownProps.moduleIdx],
+    block:state.AnalysisEditPage.Analysis.data.blocks[ownProps.moduleIdx],
     correct: correct,
     moduleIdx: ownProps.moduleIdx
   }

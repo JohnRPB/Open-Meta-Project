@@ -22,7 +22,7 @@ import { getAnalysisFor } from "../../lib/apiHelpers";
 function mapStateToProps(state, ownProps) {
   // console.log(ownProps);
   return {
-    blocks: state.AnalysisEditPage.blocks,
+    blocks: state.AnalysisEditPage.Analysis.data ? state.AnalysisEditPage.Analysis.data.blocks : [],
     dustbins: state.AnalysisEditPage.dustbins,
     boxes: state.AnalysisEditPage.boxes,
     droppedBoxNames: state.AnalysisEditPage.droppedBoxNames,
