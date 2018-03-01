@@ -68,10 +68,3 @@ export const clear = () => {
   }
 }
 
-export const SET_CURRENT_COLLECTION = "SET_CURRENT_COLLECTION";
-export const setCurrentCollection = collection => {
-  return {
-    type: SET_CURRENT_COLLECTION,
-    collection
-  }
-}

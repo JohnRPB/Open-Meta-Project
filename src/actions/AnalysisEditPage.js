@@ -76,30 +76,3 @@ export const loadDocument = data => {
   return { type: LOAD_DOCUMENT, data: data };
 };
 
-export const GET_ANALYSIS_AND_LOAD = "GET_ANALYSIS_AND_LOAD";
-export function getAnalysisAndLoadSuccess(data) {
-  return {
-    type: GET_ANALYSIS_AND_LOAD,
-    data: data,
-    isFetching: false
-  };
-}
-
-export function getAnalysisAndLoad(id) {
-  return dispatch => {
-    axios
-      .get(`${root()}/api/analyses/${id}`)
-      .then(response => {
-        dispatch(getAnalysisAndLoadSuccess(response.data));
-        // console.log("response.data => ", response.data);
-        return response.data;
-      })
-      .then(answer => {
-        // console.log("answer =>", answer);
-        dispatch(loadDocument(answer.data));
-      })
-      .catch(e => {
-        console.error(e);
-      });
-  };
-}

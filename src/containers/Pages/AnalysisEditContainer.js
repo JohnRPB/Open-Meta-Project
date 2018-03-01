@@ -7,8 +7,6 @@ import {
   saveElement,
   // saveDocument,
   updateAnalysis,
-  loadDocument,
-  getAnalysisAndLoad
 } from '../../actions/AnalysisEditPage';
 // import { getAnalysis } from '../actions/AnalysisDisplayPage';
 import { connect } from 'react-redux';
@@ -88,9 +86,9 @@ function mapDispatchToProps(dispatch) {
       //dispatch(saveDocument());
       dispatch(updateAnalysis(id, obj));
     },
-    loadDocument: data => {
-      dispatch(loadDocument(data));
-    }
+    //loadDocument: data => {
+      //dispatch(loadDocument(data));
+    //}
 
     // getUpdatedModules: () => {
     //   dispatch(getUpdatedModules());
