@@ -19,7 +19,7 @@ export const getUserFor = (suffix, id, dispatch) => {
 export const setCollectionFor = (suffix, collection) => {
   return {
     type: `SET_COLLECTION_${suffix}`,
-    collection
+    data: collection
   }
 }
 export const getCollectionFor = (suffix, id, dispatch) => {

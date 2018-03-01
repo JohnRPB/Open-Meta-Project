@@ -1,4 +1,3 @@
-import * as Actions from "../actions/AnalysisDisplayPage";
 
 const initialState = {
   Analysis: null,

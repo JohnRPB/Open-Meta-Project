@@ -10,12 +10,13 @@ import {
 import axios from 'axios';
 import root from '../../../lib/root';
 import { withRouter } from "react-router";
+import { getCollectionFor } from "../../../lib/apiHelpers";
 
 const mapStateToProps = (state, ownProps) => {
   // console.log(state.CollectionEditPage);
   return {
     collectionId: ownProps.match.params.id,
-    currentCollection: state.CollectionEditPage.current,
+    currentCollection: state.CollectionEditPage.Collection,
   };
 };
 
@@ -28,7 +29,7 @@ const mapDispatchToProps = dispatch => {
       axios
         .get(getString)
         .then(response => {
-          dispatch(setCurrentCollection(response.data));
+          getCollectionFor("EDIT", response.data._id, dispatch);
           dispatch(newResults(response.data.studies));
           dispatch(persistAll());
           dispatch(setFetch(false));
