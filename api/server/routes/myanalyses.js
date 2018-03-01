@@ -6,15 +6,6 @@ var router = express.Router();
 let models = require('./../../models/mongoose');
 let Analysis = models.Analysis;
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  Analysis.find({})
-    .then(result => {
-      res.json(result);
-    })
-    .catch(e => res.status(500).send(e.stack));
-});
-
 router.get('/:search', async function(req, res, next) {
   // console.log('REQ.PARAMS.SEARCH', req.params.search);
   let query = req.params.search,

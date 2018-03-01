@@ -18,6 +18,12 @@ const reducerObj = {
       user: action.user,
     };
   },
+  "SET_USER_SESSION": (state, action) => {
+    return {
+      ...state,
+      user: action.user,
+    };
+  },
   SET_COLLECTION: (state, action) => {
     return {
       ...state,

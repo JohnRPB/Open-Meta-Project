@@ -1,7 +1,7 @@
 import { addToken, addId } from "../../actions/session";
 import { connect } from "react-redux";
 // import { bindActionCreators } from "redux";
-import { getUser } from '../../lib/apiHelpers.js';
+import { getUserFor } from '../../lib/apiHelpers.js';
 
 import UserForm from "../../components/Login/UserForm"; //component inside of login
 
@@ -20,7 +20,7 @@ function mapDispatchToProps(dispatch) {
       dispatch(addId(id));
     },
     userFromId: id => {
-      getUser(id, dispatch);
+      getUserFor("SESSION", id, dispatch);
     }
   };
 }

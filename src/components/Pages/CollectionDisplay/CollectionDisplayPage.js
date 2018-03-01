@@ -16,23 +16,16 @@ import {
 class CollectionDisplayPage extends Component {
   constructor(props) {
     super(props);
-    this.isFetching = true;
   }
 
-  componentDidMount() {
+  componentWillMount() {
     // console.log(this.props.Collection);
     this.props.getCollection(this.props.match.params.collection_id);
   }
 
-  componentWillReceiveProps() {
-    if(this.props.Collection._id){
-      // console.log(this.props.Collection);
-      this.isFetching = false;
-    }
-  }
 
   render() {
-    if (!this.isFetching) {
+    if (!this.props.isFetching) {
       var { Collection } = this.props;
 
       var tags = this.props.Collection.category.map(el => {
@@ -49,7 +42,7 @@ class CollectionDisplayPage extends Component {
       });
     }
 
-    if (this.isFetching) {
+    if (this.props.isFetching) {
       return (
         <Dimmer active>
           <Loader content="Loading" />

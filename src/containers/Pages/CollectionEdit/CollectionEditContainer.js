@@ -9,12 +9,14 @@ import {
 } from '../../../actions/CollectionEditPage';
 import axios from 'axios';
 import root from 'lib/root';
+import { withRouter } from "react-router";
+import { getCollectionFor } from "../../../lib/apiHelpers";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   // console.log(state.CollectionEditPage);
   return {
-    collectionId: state.routeProps.params.id,
-    currentCollection: state.CollectionEditPage.current,
+    collectionId: ownProps.match.params.id,
+    currentCollection: state.CollectionEditPage.Collection,
   };
 };
 
@@ -27,7 +29,7 @@ const mapDispatchToProps = dispatch => {
       axios
         .get(getString)
         .then(response => {
-          dispatch(setCurrentCollection(response.data));
+          getCollectionFor("EDIT", response.data._id, dispatch);
           dispatch(newResults(response.data.studies));
           dispatch(persistAll());
           dispatch(setFetch(false));
@@ -41,14 +43,12 @@ const mergeProps = (stateProps, dispatchProps) => {
   return {
     initCollection: () =>
       dispatchProps.getQueryCollection(stateProps.collectionId),
-    currentCollection: stateProps.currentCollection
+    currentCollection: stateProps.currentCollection,
   };
 };
 
-const CollectionEditContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-  mergeProps,
-)(CollectionEdit);
+const CollectionEditContainer = withRouter(
+  connect(mapStateToProps, mapDispatchToProps, mergeProps)(CollectionEdit),
+);
 
 export default CollectionEditContainer;

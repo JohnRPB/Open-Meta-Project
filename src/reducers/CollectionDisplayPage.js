@@ -1,4 +1,3 @@
-import * as Actions from "../actions/CollectionDisplayPage";
 
 const initialState = {
   Collection: null,
@@ -8,7 +7,7 @@ const initialState = {
 
 export function CollectionDisplayPage(state = initialState, action) {
   switch (action.type) {
-    case Actions.GET_COLLECTION:
+    case "SET_COLLECTION_DISPLAY":
       return {
         ...state,
         Collection: action.data,
