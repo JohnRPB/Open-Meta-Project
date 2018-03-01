@@ -8,7 +8,7 @@ import {
   setCurrentCollection,
 } from '../../../actions/CollectionEditPage';
 import axios from 'axios';
-import root from '../../../lib/root';
+import root from 'lib/root';
 import { withRouter } from "react-router";
 import { getCollectionFor } from "../../../lib/apiHelpers";
 
