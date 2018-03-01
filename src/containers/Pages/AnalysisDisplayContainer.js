@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import AnalysisDisplayPage from "../../components/Pages/AnalysisDisplay/AnalysisDisplayPage";
-import { getAnalysis } from "../../actions/AnalysisDisplayPage";
 import { getAnalysisFor } from "../../lib/apiHelpers";
 import { withRouter } from "react-router";
 

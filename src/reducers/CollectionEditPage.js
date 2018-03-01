@@ -21,7 +21,8 @@ const initialState = {
   hashObj: {},
   results: [],
   persisted: [],
-  study: null
+  study: null,
+  Collection: null
 };
 
 const reduceObject = {
@@ -113,10 +114,10 @@ const reduceObject = {
   CLEAR: (state, action) => {
     return initialState
   },
-  SET_CURRENT_COLLECTION: (state, action) => {
+  "SET_COLLECTION_EDIT": (state, action) => {
     return {
       ...state,
-      current: action.collection
+      Collection: action.data    
     }
   }
 };
