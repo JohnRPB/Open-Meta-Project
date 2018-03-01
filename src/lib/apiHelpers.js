@@ -1,6 +1,6 @@
 import root from './root';
 import axios from 'axios';
-import {setUser, setCollection, setAnalysis} from '../actions/session.js';
+import {setUser, setCollection, setAnalysis} from 'actions/session.js';
 
 export const setUserFor = (suffix, user) => {
   return {

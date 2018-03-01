@@ -1,5 +1,5 @@
 import axios from "axios";
-import root from '../lib/root.js';
+import root from 'lib/root.js';
 
 // -------------------
 // ANALYSES

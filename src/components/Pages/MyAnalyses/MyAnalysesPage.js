@@ -11,7 +11,7 @@ import {
   Dimmer,
   Loader,
 } from 'semantic-ui-react';
-import NavContainer from '../../../containers/Navbar/NavContainer';
+import NavContainer from 'containers/Navbar/NavContainer';
 import CollectionModal from './CollectionModal';
 import AnalysisModal from './AnalysisModal';
 import defaultpicture from '../../../assets/images/default.jpg';

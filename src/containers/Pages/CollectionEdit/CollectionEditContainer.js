@@ -1,16 +1,16 @@
 import {connect} from 'react-redux';
-import CollectionEdit from '../../../components/Pages/CollectionEdit/CollectionEditPage';
+import CollectionEdit from 'components/Pages/CollectionEdit/CollectionEditPage';
 import {
   setFetch,
   persistAll,
   newResults,
   clear,
   setCurrentCollection,
-} from '../../../actions/CollectionEditPage';
+} from 'actions/CollectionEditPage';
 import axios from 'axios';
 import root from 'lib/root';
 import { withRouter } from "react-router";
-import { getCollectionFor } from "../../../lib/apiHelpers";
+import { getCollectionFor } from "lib/apiHelpers";
 
 const mapStateToProps = (state, ownProps) => {
   // console.log(state.CollectionEditPage);

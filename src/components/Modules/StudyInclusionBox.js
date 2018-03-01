@@ -9,7 +9,7 @@ import React from 'react';
 import {
   List,
 } from 'semantic-ui-react';
-import StudyCheckboxContainer from "../../containers/Modules/StudyCheckboxContainer";
+import StudyCheckboxContainer from "containers/Modules/StudyCheckboxContainer";
 
 const StudyInclusionBox = (props) => {
 

@@ -1,5 +1,5 @@
-// import {SET_USER, SET_COLLECTION, SET_ANALYSIS} from '../actions/session';
-import * as Actions from "../actions/session";
+// import {SET_USER, SET_COLLECTION, SET_ANALYSIS} from 'actions/session';
+import * as Actions from "actions/session";
 
 const initialState = {
   user: {},

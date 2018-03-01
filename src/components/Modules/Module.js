@@ -8,8 +8,8 @@ import {
 import PopupPanel from './PopupPanel';
 import ControlPanel from './ControlPanel';
 
-import OutputPanelContainer from '../../containers/Modules/OutputPanelContainer';
-import StudyInclusionBoxContainer from '../../containers/Modules/StudyInclusionBoxContainer';
+import OutputPanelContainer from 'containers/Modules/OutputPanelContainer';
+import StudyInclusionBoxContainer from 'containers/Modules/StudyInclusionBoxContainer';
 
 // ---------------------------------------------------------
 // Top-level Module

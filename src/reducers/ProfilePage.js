@@ -1,4 +1,4 @@
-import * as Actions from "../actions/ProfilePage";
+import * as Actions from "actions/ProfilePage";
 
 const initialState = {
   user: null,

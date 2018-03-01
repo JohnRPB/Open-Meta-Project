@@ -12,7 +12,7 @@
 //for each api route check the cookie
 
 import React, {Component} from 'react';
-import root from '../../lib/root';
+import root from 'lib/root';
 
 //styling
 import './UserForm.css';

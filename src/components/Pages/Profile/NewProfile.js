@@ -5,7 +5,7 @@ import {
   Form, 
   Container 
 } from "semantic-ui-react";
-import root from '../../../lib/root';
+import root from 'lib/root';
 
 //form serializer
 var serialize = require("form-serialize");

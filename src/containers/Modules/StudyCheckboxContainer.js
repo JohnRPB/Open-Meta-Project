@@ -1,11 +1,11 @@
 // import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import StudyCheckbox from '../../components/Modules/StudyCheckbox.js';
+import StudyCheckbox from 'components/Modules/StudyCheckbox.js';
 
 // optional
 
-import * as Actions from '../../actions/modules.js';
+import * as Actions from 'actions/modules.js';
 // import {bindActionCreators} from 'redux';
 
 //let StudyCheckboxContainer = () => {

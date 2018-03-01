@@ -4,7 +4,7 @@ import {
   withRouter 
 } from "react-router-dom";
 import axios from "axios";
-import root from '../../../lib/root';
+import root from 'lib/root';
 import {
   Button,
   Header,

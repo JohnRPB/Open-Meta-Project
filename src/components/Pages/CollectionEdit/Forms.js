@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchFormContainer from '../../../containers/Pages/CollectionEdit/SearchFormContainer';
-import SubmitFormContainer from '../../../containers/Pages/CollectionEdit/SubmitFormContainer';
+import SearchFormContainer from 'containers/Pages/CollectionEdit/SearchFormContainer';
+import SubmitFormContainer from 'containers/Pages/CollectionEdit/SubmitFormContainer';
 import {Dimmer, Loader, Menu, Segment} from 'semantic-ui-react';
 
 const Forms = ({activeTab, isFetching, setTab}) => {

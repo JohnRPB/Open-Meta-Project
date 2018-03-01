@@ -11,13 +11,13 @@ import React, {Component} from 'react';
 // import {Link} from 'react-router-dom';
 
 // import axios from 'axios';
-import root from '../../../lib/root';
-import NavContainer from '../../../containers/Navbar/NavContainer';
+import root from 'lib/root';
+import NavContainer from 'containers/Navbar/NavContainer';
 //ui
 import {Container, Button} from 'semantic-ui-react';
 
 //name will change
-import CollectionSearchCollectionsContainer from '../../../containers/Pages/SelectCollection/CollectionSearchCollectionsContainer';
+import CollectionSearchCollectionsContainer from 'containers/Pages/SelectCollection/CollectionSearchCollectionsContainer';
 import CollectionModal from '../MyAnalyses/CollectionModal';
 
 class SelectCollectionPage extends Component {

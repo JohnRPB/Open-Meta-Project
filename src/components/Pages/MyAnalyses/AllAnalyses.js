@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import NavContainer from "../../../containers/Navbar/NavContainer";
+import NavContainer from "containers/Navbar/NavContainer";
 import {
   Segment,
   Header,

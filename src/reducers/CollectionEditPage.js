@@ -8,7 +8,7 @@
 //   SET_OPEN,
 //   CLEAR,
 //   SET_CURRENT_COLLECTION
-// } from '../actions/CollectionEditPage';
+// } from 'actions/CollectionEditPage';
 
 const initialState = {
   varObj: {

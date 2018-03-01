@@ -1,5 +1,5 @@
 import axios from 'axios';
-import root from '../lib/root';
+import root from 'lib/root';
 
 export const REDIRECT_SUBMISSION = 'REDIRECT_SUBMISSION';
 export const redirectSubmission = () => {
