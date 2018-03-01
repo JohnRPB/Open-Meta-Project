@@ -1,7 +1,7 @@
 // import React, { Component } from "react";
 import { connect } from "react-redux";
 import ProfilePage from "../../../components/Pages/Profile/ProfilePage";
-import { getUser } from "../../../actions/ProfilePage";
+import { getUserFor } from "../../../lib/apiHelpers";
 import { getAnalyses } from "../../../actions/MyAnalysesPage";
 import { withRouter } from "react-router";
 
@@ -18,11 +18,8 @@ function mapStateToProps(state) {
 const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
     getUser: id => {
-      dispatch(getUser(id));
+      getUserFor("SESSION", id, dispatch);
     },
-    getAnalyses: id => {
-      dispatch(getAnalyses(id));
-    }
   };
 };
 

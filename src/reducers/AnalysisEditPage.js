@@ -108,10 +108,6 @@ const analysisEditPage = (state = initialState, action) => {
           ...blocks.slice(action.data + 1)
         ]
       };
-    case GET_UPDATED_MODULES:
-      return {
-        ...state
-      };
     case ADD_TEXT:
       let { index, textContent } = action.data;
       //don't allow empty submissions
@@ -176,7 +172,7 @@ const analysisEditPage = (state = initialState, action) => {
         ],
         editing: false
       };
-    case GET_ANALYSIS_AND_LOAD:
+    case "SET_ANALYSIS_EDIT":
       return {
         ...state,
         Analysis: action.data,

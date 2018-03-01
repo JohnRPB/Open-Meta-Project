@@ -20,12 +20,13 @@ const faker = require('faker');
 class MyAnalysesPage extends Component {
 
   componentWillMount() {
-    if (!this.props._token) {
-      window.location.href = '/login';
-    }
+    //if (!this.props._token) {
+      //window.location.href = '/login';
+    //}
     if (!this.props.currentUser._id){
       this.isFetching = true;
     } else {
+      console.log("HELLO");
       this.props.getUser(this.props.currentUser._id);
     }
   }

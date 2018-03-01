@@ -21,10 +21,9 @@ var serialize = require("form-serialize");
 class AnalysisModal extends Component {
   constructor(props) {
     super();
-    this.sendForm = this.sendForm.bind(this);
   }
 
-  sendForm(e) {
+  sendForm = (e) => {
     // console.log("send form starting");
     e.preventDefault();
     var form = document.querySelector("#new-analysis");

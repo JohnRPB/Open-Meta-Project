@@ -8,7 +8,7 @@ const initialState = {
 
 export function AnalysisDisplayPage(state = initialState, action) {
   switch (action.type) {
-    case Actions.GET_ANALYSIS:
+    case "SET_ANALYSIS_DISPLAY":
       return {
         ...state,
         Analysis: action.data,

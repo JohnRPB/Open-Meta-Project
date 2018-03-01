@@ -11,22 +11,23 @@ import {getCollection} from '../../../lib/apiHelpers.js';
 import serialize from 'form-serialize';
 import axios from 'axios';
 import root from '../../../lib/root';
+import {withRouter} from 'react-router';
 
-const mapStateToProps = state => {
-  let analysisArray = state.routeProps.search
-    ? state.routeProps.search.split('=')
+const mapStateToProps = (state, ownProps) => {
+  let analysisArray = ownProps.match.search
+    ? ownProps.match.search.split('=')
     : [null];
   // console.log(analysisArray);
   let analysisId = analysisArray[analysisArray.length - 1];
   let destination = analysisId
     ? `/analysis/${analysisId}`
-    : `/collections/${state.routeProps.params.id}`;
+    : `/collections/${ownProps.match.params.id}`;
   return {
     isFetching: state.CollectionEditPage.varObj.isFetching,
     persisted: state.CollectionEditPage.persisted,
     ownerId: state.session.user._id,
-    endOfItAll: () => state.routeProps.history.push(destination),
-    collectionId: state.routeProps.params.id,
+    endOfItAll: () => ownProps.history.push(destination),
+    collectionId: ownProps.match.params.id,
     analysisId: analysisId,
   };
 };
@@ -36,13 +37,7 @@ const mapDispatchToProps = dispatch => {
     changeCategory: n => dispatch(changeButton(n)),
     clear: () => dispatch(clear()),
     onClose: () => dispatch(setOpen(false)),
-    saveCollection: (
-      collectionId,
-      analysisId,
-      ownerId,
-      persisted,
-      data
-    ) => {
+    saveCollection: (collectionId, analysisId, ownerId, persisted, data) => {
       let putString = `${root()}/api/collections/${collectionId}`;
       // if (analysisId) console.log(analysisId);
       dispatch(setFetch(true));
@@ -50,14 +45,14 @@ const mapDispatchToProps = dispatch => {
         name: data.name,
         description: data.description,
         ownerId: ownerId,
-        studies: persisted
-      }
+        studies: persisted,
+      };
       axios
         .put(putString, collectionModel)
         .then(response => {
           // console.log(response.data);
           // if (typeof response.data === 'object') {
-            // dispatch(addCollection(response.data));
+          // dispatch(addCollection(response.data));
           // }
           getCollection(response.data._id, dispatch);
           dispatch(setFetch(false));
@@ -107,18 +102,16 @@ const mergeProps = (stateProps, dispatchProps) => {
         stateProps.analysisId,
         stateProps.ownerId,
         stateProps.persisted,
-        data
-      )
+        data,
+      );
       dispatchProps.clear();
       stateProps.endOfItAll();
     },
   };
 };
 
-const SaveButtonContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-  mergeProps,
-)(SaveButton);
+const SaveButtonContainer = withRouter(
+  connect(mapStateToProps, mapDispatchToProps, mergeProps)(SaveButton),
+);
 
 export default SaveButtonContainer;

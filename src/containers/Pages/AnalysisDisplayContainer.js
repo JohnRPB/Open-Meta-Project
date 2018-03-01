@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import AnalysisDisplayPage from "../../components/Pages/AnalysisDisplay/AnalysisDisplayPage";
 import { getAnalysis } from "../../actions/AnalysisDisplayPage";
+import { getAnalysisFor } from "../../lib/apiHelpers";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state, ownProps) {
@@ -15,7 +16,8 @@ function mapStateToProps(state, ownProps) {
 const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
     getAnalysis: id => {
-      dispatch(getAnalysis(id));
+      getAnalysisFor("DISPLAY", id, dispatch);
+      //dispatch(getAnalysis(id));
     }
   };
 };

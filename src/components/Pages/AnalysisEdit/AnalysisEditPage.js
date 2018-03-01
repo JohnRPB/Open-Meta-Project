@@ -49,7 +49,7 @@ class AnalysisEditPage extends Component {
   componentWillMount() {
     //this.getUpdatedModules();
 
-    this.props.getAnalysisAndLoad(this.props.analysisId);
+    this.props.getAnalysis(this.props.analysisId);
 
     // let routingId = this.props.location.pathname.split("/")[-2];
   }

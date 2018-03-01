@@ -17,6 +17,7 @@ import { withRouter } from 'react-router';
 import serialize from 'form-serialize';
 
 import AnalysisEditPage from '../../components/Pages/AnalysisEdit/AnalysisEditPage';
+import { getAnalysisFor } from "../../lib/apiHelpers";
 
 function mapStateToProps(state, ownProps) {
   // console.log(ownProps);
@@ -80,8 +81,8 @@ function mapDispatchToProps(dispatch) {
       dispatch(saveElement(data));
       form.reset();
     },
-    getAnalysisAndLoad: id => {
-      dispatch(getAnalysisAndLoad(id));
+    getAnalysis: async id => {
+      await getAnalysisFor("EDIT", id, dispatch);
     },
     saveDocument: (e, id, obj) => {
       //dispatch(saveDocument());

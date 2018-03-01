@@ -7,7 +7,6 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 // ---------------------------------------------------------
 
 // Authentication
-import LogCheckContainer from './containers/LogCheck/LogCheckContainer.js';
 import UserFormContainer from './containers/Login/UserFormContainer'; //userform container
 // Registration
 import NewProfileContainer from './containers/Pages/Profile/NewProfileContainer';
@@ -32,7 +31,6 @@ import AllAnalyses from './containers/Pages/MyAnalyses/AllAnalyses';
 import AllCollections from './containers/Pages/MyAnalyses/AllCollections';
 // Search
 import SitesearchContainer from './containers/Pages/SitesearchContainer';
-import CollectionSearch from './components/Pages/Collections/CollectionSearch';
 
 // -------------------------
 // Routes
@@ -83,18 +81,8 @@ const Routes = (props) => {
           <Route exact path="/collections" component={AllCollections} />
           <Route
             exact
-            path="/collections/new"
-            render={() => <LogCheckContainer Target={CollectionSearch} />}
-          />
-          <Route
-            exact
             path="/collections/:id/edit"
-            render={props => (
-              <LogCheckContainer
-                {...props}
-                Target={CollectionEditContainer}
-              />
-            )}
+            component={CollectionEditContainer}
           />
           <Route
             exact
