@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Dashboard from "../../components/Pages/Dashboard/DashboardPage";
-import { getAnalyses, getUser } from "../../actions/DashboardPage";
+import { getUserFor } from "../../lib/apiHelpers";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state) {
@@ -14,11 +14,8 @@ function mapStateToProps(state) {
 
 const mapDispatchtoProps = (dispatch, ownProps) => {
   return {
-    getAnalyses: id => {
-      dispatch(getAnalyses(id));
-    },
     getUser: id => {
-      dispatch(getUser(id));
+      dispatch(getUserFor("SESSION", id, dispatch));
     }
   };
 };

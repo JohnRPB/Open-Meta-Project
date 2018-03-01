@@ -17,11 +17,12 @@ import { withRouter } from 'react-router';
 import serialize from 'form-serialize';
 
 import AnalysisEditPage from '../../components/Pages/AnalysisEdit/AnalysisEditPage';
+import { getAnalysisFor } from "../../lib/apiHelpers";
 
 function mapStateToProps(state, ownProps) {
   // console.log(ownProps);
   return {
-    blocks: state.AnalysisEditPage.blocks,
+    blocks: state.AnalysisEditPage.Analysis.data ? state.AnalysisEditPage.Analysis.data.blocks : [],
     dustbins: state.AnalysisEditPage.dustbins,
     boxes: state.AnalysisEditPage.boxes,
     droppedBoxNames: state.AnalysisEditPage.droppedBoxNames,
@@ -80,8 +81,8 @@ function mapDispatchToProps(dispatch) {
       dispatch(saveElement(data));
       form.reset();
     },
-    getAnalysisAndLoad: id => {
-      dispatch(getAnalysisAndLoad(id));
+    getAnalysis: async id => {
+      await getAnalysisFor("EDIT", id, dispatch);
     },
     saveDocument: (e, id, obj) => {
       //dispatch(saveDocument());

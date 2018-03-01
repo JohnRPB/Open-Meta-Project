@@ -25,6 +25,7 @@ class ProfilePage extends Component {
     if (!this.props._token) {
       this.props.history.push("/login");
     }
+    this.props.getUser(this.props.user._id);
   }
 
   render() {

@@ -8,12 +8,6 @@ const initialState = {
 
 export function ProfilePage(state = initialState, action) {
   switch (action.type) {
-    case Actions.GET_USER:
-      return {
-        ...state,
-        user: action.data,
-        isFetching: false
-      };
     case Actions.GET_ANALYSES:
       return {
         ...state,
