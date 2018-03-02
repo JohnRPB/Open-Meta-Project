@@ -5,7 +5,7 @@ import {changePersist} from 'actions/CollectionEditPage';
 
 const mapStateToProps = state => {
   return {
-    persisted: state.CollectionEditPage.persisted,
+    persisted: state.CollectionEditPage.Collection.studies,
     results: state.CollectionEditPage.results.slice((state.CollectionEditPage.varObj.page - 1) * 10, 10 * state.CollectionEditPage.varObj.page),
     isFetching: state.CollectionEditPage.varObj.isFetching,
     activePage: state.CollectionEditPage.varObj.page,

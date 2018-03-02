@@ -1,7 +1,7 @@
 // import React, { Component } from "react";
 import { connect } from "react-redux";
 import ProfilePage from "components/Pages/Profile/ProfilePage";
-import { getUserFor } from "lib/apiHelpers";
+import { getUserFor } from "actions/apiHelpers";
 import { getAnalyses } from "actions/MyAnalysesPage";
 import { withRouter } from "react-router";
 

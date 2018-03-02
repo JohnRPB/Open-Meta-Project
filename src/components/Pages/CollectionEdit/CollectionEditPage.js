@@ -28,7 +28,26 @@ const CollectionEdit = ({initCollection, isFetching, currentCollection}) => {
       <Grid centered>
         <Grid.Row>
           <Grid.Column width={8}>
-            <h1>Study Information</h1>
+          <h1 style={{marginTop:"1em", marginBottom:"1em"}}>Edit your collection</h1>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={8}>
+            <ExistingDisplayContainer />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={8}>
+            <FormsContainer />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={8}>
+            <ResultsDisplayContainer />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={8}>
             <Form>
               <Form.Field>
                 <label htmlFor="name">Collection Name:</label>
@@ -48,26 +67,6 @@ const CollectionEdit = ({initCollection, isFetching, currentCollection}) => {
               </Form.Field>
               <SaveButtonContainer />
             </Form>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <h3>Change Studies in Collection</h3>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <ExistingDisplayContainer />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <FormsContainer />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <ResultsDisplayContainer />
           </Grid.Column>
         </Grid.Row>
       </Grid>

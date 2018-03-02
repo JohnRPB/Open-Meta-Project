@@ -1,6 +1,11 @@
-import root from './root';
+import root from 'lib/root';
 import axios from 'axios';
 import {setUser, setCollection, setAnalysis} from 'actions/session.js';
+
+// ---------------------------------------------------------
+// STORE SETTERS 
+// 2018-03-01 15:36
+// ---------------------------------------------------------
 
 export const setUserFor = (suffix, user) => {
   return {
@@ -43,6 +48,41 @@ export const getAnalysisFor = (suffix, id, dispatch) => {
     })
     .catch(error => console.error(error));
 }
+
+// ---------------------------------------------------------
+// DATABASE UPDATERS
+// 2018-03-01 15:37
+// ---------------------------------------------------------
+
+export const updateAnalysisFor = (suffix, analysis) => {
+  return {
+    type: `SAVE_ANALYSIS_${suffix}`,
+    data: analysis
+  }
+}
+export const saveAnalysisFor = (suffix, id, analysis, dispatch) => {
+  return axios.put(`${root()}/api/collections/${id}`, analysis)
+    .then(response => {
+      dispatch(updateAnalysisFor(suffix, analysis))
+    })
+    .catch(error => console.error(error));
+}
+
+export const updateCollectionFor = (suffix, collection) => {
+  return {
+    type: `SAVE_COLLECTION_${suffix}`,
+    data: collection 
+  }
+}
+
+export const saveCollectionFor = (suffix, id, collection, dispatch) => {
+  return axios.put(`${root()}/api/collections/${id}`, collection)
+    .then(response => {
+      dispatch(updateAnalysisFor(suffix, collection))
+    })
+    .catch(error => console.error(error));
+}
+
 
 
 

@@ -48,10 +48,10 @@ const reduceObject = {
     if (action.persist) {
       newResults = state.results.slice(0);
       let removed = newResults.splice(action.index, 1);
-      newPersisted = state.persisted.slice(0).concat(removed);
+      newPersisted = state.Collection.studies.slice(0).concat(removed);
       newHash[removed.id] = 1;
     } else {
-      newPersisted = state.persisted.slice(0);
+      newPersisted = state.Collection.studies.slice(0);
       newResults = newPersisted
         .splice(action.index, 1)
         .concat(state.results.slice(0));
@@ -60,17 +60,23 @@ const reduceObject = {
     return {
       ...state,
       results: newResults,
-      persisted: newPersisted,
+      Collection: {
+        ...state.Collection,
+        studies: newPersisted,
+      },
       hashObj: newHash,
     };
   },
   PERSIST_ALL: (state, action) => {
-    let newPersisted = state.persisted.slice(0).concat(state.results.slice(0));
+    let newPersisted = state.Collection.studies.slice(0).concat(state.results.slice(0));
     let newHash = {};
     newPersisted.forEach(study => (newHash[study.id] = 1));
     return {
       ...state,
-      persisted: newPersisted,
+      Collection: {
+        ...state.Collection,
+        studies: newPersisted,
+      },
       results: [],
       hashObj: newHash,
     };

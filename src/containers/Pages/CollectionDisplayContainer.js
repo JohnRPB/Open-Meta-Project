@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import CollectionDisplayPage from "components/Pages/CollectionDisplay/CollectionDisplayPage";
-import { getCollectionFor } from "lib/apiHelpers.js";
+import { getCollectionFor } from "actions/apiHelpers.js";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state) {

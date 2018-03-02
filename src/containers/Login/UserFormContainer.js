@@ -1,7 +1,7 @@
 import { addToken, addId } from "actions/session";
 import { connect } from "react-redux";
 // import { bindActionCreators } from "redux";
-import { getUserFor } from 'lib/apiHelpers.js';
+import { getUserFor } from 'actions/apiHelpers.js';
 
 import UserForm from "components/Login/UserForm"; //component inside of login
 
