@@ -23,6 +23,12 @@ var serialize = require('form-serialize');
 //fix form serializer
 
 class UserForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      root: root()
+    }
+  }
 
   sendForm = (e) => {
     console.log(process.env);
@@ -34,7 +40,7 @@ class UserForm extends Component {
 
     if (obj.action === 'login') {
       // console.log('login starting');
-      fetch(`${root()}/api/login`, {
+      fetch(`${this.state.root}/api/login`, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +71,7 @@ class UserForm extends Component {
 
     if (obj.action === 'register') {
       // console.log('register starting');
-      fetch(`${root()}/api/register`, {
+      fetch(`${this.state.root}/api/register`, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
