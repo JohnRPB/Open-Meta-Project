@@ -7,8 +7,9 @@ let mongooseModels = require('./../../models/mongoose');
 let User = mongooseModels.User;
 router.post('/', async (req, res) => {
   try {
-    // console.log("entered / route in api/login");
-
+    console.log("entered / route in api/login");
+    console.log("req.body: ", req.body);
+    
     let users = await User.find({email: req.body.email});
     var message;
     let userid;

@@ -16,6 +16,7 @@ import johann from "../../../assets/images/johann.jpeg";
 import edwin from "../../../assets/images/edwin.jpeg";
 import dave from "../../../assets/images/dave.png";
 import graph from "../../../assets/images/graph.png";
+import OpenMeta from "../../../assets/images/OpenMetaSymbol.png";
 
 const Landing = () => {
   return (
@@ -32,9 +33,9 @@ const Landing = () => {
         <br />
         <br />
         <div className="ui text container">
-          <i className="connectdevelop icon massive" />
+          <Image src={OpenMeta} style={{margin:"0 auto"}} width="600px"/>
           <br />
-          <h2>Your Portal to Papers and Meta-analyses</h2>
+          <h2>Welcome to the Open Meta Project</h2>
         </div>
         <br />
         <br />

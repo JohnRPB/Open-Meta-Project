@@ -13,6 +13,7 @@
 
 import React, {Component} from 'react';
 import root from 'lib/root';
+import axios from 'axios';
 
 //styling
 import './UserForm.css';
@@ -23,33 +24,36 @@ var serialize = require('form-serialize');
 //fix form serializer
 
 class UserForm extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-  sendForm = (e) => {
-    console.log(process.env);
+  sendForm = e => {
+    console.log("In here");
+    console.log("e: ", e);
+    
     e.preventDefault();
-    var form = document.querySelector('#example-form');
+    var form = e.target;
+    console.log("form: ", form);
+    
     // var str = serialize(form);
     var obj = serialize(form, {hash: true});
-    // console.log('obj =>', obj.passHash);
+    console.log("obj: ", obj);
+    obj.action = 'login';
 
     if (obj.action === 'login') {
       // console.log('login starting');
-      fetch(`${root()}/api/login`, {
-        method: 'post',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(obj),
-      })
-        .then(response => {
-          // if(response.ok) {
-          //   return response.blob();
-          // }
-          // throw new Error('Network response was not ok.');
-          return response.json();
+      axios
+        .post(`${root()}/api/login`, JSON.stringify(obj), {
+          headers: {
+            'Content-Type': 'application/json',
+          },
         })
-        .then(async data => {
+        .then(async response => {
           // console.log('data returned => ', data);
+          let data = response.data;
+          console.log("response: ", response);
+          
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
@@ -65,18 +69,16 @@ class UserForm extends Component {
 
     if (obj.action === 'register') {
       // console.log('register starting');
-      fetch(`${root()}/api/register`, {
-        method: 'post',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(obj),
-      })
-        .then(response => {
-          return response.json();
+      axios
+        .post(`${root()}/api/register`,
+          JSON.stringify(obj), {
+          headers: {
+            'Content-Type': 'application/json',
+          },
         })
-        .then(data => {
+        .then(response => {
           // console.log('data returned => ', data);
+          let data = response.data;
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
@@ -93,10 +95,9 @@ class UserForm extends Component {
         })
         .catch(error => console.error('Error:', error));
     }
-  }
+  };
 
   render() {
-    console.log(process.env);
     return (
       <div>
         <div id="wrapper">
@@ -126,7 +127,7 @@ class UserForm extends Component {
                     <input type="submit" value="reset password" />
                     <div>
                       <input type="submit" value="register" />
-                      <input type="submit" value="login" />
+                      <input className="login-submit" type="submit" value="login" />
                     </div>
                   </div>
                 </div>

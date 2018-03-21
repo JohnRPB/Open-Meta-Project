@@ -1,5 +1,5 @@
 import axios from "axios";
-import { store } from "../index.js";
+import { store } from "root/index.js";
 
 // Remove a study
 export const REMOVE_STUDY = "REMOVE_STUDY";
@@ -38,6 +38,9 @@ export const updateLoc = (moduleIdx, updatedLoc) => {
 
 const computeOcpuAndGetImg = async (rootUrl, data) => {
   // Sends request and waits for it
+  
+  console.log("JSON.stringify(data): ", JSON.stringify(data, null, 2));
+  
 
   let postR = await axios({
     method: "post",

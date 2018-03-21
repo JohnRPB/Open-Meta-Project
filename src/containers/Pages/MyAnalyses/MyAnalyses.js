@@ -1,6 +1,6 @@
 // import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getUser, getUserFor } from 'lib/apiHelpers.js';
+import { getUser, getUserFor } from 'actions/apiHelpers.js';
 import MyAnalyses from "components/Pages/MyAnalyses/MyAnalysesPage";
 import { setFetch } from "actions/MyAnalysesPage";
 import { withRouter } from "react-router";

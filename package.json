@@ -15,12 +15,17 @@
     "dangerously-set-inner-html": "^2.0.1",
     "debug": "^3.1.0",
     "dotenv": "^5.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
     "express": "^4.16.2",
     "faker": "^4.1.0",
     "form-serialize": "^0.7.2",
     "fs": "0.0.1-security",
     "history": "^4.7.2",
     "immutability-helper": "^2.6.4",
+    "jest": "^22.4.2",
+    "jest-cli": "^22.4.2",
     "jsonwebtoken": "^8.1.1",
     "jszip": "^3.1.5",
     "lodash": "^4.17.5",
@@ -32,6 +37,7 @@
     "path": "^0.12.7",
     "pg": "^7.4.1",
     "react": "^16.2.0",
+    "react-app-rewire-ts-jest": "^1.0.17-a",
     "react-dnd": "^2.5.4",
     "react-dnd-html5-backend": "^2.5.4",
     "react-dom": "^16.2.0",
@@ -48,6 +54,7 @@
     "semantic-ui-react": "^0.77.2",
     "sequelize": "^4.32.2",
     "sequelize-cli": "^3.2.0",
+    "sinon": "^4.4.2",
     "util": "^0.10.3",
     "yargs": "^10.1.1"
   },
@@ -57,7 +64,7 @@
     "app": "react-app-rewired start",
     "api": "nodemon api/server/index.js",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom",
+    "test": "react-app-rewired test --env=jsdom --watchAll",
     "eject": "react-scripts eject",
     "deploy": "npm run build && git add -A && git commit -m 'deploying' && git push heroku master",
     "sql:migrate:undo": "cd api && npm run sql db:migrate:undo:all && cd ..",
@@ -68,7 +75,16 @@
     "mg:seed": "node api/seeds/mongoose",
     "console": "cd api && node repl.js",
     "c": "cd api && node repl.js",
-    "sql": "cd api && ./node_modules/sequelize-cli/lib/sequelize"
+    "sql": "cd api && ./node_modules/sequelize-cli/lib/sequelize",
+    "jest": {
+      "moduleNameMapper": {
+        "components(.*)$": "<rootDir>/src/components/$1",
+        "containers(.*)$": "<rootDir>/src/containers/$1",
+        "lib(.*)$": "<rootDir>/src/lib/$1",
+        "reducers(.*)$": "<rootDir>/src/reducers/$1",
+        "actions(.*)$": "<rootDir>/src/actions/$1"
+      }
+    }
   },
   "proxy": "http://localhost:8000/",
   "devDependencies": {

@@ -10,7 +10,7 @@ import {
 import axios from 'axios';
 import root from 'lib/root';
 import { withRouter } from "react-router";
-import { getCollectionFor } from "lib/apiHelpers";
+import { getCollectionFor } from "actions/apiHelpers";
 
 const mapStateToProps = (state, ownProps) => {
   // console.log(state.CollectionEditPage);

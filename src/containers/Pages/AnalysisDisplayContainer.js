@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import AnalysisDisplayPage from "components/Pages/AnalysisDisplay/AnalysisDisplayPage";
-import { getAnalysisFor } from "lib/apiHelpers";
+import { getAnalysisFor } from "actions/apiHelpers";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state, ownProps) {
