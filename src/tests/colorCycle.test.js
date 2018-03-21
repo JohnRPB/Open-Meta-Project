@@ -1,5 +1,5 @@
 import React from "react";
-import colorCycle from "../lib/colorCycle.js";
+import colorCycle from "lib/colorCycle.js";
 
 // ---------------------------------------------------------
 // Testing Jest 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {DragSource} from "react-dnd";
 
 //for the studies
-import {store} from "../../../index.js";
+import {store} from "root/index.js";
 
 const style = {
   border: "1px dashed gray",

@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background:radial-gradient(to center top, #e7ebf1, #9ac9de) !important;
+  /*background-image:url("https://www.mindfulschools.org/wp/wp-content/uploads/2017/10/Web-of-Science-Author-Connect_2.0_thumbnail-1.jpg");*/
+  background:radial-gradient(to center top, #fff, #98b7e0) !important;
 }
 
 .module-card {
