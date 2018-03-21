@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import DownloadButton from '../../components/Modules/DownloadButton';
+import DownloadButton from 'components/Modules/DownloadButton';
 
 const mapStateToProps = (state, ownProps) => {
   return {

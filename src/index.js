@@ -17,6 +17,8 @@ const enhancer = composeEnhancers(
   // other store enhancers if any
 );
 
+console.log("rootReducer: ", rootReducer);
+
 export const store = createStore(rootReducer, enhancer);
 
 ReactDOM.render(

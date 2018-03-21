@@ -11,13 +11,13 @@ import React, {Component} from 'react';
 // import {Link} from 'react-router-dom';
 
 // import axios from 'axios';
-import root from '../../../lib/root';
-import NavContainer from '../../../containers/Navbar/NavContainer';
+import root from 'lib/root';
+import NavContainer from 'containers/Navbar/NavContainer';
 //ui
 import {Container, Button} from 'semantic-ui-react';
 
 //name will change
-import CollectionSearchCollectionsContainer from '../../../containers/Pages/SelectCollection/CollectionSearchCollectionsContainer';
+import CollectionSearchCollectionsContainer from 'containers/Pages/SelectCollection/CollectionSearchCollectionsContainer';
 import CollectionModal from '../MyAnalyses/CollectionModal';
 
 class SelectCollectionPage extends Component {
@@ -54,10 +54,10 @@ class SelectCollectionPage extends Component {
     //   data: {inclusion: {collectionId: this.props._selectedCollection}}
     // })
     //   .then(response => {
-    //     console.log("fetch done in Components/SelectCollectionPage.js");
+    //     console.log("fetch done in components/SelectCollectionPage.js");
     //   })
     //   .catch(error => {
-    //     console.log("fetch error in Components/SelectCollectionPage.js");
+    //     console.log("fetch error in components/SelectCollectionPage.js");
     //   });
 
     // axios
@@ -72,11 +72,11 @@ class SelectCollectionPage extends Component {
     //     //   return response.blob();
     //     // }
     //     // throw new Error('Network response was not ok.');
-    //     console.log("fetch done in Components/SelectCollectionPage.js");
+    //     console.log("fetch done in components/SelectCollectionPage.js");
     // this.props.history.push(`/analysis/${this.props.location.search.slice(4)}/edit`)
     // })
     // .catch(e => {
-    //   console.log("fetch error in Components/SelectCollectionPage.js");
+    //   console.log("fetch error in components/SelectCollectionPage.js");
     // });
 
     // fetch({

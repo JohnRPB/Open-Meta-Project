@@ -1,8 +1,8 @@
 import {connect} from 'react-redux';
-import ExistingDisplay from '../../../components/Pages/CollectionEdit/ExistingDisplay';
+import ExistingDisplay from 'components/Pages/CollectionEdit/ExistingDisplay';
 // import serialize from 'form-serialize';
-import root from '../../../lib/root';
-import {newResults} from '../../../actions/CollectionEditPage'
+import root from 'lib/root';
+import {newResults} from 'actions/CollectionEditPage'
 import axios from 'axios';
 
 const mapStateToProps = state => {

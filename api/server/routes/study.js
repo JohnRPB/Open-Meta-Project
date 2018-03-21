@@ -16,9 +16,17 @@ const StudyOverflow = mModels.StudyOverflow;
 
 let router = express.Router();
 
+// ---------------------------------------------------------
+// SUBMIT STUDY TO THE DATABASE
+// 2018-03-01 16:28
+// ---------------------------------------------------------
+
 router.post('/submit', async (req, res, next) => {
   const bodyInfo = req.body;
   try {
+
+    // Fetch a study with (something close to) the same name as the submitting 
+    // study, if it exists
     let currentStudy = await Study.find({
       where: {
         name: {
@@ -27,6 +35,8 @@ router.post('/submit', async (req, res, next) => {
       },
     });
 
+    // If the submitting study is new, fetch that study's journal in the db,
+    // if it exists
     if (!currentStudy) {
       let studyJournal = await Journal.find({
         where: {
@@ -36,6 +46,8 @@ router.post('/submit', async (req, res, next) => {
         },
       });
 
+      // If the submitting study's journal isn't in the db, construct it as 
+      // a model and save it
       if (!studyJournal) {
         let journalBuild = {};
         Object.keys(bodyInfo.journal).forEach(key => {
@@ -49,6 +61,9 @@ router.post('/submit', async (req, res, next) => {
           },
         });
       }
+
+      // Construct study model and submit it (makes a new model regardless of
+      // whether study already in db)
       let studyBuild = {};
       Object.keys(bodyInfo.study).forEach(key => {
         studyBuild[key] = bodyInfo.study[key];
@@ -307,6 +322,9 @@ router.get('/search', async (req, res, next) => {
 });
 
 router.get('/ids', async (req, res, next) => {
+
+  // Assemble OR SQL query on study Ids by deconstructing query params (?ids=34_35_36 ...)
+  // -----------------------
   let results = [];
   let query = req.query.studies;
   let queryParams = {
@@ -316,20 +334,24 @@ router.get('/ids', async (req, res, next) => {
       },
     },
   };
-  if (query[0] == '_') {
-    query = query.substring(1);
-  }
+  if (query[0] == '_') query = query.substring(1);
   let idArray = query.split('_');
   idArray.forEach(id => {
     queryParams.where.id[Op.or].push(Number(id));
   });
+
+  // Get studies
+  // -----------------------
+
+  // return full study models from SQL
   let rawStudies;
   try {
     rawStudies = await Study.findAll(queryParams);
-    // console.log(rawStudies);
   } catch (e) {
     res.status(500).send(e.stack);
   }
+
+  // filter for relevant attributes
   if (rawStudies.length) {
     rawStudies.map(study => {
       results.push(study.dataValues);

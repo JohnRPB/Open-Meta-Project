@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavContainer from "../../../containers/Navbar/NavContainer";
+import NavContainer from "containers/Navbar/NavContainer";
 // import update from "immutability-helper";
 import { DragDropContext } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
@@ -31,7 +31,7 @@ import {
   NavLink
 } from "react-router-dom";
 
-import ModuleContainer from "../../../containers/Modules/ModuleContainer";
+import ModuleContainer from "containers/Modules/ModuleContainer";
 
 class AnalysisEditPage extends Component {
   // constructor(props) {

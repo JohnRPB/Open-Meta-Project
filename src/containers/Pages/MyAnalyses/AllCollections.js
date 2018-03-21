@@ -1,6 +1,6 @@
 // import React, { Component } from "react";
 import { connect } from "react-redux";
-import AllCollections from "../../../components/Pages/MyAnalyses/AllCollections";
+import AllCollections from "components/Pages/MyAnalyses/AllCollections";
 import { withRouter } from "react-router";
 
 function mapStateToProps(state) {

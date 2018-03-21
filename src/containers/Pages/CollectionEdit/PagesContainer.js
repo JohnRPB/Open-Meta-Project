@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
-import Pages from '../../../components/Pages/CollectionEdit/Pages';
-import {setPage} from '../../../actions/CollectionEditPage';
+import Pages from 'components/Pages/CollectionEdit/Pages';
+import {setPage} from 'actions/CollectionEditPage';
 
 const mapStateToProps = state => {
   return {

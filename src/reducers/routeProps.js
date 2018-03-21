@@ -1,4 +1,4 @@
-// import {SET_HISTORY, SET_LOCATION, SET_MATCH, SET_PARAMS, SET_SEARCH} from '../actions/routeProps';
+// import {SET_HISTORY, SET_LOCATION, SET_MATCH, SET_PARAMS, SET_SEARCH} from 'actions/routeProps';
 
 const initialState = {
   history: null,

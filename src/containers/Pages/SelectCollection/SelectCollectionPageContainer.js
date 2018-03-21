@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 // import {bindActionCreators} from "redux";
 import {withRouter} from "react-router";
 
-import SelectCollectionPage from "../../../components/Pages/SelectCollection/SelectCollectionPage";
+import SelectCollectionPage from "components/Pages/SelectCollection/SelectCollectionPage";
 
 function mapStateToProps(state) {
   return {

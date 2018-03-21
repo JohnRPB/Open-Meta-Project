@@ -1,4 +1,4 @@
-import * as Actions from '../actions/MyAnalysesPage';
+import * as Actions from 'actions/MyAnalysesPage';
 
 const initialState = {
   isFetching: true,

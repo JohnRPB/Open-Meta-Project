@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import CollectionModal from '../../../components/MyAnalyses/CollectionModal';
+import CollectionModal from 'components/MyAnalyses/CollectionModal';
 import {withRouter} from 'react-router';
 
 function mapStateToProps(state, ownProps) {

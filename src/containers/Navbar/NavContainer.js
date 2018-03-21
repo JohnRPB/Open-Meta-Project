@@ -1,12 +1,12 @@
 // import React, { Component } from "react";
 import { connect } from "react-redux";
-import Nav from "../../components/Navbar/Nav";
+import Nav from "components/Navbar/Nav";
 // import {
   // getUsers,
   // getAnalyses,
   // getCollections,
   // redirectSubmission
-// } from "../actions/SiteSearchPage";
+// } from "actions/SiteSearchPage";
 import { withRouter } from "react-router";
 // import serialize from "form-serialize";
 // import { push } from "react-router-redux";

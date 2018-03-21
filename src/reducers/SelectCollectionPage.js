@@ -1,4 +1,4 @@
-import * as Actions from "../actions/SelectCollectionPage";
+import * as Actions from "actions/SelectCollectionPage";
 
 const initialState = {
   id: null,

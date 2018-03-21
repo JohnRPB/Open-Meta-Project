@@ -1,16 +1,16 @@
 import {connect} from 'react-redux';
-import SaveButton from '../../../components/Pages/CollectionEdit/SaveButton';
+import SaveButton from 'components/Pages/CollectionEdit/SaveButton';
 import {
   setFetch,
   clear,
   changeButton,
   setOpen,
-} from '../../../actions/CollectionEditPage';
-import {getCollection} from '../../../lib/apiHelpers.js';
-// import {addCollection} from '../../actions/Dashboard';
+} from 'actions/CollectionEditPage';
+import {getCollection} from 'actions/apiHelpers.js';
+// import {addCollection} from 'actions/Dashboard';
 import serialize from 'form-serialize';
 import axios from 'axios';
-import root from '../../../lib/root';
+import root from 'lib/root';
 import {withRouter} from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
@@ -24,7 +24,7 @@ const mapStateToProps = (state, ownProps) => {
     : `/collections/${ownProps.match.params.id}`;
   return {
     isFetching: state.CollectionEditPage.varObj.isFetching,
-    persisted: state.CollectionEditPage.persisted,
+    persisted: state.CollectionEditPage.Collection.studies,
     ownerId: state.session.user._id,
     endOfItAll: () => ownProps.history.push(destination),
     collectionId: ownProps.match.params.id,

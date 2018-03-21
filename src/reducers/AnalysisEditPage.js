@@ -4,7 +4,7 @@ import {
   UPDATE_LOC,
   GET_COMPUTATION_START,
   GET_COMPUTATION_ERROR,
-} from '../actions/modules';
+} from 'actions/modules';
 
 import {
   ADD_TEXT,
@@ -18,8 +18,8 @@ import {
   UPDATE_ANALYSIS,
   GET_ANALYSIS_AND_LOAD,
   LOAD_DOCUMENT,
-} from '../actions/AnalysisEditPage';
-// import * as Actions from "../actions/Analysis";
+} from 'actions/AnalysisEditPage';
+// import * as Actions from "actions/Analysis";
 
 import {NativeTypes} from 'react-dnd-html5-backend';
 

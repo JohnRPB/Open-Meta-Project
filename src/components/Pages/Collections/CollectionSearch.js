@@ -6,9 +6,9 @@ import {
   // Button,
   // Table
 } from 'semantic-ui-react';
-import CollectionSearchTableContainer from '../../../containers/Collections/CollectionSearchTableContainer';
-import CollectionSearchCollectionsContainer from '../../../containers/Collections/CollectionSearchCollectionsContainer.js'
-import CollectionSearchFormContainer from '../../../containers/Collections/CollectionSearchFormContainer'
+import CollectionSearchTableContainer from 'containers/Collections/CollectionSearchTableContainer';
+import CollectionSearchCollectionsContainer from 'containers/Collections/CollectionSearchCollectionsContainer.js'
+import CollectionSearchFormContainer from 'containers/Collections/CollectionSearchFormContainer'
 
 const CollectionSearch = () => {
   return (

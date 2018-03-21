@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Segment, Table} from 'semantic-ui-react';
-import colorCycle from '../../../lib/colorCycle';
+import colorCycle from 'lib/colorCycle';
 
 const ExistingDisplay = ({existingCollections, onClick}) => {
   let existing = null;

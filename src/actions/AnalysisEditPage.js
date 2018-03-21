@@ -1,5 +1,5 @@
 import axios from "axios";
-import root from '../lib/root.js';
+import root from 'lib/root.js';
 
 export const ADD_TEXT = "ADD_TEXT";
 export const addText = data => {
