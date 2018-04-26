@@ -13,7 +13,6 @@ function mapStateToProps(state, ownProps) {
     _id: state.session.id,
     _token: state.session.token,
     currentUser: state.session.user,
-    isFetching: state.MyAnalysesPage.isFetching,
   };
 }
 

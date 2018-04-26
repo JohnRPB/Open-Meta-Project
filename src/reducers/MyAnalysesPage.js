@@ -7,7 +7,7 @@ const initialState = {
 
 export function MyAnalysesPage(state = initialState, action) {
   switch (action.type) {
-    case Actions.SET_FETCH:
+    case Actions.SET_FETCH_ANALYSIS:
       return {
         ...state,
         isFetching: action.bool,

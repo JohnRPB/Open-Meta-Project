@@ -61,7 +61,7 @@ const Routes = (props) => {
           <Route exact path="/profile/:user_id?" component={ProfilePageContainer} />
           //<Route exact path="/myanalyses/:user_id?" component={MyAnalyses} />
           {/* ANALYSIS ROUTES */}
-          <Route exact path="/analyses" component={AllAnalyses} />
+          <Route exact path="/analyses" component={MyAnalyses} />
           <Route
             exact
             path="/selectcollection"

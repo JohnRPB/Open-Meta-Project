@@ -46,12 +46,10 @@ const Landing = () => {
               <Grid.Row>
                 <Grid.Column>
                   <h3>
-                    OpenMeta is a platform for sharing and conducting scientific reviews, powered 
-                    by R. With our tools, anyone can manage a collection of studies, conduct a
-                    systematic review, post interactive documents to the web, share their content 
-                    with others, and get rapid feedback on their work. {' '} Join a community that 
-                    supports transparency and reproducibility in science, and start participating
-                    in the exciting process of scientific discovery!
+                    The Open Meta Project is an attempt to leverage the power of R to allow anyone to
+                    produce interactive reviews of scientific research domains. Any documents on our 
+                    site should be able to be embedded on other sites as well as edited and saved on 
+                    our site. 
                   </h3>
                 </Grid.Column>
               </Grid.Row>

@@ -20,23 +20,12 @@ const faker = require('faker');
 class MyAnalysesPage extends Component {
 
   componentWillMount() {
-    //if (!this.props._token) {
-      //window.location.href = '/login';
-    //}
-    if (!this.props.currentUser._id){
-      this.isFetching = true;
-    } else {
-      console.log("HELLO");
-      this.props.getUser(this.props.currentUser._id);
-    }
+    this.props.getUser(this.props._id);
   }
 
   render() {
     let analysisCards;
-    if (this.props.currentUser._id && this.props.isFetching){
-      this.props.stopFetch();
-    }
-    if (!this.props.isFetching) {
+    if (this.props.currentUser._id) {
       // creates cards for each analysis
       analysisCards = this.props.currentUser.analyses
         .slice(0, 3)
@@ -71,7 +60,7 @@ class MyAnalysesPage extends Component {
         });
     }
 
-    if (this.props.isFetching) {
+    if (!this.props.currentUser._id) {
       return (
         <Dimmer active>
           <Loader content="Loading" />
@@ -160,7 +149,7 @@ class MyAnalysesPage extends Component {
 
                 <Grid.Column width={13}>
                   <Segment>
-                    {this.props.isFetching ? (
+                    {!this.props.currentUser._id ? (
                       <Dimmer active>
                         <Loader />
                       </Dimmer>
