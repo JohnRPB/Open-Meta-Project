@@ -13,10 +13,7 @@ import { withRouter } from "react-router";
 
 function mapStateToProps(state, ownProps) {
   return {
-    // query: state.SiteSearchPage.query,
-    // results: state.SiteSearchPage.results,
-    // field: state.SiteSearchPage.value,
-    // submission: state.SiteSearchPage.submission
+    loggedIn: !!state.session.token
   };
 }
 
