@@ -1,6 +1,6 @@
 //login component
 
-//logininUserFunction
+//logininUserFunctior
 //fetch request to server url method post
 //in post include the serialized form
 
@@ -18,6 +18,11 @@ import axios from 'axios';
 //styling
 import './UserForm.css';
 
+// validation
+import {validateRegistrationError} from './validators';
+import ErrorMessage from './ErrorMessage';
+import ValidationErrorMessage from './ValidationErrorMessage';
+
 //form serializer
 var serialize = require('form-serialize');
 
@@ -26,20 +31,28 @@ var serialize = require('form-serialize');
 class UserForm extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      errors: {},
+    }
   }
 
   sendForm = e => {
-    console.log("In here");
-    console.log("e: ", e);
-    
+    console.log('In here');
+    console.log('e: ', e);
+
     e.preventDefault();
     var form = e.target;
-    console.log("form: ", form);
-    
+    console.log('form: ', form);
+
     // var str = serialize(form);
     var obj = serialize(form, {hash: true});
-    console.log("obj: ", obj);
-    obj.action = 'login';
+    console.log('obj: ', obj);
+    //obj.action = 'login';
+
+    // reset errors
+    this.setState({
+      errors: {}
+    });
 
     if (obj.action === 'login') {
       // console.log('login starting');
@@ -50,14 +63,29 @@ class UserForm extends Component {
           },
         })
         .then(async response => {
-          // console.log('data returned => ', data);
-          let data = response.data;
           console.log("response: ", response);
           
+          // console.log('data returned => ', data);
+          let data = response.data;
+          console.log('response: ', response);
+
           if (data.token) {
             this.props._addToken(data.token);
             this.props._addId(data.id);
             this.props.userFromId(data.id);
+          } else {
+            console.log("data: ", data);
+            
+            // Add back-end errors
+            let newErrors = Object.assign({}, 
+              this.state.errors, {
+                backEnd: data.message
+              }
+            )
+
+            this.setState({
+              errors: newErrors
+            })
           }
           return data;
           // data = data.json()
@@ -67,33 +95,59 @@ class UserForm extends Component {
         .catch(error => console.error('Error:', error));
     }
 
+    console.log('obj.action: ', obj.action);
+
     if (obj.action === 'register') {
-      // console.log('register starting');
-      axios
-        .post(`${root()}/api/register`,
-          JSON.stringify(obj), {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
-        .then(response => {
-          // console.log('data returned => ', data);
-          let data = response.data;
-          if (data.token) {
-            this.props._addToken(data.token);
-            this.props._addId(data.id);
-            //checking the decoded of the token
-            // console.log(
-            //   'this is the token going to the token test route =>',
-            //   this.props._token,
-            // );
-            // console.log('this is the id from the server =>', data.id);
-            this.props.history.push('/newprofile');
+      console.log('register starting');
+
+      let registrationError = validateRegistrationError(obj);
+
+      if (registrationError) {
+        this.setState({
+          errors: registrationError
+        });
+      } else {
+        axios
+          .post(`${root()}/api/register`, JSON.stringify(obj), {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+          .then(response => {
+            let data = response.data;
+            console.log("------------------- START data -------------------");
+            console.log(data);
+            console.log("-------------------- END data --------------------");
+            
+            if (data.token) {
+              this.props._addToken(data.token);
+              this.props._addId(data.id);
+              //checking the decoded of the token
+              // console.log(
+              //   'this is the token going to the token test route =>',
+              //   this.props._token,
+              // );
+              // console.log('this is the id from the server =>', data.id);
+              this.props.history.push('/newprofile');
+            } else {
+            console.log("data: ", data);
+            
+            // Add back-end errors
+            let newErrors = Object.assign({}, 
+              this.state.errors, {
+                backEnd: data.message
+              }
+            )
+
+            this.setState({
+              errors: newErrors
+            })
           }
-          // console.log('token added');
-          return data;
-        })
-        .catch(error => console.error('Error:', error));
+            // console.log('token added');
+            return data;
+          })
+          .catch(error => console.error('Error:', error));
+      }
     }
   };
 
@@ -104,6 +158,7 @@ class UserForm extends Component {
           <h1>OpenMeta</h1>
           <h2>Create your research meta-analysis</h2>
           <form onSubmit={this.sendForm} id="example-form">
+              <ErrorMessage errors={this.state.errors} />
             <input
               type="radio"
               id="login"
@@ -115,7 +170,7 @@ class UserForm extends Component {
             <input type="radio" id="reset" name="action" value="reset" />
             <div id="inputs">
               <div>
-                <input type="text" name="email" placeholder="email" />
+                <input type="text" name="userEmail" placeholder="email" />
                 <div>
                   <input
                     type="password"
@@ -123,11 +178,19 @@ class UserForm extends Component {
                     placeholder="password"
                   />
                   <div>
-                    <input type="password" placeholder="repeat password" />
+                    <input
+                      type="password"
+                      name="confirmPassHash"
+                      placeholder="repeat password"
+                    />
                     <input type="submit" value="reset password" />
                     <div>
                       <input type="submit" value="register" />
-                      <input className="login-submit" type="submit" value="login" />
+                      <input
+                        className="login-submit"
+                        type="submit"
+                        value="login"
+                      />
                     </div>
                   </div>
                 </div>

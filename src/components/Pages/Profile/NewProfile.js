@@ -37,6 +37,7 @@ class NewProfile extends Component {
       // cache: "default",
       body: JSON.stringify(obj)
     }).then(data => {
+      this.props.setFetch();
       this.props.history.push("/myanalyses");
     });
   }
