@@ -43,7 +43,7 @@ class Nav extends Component {
       return (
         <Menu fixed="top" inverted>
           <Container>
-            <NavLink to="/landing" className="item">
+            <NavLink exact to="/" className="item">
               Open Meta
             </NavLink>
   
@@ -115,7 +115,7 @@ class Nav extends Component {
       return (
         <Menu fixed="top" inverted>
           <Container>
-            <NavLink to="/landing" className="item">
+            <NavLink to="/" className="item">
               Open Meta
             </NavLink>
   
