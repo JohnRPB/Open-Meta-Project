@@ -50,7 +50,7 @@ class Nav extends Component {
             {/* <NavLink to="/dashboard" className="item">
             My Dashboard
           </NavLink> */}
-            <NavLink to="/analyses" className="item">
+            <NavLink to="/myanalyses" className="item">
               My Analyses
             </NavLink>
   

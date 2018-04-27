@@ -18,35 +18,39 @@ import defaultpicture from '../../../assets/images/default.jpg';
 const faker = require('faker');
 
 class MyAnalysesPage extends Component {
-
   componentWillMount() {
     this.props.getUser(this.props._id);
   }
 
   render() {
-    let analysisCards;
-    if (this.props.currentUser._id) {
+    let {userDataAvailable, currentUser} = this.props;
+
+    if (!userDataAvailable) {
+      return (
+        <Dimmer active>
+          <Loader content="Loading" />
+        </Dimmer>
+      );
+    } else {
       // creates cards for each analysis
-      analysisCards = this.props.currentUser.analyses
-        .slice(0, 3)
-        .map(analysis => {
-          return (
-            <Card
-              fluid
-              key={analysis._id}
-              header={
-                <NavLink to={`/analysis/${analysis._id}`}>
-                  {/* {analysis._id} */}
-                  {analysis.data.header.title}
-                </NavLink>
-              }
-              description={faker.lorem.paragraph()}
-            />
-          );
-        });
+      let analysisCards = currentUser.analyses.slice(0, 3).map(analysis => {
+        return (
+          <Card
+            fluid
+            key={analysis._id}
+            header={
+              <NavLink to={`/analysis/${analysis._id}`}>
+                {/* {analysis._id} */}
+                {analysis.data.header.title}
+              </NavLink>
+            }
+            description={faker.lorem.paragraph()}
+          />
+        );
+      });
 
       // creates cards for each collection
-      var collectionCards = this.props.currentUser.collections
+      var collectionCards = currentUser.collections
         .slice(0, 6)
         .map(collection => {
           return {
@@ -58,15 +62,7 @@ class MyAnalysesPage extends Component {
             description: `Description: ${collection.description}`,
           };
         });
-    }
 
-    if (!this.props.currentUser._id) {
-      return (
-        <Dimmer active>
-          <Loader content="Loading" />
-        </Dimmer>
-      );
-    } else {
       return (
         <div className="ui  vertical masthead center aligned segment">
           <div className="following bar">
@@ -93,13 +89,13 @@ class MyAnalysesPage extends Component {
                   <br />
 
                   <Header as="h1" floated="left" textalign="left">
-                    {`${this.props.currentUser.profile.fname} ${
-                      this.props.currentUser.profile.lname
+                    {`${currentUser.profile.fname} ${
+                      currentUser.profile.lname
                     }`}
                     <Header.Subheader>
                       {' '}
-                      {this.props.currentUser.profile.title} at{' '}
-                      {this.props.currentUser.profile.organization}
+                      {currentUser.profile.title} at{' '}
+                      {currentUser.profile.organization}
                     </Header.Subheader>
                   </Header>
 
@@ -111,7 +107,7 @@ class MyAnalysesPage extends Component {
               <Grid.Row id="collections">
                 <Grid.Column width={3}>
                   <br />
-                  <CollectionModal id={this.props.currentUser._id} />
+                  <CollectionModal id={currentUser._id} />
                 </Grid.Column>
                 <Grid.Column width={13}>
                   <Segment>
@@ -144,12 +140,12 @@ class MyAnalysesPage extends Component {
               <Grid.Row id="analyses" className="hidden">
                 <Grid.Column width={3}>
                   <br />
-                  <AnalysisModal id={this.props.currentUser._id.toString()} />
+                  <AnalysisModal id={currentUser._id.toString()} />
                 </Grid.Column>
 
                 <Grid.Column width={13}>
                   <Segment>
-                    {!this.props.currentUser._id ? (
+                    {!userDataAvailable ? (
                       <Dimmer active>
                         <Loader />
                       </Dimmer>

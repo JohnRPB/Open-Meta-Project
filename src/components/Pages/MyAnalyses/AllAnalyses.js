@@ -19,14 +19,22 @@ const faker = require("faker");
 class AllAnalyses extends Component {
   constructor() {
     super();
-    this.isFetching = true;
   }
 
   render() {
-    let analysisCards;
-    if (!this.props.isFetching) {
+
+    let { userDataAvailable } = this.props;
+
+    if (!userDataAvailable) {
+      return (
+        <Dimmer active>
+          <Loader content="Loading" />
+        </Dimmer>
+      );
+
+    } else {
       // console.log("MY DATA props => ", this.props);
-      analysisCards = this.props.user.analyses.map(analysis => {
+      let analysisCards = this.props.user.analyses.map(analysis => {
         analysis.data.header = analysis.data.header || {};
         return (
           <Card
@@ -41,15 +49,7 @@ class AllAnalyses extends Component {
           />
         );
       });
-    }
 
-    if (this.props.isFetching) {
-      return (
-        <Dimmer active>
-          <Loader content="Loading" />
-        </Dimmer>
-      );
-    } else {
       return (
         <div className="ui  vertical masthead center aligned segment">
           <div className="following bar">
@@ -155,6 +155,7 @@ class AllAnalyses extends Component {
         </div>
       );
     }
+
   }
 }
 

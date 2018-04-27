@@ -6,8 +6,7 @@ import { withRouter } from "react-router";
 function mapStateToProps(state) {
   return {
     user: state.session.user,
-    isFetching: state.MyAnalysesPage.isFetching
-    // MyCollections: state.MyCollectionsPage.Collections,
+    userDataAvailable: !!state.session.user._id
   };
 }
 

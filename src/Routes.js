@@ -59,9 +59,8 @@ const Routes = (props) => {
           <Route exact path="/dashboard" component={DashboardContainer} />
           <Route exact path="/landing" component={Landing} />
           <Route exact path="/profile/:user_id?" component={ProfilePageContainer} />
-          //<Route exact path="/myanalyses/:user_id?" component={MyAnalyses} />
           {/* ANALYSIS ROUTES */}
-          <Route exact path="/analyses" component={MyAnalyses} />
+          <Route exact path="/myanalyses" component={MyAnalyses} />
           <Route
             exact
             path="/selectcollection"
@@ -79,6 +78,7 @@ const Routes = (props) => {
           />
           {/* COLLECTION ROUTES */}
           <Route exact path="/collections" component={AllCollections} />
+          <Route exact path="/analyses" component={AllAnalyses} />
           <Route
             exact
             path="/collections/:id/edit"

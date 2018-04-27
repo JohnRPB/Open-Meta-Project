@@ -11,7 +11,7 @@ function mapStateToProps(state) {
     _token: state.session.token,
     // Analyses: state.ProfilePage.analyses,
     user: state.session.user,
-    isFetching: state.MyAnalysesPage.isFetching
+    userDataAvailable: !!state.session.user._id,
   };
 }
 

@@ -91,7 +91,7 @@ class UserForm extends Component {
           // data = data.json()
           // console.log("data returned => ", data);
         })
-        .then(data => this.props.history.push(`/analyses`))
+        .then(data => this.props.history.push(`/myanalyses`))
         .catch(error => console.error('Error:', error));
     }
 

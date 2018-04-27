@@ -31,7 +31,9 @@ class ProfilePage extends Component {
   render() {
     // console.log("PROFILE PAGE props => ", this.props);
 
-    if (this.props.isFetching) {
+    let {userDataAvailable} = this.props;
+
+    if (!userDataAvailable) {
       return (
         <Dimmer active>
           <Loader content="Loading" />

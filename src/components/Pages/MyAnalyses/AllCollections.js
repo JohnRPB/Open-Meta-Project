@@ -20,7 +20,6 @@ import defaultpicture from "../../../assets/images/default.jpg";
 class AllCollections extends Component {
   constructor() {
     super();
-    this.isFetching = true;
   }
 
   // componentWillMount() {
@@ -31,27 +30,16 @@ class AllCollections extends Component {
   // }
 
   render() {
-    if (!this.props.isFetching) {
-      // console.log("MyAnalyses: this.props: ", this.props);
 
-      // creates cards for each analysis
-      // let analysisCards = this.props.user.analyses.map(analysis => {
-      //   return (
-      //     <Card
-      //       fluid
-      //       key={analysis._id}
-      //       header={
-      //         <NavLink to={`/analysis/${analysis._id}`}>
-      //           {analysis._id}
-      //           {#<{(| {analysis.data.header.title} |)}>#}
-      //         </NavLink>
-      //       }
-      //       description={faker.lorem.paragraph()}
-      //     />
-      //   );
-      // });
+    let { userDataAvailable } = this.props;
 
-      // creates cards for each collection
+    if (!userDataAvailable) {
+      return (
+        <Dimmer active>
+          <Loader content="Loading" />
+        </Dimmer>
+      );
+    } else {
       var collectionCards = this.props.user.collections
         .slice(0)
         .map(collection => {
@@ -64,15 +52,7 @@ class AllCollections extends Component {
             description: `Description: ${collection.description}`
           };
         });
-    }
 
-    if (this.props.isFetching) {
-      return (
-        <Dimmer active>
-          <Loader content="Loading" />
-        </Dimmer>
-      );
-    } else {
       return (
         <div className="ui  vertical masthead center aligned segment">
           <div className="following bar">
@@ -171,6 +151,7 @@ class AllCollections extends Component {
         </div>
       );
     }
+
   }
 }
 
