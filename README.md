@@ -1,12 +1,12 @@
 # The Open Meta Project
 
+#### Note: This is a historical project, that may be re-developed in the future. Also, the free Heroku dynos that host our back-end go to sleep after 30 min of inactivity; you may have to wait 20 seconds to log in, on the first access.
+
 The Open Meta Project is a website where scientists can conduct, comment on, and share meta-analyses. A meta-analysis asseses the weight of evidence for a research proposition by aggregating the results of a set of studies that address that proposition. It is common in the social, clinical, and pyschological sciences, and is often used to settle important debates. 
 
 With our platform, R's considerable statistical libraries can be harnessed to conduct meta-analyses through an accessible user interface. No coding expertise required. And to expand the project's statistical capabilities (beyond the provided functions), users only need to know R, not JavaScript.
 
 Shareable, reproducible, and interactive scientific analyses---these are the goals of the Open Meta project. For an overview of what has been accomplished, see the "Project showcase" and "Feature list" sections; for a more in-depth explanation of the underlying architercture, see "Rationale and technical concepts".
-
-#### Note: This project is under active development, and documentation is being added every day. The free Heroku dynos that host our back-end also go to sleep after 30 min of inactivity; you may have to wait 20 seconds to log in, on the first access.
 
 ## Main technologies
 
